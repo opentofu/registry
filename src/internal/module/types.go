@@ -9,7 +9,7 @@ type MetadataFile struct {
 }
 
 type Module struct {
-	Namespace string // The module namespace
-	Name      string // The module name
-	System    string // The module system
+	Namespace    string // The module namespace
+	Name         string // The module name
+	TargetSystem string // The module target system
 }

@@ -18,5 +18,5 @@ func CreateMetadataFile(m module.Module) error {
 
 func getFilePath(m module.Module) string {
 	shard := m.Namespace[0]
-	return fmt.Sprintf("modules/%c/%s/%s/%s.json", shard, m.Namespace, m.Name, m.System)
+	return fmt.Sprintf("modules/%c/%s/%s/%s.json", shard, m.Namespace, m.Name, m.TargetSystem)
 }
