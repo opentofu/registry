@@ -23,7 +23,7 @@ func BuildMetadataFile(m module.Module) (*module.MetadataFile, error) {
 }
 
 func getModuleSemverTags(mod module.Module) ([]string, error) {
-	tags, err := github.GetTags(module.GetRepositoryUrl(mod))
+	tags, err := github.GetTags(mod.RepositoryURL())
 	if err != nil {
 		return nil, err
 	}

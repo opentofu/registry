@@ -8,9 +8,6 @@ import (
 	"strings"
 )
 
-// TODO logs
-// TODO Dependency Inversion for tests?
-
 func GetTags(repositoryUrl string) ([]string, error) {
 	log.Printf("Getting tags for repository %s", repositoryUrl)
 
