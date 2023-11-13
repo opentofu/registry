@@ -33,12 +33,12 @@ func GetTags(repositoryUrl string) ([]string, error) {
 
 		fields := strings.Fields(line)
 		if len(fields) != 2 {
-			return nil, fmt.Errorf("could not parse tags: tags are in wrong format")
+			return nil, fmt.Errorf("could not parse tags for %s: tags are in wrong format", repositoryUrl)
 		}
 
 		ref := fields[1]
 		if !strings.HasPrefix(ref, "refs/tags/") {
-			continue
+			return nil, fmt.Errorf("could not parse tags for %s: tags are in wrong format", repositoryUrl)
 		}
 
 		tag := strings.TrimPrefix(ref, "refs/tags/")
