@@ -4,6 +4,9 @@ import (
 	"regexp"
 )
 
+// TODO: probably move the Platform type inside providers as that's the only place this is used,
+// and its a bit strange being in the github package
+
 type Platform struct {
 	OS   string
 	Arch string

@@ -29,9 +29,9 @@ func (g Generator) GenerateModuleResponses(_ context.Context, namespace string, 
 
 	// Right now the format is pretty much identical, however if we want to extend the results in the future to include
 	// more information, we can do that here. (i.e. the root module, or the submodules)
-	versionsResponse := make([]VersionResponseItem, len(metadata.Versions))
+	versionsResponse := make([]ModuleVersionResponseItem, len(metadata.Versions))
 	for i, m := range metadata.Versions {
-		versionsResponse[i] = VersionResponseItem{Version: m.Version}
+		versionsResponse[i] = ModuleVersionResponseItem{Version: m.Version}
 
 		err := g.writeModuleVersionDownload(namespace, name, targetSystem, m.Version)
 		if err != nil {
@@ -71,7 +71,7 @@ func (g Generator) readModuleMetadata(path string, logger *slog.Logger) (*module
 
 // writeModuleVersionListing writes the file containing the module version listing.
 // This data  is to be consumed when an end user requests /v1/modules/{namespace}/{name}/{targetSystem}/versions
-func (g Generator) writeModuleVersionListing(namespace string, name string, targetSystem string, versions []VersionResponseItem) error {
+func (g Generator) writeModuleVersionListing(namespace string, name string, targetSystem string, versions []ModuleVersionResponseItem) error {
 	destinationDir := filepath.Join(g.DestinationDir, "v1", "modules", namespace, name, targetSystem)
 	if err := os.MkdirAll(destinationDir, 0755); err != nil {
 		return fmt.Errorf("failed to create directory: %w", err)
