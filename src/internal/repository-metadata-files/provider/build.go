@@ -5,10 +5,11 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strings"
+
 	"registry-stable/internal"
 	"registry-stable/internal/github"
 	"registry-stable/internal/provider"
-	"strings"
 )
 
 func BuildMetadataFile(p provider.Provider) (*provider.MetadataFile, error) {
@@ -29,9 +30,6 @@ func BuildMetadataFile(p provider.Provider) (*provider.MetadataFile, error) {
 		var targets = make([]provider.Target, 0)
 		for _, asset := range r.ReleaseAssets.Nodes {
 			if platform := github.ExtractPlatformFromFilename(asset.Name); platform != nil {
-				if err != nil {
-					return nil, err
-				}
 				targets = append(targets, provider.Target{
 					OS:          platform.OS,
 					Arch:        platform.Arch,
