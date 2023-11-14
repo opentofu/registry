@@ -2,7 +2,6 @@ package files
 
 import (
 	"encoding/json"
-	"io/fs"
 	"os"
 	"path"
 )
@@ -37,7 +36,6 @@ type FileWriter interface {
 }
 
 type RealFileSystem struct {
-	fs.FS
 }
 
 func (fs *RealFileSystem) WriteFile(name string, data []byte, perm os.FileMode) error {

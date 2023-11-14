@@ -13,19 +13,13 @@ import (
 // - https://opentofu.org/docs/internals/module-registry-protocol/
 // - https://opentofu.org/docs/internals/provider-registry-protocol
 type Generator struct {
-	// ModuleDataDir is the directory containing the module data.
-	ModuleDataDir string
-
-	// ProviderDataDir is the directory containing the provider data.
-	ProviderDataDir string
-
 	// DestinationDir is the directory to write the generated responses to.
 	DestinationDir string
 
 	// TODO: Maybe combine all the fs.FS stuff and FileWriter stuff into a single interface to be consumed easier?
 
-	// Filesystem is the filesystem the generator should use to read files
-	Filesystem fs.FS
+	// ModuleFS is the filesystem the generator should use to read files for moduleMetadata
+	ModuleFS fs.FS
 
 	// FileWriter is to be used to write files to the filesystem
 	FileWriter files.FileWriter

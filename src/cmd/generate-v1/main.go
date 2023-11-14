@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"flag"
 	"log/slog"
 	"os"
 
@@ -16,16 +17,17 @@ func main() {
 
 	ctx := context.Background()
 
-	fs := os.DirFS(".")
+	moduleDataDir := flag.String("module-data", "./modules", "Directory containing the module data")
+	//providerDataDir := flag.String("provider-data", "./providers", "Directory containing the provider data")
+	destinationDir := flag.String("destination", "./generated", "Directory to write the generated responses to")
+
+	flag.Parse()
 
 	v1APIGenerator := v1api.Generator{
-		ModuleDataDir:   "../modules",
-		ProviderDataDir: "../providers",
+		DestinationDir: *destinationDir,
 
-		DestinationDir: "./generated",
-
-		Filesystem: fs,
-		FileWriter: &files.RealFileSystem{FS: fs},
+		ModuleFS:   os.DirFS(*moduleDataDir),
+		FileWriter: &files.RealFileSystem{},
 	}
 
 	v1APIGenerator.WriteWellKnownFile(ctx)
@@ -37,8 +39,8 @@ func main() {
 	}
 
 	for _, m := range modules {
-		slog.Info("Generating", slog.String("module", m.Namespace+"/"+m.Name+"/"+m.System))
-		err := v1APIGenerator.GenerateModuleResponses(ctx, m.Namespace, m.Name, m.System)
+		slog.Info("Generating", slog.String("module", m.Namespace+"/"+m.Name+"/"+m.TargetSystem))
+		err := v1APIGenerator.GenerateModuleResponses(ctx, m.Namespace, m.Name, m.TargetSystem)
 		if err != nil {
 			slog.Error("Failed to generate module version listing response", slog.Any("err", err))
 			os.Exit(1)

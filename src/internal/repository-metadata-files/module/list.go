@@ -24,9 +24,9 @@ func ListModules() ([]module.Module, error) {
 			matches := regex.FindStringSubmatch(path)
 			if len(matches) == 5 {
 				results = append(results, module.Module{
-					Namespace: matches[2],
-					Name:      matches[3],
-					System:    matches[4],
+					Namespace:    matches[2],
+					Name:         matches[3],
+					TargetSystem: matches[4],
 				})
 			}
 		}

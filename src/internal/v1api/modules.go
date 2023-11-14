@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io/fs"
 	"log/slog"
+	"os"
 	"path/filepath"
 
 	"registry-stable/internal/module"
@@ -19,7 +20,7 @@ func (g Generator) GenerateModuleResponses(_ context.Context, namespace string, 
 	logger := slog.With(slog.String("namespace", namespace), slog.String("name", name), slog.String("targetSystem", targetSystem))
 
 	// TODO: Get path calculation from somewhere else
-	path := filepath.Join(g.ModuleDataDir, namespace[0:1], namespace, name, targetSystem+".json")
+	path := filepath.Join(namespace[0:1], namespace, name, targetSystem+".json")
 
 	metadata, err := g.readModuleMetadata(path, logger)
 	if err != nil {
@@ -50,10 +51,21 @@ func (g Generator) GenerateModuleResponses(_ context.Context, namespace string, 
 
 // readModuleMetadata reads the module metadata file from the filesystem directly. This data should be the data fetched from the git repository.
 func (g Generator) readModuleMetadata(path string, logger *slog.Logger) (*module.MetadataFile, error) {
-	// open the file
-	metadataFile, err := fs.ReadFile(g.Filesystem, path)
+	// list directories at the root of the fs
+	dirs, err := fs.ReadDir(g.ModuleFS, ".")
 	if err != nil {
-		return nil, fmt.Errorf("failed to open file: %w", err)
+		slog.Error("Failed to list directories", slog.Any("err", err))
+		os.Exit(1)
+	}
+
+	for _, d := range dirs {
+		slog.Info("Found directory", slog.String("dir", d.Name()))
+	}
+
+	// open the file
+	metadataFile, err := fs.ReadFile(g.ModuleFS, path)
+	if err != nil {
+		return nil, fmt.Errorf("failed to open metadata file: %w", err)
 	}
 
 	// Read the file contents into a Module[] struct
