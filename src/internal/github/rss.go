@@ -3,11 +3,9 @@ package github
 import (
 	"context"
 	"fmt"
-	"github.com/mmcdole/gofeed"
-	"net/http"
-	"os"
 	"regexp"
-	httpInternal "registry-stable/internal/http"
+
+	"github.com/mmcdole/gofeed"
 )
 
 // GetTagsFromRss gets all tags found in the RSS feed of a GitHub releases page
@@ -43,21 +41,15 @@ func extractTag(item *gofeed.Item) (string, error) {
 }
 
 func getReleaseRssFeed(releasesRssUrl string) (feed *gofeed.Feed, err error) {
-	client := httpInternal.GetHttpRetryClient()
-
-	req, err := http.NewRequestWithContext(context.Background(), "GET", releasesRssUrl, nil)
+	token, err := EnvAuthToken()
 	if err != nil {
 		return nil, err
 	}
 
-	// TODO Commonize?
-	token := os.Getenv("GH_TOKEN")
+	ctx := context.Background()
+	client := GetHttpRetryClient(ctx, token)
 
-	req.Header.Set("User-Agent", "OpenTofu Registry/1.0")
-	req.Header.Set("Authorization", fmt.Sprintf("Bearer %s", token))
-
-	resp, err := client.Do(req)
-
+	resp, err := client.Get(releasesRssUrl)
 	if err != nil {
 		return nil, err
 	}

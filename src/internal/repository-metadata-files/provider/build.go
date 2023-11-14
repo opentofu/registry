@@ -8,10 +8,11 @@ import (
 	"os"
 	"slices"
 
-	"golang.org/x/mod/semver"
 	"registry-stable/internal"
 	"registry-stable/internal/github"
 	"registry-stable/internal/provider"
+
+	"golang.org/x/mod/semver"
 )
 
 func filterNewReleases(releases []github.GHRelease, existingMetadata provider.MetadataFile) ([]github.GHRelease, error) {
@@ -34,7 +35,13 @@ func filterNewReleases(releases []github.GHRelease, existingMetadata provider.Me
 
 func BuildMetadataFile(p provider.Provider, providerDataDir string) (*provider.MetadataFile, error) {
 	ctx := context.Background()
-	ghClient := github.NewGitHubClient(ctx, os.Getenv("GH_TOKEN"))
+
+	token, err := github.EnvAuthToken()
+	if err != nil {
+		return nil, err
+	}
+
+	ghClient := github.NewGitHubClient(ctx, token)
 
 	existingMetadata, err := getExistingMetadata(p, providerDataDir)
 	if err != nil {
