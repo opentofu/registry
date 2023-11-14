@@ -8,6 +8,36 @@ import (
 	"strings"
 )
 
+func parseTagsFromStdout(lines []string) ([]string, error) {
+	exec.LookPath("")
+	tags := make([]string, 0, len(lines))
+
+	for _, line := range lines {
+		if !strings.Contains(line, "refs/tags/") {
+			continue
+		}
+
+		fields := strings.Fields(line)
+		if len(fields) != 2 {
+			return nil, fmt.Errorf("Invalid format for tag '%s', expected two fields", line)
+		}
+
+		ref := fields[1]
+		if !strings.HasPrefix(ref, "refs/tags/") {
+			return nil, fmt.Errorf("Invalid format for tag '%s', expected 'refs/tags/' prefix", line)
+		}
+
+		tag := strings.TrimPrefix(ref, "refs/tags/")
+		if tag == "" {
+			return nil, fmt.Errorf("Invalid format for tag '%s', no version provided", line)
+		}
+
+		tags = append(tags, tag)
+	}
+
+	return tags, nil
+}
+
 func GetTags(repositoryUrl string) ([]string, error) {
 	log.Printf("Getting tags for repository %s", repositoryUrl)
 
@@ -22,27 +52,11 @@ func GetTags(repositoryUrl string) ([]string, error) {
 		return nil, err
 	}
 
-	tags := make([]string, 0)
-	for _, line := range strings.Split(buf.String(), "\n") {
-		if !strings.Contains(line, "refs/tags/") {
-			continue
-		}
-
-		fields := strings.Fields(line)
-		if len(fields) != 2 {
-			return nil, fmt.Errorf("could not parse tags for %s: tags are in wrong format", repositoryUrl)
-		}
-
-		ref := fields[1]
-		if !strings.HasPrefix(ref, "refs/tags/") {
-			return nil, fmt.Errorf("could not parse tags for %s: tags are in wrong format", repositoryUrl)
-		}
-
-		tag := strings.TrimPrefix(ref, "refs/tags/")
-		tags = append(tags, tag)
+	tags, err := parseTagsFromStdout(strings.Split(buf.String(), "\n"))
+	if err != nil {
+		return nil, fmt.Errorf("Could not parse tags for %s: %w", repositoryUrl, err)
 	}
 
 	log.Printf("Found %d tags for repository %s", len(tags), repositoryUrl)
-
 	return tags, nil
 }

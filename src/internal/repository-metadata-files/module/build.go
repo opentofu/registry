@@ -2,10 +2,11 @@ package module
 
 import (
 	"fmt"
-	"golang.org/x/mod/semver"
 	"registry-stable/internal"
 	"registry-stable/internal/github"
 	"registry-stable/internal/module"
+
+	"golang.org/x/mod/semver"
 )
 
 func BuildMetadataFile(m module.Module) (*module.MetadataFile, error) {

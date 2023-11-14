@@ -3,6 +3,7 @@ module registry-stable
 go 1.21
 
 require (
+	github.com/google/go-cmp v0.5.9
 	github.com/hashicorp/go-retryablehttp v0.7.5
 	github.com/mmcdole/gofeed v1.2.1
 	github.com/shurcooL/githubv4 v0.0.0-20230704064427-599ae7bbf278
