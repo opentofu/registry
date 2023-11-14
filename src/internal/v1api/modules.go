@@ -97,18 +97,23 @@ func (g Generator) writeModuleVersionListing(namespace string, name string, targ
 func (g Generator) writeModuleVersionDownload(namespace string, name string, system string, version string) interface{} {
 	// the file should just contain a link to GitHub to download the tarball, ie:
 	// git::https://github.com/terraform-aws-modules/terraform-aws-iam?ref=v5.30.0
-	contents := fmt.Sprintf("git::github.com/%s/terraform-%s-%s?ref=%s", namespace, name, system, version)
+	location := fmt.Sprintf("git::github.com/%s/terraform-%s-%s?ref=%s", namespace, name, system, version)
 
-	// trim the v from the version
-	ver := internal.TrimTagPrefix(version)
+	response := ModuleVersionDownloadResponse{Location: location}
 
-	destinationDir := filepath.Join(g.DestinationDir, "v1", "modules", namespace, name, system, ver)
+	marshalled, err := json.Marshal(response)
+	if err != nil {
+		return fmt.Errorf("failed to marshal json: %w", err)
+	}
+
+	// trim the v from the version as the api only ever requests the version without the v
+	destinationDir := filepath.Join(g.DestinationDir, "v1", "modules", namespace, name, system, internal.TrimTagPrefix(version))
 	if err := os.MkdirAll(destinationDir, 0755); err != nil {
 		return fmt.Errorf("failed to create directory: %w", err)
 	}
 
 	filePath := filepath.Join(destinationDir, "download")
-	err := os.WriteFile(filePath, []byte(contents), 0644)
+	err = os.WriteFile(filePath, marshalled, 0644)
 	if err != nil {
 		return fmt.Errorf("failed to write file: %w", err)
 	}

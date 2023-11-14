@@ -1,5 +1,11 @@
 package v1api
 
+// ModuleVersionDownloadResponse is the item returned by the module version download API.
+type ModuleVersionDownloadResponse struct {
+	// The URL to download the module from.
+	Location string `json:"location"`
+}
+
 // ModuleVersionListingResponse is the item returned by the module version listing API.
 type ModuleVersionListingResponse struct {
 	Modules []ModuleVersionListingResponseItem `json:"modules"`
