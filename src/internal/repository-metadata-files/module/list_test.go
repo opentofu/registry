@@ -3,8 +3,9 @@ package module
 import (
 	"testing"
 
-	"github.com/stretchr/testify/assert"
 	"registry-stable/internal/module"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func Test_ExtractModuleDetailsFromPath(t *testing.T) {
@@ -22,6 +23,15 @@ func Test_ExtractModuleDetailsFromPath(t *testing.T) {
 				Namespace:    "terraform-aws-modules",
 				Name:         "lambda",
 				TargetSystem: "aws",
+			},
+		},
+		{
+			name:  "Valid module path with mixed case",
+			input: "modules/t/terraform-aws-modules/lambda/AWS.json",
+			expectedOutput: &module.Module{
+				Namespace:    "terraform-aws-modules",
+				Name:         "lambda",
+				TargetSystem: "AWS",
 			},
 		},
 		{
