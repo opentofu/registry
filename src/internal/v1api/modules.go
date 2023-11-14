@@ -9,6 +9,7 @@ import (
 	"os"
 	"path/filepath"
 
+	"registry-stable/internal"
 	"registry-stable/internal/module"
 )
 
@@ -33,7 +34,7 @@ func (g Generator) GenerateModuleResponses(_ context.Context, namespace string, 
 	for i, m := range metadata.Versions {
 		versionsResponse[i] = VersionResponseItem{Version: m.Version}
 
-		err := g.writeMetadataVersionDownload(namespace, name, targetSystem, m.Version)
+		err := g.writeModuleVersionDownload(namespace, name, targetSystem, m.Version)
 		if err != nil {
 			return fmt.Errorf("failed to write metadata version download file for version %s: %w", m.Version, err)
 		}
@@ -103,14 +104,17 @@ func (g Generator) writeModuleVersionListing(namespace string, name string, targ
 	return nil
 }
 
-// writeMetadataVersionDownload writes the file containing the download link for the module version.
+// writeModuleVersionDownload writes the file containing the download link for the module version.
 // This data is to be consumed when an end user requests /v1/modules/{namespace}/{name}/{targetSystem}/{version}/download
-func (g Generator) writeMetadataVersionDownload(namespace string, name string, system string, version string) interface{} {
+func (g Generator) writeModuleVersionDownload(namespace string, name string, system string, version string) interface{} {
 	// the file should just contain a link to GitHub to download the tarball, ie:
 	// git::https://github.com/terraform-aws-modules/terraform-aws-iam?ref=v5.30.0
 	contents := fmt.Sprintf("git::github.com/%s/terraform-%s-%s?ref=%s", namespace, name, system, version)
 
-	destinationDir := filepath.Join(g.DestinationDir, "v1", "modules", namespace, name, system, version)
+	// trim the v from the version
+	ver := internal.TrimTagPrefix(version)
+
+	destinationDir := filepath.Join(g.DestinationDir, "v1", "modules", namespace, name, system, ver)
 	if err := g.FileWriter.MkdirAll(destinationDir, 0755); err != nil {
 		return fmt.Errorf("failed to create directory: %w", err)
 	}
