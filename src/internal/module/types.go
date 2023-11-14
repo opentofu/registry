@@ -16,7 +16,7 @@ type Module struct {
 	TargetSystem string // The module target system
 }
 
-func (m *Module) RepositoryURL() string {
+func (m Module) RepositoryURL() string {
 	repoName := fmt.Sprintf("terraform-%s-%s", m.TargetSystem, m.Name)
 	return fmt.Sprintf("https://github.com/%s/%s", m.Namespace, repoName)
 }
