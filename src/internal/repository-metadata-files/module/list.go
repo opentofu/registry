@@ -8,16 +8,13 @@ import (
 	"registry-stable/internal/module"
 )
 
-func ListModules() ([]module.Module, error) {
-	// TODO: Accept a directory as a parameter (or pass it in some other way) so we can easily test this
-	moduleDirectory := "../modules"
-
+func ListModules(moduleDataDir string) ([]module.Module, error) {
 	// walk the module directory recursively and find all json files
 	// for each json file, parse it into a module.Module struct
 	// return a slice of module.Module structs
 
 	var results []module.Module
-	err := filepath.Walk(moduleDirectory, func(path string, info os.FileInfo, err error) error {
+	err := filepath.Walk(moduleDataDir, func(path string, info os.FileInfo, err error) error {
 		if filepath.Ext(path) == ".json" {
 			// extract the module details from the file path. It should be modules/<firstLetterOfNamespace>/<namespace>/<name>/<system>.json
 			regex := regexp.MustCompile(`modules\/([a-z])\/([a-z0-9-]+)\/([a-z0-9-]+)\/([a-z0-9-]+).json`)

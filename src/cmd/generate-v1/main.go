@@ -6,7 +6,6 @@ import (
 	"log/slog"
 	"os"
 
-	"registry-stable/internal/files"
 	"registry-stable/internal/repository-metadata-files/module"
 	"registry-stable/internal/v1api"
 )
@@ -17,22 +16,22 @@ func main() {
 
 	ctx := context.Background()
 
-	moduleDataDir := flag.String("module-data", "./modules", "Directory containing the module data")
-	//providerDataDir := flag.String("provider-data", "./providers", "Directory containing the provider data")
-	destinationDir := flag.String("destination", "./generated", "Directory to write the generated responses to")
+	moduleDataDir := flag.String("module-data", "../modules", "Directory containing the module data")
+	providerDataDir := flag.String("provider-data", "../providers", "Directory containing the provider data")
+	destinationDir := flag.String("destination", "../generated", "Directory to write the generated responses to")
 
 	flag.Parse()
 
 	v1APIGenerator := v1api.Generator{
 		DestinationDir: *destinationDir,
 
-		ModuleFS:   os.DirFS(*moduleDataDir),
-		FileWriter: &files.RealFileSystem{},
+		ModuleDirectory:   *moduleDataDir,
+		ProviderDirectory: *providerDataDir,
 	}
 
 	v1APIGenerator.WriteWellKnownFile(ctx)
 
-	modules, err := module.ListModules()
+	modules, err := module.ListModules(*moduleDataDir)
 	if err != nil {
 		slog.Error("Failed to list modules", slog.Any("err", err))
 		os.Exit(1)

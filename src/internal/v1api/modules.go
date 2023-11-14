@@ -4,7 +4,6 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"io/fs"
 	"log/slog"
 	"os"
 	"path/filepath"
@@ -21,7 +20,7 @@ func (g Generator) GenerateModuleResponses(_ context.Context, namespace string, 
 	logger := slog.With(slog.String("namespace", namespace), slog.String("name", name), slog.String("targetSystem", targetSystem))
 
 	// TODO: Get path calculation from somewhere else
-	path := filepath.Join(namespace[0:1], namespace, name, targetSystem+".json")
+	path := filepath.Join(g.ModuleDirectory, namespace[0:1], namespace, name, targetSystem+".json")
 
 	metadata, err := g.readModuleMetadata(path, logger)
 	if err != nil {
@@ -52,19 +51,8 @@ func (g Generator) GenerateModuleResponses(_ context.Context, namespace string, 
 
 // readModuleMetadata reads the module metadata file from the filesystem directly. This data should be the data fetched from the git repository.
 func (g Generator) readModuleMetadata(path string, logger *slog.Logger) (*module.MetadataFile, error) {
-	// list directories at the root of the fs
-	dirs, err := fs.ReadDir(g.ModuleFS, ".")
-	if err != nil {
-		slog.Error("Failed to list directories", slog.Any("err", err))
-		os.Exit(1)
-	}
-
-	for _, d := range dirs {
-		slog.Info("Found directory", slog.String("dir", d.Name()))
-	}
-
 	// open the file
-	metadataFile, err := fs.ReadFile(g.ModuleFS, path)
+	metadataFile, err := os.ReadFile(path)
 	if err != nil {
 		return nil, fmt.Errorf("failed to open metadata file: %w", err)
 	}
@@ -85,7 +73,7 @@ func (g Generator) readModuleMetadata(path string, logger *slog.Logger) (*module
 // This data  is to be consumed when an end user requests /v1/modules/{namespace}/{name}/{targetSystem}/versions
 func (g Generator) writeModuleVersionListing(namespace string, name string, targetSystem string, versions []VersionResponseItem) error {
 	destinationDir := filepath.Join(g.DestinationDir, "v1", "modules", namespace, name, targetSystem)
-	if err := g.FileWriter.MkdirAll(destinationDir, 0755); err != nil {
+	if err := os.MkdirAll(destinationDir, 0755); err != nil {
 		return fmt.Errorf("failed to create directory: %w", err)
 	}
 
@@ -96,7 +84,7 @@ func (g Generator) writeModuleVersionListing(namespace string, name string, targ
 		return fmt.Errorf("failed to marshal json: %w", err)
 	}
 
-	err = g.FileWriter.WriteFile(filePath, marshalled, 0644)
+	err = os.WriteFile(filePath, marshalled, 0644)
 	if err != nil {
 		return fmt.Errorf("failed to write file: %w", err)
 	}
@@ -115,12 +103,12 @@ func (g Generator) writeModuleVersionDownload(namespace string, name string, sys
 	ver := internal.TrimTagPrefix(version)
 
 	destinationDir := filepath.Join(g.DestinationDir, "v1", "modules", namespace, name, system, ver)
-	if err := g.FileWriter.MkdirAll(destinationDir, 0755); err != nil {
+	if err := os.MkdirAll(destinationDir, 0755); err != nil {
 		return fmt.Errorf("failed to create directory: %w", err)
 	}
 
 	filePath := filepath.Join(destinationDir, "download")
-	err := g.FileWriter.WriteFile(filePath, []byte(contents), 0644)
+	err := os.WriteFile(filePath, []byte(contents), 0644)
 	if err != nil {
 		return fmt.Errorf("failed to write file: %w", err)
 	}
