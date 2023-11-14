@@ -28,12 +28,10 @@ func extractModuleDetailsFromPath(path string) *module.Module {
 		return nil
 	}
 
-	// matches[0] is the entire string that matched the regex, so we skip it.
-	// Using named matches in golang is a pain, so we just use the index of the match.
 	m := module.Module{
-		Namespace:    matches[1],
-		Name:         matches[2],
-		TargetSystem: matches[3],
+		Namespace:    matches[moduleDirectoryRegex.SubexpIndex("Namespace")],
+		Name:         matches[moduleDirectoryRegex.SubexpIndex("Name")],
+		TargetSystem: matches[moduleDirectoryRegex.SubexpIndex("TargetSystem")],
 	}
 
 	return &m
