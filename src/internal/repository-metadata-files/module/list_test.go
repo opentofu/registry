@@ -34,6 +34,15 @@ func Test_ExtractModuleDetailsFromPath(t *testing.T) {
 			},
 		},
 		{
+			name:  "Valid module path with hypens and underscores",
+			input: "modules/t/terraform-aws-modules_test-abcd/lambda_test-abcd/aws_test-abcd.json",
+			expectedOutput: &module.Module{
+				Namespace:    "terraform-aws-modules_test-abcd",
+				Name:         "lambda_test-abcd",
+				TargetSystem: "aws_test-abcd",
+			},
+		},
+		{
 			name:           "Invalid module path (no .json)",
 			input:          "modules/t/terraform-aws-modules/lambda/aws",
 			expectedOutput: nil,
