@@ -10,6 +10,8 @@ import (
 	httpInternal "registry-stable/internal/http"
 )
 
+// GetTagsFromRss gets all tags found in the RSS feed of a GitHub releases page
+// Tags are sorted by descending creation date
 func GetTagsFromRss(releasesRssUrl string) ([]string, error) {
 	feed, err := getReleaseRssFeed(releasesRssUrl)
 	if err != nil {
