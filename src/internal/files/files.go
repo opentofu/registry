@@ -11,6 +11,7 @@ func SafeWriteObjectToJsonFile(filePath string, data interface{}) error {
 	marshalledJson, err := json.MarshalIndent(data, "", "  ")
 	if err != nil {
 		return fmt.Errorf("failed to marshal for %s: %w", filePath, err)
+
 	}
 
 	err = os.MkdirAll(path.Dir(filePath), 0755)
