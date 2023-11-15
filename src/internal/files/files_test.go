@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
-	"reflect"
-	"strings"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestFiles_WriteToJsonFile_Success(t *testing.T) {
@@ -36,9 +36,7 @@ func TestFiles_WriteToJsonFile_Success(t *testing.T) {
 		t.Error(err)
 	}
 
-	if !reflect.DeepEqual(data, read) {
-		t.Errorf("Expected %#v, got %#v", data, read)
-	}
+	assert.Equal(t, data, read)
 }
 
 func TestFiles_WriteToJsonFile_InvalidMarshall(t *testing.T) {
@@ -49,10 +47,9 @@ func TestFiles_WriteToJsonFile_InvalidMarshall(t *testing.T) {
 	err := WriteToJsonFile(path, make(chan int))
 
 	if err == nil {
-		t.Error("Expected marshal error, got <nil>")
-	} else if !strings.Contains(err.Error(), "json: unsupported type: chan int") {
-		t.Errorf("Expected marshal error, got %s", err.Error())
+		t.Fatal("Expected marshal error, got <nil>")
 	}
+	assert.Contains(t, err.Error(), "json: unsupported type: chan int")
 }
 
 func TestFiles_WriteToJsonFile_InvalidPath(t *testing.T) {
@@ -62,10 +59,9 @@ func TestFiles_WriteToJsonFile_InvalidPath(t *testing.T) {
 	err := WriteToJsonFile(path, nil)
 
 	if err == nil {
-		t.Error("Expected directory error, got <nil>")
-	} else if err.Error() != "failed to create directory for /dev/null/foo: mkdir /dev/null: not a directory" {
-		t.Errorf("Expected directory error, got %s", err.Error())
+		t.Fatal("Expected directory error, got <nil>")
 	}
+	assert.Equal(t, "failed to create directory for /dev/null/foo: mkdir /dev/null: not a directory", err.Error())
 }
 
 func TestFiles_WriteToJsonFile_InvalidPath2(t *testing.T) {
@@ -74,8 +70,7 @@ func TestFiles_WriteToJsonFile_InvalidPath2(t *testing.T) {
 	err := WriteToJsonFile(dir, nil)
 
 	if err == nil {
-		t.Error("Expected file error, got <nil>")
-	} else if err.Error() != fmt.Sprintf("failed to write to file: open %s: is a directory", dir) {
-		t.Errorf("Expected file error, got %s", err.Error())
+		t.Fatal("Expected file error, got <nil>")
 	}
+	assert.Equal(t, fmt.Sprintf("failed to write to file: open %s: is a directory", dir), err.Error())
 }
