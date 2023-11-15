@@ -5,8 +5,6 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"strings"
-
 	"registry-stable/internal"
 	"registry-stable/internal/github"
 	"registry-stable/internal/provider"
@@ -23,50 +21,45 @@ func BuildMetadataFile(p provider.Provider) (*provider.MetadataFile, error) {
 	}
 
 	versions := make([]provider.Version, 0)
+	versionArtifactsMap := make(VersionArtifactsMap)
+
 	for _, r := range releases {
-		var shaSumsArtifact github.ReleaseAsset
-		var shaSumsSignatureArtifact github.ReleaseAsset
+		version := internal.TrimTagPrefix(r.TagName)
+		versionArtifacts := getArtifacts(r)
+		versionArtifactsMap[version] = versionArtifacts
 
 		var targets = make([]provider.Target, 0)
-		for _, asset := range r.ReleaseAssets.Nodes {
-			if platform := github.ExtractPlatformFromFilename(asset.Name); platform != nil {
-				targets = append(targets, provider.Target{
-					OS:          platform.OS,
-					Arch:        platform.Arch,
-					Filename:    asset.Name,
-					DownloadURL: asset.DownloadURL,
-				})
-			} else if strings.HasSuffix(asset.Name, "SHA256SUMS") {
-				shaSumsArtifact = asset
-			} else if strings.HasSuffix(asset.Name, "SHA256SUMS.sig") {
-				shaSumsSignatureArtifact = asset
-			}
+		for _, a := range versionArtifacts.TargetArtifacts {
+			targets = append(targets, provider.Target{
+				OS:          a.OS,
+				Arch:        a.Arch,
+				Filename:    a.Name,
+				DownloadURL: a.DownloadURL,
+			})
 		}
 		if len(targets) == 0 {
 			log.Printf("could not find artifacts in release of provider %s version %s, skipping...", p.ProviderName, r.TagName)
 			continue
 		}
-		if (shaSumsArtifact == github.ReleaseAsset{}) {
+		if (versionArtifacts.ShaSumsArtifact == Artifact{}) {
 			return nil, fmt.Errorf("could not SHASUMS artifact for provider %s version %s", p.ProviderName, r.TagName)
 		}
-		if (shaSumsSignatureArtifact == github.ReleaseAsset{}) {
+		if (versionArtifacts.ShaSumsSignatureArtifact == Artifact{}) {
 			return nil, fmt.Errorf("could not SHASUMS signature artifact for provider %s version %s", p.ProviderName, r.TagName)
 		}
 
 		versions = append(versions, provider.Version{
-			Version:             internal.TrimTagPrefix(r.TagName),
-			Protocols:           []string{"5.0"},
-			SHASumsURL:          shaSumsArtifact.DownloadURL,
-			SHASumsSignatureURL: shaSumsSignatureArtifact.DownloadURL,
+			Version:             version,
+			SHASumsURL:          versionArtifacts.ShaSumsArtifact.DownloadURL,
+			SHASumsSignatureURL: versionArtifacts.ShaSumsSignatureArtifact.DownloadURL,
 			Targets:             targets,
 		})
 	}
 
-	// TODO all asset downloads - Shasums and figuring out the protocols
-	//versions, err = enrichWithShaSums(ctx, versions)
-	//if err != nil {
-	//	return nil, err
-	//}
+	versions, err = enrichWithDataFromArtifacts(ctx, versions, versionArtifactsMap)
+	if err != nil {
+		return nil, err
+	}
 
 	return &provider.MetadataFile{
 		Versions: versions,
