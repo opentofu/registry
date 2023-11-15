@@ -1,10 +1,8 @@
 package module
 
 import (
-	"encoding/json"
 	"fmt"
 	"log/slog"
-	"os"
 	"path/filepath"
 	"registry-stable/internal"
 )
@@ -27,38 +25,18 @@ func (m Module) Logger(logger *slog.Logger) *slog.Logger {
 	return logger.With(slog.String("namespace", m.Namespace), slog.String("name", m.Name), slog.String("targetSystem", m.TargetSystem))
 }
 
-func (m Module) repositoryPath() string {
-	return fmt.Sprintf("%s/terraform-%s-%s", m.Namespace, m.TargetSystem, m.Name)
+func (m Module) RepositoryURL() string {
+	return fmt.Sprintf("https://github.com/%s/terraform-%s-%s", m.Namespace, m.TargetSystem, m.Name)
 }
 
-func (m Module) RepositoryURL() string {
-	return fmt.Sprintf("https://github.com/%s", m.repositoryPath())
+// the file should just contain a link to GitHub to download the tarball, ie:
+// git::https://github.com/terraform-aws-modules/terraform-aws-iam?ref=v5.30.0
+func (m Module) VersionDownloadURL(version Version) string {
+	return fmt.Sprintf("git::%s?ref=%s", m.RepositoryURL(), version.Version)
 }
 
 func (m Module) MetadataPath(directory string) string {
 	return filepath.Join(directory, m.Namespace[0:1], m.Namespace, m.Name, m.TargetSystem+".json")
-}
-
-// ReadMetadata reads the module metadata file from the filesystem directly. This data should be the data fetched from the git repository.
-func (m Module) ReadMetadata(moduleDirectory string, logger *slog.Logger) (*MetadataFile, error) {
-	path := m.MetadataPath(moduleDirectory)
-
-	// open the file
-	metadataFile, err := os.ReadFile(path)
-	if err != nil {
-		return nil, fmt.Errorf("failed to open metadata file: %w", err)
-	}
-
-	// Read the file contents into a Module[] struct
-	var metadata MetadataFile
-	err = json.Unmarshal(metadataFile, &metadata)
-	if err != nil {
-		return nil, err
-	}
-
-	logger.Debug("Loaded Module Versions", slog.Any("count", len(metadata.Versions)))
-
-	return &metadata, nil
 }
 
 func (m Module) outputPath(directory string) string {
@@ -71,10 +49,4 @@ func (m Module) VersionListingPath(directory string) string {
 
 func (m Module) VersionDownloadPath(directory string, v Version) string {
 	return filepath.Join(m.outputPath(directory), internal.TrimTagPrefix(v.Version), "download")
-}
-
-// the file should just contain a link to GitHub to download the tarball, ie:
-// git::https://github.com/terraform-aws-modules/terraform-aws-iam?ref=v5.30.0
-func (m Module) VersionDownloadURL(version Version) string {
-	return fmt.Sprintf("git::github.com/%s?ref=%s", m.repositoryPath(), version.Version)
 }
