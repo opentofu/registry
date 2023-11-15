@@ -44,7 +44,19 @@ func main() {
 			slog.Error("Failed to generate module version listing response", slog.Any("err", err))
 			os.Exit(1)
 		}
+		slog.Info("Generated", slog.String("module", m.Namespace+"/"+m.Name+"/"+m.TargetSystem))
 	}
+
+	// For now just the ultradns provider
+	// TODO: Add provider listing similar to module listing
+
+	slog.Info("Generating", slog.String("provider", "opentofu/ultradns"))
+	err = v1APIGenerator.GenerateProviderResponses(ctx, "opentofu", "ultradns")
+	if err != nil {
+		slog.Error("Failed to generate provider version listing response", slog.Any("err", err))
+		os.Exit(1)
+	}
+	slog.Info("Generated", slog.String("provider", "opentofu/ultradns"))
 
 	slog.Info("Completed generating v1 API responses")
 }
