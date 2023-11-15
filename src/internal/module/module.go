@@ -23,17 +23,16 @@ type Module struct {
 	TargetSystem string // The module target system
 }
 
-func (m Module) String() string {
-	return m.Namespace + "/" + m.Name + "/" + m.TargetSystem
-}
-
 func (m Module) Logger(logger *slog.Logger) *slog.Logger {
 	return logger.With(slog.String("namespace", m.Namespace), slog.String("name", m.Name), slog.String("targetSystem", m.TargetSystem))
 }
 
+func (m Module) repositoryPath() string {
+	return fmt.Sprintf("%s/terraform-%s-%s", m.Namespace, m.TargetSystem, m.Name)
+}
+
 func (m Module) RepositoryURL() string {
-	repoName := fmt.Sprintf("terraform-%s-%s", m.TargetSystem, m.Name)
-	return fmt.Sprintf("https://github.com/%s/%s", m.Namespace, repoName)
+	return fmt.Sprintf("https://github.com/%s", m.repositoryPath())
 }
 
 func (m Module) MetadataPath(directory string) string {
@@ -77,5 +76,5 @@ func (m Module) VersionDownloadPath(directory string, v Version) string {
 // the file should just contain a link to GitHub to download the tarball, ie:
 // git::https://github.com/terraform-aws-modules/terraform-aws-iam?ref=v5.30.0
 func (m Module) VersionDownloadURL(version Version) string {
-	return fmt.Sprintf("git::github.com/%s/terraform-%s-%s?ref=%s", m.Namespace, m.Name, m.TargetSystem, version.Version)
+	return fmt.Sprintf("git::github.com/%s?ref=%s", m.repositoryPath(), version.Version)
 }
