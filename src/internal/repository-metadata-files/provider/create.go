@@ -2,9 +2,10 @@ package provider
 
 import (
 	"path/filepath"
+	"strings"
+
 	"registry-stable/internal/files"
 	"registry-stable/internal/provider"
-	"strings"
 )
 
 func CreateMetadataFile(p provider.Provider, providerDataDir string) error {
@@ -14,7 +15,7 @@ func CreateMetadataFile(p provider.Provider, providerDataDir string) error {
 	}
 
 	filePath := getFilePath(p, providerDataDir)
-	return files.WriteToFile(filePath, repositoryFileData)
+	return files.WriteToJsonFile(filePath, repositoryFileData)
 }
 
 func getFilePath(p provider.Provider, providerDataDir string) string {

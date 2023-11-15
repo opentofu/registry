@@ -9,6 +9,7 @@ import (
 	"path/filepath"
 	"strings"
 
+	"registry-stable/internal/files"
 	"registry-stable/internal/github"
 	"registry-stable/internal/provider"
 )
@@ -93,43 +94,11 @@ func (g Generator) readProviderMetadata(path string, logger *slog.Logger) (*prov
 }
 
 func (g Generator) writeProviderVersionDownload(namespace string, name string, version string, versionMetadata ProviderVersionDetails) error {
-	path := filepath.Join(g.DestinationDir, "v1", "providers", namespace, name, version, "download", versionMetadata.OS)
-
-	if err := os.MkdirAll(path, 0755); err != nil {
-		return fmt.Errorf("failed to create directory: %w", err)
-	}
-
-	marshalled, err := json.Marshal(versionMetadata)
-	if err != nil {
-		return fmt.Errorf("failed to marshal json: %w", err)
-	}
-
-	filePath := filepath.Join(path, versionMetadata.Arch)
-	err = os.WriteFile(filePath, marshalled, 0644)
-	if err != nil {
-		return fmt.Errorf("failed to write file: %w", err)
-	}
-
-	return nil
+	path := filepath.Join(g.DestinationDir, "v1", "providers", namespace, name, version, "download", versionMetadata.OS, versionMetadata.Arch)
+	return files.WriteToJsonFile(path, versionMetadata)
 }
 
 func (g Generator) writeProviderVersionListing(namespace string, name string, versions []ProviderVersionResponseItem) error {
-	destinationDir := filepath.Join(g.DestinationDir, "v1", "providers", namespace, name)
-	if err := os.MkdirAll(destinationDir, 0755); err != nil {
-		return fmt.Errorf("failed to create directory: %w", err)
-	}
-
-	filePath := filepath.Join(destinationDir, "versions")
-
-	marshalled, err := json.Marshal(ProviderVersionListingResponse{Versions: versions})
-	if err != nil {
-		return fmt.Errorf("failed to marshal json: %w", err)
-	}
-
-	err = os.WriteFile(filePath, marshalled, 0644)
-	if err != nil {
-		return fmt.Errorf("failed to write file: %w", err)
-	}
-
-	return nil
+	path := filepath.Join(g.DestinationDir, "v1", "providers", namespace, name, "versions")
+	return files.WriteToJsonFile(path, ProviderVersionListingResponse{Versions: versions})
 }

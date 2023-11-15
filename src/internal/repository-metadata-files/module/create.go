@@ -2,9 +2,10 @@ package module
 
 import (
 	"path/filepath"
+	"strings"
+
 	"registry-stable/internal/files"
 	"registry-stable/internal/module"
-	"strings"
 )
 
 func CreateMetadataFile(m module.Module, moduleDataDir string) error {
@@ -14,7 +15,7 @@ func CreateMetadataFile(m module.Module, moduleDataDir string) error {
 	}
 
 	filePath := getFilePath(m, moduleDataDir)
-	return files.WriteToFile(filePath, repositoryFileData)
+	return files.WriteToJsonFile(filePath, repositoryFileData)
 }
 
 func getFilePath(m module.Module, moduleDataDir string) string {
