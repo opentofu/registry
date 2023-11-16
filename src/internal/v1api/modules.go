@@ -75,7 +75,7 @@ func (g Generator) readModuleMetadata(path string, logger *slog.Logger) (*module
 // This data  is to be consumed when an end user requests /v1/modules/{namespace}/{name}/{targetSystem}/versions
 func (g Generator) writeModuleVersionListing(namespace string, name string, targetSystem string, versions []ModuleVersionResponseItem) error {
 	path := filepath.Join(g.DestinationDir, "v1", "modules", namespace, name, targetSystem, "versions")
-	return files.WriteToJsonFile(path, ModuleVersionListingResponse{Modules: []ModuleVersionListingResponseItem{{Versions: versions}}})
+	return files.SafeWriteObjectToJsonFile(path, ModuleVersionListingResponse{Modules: []ModuleVersionListingResponseItem{{Versions: versions}}})
 }
 
 // writeModuleVersionDownload writes the file containing the download link for the module version.
@@ -87,5 +87,5 @@ func (g Generator) writeModuleVersionDownload(namespace string, name string, sys
 	response := ModuleVersionDownloadResponse{Location: location}
 
 	path := filepath.Join(g.DestinationDir, "v1", "modules", namespace, name, system, internal.TrimTagPrefix(version), "download")
-	return files.WriteToJsonFile(path, response)
+	return files.SafeWriteObjectToJsonFile(path, response)
 }

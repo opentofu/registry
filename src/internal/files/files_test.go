@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestFiles_WriteToJsonFile_Success(t *testing.T) {
+func TestFiles_SafeWriteObjectToJsonFile_Success(t *testing.T) {
 	dir := t.TempDir()
 
 	data := map[string]interface{}{
@@ -19,7 +19,7 @@ func TestFiles_WriteToJsonFile_Success(t *testing.T) {
 
 	path := filepath.Join(dir, "subdir", "file.json")
 
-	err := WriteToJsonFile(path, data)
+	err := SafeWriteObjectToJsonFile(path, data)
 
 	if err != nil {
 		t.Error(err)
@@ -39,12 +39,12 @@ func TestFiles_WriteToJsonFile_Success(t *testing.T) {
 	assert.Equal(t, data, read)
 }
 
-func TestFiles_WriteToJsonFile_InvalidMarshall(t *testing.T) {
+func TestFiles_SafeWriteObjectToJsonFile_InvalidMarshall(t *testing.T) {
 	dir := t.TempDir()
 
 	path := filepath.Join(dir, "subdir", "file.json")
 
-	err := WriteToJsonFile(path, make(chan int))
+	err := SafeWriteObjectToJsonFile(path, make(chan int))
 
 	if err == nil {
 		t.Fatal("Expected marshal error, got <nil>")
@@ -52,11 +52,11 @@ func TestFiles_WriteToJsonFile_InvalidMarshall(t *testing.T) {
 	assert.Contains(t, err.Error(), "json: unsupported type: chan int")
 }
 
-func TestFiles_WriteToJsonFile_InvalidPath(t *testing.T) {
+func TestFiles_SafeWriteObjectToJsonFile_InvalidPath(t *testing.T) {
 	// TODO this might not be valid for non-posix systems
 	path := "/dev/null/foo"
 
-	err := WriteToJsonFile(path, nil)
+	err := SafeWriteObjectToJsonFile(path, nil)
 
 	if err == nil {
 		t.Fatal("Expected directory error, got <nil>")
@@ -64,10 +64,10 @@ func TestFiles_WriteToJsonFile_InvalidPath(t *testing.T) {
 	assert.Equal(t, "failed to create directory for /dev/null/foo: mkdir /dev/null: not a directory", err.Error())
 }
 
-func TestFiles_WriteToJsonFile_InvalidPath2(t *testing.T) {
+func TestFiles_SafeWriteObjectToJsonFile_InvalidPath2(t *testing.T) {
 	dir := t.TempDir()
 
-	err := WriteToJsonFile(dir, nil)
+	err := SafeWriteObjectToJsonFile(dir, nil)
 
 	if err == nil {
 		t.Fatal("Expected file error, got <nil>")

@@ -95,10 +95,10 @@ func (g Generator) readProviderMetadata(path string, logger *slog.Logger) (*prov
 
 func (g Generator) writeProviderVersionDownload(namespace string, name string, version string, versionMetadata ProviderVersionDetails) error {
 	path := filepath.Join(g.DestinationDir, "v1", "providers", namespace, name, version, "download", versionMetadata.OS, versionMetadata.Arch)
-	return files.WriteToJsonFile(path, versionMetadata)
+	return files.SafeWriteObjectToJsonFile(path, versionMetadata)
 }
 
 func (g Generator) writeProviderVersionListing(namespace string, name string, versions []ProviderVersionResponseItem) error {
 	path := filepath.Join(g.DestinationDir, "v1", "providers", namespace, name, "versions")
-	return files.WriteToJsonFile(path, ProviderVersionListingResponse{Versions: versions})
+	return files.SafeWriteObjectToJsonFile(path, ProviderVersionListingResponse{Versions: versions})
 }

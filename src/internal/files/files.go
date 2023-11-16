@@ -7,7 +7,7 @@ import (
 	"path"
 )
 
-func WriteToJsonFile(filePath string, data interface{}) error {
+func SafeWriteObjectToJsonFile(filePath string, data interface{}) error {
 	marshalledJson, err := json.MarshalIndent(data, "", "  ")
 	if err != nil {
 		return fmt.Errorf("failed to marshal for %s: %w", filePath, err)
