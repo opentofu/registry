@@ -16,17 +16,17 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: '1.21'
+          go-version-file: './src/go.mod'
 
       - name: Setup dependencies
         run: sudo apt-get install rclone
 
       - name: Run Generation script
         working-directory: ./src
-        run: go run ./cmd/generate-v1
+        run: go run ./cmd/generate-v1 --destination ../generated
 
       - name: Sync Data to R2
-        run: rclone sync ./generated r2:${{ secrets.R2_BUCKET_NAME }}
+        run: rclone sync ./generated R2:${{ secrets.R2_BUCKET_NAME }}
         env:
           # R2 credentials should be stored as GitHub secrets
           RCLONE_CONFIG_R2_TYPE: s3
