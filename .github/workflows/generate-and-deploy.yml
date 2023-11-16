@@ -19,7 +19,7 @@ jobs:
           go-version: '1.21'
 
       - name: Setup dependencies
-        run: apt-get install rclone
+        run: sudo apt-get install rclone
 
       - name: Run Generation script
         working-directory: ./src
