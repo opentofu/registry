@@ -7,6 +7,7 @@ import (
 	"os"
 
 	"registry-stable/internal/repository-metadata-files/module"
+	"registry-stable/internal/repository-metadata-files/provider"
 	"registry-stable/internal/v1api"
 )
 
@@ -50,13 +51,21 @@ func main() {
 	// For now just the ultradns provider
 	// TODO: Add provider listing similar to module listing
 
-	slog.Info("Generating", slog.String("provider", "opentofu/ultradns"))
-	err = v1APIGenerator.GenerateProviderResponses(ctx, "opentofu", "ultradns")
+	providers, err := provider.ListProviders(*providerDataDir)
 	if err != nil {
-		slog.Error("Failed to generate provider version listing response", slog.Any("err", err))
+		slog.Error("Failed to list providers", slog.Any("err", err))
 		os.Exit(1)
 	}
-	slog.Info("Generated", slog.String("provider", "opentofu/ultradns"))
+
+	for _, p := range providers {
+		slog.Info("Generating", slog.String("provider", p.Namespace+"/"+p.ProviderName))
+		err := v1APIGenerator.GenerateProviderResponses(ctx, p.Namespace, p.ProviderName)
+		if err != nil {
+			slog.Error("Failed to generate provider version listing response", slog.Any("err", err))
+			os.Exit(1)
+		}
+		slog.Info("Generated", slog.String("provider", p.Namespace+"/"+p.ProviderName))
+	}
 
 	slog.Info("Completed generating v1 API responses")
 }
