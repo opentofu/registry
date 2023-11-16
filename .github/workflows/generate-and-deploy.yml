@@ -1,0 +1,36 @@
+name: Generate and Sync Files
+
+on:
+  workflow_dispatch
+
+jobs:
+  generate-and-sync:
+    runs-on: ubuntu-latest
+
+    environment: Development
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.21'
+
+      - name: Setup dependencies
+        run: apt-get install rclone
+
+      - name: Run Generation script
+        working-directory: ./src
+        run: go run ./cmd/generate-v1
+
+      - name: Sync Data to R2
+        run: rclone sync ./generated r2:${{ secrets.R2_BUCKET_NAME }}
+        env:
+          # R2 credentials should be stored as GitHub secrets
+          RCLONE_CONFIG_R2_TYPE: s3
+          RCLONE_CONFIG_R2_PROVIDER: Cloudflare
+          RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          RCLONE_CONFIG_R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
