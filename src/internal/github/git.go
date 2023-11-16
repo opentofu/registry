@@ -18,17 +18,17 @@ func parseTagsFromStdout(lines []string) ([]string, error) {
 
 		fields := strings.Fields(line)
 		if len(fields) != 2 {
-			return nil, fmt.Errorf("Invalid format for tag '%s', expected two fields", line)
+			return nil, fmt.Errorf("invalid format for tag '%s', expected two fields", line)
 		}
 
 		ref := fields[1]
 		if !strings.HasPrefix(ref, "refs/tags/") {
-			return nil, fmt.Errorf("Invalid format for tag '%s', expected 'refs/tags/' prefix", line)
+			return nil, fmt.Errorf("invalid format for tag '%s', expected 'refs/tags/' prefix", line)
 		}
 
 		tag := strings.TrimPrefix(ref, "refs/tags/")
 		if tag == "" {
-			return nil, fmt.Errorf("Invalid format for tag '%s', no version provided", line)
+			return nil, fmt.Errorf("invalid format for tag '%s', no version provided", line)
 		}
 
 		tags = append(tags, tag)
@@ -37,6 +37,7 @@ func parseTagsFromStdout(lines []string) ([]string, error) {
 	return tags, nil
 }
 
+// GetTags lists the tags of the remote repository and returns the refs/tags/ found
 func GetTags(repositoryUrl string) ([]string, error) {
 	log.Printf("Getting tags for repository %s", repositoryUrl)
 
@@ -47,13 +48,12 @@ func GetTags(repositoryUrl string) ([]string, error) {
 	cmd.Stderr = &bufErr
 
 	if err := cmd.Run(); err != nil {
-		log.Printf("Could not get tags for repository %s: %s", repositoryUrl, bufErr.String())
-		return nil, err
+		return nil, fmt.Errorf("could not get tags for %s, %w: %s", repositoryUrl, err, bufErr.String())
 	}
 
 	tags, err := parseTagsFromStdout(strings.Split(buf.String(), "\n"))
 	if err != nil {
-		return nil, fmt.Errorf("Could not parse tags for %s: %w", repositoryUrl, err)
+		return nil, fmt.Errorf("could not parse tags for %s: %w", repositoryUrl, err)
 	}
 
 	log.Printf("Found %d tags for repository %s", len(tags), repositoryUrl)

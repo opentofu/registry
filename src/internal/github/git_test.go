@@ -27,19 +27,19 @@ func Test_parseTagsFromStdout(t *testing.T) {
 		},
 		"Missing Field": {
 			input:       []string{"borkborkborkrefs/tags/"},
-			expectedErr: errors.New("Invalid format for tag 'borkborkborkrefs/tags/', expected two fields"),
+			expectedErr: errors.New("invalid format for tag 'borkborkborkrefs/tags/', expected two fields"),
 		},
 		"Extra Field": {
 			input:       []string{"bork bork refs/tags/"},
-			expectedErr: errors.New("Invalid format for tag 'bork bork refs/tags/', expected two fields"),
+			expectedErr: errors.New("invalid format for tag 'bork bork refs/tags/', expected two fields"),
 		},
 		"Missing tags/refs": {
 			input:       []string{"314159265358979refs/tags/   v0.0.1"},
-			expectedErr: errors.New("Invalid format for tag '314159265358979refs/tags/   v0.0.1', expected 'refs/tags/' prefix"),
+			expectedErr: errors.New("invalid format for tag '314159265358979refs/tags/   v0.0.1', expected 'refs/tags/' prefix"),
 		},
 		"Missing version": {
 			input:       []string{"314159265358979 refs/tags/"},
-			expectedErr: errors.New("Invalid format for tag '314159265358979 refs/tags/', no version provided"),
+			expectedErr: errors.New("invalid format for tag '314159265358979 refs/tags/', no version provided"),
 		},
 	}
 
