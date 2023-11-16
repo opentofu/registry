@@ -16,9 +16,9 @@ func main() {
 
 	ctx := context.Background()
 
-	moduleDataDir := flag.String("module-data", "../modules", "Directory containing the module data")
-	providerDataDir := flag.String("provider-data", "../providers", "Directory containing the provider data")
-	destinationDir := flag.String("destination", "../generated", "Directory to write the generated responses to")
+	moduleDataDir := flag.String("module-data", "../../../modules", "Directory containing the module data")
+	providerDataDir := flag.String("provider-data", "../../../providers", "Directory containing the provider data")
+	destinationDir := flag.String("destination", "../../../generated", "Directory to write the generated responses to")
 
 	flag.Parse()
 

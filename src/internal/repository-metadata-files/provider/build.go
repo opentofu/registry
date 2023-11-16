@@ -31,11 +31,11 @@ func filterNewReleases(releases []github.GHRelease, existingMetadata provider.Me
 	return newReleases, nil
 }
 
-func BuildMetadataFile(p provider.Provider) (*provider.MetadataFile, error) {
+func BuildMetadataFile(p provider.Provider, providerDataDir string) (*provider.MetadataFile, error) {
 	ctx := context.Background()
 	ghClient := github.NewGitHubClient(ctx, os.Getenv("GH_TOKEN"))
 
-	existingMetadata, err := getExistingMetadata(p)
+	existingMetadata, err := getExistingMetadata(p, providerDataDir)
 	if err != nil {
 		return nil, err
 	}
@@ -112,8 +112,8 @@ func mergeMetadata(oldMetadata provider.MetadataFile, newMetadata provider.Metad
 	}
 }
 
-func getExistingMetadata(p provider.Provider) (provider.MetadataFile, error) {
-	pathToFile := getFilePath(p)
+func getExistingMetadata(p provider.Provider, providerDataDir string) (provider.MetadataFile, error) {
+	pathToFile := getFilePath(p, providerDataDir)
 
 	if _, err := os.Stat(pathToFile); errors.Is(err, os.ErrNotExist) {
 		log.Printf("Provider metadata file not found for %s", p.ProviderName)

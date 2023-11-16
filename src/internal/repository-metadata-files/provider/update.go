@@ -10,21 +10,21 @@ import (
 	"registry-stable/internal/provider"
 )
 
-func UpdateMetadataFile(p provider.Provider) error {
-	if shouldUpdate, err := shouldUpdateMetadataFile(p); err != nil || !shouldUpdate {
+func UpdateMetadataFile(p provider.Provider, providerDataDir string) error {
+	if shouldUpdate, err := shouldUpdateMetadataFile(p, providerDataDir); err != nil || !shouldUpdate {
 		return err
 	}
 
-	return CreateMetadataFile(p)
+	return CreateMetadataFile(p, providerDataDir)
 }
 
-func shouldUpdateMetadataFile(p provider.Provider) (bool, error) {
+func shouldUpdateMetadataFile(p provider.Provider, providerDataDir string) (bool, error) {
 	lastSemverTag, err := getLastSemverTag(p)
 	if err != nil {
 		return false, err
 	}
 
-	pathToFile := getFilePath(p)
+	pathToFile := getFilePath(p, providerDataDir)
 	fileContent, err := getProviderFileContent(pathToFile)
 	if err != nil {
 		return false, err
