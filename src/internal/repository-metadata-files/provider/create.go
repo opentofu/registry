@@ -4,6 +4,7 @@ import (
 	"path/filepath"
 	"registry-stable/internal/files"
 	"registry-stable/internal/provider"
+	"strings"
 )
 
 func CreateMetadataFile(p provider.Provider, providerDataDir string) error {
@@ -17,5 +18,5 @@ func CreateMetadataFile(p provider.Provider, providerDataDir string) error {
 }
 
 func getFilePath(p provider.Provider, providerDataDir string) string {
-	return filepath.Join(providerDataDir, p.Namespace[0:1], p.Namespace, p.ProviderName+".json")
+	return filepath.Join(providerDataDir, strings.ToLower(p.Namespace[0:1]), p.Namespace, p.ProviderName+".json")
 }

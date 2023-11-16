@@ -7,6 +7,7 @@ import (
 	"log/slog"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"registry-stable/internal/github"
 	"registry-stable/internal/provider"
@@ -16,7 +17,7 @@ import (
 func (g Generator) GenerateProviderResponses(_ context.Context, namespace string, name string) error {
 	logger := slog.With(slog.String("namespace", namespace), slog.String("name", name))
 
-	path := filepath.Join(g.ProviderDirectory, namespace[0:1], namespace, name+".json")
+	path := filepath.Join(g.ProviderDirectory, strings.ToLower(namespace[0:1]), namespace, name+".json")
 
 	metadata, err := g.readProviderMetadata(path, logger)
 	if err != nil {

@@ -4,6 +4,7 @@ import (
 	"path/filepath"
 	"registry-stable/internal/files"
 	"registry-stable/internal/module"
+	"strings"
 )
 
 func CreateMetadataFile(m module.Module, moduleDataDir string) error {
@@ -17,5 +18,5 @@ func CreateMetadataFile(m module.Module, moduleDataDir string) error {
 }
 
 func getFilePath(m module.Module, moduleDataDir string) string {
-	return filepath.Join(moduleDataDir, m.Namespace[0:1], m.Namespace, m.Name, m.TargetSystem+".json")
+	return filepath.Join(moduleDataDir, strings.ToLower(m.Namespace[0:1]), m.Namespace, m.Name, m.TargetSystem+".json")
 }
