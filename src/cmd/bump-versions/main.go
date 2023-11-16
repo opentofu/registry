@@ -12,8 +12,8 @@ func main() {
 	slog.SetDefault(slog.New(slog.NewJSONHandler(os.Stdout, nil)))
 	slog.Info("Starting version bump process for modules and providers")
 
-	moduleDataDir := flag.String("module-data", "../../../modules", "Directory containing the module data")
-	providerDataDir := flag.String("provider-data", "../../../providers", "Directory containing the provider data")
+	moduleDataDir := flag.String("module-data", "../modules", "Directory containing the module data")
+	providerDataDir := flag.String("provider-data", "../providers", "Directory containing the provider data")
 
 	flag.Parse()
 
