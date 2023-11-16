@@ -3,8 +3,6 @@ package provider
 import (
 	"context"
 	"encoding/json"
-	"fmt"
-	"io"
 	"log/slog"
 	"registry-stable/internal/github"
 )
@@ -22,15 +20,7 @@ func GetProtocols(ctx context.Context, manifestDownloadUrl string) ([]string, er
 		return []string{"5.0"}, nil
 	}
 
-	assetContents, err := github.DownloadAssetContents(ctx, manifestDownloadUrl)
-	if err != nil {
-		return nil, err
-	}
-
-	contents, contentsErr := io.ReadAll(assetContents)
-	if contentsErr != nil {
-		return nil, fmt.Errorf("failed to read asset contents: %w", contentsErr)
-	}
+	contents, err := github.DownloadAssetContents(ctx, manifestDownloadUrl)
 
 	manifest, err := parseManifestContents(contents)
 	if err != nil {

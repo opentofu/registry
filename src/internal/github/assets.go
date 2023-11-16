@@ -15,35 +15,37 @@ type Platform struct {
 	Arch string
 }
 
-func DownloadAssetContents(ctx context.Context, downloadURL string) (body io.ReadCloser, err error) {
+func DownloadAssetContents(ctx context.Context, downloadURL string) ([]byte, error) {
 	httpClient := httpInternal.GetHttpRetryClient()
 
 	log.Printf("Downloading asset, url: %s", downloadURL)
-	req, reqErr := http.NewRequestWithContext(ctx, http.MethodGet, downloadURL, nil)
-	if reqErr != nil {
-		log.Printf("Failed to create request %s", reqErr)
-		err = fmt.Errorf("failed to create request: %w", reqErr)
-		return
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, downloadURL, nil)
+	if err != nil {
+		log.Printf("Failed to create request %s", err)
+		return nil, fmt.Errorf("failed to create request: %w", err)
 	}
 
-	resp, respErr := httpClient.Do(req)
-	if respErr != nil {
-		log.Printf("Error downloading asset %s", respErr)
-		err = fmt.Errorf("error downloading asset: %w", respErr)
-		return
+	resp, err := httpClient.Do(req)
+	if err != nil {
+		log.Printf("Error downloading asset %s", err)
+		return nil, fmt.Errorf("error downloading asset: %w", err)
 	}
 
 	if resp.StatusCode != http.StatusOK {
 		resp.Body.Close()
 		log.Printf("Unexpected status code when downloading asset: %d", resp.StatusCode)
-		err = fmt.Errorf("unexpected status code when downloading asset: %d", resp.StatusCode)
-		return
+		return nil, fmt.Errorf("unexpected status code when downloading asset: %d", resp.StatusCode)
 	}
 
-	body = resp.Body
-
 	log.Printf("Asset downloaded successfully")
-	return
+
+	contents, err := io.ReadAll(resp.Body)
+	resp.Body.Close()
+	if err != nil {
+		return nil, fmt.Errorf("failed to read asset contents: %w", err)
+	}
+
+	return contents, nil
 }
 
 func ExtractPlatformFromFilename(filename string) *Platform {
