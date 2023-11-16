@@ -13,6 +13,7 @@ func Test_parseTagsFromStdout(t *testing.T) {
 		expected    []string
 		expectedErr error
 	}{
+		// Successfull
 		"Simple Tag": {
 			input:    []string{"314159265358979     refs/tags/v0.0.1"},
 			expected: []string{"v0.0.1"},
@@ -21,10 +22,20 @@ func Test_parseTagsFromStdout(t *testing.T) {
 			input:    []string{"314159265358979     refs/tags/v0.0.1", "314159265358979     refs/tags/v0.1.1", "314159265358979     refs/tags/v1.0.1"},
 			expected: []string{"v0.0.1", "v0.1.1", "v1.0.1"},
 		},
+		// Invalid entries (ignored)
+		"No Tags": {
+			input:    []string{},
+			expected: []string{},
+		},
+		"Empty Tags": {
+			input:    []string{""},
+			expected: []string{},
+		},
 		"Multiple Tags w/ Invalid": {
 			input:    []string{"314159265358979     HEAD", "314159265358979     refs/tags/v0.1.1", "314159265358979     refs/tags/v1.0.1"},
 			expected: []string{"v0.1.1", "v1.0.1"},
 		},
+		// Error cases
 		"Missing Field": {
 			input:       []string{"borkborkborkrefs/tags/"},
 			expectedErr: errors.New("invalid format for tag 'borkborkborkrefs/tags/', expected two fields"),
