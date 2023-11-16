@@ -9,7 +9,6 @@ import (
 )
 
 func parseTagsFromStdout(lines []string) ([]string, error) {
-	exec.LookPath("")
 	tags := make([]string, 0, len(lines))
 
 	for _, line := range lines {
