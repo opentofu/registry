@@ -3,8 +3,8 @@ package provider
 import "fmt"
 
 type MetadataFile struct {
-	Repository string    `json:"repository"` // Optional. Custom repository from which to fetch the provider's metadata.
-	Versions   []Version `json:"versions"`   // A list of version data, for each supported provider version.
+	Repository string    `json:"repository,omitempty"` // Optional. Custom repository from which to fetch the provider's metadata.
+	Versions   []Version `json:"versions"`             // A list of version data, for each supported provider version.
 }
 
 type Version struct {
