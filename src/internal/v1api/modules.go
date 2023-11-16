@@ -7,6 +7,7 @@ import (
 	"log/slog"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"registry-stable/internal"
 	"registry-stable/internal/module"
@@ -20,7 +21,7 @@ func (g Generator) GenerateModuleResponses(_ context.Context, namespace string, 
 	logger := slog.With(slog.String("namespace", namespace), slog.String("name", name), slog.String("targetSystem", targetSystem))
 
 	// TODO: Get path calculation from somewhere else
-	path := filepath.Join(g.ModuleDirectory, namespace[0:1], namespace, name, targetSystem+".json")
+	path := filepath.Join(g.ModuleDirectory, strings.ToLower(namespace[0:1]), namespace, name, targetSystem+".json")
 
 	metadata, err := g.readModuleMetadata(path, logger)
 	if err != nil {
