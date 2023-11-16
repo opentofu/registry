@@ -2,8 +2,10 @@ package v1api
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"log/slog"
+	"os"
 	"path/filepath"
 
 	"registry-stable/internal/files"
@@ -48,16 +50,38 @@ func (g Generator) GenerateModuleResponses(_ context.Context, m module.Module) e
 // This data  is to be consumed when an end user requests /v1/modules/{namespace}/{name}/{targetSystem}/versions
 func (g Generator) writeModuleVersionListing(m module.Module, versions []ModuleVersionResponseItem) error {
 	return files.SafeWriteObjectToJsonFile(
-		filepath.Join(g.DestinationDir, m.VersionListingPath(g.DestinationDir)),
+		filepath.Join(g.DestinationDir, m.VersionListingPath()),
 		ModuleVersionListingResponse{Modules: []ModuleVersionListingResponseItem{{Versions: versions}}},
 	)
+}
+
+// readModuleMetadata reads the module metadata file from the filesystem directly. This data should be the data fetched from the git repository.
+func (g Generator) readModuleMetadata(m module.Module, logger *slog.Logger) (*module.MetadataFile, error) {
+	path := filepath.Join(g.ModuleDirectory, m.MetadataPath())
+
+	// open the file
+	metadataFile, err := os.ReadFile(path)
+	if err != nil {
+		return nil, fmt.Errorf("failed to open metadata file: %w", err)
+	}
+
+	// Read the file contents into a Module[] struct
+	var metadata module.MetadataFile
+	err = json.Unmarshal(metadataFile, &metadata)
+	if err != nil {
+		return nil, err
+	}
+
+	logger.Debug("Loaded Module Versions", slog.Any("count", len(metadata.Versions)))
+
+	return &metadata, nil
 }
 
 // writeModuleVersionDownload writes the file containing the download link for the module version.
 // This data is to be consumed when an end user requests /v1/modules/{namespace}/{name}/{targetSystem}/{version}/download
 func (g Generator) writeModuleVersionDownload(m module.Module, version module.Version) interface{} {
 	return files.SafeWriteObjectToJsonFile(
-		filepath.Join(g.DestinationDir, m.VersionDownloadPath(g.DestinationDir, version)),
+		filepath.Join(g.DestinationDir, m.VersionDownloadPath(version)),
 		ModuleVersionDownloadResponse{Location: m.VersionDownloadURL(version)},
 	)
 }

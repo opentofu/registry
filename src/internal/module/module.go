@@ -30,18 +30,18 @@ func (m Module) VersionDownloadURL(version Version) string {
 	return fmt.Sprintf("git::%s?ref=%s", m.RepositoryURL(), version.Version)
 }
 
-func (m Module) MetadataPath(directory string) string {
-	return filepath.Join(directory, m.Namespace[0:1], m.Namespace, m.Name, m.TargetSystem+".json")
+func (m Module) MetadataPath() string {
+	return filepath.Join(m.Namespace[0:1], m.Namespace, m.Name, m.TargetSystem+".json")
 }
 
-func (m Module) outputPath(directory string) string {
-	return filepath.Join(directory, "v1", "modules", m.Namespace, m.Name, m.TargetSystem)
+func (m Module) outputPath() string {
+	return filepath.Join("v1", "modules", m.Namespace, m.Name, m.TargetSystem)
 }
 
-func (m Module) VersionListingPath(directory string) string {
-	return filepath.Join(m.outputPath(directory), "versions")
+func (m Module) VersionListingPath() string {
+	return filepath.Join(m.outputPath(), "versions")
 }
 
-func (m Module) VersionDownloadPath(directory string, v Version) string {
-	return filepath.Join(m.outputPath(directory), internal.TrimTagPrefix(v.Version), "download")
+func (m Module) VersionDownloadPath(v Version) string {
+	return filepath.Join(m.outputPath(), internal.TrimTagPrefix(v.Version), "download")
 }
