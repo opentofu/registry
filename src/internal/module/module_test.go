@@ -1,9 +1,6 @@
 package module
 
 import (
-	"bufio"
-	"bytes"
-	"log/slog"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -23,13 +20,4 @@ func Test_Module(t *testing.T) {
 	assert.Equal(t, "dir/s/spacename/name/target.json", m.MetadataPath("./dir"))
 	assert.Equal(t, "dir/v1/modules/spacename/name/target/versions", m.VersionListingPath("./dir"))
 	assert.Equal(t, "dir/v1/modules/spacename/name/target/1.0.1/download", m.VersionDownloadPath("./dir", v))
-
-	buff := bytes.NewBufferString("")
-	bw := bufio.NewWriter(buff)
-
-	logger := slog.New(slog.NewJSONHandler(bw, nil))
-	m.Logger(logger).Info("Module")
-	bw.Flush()
-
-	assert.Contains(t, buff.String(), `"namespace":"spacename","name":"name","targetSystem":"target"`)
 }

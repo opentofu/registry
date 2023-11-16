@@ -2,7 +2,6 @@ package module
 
 import (
 	"fmt"
-	"log/slog"
 	"path/filepath"
 	"registry-stable/internal"
 )
@@ -19,10 +18,6 @@ type Module struct {
 	Namespace    string // The module namespace
 	Name         string // The module name
 	TargetSystem string // The module target system
-}
-
-func (m Module) Logger(logger *slog.Logger) *slog.Logger {
-	return logger.With(slog.String("namespace", m.Namespace), slog.String("name", m.Name), slog.String("targetSystem", m.TargetSystem))
 }
 
 func (m Module) RepositoryURL() string {

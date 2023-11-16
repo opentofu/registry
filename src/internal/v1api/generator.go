@@ -1,7 +1,5 @@
 package v1api
 
-import "log/slog"
-
 // Generator is responsible for generating the responses used by v1 registry APIs.
 // This should take information from the current state of the registry and generate the responses
 // to be served by the API.
@@ -17,7 +15,4 @@ type Generator struct {
 
 	// ProviderDirectory is the directory to read provider metadata from.
 	ProviderDirectory string
-
-	// Logger for this generator
-	Logger *slog.Logger
 }

@@ -15,9 +15,7 @@ import (
 // https://opentofu.org/docs/internals/module-registry-protocol/#list-available-versions-for-a-specific-module
 // https://opentofu.org/docs/internals/module-registry-protocol/#download-source-code-for-a-specific-module-version
 func (g Generator) GenerateModuleResponses(_ context.Context, m module.Module) error {
-	logger := m.Logger(g.Logger)
-
-	logger.Info("Generating Module")
+	logger := slog.With(slog.String("namespace", m.Namespace), slog.String("name", m.Name), slog.String("targetSystem", m.TargetSystem))
 
 	metadata, err := m.ReadMetadata(g.ModuleDirectory, logger)
 	if err != nil {
@@ -42,8 +40,6 @@ func (g Generator) GenerateModuleResponses(_ context.Context, m module.Module) e
 	if err != nil {
 		return err
 	}
-
-	logger.Info("Generated Module")
 
 	return nil
 }
