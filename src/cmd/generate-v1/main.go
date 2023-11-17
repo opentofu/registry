@@ -40,7 +40,7 @@ func main() {
 
 	for _, m := range modules {
 		slog.Info("Generating", slog.String("module", m.Namespace+"/"+m.Name+"/"+m.TargetSystem))
-		err := v1APIGenerator.GenerateModuleResponses(ctx, m.Namespace, m.Name, m.TargetSystem)
+		err := v1APIGenerator.GenerateModuleResponses(ctx, m)
 		if err != nil {
 			slog.Error("Failed to generate module version listing response", slog.Any("err", err))
 			os.Exit(1)
