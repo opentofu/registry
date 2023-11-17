@@ -19,7 +19,7 @@ import (
 func (g Generator) GenerateModuleResponses(_ context.Context, m module.Module) error {
 	logger := slog.With(slog.String("namespace", m.Namespace), slog.String("name", m.Name), slog.String("targetSystem", m.TargetSystem))
 
-	metadata, err := m.ReadMetadata(g.ModuleDirectory, logger)
+	metadata, err := g.readModuleMetadata(m, logger)
 	if err != nil {
 		return err
 	}
