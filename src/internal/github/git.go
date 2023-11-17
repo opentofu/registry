@@ -8,6 +8,36 @@ import (
 	"strings"
 )
 
+func parseTagsFromStdout(lines []string) ([]string, error) {
+	tags := make([]string, 0, len(lines))
+
+	for _, line := range lines {
+		if !strings.Contains(line, "refs/tags/") {
+			continue
+		}
+
+		fields := strings.Fields(line)
+		if len(fields) != 2 {
+			return nil, fmt.Errorf("invalid format for tag '%s', expected two fields", line)
+		}
+
+		ref := fields[1]
+		if !strings.HasPrefix(ref, "refs/tags/") {
+			return nil, fmt.Errorf("invalid format for tag '%s', expected 'refs/tags/' prefix", line)
+		}
+
+		tag := strings.TrimPrefix(ref, "refs/tags/")
+		if tag == "" {
+			return nil, fmt.Errorf("invalid format for tag '%s', no version provided", line)
+		}
+
+		tags = append(tags, tag)
+	}
+
+	return tags, nil
+}
+
+// GetTags lists the tags of the remote repository and returns the refs/tags/ found
 func GetTags(repositoryUrl string) ([]string, error) {
 	log.Printf("Getting tags for repository %s", repositoryUrl)
 
@@ -18,31 +48,14 @@ func GetTags(repositoryUrl string) ([]string, error) {
 	cmd.Stderr = &bufErr
 
 	if err := cmd.Run(); err != nil {
-		log.Printf("Could not get tags for repository %s: %s", repositoryUrl, bufErr.String())
-		return nil, err
+		return nil, fmt.Errorf("could not get tags for %s, %w: %s", repositoryUrl, err, bufErr.String())
 	}
 
-	tags := make([]string, 0)
-	for _, line := range strings.Split(buf.String(), "\n") {
-		if !strings.Contains(line, "refs/tags/") {
-			continue
-		}
-
-		fields := strings.Fields(line)
-		if len(fields) != 2 {
-			return nil, fmt.Errorf("could not parse tags for %s: tags are in wrong format", repositoryUrl)
-		}
-
-		ref := fields[1]
-		if !strings.HasPrefix(ref, "refs/tags/") {
-			return nil, fmt.Errorf("could not parse tags for %s: tags are in wrong format", repositoryUrl)
-		}
-
-		tag := strings.TrimPrefix(ref, "refs/tags/")
-		tags = append(tags, tag)
+	tags, err := parseTagsFromStdout(strings.Split(buf.String(), "\n"))
+	if err != nil {
+		return nil, fmt.Errorf("could not parse tags for %s: %w", repositoryUrl, err)
 	}
 
 	log.Printf("Found %d tags for repository %s", len(tags), repositoryUrl)
-
 	return tags, nil
 }

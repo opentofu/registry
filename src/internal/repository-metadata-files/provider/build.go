@@ -4,13 +4,14 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"golang.org/x/mod/semver"
 	"log"
 	"os"
+	"slices"
+
+	"golang.org/x/mod/semver"
 	"registry-stable/internal"
 	"registry-stable/internal/github"
 	"registry-stable/internal/provider"
-	"slices"
 )
 
 func filterNewReleases(releases []github.GHRelease, existingMetadata provider.MetadataFile) ([]github.GHRelease, error) {
