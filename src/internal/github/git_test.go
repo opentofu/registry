@@ -13,7 +13,11 @@ func Test_parseTagsFromStdout(t *testing.T) {
 		expected    []string
 		expectedErr error
 	}{
-		// Successfull
+		"Empty input": {
+			input:    []string{""},
+			expected: []string{},
+		},
+		// Successful
 		"Simple Tag": {
 			input:    []string{"314159265358979     refs/tags/v0.0.1"},
 			expected: []string{"v0.0.1"},
