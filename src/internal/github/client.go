@@ -30,7 +30,7 @@ func getGithubOauth2Client(ctx context.Context, token string) *http.Client {
 	))
 }
 
-func GetHttpRetryClient(ctx context.Context, token string) *http.Client {
+func GetHTTPRetryClient(ctx context.Context, token string) *http.Client {
 	retryClient := retryablehttp.NewClient()
 	retryClient.RetryMax = 10
 	retryClient.Logger = nil

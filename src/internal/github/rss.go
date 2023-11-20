@@ -47,7 +47,7 @@ func getReleaseRssFeed(releasesRssUrl string) (feed *gofeed.Feed, err error) {
 	}
 
 	ctx := context.Background()
-	client := GetHttpRetryClient(ctx, token)
+	client := GetHTTPRetryClient(ctx, token)
 
 	resp, err := client.Get(releasesRssUrl)
 	if err != nil {
