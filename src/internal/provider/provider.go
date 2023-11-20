@@ -49,6 +49,11 @@ func (p Provider) RepositoryURL() string {
 	return fmt.Sprintf("https://github.com/%s/%s", p.EffectiveNamespace(), p.RepositoryName())
 }
 
+func (p Provider) getRssUrl() string {
+	repositoryUrl := p.RepositoryURL()
+	return fmt.Sprintf("%s/releases.atom", repositoryUrl)
+}
+
 // EffectiveProviderNamespace will map namespaces for providers in situations
 // where the author (owner of the namespace) does not release artifacts as
 // GitHub Releases.

@@ -8,20 +8,20 @@ import (
 	"golang.org/x/mod/semver"
 )
 
-func UpdateMetadataFile(p Provider, providerDataDir string) error {
-	if shouldUpdate, err := shouldUpdateMetadataFile(p, providerDataDir); err != nil || !shouldUpdate {
+func (p Provider) UpdateMetadataFile(providerDataDir string) error {
+	if shouldUpdate, err := p.shouldUpdateMetadataFile(providerDataDir); err != nil || !shouldUpdate {
 		return err
 	}
 
-	meta, err := BuildMetadataFile(p, providerDataDir)
+	meta, err := p.buildMetadataFile(providerDataDir)
 	if err != nil {
 		return err
 	}
 	return p.WriteMetadata(providerDataDir, *meta)
 }
 
-func shouldUpdateMetadataFile(p Provider, providerDataDir string) (bool, error) {
-	lastSemverTag, err := getLastSemverTag(p)
+func (p Provider) shouldUpdateMetadataFile(providerDataDir string) (bool, error) {
+	lastSemverTag, err := p.getLastSemverTag()
 	if err != nil {
 		return false, err
 	}
@@ -44,8 +44,8 @@ func shouldUpdateMetadataFile(p Provider, providerDataDir string) (bool, error) 
 
 }
 
-func getSemverTags(p Provider) ([]string, error) {
-	releasesRssUrl := getRssUrl(p)
+func (p Provider) getSemverTags() ([]string, error) {
+	releasesRssUrl := p.getRssUrl()
 	tags, err := github.GetTagsFromRss(releasesRssUrl)
 	if err != nil {
 		return nil, err
@@ -61,8 +61,8 @@ func getSemverTags(p Provider) ([]string, error) {
 	return semverTags, nil
 }
 
-func getLastSemverTag(p Provider) (string, error) {
-	semverTags, err := getSemverTags(p)
+func (p Provider) getLastSemverTag() (string, error) {
+	semverTags, err := p.getSemverTags()
 	if err != nil {
 		return "", err
 	}
@@ -73,9 +73,4 @@ func getLastSemverTag(p Provider) (string, error) {
 
 	// Tags should be sorted by descending creation date. So, return the first tag
 	return semverTags[0], nil
-}
-
-func getRssUrl(p Provider) string {
-	repositoryUrl := p.RepositoryURL()
-	return fmt.Sprintf("%s/releases.atom", repositoryUrl)
 }

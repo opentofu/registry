@@ -30,7 +30,7 @@ func filterNewReleases(releases []github.GHRelease, existingMetadata MetadataFil
 	return newReleases, nil
 }
 
-func BuildMetadataFile(p Provider, providerDataDir string) (*MetadataFile, error) {
+func (p Provider) buildMetadataFile(providerDataDir string) (*MetadataFile, error) {
 	ctx := context.Background()
 
 	token, err := github.EnvAuthToken()
@@ -45,8 +45,7 @@ func BuildMetadataFile(p Provider, providerDataDir string) (*MetadataFile, error
 		return nil, err
 	}
 
-	repoName := p.RepositoryName()
-	releases, err := github.FetchPublishedReleases(ctx, ghClient, p.EffectiveNamespace(), repoName)
+	releases, err := github.FetchPublishedReleases(ctx, ghClient, p.EffectiveNamespace(), p.RepositoryName())
 	if err != nil {
 		return nil, err
 	}
