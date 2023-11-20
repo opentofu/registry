@@ -59,7 +59,7 @@ func main() {
 
 	for _, p := range providers {
 		slog.Info("Generating", slog.String("provider", p.Namespace+"/"+p.ProviderName))
-		err := v1APIGenerator.GenerateProviderResponses(ctx, p.Namespace, p.ProviderName)
+		err := v1APIGenerator.GenerateProviderResponses(ctx, p)
 		if err != nil {
 			slog.Error("Failed to generate provider version listing response", slog.Any("err", err))
 			os.Exit(1)

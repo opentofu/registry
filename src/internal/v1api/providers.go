@@ -7,7 +7,6 @@ import (
 	"log/slog"
 	"os"
 	"path/filepath"
-	"strings"
 
 	"registry-stable/internal/files"
 	"registry-stable/internal/github"
@@ -15,12 +14,10 @@ import (
 )
 
 // GenerateProviderResponses generates the response for the provider version listing API endpoints.
-func (g Generator) GenerateProviderResponses(_ context.Context, namespace string, name string) error {
-	logger := slog.With(slog.String("namespace", namespace), slog.String("name", name))
+func (g Generator) GenerateProviderResponses(_ context.Context, p provider.Provider) error {
+	logger := slog.With(slog.String("namespace", p.Namespace), slog.String("name", p.ProviderName))
 
-	path := filepath.Join(g.ProviderDirectory, strings.ToLower(namespace[0:1]), namespace, name+".json")
-
-	metadata, err := g.readProviderMetadata(path, logger)
+	metadata, err := g.readProviderMetadata(p, logger)
 	if err != nil {
 		return err
 	}
@@ -59,7 +56,7 @@ func (g Generator) GenerateProviderResponses(_ context.Context, namespace string
 		// for each of the targets, write the version download file
 		for _, details := range versionDetails {
 			logger.Debug("Writing version download file", slog.String("version", ver.Version))
-			err := g.writeProviderVersionDownload(namespace, name, ver.Version, details)
+			err := g.writeProviderVersionDownload(p, ver, details)
 			if err != nil {
 				return fmt.Errorf("failed to write metadata version download file for version %s: %w", ver.Version, err)
 			}
@@ -67,7 +64,7 @@ func (g Generator) GenerateProviderResponses(_ context.Context, namespace string
 		logger.Debug("Wrote metadata version download file", slog.String("version", ver.Version))
 	}
 
-	err = g.writeProviderVersionListing(namespace, name, versionsResponse)
+	err = g.writeProviderVersionListing(p, versionsResponse)
 	if err != nil {
 		return err
 	}
@@ -76,7 +73,9 @@ func (g Generator) GenerateProviderResponses(_ context.Context, namespace string
 }
 
 // readProviderMetadata reads the provider metadata file from the filesystem directly. This data should be the data fetched from the git repository.
-func (g Generator) readProviderMetadata(path string, logger *slog.Logger) (*provider.MetadataFile, error) {
+func (g Generator) readProviderMetadata(p provider.Provider, logger *slog.Logger) (*provider.MetadataFile, error) {
+	path := filepath.Join(g.ProviderDirectory, p.MetadataPath())
+
 	metadataFile, err := os.ReadFile(path)
 	if err != nil {
 		return nil, fmt.Errorf("failed to open metadata file: %w", err)
@@ -93,12 +92,12 @@ func (g Generator) readProviderMetadata(path string, logger *slog.Logger) (*prov
 	return &metadata, nil
 }
 
-func (g Generator) writeProviderVersionDownload(namespace string, name string, version string, versionMetadata ProviderVersionDetails) error {
-	path := filepath.Join(g.DestinationDir, "v1", "providers", namespace, name, version, "download", versionMetadata.OS, versionMetadata.Arch)
+func (g Generator) writeProviderVersionDownload(p provider.Provider, v provider.Version, versionMetadata ProviderVersionDetails) error {
+	path := filepath.Join(g.DestinationDir, "v1", p.VersionDownloadPath(v), versionMetadata.OS, versionMetadata.Arch)
 	return files.SafeWriteObjectToJsonFile(path, versionMetadata)
 }
 
-func (g Generator) writeProviderVersionListing(namespace string, name string, versions []ProviderVersionResponseItem) error {
-	path := filepath.Join(g.DestinationDir, "v1", "providers", namespace, name, "versions")
+func (g Generator) writeProviderVersionListing(p provider.Provider, versions []ProviderVersionResponseItem) error {
+	path := filepath.Join(g.DestinationDir, "v1", p.VersionListingPath())
 	return files.SafeWriteObjectToJsonFile(path, ProviderVersionListingResponse{Versions: versions})
 }

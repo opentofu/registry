@@ -1,6 +1,10 @@
 package provider
 
-import "fmt"
+import (
+	"fmt"
+	"path/filepath"
+	"strings"
+)
 
 type MetadataFile struct {
 	Repository string    `json:"repository,omitempty"` // Optional. Custom repository from which to fetch the provider's metadata.
@@ -47,3 +51,15 @@ func (p Provider) EffectiveNamespace() string {
 
 	return p.Namespace
 } // TODO make more generic
+
+func (p Provider) MetadataPath() string {
+	return filepath.Join(strings.ToLower(p.Namespace[0:1]), p.Namespace, p.ProviderName+".json")
+}
+
+func (p Provider) VersionListingPath() string {
+	return filepath.Join("providers", p.Namespace, p.ProviderName, "versions")
+}
+
+func (p Provider) VersionDownloadPath(v Version) string {
+	return filepath.Join("providers", p.Namespace, p.ProviderName, v.Version, "download")
+}
