@@ -1,8 +1,8 @@
 package github
 
 import (
+	"context"
 	"fmt"
-	"net/http"
 	"regexp"
 
 	"github.com/mmcdole/gofeed"
@@ -41,15 +41,15 @@ func extractTag(item *gofeed.Item) (string, error) {
 }
 
 func getReleaseRssFeed(releasesRssUrl string) (feed *gofeed.Feed, err error) {
-	/*token, err := EnvAuthToken()
+	token, err := EnvAuthToken()
 	if err != nil {
 		return nil, err
 	}
 
 	ctx := context.Background()
-	client := GetHTTPRetryClient(ctx, token)*/
+	client := GetHTTPRetryClient(ctx, token)
 
-	resp, err := http.Get(releasesRssUrl)
+	resp, err := client.Get(releasesRssUrl)
 	if err != nil {
 		return nil, fmt.Errorf("%s: %w", releasesRssUrl, err)
 	}
