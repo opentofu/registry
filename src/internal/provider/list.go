@@ -42,6 +42,7 @@ func ListProviders(providerDataDir string) ([]Provider, error) {
 	err := filepath.Walk(providerDataDir, func(path string, info os.FileInfo, err error) error {
 		p := extractProviderDetailsFromPath(path)
 		if p != nil {
+			p.Directory = providerDataDir
 			results = append(results, *p)
 		}
 		return nil

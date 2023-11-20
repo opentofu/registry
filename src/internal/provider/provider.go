@@ -33,6 +33,7 @@ type Target struct {
 type Provider struct {
 	ProviderName string // The provider name
 	Namespace    string // The provider namespace
+	Directory    string // The root directory that the provider lives in
 }
 
 // TODO remove me and use slog instead?
@@ -65,14 +66,14 @@ func (p Provider) EffectiveNamespace() string {
 	return p.Namespace
 } // TODO make more generic
 
-func (p Provider) MetadataPath(dir string) string {
-	return filepath.Join(dir, strings.ToLower(p.Namespace[0:1]), p.Namespace, p.ProviderName+".json")
+func (p Provider) MetadataPath() string {
+	return filepath.Join(p.Directory, strings.ToLower(p.Namespace[0:1]), p.Namespace, p.ProviderName+".json")
 }
 
-func (p Provider) ReadMetadata(dir string) (MetadataFile, error) {
+func (p Provider) ReadMetadata() (MetadataFile, error) {
 	var metadata MetadataFile
 
-	path := p.MetadataPath(dir)
+	path := p.MetadataPath()
 
 	metadataFile, err := os.ReadFile(path)
 	if err != nil {
@@ -87,7 +88,7 @@ func (p Provider) ReadMetadata(dir string) (MetadataFile, error) {
 	return metadata, nil
 }
 
-func (p Provider) WriteMetadata(dir string, meta MetadataFile) error {
-	path := p.MetadataPath(dir)
+func (p Provider) WriteMetadata(meta MetadataFile) error {
+	path := p.MetadataPath()
 	return files.SafeWriteObjectToJsonFile(path, meta)
 }

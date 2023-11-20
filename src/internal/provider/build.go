@@ -12,7 +12,7 @@ import (
 	"golang.org/x/mod/semver"
 )
 
-func filterNewReleases(releases []github.GHRelease, existingMetadata MetadataFile) ([]github.GHRelease, error) {
+func (existingMetadata MetadataFile) filterNewReleases(releases []github.GHRelease) []github.GHRelease {
 	var existingVersions = make(map[string]bool)
 	for _, v := range existingMetadata.Versions {
 		existingVersions[v.Version] = true
@@ -27,10 +27,10 @@ func filterNewReleases(releases []github.GHRelease, existingMetadata MetadataFil
 
 	log.Printf("Found %d releases that do not already exist in the metadata file", len(newReleases))
 
-	return newReleases, nil
+	return newReleases
 }
 
-func (p Provider) buildMetadataFile(providerDataDir string) (*MetadataFile, error) {
+func (p Provider) buildMetadataFile() (*MetadataFile, error) {
 	ctx := context.Background()
 
 	token, err := github.EnvAuthToken()
@@ -40,7 +40,7 @@ func (p Provider) buildMetadataFile(providerDataDir string) (*MetadataFile, erro
 
 	ghClient := github.NewGitHubClient(ctx, token)
 
-	existingMetadata, err := p.ReadMetadata(providerDataDir)
+	meta, err := p.ReadMetadata()
 	if err != nil {
 		return nil, err
 	}
@@ -50,15 +50,12 @@ func (p Provider) buildMetadataFile(providerDataDir string) (*MetadataFile, erro
 		return nil, err
 	}
 
-	newReleases, err := filterNewReleases(releases, existingMetadata)
-	if err != nil {
-		return nil, err
-	}
+	releases = meta.filterNewReleases(releases)
 
 	versions := make([]Version, 0)
 	versionArtifactsMap := make(VersionArtifactsMap)
 
-	for _, r := range newReleases {
+	for _, r := range releases {
 		version := internal.TrimTagPrefix(r.TagName)
 		versionArtifacts := getArtifacts(r)
 		versionArtifactsMap[version] = versionArtifacts
@@ -96,22 +93,12 @@ func (p Provider) buildMetadataFile(providerDataDir string) (*MetadataFile, erro
 		return nil, err
 	}
 
-	mergedMetadata := mergeMetadata(existingMetadata, MetadataFile{
-		Versions: versions,
-	})
-	return &mergedMetadata, nil
-}
-
-func mergeMetadata(oldMetadata MetadataFile, newMetadata MetadataFile) MetadataFile {
-	versions := append(newMetadata.Versions, oldMetadata.Versions...)
+	meta.Versions = append(meta.Versions, versions...)
 
 	semverSortFunc := func(a, b Version) int {
 		return semver.Compare(fmt.Sprintf("s%s", a.Version), fmt.Sprintf("s%s", b.Version))
 	}
-	slices.SortFunc(versions, semverSortFunc)
+	slices.SortFunc(meta.Versions, semverSortFunc)
 
-	return MetadataFile{
-		Repository: oldMetadata.Repository,
-		Versions:   versions,
-	}
+	return &meta, nil
 }

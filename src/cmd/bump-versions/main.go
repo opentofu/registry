@@ -40,7 +40,7 @@ func main() {
 
 	for _, p := range providers {
 		slog.Info("Beginning version bump process for provider", slog.String("provider", p.Namespace+"/"+p.ProviderName))
-		err = p.UpdateMetadataFile(*providerDataDir)
+		err = p.UpdateMetadataFile()
 		if err != nil {
 			slog.Error("Failed to version bump provider", slog.Any("err", err))
 		}

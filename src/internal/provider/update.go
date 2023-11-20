@@ -8,25 +8,25 @@ import (
 	"golang.org/x/mod/semver"
 )
 
-func (p Provider) UpdateMetadataFile(providerDataDir string) error {
-	if shouldUpdate, err := p.shouldUpdateMetadataFile(providerDataDir); err != nil || !shouldUpdate {
+func (p Provider) UpdateMetadataFile() error {
+	if shouldUpdate, err := p.shouldUpdateMetadataFile(); err != nil || !shouldUpdate {
 		return err
 	}
 
-	meta, err := p.buildMetadataFile(providerDataDir)
+	meta, err := p.buildMetadataFile()
 	if err != nil {
 		return err
 	}
-	return p.WriteMetadata(providerDataDir, *meta)
+	return p.WriteMetadata(*meta)
 }
 
-func (p Provider) shouldUpdateMetadataFile(providerDataDir string) (bool, error) {
+func (p Provider) shouldUpdateMetadataFile() (bool, error) {
 	lastSemverTag, err := p.getLastSemverTag()
 	if err != nil {
 		return false, err
 	}
 
-	fileContent, err := p.ReadMetadata(providerDataDir)
+	fileContent, err := p.ReadMetadata()
 	if err != nil {
 		return false, err
 	}
