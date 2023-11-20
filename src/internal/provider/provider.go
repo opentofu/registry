@@ -1,7 +1,9 @@
 package provider
 
 import (
+	"encoding/json"
 	"fmt"
+	"os"
 	"path/filepath"
 	"strings"
 )
@@ -56,10 +58,19 @@ func (p Provider) MetadataPath() string {
 	return filepath.Join(strings.ToLower(p.Namespace[0:1]), p.Namespace, p.ProviderName+".json")
 }
 
-func (p Provider) VersionListingPath() string {
-	return filepath.Join("providers", p.Namespace, p.ProviderName, "versions")
-}
+func (p Provider) ReadMetadata(dir string) (*MetadataFile, error) {
+	path := filepath.Join(dir, p.MetadataPath())
 
-func (p Provider) VersionDownloadPath(v Version) string {
-	return filepath.Join("providers", p.Namespace, p.ProviderName, v.Version, "download")
+	metadataFile, err := os.ReadFile(path)
+	if err != nil {
+		return nil, fmt.Errorf("failed to open metadata file: %w", err)
+	}
+
+	var metadata MetadataFile
+	err = json.Unmarshal(metadataFile, &metadata)
+	if err != nil {
+		return nil, fmt.Errorf("failed to unmarshal metadata file: %w", err)
+	}
+
+	return &metadata, nil
 }
