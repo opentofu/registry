@@ -3,9 +3,10 @@ package github
 import (
 	"context"
 	"fmt"
-	"github.com/shurcooL/githubv4"
 	"log"
 	"time"
+
+	"github.com/shurcooL/githubv4"
 )
 
 func FetchPublishedReleases(ctx context.Context, ghClient *githubv4.Client, owner string, repoName string) (releases []GHRelease, err error) {

@@ -6,8 +6,6 @@ import (
 	"io"
 	"log"
 	"net/http"
-	"regexp"
-	httpInternal "registry-stable/internal/http"
 )
 
 // TODO: probably move the Platform type inside providers as that's the only place this is used,
@@ -19,7 +17,7 @@ type Platform struct {
 }
 
 func DownloadAssetContents(ctx context.Context, downloadURL string) ([]byte, error) {
-	httpClient := httpInternal.GetHttpRetryClient()
+	httpClient := GetHTTPRetryClient(ctx, "TODO")
 
 	log.Printf("Downloading asset, url: %s", downloadURL)
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, downloadURL, nil)
@@ -49,20 +47,4 @@ func DownloadAssetContents(ctx context.Context, downloadURL string) ([]byte, err
 	}
 
 	return contents, nil
-}
-
-func ExtractPlatformFromFilename(filename string) *Platform {
-	platformPattern := regexp.MustCompile(`.*_(?P<Os>[a-zA-Z0-9]+)_(?P<Arch>[a-zA-Z0-9]+).zip`)
-	matches := platformPattern.FindStringSubmatch(filename)
-
-	if matches == nil {
-		return nil
-	}
-
-	platform := Platform{
-		OS:   matches[platformPattern.SubexpIndex("Os")],
-		Arch: matches[platformPattern.SubexpIndex("Arch")],
-	}
-
-	return &platform
 }

@@ -15,11 +15,6 @@ type ManifestMetadata struct {
 }
 
 func GetProtocols(ctx context.Context, manifestDownloadUrl string) ([]string, error) {
-	if manifestDownloadUrl == "" {
-		slog.Warn("Could not find manifest file, using default protocols")
-		return []string{"5.0"}, nil
-	}
-
 	contents, err := github.DownloadAssetContents(ctx, manifestDownloadUrl)
 
 	manifest, err := parseManifestContents(contents)

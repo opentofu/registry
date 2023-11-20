@@ -52,48 +52,18 @@ func (p Provider) buildMetadataFile() (*MetadataFile, error) {
 
 	releases = meta.filterNewReleases(releases)
 
-	versions := make([]Version, 0)
-	versionArtifactsMap := make(VersionArtifactsMap)
-
 	for _, r := range releases {
-		version := internal.TrimTagPrefix(r.TagName)
-		versionArtifacts := getArtifacts(r)
-		versionArtifactsMap[version] = versionArtifacts
-
-		var targets = make([]Target, 0)
-		for _, a := range versionArtifacts.TargetArtifacts {
-			targets = append(targets, Target{
-				OS:          a.OS,
-				Arch:        a.Arch,
-				Filename:    a.Name,
-				DownloadURL: a.DownloadURL,
-			})
+		version, err := p.VersionFromRelease(r)
+		if err != nil {
+			return nil, err
 		}
-		if len(targets) == 0 {
-			log.Printf("could not find artifacts in release of provider %s version %s, skipping...", p.ProviderName, r.TagName)
+		if version == nil {
+			// Not a valid release, skipping
 			continue
 		}
-		if (versionArtifacts.ShaSumsArtifact == Artifact{}) {
-			return nil, fmt.Errorf("could not SHASUMS artifact for provider %s version %s", p.ProviderName, r.TagName)
-		}
-		if (versionArtifacts.ShaSumsSignatureArtifact == Artifact{}) {
-			return nil, fmt.Errorf("could not SHASUMS signature artifact for provider %s version %s", p.ProviderName, r.TagName)
-		}
 
-		versions = append(versions, Version{
-			Version:             version,
-			SHASumsURL:          versionArtifacts.ShaSumsArtifact.DownloadURL,
-			SHASumsSignatureURL: versionArtifacts.ShaSumsSignatureArtifact.DownloadURL,
-			Targets:             targets,
-		})
+		meta.Versions = append(meta.Versions, *version)
 	}
-
-	versions, err = enrichWithDataFromArtifacts(ctx, versions, versionArtifactsMap)
-	if err != nil {
-		return nil, err
-	}
-
-	meta.Versions = append(meta.Versions, versions...)
 
 	semverSortFunc := func(a, b Version) int {
 		return semver.Compare(fmt.Sprintf("s%s", a.Version), fmt.Sprintf("s%s", b.Version))
