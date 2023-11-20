@@ -16,7 +16,7 @@ func (g Generator) GenerateProviderResponses(_ context.Context, p provider.Provi
 		return err
 	}
 
-	s := ProviderSource{p, *metadata}
+	s := ProviderSource{p, metadata}
 
 	for location, details := range s.VersionDetails() {
 		path := filepath.Join(g.DestinationDir, location)

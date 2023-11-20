@@ -1,31 +1,32 @@
 package provider
 
 import (
-	"encoding/json"
 	"fmt"
-	"golang.org/x/mod/semver"
 	"log"
-	"os"
 	"registry-stable/internal/github"
-	"registry-stable/internal/provider"
+
+	"golang.org/x/mod/semver"
 )
 
-func UpdateMetadataFile(p provider.Provider, providerDataDir string) error {
+func UpdateMetadataFile(p Provider, providerDataDir string) error {
 	if shouldUpdate, err := shouldUpdateMetadataFile(p, providerDataDir); err != nil || !shouldUpdate {
 		return err
 	}
 
-	return CreateMetadataFile(p, providerDataDir)
+	meta, err := BuildMetadataFile(p, providerDataDir)
+	if err != nil {
+		return err
+	}
+	return p.WriteMetadata(providerDataDir, *meta)
 }
 
-func shouldUpdateMetadataFile(p provider.Provider, providerDataDir string) (bool, error) {
+func shouldUpdateMetadataFile(p Provider, providerDataDir string) (bool, error) {
 	lastSemverTag, err := getLastSemverTag(p)
 	if err != nil {
 		return false, err
 	}
 
-	pathToFile := getFilePath(p, providerDataDir)
-	fileContent, err := getProviderFileContent(pathToFile)
+	fileContent, err := p.ReadMetadata(providerDataDir)
 	if err != nil {
 		return false, err
 	}
@@ -33,31 +34,17 @@ func shouldUpdateMetadataFile(p provider.Provider, providerDataDir string) (bool
 	for _, v := range fileContent.Versions {
 		versionWithPrefix := fmt.Sprintf("v%s", v.Version)
 		if versionWithPrefix == lastSemverTag {
-			log.Printf("Found latest tag %s in the repository file %s, nothing to update...", lastSemverTag, pathToFile)
+			log.Printf("Found latest tag %s for %s, nothing to update...", lastSemverTag, p.String())
 			return false, nil
 		}
 	}
 
-	log.Printf("Could not find latest tag %s in the repository file %s, updating the file...", lastSemverTag, pathToFile)
+	log.Printf("Could not find latest tag %s for %s, updating the file...", lastSemverTag, p.String())
 	return true, nil
 
 }
 
-func getProviderFileContent(path string) (provider.MetadataFile, error) {
-	res, _ := os.ReadFile(path)
-
-	var fileData provider.MetadataFile
-
-	err := json.Unmarshal(res, &fileData)
-
-	if err != nil {
-		return provider.MetadataFile{}, err
-	}
-
-	return fileData, nil
-}
-
-func getSemverTags(p provider.Provider) ([]string, error) {
+func getSemverTags(p Provider) ([]string, error) {
 	releasesRssUrl := getRssUrl(p)
 	tags, err := github.GetTagsFromRss(releasesRssUrl)
 	if err != nil {
@@ -74,7 +61,7 @@ func getSemverTags(p provider.Provider) ([]string, error) {
 	return semverTags, nil
 }
 
-func getLastSemverTag(p provider.Provider) (string, error) {
+func getLastSemverTag(p Provider) (string, error) {
 	semverTags, err := getSemverTags(p)
 	if err != nil {
 		return "", err
@@ -88,7 +75,7 @@ func getLastSemverTag(p provider.Provider) (string, error) {
 	return semverTags[0], nil
 }
 
-func getRssUrl(p provider.Provider) string {
+func getRssUrl(p Provider) string {
 	repositoryUrl := p.RepositoryURL()
 	return fmt.Sprintf("%s/releases.atom", repositoryUrl)
 }

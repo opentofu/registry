@@ -4,8 +4,8 @@ import (
 	"flag"
 	"log/slog"
 	"os"
+	"registry-stable/internal/provider"
 	"registry-stable/internal/repository-metadata-files/module"
-	"registry-stable/internal/repository-metadata-files/provider"
 )
 
 func main() {

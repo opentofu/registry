@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 	"registry-stable/internal/github"
-	"registry-stable/internal/provider"
 	"strings"
 	"sync"
 )
@@ -86,7 +85,7 @@ func getArtifacts(release github.GHRelease) VersionArtifacts {
 
 // enrichWithDataFromArtifacts performs all data enrichment necessary for the provider, that require artifact downloads
 // All necessary artifacts are downloaded in parallel, when calculating the SHAs and Protocols of each provider version
-func enrichWithDataFromArtifacts(ctx context.Context, versions []provider.Version, artifactsMap VersionArtifactsMap) ([]provider.Version, error) {
+func enrichWithDataFromArtifacts(ctx context.Context, versions []Version, artifactsMap VersionArtifactsMap) ([]Version, error) {
 	versionsCopy := versions
 
 	shaSumCh := make(chan ShaSumResult, len(versionsCopy))
@@ -96,7 +95,7 @@ func enrichWithDataFromArtifacts(ctx context.Context, versions []provider.Versio
 	for i, v := range versionsCopy {
 		wg.Add(2)
 
-		go func(v provider.Version, i int) {
+		go func(v Version, i int) {
 			defer wg.Done()
 			shaMap, err := GetShaSums(ctx, artifactsMap[v.Version].ShaSumsArtifact.DownloadURL)
 			shaSumCh <- ShaSumResult{
@@ -106,7 +105,7 @@ func enrichWithDataFromArtifacts(ctx context.Context, versions []provider.Versio
 			}
 		}(v, i)
 
-		go func(v provider.Version, i int) {
+		go func(v Version, i int) {
 			defer wg.Done()
 			protocols, err := GetProtocols(ctx, artifactsMap[v.Version].ManifestArtifact.DownloadURL)
 			protocolsCh <- ProtocolsResult{

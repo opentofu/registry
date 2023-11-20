@@ -6,8 +6,8 @@ import (
 	"log/slog"
 	"os"
 
+	"registry-stable/internal/provider"
 	"registry-stable/internal/repository-metadata-files/module"
-	"registry-stable/internal/repository-metadata-files/provider"
 	"registry-stable/internal/v1api"
 )
 

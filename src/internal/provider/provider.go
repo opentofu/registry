@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"registry-stable/internal/files"
 	"strings"
 )
 
@@ -34,6 +35,11 @@ type Provider struct {
 	Namespace    string // The provider namespace
 }
 
+// TODO remove me and use slog instead?
+func (p Provider) String() string {
+	return fmt.Sprintf("%s/%s", p.ProviderName, p.Namespace)
+}
+
 func (p Provider) RepositoryName() string {
 	return fmt.Sprintf("terraform-provider-%s", p.ProviderName)
 }
@@ -54,23 +60,29 @@ func (p Provider) EffectiveNamespace() string {
 	return p.Namespace
 } // TODO make more generic
 
-func (p Provider) MetadataPath() string {
-	return filepath.Join(strings.ToLower(p.Namespace[0:1]), p.Namespace, p.ProviderName+".json")
+func (p Provider) MetadataPath(dir string) string {
+	return filepath.Join(dir, strings.ToLower(p.Namespace[0:1]), p.Namespace, p.ProviderName+".json")
 }
 
-func (p Provider) ReadMetadata(dir string) (*MetadataFile, error) {
-	path := filepath.Join(dir, p.MetadataPath())
+func (p Provider) ReadMetadata(dir string) (MetadataFile, error) {
+	var metadata MetadataFile
+
+	path := p.MetadataPath(dir)
 
 	metadataFile, err := os.ReadFile(path)
 	if err != nil {
-		return nil, fmt.Errorf("failed to open metadata file: %w", err)
+		return metadata, fmt.Errorf("failed to open metadata file: %w", err)
 	}
 
-	var metadata MetadataFile
 	err = json.Unmarshal(metadataFile, &metadata)
 	if err != nil {
-		return nil, fmt.Errorf("failed to unmarshal metadata file: %w", err)
+		return metadata, fmt.Errorf("failed to unmarshal metadata file: %w", err)
 	}
 
-	return &metadata, nil
+	return metadata, nil
+}
+
+func (p Provider) WriteMetadata(dir string, meta MetadataFile) error {
+	path := p.MetadataPath(dir)
+	return files.SafeWriteObjectToJsonFile(path, meta)
 }

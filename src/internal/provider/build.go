@@ -2,20 +2,17 @@ package provider
 
 import (
 	"context"
-	"errors"
 	"fmt"
 	"log"
-	"os"
 	"slices"
 
 	"registry-stable/internal"
 	"registry-stable/internal/github"
-	"registry-stable/internal/provider"
 
 	"golang.org/x/mod/semver"
 )
 
-func filterNewReleases(releases []github.GHRelease, existingMetadata provider.MetadataFile) ([]github.GHRelease, error) {
+func filterNewReleases(releases []github.GHRelease, existingMetadata MetadataFile) ([]github.GHRelease, error) {
 	var existingVersions = make(map[string]bool)
 	for _, v := range existingMetadata.Versions {
 		existingVersions[v.Version] = true
@@ -33,7 +30,7 @@ func filterNewReleases(releases []github.GHRelease, existingMetadata provider.Me
 	return newReleases, nil
 }
 
-func BuildMetadataFile(p provider.Provider, providerDataDir string) (*provider.MetadataFile, error) {
+func BuildMetadataFile(p Provider, providerDataDir string) (*MetadataFile, error) {
 	ctx := context.Background()
 
 	token, err := github.EnvAuthToken()
@@ -43,7 +40,7 @@ func BuildMetadataFile(p provider.Provider, providerDataDir string) (*provider.M
 
 	ghClient := github.NewGitHubClient(ctx, token)
 
-	existingMetadata, err := getExistingMetadata(p, providerDataDir)
+	existingMetadata, err := p.ReadMetadata(providerDataDir)
 	if err != nil {
 		return nil, err
 	}
@@ -59,7 +56,7 @@ func BuildMetadataFile(p provider.Provider, providerDataDir string) (*provider.M
 		return nil, err
 	}
 
-	versions := make([]provider.Version, 0)
+	versions := make([]Version, 0)
 	versionArtifactsMap := make(VersionArtifactsMap)
 
 	for _, r := range newReleases {
@@ -67,9 +64,9 @@ func BuildMetadataFile(p provider.Provider, providerDataDir string) (*provider.M
 		versionArtifacts := getArtifacts(r)
 		versionArtifactsMap[version] = versionArtifacts
 
-		var targets = make([]provider.Target, 0)
+		var targets = make([]Target, 0)
 		for _, a := range versionArtifacts.TargetArtifacts {
-			targets = append(targets, provider.Target{
+			targets = append(targets, Target{
 				OS:          a.OS,
 				Arch:        a.Arch,
 				Filename:    a.Name,
@@ -87,7 +84,7 @@ func BuildMetadataFile(p provider.Provider, providerDataDir string) (*provider.M
 			return nil, fmt.Errorf("could not SHASUMS signature artifact for provider %s version %s", p.ProviderName, r.TagName)
 		}
 
-		versions = append(versions, provider.Version{
+		versions = append(versions, Version{
 			Version:             version,
 			SHASumsURL:          versionArtifacts.ShaSumsArtifact.DownloadURL,
 			SHASumsSignatureURL: versionArtifacts.ShaSumsSignatureArtifact.DownloadURL,
@@ -100,35 +97,22 @@ func BuildMetadataFile(p provider.Provider, providerDataDir string) (*provider.M
 		return nil, err
 	}
 
-	mergedMetadata := mergeMetadata(existingMetadata, provider.MetadataFile{
+	mergedMetadata := mergeMetadata(existingMetadata, MetadataFile{
 		Versions: versions,
 	})
 	return &mergedMetadata, nil
 }
 
-func mergeMetadata(oldMetadata provider.MetadataFile, newMetadata provider.MetadataFile) provider.MetadataFile {
+func mergeMetadata(oldMetadata MetadataFile, newMetadata MetadataFile) MetadataFile {
 	versions := append(newMetadata.Versions, oldMetadata.Versions...)
 
-	semverSortFunc := func(a, b provider.Version) int {
+	semverSortFunc := func(a, b Version) int {
 		return semver.Compare(fmt.Sprintf("s%s", a.Version), fmt.Sprintf("s%s", b.Version))
 	}
 	slices.SortFunc(versions, semverSortFunc)
 
-	return provider.MetadataFile{
+	return MetadataFile{
 		Repository: oldMetadata.Repository,
 		Versions:   versions,
 	}
-}
-
-func getExistingMetadata(p provider.Provider, providerDataDir string) (provider.MetadataFile, error) {
-	pathToFile := getFilePath(p, providerDataDir)
-
-	if _, err := os.Stat(pathToFile); errors.Is(err, os.ErrNotExist) {
-		log.Printf("Provider metadata file not found for %s", p.ProviderName)
-		return provider.MetadataFile{}, nil
-	} else if err != nil {
-		return provider.MetadataFile{}, err
-	}
-
-	return getProviderFileContent(pathToFile)
 }
