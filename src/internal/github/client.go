@@ -36,7 +36,7 @@ func NewClient(ctx context.Context, log *slog.Logger, token string) Client {
 	}}
 	httpClientFast := &http.Client{Transport: &transport{
 		ctx:         ctx,
-		ratelimiter: rate.NewLimiter(rate.Every(time.Second/60), 1),
+		ratelimiter: rate.NewLimiter(rate.Every(time.Second/30), 1),
 	}}
 
 	return Client{
