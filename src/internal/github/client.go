@@ -32,13 +32,17 @@ func NewClient(ctx context.Context, log *slog.Logger, token string) Client {
 	httpClient := &http.Client{Transport: &transport{
 		token:       token,
 		ctx:         ctx,
-		ratelimiter: rate.NewLimiter(rate.Every(time.Second/25), 1),
+		ratelimiter: rate.NewLimiter(rate.Every(time.Second), 1),
+	}}
+	httpClientFast := &http.Client{Transport: &transport{
+		ctx:         ctx,
+		ratelimiter: rate.NewLimiter(rate.Every(time.Second/60), 1),
 	}}
 
 	return Client{
 		ctx:        ctx,
 		log:        log.WithGroup("github"),
-		httpClient: httpClient,
+		httpClient: httpClientFast,
 		ghClient:   githubv4.NewClient(httpClient),
 	}
 	/* TODO
@@ -47,7 +51,6 @@ func NewClient(ctx context.Context, log *slog.Logger, token string) Client {
 	retryClient.Logger = nil
 	retryClient.HTTPClient = getGithubOauth2Client(token)
 	*/
-	// TODO rate limiting
 }
 
 func (c Client) WithLogger(log *slog.Logger) Client {
