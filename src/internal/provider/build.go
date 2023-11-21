@@ -38,7 +38,7 @@ func (p Provider) buildMetadataFile() (*MetadataFile, error) {
 		return nil, err
 	}
 
-	ghClient := github.NewGitHubClient(ctx, token)
+	ghClient := github.NewGitHubClient(token)
 
 	meta, err := p.ReadMetadata()
 	if err != nil {

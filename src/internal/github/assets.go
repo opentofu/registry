@@ -17,7 +17,11 @@ type Platform struct {
 }
 
 func DownloadAssetContents(ctx context.Context, downloadURL string) ([]byte, error) {
-	httpClient := GetHTTPRetryClient(ctx, "TODO")
+	token, err := EnvAuthToken()
+	if err != nil {
+		return nil, err
+	}
+	httpClient := GetHTTPRetryClient(token)
 
 	log.Printf("Downloading asset, url: %s", downloadURL)
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, downloadURL, nil)

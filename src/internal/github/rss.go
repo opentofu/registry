@@ -1,7 +1,6 @@
 package github
 
 import (
-	"context"
 	"fmt"
 	"regexp"
 
@@ -46,8 +45,7 @@ func getReleaseRssFeed(releasesRssUrl string) (feed *gofeed.Feed, err error) {
 		return nil, err
 	}
 
-	ctx := context.Background()
-	client := GetHTTPRetryClient(ctx, token)
+	client := GetHTTPRetryClient(token)
 
 	resp, err := client.Get(releasesRssUrl)
 	if err != nil {
