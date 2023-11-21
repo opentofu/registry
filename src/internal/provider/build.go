@@ -1,7 +1,6 @@
 package provider
 
 import (
-	"context"
 	"fmt"
 	"slices"
 
@@ -30,21 +29,12 @@ func (meta MetadataFile) filterNewReleases(releases []github.GHRelease) []github
 }
 
 func (p Provider) buildMetadataFile() (*MetadataFile, error) {
-	ctx := context.Background()
-
-	token, err := github.EnvAuthToken()
-	if err != nil {
-		return nil, err
-	}
-
-	ghClient := github.NewGitHubClient(token)
-
 	meta, err := p.ReadMetadata()
 	if err != nil {
 		return nil, err
 	}
 
-	releases, err := github.FetchPublishedReleases(ctx, p.Logger, ghClient, p.EffectiveNamespace(), p.RepositoryName())
+	releases, err := p.Github.FetchPublishedReleases(p.EffectiveNamespace(), p.RepositoryName())
 	if err != nil {
 		return nil, err
 	}

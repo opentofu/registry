@@ -7,6 +7,7 @@ import (
 	"os"
 	"path/filepath"
 	"registry-stable/internal/files"
+	"registry-stable/internal/github"
 	"strings"
 )
 
@@ -37,6 +38,7 @@ type Provider struct {
 	Namespace    string // The provider namespace
 	Directory    string // The root directory that the provider lives in
 	Logger       *slog.Logger
+	Github       github.Client
 }
 
 func (p Provider) RepositoryName() string {

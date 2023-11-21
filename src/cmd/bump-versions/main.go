@@ -1,9 +1,11 @@
 package main
 
 import (
+	"context"
 	"flag"
 	"log/slog"
 	"os"
+	"registry-stable/internal/github"
 	"registry-stable/internal/provider"
 	"registry-stable/internal/repository-metadata-files/module"
 )
@@ -18,13 +20,21 @@ func main() {
 
 	flag.Parse()
 
+	ctx := context.Background()
+	token, err := github.EnvAuthToken()
+	if err != nil {
+		slog.Error("Initialization Error", slog.Any("err", err))
+		os.Exit(1)
+	}
+	ghClient := github.NewClient(ctx, logger, token)
+
 	modules, err := module.ListModules(*moduleDataDir)
 	if err != nil {
 		logger.Error("Failed to list modules", slog.Any("err", err))
 		os.Exit(1)
 	}
 
-	providers, err := provider.ListProviders(*providerDataDir, logger)
+	providers, err := provider.ListProviders(*providerDataDir, logger, ghClient)
 	if err != nil {
 		logger.Error("Failed to list providers", slog.Any("err", err))
 		os.Exit(1)

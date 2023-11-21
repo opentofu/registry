@@ -3,7 +3,6 @@ package provider
 import (
 	"fmt"
 	"log/slog"
-	"registry-stable/internal/github"
 
 	"golang.org/x/mod/semver"
 )
@@ -46,7 +45,7 @@ func (p Provider) shouldUpdateMetadataFile() (bool, error) {
 
 func (p Provider) getSemverTags() ([]string, error) {
 	releasesRssUrl := p.getRssUrl()
-	tags, err := github.GetTagsFromRss(releasesRssUrl)
+	tags, err := p.Github.GetTagsFromRss(releasesRssUrl)
 	if err != nil {
 		return nil, err
 	}

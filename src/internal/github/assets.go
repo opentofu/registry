@@ -1,7 +1,6 @@
 package github
 
 import (
-	"context"
 	"fmt"
 	"io"
 	"log/slog"
@@ -16,22 +15,9 @@ type Platform struct {
 	Arch string
 }
 
-func DownloadAssetContents(ctx context.Context, logger *slog.Logger, downloadURL string) ([]byte, error) {
-	logger = logger.With()
-
-	token, err := EnvAuthToken()
-	if err != nil {
-		return nil, err
-	}
-	httpClient := GetHTTPRetryClient(token)
-
-	logger.Info("Downloading asset", slog.String("url", downloadURL))
-	req, err := http.NewRequestWithContext(ctx, http.MethodGet, downloadURL, nil)
-	if err != nil {
-		return nil, fmt.Errorf("failed to create request for %s: %w", downloadURL, err)
-	}
-
-	resp, err := httpClient.Do(req)
+func (c Client) DownloadAssetContents(downloadURL string) ([]byte, error) {
+	c.log.Info("Downloading asset", slog.String("url", downloadURL))
+	resp, err := c.httpClient.Get(downloadURL)
 	if err != nil {
 		return nil, fmt.Errorf("error downloading asset %s: %w", downloadURL, err)
 	}
@@ -47,7 +33,7 @@ func DownloadAssetContents(ctx context.Context, logger *slog.Logger, downloadURL
 		return nil, fmt.Errorf("failed to read asset contents of %s: %w", downloadURL, err)
 	}
 
-	logger.Info("Asset downloaded", slog.String("url", downloadURL))
+	c.log.Info("Asset downloaded", slog.String("url", downloadURL))
 
 	return contents, nil
 }

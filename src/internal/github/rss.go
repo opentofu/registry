@@ -2,6 +2,7 @@ package github
 
 import (
 	"fmt"
+	"net/http"
 	"regexp"
 
 	"github.com/mmcdole/gofeed"
@@ -9,8 +10,8 @@ import (
 
 // GetTagsFromRss gets all tags found in the RSS feed of a GitHub releases page
 // Tags are sorted by descending creation date
-func GetTagsFromRss(releasesRssUrl string) ([]string, error) {
-	feed, err := getReleaseRssFeed(releasesRssUrl)
+func (c Client) GetTagsFromRss(releasesRssUrl string) ([]string, error) {
+	feed, err := c.getReleaseRssFeed(releasesRssUrl)
 	if err != nil {
 		return nil, err
 	}
@@ -39,29 +40,14 @@ func extractTag(item *gofeed.Item) (string, error) {
 	return matches[pattern.SubexpIndex("Version")], nil
 }
 
-func getReleaseRssFeed(releasesRssUrl string) (feed *gofeed.Feed, err error) {
-	token, err := EnvAuthToken()
-	if err != nil {
-		return nil, err
-	}
-
-	client := GetHTTPRetryClient(token)
-
-	resp, err := client.Get(releasesRssUrl)
+func (c Client) getReleaseRssFeed(releasesRssUrl string) (*gofeed.Feed, error) {
+	resp, err := c.httpClient.Get(releasesRssUrl)
 	if err != nil {
 		return nil, fmt.Errorf("%s: %w", releasesRssUrl, err)
 	}
+	defer resp.Body.Close()
 
-	if resp != nil {
-		defer func() {
-			ce := resp.Body.Close()
-			if ce != nil {
-				err = ce
-			}
-		}()
-	}
-
-	if resp.StatusCode < 200 || resp.StatusCode >= 300 {
+	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("%s got error %d", releasesRssUrl, resp.StatusCode)
 	}
 

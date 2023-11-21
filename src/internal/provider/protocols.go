@@ -1,10 +1,8 @@
 package provider
 
 import (
-	"context"
 	"encoding/json"
-	"log/slog"
-	"registry-stable/internal/github"
+	"fmt"
 )
 
 type Manifest struct {
@@ -14,8 +12,8 @@ type ManifestMetadata struct {
 	ProtocolVersions []string `json:"protocol_versions"`
 }
 
-func (p Provider) GetProtocols(ctx context.Context, manifestDownloadUrl string) ([]string, error) {
-	contents, err := github.DownloadAssetContents(ctx, p.Logger, manifestDownloadUrl)
+func (p Provider) GetProtocols(manifestDownloadUrl string) ([]string, error) {
+	contents, err := p.Github.DownloadAssetContents(manifestDownloadUrl)
 
 	manifest, err := parseManifestContents(contents)
 	if err != nil {
@@ -29,8 +27,7 @@ func parseManifestContents(contents []byte) (*Manifest, error) {
 	var manifest *Manifest
 	err := json.Unmarshal(contents, &manifest)
 	if err != nil {
-		slog.Error("Failed to parse manifest contents")
-		return nil, err
+		return nil, fmt.Errorf("failed to parse manifest contents: %w", err)
 	}
 
 	return manifest, nil

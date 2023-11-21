@@ -1,14 +1,12 @@
 package provider
 
 import (
-	"context"
 	"fmt"
-	"registry-stable/internal/github"
 	"strings"
 )
 
-func (p Provider) GetShaSums(ctx context.Context, shaFileDownloadUrl string) (map[string]string, error) {
-	contents, assetErr := github.DownloadAssetContents(ctx, p.Logger, shaFileDownloadUrl)
+func (p Provider) GetShaSums(shaFileDownloadUrl string) (map[string]string, error) {
+	contents, assetErr := p.Github.DownloadAssetContents(shaFileDownloadUrl)
 	if assetErr != nil {
 		return nil, fmt.Errorf("failed to download asset contents: %w", assetErr)
 	}

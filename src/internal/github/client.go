@@ -1,11 +1,12 @@
 package github
 
 import (
+	"context"
 	"fmt"
+	"log/slog"
 	"net/http"
 	"os"
 
-	"github.com/hashicorp/go-retryablehttp"
 	"github.com/shurcooL/githubv4"
 )
 
@@ -18,8 +19,38 @@ func EnvAuthToken() (string, error) {
 
 }
 
-func NewGitHubClient(token string) *githubv4.Client {
-	return githubv4.NewClient(getGithubOauth2Client(token))
+type Client struct {
+	ctx        context.Context
+	log        *slog.Logger
+	httpClient *http.Client
+	ghClient   *githubv4.Client
+}
+
+func NewClient(ctx context.Context, log *slog.Logger, token string) Client {
+	httpClient := &http.Client{Transport: &transport{token}}
+
+	return Client{
+		ctx:        ctx,
+		log:        log.WithGroup("github"),
+		httpClient: httpClient,
+		ghClient:   githubv4.NewClient(httpClient),
+	}
+	/* TODO
+	retryClient := retryablehttp.NewClient()
+	retryClient.RetryMax = 10
+	retryClient.Logger = nil
+	retryClient.HTTPClient = getGithubOauth2Client(token)
+	*/
+	// TODO rate limiting
+}
+
+func (c Client) WithLogger(log *slog.Logger) Client {
+	return Client{
+		ctx:        c.ctx,
+		log:        log.WithGroup("github"),
+		httpClient: c.httpClient,
+		ghClient:   c.ghClient,
+	}
 }
 
 type transport struct {
@@ -30,17 +61,4 @@ func (t *transport) RoundTrip(req *http.Request) (*http.Response, error) {
 	req.Header.Set("User-Agent", "OpenTofu Registry/1.0")
 	req.Header.Set("Authorization", "Bearer "+t.token)
 	return http.DefaultTransport.RoundTrip(req)
-}
-
-func getGithubOauth2Client(token string) *http.Client {
-	return &http.Client{Transport: &transport{token}}
-}
-
-func GetHTTPRetryClient(token string) *http.Client {
-	retryClient := retryablehttp.NewClient()
-	retryClient.RetryMax = 10
-	retryClient.Logger = nil
-	retryClient.HTTPClient = getGithubOauth2Client(token)
-
-	return retryClient.StandardClient()
 }

@@ -1,7 +1,6 @@
 package github
 
 import (
-	"context"
 	"fmt"
 	"log/slog"
 	"time"
@@ -9,9 +8,7 @@ import (
 	"github.com/shurcooL/githubv4"
 )
 
-func FetchPublishedReleases(ctx context.Context, logger *slog.Logger, ghClient *githubv4.Client, owner string, repoName string) (releases []GHRelease, err error) {
-	logger = logger.WithGroup("github")
-
+func (c Client) FetchPublishedReleases(owner string, repoName string) (releases []GHRelease, err error) {
 	variables := map[string]interface{}{
 		"owner":     githubv4.String(owner),
 		"name":      githubv4.String(repoName),
@@ -20,48 +17,32 @@ func FetchPublishedReleases(ctx context.Context, logger *slog.Logger, ghClient *
 	}
 
 	for {
-		nodes, endCursor, fetchErr := fetchReleaseNodes(ctx, ghClient, variables)
-		if fetchErr != nil {
-			return nil, fmt.Errorf("failed to fetch release nodes for %s/%s: %w", owner, repoName, fetchErr)
+		var query GHRepository
+		if err := c.ghClient.Query(c.ctx, &query, variables); err != nil {
+			return nil, fmt.Errorf("failed to fetch releases for %s/%s: %w", owner, repoName, err)
 		}
 
-		logger.Info("Checking for possible new releases", slog.Int("releases", len(nodes)))
+		c.log.Info("Checking for possible new releases", slog.Int("releases", len(query.Repository.Releases.Nodes)))
 
-		for _, r := range nodes {
+		for _, r := range query.Repository.Releases.Nodes {
 			if r.IsDraft || r.IsPrerelease {
 				continue
 			}
 
-			logger.Info("New release fetched", slog.String("release", r.TagName), slog.String("created", r.CreatedAt.String()))
+			c.log.Info("New release fetched", slog.String("release", r.TagName), slog.String("created", r.CreatedAt.String()))
 			releases = append(releases, r)
 		}
 
-		if endCursor == nil {
-			logger.Info("No more releases to fetch")
+		if !query.Repository.Releases.PageInfo.HasNextPage {
+			c.log.Info("No more releases to fetch")
 			break
 		}
 
-		variables["endCursor"] = githubv4.String(*endCursor)
+		variables["endCursor"] = githubv4.String(query.Repository.Releases.PageInfo.EndCursor)
 	}
 
-	logger.Info("New releases fetched", slog.Int("releases", len(releases)))
+	c.log.Info("New releases fetched", slog.Int("releases", len(releases)))
 	return releases, nil
-}
-
-func fetchReleaseNodes(ctx context.Context, ghClient *githubv4.Client, variables map[string]interface{}) (releases []GHRelease, endCursor *string, err error) {
-	var query GHRepository
-
-	if queryErr := ghClient.Query(ctx, &query, variables); queryErr != nil {
-		return nil, nil, fmt.Errorf("failed to query for releases: %w", queryErr)
-	}
-
-	if query.Repository.Releases.PageInfo.HasNextPage {
-		endCursor = &query.Repository.Releases.PageInfo.EndCursor
-	}
-
-	releases = query.Repository.Releases.Nodes
-
-	return releases, endCursor, err
 }
 
 // GHRelease represents a release on GitHub.

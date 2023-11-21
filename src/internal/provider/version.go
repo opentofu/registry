@@ -1,7 +1,6 @@
 package provider
 
 import (
-	"context"
 	"fmt"
 	"log/slog"
 	"registry-stable/internal"
@@ -38,7 +37,6 @@ func (p Provider) VersionFromRelease(release github.GHRelease) (*Version, error)
 	}
 
 	var ok bool
-	ctx := context.TODO()
 	v := Version{Version: version}
 
 	for _, os := range goos {
@@ -73,7 +71,7 @@ func (p Provider) VersionFromRelease(release github.GHRelease) (*Version, error)
 		return nil, fmt.Errorf("Provider %s release %s missing SHA256SUMS.sig", p.RepositoryName(), version)
 	}
 
-	signatures, err := p.GetShaSums(ctx, v.SHASumsURL)
+	signatures, err := p.GetShaSums(v.SHASumsURL)
 	if err != nil {
 		return nil, err
 	}
@@ -91,7 +89,7 @@ func (p Provider) VersionFromRelease(release github.GHRelease) (*Version, error)
 		p.Logger.Warn("Could not find manifest file, using default protocols")
 		v.Protocols = []string{"5.0"}
 	} else {
-		v.Protocols, err = p.GetProtocols(ctx, manifestUrl)
+		v.Protocols, err = p.GetProtocols(manifestUrl)
 		if err != nil {
 			return nil, err
 		}
