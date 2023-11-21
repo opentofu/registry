@@ -8,12 +8,20 @@ import (
 )
 
 func (p Provider) UpdateMetadataFile() error {
-	if shouldUpdate, err := p.shouldUpdateMetadataFile(); err != nil || !shouldUpdate {
+	p.Logger.Info("Beginning version bump process")
+
+	shouldUpdate, err := p.shouldUpdateMetadataFile()
+	if err != nil {
+		p.Logger.Error("Failed to determine update status", slog.Any("err", err))
 		return err
+	}
+	if !shouldUpdate {
+		return nil
 	}
 
 	meta, err := p.buildMetadataFile()
 	if err != nil {
+		p.Logger.Error("Failed to version bump provider", slog.Any("err", err))
 		return err
 	}
 	return p.WriteMetadata(*meta)

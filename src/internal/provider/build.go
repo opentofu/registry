@@ -41,17 +41,31 @@ func (p Provider) buildMetadataFile() (*MetadataFile, error) {
 
 	releases = meta.filterNewReleases(releases)
 
+	type versionResult struct {
+		v   *Version
+		err error
+	}
+
+	verChan := make(chan versionResult, len(releases))
+
 	for _, r := range releases {
-		version, err := p.VersionFromRelease(r)
-		if err != nil {
-			return nil, err
+		r := r
+		go func() {
+			version, err := p.VersionFromRelease(r)
+			verChan <- versionResult{version, err}
+		}()
+	}
+
+	for _ = range releases {
+		result := <-verChan
+		if result.err != nil {
+			return nil, result.err
 		}
-		if version == nil {
+		if result.v == nil {
 			// Not a valid release, skipping
 			continue
 		}
-
-		meta.Versions = append(meta.Versions, *version)
+		meta.Versions = append(meta.Versions, *result.v)
 	}
 
 	semverSortFunc := func(a, b Version) int {

@@ -34,12 +34,6 @@ func main() {
 		os.Exit(1)
 	}
 
-	providers, err := provider.ListProviders(*providerDataDir, logger, ghClient)
-	if err != nil {
-		logger.Error("Failed to list providers", slog.Any("err", err))
-		os.Exit(1)
-	}
-
 	for _, m := range modules {
 		slog.Info("Beginning version bump process for module", slog.String("module", m.Namespace+"/"+m.Name+"/"+m.TargetSystem))
 		err = module.UpdateMetadataFile(m, *moduleDataDir)
@@ -49,14 +43,34 @@ func main() {
 		}
 	}
 
+	providers, err := provider.ListProviders(*providerDataDir, logger, ghClient)
+	if err != nil {
+		logger.Error("Failed to list providers", slog.Any("err", err))
+		os.Exit(1)
+	}
+
+	errChan := make(chan error, len(providers))
+
 	for _, p := range providers {
-		p.Logger.Info("Beginning version bump process")
-		err = p.UpdateMetadataFile()
+		p := p
+		go func() {
+			errChan <- p.UpdateMetadataFile()
+		}()
+	}
+
+	var errs []error
+	for _ = range providers {
+		err := <-errChan
 		if err != nil {
-			p.Logger.Error("Failed to version bump provider", slog.Any("err", err))
-			os.Exit(1)
+			errs = append(errs, err)
+		}
+	}
+	if len(errs) != 0 {
+		logger.Error("Encountered errors while processing providers")
+		for _, err := range errs {
+			logger.Error(err.Error())
 		}
 	}
 
-	slog.Info("Completed version bump process for modules and providers")
+	logger.Info("Completed version bump process for modules and providers")
 }

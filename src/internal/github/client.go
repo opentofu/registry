@@ -6,8 +6,10 @@ import (
 	"log/slog"
 	"net/http"
 	"os"
+	"time"
 
 	"github.com/shurcooL/githubv4"
+	"golang.org/x/time/rate"
 )
 
 func EnvAuthToken() (string, error) {
@@ -27,7 +29,11 @@ type Client struct {
 }
 
 func NewClient(ctx context.Context, log *slog.Logger, token string) Client {
-	httpClient := &http.Client{Transport: &transport{token}}
+	httpClient := &http.Client{Transport: &transport{
+		token:       token,
+		ctx:         ctx,
+		ratelimiter: rate.NewLimiter(rate.Every(time.Second/25), 1),
+	}}
 
 	return Client{
 		ctx:        ctx,
@@ -54,10 +60,18 @@ func (c Client) WithLogger(log *slog.Logger) Client {
 }
 
 type transport struct {
-	token string
+	token       string
+	ctx         context.Context
+	ratelimiter *rate.Limiter
 }
 
 func (t *transport) RoundTrip(req *http.Request) (*http.Response, error) {
+	err := t.ratelimiter.Wait(t.ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	req = req.WithContext(t.ctx)
 	req.Header.Set("User-Agent", "OpenTofu Registry/1.0")
 	req.Header.Set("Authorization", "Bearer "+t.token)
 	return http.DefaultTransport.RoundTrip(req)
