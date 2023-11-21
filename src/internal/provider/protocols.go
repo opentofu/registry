@@ -14,6 +14,9 @@ type ManifestMetadata struct {
 
 func (p Provider) GetProtocols(manifestDownloadUrl string) ([]string, error) {
 	contents, err := p.Github.DownloadAssetContents(manifestDownloadUrl)
+	if err != nil {
+		return nil, err
+	}
 
 	manifest, err := parseManifestContents(contents)
 	if err != nil {
