@@ -2,7 +2,7 @@ package provider
 
 import (
 	"fmt"
-	"log"
+	"log/slog"
 	"registry-stable/internal/github"
 
 	"golang.org/x/mod/semver"
@@ -34,12 +34,12 @@ func (p Provider) shouldUpdateMetadataFile() (bool, error) {
 	for _, v := range fileContent.Versions {
 		versionWithPrefix := fmt.Sprintf("v%s", v.Version)
 		if versionWithPrefix == lastSemverTag {
-			log.Printf("Found latest tag %s for %s, nothing to update...", lastSemverTag, p.String())
+			p.Logger.Info("Found latest tag, nothing to update...", slog.String("tag", lastSemverTag))
 			return false, nil
 		}
 	}
 
-	log.Printf("Could not find latest tag %s for %s, updating the file...", lastSemverTag, p.String())
+	p.Logger.Info("Could not find latest tag, updating...", slog.String("tag", lastSemverTag))
 	return true, nil
 
 }
@@ -68,7 +68,7 @@ func (p Provider) getLastSemverTag() (string, error) {
 	}
 
 	if len(semverTags) < 1 {
-		return "", fmt.Errorf("no semver tags found in repository for provider %s/%s", p.Namespace, p.ProviderName)
+		return "", fmt.Errorf("no semver tags found in repository %s", p.RepositoryURL())
 	}
 
 	// Tags should be sorted by descending creation date. So, return the first tag

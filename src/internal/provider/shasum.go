@@ -7,8 +7,8 @@ import (
 	"strings"
 )
 
-func GetShaSums(ctx context.Context, shaFileDownloadUrl string) (map[string]string, error) {
-	contents, assetErr := github.DownloadAssetContents(ctx, shaFileDownloadUrl)
+func (p Provider) GetShaSums(ctx context.Context, shaFileDownloadUrl string) (map[string]string, error) {
+	contents, assetErr := github.DownloadAssetContents(ctx, p.Logger, shaFileDownloadUrl)
 	if assetErr != nil {
 		return nil, fmt.Errorf("failed to download asset contents: %w", assetErr)
 	}

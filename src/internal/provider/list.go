@@ -18,10 +18,10 @@ providerDirectoryRegex is a regular expression that matches the directory struct
 */
 var providerDirectoryRegex = regexp.MustCompile(`(?i)providers/\w/(?P<Namespace>[^/]+?)/(?P<ProviderName>[^/]+?)\.json`)
 
-func extractProviderDetailsFromPath(path string) *Provider {
+func extractProviderDetailsFromPath(path string, logger *slog.Logger) *Provider {
 	matches := providerDirectoryRegex.FindStringSubmatch(path)
 	if len(matches) != 3 {
-		slog.Debug("Failed to extract provider details from path, skipping", slog.String("path", path))
+		logger.Debug("Failed to extract provider details from path, skipping", slog.String("path", path))
 		return nil
 	}
 
@@ -29,18 +29,22 @@ func extractProviderDetailsFromPath(path string) *Provider {
 		Namespace:    matches[providerDirectoryRegex.SubexpIndex("Namespace")],
 		ProviderName: matches[providerDirectoryRegex.SubexpIndex("ProviderName")],
 	}
+	p.Logger = logger.With(
+		slog.String("type", "provider"),
+		slog.Group("provider", slog.String("namespace", p.Namespace), slog.String("name", p.ProviderName)),
+	)
 
 	return &p
 }
 
-func ListProviders(providerDataDir string) ([]Provider, error) {
+func ListProviders(providerDataDir string, logger *slog.Logger) ([]Provider, error) {
 	// walk the provider directory recursively and find all json files
 	// for each json file, parse it into a Provider struct
 	// return a slice of Provider structs
 
 	var results []Provider
 	err := filepath.Walk(providerDataDir, func(path string, info os.FileInfo, err error) error {
-		p := extractProviderDetailsFromPath(path)
+		p := extractProviderDetailsFromPath(path, logger)
 		if p != nil {
 			p.Directory = providerDataDir
 			results = append(results, *p)

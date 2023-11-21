@@ -3,7 +3,6 @@ package provider
 import (
 	"context"
 	"fmt"
-	"log"
 	"slices"
 
 	"registry-stable/internal"
@@ -12,9 +11,9 @@ import (
 	"golang.org/x/mod/semver"
 )
 
-func (existingMetadata MetadataFile) filterNewReleases(releases []github.GHRelease) []github.GHRelease {
+func (meta MetadataFile) filterNewReleases(releases []github.GHRelease) []github.GHRelease {
 	var existingVersions = make(map[string]bool)
-	for _, v := range existingMetadata.Versions {
+	for _, v := range meta.Versions {
 		existingVersions[v.Version] = true
 	}
 
@@ -25,7 +24,7 @@ func (existingMetadata MetadataFile) filterNewReleases(releases []github.GHRelea
 		}
 	}
 
-	log.Printf("Found %d releases that do not already exist in the metadata file", len(newReleases))
+	meta.Logger.Info(fmt.Sprintf("Found %d releases that do not already exist in the metadata file", len(newReleases)))
 
 	return newReleases
 }
@@ -45,7 +44,7 @@ func (p Provider) buildMetadataFile() (*MetadataFile, error) {
 		return nil, err
 	}
 
-	releases, err := github.FetchPublishedReleases(ctx, ghClient, p.EffectiveNamespace(), p.RepositoryName())
+	releases, err := github.FetchPublishedReleases(ctx, p.Logger, ghClient, p.EffectiveNamespace(), p.RepositoryName())
 	if err != nil {
 		return nil, err
 	}

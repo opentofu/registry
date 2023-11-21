@@ -3,6 +3,7 @@ package provider
 import (
 	"encoding/json"
 	"fmt"
+	"log/slog"
 	"os"
 	"path/filepath"
 	"registry-stable/internal/files"
@@ -10,8 +11,9 @@ import (
 )
 
 type MetadataFile struct {
-	Repository string    `json:"repository,omitempty"` // Optional. Custom repository from which to fetch the provider's metadata.
-	Versions   []Version `json:"versions"`             // A list of version data, for each supported provider version.
+	Repository string       `json:"repository,omitempty"` // Optional. Custom repository from which to fetch the provider's metadata.
+	Versions   []Version    `json:"versions"`             // A list of version data, for each supported provider version.
+	Logger     *slog.Logger `json:"-"`
 }
 
 type Version struct {
@@ -34,11 +36,7 @@ type Provider struct {
 	ProviderName string // The provider name
 	Namespace    string // The provider namespace
 	Directory    string // The root directory that the provider lives in
-}
-
-// TODO remove me and use slog instead?
-func (p Provider) String() string {
-	return fmt.Sprintf("%s/%s", p.ProviderName, p.Namespace)
+	Logger       *slog.Logger
 }
 
 func (p Provider) RepositoryName() string {
@@ -84,6 +82,8 @@ func (p Provider) ReadMetadata() (MetadataFile, error) {
 	if err != nil {
 		return metadata, fmt.Errorf("failed to unmarshal metadata file: %w", err)
 	}
+
+	metadata.Logger = p.Logger
 
 	return metadata, nil
 }

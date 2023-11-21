@@ -12,8 +12,9 @@ import (
 )
 
 func main() {
-	slog.SetDefault(slog.New(slog.NewJSONHandler(os.Stdout, nil)))
-	slog.Info("Generating v1 API responses")
+	logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
+	slog.SetDefault(logger) // TODO REMOVE ME
+	logger.Info("Generating v1 API responses")
 
 	ctx := context.Background()
 
@@ -30,41 +31,40 @@ func main() {
 		ProviderDirectory: *providerDataDir,
 	}
 
-	v1APIGenerator.WriteWellKnownFile(ctx)
+	err := v1APIGenerator.WriteWellKnownFile(ctx)
+	if err != nil {
+		logger.Error("Failed to list modules", slog.Any("err", err))
+		os.Exit(1)
+	}
 
 	modules, err := module.ListModules(*moduleDataDir)
 	if err != nil {
-		slog.Error("Failed to list modules", slog.Any("err", err))
+		logger.Error("Failed to list modules", slog.Any("err", err))
 		os.Exit(1)
 	}
 
 	for _, m := range modules {
-		slog.Info("Generating", slog.String("module", m.Namespace+"/"+m.Name+"/"+m.TargetSystem))
+		logger.Info("Generating", slog.String("module", m.Namespace+"/"+m.Name+"/"+m.TargetSystem))
 		err := v1APIGenerator.GenerateModuleResponses(ctx, m)
 		if err != nil {
-			slog.Error("Failed to generate module version listing response", slog.Any("err", err))
+			logger.Error("Failed to generate module version listing response", slog.Any("err", err))
 			os.Exit(1)
 		}
-		slog.Info("Generated", slog.String("module", m.Namespace+"/"+m.Name+"/"+m.TargetSystem))
+		logger.Info("Generated", slog.String("module", m.Namespace+"/"+m.Name+"/"+m.TargetSystem))
 	}
 
-	// For now just the ultradns provider
-	// TODO: Add provider listing similar to module listing
-
-	providers, err := provider.ListProviders(*providerDataDir)
+	providers, err := provider.ListProviders(*providerDataDir, slog.Default())
 	if err != nil {
 		slog.Error("Failed to list providers", slog.Any("err", err))
 		os.Exit(1)
 	}
 
 	for _, p := range providers {
-		slog.Info("Generating", slog.String("provider", p.Namespace+"/"+p.ProviderName))
 		err := v1APIGenerator.GenerateProviderResponses(ctx, p)
 		if err != nil {
-			slog.Error("Failed to generate provider version listing response", slog.Any("err", err))
+			p.Logger.Error("Failed to generate provider version listing response", slog.Any("err", err))
 			os.Exit(1)
 		}
-		slog.Info("Generated", slog.String("provider", p.Namespace+"/"+p.ProviderName))
 	}
 
 	slog.Info("Completed generating v1 API responses")

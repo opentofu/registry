@@ -11,6 +11,8 @@ import (
 
 // GenerateProviderResponses generates the response for the provider version listing API endpoints.
 func (g Generator) GenerateProviderResponses(_ context.Context, p provider.Provider) error {
+	p.Logger.Info("Generating")
+
 	metadata, err := p.ReadMetadata()
 	if err != nil {
 		return err
@@ -31,6 +33,8 @@ func (g Generator) GenerateProviderResponses(_ context.Context, p provider.Provi
 	if err != nil {
 		return err
 	}
+
+	p.Logger.Info("Generated")
 
 	return nil
 }

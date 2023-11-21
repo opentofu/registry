@@ -3,13 +3,15 @@ package github
 import (
 	"context"
 	"fmt"
-	"log"
+	"log/slog"
 	"time"
 
 	"github.com/shurcooL/githubv4"
 )
 
-func FetchPublishedReleases(ctx context.Context, ghClient *githubv4.Client, owner string, repoName string) (releases []GHRelease, err error) {
+func FetchPublishedReleases(ctx context.Context, logger *slog.Logger, ghClient *githubv4.Client, owner string, repoName string) (releases []GHRelease, err error) {
+	logger = logger.WithGroup("github")
+
 	variables := map[string]interface{}{
 		"owner":     githubv4.String(owner),
 		"name":      githubv4.String(repoName),
@@ -20,30 +22,29 @@ func FetchPublishedReleases(ctx context.Context, ghClient *githubv4.Client, owne
 	for {
 		nodes, endCursor, fetchErr := fetchReleaseNodes(ctx, ghClient, variables)
 		if fetchErr != nil {
-			log.Printf("Failed to fetch release nodes")
-			return nil, fmt.Errorf("failed to fetch release nodes: %w", fetchErr)
+			return nil, fmt.Errorf("failed to fetch release nodes for %s/%s: %w", owner, repoName, fetchErr)
 		}
 
-		log.Printf("Checking for possible new releases: %d", len(nodes))
+		logger.Info("Checking for possible new releases", slog.Int("releases", len(nodes)))
 
 		for _, r := range nodes {
 			if r.IsDraft || r.IsPrerelease {
 				continue
 			}
 
-			log.Printf("New release fetched. Release: %s, Created at: %s", r.TagName, r.CreatedAt)
+			logger.Info("New release fetched", slog.String("release", r.TagName), slog.String("created", r.CreatedAt.String()))
 			releases = append(releases, r)
 		}
 
 		if endCursor == nil {
-			log.Printf("No more releases to fetch")
+			logger.Info("No more releases to fetch")
 			break
 		}
 
 		variables["endCursor"] = githubv4.String(*endCursor)
 	}
 
-	log.Printf("New releases fetched: %d", len(releases))
+	logger.Info("New releases fetched", slog.Int("releases", len(releases)))
 	return releases, nil
 }
 

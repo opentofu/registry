@@ -14,8 +14,8 @@ type ManifestMetadata struct {
 	ProtocolVersions []string `json:"protocol_versions"`
 }
 
-func GetProtocols(ctx context.Context, manifestDownloadUrl string) ([]string, error) {
-	contents, err := github.DownloadAssetContents(ctx, manifestDownloadUrl)
+func (p Provider) GetProtocols(ctx context.Context, manifestDownloadUrl string) ([]string, error) {
+	contents, err := github.DownloadAssetContents(ctx, p.Logger, manifestDownloadUrl)
 
 	manifest, err := parseManifestContents(contents)
 	if err != nil {

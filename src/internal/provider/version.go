@@ -3,7 +3,6 @@ package provider
 import (
 	"context"
 	"fmt"
-	"log"
 	"log/slog"
 	"registry-stable/internal"
 	"registry-stable/internal/github"
@@ -60,7 +59,7 @@ func (p Provider) VersionFromRelease(release github.GHRelease) (*Version, error)
 	}
 
 	if len(v.Targets) == 0 {
-		log.Printf("could not find artifacts in release of provider %s version %s, skipping...", p.ProviderName, version)
+		p.Logger.Info("No artifacts in release, skipping...", slog.String("release", version))
 		return nil, nil
 	}
 
@@ -74,7 +73,7 @@ func (p Provider) VersionFromRelease(release github.GHRelease) (*Version, error)
 		return nil, fmt.Errorf("Provider %s release %s missing SHA256SUMS.sig", p.RepositoryName(), version)
 	}
 
-	signatures, err := GetShaSums(ctx, v.SHASumsURL)
+	signatures, err := p.GetShaSums(ctx, v.SHASumsURL)
 	if err != nil {
 		return nil, err
 	}
@@ -89,10 +88,10 @@ func (p Provider) VersionFromRelease(release github.GHRelease) (*Version, error)
 
 	manifestUrl, ok := assets[fmt.Sprintf("%s_%s", artifactPrefix, "manifest.json")]
 	if !ok {
-		slog.Warn("Could not find manifest file, using default protocols")
+		p.Logger.Warn("Could not find manifest file, using default protocols")
 		v.Protocols = []string{"5.0"}
 	} else {
-		v.Protocols, err = GetProtocols(ctx, manifestUrl)
+		v.Protocols, err = p.GetProtocols(ctx, manifestUrl)
 		if err != nil {
 			return nil, err
 		}

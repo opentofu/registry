@@ -9,8 +9,9 @@ import (
 )
 
 func main() {
-	slog.SetDefault(slog.New(slog.NewJSONHandler(os.Stdout, nil)))
-	slog.Info("Starting version bump process for modules and providers")
+	logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
+	slog.SetDefault(logger) // TODO REMOVE ME
+	logger.Info("Starting version bump process for modules and providers")
 
 	moduleDataDir := flag.String("module-data", "../modules", "Directory containing the module data")
 	providerDataDir := flag.String("provider-data", "../providers", "Directory containing the provider data")
@@ -19,13 +20,13 @@ func main() {
 
 	modules, err := module.ListModules(*moduleDataDir)
 	if err != nil {
-		slog.Error("Failed to list modules", slog.Any("err", err))
+		logger.Error("Failed to list modules", slog.Any("err", err))
 		os.Exit(1)
 	}
 
-	providers, err := provider.ListProviders(*providerDataDir)
+	providers, err := provider.ListProviders(*providerDataDir, logger)
 	if err != nil {
-		slog.Error("Failed to list providers", slog.Any("err", err))
+		logger.Error("Failed to list providers", slog.Any("err", err))
 		os.Exit(1)
 	}
 
@@ -39,10 +40,11 @@ func main() {
 	}
 
 	for _, p := range providers {
-		slog.Info("Beginning version bump process for provider", slog.String("provider", p.Namespace+"/"+p.ProviderName))
+		p.Logger.Info("Beginning version bump process")
 		err = p.UpdateMetadataFile()
 		if err != nil {
-			slog.Error("Failed to version bump provider", slog.Any("err", err))
+			p.Logger.Error("Failed to version bump provider", slog.Any("err", err))
+			os.Exit(1)
 		}
 	}
 
