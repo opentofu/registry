@@ -69,7 +69,7 @@ func (p Provider) buildMetadataFile() (*MetadataFile, error) {
 	}
 
 	semverSortFunc := func(a, b Version) int {
-		return semver.Compare(fmt.Sprintf("s%s", a.Version), fmt.Sprintf("s%s", b.Version))
+		return -semver.Compare(fmt.Sprintf("v%s", a.Version), fmt.Sprintf("v%s", b.Version))
 	}
 	slices.SortFunc(meta.Versions, semverSortFunc)
 
