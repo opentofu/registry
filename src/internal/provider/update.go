@@ -24,6 +24,7 @@ func (p Provider) UpdateMetadataFile() error {
 		p.Logger.Error("Failed to version bump provider", slog.Any("err", err))
 		return err
 	}
+	p.Logger.Info("Completed provider version bump")
 	return p.WriteMetadata(*meta)
 }
 
