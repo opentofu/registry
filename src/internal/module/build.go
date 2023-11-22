@@ -4,26 +4,25 @@ import (
 	"fmt"
 	"registry-stable/internal"
 	"registry-stable/internal/github"
-	"registry-stable/internal/module"
 
 	"golang.org/x/mod/semver"
 )
 
-func BuildMetadataFile(m module.Module) (*module.MetadataFile, error) {
+func BuildMetadataFile(m Module) (*MetadataFile, error) {
 	tags, err := getModuleSemverTags(m)
 	if err != nil {
 		return nil, err
 	}
 
-	var versions = make([]module.Version, 0)
+	var versions = make([]Version, 0)
 	for _, t := range tags {
-		versions = append(versions, module.Version{Version: t})
+		versions = append(versions, Version{Version: t})
 	}
 
-	return &module.MetadataFile{Versions: versions}, nil
+	return &MetadataFile{Versions: versions}, nil
 }
 
-func getModuleSemverTags(mod module.Module) ([]string, error) {
+func getModuleSemverTags(mod Module) ([]string, error) {
 	tags, err := github.GetTags(mod.RepositoryURL())
 	if err != nil {
 		return nil, err

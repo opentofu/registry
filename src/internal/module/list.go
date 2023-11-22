@@ -5,8 +5,6 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
-
-	"registry-stable/internal/module"
 )
 
 /*
@@ -21,14 +19,14 @@ moduleDirectoryRegex is a regular expression that matches the directory structur
 */
 var moduleDirectoryRegex = regexp.MustCompile(`(?i)modules/\w/(?P<Namespace>[^/]+?)/(?P<Name>[^/]+?)/(?P<TargetSystem>[^/]+?)\.json`)
 
-func extractModuleDetailsFromPath(path string) *module.Module {
+func extractModuleDetailsFromPath(path string) *Module {
 	matches := moduleDirectoryRegex.FindStringSubmatch(path)
 	if len(matches) != 4 {
 		slog.Debug("Failed to extract module details from path, skipping", slog.String("path", path))
 		return nil
 	}
 
-	m := module.Module{
+	m := Module{
 		Namespace:    matches[moduleDirectoryRegex.SubexpIndex("Namespace")],
 		Name:         matches[moduleDirectoryRegex.SubexpIndex("Name")],
 		TargetSystem: matches[moduleDirectoryRegex.SubexpIndex("TargetSystem")],
@@ -37,12 +35,12 @@ func extractModuleDetailsFromPath(path string) *module.Module {
 	return &m
 }
 
-func ListModules(moduleDataDir string) ([]module.Module, error) {
+func ListModules(moduleDataDir string) ([]Module, error) {
 	// walk the module directory recursively and find all json files
-	// for each json file, parse it into a module.Module struct
-	// return a slice of module.Module structs
+	// for each json file, parse it into a Module struct
+	// return a slice of Module structs
 
-	var results []module.Module
+	var results []Module
 	err := filepath.Walk(moduleDataDir, func(path string, info os.FileInfo, err error) error {
 		module := extractModuleDetailsFromPath(path)
 		if module != nil {

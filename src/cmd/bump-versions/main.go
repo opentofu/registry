@@ -6,8 +6,8 @@ import (
 	"log/slog"
 	"os"
 	"registry-stable/internal/github"
+	"registry-stable/internal/module"
 	"registry-stable/internal/provider"
-	"registry-stable/internal/repository-metadata-files/module"
 )
 
 func main() {

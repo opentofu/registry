@@ -5,10 +5,9 @@ import (
 	"strings"
 
 	"registry-stable/internal/files"
-	"registry-stable/internal/module"
 )
 
-func CreateMetadataFile(m module.Module, moduleDataDir string) error {
+func CreateMetadataFile(m Module, moduleDataDir string) error {
 	repositoryFileData, err := BuildMetadataFile(m)
 	if err != nil {
 		return err
@@ -18,6 +17,6 @@ func CreateMetadataFile(m module.Module, moduleDataDir string) error {
 	return files.SafeWriteObjectToJsonFile(filePath, repositoryFileData)
 }
 
-func getFilePath(m module.Module, moduleDataDir string) string {
+func getFilePath(m Module, moduleDataDir string) string {
 	return filepath.Join(moduleDataDir, strings.ToLower(m.Namespace[0:1]), m.Namespace, m.Name, m.TargetSystem+".json")
 }
