@@ -15,6 +15,8 @@ func (c Client) FetchPublishedReleases(owner string, repoName string) (releases 
 		"perPage":   githubv4.Int(100),
 		"endCursor": (*githubv4.String)(nil),
 	}
+	token := c.apiThrottle.Wait()
+	defer token.Done()
 
 	for {
 		var query GHRepository
