@@ -24,6 +24,8 @@ jobs:
       - name: Run Generation script
         working-directory: ./src
         run: go run ./cmd/generate-v1 --destination ../generated
+        env:
+           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Sync Data to R2
         run: rclone sync -v -P --checkers=512 --transfers=512 --checksum --fast-list ./generated R2:${{ secrets.R2_BUCKET_NAME }}
