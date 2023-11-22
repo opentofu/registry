@@ -31,14 +31,7 @@ func main() {
 
 	flag.Parse()
 
-	v1APIGenerator := v1api.Generator{
-		DestinationDir: *destinationDir,
-
-		ModuleDirectory:   *moduleDataDir,
-		ProviderDirectory: *providerDataDir,
-	}
-
-	err = v1APIGenerator.WriteWellKnownFile(ctx)
+	err = v1api.WriteWellKnownFile(*destinationDir)
 	if err != nil {
 		logger.Error("Failed to list modules", slog.Any("err", err))
 		os.Exit(1)
@@ -73,7 +66,13 @@ func main() {
 	}
 
 	for _, p := range providers {
-		err := v1APIGenerator.GenerateProviderResponses(ctx, p)
+		g, err := v1api.NewProviderGenerator(p, *destinationDir)
+		if err != nil {
+			p.Logger.Error("Failed to generate provider version listing response", slog.Any("err", err))
+			os.Exit(1)
+		}
+
+		err = g.Generate()
 		if err != nil {
 			p.Logger.Error("Failed to generate provider version listing response", slog.Any("err", err))
 			os.Exit(1)

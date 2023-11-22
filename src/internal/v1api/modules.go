@@ -37,12 +37,12 @@ func (m ModuleGenerator) VersionDownloadPath(v module.Version) string {
 	return filepath.Join(m.Destination, "v1", "modules", m.Namespace, m.Name, m.TargetSystem, internal.TrimTagPrefix(v.Version), "download")
 }
 
-func (m ModuleGenerator) VersionListing() []ModuleVersionResponseItem {
+func (m ModuleGenerator) VersionListing() ModuleVersionListingResponse {
 	versions := make([]ModuleVersionResponseItem, len(m.Versions))
 	for i, v := range m.Versions {
 		versions[i] = ModuleVersionResponseItem{Version: v.Version}
 	}
-	return versions
+	return ModuleVersionListingResponse{[]ModuleVersionListingResponseItem{{versions}}}
 }
 
 func (m ModuleGenerator) VersionDownloads() map[string]ModuleVersionDownloadResponse {
