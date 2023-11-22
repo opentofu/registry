@@ -17,6 +17,9 @@ func (p Provider) GetProtocols(manifestDownloadUrl string) ([]string, error) {
 	if err != nil {
 		return nil, err
 	}
+	if contents == nil {
+		return nil, nil
+	}
 
 	manifest, err := parseManifestContents(contents)
 	if err != nil {

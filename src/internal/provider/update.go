@@ -52,7 +52,7 @@ func (p Provider) shouldUpdateMetadataFile() (bool, error) {
 
 }
 
-func (p Provider) getSemverTags() ([]string, error) {
+func (p Provider) getRssSemverTags() ([]string, error) {
 	releasesRssUrl := p.getRssUrl()
 	tags, err := p.Github.GetTagsFromRss(releasesRssUrl)
 	if err != nil {
@@ -70,7 +70,7 @@ func (p Provider) getSemverTags() ([]string, error) {
 }
 
 func (p Provider) getLastSemverTag() (string, error) {
-	semverTags, err := p.getSemverTags()
+	semverTags, err := p.getRssSemverTags()
 	if err != nil {
 		return "", err
 	}

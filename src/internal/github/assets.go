@@ -20,12 +20,18 @@ func (c Client) DownloadAssetContents(downloadURL string) ([]byte, error) {
 	defer done()
 
 	c.log.Info("Downloading asset", slog.String("url", downloadURL))
+
 	resp, err := c.httpClient.Get(downloadURL)
 	if err != nil {
 		return nil, fmt.Errorf("error downloading asset %s: %w", downloadURL, err)
 	}
 
 	defer resp.Body.Close()
+
+	if resp.StatusCode == http.StatusNotFound {
+		c.log.Info("Asset not found", slog.String("url", downloadURL))
+		return nil, nil
+	}
 
 	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("unexpected status code when downloading asset %s: %d", downloadURL, resp.StatusCode)
