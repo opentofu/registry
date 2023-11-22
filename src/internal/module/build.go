@@ -3,7 +3,6 @@ package module
 import (
 	"fmt"
 	"registry-stable/internal"
-	"registry-stable/internal/github"
 
 	"golang.org/x/mod/semver"
 )
@@ -32,7 +31,7 @@ func (m Module) BuildMetadataFile() (*MetadataFile, error) {
 }
 
 func (m Module) getSemverTags() ([]string, error) {
-	tags, err := github.GetTags(m.RepositoryURL())
+	tags, err := m.Github.GetTags(m.RepositoryURL())
 	if err != nil {
 		return nil, err
 	}

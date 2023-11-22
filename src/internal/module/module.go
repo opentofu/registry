@@ -3,9 +3,11 @@ package module
 import (
 	"encoding/json"
 	"fmt"
+	"log/slog"
 	"os"
 	"path/filepath"
 	"registry-stable/internal/files"
+	"registry-stable/internal/github"
 )
 
 type Version struct {
@@ -21,6 +23,8 @@ type Module struct {
 	Name         string // The module name
 	TargetSystem string // The module target system
 	Directory    string // The root directory that the module lives in
+	Logger       *slog.Logger
+	Github       github.Client
 }
 
 func (m Module) RepositoryURL() string {

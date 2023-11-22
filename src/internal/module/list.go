@@ -5,6 +5,7 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
+	"registry-stable/internal/github"
 )
 
 /*
@@ -35,17 +36,22 @@ func extractModuleDetailsFromPath(path string) *Module {
 	return &m
 }
 
-func ListModules(moduleDataDir string) ([]Module, error) {
+func ListModules(moduleDataDir string, logger *slog.Logger, ghClient github.Client) ([]Module, error) {
 	// walk the module directory recursively and find all json files
 	// for each json file, parse it into a Module struct
 	// return a slice of Module structs
 
 	var results []Module
 	err := filepath.Walk(moduleDataDir, func(path string, info os.FileInfo, err error) error {
-		module := extractModuleDetailsFromPath(path)
-		if module != nil {
-			module.Directory = moduleDataDir
-			results = append(results, *module)
+		m := extractModuleDetailsFromPath(path)
+		if m != nil {
+			m.Directory = moduleDataDir
+			m.Logger = logger.With(
+				slog.String("type", "module"),
+				slog.Group("module", slog.String("namespace", m.Namespace), slog.String("name", m.Name), slog.String("targetsystem", m.TargetSystem)),
+			)
+			m.Github = ghClient.WithLogger(m.Logger)
+			results = append(results, *m)
 		}
 		return nil
 	})

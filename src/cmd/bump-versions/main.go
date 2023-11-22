@@ -28,18 +28,33 @@ func main() {
 	}
 	ghClient := github.NewClient(ctx, logger, token)
 
-	modules, err := module.ListModules(*moduleDataDir)
+	modules, err := module.ListModules(*moduleDataDir, logger, ghClient)
 	if err != nil {
 		logger.Error("Failed to list modules", slog.Any("err", err))
 		os.Exit(1)
 	}
 
+	errChan := make(chan error, len(modules))
+
 	for _, m := range modules {
-		slog.Info("Beginning version bump process for module", slog.String("module", m.Namespace+"/"+m.Name+"/"+m.TargetSystem))
-		err = m.UpdateMetadataFile()
+		m := m
+		go func() {
+			slog.Info("Beginning version bump process for module", slog.String("module", m.Namespace+"/"+m.Name+"/"+m.TargetSystem))
+			errChan <- m.UpdateMetadataFile()
+		}()
+	}
+
+	var errs []error
+	for _ = range modules {
+		err := <-errChan
 		if err != nil {
-			slog.Error("Failed to version bump module", slog.Any("err", err))
-			os.Exit(1)
+			errs = append(errs, err)
+		}
+	}
+	if len(errs) != 0 {
+		logger.Error("Encountered errors while processing modules")
+		for _, err := range errs {
+			logger.Error(err.Error())
 		}
 	}
 
@@ -49,7 +64,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	errChan := make(chan error, len(providers))
+	errChan = make(chan error, len(providers))
 
 	for _, p := range providers {
 		p := p
@@ -58,7 +73,6 @@ func main() {
 		}()
 	}
 
-	var errs []error
 	for _ = range providers {
 		err := <-errChan
 		if err != nil {

@@ -37,7 +37,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	modules, err := module.ListModules(*moduleDataDir)
+	modules, err := module.ListModules(*moduleDataDir, logger, ghClient)
 	if err != nil {
 		logger.Error("Failed to list modules", slog.Any("err", err))
 		os.Exit(1)
