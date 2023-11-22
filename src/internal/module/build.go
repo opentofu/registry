@@ -3,6 +3,7 @@ package module
 import (
 	"fmt"
 	"registry-stable/internal"
+	"slices"
 
 	"golang.org/x/mod/semver"
 )
@@ -22,9 +23,9 @@ func (m Module) BuildMetadataFile() (*MetadataFile, error) {
 		return nil, err
 	}
 
-	var versions = make([]Version, 0, len(tags))
-	for _, t := range tags {
-		versions = append(versions, Version{Version: t})
+	versions := make([]Version, len(tags))
+	for i, t := range tags {
+		versions[i] = Version{Version: t}
 	}
 
 	return &MetadataFile{Versions: versions}, nil
@@ -43,6 +44,11 @@ func (m Module) getSemverTags() ([]string, error) {
 			semverTags = append(semverTags, tag)
 		}
 	}
+
+	semverSortFunc := func(a, b string) int {
+		return -semver.Compare(fmt.Sprintf(a), fmt.Sprintf(b))
+	}
+	slices.SortFunc(semverTags, semverSortFunc)
 
 	return semverTags, nil
 }
