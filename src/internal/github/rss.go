@@ -1,19 +1,17 @@
 package github
 
 import (
-	"context"
 	"fmt"
-	"github.com/mmcdole/gofeed"
 	"net/http"
-	"os"
 	"regexp"
-	httpInternal "registry-stable/internal/http"
+
+	"github.com/mmcdole/gofeed"
 )
 
 // GetTagsFromRss gets all tags found in the RSS feed of a GitHub releases page
 // Tags are sorted by descending creation date
-func GetTagsFromRss(releasesRssUrl string) ([]string, error) {
-	feed, err := getReleaseRssFeed(releasesRssUrl)
+func (c Client) GetTagsFromRss(releasesRssUrl string) ([]string, error) {
+	feed, err := c.getReleaseRssFeed(releasesRssUrl)
 	if err != nil {
 		return nil, err
 	}
@@ -42,37 +40,15 @@ func extractTag(item *gofeed.Item) (string, error) {
 	return matches[pattern.SubexpIndex("Version")], nil
 }
 
-func getReleaseRssFeed(releasesRssUrl string) (feed *gofeed.Feed, err error) {
-	client := httpInternal.GetHttpRetryClient()
-
-	req, err := http.NewRequestWithContext(context.Background(), "GET", releasesRssUrl, nil)
+func (c Client) getReleaseRssFeed(releasesRssUrl string) (*gofeed.Feed, error) {
+	resp, err := c.httpClient.Get(releasesRssUrl)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("%s: %w", releasesRssUrl, err)
 	}
+	defer resp.Body.Close()
 
-	// TODO Commonize?
-	token := os.Getenv("GH_TOKEN")
-
-	req.Header.Set("User-Agent", "OpenTofu Registry/1.0")
-	req.Header.Set("Authorization", fmt.Sprintf("Bearer %s", token))
-
-	resp, err := client.Do(req)
-
-	if err != nil {
-		return nil, err
-	}
-
-	if resp != nil {
-		defer func() {
-			ce := resp.Body.Close()
-			if ce != nil {
-				err = ce
-			}
-		}()
-	}
-
-	if resp.StatusCode < 200 || resp.StatusCode >= 300 {
-		return nil, fmt.Errorf("got error %d", resp.StatusCode)
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("%s got error %d", releasesRssUrl, resp.StatusCode)
 	}
 
 	return gofeed.NewParser().Parse(resp.Body)

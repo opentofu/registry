@@ -1,10 +1,20 @@
 package provider
 
-import "fmt"
+import (
+	"encoding/json"
+	"fmt"
+	"log/slog"
+	"os"
+	"path/filepath"
+	"registry-stable/internal/files"
+	"registry-stable/internal/github"
+	"strings"
+)
 
 type MetadataFile struct {
-	Repository string    `json:"repository,omitempty"` // Optional. Custom repository from which to fetch the provider's metadata.
-	Versions   []Version `json:"versions"`             // A list of version data, for each supported provider version.
+	Repository string       `json:"repository,omitempty"` // Optional. Custom repository from which to fetch the provider's metadata.
+	Versions   []Version    `json:"versions"`             // A list of version data, for each supported provider version.
+	Logger     *slog.Logger `json:"-"`
 }
 
 type Version struct {
@@ -26,6 +36,9 @@ type Target struct {
 type Provider struct {
 	ProviderName string // The provider name
 	Namespace    string // The provider namespace
+	Directory    string // The root directory that the provider lives in
+	Logger       *slog.Logger
+	Github       github.Client
 }
 
 func (p Provider) RepositoryName() string {
@@ -35,6 +48,11 @@ func (p Provider) RepositoryName() string {
 // TODO custom repository url?
 func (p Provider) RepositoryURL() string {
 	return fmt.Sprintf("https://github.com/%s/%s", p.EffectiveNamespace(), p.RepositoryName())
+}
+
+func (p Provider) getRssUrl() string {
+	repositoryUrl := p.RepositoryURL()
+	return fmt.Sprintf("%s/releases.atom", repositoryUrl)
 }
 
 // EffectiveProviderNamespace will map namespaces for providers in situations
@@ -47,3 +65,32 @@ func (p Provider) EffectiveNamespace() string {
 
 	return p.Namespace
 } // TODO make more generic
+
+func (p Provider) MetadataPath() string {
+	return filepath.Join(p.Directory, strings.ToLower(p.Namespace[0:1]), p.Namespace, p.ProviderName+".json")
+}
+
+func (p Provider) ReadMetadata() (MetadataFile, error) {
+	var metadata MetadataFile
+
+	path := p.MetadataPath()
+
+	metadataFile, err := os.ReadFile(path)
+	if err != nil {
+		return metadata, fmt.Errorf("failed to open metadata file: %w", err)
+	}
+
+	err = json.Unmarshal(metadataFile, &metadata)
+	if err != nil {
+		return metadata, fmt.Errorf("failed to unmarshal metadata file: %w", err)
+	}
+
+	metadata.Logger = p.Logger
+
+	return metadata, nil
+}
+
+func (p Provider) WriteMetadata(meta MetadataFile) error {
+	path := p.MetadataPath()
+	return files.SafeWriteObjectToJsonFile(path, meta)
+}

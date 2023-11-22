@@ -1,31 +1,36 @@
 package main
 
 import (
+	"context"
 	"flag"
 	"log/slog"
 	"os"
+	"registry-stable/internal/github"
+	"registry-stable/internal/provider"
 	"registry-stable/internal/repository-metadata-files/module"
-	"registry-stable/internal/repository-metadata-files/provider"
 )
 
 func main() {
-	slog.SetDefault(slog.New(slog.NewJSONHandler(os.Stdout, nil)))
-	slog.Info("Starting version bump process for modules and providers")
+	logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
+	slog.SetDefault(logger) // TODO REMOVE ME
+	logger.Info("Starting version bump process for modules and providers")
 
 	moduleDataDir := flag.String("module-data", "../modules", "Directory containing the module data")
 	providerDataDir := flag.String("provider-data", "../providers", "Directory containing the provider data")
 
 	flag.Parse()
 
-	modules, err := module.ListModules(*moduleDataDir)
+	ctx := context.Background()
+	token, err := github.EnvAuthToken()
 	if err != nil {
-		slog.Error("Failed to list modules", slog.Any("err", err))
+		slog.Error("Initialization Error", slog.Any("err", err))
 		os.Exit(1)
 	}
+	ghClient := github.NewClient(ctx, logger, token)
 
-	providers, err := provider.ListProviders(*providerDataDir)
+	modules, err := module.ListModules(*moduleDataDir)
 	if err != nil {
-		slog.Error("Failed to list providers", slog.Any("err", err))
+		logger.Error("Failed to list modules", slog.Any("err", err))
 		os.Exit(1)
 	}
 
@@ -38,13 +43,34 @@ func main() {
 		}
 	}
 
+	providers, err := provider.ListProviders(*providerDataDir, logger, ghClient)
+	if err != nil {
+		logger.Error("Failed to list providers", slog.Any("err", err))
+		os.Exit(1)
+	}
+
+	errChan := make(chan error, len(providers))
+
 	for _, p := range providers {
-		slog.Info("Beginning version bump process for provider", slog.String("provider", p.Namespace+"/"+p.ProviderName))
-		err = provider.UpdateMetadataFile(p, *providerDataDir)
+		p := p
+		go func() {
+			errChan <- p.UpdateMetadataFile()
+		}()
+	}
+
+	var errs []error
+	for _ = range providers {
+		err := <-errChan
 		if err != nil {
-			slog.Error("Failed to version bump provider", slog.Any("err", err))
+			errs = append(errs, err)
+		}
+	}
+	if len(errs) != 0 {
+		logger.Error("Encountered errors while processing providers")
+		for _, err := range errs {
+			logger.Error(err.Error())
 		}
 	}
 
-	slog.Info("Completed version bump process for modules and providers")
+	logger.Info("Completed version bump process for modules and providers")
 }

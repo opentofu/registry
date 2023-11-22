@@ -1,13 +1,10 @@
 package github
 
 import (
-	"context"
 	"fmt"
 	"io"
-	"log"
+	"log/slog"
 	"net/http"
-	"regexp"
-	httpInternal "registry-stable/internal/http"
 )
 
 // TODO: probably move the Platform type inside providers as that's the only place this is used,
@@ -18,51 +15,25 @@ type Platform struct {
 	Arch string
 }
 
-func DownloadAssetContents(ctx context.Context, downloadURL string) ([]byte, error) {
-	httpClient := httpInternal.GetHttpRetryClient()
-
-	log.Printf("Downloading asset, url: %s", downloadURL)
-	req, err := http.NewRequestWithContext(ctx, http.MethodGet, downloadURL, nil)
+func (c Client) DownloadAssetContents(downloadURL string) ([]byte, error) {
+	c.log.Info("Downloading asset", slog.String("url", downloadURL))
+	resp, err := c.httpClient.Get(downloadURL)
 	if err != nil {
-		log.Printf("Failed to create request %s", err)
-		return nil, fmt.Errorf("failed to create request: %w", err)
+		return nil, fmt.Errorf("error downloading asset %s: %w", downloadURL, err)
 	}
 
-	resp, err := httpClient.Do(req)
-	if err != nil {
-		log.Printf("Error downloading asset %s", err)
-		return nil, fmt.Errorf("error downloading asset: %w", err)
-	}
+	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
-		resp.Body.Close()
-		log.Printf("Unexpected status code when downloading asset: %d", resp.StatusCode)
-		return nil, fmt.Errorf("unexpected status code when downloading asset: %d", resp.StatusCode)
+		return nil, fmt.Errorf("unexpected status code when downloading asset %s: %d", downloadURL, resp.StatusCode)
 	}
-
-	log.Printf("Asset downloaded successfully")
 
 	contents, err := io.ReadAll(resp.Body)
-	resp.Body.Close()
 	if err != nil {
-		return nil, fmt.Errorf("failed to read asset contents: %w", err)
+		return nil, fmt.Errorf("failed to read asset contents of %s: %w", downloadURL, err)
 	}
+
+	c.log.Info("Asset downloaded", slog.String("url", downloadURL))
 
 	return contents, nil
-}
-
-func ExtractPlatformFromFilename(filename string) *Platform {
-	platformPattern := regexp.MustCompile(`.*_(?P<Os>[a-zA-Z0-9]+)_(?P<Arch>[a-zA-Z0-9]+).zip`)
-	matches := platformPattern.FindStringSubmatch(filename)
-
-	if matches == nil {
-		return nil
-	}
-
-	platform := Platform{
-		OS:   matches[platformPattern.SubexpIndex("Os")],
-		Arch: matches[platformPattern.SubexpIndex("Arch")],
-	}
-
-	return &platform
 }

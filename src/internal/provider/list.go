@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
-	"registry-stable/internal/provider"
+	"registry-stable/internal/github"
 )
 
 /*
@@ -19,31 +19,38 @@ providerDirectoryRegex is a regular expression that matches the directory struct
 */
 var providerDirectoryRegex = regexp.MustCompile(`(?i)providers/\w/(?P<Namespace>[^/]+?)/(?P<ProviderName>[^/]+?)\.json`)
 
-func extractProviderDetailsFromPath(path string) *provider.Provider {
+func extractProviderDetailsFromPath(path string) *Provider {
 	matches := providerDirectoryRegex.FindStringSubmatch(path)
 	if len(matches) != 3 {
-		slog.Debug("Failed to extract provider details from path, skipping", slog.String("path", path))
 		return nil
 	}
 
-	p := provider.Provider{
+	p := Provider{
 		Namespace:    matches[providerDirectoryRegex.SubexpIndex("Namespace")],
 		ProviderName: matches[providerDirectoryRegex.SubexpIndex("ProviderName")],
 	}
-
 	return &p
 }
 
-func ListProviders(providerDataDir string) ([]provider.Provider, error) {
+func ListProviders(providerDataDir string, logger *slog.Logger, ghClient github.Client) ([]Provider, error) {
 	// walk the provider directory recursively and find all json files
-	// for each json file, parse it into a provider.Provider struct
-	// return a slice of provider.Provider structs
+	// for each json file, parse it into a Provider struct
+	// return a slice of Provider structs
 
-	var results []provider.Provider
+	var results []Provider
 	err := filepath.Walk(providerDataDir, func(path string, info os.FileInfo, err error) error {
 		p := extractProviderDetailsFromPath(path)
 		if p != nil {
+			p.Directory = providerDataDir
+			p.Logger = logger.With(
+				slog.String("type", "provider"),
+				slog.Group("provider", slog.String("namespace", p.Namespace), slog.String("name", p.ProviderName)),
+			)
+			p.Github = ghClient.WithLogger(p.Logger)
+
 			results = append(results, *p)
+		} else {
+			logger.Debug("Failed to extract provider details from path, skipping", slog.String("path", path))
 		}
 		return nil
 	})
