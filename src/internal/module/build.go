@@ -8,13 +8,22 @@ import (
 	"golang.org/x/mod/semver"
 )
 
-func BuildMetadataFile(m Module) (*MetadataFile, error) {
-	tags, err := getModuleSemverTags(m)
+func (m Module) UpdateMetadataFile() error {
+	meta, err := m.BuildMetadataFile()
+	if err != nil {
+		return err
+	}
+
+	return m.WriteMetadata(*meta)
+}
+
+func (m Module) BuildMetadataFile() (*MetadataFile, error) {
+	tags, err := m.getSemverTags()
 	if err != nil {
 		return nil, err
 	}
 
-	var versions = make([]Version, 0)
+	var versions = make([]Version, 0, len(tags))
 	for _, t := range tags {
 		versions = append(versions, Version{Version: t})
 	}
@@ -22,8 +31,8 @@ func BuildMetadataFile(m Module) (*MetadataFile, error) {
 	return &MetadataFile{Versions: versions}, nil
 }
 
-func getModuleSemverTags(mod Module) ([]string, error) {
-	tags, err := github.GetTags(mod.RepositoryURL())
+func (m Module) getSemverTags() ([]string, error) {
+	tags, err := github.GetTags(m.RepositoryURL())
 	if err != nil {
 		return nil, err
 	}

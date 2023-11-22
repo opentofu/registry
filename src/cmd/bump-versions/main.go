@@ -36,7 +36,7 @@ func main() {
 
 	for _, m := range modules {
 		slog.Info("Beginning version bump process for module", slog.String("module", m.Namespace+"/"+m.Name+"/"+m.TargetSystem))
-		err = module.UpdateMetadataFile(m, *moduleDataDir)
+		err = m.UpdateMetadataFile()
 		if err != nil {
 			slog.Error("Failed to version bump module", slog.Any("err", err))
 			os.Exit(1)

@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"registry-stable/internal/files"
 )
 
 type Version struct {
@@ -52,4 +53,9 @@ func (m Module) ReadMetadata() (MetadataFile, error) {
 	}
 
 	return metadata, nil
+}
+
+func (m Module) WriteMetadata(meta MetadataFile) error {
+	path := m.MetadataPath()
+	return files.SafeWriteObjectToJsonFile(path, meta)
 }
