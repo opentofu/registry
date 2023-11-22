@@ -16,8 +16,8 @@ type Platform struct {
 }
 
 func (c Client) DownloadAssetContents(downloadURL string) ([]byte, error) {
-	token := c.assetThrottle.Wait()
-	defer token.Done()
+	done := c.assetThrottle()
+	defer done()
 
 	c.log.Info("Downloading asset", slog.String("url", downloadURL))
 	resp, err := c.httpClient.Get(downloadURL)

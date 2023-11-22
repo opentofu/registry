@@ -39,8 +39,8 @@ func parseTagsFromStdout(lines []string) ([]string, error) {
 
 // GetTags lists the tags of the remote repository and returns the refs/tags/ found
 func (c Client) GetTags(repositoryUrl string) ([]string, error) {
-	token := c.cliThrottle.Wait()
-	defer token.Done()
+	done := c.cliThrottle()
+	defer done()
 
 	log.Printf("Getting tags for repository %s", repositoryUrl)
 
