@@ -52,7 +52,13 @@ func main() {
 
 	for _, m := range modules {
 		logger.Info("Generating", slog.String("module", m.Namespace+"/"+m.Name+"/"+m.TargetSystem))
-		err := v1APIGenerator.GenerateModuleResponses(ctx, m)
+		g, err := v1api.NewModuleGenerator(m, *destinationDir)
+		if err != nil {
+			logger.Error("Failed to generate module version listing response", slog.Any("err", err))
+			os.Exit(1)
+		}
+
+		err = g.Generate()
 		if err != nil {
 			logger.Error("Failed to generate module version listing response", slog.Any("err", err))
 			os.Exit(1)

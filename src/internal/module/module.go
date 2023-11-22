@@ -1,9 +1,10 @@
 package module
 
 import (
+	"encoding/json"
 	"fmt"
+	"os"
 	"path/filepath"
-	"registry-stable/internal"
 )
 
 type Version struct {
@@ -18,6 +19,7 @@ type Module struct {
 	Namespace    string // The module namespace
 	Name         string // The module name
 	TargetSystem string // The module target system
+	Directory    string // The root directory that the module lives in
 }
 
 func (m Module) RepositoryURL() string {
@@ -31,17 +33,23 @@ func (m Module) VersionDownloadURL(version Version) string {
 }
 
 func (m Module) MetadataPath() string {
-	return filepath.Join(m.Namespace[0:1], m.Namespace, m.Name, m.TargetSystem+".json")
+	return filepath.Join(m.Directory, m.Namespace[0:1], m.Namespace, m.Name, m.TargetSystem+".json")
 }
 
-func (m Module) outputPath() string {
-	return filepath.Join("v1", "modules", m.Namespace, m.Name, m.TargetSystem)
-}
+func (m Module) ReadMetadata() (MetadataFile, error) {
+	var metadata MetadataFile
 
-func (m Module) VersionListingPath() string {
-	return filepath.Join(m.outputPath(), "versions")
-}
+	path := m.MetadataPath()
 
-func (m Module) VersionDownloadPath(v Version) string {
-	return filepath.Join(m.outputPath(), internal.TrimTagPrefix(v.Version), "download")
+	metadataFile, err := os.ReadFile(path)
+	if err != nil {
+		return metadata, fmt.Errorf("failed to open metadata file: %w", err)
+	}
+
+	err = json.Unmarshal(metadataFile, &metadata)
+	if err != nil {
+		return metadata, fmt.Errorf("failed to unmarshal metadata file: %w", err)
+	}
+
+	return metadata, nil
 }

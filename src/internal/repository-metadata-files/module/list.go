@@ -46,6 +46,7 @@ func ListModules(moduleDataDir string) ([]module.Module, error) {
 	err := filepath.Walk(moduleDataDir, func(path string, info os.FileInfo, err error) error {
 		module := extractModuleDetailsFromPath(path)
 		if module != nil {
+			module.Directory = moduleDataDir
 			results = append(results, *module)
 		}
 		return nil
