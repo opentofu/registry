@@ -1,7 +1,6 @@
 package main
 
 import (
-	"context"
 	"flag"
 	"log/slog"
 	"os"
@@ -21,17 +20,13 @@ func main() {
 	providerDataDir := flag.String("provider-data", "../providers", "Directory containing the provider data")
 	destinationDir := flag.String("destination", "../generated", "Directory to write the generated responses to")
 
-	ctx := context.Background()
-	token, err := github.EnvAuthToken()
-	if err != nil {
-		slog.Error("Initialization Error", slog.Any("err", err))
-		os.Exit(1)
-	}
-	ghClient := github.NewClient(ctx, logger, token)
+	// Will panic if used, it should not be.
+	// In the future we probably want to change module.Module/module.Meta -> module.Identifer/module.Module
+	ghClient := github.Client{}
 
 	flag.Parse()
 
-	err = v1api.WriteWellKnownFile(*destinationDir)
+	err := v1api.WriteWellKnownFile(*destinationDir)
 	if err != nil {
 		logger.Error("Failed to list modules", slog.Any("err", err))
 		os.Exit(1)
