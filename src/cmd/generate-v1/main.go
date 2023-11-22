@@ -13,7 +13,6 @@ import (
 
 func main() {
 	logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
-	slog.SetDefault(logger) // TODO REMOVE ME
 	logger.Info("Generating v1 API responses")
 
 	moduleDataDir := flag.String("module-data", "../modules", "Directory containing the module data")
@@ -39,7 +38,6 @@ func main() {
 	}
 
 	for _, m := range modules {
-		logger.Info("Generating", slog.String("module", m.Namespace+"/"+m.Name+"/"+m.TargetSystem))
 		g, err := v1api.NewModuleGenerator(m, *destinationDir)
 		if err != nil {
 			logger.Error("Failed to generate module version listing response", slog.Any("err", err))
@@ -51,7 +49,6 @@ func main() {
 			logger.Error("Failed to generate module version listing response", slog.Any("err", err))
 			os.Exit(1)
 		}
-		logger.Info("Generated", slog.String("module", m.Namespace+"/"+m.Name+"/"+m.TargetSystem))
 	}
 
 	providers, err := provider.ListProviders(*providerDataDir, logger, ghClient)

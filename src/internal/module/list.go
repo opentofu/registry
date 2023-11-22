@@ -23,7 +23,6 @@ var moduleDirectoryRegex = regexp.MustCompile(`(?i)modules/\w/(?P<Namespace>[^/]
 func extractModuleDetailsFromPath(path string) *Module {
 	matches := moduleDirectoryRegex.FindStringSubmatch(path)
 	if len(matches) != 4 {
-		slog.Debug("Failed to extract module details from path, skipping", slog.String("path", path))
 		return nil
 	}
 
@@ -52,6 +51,8 @@ func ListModules(moduleDataDir string, logger *slog.Logger, ghClient github.Clie
 			)
 			m.Github = ghClient.WithLogger(m.Logger)
 			results = append(results, *m)
+		} else {
+			logger.Debug("Failed to extract module details from path, skipping", slog.String("path", path))
 		}
 		return nil
 	})

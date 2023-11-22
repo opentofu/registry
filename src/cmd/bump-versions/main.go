@@ -12,7 +12,6 @@ import (
 
 func main() {
 	logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
-	slog.SetDefault(logger) // TODO REMOVE ME
 	logger.Info("Starting version bump process for modules and providers")
 
 	moduleDataDir := flag.String("module-data", "../modules", "Directory containing the module data")

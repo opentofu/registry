@@ -14,6 +14,7 @@ type ModuleGenerator struct {
 	module.Module
 	module.MetadataFile
 	Destination string
+	log         *slog.Logger
 }
 
 func NewModuleGenerator(m module.Module, destination string) (ModuleGenerator, error) {
@@ -26,6 +27,7 @@ func NewModuleGenerator(m module.Module, destination string) (ModuleGenerator, e
 		m,
 		metadata,
 		destination,
+		m.Logger,
 	}, nil
 }
 
@@ -58,20 +60,22 @@ func (m ModuleGenerator) VersionDownloads() map[string]ModuleVersionDownloadResp
 // https://opentofu.org/docs/internals/module-registry-protocol/#list-available-versions-for-a-specific-module
 // https://opentofu.org/docs/internals/module-registry-protocol/#download-source-code-for-a-specific-module-version
 func (m ModuleGenerator) Generate() error {
-	logger := slog.With(slog.String("namespace", m.Namespace), slog.String("name", m.Name), slog.String("targetSystem", m.TargetSystem))
+	m.log.Info("Generating")
 
 	for location, download := range m.VersionDownloads() {
 		err := files.SafeWriteObjectToJsonFile(location, download)
 		if err != nil {
 			return fmt.Errorf("failed to write metadata version download file: %w", err)
 		}
-		logger.Debug("Wrote metadata version download file", slog.String("path", location))
+		m.log.Debug("Wrote metadata version download file", slog.String("path", location))
 	}
 
 	err := files.SafeWriteObjectToJsonFile(m.VersionListingPath(), m.VersionListing())
 	if err != nil {
 		return err
 	}
+
+	m.log.Info("Generated")
 
 	return nil
 }
