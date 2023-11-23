@@ -2,6 +2,7 @@ package module
 
 import (
 	"fmt"
+	"log/slog"
 	"registry-stable/internal"
 	"slices"
 
@@ -9,6 +10,8 @@ import (
 )
 
 func (m Module) UpdateMetadataFile() error {
+	m.Logger.Info("Beginning version bump process for module", slog.String("module", m.Namespace+"/"+m.Name+"/"+m.TargetSystem))
+
 	meta, err := m.BuildMetadataFile()
 	if err != nil {
 		return err

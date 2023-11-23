@@ -22,7 +22,7 @@ func main() {
 	ctx := context.Background()
 	token, err := github.EnvAuthToken()
 	if err != nil {
-		slog.Error("Initialization Error", slog.Any("err", err))
+		logger.Error("Initialization Error", slog.Any("err", err))
 		os.Exit(1)
 	}
 	ghClient := github.NewClient(ctx, logger, token)
@@ -33,28 +33,12 @@ func main() {
 		os.Exit(1)
 	}
 
-	errChan := make(chan error, len(modules))
-
-	for _, m := range modules {
-		m := m
-		go func() {
-			slog.Info("Beginning version bump process for module", slog.String("module", m.Namespace+"/"+m.Name+"/"+m.TargetSystem))
-			errChan <- m.UpdateMetadataFile()
-		}()
-	}
-
-	var errs []error
-	for _ = range modules {
-		err := <-errChan
-		if err != nil {
-			errs = append(errs, err)
-		}
-	}
-	if len(errs) != 0 {
-		logger.Error("Encountered errors while processing modules")
-		for _, err := range errs {
-			logger.Error(err.Error())
-		}
+	err = modules.Parallel(20, func(m module.Module) error {
+		return m.UpdateMetadataFile()
+	})
+	if err != nil {
+		logger.Error(err.Error())
+		os.Exit(1)
 	}
 
 	providers, err := provider.ListProviders(*providerDataDir, logger, ghClient)
@@ -62,27 +46,12 @@ func main() {
 		logger.Error("Failed to list providers", slog.Any("err", err))
 		os.Exit(1)
 	}
-
-	errChan = make(chan error, len(providers))
-
-	for _, p := range providers {
-		p := p
-		go func() {
-			errChan <- p.UpdateMetadataFile()
-		}()
-	}
-
-	for _ = range providers {
-		err := <-errChan
-		if err != nil {
-			errs = append(errs, err)
-		}
-	}
-	if len(errs) != 0 {
-		logger.Error("Encountered errors while processing providers")
-		for _, err := range errs {
-			logger.Error(err.Error())
-		}
+	err = providers.Parallel(20, func(p provider.Provider) error {
+		return p.UpdateMetadataFile()
+	})
+	if err != nil {
+		logger.Error(err.Error())
+		os.Exit(1)
 	}
 
 	logger.Info("Completed version bump process for modules and providers")

@@ -1,11 +1,13 @@
 package module
 
 import (
+	"fmt"
 	"log/slog"
 	"os"
 	"path/filepath"
 	"regexp"
 	"registry-stable/internal/github"
+	"registry-stable/internal/parallel"
 )
 
 /*
@@ -35,7 +37,9 @@ func extractModuleDetailsFromPath(path string) *Module {
 	return &m
 }
 
-func ListModules(moduleDataDir string, logger *slog.Logger, ghClient github.Client) ([]Module, error) {
+type ModuleList []Module
+
+func ListModules(moduleDataDir string, logger *slog.Logger, ghClient github.Client) (ModuleList, error) {
 	// walk the module directory recursively and find all json files
 	// for each json file, parse it into a Module struct
 	// return a slice of Module structs
@@ -62,4 +66,27 @@ func ListModules(moduleDataDir string, logger *slog.Logger, ghClient github.Clie
 	}
 
 	return results, nil
+}
+
+type Action func(m Module) error
+
+func (modules ModuleList) Parallel(maxConcurrency int, action Action) error {
+	actions := make([]parallel.Action, len(modules))
+	for i, m := range modules {
+		m := m
+		actions[i] = func() error {
+			err := action(m)
+			if err != nil {
+				m.Logger.Error(err.Error())
+				return err
+			}
+			return nil
+		}
+	}
+
+	errs := parallel.ForEach(actions, maxConcurrency)
+	if len(errs) != 0 {
+		return fmt.Errorf("Encountered %d errors processing %d modules", len(errs), len(modules))
+	}
+	return nil
 }
