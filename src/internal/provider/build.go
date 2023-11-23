@@ -5,20 +5,19 @@ import (
 	"slices"
 
 	"registry-stable/internal"
-	"registry-stable/internal/github"
 
 	"golang.org/x/mod/semver"
 )
 
-func (meta MetadataFile) filterNewReleases(releases []github.GHRelease) []github.GHRelease {
+func (meta MetadataFile) filterNewReleases(releases []string) []string {
 	var existingVersions = make(map[string]bool)
 	for _, v := range meta.Versions {
 		existingVersions[v.Version] = true
 	}
 
-	var newReleases = make([]github.GHRelease, 0)
+	var newReleases = make([]string, 0)
 	for _, r := range releases {
-		if !existingVersions[internal.TrimTagPrefix(r.TagName)] {
+		if !existingVersions[internal.TrimTagPrefix(r)] {
 			newReleases = append(newReleases, r)
 		}
 	}
@@ -28,13 +27,30 @@ func (meta MetadataFile) filterNewReleases(releases []github.GHRelease) []github
 	return newReleases
 }
 
+func (p Provider) getSemverTags() ([]string, error) {
+	tags, err := p.Github.GetTags(p.RepositoryURL())
+	if err != nil {
+		return nil, err
+	}
+
+	var semverTags = make([]string, 0)
+	for _, tag := range tags {
+		tagWithPrefix := fmt.Sprintf("v%s", internal.TrimTagPrefix(tag))
+		if semver.IsValid(tagWithPrefix) {
+			semverTags = append(semverTags, tag)
+		}
+	}
+
+	return semverTags, nil
+}
+
 func (p Provider) buildMetadataFile() (*MetadataFile, error) {
 	meta, err := p.ReadMetadata()
 	if err != nil {
 		return nil, err
 	}
 
-	releases, err := p.Github.FetchPublishedReleases(p.EffectiveNamespace(), p.RepositoryName())
+	releases, err := p.getSemverTags()
 	if err != nil {
 		return nil, err
 	}
@@ -51,7 +67,7 @@ func (p Provider) buildMetadataFile() (*MetadataFile, error) {
 	for _, r := range releases {
 		r := r
 		go func() {
-			version, err := p.VersionFromRelease(r)
+			version, err := p.VersionFromTag(r)
 			verChan <- versionResult{version, err}
 		}()
 	}

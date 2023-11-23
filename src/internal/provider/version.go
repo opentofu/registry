@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"log/slog"
 	"registry-stable/internal"
-	"registry-stable/internal/github"
 )
 
 var (
@@ -27,32 +26,40 @@ var (
 	}
 )
 
-func (p Provider) VersionFromRelease(release github.GHRelease) (*Version, error) {
-	version := internal.TrimTagPrefix(release.TagName)
-	artifactPrefix := fmt.Sprintf("%s_%s", p.RepositoryName(), version)
+func (p Provider) VersionFromTag(release string) (*Version, error) {
+	version := internal.TrimTagPrefix(release)
+	artifactPrefix := fmt.Sprintf("%s_%s_", p.RepositoryName(), version)
 
-	assets := make(map[string]string)
-	for _, asset := range release.ReleaseAssets.Nodes {
-		assets[asset.Name] = asset.DownloadURL
+	urlPrefix := fmt.Sprintf(p.RepositoryURL()+"/releases/download/%s/%s", release, artifactPrefix)
+
+	v := Version{
+		Version:             version,
+		SHASumsURL:          urlPrefix + "SHA256SUMS",
+		SHASumsSignatureURL: urlPrefix + "SHA256SUMS.sig",
+	}
+
+	signatures, err := p.GetShaSums(v.SHASumsURL)
+	if err != nil {
+		return nil, err
+	}
+	if signatures == nil {
+		p.Logger.Info("Signature not found in release, skipping...", slog.String("release", version))
+		return nil, nil
 	}
 
 	var ok bool
-	v := Version{Version: version}
-
 	for _, os := range goos {
 		for _, arch := range goarch {
 			target := Target{
-				OS:       os,
-				Arch:     arch,
-				Filename: fmt.Sprintf("%s_%s_%s.zip", artifactPrefix, os, arch),
+				OS:          os,
+				Arch:        arch,
+				Filename:    fmt.Sprintf("%s%s_%s.zip", artifactPrefix, os, arch),
+				DownloadURL: fmt.Sprintf("%s%s_%s.zip", urlPrefix, os, arch),
 			}
-			target.DownloadURL, ok = assets[target.Filename]
-			if !ok {
-				// Artifact does not exist for this platform
-				continue
+			target.SHASum, ok = signatures[target.Filename]
+			if ok {
+				v.Targets = append(v.Targets, target)
 			}
-
-			v.Targets = append(v.Targets, target)
 		}
 	}
 
@@ -61,38 +68,13 @@ func (p Provider) VersionFromRelease(release github.GHRelease) (*Version, error)
 		return nil, nil
 	}
 
-	v.SHASumsURL, ok = assets[fmt.Sprintf("%s_%s", artifactPrefix, "SHA256SUMS")]
-	if !ok {
-		return nil, fmt.Errorf("Provider %s release %s missing SHA256SUMS", p.RepositoryName(), version)
-	}
-
-	v.SHASumsSignatureURL, ok = assets[fmt.Sprintf("%s_%s", artifactPrefix, "SHA256SUMS.sig")]
-	if !ok {
-		return nil, fmt.Errorf("Provider %s release %s missing SHA256SUMS.sig", p.RepositoryName(), version)
-	}
-
-	signatures, err := p.GetShaSums(v.SHASumsURL)
+	v.Protocols, err = p.GetProtocols(urlPrefix + "manifest.json")
 	if err != nil {
 		return nil, err
 	}
-
-	for i, target := range v.Targets {
-		target.SHASum, ok = signatures[target.Filename]
-		if !ok {
-			return nil, fmt.Errorf("Provider %s release %s missing signature for %s", p.RepositoryName(), version, target.Filename)
-		}
-		v.Targets[i] = target
-	}
-
-	manifestUrl, ok := assets[fmt.Sprintf("%s_%s", artifactPrefix, "manifest.json")]
-	if !ok {
+	if v.Protocols == nil {
 		p.Logger.Warn("Could not find manifest file, using default protocols")
 		v.Protocols = []string{"5.0"}
-	} else {
-		v.Protocols, err = p.GetProtocols(manifestUrl)
-		if err != nil {
-			return nil, err
-		}
 	}
 
 	return &v, nil
