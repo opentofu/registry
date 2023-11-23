@@ -27,7 +27,7 @@ func main() {
 
 	err := v1api.WriteWellKnownFile(*destinationDir)
 	if err != nil {
-		logger.Error("Failed to list modules", slog.Any("err", err))
+		logger.Error("Failed to create well known file", slog.Any("err", err))
 		os.Exit(1)
 	}
 
@@ -36,40 +36,34 @@ func main() {
 		logger.Error("Failed to list modules", slog.Any("err", err))
 		os.Exit(1)
 	}
-
-	for _, m := range modules {
+	err = modules.Parallel(20, func(m module.Module) error {
 		g, err := v1api.NewModuleGenerator(m, *destinationDir)
 		if err != nil {
-			logger.Error("Failed to generate module version listing response", slog.Any("err", err))
-			os.Exit(1)
+			return err
 		}
-
-		err = g.Generate()
-		if err != nil {
-			logger.Error("Failed to generate module version listing response", slog.Any("err", err))
-			os.Exit(1)
-		}
+		return g.Generate()
+	})
+	if err != nil {
+		logger.Error(err.Error())
+		os.Exit(1)
 	}
 
 	providers, err := provider.ListProviders(*providerDataDir, logger, ghClient)
 	if err != nil {
-		slog.Error("Failed to list providers", slog.Any("err", err))
+		logger.Error("Failed to list providers", slog.Any("err", err))
+		os.Exit(1)
+	}
+	err = providers.Parallel(20, func(p provider.Provider) error {
+		g, err := v1api.NewProviderGenerator(p, *destinationDir)
+		if err != nil {
+			return err
+		}
+		return g.Generate()
+	})
+	if err != nil {
+		logger.Error(err.Error())
 		os.Exit(1)
 	}
 
-	for _, p := range providers {
-		g, err := v1api.NewProviderGenerator(p, *destinationDir)
-		if err != nil {
-			p.Logger.Error("Failed to generate provider version listing response", slog.Any("err", err))
-			os.Exit(1)
-		}
-
-		err = g.Generate()
-		if err != nil {
-			p.Logger.Error("Failed to generate provider version listing response", slog.Any("err", err))
-			os.Exit(1)
-		}
-	}
-
-	slog.Info("Completed generating v1 API responses")
+	logger.Info("Completed generating v1 API responses")
 }
