@@ -3,8 +3,6 @@ package module
 import (
 	"testing"
 
-	"registry-stable/internal/module"
-
 	"github.com/stretchr/testify/assert"
 )
 
@@ -12,14 +10,14 @@ func Test_ExtractModuleDetailsFromPath(t *testing.T) {
 	type TestCase struct {
 		name           string
 		input          string
-		expectedOutput *module.Module
+		expectedOutput *Module
 	}
 
 	testCases := []TestCase{
 		{
 			name:  "Valid module path",
 			input: "modules/t/terraform-aws-modules/lambda/aws.json",
-			expectedOutput: &module.Module{
+			expectedOutput: &Module{
 				Namespace:    "terraform-aws-modules",
 				Name:         "lambda",
 				TargetSystem: "aws",
@@ -28,7 +26,7 @@ func Test_ExtractModuleDetailsFromPath(t *testing.T) {
 		{
 			name:  "Valid module path with mixed case",
 			input: "modules/t/terraform-aws-modules/lambda/AWS.json",
-			expectedOutput: &module.Module{
+			expectedOutput: &Module{
 				Namespace:    "terraform-aws-modules",
 				Name:         "lambda",
 				TargetSystem: "AWS",
@@ -37,7 +35,7 @@ func Test_ExtractModuleDetailsFromPath(t *testing.T) {
 		{
 			name:  "Valid module path with numbers",
 			input: "modules/t/terraform-aws-modules1234/lambda1234/aws1234.json",
-			expectedOutput: &module.Module{
+			expectedOutput: &Module{
 				Namespace:    "terraform-aws-modules1234",
 				Name:         "lambda1234",
 				TargetSystem: "aws1234",
@@ -46,7 +44,7 @@ func Test_ExtractModuleDetailsFromPath(t *testing.T) {
 		{
 			name:  "Valid module path with hypens and underscores",
 			input: "modules/t/terraform-aws-modules_test-abcd/lambda_test-abcd/aws_test-abcd.json",
-			expectedOutput: &module.Module{
+			expectedOutput: &Module{
 				Namespace:    "terraform-aws-modules_test-abcd",
 				Name:         "lambda_test-abcd",
 				TargetSystem: "aws_test-abcd",

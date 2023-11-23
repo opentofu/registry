@@ -26,9 +26,11 @@ type Client struct {
 	log        *slog.Logger
 	httpClient *http.Client
 	ghClient   *githubv4.Client
+	cliLimiter *rate.Limiter
 }
 
 func NewClient(ctx context.Context, log *slog.Logger, token string) Client {
+	// These rate limits are guesses
 	httpClient := &http.Client{Transport: &transport{
 		token:       token,
 		ctx:         ctx,
@@ -44,6 +46,7 @@ func NewClient(ctx context.Context, log *slog.Logger, token string) Client {
 		log:        log.WithGroup("github"),
 		httpClient: httpClientFast,
 		ghClient:   githubv4.NewClient(httpClient),
+		cliLimiter: rate.NewLimiter(rate.Every(time.Second/10), 1),
 	}
 	/* TODO
 	retryClient := retryablehttp.NewClient()
@@ -59,6 +62,7 @@ func (c Client) WithLogger(log *slog.Logger) Client {
 		log:        log.WithGroup("github"),
 		httpClient: c.httpClient,
 		ghClient:   c.ghClient,
+		cliLimiter: c.cliLimiter,
 	}
 }
 

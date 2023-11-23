@@ -3,7 +3,7 @@ package github
 import (
 	"bytes"
 	"fmt"
-	"log"
+	"log/slog"
 	"os/exec"
 	"strings"
 )
@@ -38,8 +38,13 @@ func parseTagsFromStdout(lines []string) ([]string, error) {
 }
 
 // GetTags lists the tags of the remote repository and returns the refs/tags/ found
-func GetTags(repositoryUrl string) ([]string, error) {
-	log.Printf("Getting tags for repository %s", repositoryUrl)
+func (client Client) GetTags(repositoryUrl string) ([]string, error) {
+	err := client.cliLimiter.Wait(client.ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	client.log.Info("Getting tags for repository", slog.String("repository", repositoryUrl))
 
 	var buf bytes.Buffer
 	var bufErr bytes.Buffer
@@ -56,6 +61,6 @@ func GetTags(repositoryUrl string) ([]string, error) {
 		return nil, fmt.Errorf("could not parse tags for %s: %w", repositoryUrl, err)
 	}
 
-	log.Printf("Found %d tags for repository %s", len(tags), repositoryUrl)
+	client.log.Info("Found tags for repository", slog.String("repository", repositoryUrl), slog.Int("count", len(tags)))
 	return tags, nil
 }

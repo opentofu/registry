@@ -1,7 +1,6 @@
 package v1api
 
 import (
-	"context"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -15,8 +14,8 @@ const WellKnownFileContents = `{
 // WriteWellKnownFile writes the well-known file to the filesystem.
 // For more information see
 // https://opentofu.org/docs/internals/remote-service-discovery/#discovery-process
-func (g Generator) WriteWellKnownFile(_ context.Context) error {
-	wellKnownDir := filepath.Join(g.DestinationDir, ".well-known")
+func WriteWellKnownFile(destination string) error {
+	wellKnownDir := filepath.Join(destination, ".well-known")
 	err := os.MkdirAll(wellKnownDir, 0755)
 	if err != nil {
 		return fmt.Errorf("failed to create directory: %w", err)
