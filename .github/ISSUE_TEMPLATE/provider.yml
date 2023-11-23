@@ -24,3 +24,9 @@ body:
       description: The public GPG key for releases of said provider
     validations:
       required: true
+  - type: checkboxes
+    attributes:
+      label: DCU
+      options:
+        - label: I sign this project's [DCU](link/to/coc)
+          required: true
