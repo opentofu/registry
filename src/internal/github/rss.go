@@ -41,6 +41,9 @@ func extractTag(item *gofeed.Item) (string, error) {
 }
 
 func (c Client) getReleaseRssFeed(releasesRssUrl string) (*gofeed.Feed, error) {
+	done := c.rssThrottle()
+	defer done()
+
 	resp, err := c.httpClient.Get(releasesRssUrl)
 	if err != nil {
 		return nil, fmt.Errorf("%s: %w", releasesRssUrl, err)
