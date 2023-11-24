@@ -24,10 +24,10 @@ func NewModuleGenerator(m module.Module, destination string) (ModuleGenerator, e
 	}
 
 	return ModuleGenerator{
-		m,
-		metadata,
-		destination,
-		m.Logger,
+		Module:       m,
+		MetadataFile: metadata,
+		Destination:  destination,
+		log:          m.Logger,
 	}, nil
 }
 
