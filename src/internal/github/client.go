@@ -28,6 +28,7 @@ type Client struct {
 	cliThrottle   Throttle
 	apiThrottle   Throttle
 	assetThrottle Throttle
+	rssThrottle   Throttle
 }
 
 func NewClient(ctx context.Context, log *slog.Logger, token string) Client {
@@ -41,6 +42,7 @@ func NewClient(ctx context.Context, log *slog.Logger, token string) Client {
 		cliThrottle:   NewThrottle(ctx, time.Second/30, 30),
 		apiThrottle:   NewThrottle(ctx, time.Second, 3),
 		assetThrottle: NewThrottle(ctx, time.Second/60, 30),
+		rssThrottle:   NewThrottle(ctx, time.Second/10, 10),
 	}
 	/* TODO
 	retryClient := retryablehttp.NewClient()
@@ -60,6 +62,7 @@ func (c Client) WithLogger(log *slog.Logger) Client {
 		cliThrottle:   c.cliThrottle,
 		apiThrottle:   c.apiThrottle,
 		assetThrottle: c.assetThrottle,
+		rssThrottle:   c.rssThrottle,
 	}
 }
 
