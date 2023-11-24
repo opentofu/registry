@@ -15,12 +15,12 @@ func SafeWriteObjectToJSONFile(filePath string, data interface{}) error {
 		return fmt.Errorf("failed to marshal for %s: %w", filePath, err)
 	}
 
-	err = os.MkdirAll(path.Dir(filePath), 0755) // nolint: gomnd // 0755 is the default for os.MkdirAll
+	err = os.MkdirAll(path.Dir(filePath), 0755) //nolint: gomnd // 0755 is the default for os.MkdirAll
 	if err != nil {
 		return fmt.Errorf("failed to create directory for %s: %w", filePath, err)
 	}
 
-	err = os.WriteFile(filePath, marshalledJSON, 0600)
+	err = os.WriteFile(filePath, marshalledJSON, 0600) //nolint: gomnd // 0600 is fine for what we need, no other users should consume this
 	if err != nil {
 		// Error already contains filePath
 		return fmt.Errorf("failed to write to file: %w", err)
