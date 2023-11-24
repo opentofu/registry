@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"slices"
 
-	"registry-stable/internal"
+	"github.com/opentofu/registry-stable/internal"
 
 	"golang.org/x/mod/semver"
 )

@@ -6,8 +6,9 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
-	"registry-stable/internal/github"
-	"registry-stable/internal/parallel"
+
+	"github.com/opentofu/registry-stable/internal/github"
+	"github.com/opentofu/registry-stable/internal/parallel"
 )
 
 /*

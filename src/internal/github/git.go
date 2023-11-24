@@ -42,7 +42,7 @@ func (c Client) GetTags(repositoryUrl string) ([]string, error) {
 	done := c.cliThrottle()
 	defer done()
 
-	client.log.Info("Getting tags for repository", slog.String("repository", repositoryUrl))
+	c.log.Info("Getting tags for repository", slog.String("repository", repositoryUrl))
 
 	var buf bytes.Buffer
 	var bufErr bytes.Buffer
@@ -59,6 +59,6 @@ func (c Client) GetTags(repositoryUrl string) ([]string, error) {
 		return nil, fmt.Errorf("could not parse tags for %s: %w", repositoryUrl, err)
 	}
 
-	client.log.Info("Found tags for repository", slog.String("repository", repositoryUrl), slog.Int("count", len(tags)))
+	c.log.Info("Found tags for repository", slog.String("repository", repositoryUrl), slog.Int("count", len(tags)))
 	return tags, nil
 }

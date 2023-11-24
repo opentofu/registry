@@ -5,9 +5,9 @@ import (
 	"log/slog"
 	"path/filepath"
 
-	"registry-stable/internal/files"
-	"registry-stable/internal/github"
-	"registry-stable/internal/provider"
+	"github.com/opentofu/registry-stable/internal/files"
+	"github.com/opentofu/registry-stable/internal/github"
+	"github.com/opentofu/registry-stable/internal/provider"
 )
 
 type ProviderGenerator struct {

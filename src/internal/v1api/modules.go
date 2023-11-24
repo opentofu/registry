@@ -5,9 +5,9 @@ import (
 	"log/slog"
 	"path/filepath"
 
-	"registry-stable/internal"
-	"registry-stable/internal/files"
-	"registry-stable/internal/module"
+	"github.com/opentofu/registry-stable/internal"
+	"github.com/opentofu/registry-stable/internal/files"
+	"github.com/opentofu/registry-stable/internal/module"
 )
 
 type ModuleGenerator struct {

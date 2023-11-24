@@ -6,9 +6,10 @@ import (
 	"log/slog"
 	"os"
 	"path/filepath"
-	"registry-stable/internal/files"
-	"registry-stable/internal/github"
 	"strings"
+
+	"github.com/opentofu/registry-stable/internal/files"
+	"github.com/opentofu/registry-stable/internal/github"
 )
 
 type MetadataFile struct {

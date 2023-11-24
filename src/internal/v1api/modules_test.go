@@ -1,8 +1,9 @@
 package v1api
 
 import (
-	"registry-stable/internal/module"
 	"testing"
+
+	"github.com/opentofu/registry-stable/internal/module"
 
 	"github.com/stretchr/testify/assert"
 )

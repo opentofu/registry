@@ -3,8 +3,9 @@ package module
 import (
 	"fmt"
 	"log/slog"
-	"registry-stable/internal"
 	"slices"
+
+	"github.com/opentofu/registry-stable/internal"
 
 	"golang.org/x/mod/semver"
 )

@@ -1,6 +1,6 @@
 package v1api
 
-import "registry-stable/internal/github"
+import "github.com/opentofu/registry-stable/internal/github"
 
 // ModuleVersionDownloadResponse is the item returned by the module version download API.
 type ModuleVersionDownloadResponse struct {
