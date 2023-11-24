@@ -27,9 +27,12 @@ var (
 	}
 )
 
+// VersionFromTag fetches information about an individual release based on the GitHub release name
 func (p Provider) VersionFromTag(release string) (*Version, error) {
 	version := internal.TrimTagPrefix(release)
 	artifactPrefix := fmt.Sprintf("%s_%s_", p.RepositoryName(), version)
+
+	logger := p.Logger.With(slog.String("release", release))
 
 	urlPrefix := fmt.Sprintf(p.RepositoryURL()+"/releases/download/%s/%s", release, artifactPrefix)
 
@@ -39,12 +42,12 @@ func (p Provider) VersionFromTag(release string) (*Version, error) {
 		SHASumsSignatureURL: urlPrefix + "SHA256SUMS.sig",
 	}
 
-	signatures, err := p.GetShaSums(v.SHASumsURL)
+	checksums, err := p.GetSHASums(v.SHASumsURL)
 	if err != nil {
 		return nil, err
 	}
-	if signatures == nil {
-		p.Logger.Info("Signature not found in release, skipping...", slog.String("release", version))
+	if checksums == nil {
+		logger.Warn("checksums not found in release, skipping...")
 		return nil, nil
 	}
 
@@ -57,7 +60,7 @@ func (p Provider) VersionFromTag(release string) (*Version, error) {
 				Filename:    fmt.Sprintf("%s%s_%s.zip", artifactPrefix, os, arch),
 				DownloadURL: fmt.Sprintf("%s%s_%s.zip", urlPrefix, os, arch),
 			}
-			target.SHASum, ok = signatures[target.Filename]
+			target.SHASum, ok = checksums[target.Filename]
 			if ok {
 				v.Targets = append(v.Targets, target)
 			}
@@ -65,7 +68,7 @@ func (p Provider) VersionFromTag(release string) (*Version, error) {
 	}
 
 	if len(v.Targets) == 0 {
-		p.Logger.Info("No artifacts in release, skipping...", slog.String("release", version))
+		logger.Info("No artifacts in release, skipping...", slog.String("release", version))
 		return nil, nil
 	}
 
@@ -74,7 +77,7 @@ func (p Provider) VersionFromTag(release string) (*Version, error) {
 		return nil, err
 	}
 	if v.Protocols == nil {
-		p.Logger.Warn("Could not find manifest file, using default protocols")
+		logger.Warn("Could not find manifest file, using default protocols")
 		v.Protocols = []string{"5.0"}
 	}
 

@@ -7,6 +7,7 @@ import (
 	"golang.org/x/mod/semver"
 )
 
+// UpdateMetadataFile updates the metadata file with the latest version information
 func (p Provider) UpdateMetadataFile() error {
 	p.Logger.Info("Beginning version bump process")
 
@@ -16,20 +17,21 @@ func (p Provider) UpdateMetadataFile() error {
 		return err
 	}
 	if !shouldUpdate {
+		p.Logger.Info("No version bump required")
 		return nil
 	}
 
-	meta, err := p.buildMetadataFile()
+	meta, err := p.buildMetadata()
 	if err != nil {
 		p.Logger.Error("Failed to version bump provider", slog.Any("err", err))
 		return err
 	}
-	p.Logger.Info("Completed provider version bump")
+	p.Logger.Info("Completed provider version bump successfully")
 	return p.WriteMetadata(*meta)
 }
 
 func (p Provider) shouldUpdateMetadataFile() (bool, error) {
-	lastSemverTag, err := p.getLastSemverTag()
+	semVerTag, err := p.getLastSemVerTag()
 	if err != nil {
 		return false, err
 	}
@@ -41,20 +43,21 @@ func (p Provider) shouldUpdateMetadataFile() (bool, error) {
 
 	for _, v := range fileContent.Versions {
 		versionWithPrefix := fmt.Sprintf("v%s", v.Version)
-		if versionWithPrefix == lastSemverTag {
-			p.Logger.Info("Found latest tag, nothing to update...", slog.String("tag", lastSemverTag))
+		if versionWithPrefix == semVerTag {
+			p.Logger.Info("Found latest tag, nothing to update...", slog.String("tag", semVerTag))
 			return false, nil
 		}
 	}
 
-	p.Logger.Info("Could not find latest tag, updating...", slog.String("tag", lastSemverTag))
+	p.Logger.Info("Could not find latest tag, updating...", slog.String("tag", semVerTag))
 	return true, nil
-
 }
 
-func (p Provider) getRssSemverTags() ([]string, error) {
-	releasesRssUrl := p.getRssUrl()
-	tags, err := p.Github.GetTagsFromRss(releasesRssUrl)
+// getSemVerTagsFromRSS returns a list of semver tags from the RSS feed
+// ignoring all non-valid semver tags
+func (p Provider) getSemVerTagsFromRSS() ([]string, error) {
+	releasesRssUrl := p.RSSURL()
+	tags, err := p.Github.GetTagsFromRSS(releasesRssUrl)
 	if err != nil {
 		return nil, err
 	}
@@ -69,8 +72,10 @@ func (p Provider) getRssSemverTags() ([]string, error) {
 	return semverTags, nil
 }
 
-func (p Provider) getLastSemverTag() (string, error) {
-	semverTags, err := p.getRssSemverTags()
+// getLastSemVerTag returns the most recently created semver tag from the RSS feed
+// by sorting the tags by descending creation date
+func (p Provider) getLastSemVerTag() (string, error) {
+	semverTags, err := p.getSemVerTagsFromRSS()
 	if err != nil {
 		return "", err
 	}

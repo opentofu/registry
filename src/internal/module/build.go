@@ -13,7 +13,7 @@ import (
 func (m Module) UpdateMetadataFile() error {
 	m.Logger.Info("Beginning version bump process for module", slog.String("module", m.Namespace+"/"+m.Name+"/"+m.TargetSystem))
 
-	meta, err := m.BuildMetadataFile()
+	meta, err := m.BuildMetadata()
 	if err != nil {
 		return err
 	}
@@ -21,7 +21,9 @@ func (m Module) UpdateMetadataFile() error {
 	return m.WriteMetadata(*meta)
 }
 
-func (m Module) BuildMetadataFile() (*MetadataFile, error) {
+// BuildMetadata builds the Metadata for the module by collating the tags from
+// the module repository.
+func (m Module) BuildMetadata() (*Metadata, error) {
 	tags, err := m.getSemverTags()
 	if err != nil {
 		return nil, err
@@ -32,7 +34,7 @@ func (m Module) BuildMetadataFile() (*MetadataFile, error) {
 		versions[i] = Version{Version: t}
 	}
 
-	return &MetadataFile{Versions: versions}, nil
+	return &Metadata{Versions: versions}, nil
 }
 
 func (m Module) getSemverTags() ([]string, error) {

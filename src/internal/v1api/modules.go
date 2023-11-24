@@ -10,13 +10,16 @@ import (
 	"github.com/opentofu/registry-stable/internal/module"
 )
 
+// ModuleGenerator is responsible for generating the response for the module version listing API endpoints.
 type ModuleGenerator struct {
 	module.Module
-	module.MetadataFile
+	module.Metadata
 	Destination string
 	log         *slog.Logger
 }
 
+// NewModuleGenerator creates a new ModuleGenerator which will generate the response for the module version listing API endpoints
+// and store the generated files in the given destination directory
 func NewModuleGenerator(m module.Module, destination string) (ModuleGenerator, error) {
 	metadata, err := m.ReadMetadata()
 	if err != nil {
@@ -24,32 +27,36 @@ func NewModuleGenerator(m module.Module, destination string) (ModuleGenerator, e
 	}
 
 	return ModuleGenerator{
-		Module:       m,
-		MetadataFile: metadata,
-		Destination:  destination,
-		log:          m.Logger,
+		Module:      m,
+		Metadata:    metadata,
+		Destination: destination,
+		log:         m.Logger,
 	}, nil
 }
 
+// VersionListingPath returns the path to the module version listing file
 func (m ModuleGenerator) VersionListingPath() string {
 	return filepath.Join(m.Destination, "v1", "modules", m.Module.Namespace, m.Module.Name, m.Module.TargetSystem, "versions")
 }
 
+// VersionDownloadPath returns the path to the module version download file for the given version
 func (m ModuleGenerator) VersionDownloadPath(v module.Version) string {
 	return filepath.Join(m.Destination, "v1", "modules", m.Module.Namespace, m.Module.Name, m.Module.TargetSystem, internal.TrimTagPrefix(v.Version), "download")
 }
 
+// VersionListing converts the module metadata into a ModuleVersionListingResponse, ready to be serialized to a file
 func (m ModuleGenerator) VersionListing() ModuleVersionListingResponse {
-	versions := make([]ModuleVersionResponseItem, len(m.MetadataFile.Versions))
-	for i, v := range m.MetadataFile.Versions {
+	versions := make([]ModuleVersionResponseItem, len(m.Metadata.Versions))
+	for i, v := range m.Metadata.Versions {
 		versions[i] = ModuleVersionResponseItem{Version: v.Version}
 	}
 	return ModuleVersionListingResponse{[]ModuleVersionListingResponseItem{{versions}}}
 }
 
+// VersionDownloads converts the module metadata into a map of module version download paths to ModuleVersionDownloadResponse,
 func (m ModuleGenerator) VersionDownloads() map[string]ModuleVersionDownloadResponse {
 	downloads := make(map[string]ModuleVersionDownloadResponse)
-	for _, v := range m.MetadataFile.Versions {
+	for _, v := range m.Metadata.Versions {
 		downloads[m.VersionDownloadPath(v)] = ModuleVersionDownloadResponse{Location: m.Module.VersionDownloadURL(v)}
 	}
 	return downloads

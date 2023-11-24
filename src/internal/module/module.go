@@ -11,23 +11,28 @@ import (
 	"github.com/opentofu/registry-stable/internal/github"
 )
 
+// Version represents a single version of a module.
 type Version struct {
 	Version string `json:"version"` // The version number of the provider. Correlates to a tag in the module repository
 }
 
-type MetadataFile struct {
+// Metadata represents all the metadata for a module. This includes the list of
+// versions available for the module.
+type Metadata struct {
 	Versions []Version `json:"versions"`
 }
 
+// Module represents a single module.
 type Module struct {
-	Namespace    string // The module namespace
-	Name         string // The module name
-	TargetSystem string // The module target system
-	Directory    string // The root directory that the module lives in
-	Logger       *slog.Logger
-	Github       github.Client
+	Namespace    string        // The module namespace
+	Name         string        // The module name
+	TargetSystem string        // The module target system
+	Directory    string        // The root directory that the module lives in
+	Logger       *slog.Logger  // A logger for the module
+	Github       github.Client // A GitHub client for the module
 }
 
+// RepositoryURL constructs the URL to the module repository on github.com.
 func (m Module) RepositoryURL() string {
 	return fmt.Sprintf("https://github.com/%s/terraform-%s-%s", m.Namespace, m.TargetSystem, m.Name)
 }
@@ -39,12 +44,14 @@ func (m Module) VersionDownloadURL(version Version) string {
 	return fmt.Sprintf("git::%s?ref=%s", m.RepositoryURL(), version.Version)
 }
 
+// MetadataPath returns the path to the metadata file for the module.
 func (m Module) MetadataPath() string {
 	return filepath.Join(m.Directory, m.Namespace[0:1], m.Namespace, m.Name, m.TargetSystem+".json")
 }
 
-func (m Module) ReadMetadata() (MetadataFile, error) {
-	var metadata MetadataFile
+// ReadMetadata reads the metadata file for the module.
+func (m Module) ReadMetadata() (Metadata, error) {
+	var metadata Metadata
 
 	path := m.MetadataPath()
 
@@ -61,7 +68,8 @@ func (m Module) ReadMetadata() (MetadataFile, error) {
 	return metadata, nil
 }
 
-func (m Module) WriteMetadata(meta MetadataFile) error {
+// WriteMetadata writes the metadata to a file.
+func (m Module) WriteMetadata(meta Metadata) error {
 	path := m.MetadataPath()
 	return files.SafeWriteObjectToJSONFile(path, meta)
 }

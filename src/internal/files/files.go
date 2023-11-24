@@ -7,9 +7,9 @@ import (
 	"path"
 )
 
-// SafeWriteObjectToJSONFile writes the given object to the given file path.
+// SafeWriteObjectToJSONFile writes the given data to the given file path.
 // It also ensures that the destination directory exists and that the file is written correctly.
-func SafeWriteObjectToJSONFile(filePath string, data interface{}) error {
+func SafeWriteObjectToJSONFile(filePath string, data any) error {
 	marshalledJSON, err := json.MarshalIndent(data, "", "  ")
 	if err != nil {
 		return fmt.Errorf("failed to marshal for %s: %w", filePath, err)
@@ -22,7 +22,7 @@ func SafeWriteObjectToJSONFile(filePath string, data interface{}) error {
 
 	err = os.WriteFile(filePath, marshalledJSON, 0600) //nolint: gomnd // 0600 is fine for what we need, no other users should consume this
 	if err != nil {
-		// Error already contains filePath
+		// Error already contains filePath so we don't need to add it again
 		return fmt.Errorf("failed to write to file: %w", err)
 	}
 

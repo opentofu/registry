@@ -38,27 +38,24 @@ func extractModuleDetailsFromPath(path string) *Module {
 	return &m
 }
 
-type ModuleList []Module
-
-func ListModules(moduleDataDir string, logger *slog.Logger, ghClient github.Client) (ModuleList, error) {
-	// walk the module directory recursively and find all json files
-	// for each json file, parse it into a Module struct
-	// return a slice of Module structs
-
+// ListModules walks the module metadata directory provided and returns a list of modules.
+func ListModules(moduleDataDir string, logger *slog.Logger, ghClient github.Client) (List, error) {
 	var results []Module
 	err := filepath.Walk(moduleDataDir, func(path string, info os.FileInfo, err error) error {
 		m := extractModuleDetailsFromPath(path)
-		if m != nil {
-			m.Directory = moduleDataDir
-			m.Logger = logger.With(
-				slog.String("type", "module"),
-				slog.Group("module", slog.String("namespace", m.Namespace), slog.String("name", m.Name), slog.String("targetsystem", m.TargetSystem)),
-			)
-			m.Github = ghClient.WithLogger(m.Logger)
-			results = append(results, *m)
-		} else {
+		if m == nil {
 			logger.Debug("Failed to extract module details from path, skipping", slog.String("path", path))
+			return nil
 		}
+
+		// enrich the module with additional information
+		m.Directory = moduleDataDir
+		m.Logger = logger.With(
+			slog.String("type", "module"),
+			slog.Group("module", slog.String("namespace", m.Namespace), slog.String("name", m.Name), slog.String("targetsystem", m.TargetSystem)),
+		)
+		m.Github = ghClient.WithLogger(m.Logger)
+		results = append(results, *m)
 		return nil
 	})
 
@@ -69,11 +66,16 @@ func ListModules(moduleDataDir string, logger *slog.Logger, ghClient github.Clie
 	return results, nil
 }
 
+// List is a list of modules
+type List []Module
+
+// Action is a function that takes a module and returns an error, to be used by List.Parallel
 type Action func(m Module) error
 
-func (modules ModuleList) Parallel(maxConcurrency int, action Action) error {
-	actions := make([]parallel.Action, len(modules))
-	for i, m := range modules {
+// Parallel runs the given action on each module in the list in parallel by wrapping parallel.ForEach
+func (l List) Parallel(maxConcurrency int, action Action) error {
+	actions := make([]parallel.Action, len(l))
+	for i, m := range l {
 		m := m
 		actions[i] = func() error {
 			err := action(m)
@@ -87,7 +89,7 @@ func (modules ModuleList) Parallel(maxConcurrency int, action Action) error {
 
 	errs := parallel.ForEach(actions, maxConcurrency)
 	if len(errs) != 0 {
-		return fmt.Errorf("Encountered %d errors processing %d modules", len(errs), len(modules))
+		return fmt.Errorf("encountered %d errors processing %d l", len(errs), len(l))
 	}
 	return nil
 }

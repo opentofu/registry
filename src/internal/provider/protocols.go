@@ -5,13 +5,18 @@ import (
 	"fmt"
 )
 
+// Manifest contains information about the provider manifest.
 type Manifest struct {
 	Metadata ManifestMetadata `json:"metadata"`
 }
+
+// ManifestMetadata contains information about the provider manifest metadata.
 type ManifestMetadata struct {
 	ProtocolVersions []string `json:"protocol_versions"`
 }
 
+// GetProtocols will attempt to download the manifest from the given URL and return the
+// list of protocols that the provider supports.
 func (p Provider) GetProtocols(manifestDownloadUrl string) ([]string, error) {
 	contents, err := p.Github.DownloadAssetContents(manifestDownloadUrl)
 	if err != nil {

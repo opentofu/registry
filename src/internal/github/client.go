@@ -11,14 +11,18 @@ import (
 	"github.com/shurcooL/githubv4"
 )
 
+const UserAgent = "OpenTofu Registry/1.0"
+
+// EnvAuthToken returns the GitHub token from the environment.
 func EnvAuthToken() (string, error) {
 	token := os.Getenv("GH_TOKEN")
 	if token == "" {
-		return "", fmt.Errorf("Expected $GH_TOKEN to be set, unable to authenticate with GitHub")
+		return "", fmt.Errorf("expected the GH_TOKEN environment variable to be set, unable to authenticate with GitHub")
 	}
 	return token, nil
 }
 
+// Client is a GitHub client that abstracts away the different GitHub APIs and handles rate limiting/throttling.
 type Client struct {
 	ctx        context.Context
 	log        *slog.Logger
@@ -31,6 +35,7 @@ type Client struct {
 	rssThrottle   Throttle
 }
 
+// NewClient creates a new GitHub client.
 func NewClient(ctx context.Context, log *slog.Logger, token string) Client {
 	httpClient := &http.Client{Transport: &transport{token: token, ctx: ctx}}
 	return Client{
@@ -52,6 +57,7 @@ func NewClient(ctx context.Context, log *slog.Logger, token string) Client {
 	*/
 }
 
+// WithLogger returns a new Client with the given logger.
 func (c Client) WithLogger(log *slog.Logger) Client {
 	return Client{
 		ctx:        c.ctx,
@@ -66,14 +72,17 @@ func (c Client) WithLogger(log *slog.Logger) Client {
 	}
 }
 
+// transport is a http.RoundTripper that makes sure all requests have the
+// correct User-Agent and Authorization headers set.
 type transport struct {
 	token string
 	ctx   context.Context
 }
 
+// RoundTrip is needed to implement the http.RoundTripper interface.
 func (t *transport) RoundTrip(req *http.Request) (*http.Response, error) {
 	req = req.WithContext(t.ctx)
-	req.Header.Set("User-Agent", "OpenTofu Registry/1.0")
+	req.Header.Set("User-Agent", UserAgent)
 	req.Header.Set("Authorization", "Bearer "+t.token)
 	return http.DefaultTransport.RoundTrip(req)
 }

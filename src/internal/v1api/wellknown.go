@@ -6,6 +6,8 @@ import (
 	"path/filepath"
 )
 
+// WellKnownFileContents is the contents of the well-known file. In the future we may want to make this configurable.
+// but for now hard coding it is fine.
 const WellKnownFileContents = `{
 	  "modules.v1": "/v1/modules/",
 	  "providers.v1": "/v1/providers/"
