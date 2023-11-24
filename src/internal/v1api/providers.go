@@ -87,13 +87,13 @@ func (p ProviderGenerator) Generate() error {
 	p.log.Info("Generating")
 
 	for location, details := range p.VersionDetails() {
-		err := files.SafeWriteObjectToJsonFile(location, details)
+		err := files.SafeWriteObjectToJSONFile(location, details)
 		if err != nil {
 			return fmt.Errorf("failed to write metadata version download file: %w", err)
 		}
 	}
 
-	err := files.SafeWriteObjectToJsonFile(p.VersionListingPath(), p.VersionListing())
+	err := files.SafeWriteObjectToJSONFile(p.VersionListingPath(), p.VersionListing())
 	if err != nil {
 		return err
 	}

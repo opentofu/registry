@@ -93,5 +93,5 @@ func (p Provider) ReadMetadata() (MetadataFile, error) {
 
 func (p Provider) WriteMetadata(meta MetadataFile) error {
 	path := p.MetadataPath()
-	return files.SafeWriteObjectToJsonFile(path, meta)
+	return files.SafeWriteObjectToJSONFile(path, meta)
 }

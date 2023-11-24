@@ -63,14 +63,14 @@ func (m ModuleGenerator) Generate() error {
 	m.log.Info("Generating")
 
 	for location, download := range m.VersionDownloads() {
-		err := files.SafeWriteObjectToJsonFile(location, download)
+		err := files.SafeWriteObjectToJSONFile(location, download)
 		if err != nil {
 			return fmt.Errorf("failed to write metadata version download file: %w", err)
 		}
 		m.log.Debug("Wrote metadata version download file", slog.String("path", location))
 	}
 
-	err := files.SafeWriteObjectToJsonFile(m.VersionListingPath(), m.VersionListing())
+	err := files.SafeWriteObjectToJSONFile(m.VersionListingPath(), m.VersionListing())
 	if err != nil {
 		return err
 	}
