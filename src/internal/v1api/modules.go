@@ -32,16 +32,16 @@ func NewModuleGenerator(m module.Module, destination string) (ModuleGenerator, e
 }
 
 func (m ModuleGenerator) VersionListingPath() string {
-	return filepath.Join(m.Destination, "v1", "modules", m.Namespace, m.Name, m.TargetSystem, "versions")
+	return filepath.Join(m.Destination, "v1", "modules", m.Module.Namespace, m.Module.Name, m.Module.TargetSystem, "versions")
 }
 
 func (m ModuleGenerator) VersionDownloadPath(v module.Version) string {
-	return filepath.Join(m.Destination, "v1", "modules", m.Namespace, m.Name, m.TargetSystem, internal.TrimTagPrefix(v.Version), "download")
+	return filepath.Join(m.Destination, "v1", "modules", m.Module.Namespace, m.Module.Name, m.Module.TargetSystem, internal.TrimTagPrefix(v.Version), "download")
 }
 
 func (m ModuleGenerator) VersionListing() ModuleVersionListingResponse {
-	versions := make([]ModuleVersionResponseItem, len(m.Versions))
-	for i, v := range m.Versions {
+	versions := make([]ModuleVersionResponseItem, len(m.MetadataFile.Versions))
+	for i, v := range m.MetadataFile.Versions {
 		versions[i] = ModuleVersionResponseItem{Version: v.Version}
 	}
 	return ModuleVersionListingResponse{[]ModuleVersionListingResponseItem{{versions}}}
@@ -49,8 +49,8 @@ func (m ModuleGenerator) VersionListing() ModuleVersionListingResponse {
 
 func (m ModuleGenerator) VersionDownloads() map[string]ModuleVersionDownloadResponse {
 	downloads := make(map[string]ModuleVersionDownloadResponse)
-	for _, v := range m.Versions {
-		downloads[m.VersionDownloadPath(v)] = ModuleVersionDownloadResponse{Location: m.VersionDownloadURL(v)}
+	for _, v := range m.MetadataFile.Versions {
+		downloads[m.VersionDownloadPath(v)] = ModuleVersionDownloadResponse{Location: m.Module.VersionDownloadURL(v)}
 	}
 	return downloads
 }
