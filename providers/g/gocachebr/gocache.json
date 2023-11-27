@@ -1,0 +1,958 @@
+{
+  "versions": [
+    {
+      "version": "0.4.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.4.0/terraform-provider-gocache_0.4.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.4.0/terraform-provider-gocache_0.4.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.4.0_darwin_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.4.0/terraform-provider-gocache_0.4.0_darwin_amd64.zip",
+          "shasum": "b8bf277cf55622a5e6ae77d0390906d85fcc2a20d7b3154400c0ad9fe61abde5"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-gocache_0.4.0_darwin_arm64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.4.0/terraform-provider-gocache_0.4.0_darwin_arm64.zip",
+          "shasum": "17060f030838bfee71300742576fd503cfe38cc5b550e185600f06059ede2c44"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.4.0_freebsd_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.4.0/terraform-provider-gocache_0.4.0_freebsd_386.zip",
+          "shasum": "7831563dcc2006c4bfdb08b65d94bf73220ab79c9f72e5b2b70b9af75efe1875"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.4.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.4.0/terraform-provider-gocache_0.4.0_freebsd_amd64.zip",
+          "shasum": "c64f4369531be6639be0af443f3c08e3b7729212de8dc846e6d6ad090eeb71b2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.4.0_freebsd_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.4.0/terraform-provider-gocache_0.4.0_freebsd_arm.zip",
+          "shasum": "fd5835bf10df968dc935e5e43f1e07ecb5f74c36cc20a8ab8a1e007e8e66d48e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-gocache_0.4.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.4.0/terraform-provider-gocache_0.4.0_freebsd_arm64.zip",
+          "shasum": "9897642833e3cb6b78482b8c255a1e22e572e747bdf54121ace0c67c9ac81f5a"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.4.0_linux_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.4.0/terraform-provider-gocache_0.4.0_linux_386.zip",
+          "shasum": "3d576ce33d9318e6cc3949103496426097f54a46dc5112b7a351f951ec687c2a"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.4.0_linux_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.4.0/terraform-provider-gocache_0.4.0_linux_amd64.zip",
+          "shasum": "119b38007b9e592d7756b1d0a3ab2acfd34020399c5152879f92d382a9afaca2"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.4.0_linux_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.4.0/terraform-provider-gocache_0.4.0_linux_arm.zip",
+          "shasum": "cdd27cff805e26d75bf338aba348d157cdf3c7cf1d3f1060b05b5fd184d77c46"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-gocache_0.4.0_linux_arm64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.4.0/terraform-provider-gocache_0.4.0_linux_arm64.zip",
+          "shasum": "62e13749ccc40a5fc37a3cf30476040faa05ca157aadac752e415fcfbcc0532c"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.4.0_windows_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.4.0/terraform-provider-gocache_0.4.0_windows_386.zip",
+          "shasum": "8d6c421d085bb73712581d2719eccf14f8da3b6e21d14891f4f1bf2ef25b9283"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.4.0_windows_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.4.0/terraform-provider-gocache_0.4.0_windows_amd64.zip",
+          "shasum": "52303cd45c92fac0bbee8dba63ee191b87439824f1a568aa7576bf97223d7692"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.4.0_windows_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.4.0/terraform-provider-gocache_0.4.0_windows_arm.zip",
+          "shasum": "1da22987cc23927f577b3867e65524937c7601c5b57f0fe1fbd039412676f362"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-gocache_0.4.0_windows_arm64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.4.0/terraform-provider-gocache_0.4.0_windows_arm64.zip",
+          "shasum": "6ae6744e0404dd65948b5423f47f6185213187bf5ed80262c2573ca51c0a2124"
+        }
+      ]
+    },
+    {
+      "version": "0.3.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.2/terraform-provider-gocache_0.3.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.2/terraform-provider-gocache_0.3.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.3.2_darwin_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.2/terraform-provider-gocache_0.3.2_darwin_amd64.zip",
+          "shasum": "0d56a9c9663dfc6473788d3337fc1f11709d74c26527181b408e6a1a7d8505f1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.3.2_freebsd_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.2/terraform-provider-gocache_0.3.2_freebsd_386.zip",
+          "shasum": "513cbb9acf5bde089555e30237df3553b39f447332d8a414898a78513f42f0fa"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.3.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.2/terraform-provider-gocache_0.3.2_freebsd_amd64.zip",
+          "shasum": "19ad9f5623f93dc0d3f926d17e4d640553f1a0a7be7a5638e60aeb75a8051e8c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.3.2_freebsd_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.2/terraform-provider-gocache_0.3.2_freebsd_arm.zip",
+          "shasum": "57098e0da372d14b315ab7f3fd300c7e6f35fd41a8fd789e0ca8ea483d8f216d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-gocache_0.3.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.2/terraform-provider-gocache_0.3.2_freebsd_arm64.zip",
+          "shasum": "1d38fbdea5181aa47bafd654a17d9ad310ba5432effc59c863c3d154c4f35e99"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.3.2_linux_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.2/terraform-provider-gocache_0.3.2_linux_386.zip",
+          "shasum": "a97d1b2abc0900a7cfd0f419aed2b5326cc7b068c71e74062c3eaeb0666c03a7"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.3.2_linux_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.2/terraform-provider-gocache_0.3.2_linux_amd64.zip",
+          "shasum": "7d758a7be50028de6fa68ae18f8bf111c076e39a50492c59c55c1422feb4078b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.3.2_linux_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.2/terraform-provider-gocache_0.3.2_linux_arm.zip",
+          "shasum": "e17d23501343153580e17832588c21c23fe40a8a512a10ab70b34db719a03b0b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-gocache_0.3.2_linux_arm64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.2/terraform-provider-gocache_0.3.2_linux_arm64.zip",
+          "shasum": "43a35399f0c7dcc485947fdfbf983f0ff16ce8d8d5eb2f60649337dfeeaf2f9d"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.3.2_windows_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.2/terraform-provider-gocache_0.3.2_windows_386.zip",
+          "shasum": "abb4ffdc93daac7085fd198007a7114a9e74970591ad9614545fa1bd05081011"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.3.2_windows_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.2/terraform-provider-gocache_0.3.2_windows_amd64.zip",
+          "shasum": "c4723de1e20576e8e2fe4d3fd6f7e38338d075f38c84c9eb8853120c676ffc02"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.3.2_windows_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.2/terraform-provider-gocache_0.3.2_windows_arm.zip",
+          "shasum": "3b0f70b89a43d3ffe6d69df92d66fb4b8f964ac1616e177b1eece3ef8e2bb753"
+        }
+      ]
+    },
+    {
+      "version": "0.3.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.1/terraform-provider-gocache_0.3.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.1/terraform-provider-gocache_0.3.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.3.1_darwin_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.1/terraform-provider-gocache_0.3.1_darwin_amd64.zip",
+          "shasum": "3d9d65bff4fa6d587595984defbf6d3b230e550f73febdbe2633a56501fde301"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.3.1_freebsd_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.1/terraform-provider-gocache_0.3.1_freebsd_386.zip",
+          "shasum": "bdbe7e54081554dca1f02e35e1861e5e82f96b8fdfa9c8797b4224b5baefde66"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.3.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.1/terraform-provider-gocache_0.3.1_freebsd_amd64.zip",
+          "shasum": "5e085b04ef439b3bdfdf03f819842b5db3d768a8049594b8ea77ce50352905ac"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.3.1_freebsd_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.1/terraform-provider-gocache_0.3.1_freebsd_arm.zip",
+          "shasum": "348e4871ba2a949e85b0f6078893dca10f09319330dd2c59164b4207a34bf1c7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-gocache_0.3.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.1/terraform-provider-gocache_0.3.1_freebsd_arm64.zip",
+          "shasum": "31a7df88f756da65b5df43655910f8baefe24db250cb767c01ac2d78a623dc45"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.3.1_linux_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.1/terraform-provider-gocache_0.3.1_linux_386.zip",
+          "shasum": "0d9b1f73c69878dabbb8dafc7addd9feef11f27d8c84ac30ee65794d37f02f70"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.3.1_linux_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.1/terraform-provider-gocache_0.3.1_linux_amd64.zip",
+          "shasum": "445a0b6c29b55cf93e66a8f5f61157d837d41cb33f997df395bffe2ffadc9cd1"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.3.1_linux_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.1/terraform-provider-gocache_0.3.1_linux_arm.zip",
+          "shasum": "543c18ffe7df61108f13e4be9e750cbe7fed266c1d648e0bf9a336f0446dc515"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-gocache_0.3.1_linux_arm64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.1/terraform-provider-gocache_0.3.1_linux_arm64.zip",
+          "shasum": "4c0ae4642a92ca02014368c07dfd1c1ee3e256012f4aec2ad029b18cc8c5fef5"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.3.1_windows_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.1/terraform-provider-gocache_0.3.1_windows_386.zip",
+          "shasum": "a002e699db7bface192a3b48629d2eccadb7478992f51b633df5d884d51649c5"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.3.1_windows_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.1/terraform-provider-gocache_0.3.1_windows_amd64.zip",
+          "shasum": "d35b093246447d73d5034445d96bc515dbe54ac0cf3437187ee112688773fc2f"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.3.1_windows_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.1/terraform-provider-gocache_0.3.1_windows_arm.zip",
+          "shasum": "f28109b35f5a3cc35da5337e24eb3c20f5b49f5aaf1a608566dacc0da7d9af84"
+        }
+      ]
+    },
+    {
+      "version": "0.3.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.0/terraform-provider-gocache_0.3.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.0/terraform-provider-gocache_0.3.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.3.0_darwin_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.0/terraform-provider-gocache_0.3.0_darwin_amd64.zip",
+          "shasum": "953c3d0bf801b5aab1ad55e1649cc0910d28cecfaeaf495ef0fdcbb43b6209e9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.3.0_freebsd_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.0/terraform-provider-gocache_0.3.0_freebsd_386.zip",
+          "shasum": "e6dd1a1e9d716f87910bbc25f0949b6fc0ca1390ded42dd4b500c7dd12bd0bab"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.3.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.0/terraform-provider-gocache_0.3.0_freebsd_amd64.zip",
+          "shasum": "71fec6742ace9098d481770c7d13195bbe4a187a7ed4b6e9454364b29826d782"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.3.0_freebsd_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.0/terraform-provider-gocache_0.3.0_freebsd_arm.zip",
+          "shasum": "9119baeae3f64e0591324663c8f5310f89168fdbe0fede460835838e73953916"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-gocache_0.3.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.0/terraform-provider-gocache_0.3.0_freebsd_arm64.zip",
+          "shasum": "7aa6ac5a54dadef3450d8729841c829d6c27aaddfaa0e93ed75fc1c639cba817"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.3.0_linux_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.0/terraform-provider-gocache_0.3.0_linux_386.zip",
+          "shasum": "999f956014fbafd404fc7df446f6c67d73962a0b1485e361763b2117ebb02f12"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.3.0_linux_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.0/terraform-provider-gocache_0.3.0_linux_amd64.zip",
+          "shasum": "5a2ec34d48f78167406946a7a86defbaebfee9749f5b93cb00fcbce3f498c6aa"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.3.0_linux_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.0/terraform-provider-gocache_0.3.0_linux_arm.zip",
+          "shasum": "b975a589cac8cc7fe5008bec6b077507953b4703bf7461cedd39aea0513bbadd"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-gocache_0.3.0_linux_arm64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.0/terraform-provider-gocache_0.3.0_linux_arm64.zip",
+          "shasum": "f124cd875a0872ede05fd89fc63335192e2ba5611923f99d1a6bc68d74cc0525"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.3.0_windows_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.0/terraform-provider-gocache_0.3.0_windows_386.zip",
+          "shasum": "e0ea4d80c9ac9655e3afe0feee19323947d332d92a80d905540e8276a385ef72"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.3.0_windows_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.0/terraform-provider-gocache_0.3.0_windows_amd64.zip",
+          "shasum": "549e722e80f6f36cf19f11ab64257a0f42a4b1e776f2c5f5ba364599e0668b54"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.3.0_windows_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.3.0/terraform-provider-gocache_0.3.0_windows_arm.zip",
+          "shasum": "b6f752558aaaab7f7fa1b56670aefbc4ac3b83f1f04b85a32f532f90e3d47cb8"
+        }
+      ]
+    },
+    {
+      "version": "0.2.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.2/terraform-provider-gocache_0.2.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.2/terraform-provider-gocache_0.2.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.2.2_darwin_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.2/terraform-provider-gocache_0.2.2_darwin_amd64.zip",
+          "shasum": "9975090c316d887e1c816d0aa08312707db1ed47cae8fd4724cd65bed42acd61"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.2.2_freebsd_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.2/terraform-provider-gocache_0.2.2_freebsd_386.zip",
+          "shasum": "51e26bef2a56972606f69a90fd72b9360ff71b331d66fa82af4670ea6b4aae22"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.2.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.2/terraform-provider-gocache_0.2.2_freebsd_amd64.zip",
+          "shasum": "fdf18c9dceb4719431d66b8fa3f0e22523319cfd67924173fc245ab1c2d03950"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.2.2_freebsd_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.2/terraform-provider-gocache_0.2.2_freebsd_arm.zip",
+          "shasum": "65a5f40abbb416de02c3d045fede595b0c625dfe3933199ffa29947b40a26369"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-gocache_0.2.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.2/terraform-provider-gocache_0.2.2_freebsd_arm64.zip",
+          "shasum": "dd3d687ad594a2503f2f2c80ccce2c7dcd44a2ae6db89d41d2875965aa40448d"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.2.2_linux_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.2/terraform-provider-gocache_0.2.2_linux_386.zip",
+          "shasum": "03410fd7d4e8777ab382eb424fb60afc2c4100ef24943d836a554495433a2913"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.2.2_linux_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.2/terraform-provider-gocache_0.2.2_linux_amd64.zip",
+          "shasum": "f266c1f5e7dafbc1c93de10f754ee5248e4eee9642ae095afdaacf0d0585bb82"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.2.2_linux_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.2/terraform-provider-gocache_0.2.2_linux_arm.zip",
+          "shasum": "efadae8ba10a11ef51b19300909fbcd131d96e590c2e4f4f893e898011561d11"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-gocache_0.2.2_linux_arm64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.2/terraform-provider-gocache_0.2.2_linux_arm64.zip",
+          "shasum": "574658bb7a102229508f9334152641311b81c3257f3a5bf41168c5fc38cc30e6"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.2.2_windows_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.2/terraform-provider-gocache_0.2.2_windows_386.zip",
+          "shasum": "fd6a2b1d73927fe5ba3716adf699990fcae88bab1d2b70c71b495e88c963b240"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.2.2_windows_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.2/terraform-provider-gocache_0.2.2_windows_amd64.zip",
+          "shasum": "b2cf1001e5cc0d852fe2eef6ea54a87cb1c31bc902df59fc33e83e3ea8795ab5"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.2.2_windows_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.2/terraform-provider-gocache_0.2.2_windows_arm.zip",
+          "shasum": "4371cc9f6ccd3d661f8ee4db6a564634f63ac39d6666d4df6e8cd80bf5990cd0"
+        }
+      ]
+    },
+    {
+      "version": "0.2.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.1/terraform-provider-gocache_0.2.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.1/terraform-provider-gocache_0.2.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.2.1_darwin_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.1/terraform-provider-gocache_0.2.1_darwin_amd64.zip",
+          "shasum": "fcf45bf258c3d7c07a3de6cebdea8c7e96756abcd4117a0b7ebb685c5c947976"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.2.1_freebsd_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.1/terraform-provider-gocache_0.2.1_freebsd_386.zip",
+          "shasum": "d12b55578280853511ca028d6bd76236c51c17fd9b7eda48bdbfb38ba0799951"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.2.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.1/terraform-provider-gocache_0.2.1_freebsd_amd64.zip",
+          "shasum": "03a1d176bc77e9cd3d2a1e4d38ef606bf56598c8ca185eff8eca5b59ffd05f12"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.2.1_freebsd_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.1/terraform-provider-gocache_0.2.1_freebsd_arm.zip",
+          "shasum": "251f2a227f600a6691c04e21c1389b5f056cab3348130611434ffa5cb3b5e97b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-gocache_0.2.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.1/terraform-provider-gocache_0.2.1_freebsd_arm64.zip",
+          "shasum": "28bb13ba253d4a7cf8aef9f941c9f320e3a8925af4907112723dd41203d4de81"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.2.1_linux_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.1/terraform-provider-gocache_0.2.1_linux_386.zip",
+          "shasum": "578022b6c4c37d0eb89ba9f64c52314744fbbd06d33aab8cadc1656a26b0dee8"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.2.1_linux_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.1/terraform-provider-gocache_0.2.1_linux_amd64.zip",
+          "shasum": "e39a266754affd66e4253bbba9c54596f8126b0d015eb9259c9abec63f006e86"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.2.1_linux_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.1/terraform-provider-gocache_0.2.1_linux_arm.zip",
+          "shasum": "81418421aee32f7c41e9d314b911ecaa251e03d11dd35a72779e7627f2a06e62"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-gocache_0.2.1_linux_arm64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.1/terraform-provider-gocache_0.2.1_linux_arm64.zip",
+          "shasum": "3093061ed218b1ed305e1826f8ca11170f088f16299cdd88d0531f7f6f473271"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.2.1_windows_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.1/terraform-provider-gocache_0.2.1_windows_386.zip",
+          "shasum": "84665860a10004393d35b2c8ebecd459f1f50c0c5ca10e6cf90801a618714e14"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.2.1_windows_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.1/terraform-provider-gocache_0.2.1_windows_amd64.zip",
+          "shasum": "fe1dc9aac3da60dc4c6a7f9fd9df625b107b592e98f41f59c188b7ec5524a48b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.2.1_windows_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.1/terraform-provider-gocache_0.2.1_windows_arm.zip",
+          "shasum": "11f64807e1700615b28b3d1521802172faec454d871365e1ad65c29d6683d22f"
+        }
+      ]
+    },
+    {
+      "version": "0.2.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.0/terraform-provider-gocache_0.2.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.0/terraform-provider-gocache_0.2.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.2.0_darwin_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.0/terraform-provider-gocache_0.2.0_darwin_amd64.zip",
+          "shasum": "70aea6d6a22fbb7b481f88d0e58c449cb8571f7e3c0ebe53354a014b29384e26"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.2.0_freebsd_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.0/terraform-provider-gocache_0.2.0_freebsd_386.zip",
+          "shasum": "3cc434a9b0cba0a37ab44cc40fc0324305331ecdc95c29d9e4c79fbb0c9b0c30"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.2.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.0/terraform-provider-gocache_0.2.0_freebsd_amd64.zip",
+          "shasum": "531adcd8cb83f5773c724323a86184a08dcb6420d16bf5f6dd259041329f387b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.2.0_freebsd_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.0/terraform-provider-gocache_0.2.0_freebsd_arm.zip",
+          "shasum": "54ba2003ed2e4483b236ad9d3634112cb08478baab0a88942ee7bd7e13828a18"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-gocache_0.2.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.0/terraform-provider-gocache_0.2.0_freebsd_arm64.zip",
+          "shasum": "daab2573bc04a4c0ab1049d717fd1f445237164ef09d5e24b6261de069e001d5"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.2.0_linux_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.0/terraform-provider-gocache_0.2.0_linux_386.zip",
+          "shasum": "47634e0e9056e13c66357adb8ccac71461527472c099cffed46f7a5ca15cd98e"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.2.0_linux_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.0/terraform-provider-gocache_0.2.0_linux_amd64.zip",
+          "shasum": "d72676aa7c76251ce04ba4acec19d503c4441f0b8a3607c2151e3151a494863f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.2.0_linux_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.0/terraform-provider-gocache_0.2.0_linux_arm.zip",
+          "shasum": "0e3571c07b88cbc03608a8c71ac070624cf0b5fee8a3358731624dc4746a7f1e"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-gocache_0.2.0_linux_arm64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.0/terraform-provider-gocache_0.2.0_linux_arm64.zip",
+          "shasum": "48ac4a0e76c307a2e6d0e1e46a56fce73e7d5822e0d27a51c18d17045a08aba8"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.2.0_windows_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.0/terraform-provider-gocache_0.2.0_windows_386.zip",
+          "shasum": "2804ef61c59fe360dab6111f3c5544820027b9bbb0684434501e4fbf8cd9a5fe"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.2.0_windows_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.0/terraform-provider-gocache_0.2.0_windows_amd64.zip",
+          "shasum": "11eb9cd02ee18d9bcb3312ad6ca4e7475a550f7dffe1612188f64cbfe975cd56"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.2.0_windows_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.2.0/terraform-provider-gocache_0.2.0_windows_arm.zip",
+          "shasum": "bcea268ac2d7003907f0a5a6dcfc1479ef1db1d44bc968d3765841c131fcf1a3"
+        }
+      ]
+    },
+    {
+      "version": "0.1.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.2/terraform-provider-gocache_0.1.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.2/terraform-provider-gocache_0.1.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.1.2_darwin_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.2/terraform-provider-gocache_0.1.2_darwin_amd64.zip",
+          "shasum": "4c30e150bc05698c2f7d5d1f1dae0095898144107eb6d5fd4358ef0d5753b959"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.1.2_freebsd_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.2/terraform-provider-gocache_0.1.2_freebsd_386.zip",
+          "shasum": "82b5f079d0498d6f4ceafdec7a7f8358e0dd35584465a063510c756db4f1be48"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.1.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.2/terraform-provider-gocache_0.1.2_freebsd_amd64.zip",
+          "shasum": "aa65b926cfaf800226cee4d25f0debb74c2ad33993806dbfebfb2a5926a69875"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.1.2_freebsd_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.2/terraform-provider-gocache_0.1.2_freebsd_arm.zip",
+          "shasum": "fab48c1ed2654e3a2a0a78f0c0937e0beb949155755fa715ec911b50fe8f28ef"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-gocache_0.1.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.2/terraform-provider-gocache_0.1.2_freebsd_arm64.zip",
+          "shasum": "a9cfcf017b3ff00e9e914498f92d173cd59036a59f204708605d7cb185b2d3e4"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.1.2_linux_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.2/terraform-provider-gocache_0.1.2_linux_386.zip",
+          "shasum": "64e26d8354dd4c5be34b0563c8d9619de65e67d3a9b8d36e370c51b6fdb957e4"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.1.2_linux_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.2/terraform-provider-gocache_0.1.2_linux_amd64.zip",
+          "shasum": "dc5be272c23aaf836e06bfa6861d50a670714790a9685b3265b29f86cb41a708"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.1.2_linux_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.2/terraform-provider-gocache_0.1.2_linux_arm.zip",
+          "shasum": "cae08b83de88cd7517508a7f4b4153adb94572c7b1b699988b9cee76db109c1a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-gocache_0.1.2_linux_arm64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.2/terraform-provider-gocache_0.1.2_linux_arm64.zip",
+          "shasum": "2f0990f2ea3d5a23ec46c847c90d5b073220f298c3f09690468c8543df711aac"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.1.2_windows_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.2/terraform-provider-gocache_0.1.2_windows_386.zip",
+          "shasum": "f27f65d449eee644f17c8f9eedaf2d49ba504b55ad1725b3c4f2f64db6b6acca"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.1.2_windows_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.2/terraform-provider-gocache_0.1.2_windows_amd64.zip",
+          "shasum": "9418a2de38eca827663d6dac8baa9c9f94ea4476391c4578779111e60dea0445"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.1.2_windows_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.2/terraform-provider-gocache_0.1.2_windows_arm.zip",
+          "shasum": "f9be7f4bc9f3a475085d5ae796464584bdb2f615b6c9eab75023a5a66bc0c23b"
+        }
+      ]
+    },
+    {
+      "version": "0.1.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.1/terraform-provider-gocache_0.1.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.1/terraform-provider-gocache_0.1.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.1.1_darwin_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.1/terraform-provider-gocache_0.1.1_darwin_amd64.zip",
+          "shasum": "8c57334c82d41f9628e85b2ff1d798b3a83ee0308b7c06b8450776223a381c50"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.1.1_freebsd_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.1/terraform-provider-gocache_0.1.1_freebsd_386.zip",
+          "shasum": "616d38f49df0585eb56f464250e34f6faf8581b0e507ee7fada9f2a30674a7a0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.1.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.1/terraform-provider-gocache_0.1.1_freebsd_amd64.zip",
+          "shasum": "ca7270daabb32ffc2bacb7ebbaa5d5aa8428f3e54dfdbabd097fb39b97debea5"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.1.1_freebsd_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.1/terraform-provider-gocache_0.1.1_freebsd_arm.zip",
+          "shasum": "9e595e20f6bd3c6fe99c03a0e9d1832c2dc55b9422bf5949ed8095cf8818a982"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-gocache_0.1.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.1/terraform-provider-gocache_0.1.1_freebsd_arm64.zip",
+          "shasum": "d4d8b3b67c600fe5931013834625f72cd41f1c92a02e78d895b5e4fb6a8eb7af"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.1.1_linux_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.1/terraform-provider-gocache_0.1.1_linux_386.zip",
+          "shasum": "5be7187e125e28cfd29ccc6dd63e5008f490328a96e210a5906e7beeb1b690d3"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.1.1_linux_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.1/terraform-provider-gocache_0.1.1_linux_amd64.zip",
+          "shasum": "ae3dc7596a051f48c108cfe3644a0db9f8c83c05e14a112c6c7ff9cba76b37c6"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.1.1_linux_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.1/terraform-provider-gocache_0.1.1_linux_arm.zip",
+          "shasum": "53820a6e110488dbc71e18cf2b08144858f74bd3f5affb2fea9a5c69d55034f8"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-gocache_0.1.1_linux_arm64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.1/terraform-provider-gocache_0.1.1_linux_arm64.zip",
+          "shasum": "e429b5b663df18e7b20656e63fc9760650db3e5c12ffa3c0f66340927268aad8"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.1.1_windows_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.1/terraform-provider-gocache_0.1.1_windows_386.zip",
+          "shasum": "0f192424a4e3cad1630a564317ccccfaf67fd5354a735254b18ce51b0292f39c"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.1.1_windows_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.1/terraform-provider-gocache_0.1.1_windows_amd64.zip",
+          "shasum": "f0cb91f19629e8cd3c5069b374a91dc5d0e1345db54db7fbaa293f4dd32881e9"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.1.1_windows_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.1/terraform-provider-gocache_0.1.1_windows_arm.zip",
+          "shasum": "ae635ca27bf0db3c0795124fd3f8255f3168bf88afc453c07715dabc51a13b82"
+        }
+      ]
+    },
+    {
+      "version": "0.1.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.0/terraform-provider-gocache_0.1.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.0/terraform-provider-gocache_0.1.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.1.0_darwin_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.0/terraform-provider-gocache_0.1.0_darwin_amd64.zip",
+          "shasum": "8867e21c814f15467e6a38abad9a36e95c066ac81db1650b9adc8194b88e2e20"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.1.0_freebsd_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.0/terraform-provider-gocache_0.1.0_freebsd_386.zip",
+          "shasum": "c8b3748faf5449b477ce82f4f6a9df05f7b1ddde5c8ef6babe2a65e72fc9fab8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.1.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.0/terraform-provider-gocache_0.1.0_freebsd_amd64.zip",
+          "shasum": "e4e77cfb48e16c665dce79c5e5aa83ddeefb9fdbd55f84fc5637cba65f81d7d8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.1.0_freebsd_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.0/terraform-provider-gocache_0.1.0_freebsd_arm.zip",
+          "shasum": "90364ead264125e90be89c5f0b18d385094604367034d4063c158fb2fcc50bd6"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-gocache_0.1.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.0/terraform-provider-gocache_0.1.0_freebsd_arm64.zip",
+          "shasum": "719472e8529a27cadf42f7d2e3288dd6fa010836ee63180ea2ed1e9a31588921"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.1.0_linux_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.0/terraform-provider-gocache_0.1.0_linux_386.zip",
+          "shasum": "8b43b8d547fe4e70552524c715245e8c17a525c9a6d22b8c8e883e48adc5bab9"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.1.0_linux_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.0/terraform-provider-gocache_0.1.0_linux_amd64.zip",
+          "shasum": "bf3b698c303ea276b684d48b10ed4a845ab9ea2737a0cc80de33155730a243c3"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.1.0_linux_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.0/terraform-provider-gocache_0.1.0_linux_arm.zip",
+          "shasum": "700df484c0061f3e5e63270d8fa26e4b0b8bbd0c23b4f4aa82f50282da403c1c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-gocache_0.1.0_linux_arm64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.0/terraform-provider-gocache_0.1.0_linux_arm64.zip",
+          "shasum": "9d186de3a49025d802c399ca018eed79a9167389af767d319b0f8f7a55c1e9c7"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-gocache_0.1.0_windows_386.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.0/terraform-provider-gocache_0.1.0_windows_386.zip",
+          "shasum": "0182eae9c6ef6d29501cc3aba51a9391f1a92c2ae750e84e08f37e85e0c69b21"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-gocache_0.1.0_windows_amd64.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.0/terraform-provider-gocache_0.1.0_windows_amd64.zip",
+          "shasum": "5720be961a79142159ea74844fc3bb0ba2f36e2ab34097f1edbd32d1d565832a"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-gocache_0.1.0_windows_arm.zip",
+          "download_url": "https://github.com/gocachebr/terraform-provider-gocache/releases/download/v0.1.0/terraform-provider-gocache_0.1.0_windows_arm.zip",
+          "shasum": "0f20895cac1abc972c7cea9cc4395a8a924f87b8209bd52e62b46a24bfa5415c"
+        }
+      ]
+    }
+  ]
+}

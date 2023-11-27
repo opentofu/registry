@@ -1,0 +1,913 @@
+{
+  "versions": [
+    {
+      "version": "0.1.55",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.55/terraform-provider-zerotier_0.1.55_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.55/terraform-provider-zerotier_0.1.55_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.55_darwin_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.55/terraform-provider-zerotier_0.1.55_darwin_amd64.zip",
+          "shasum": "b9ee1c7027f5f356f1f14a221b411040c3508b6bdf12b2f607d0c41d0efa9bf9"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.55_darwin_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.55/terraform-provider-zerotier_0.1.55_darwin_arm64.zip",
+          "shasum": "16403dab5c5e3a00a652227c972c9ac515d7121b55d7aca756ad1ea91692b32a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.55_freebsd_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.55/terraform-provider-zerotier_0.1.55_freebsd_386.zip",
+          "shasum": "78715a35425c2981f88cebea348f8e6134ca70fd458aa51b42cf71fa479a55aa"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.55_freebsd_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.55/terraform-provider-zerotier_0.1.55_freebsd_amd64.zip",
+          "shasum": "add7e3ca265e8a95a1ac95436c770890ab085154f7d7d08892ef960cd2b97a10"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.55_freebsd_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.55/terraform-provider-zerotier_0.1.55_freebsd_arm.zip",
+          "shasum": "700f4f93778896c3160aa37d1237a3c998b2e8c324454e8966f526d9e0d27e01"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.55_freebsd_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.55/terraform-provider-zerotier_0.1.55_freebsd_arm64.zip",
+          "shasum": "35129912908e5bccee197dade046a1e1c3b19b5ddee1582551619a87414f5108"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.55_linux_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.55/terraform-provider-zerotier_0.1.55_linux_386.zip",
+          "shasum": "925cd51b000258e94a28a2959e83ddbe99dc606a26581cb27f78312c06491c53"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.55_linux_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.55/terraform-provider-zerotier_0.1.55_linux_amd64.zip",
+          "shasum": "8997a120b992acdce46450133cd66f499e431db7d364652316d58f3a9bb2214d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.55_linux_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.55/terraform-provider-zerotier_0.1.55_linux_arm.zip",
+          "shasum": "5ab22c3ff6b586e4009dcde8452a20440dd41ce123f6922e1e29ba887b274dcf"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.55_linux_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.55/terraform-provider-zerotier_0.1.55_linux_arm64.zip",
+          "shasum": "b27f15d44ea36f15610fdf8a59408b1e8fdccff7258d5a34fa9c3fdfdc5e8ac3"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.55_windows_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.55/terraform-provider-zerotier_0.1.55_windows_386.zip",
+          "shasum": "035f66146598c605728f11eb76894a2a09e944c1b401d817a4280d040d57d51e"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.55_windows_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.55/terraform-provider-zerotier_0.1.55_windows_amd64.zip",
+          "shasum": "0f973cce707327479ae1e55670917cd519303d2cc3b0cda61e89355654a7e33b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.55_windows_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.55/terraform-provider-zerotier_0.1.55_windows_arm.zip",
+          "shasum": "bda44747c2853f7f1d86af86dd3100e1bc0b5c1cfffecc6d56372454bca017d1"
+        }
+      ]
+    },
+    {
+      "version": "0.1.54",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.54/terraform-provider-zerotier_0.1.54_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.54/terraform-provider-zerotier_0.1.54_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.54_darwin_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.54/terraform-provider-zerotier_0.1.54_darwin_amd64.zip",
+          "shasum": "e9704f28714da5240a6bf81dd6458f81a7b5a0bf71ca132137ad1becbf30f3cb"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.54_darwin_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.54/terraform-provider-zerotier_0.1.54_darwin_arm64.zip",
+          "shasum": "13810dacda28fab16c320954e664659f1f83fda7baec81c9135b047ec1fe8de8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.54_freebsd_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.54/terraform-provider-zerotier_0.1.54_freebsd_386.zip",
+          "shasum": "96da24b33d0215afb8b85a8ada0c17bf0e723b13935126fa4d49a1813881a63c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.54_freebsd_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.54/terraform-provider-zerotier_0.1.54_freebsd_amd64.zip",
+          "shasum": "942b558f65566eb6a23c34f22e91a455c7ab7bad540e1deca7ee670403dd2fe1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.54_freebsd_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.54/terraform-provider-zerotier_0.1.54_freebsd_arm.zip",
+          "shasum": "811249a964c9a64cb8c63ef939e31799a1b0ebc1ff30b15d25a3cce5a26e1661"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.54_freebsd_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.54/terraform-provider-zerotier_0.1.54_freebsd_arm64.zip",
+          "shasum": "0e98a1c4ed1749717b1e08c750f6efef0b85953c68935db60e05590137854c36"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.54_linux_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.54/terraform-provider-zerotier_0.1.54_linux_386.zip",
+          "shasum": "05e1951f1aa55d9ea23be64d3630a380ed1e591cf214b4f7d5ca6610ec6e17bf"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.54_linux_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.54/terraform-provider-zerotier_0.1.54_linux_amd64.zip",
+          "shasum": "241e97b5dc2eb3b9a1ffe61daa1f119bdcc4bcfb56915eb6ab44c3e6fbb99227"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.54_linux_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.54/terraform-provider-zerotier_0.1.54_linux_arm.zip",
+          "shasum": "c90cc6e77e5309e87c47562705c4a79b5744e851f1bda613f173465dbecbd033"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.54_linux_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.54/terraform-provider-zerotier_0.1.54_linux_arm64.zip",
+          "shasum": "fc313b070f27c29bccbe80f39714b465802f6f5b2c5b17bc8c176b431cbb82c3"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.54_windows_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.54/terraform-provider-zerotier_0.1.54_windows_386.zip",
+          "shasum": "d79049cdfdeda6574be10821a1d424bda99d6fdc0c1073187bcf0a797b24781e"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.54_windows_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.54/terraform-provider-zerotier_0.1.54_windows_amd64.zip",
+          "shasum": "fa20bd0fbd188b02770c9aa619ea5c950b344ad0c37f7f55c5c3672fa77ed489"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.54_windows_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.54/terraform-provider-zerotier_0.1.54_windows_arm.zip",
+          "shasum": "778eb0c1dac1b9c7ca1b4f537131d029e82a508ec0e6e6ff0ed679cafa50247f"
+        }
+      ]
+    },
+    {
+      "version": "0.1.53",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.53/terraform-provider-zerotier_0.1.53_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.53/terraform-provider-zerotier_0.1.53_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.53_darwin_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.53/terraform-provider-zerotier_0.1.53_darwin_amd64.zip",
+          "shasum": "ca4a5165e1887a11feb9145f7e96bf0417a954d969441c69f41e8365e2de309a"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.53_darwin_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.53/terraform-provider-zerotier_0.1.53_darwin_arm64.zip",
+          "shasum": "f10474a5ad45d09756ecbe04381ab6bc4f0b534884c8e6a7d3fc0888a9c038b7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.53_freebsd_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.53/terraform-provider-zerotier_0.1.53_freebsd_386.zip",
+          "shasum": "9e70322b7921b1e6869ea0f66552003e923869d55c16849b9788732ccc1b9a2d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.53_freebsd_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.53/terraform-provider-zerotier_0.1.53_freebsd_amd64.zip",
+          "shasum": "0b4f7fb07be5cc3de6d92841a26950550657febf425a84e57d5504e05ba3b64b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.53_freebsd_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.53/terraform-provider-zerotier_0.1.53_freebsd_arm.zip",
+          "shasum": "8a3fe0b90487a86ff56c885768d66b31e6986d9a91fd2a32c37f79ad5ecccfce"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.53_freebsd_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.53/terraform-provider-zerotier_0.1.53_freebsd_arm64.zip",
+          "shasum": "47701872f2b3a2a85442a87d7de147327a006a989b563aaabb655f41d6e1563f"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.53_linux_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.53/terraform-provider-zerotier_0.1.53_linux_386.zip",
+          "shasum": "f12d60ef15c778d2350ababeceb0870f890cfd66c85e94d891d37c505d77a86f"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.53_linux_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.53/terraform-provider-zerotier_0.1.53_linux_amd64.zip",
+          "shasum": "1e91a145e848fa8a3f7100032f6e0fa668ae04f34d02468f4f227764a395970e"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.53_linux_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.53/terraform-provider-zerotier_0.1.53_linux_arm.zip",
+          "shasum": "fc1e7ffa4ebf0906afa3a41d42893e503137d4c39e41f900f8b0a4d0c8c66bd5"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.53_linux_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.53/terraform-provider-zerotier_0.1.53_linux_arm64.zip",
+          "shasum": "5f10fcacc781b162d627dcc55aca9b202f9b0aa57e903396868ed94445b24cfd"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.53_windows_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.53/terraform-provider-zerotier_0.1.53_windows_386.zip",
+          "shasum": "7120f520fffb83e63b11e5a4d6acaa325690354c2851e3ff9af24508ae20e0e5"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.53_windows_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.53/terraform-provider-zerotier_0.1.53_windows_amd64.zip",
+          "shasum": "4bccbfbbeb51ef479c971d2a8266312a29cde7ad144fa29466f4f7032da47c35"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.53_windows_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.53/terraform-provider-zerotier_0.1.53_windows_arm.zip",
+          "shasum": "f497612250774a9783361daa5a9d31d57b28512c5e386eef64a777fde84f02a4"
+        }
+      ]
+    },
+    {
+      "version": "0.1.52",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.52/terraform-provider-zerotier_0.1.52_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.52/terraform-provider-zerotier_0.1.52_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.52_darwin_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.52/terraform-provider-zerotier_0.1.52_darwin_amd64.zip",
+          "shasum": "baa48f9b227a0c1eda33ea57cd2df759c45a9658f780133a90b69def291da9cb"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.52_darwin_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.52/terraform-provider-zerotier_0.1.52_darwin_arm64.zip",
+          "shasum": "81ca7c00bdd78f0fe3c19e3e8d5253d08b599f682dbe5b8afe84f467d6f2bc73"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.52_freebsd_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.52/terraform-provider-zerotier_0.1.52_freebsd_386.zip",
+          "shasum": "78507b8abbcab6943716666dbae9e744b2578cca226e31f6c6d33471e836c536"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.52_freebsd_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.52/terraform-provider-zerotier_0.1.52_freebsd_amd64.zip",
+          "shasum": "ad60566e0ddbf27e422881f1d1e97e505fede0eb8a23bf2c594579583642a0ac"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.52_freebsd_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.52/terraform-provider-zerotier_0.1.52_freebsd_arm.zip",
+          "shasum": "2455bd1ec8579e64c912dd67ea2b49ccf3564d95495a712d36c850c8813eb250"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.52_freebsd_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.52/terraform-provider-zerotier_0.1.52_freebsd_arm64.zip",
+          "shasum": "f0c074c8efa4c02acf8f4a5d3f5fdc86d2ee29abaa18a0888be8a253c43d55d2"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.52_linux_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.52/terraform-provider-zerotier_0.1.52_linux_386.zip",
+          "shasum": "4fc732d51a2e9c8fcb9ac1370f928083b1a71c2d05dbbcb77dd2a242228be186"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.52_linux_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.52/terraform-provider-zerotier_0.1.52_linux_amd64.zip",
+          "shasum": "1a887095440f2e82146f52a372d98051bbf7e2ab848f6fab266359bb4882f108"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.52_linux_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.52/terraform-provider-zerotier_0.1.52_linux_arm.zip",
+          "shasum": "fb3c40e7017f1b2197ce27cf42dfd1918918434ad6ab7ccc4b8c02b58013197e"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.52_linux_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.52/terraform-provider-zerotier_0.1.52_linux_arm64.zip",
+          "shasum": "92676ba5390cbfe04d68e7035e71353aae9123896635cc434e0594002c685d84"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.52_windows_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.52/terraform-provider-zerotier_0.1.52_windows_386.zip",
+          "shasum": "a1cb98a5765cf00498fa616e5bc6e19633bc51e23477ef8af287c6b43bc24088"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.52_windows_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.52/terraform-provider-zerotier_0.1.52_windows_amd64.zip",
+          "shasum": "1d276f57f81ca11c1e553b3d89aeecbe6e805f74b38ab82ab1721b77c650422c"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.52_windows_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.52/terraform-provider-zerotier_0.1.52_windows_arm.zip",
+          "shasum": "c00a44262abf2c2be52cc173878d9e6bda67b5e92e342e84a0e09fa1f57b9624"
+        }
+      ]
+    },
+    {
+      "version": "0.1.51",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.51/terraform-provider-zerotier_0.1.51_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.51/terraform-provider-zerotier_0.1.51_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.51_darwin_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.51/terraform-provider-zerotier_0.1.51_darwin_amd64.zip",
+          "shasum": "67bb003e331973fb00fe687241fdb896ae1155b7bfacdb7ba0f6b008a1863291"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.51_darwin_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.51/terraform-provider-zerotier_0.1.51_darwin_arm64.zip",
+          "shasum": "ff3cc313e03367788dde29dd92a0c899803fa56ec999c1600551c54da046fcf1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.51_freebsd_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.51/terraform-provider-zerotier_0.1.51_freebsd_386.zip",
+          "shasum": "45e432c226198b294751c2c58f804443f148381c81b10bf88004b55fb27fd3da"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.51_freebsd_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.51/terraform-provider-zerotier_0.1.51_freebsd_amd64.zip",
+          "shasum": "3fa02e692a180403bc9664df4f586fef078bdfa32df4f554de963e1e8925fd04"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.51_freebsd_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.51/terraform-provider-zerotier_0.1.51_freebsd_arm.zip",
+          "shasum": "6c18e08ef95daefb78d89fc41d9b3d692fd018e14cff85dffddc9d0c73cd8ba6"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.51_freebsd_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.51/terraform-provider-zerotier_0.1.51_freebsd_arm64.zip",
+          "shasum": "700f3d892a7f6200c4ccafb22b58c088c9bde0f8d7180f1d9e693a73f495c92b"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.51_linux_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.51/terraform-provider-zerotier_0.1.51_linux_386.zip",
+          "shasum": "a932775abb6944fb38d3429ab84fc0133c59bf8bba4da51645e61d9a1d729807"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.51_linux_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.51/terraform-provider-zerotier_0.1.51_linux_amd64.zip",
+          "shasum": "48d38001eeffa53a2e530b1d083938708950863a10a91de67cc49f55a8296c13"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.51_linux_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.51/terraform-provider-zerotier_0.1.51_linux_arm.zip",
+          "shasum": "2d63989da61c784eff03b9a3b7dd7f19ac2025a3515b5f7c042b01268e0d2109"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.51_linux_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.51/terraform-provider-zerotier_0.1.51_linux_arm64.zip",
+          "shasum": "db5e8ec574e5ca203ce334d44423625d7b560ecbf6f9e1b9ac91b4f30fb4afee"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.51_windows_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.51/terraform-provider-zerotier_0.1.51_windows_386.zip",
+          "shasum": "aa2d7167668d42f14b244be42c3308124066fb64560ce4dd77b09b555658cbd3"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.51_windows_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.51/terraform-provider-zerotier_0.1.51_windows_amd64.zip",
+          "shasum": "dee901d31588f82bea1f14b2e74d43ee2acff330ab314e0e6331d95e6b158456"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.51_windows_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.51/terraform-provider-zerotier_0.1.51_windows_arm.zip",
+          "shasum": "effaa9435b7e5e5a622ed39c3582ad8649b467519de9457e53e49513977f2a31"
+        }
+      ]
+    },
+    {
+      "version": "0.1.50",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.50/terraform-provider-zerotier_0.1.50_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.50/terraform-provider-zerotier_0.1.50_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.50_darwin_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.50/terraform-provider-zerotier_0.1.50_darwin_amd64.zip",
+          "shasum": "6ff4e59fdd1cde0ac61dd42bd27a932810ac5d5184a1bd906f0161a63a378d2c"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.50_darwin_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.50/terraform-provider-zerotier_0.1.50_darwin_arm64.zip",
+          "shasum": "6e59c780724902c998260fdf4f6d0588b80adb5eb83a645179c322bea94dadda"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.50_freebsd_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.50/terraform-provider-zerotier_0.1.50_freebsd_386.zip",
+          "shasum": "4f5780d1bfc3475cf42692cf9676cfe98db9cced4c475e1df123fdeaeb7182ef"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.50_freebsd_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.50/terraform-provider-zerotier_0.1.50_freebsd_amd64.zip",
+          "shasum": "cdc9600035956070849c0a0bc7140d642ad8535036a424c02afcaf3688c30386"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.50_freebsd_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.50/terraform-provider-zerotier_0.1.50_freebsd_arm.zip",
+          "shasum": "e3c28770439d91775474022823b374485911509cf719f2bc416cf54dfa3ddfe0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.50_freebsd_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.50/terraform-provider-zerotier_0.1.50_freebsd_arm64.zip",
+          "shasum": "6dc58627403381bc58e08e6a3b1883f2d3de702e3cd2b1fbc78cbc7980742a12"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.50_linux_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.50/terraform-provider-zerotier_0.1.50_linux_386.zip",
+          "shasum": "74e7f5cb286c14bcd6044ff661edf5f3b1ad5ad7b4bc47449f7c107a78c1943f"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.50_linux_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.50/terraform-provider-zerotier_0.1.50_linux_amd64.zip",
+          "shasum": "20642f6e755a3031dd2507a4a79bae7819925ca5c984072ee425cd75b8061792"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.50_linux_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.50/terraform-provider-zerotier_0.1.50_linux_arm.zip",
+          "shasum": "a11fac1375c16a29d847e65beca0170e9d12c33ca1bb9a0344ed6b57205b265a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.50_linux_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.50/terraform-provider-zerotier_0.1.50_linux_arm64.zip",
+          "shasum": "295ad54ec6d8148f7c0b72faa3f0ef4ed5ff4574f2ea7453d61d18d4a56756e9"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.50_windows_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.50/terraform-provider-zerotier_0.1.50_windows_386.zip",
+          "shasum": "94b151b12fc58ceed09438769e0280d9e247ac939cbc2734c450d6f34e2a84e7"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.50_windows_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.50/terraform-provider-zerotier_0.1.50_windows_amd64.zip",
+          "shasum": "976b6a3cfcbd482b8c80d87c4132b8f26ef54430f8ff850fd7e73382c46173f5"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.50_windows_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.50/terraform-provider-zerotier_0.1.50_windows_arm.zip",
+          "shasum": "4b0c394a3d9ad0f1618db6187fb15f4dd375739f915c16d5dd26b839c98729b0"
+        }
+      ]
+    },
+    {
+      "version": "0.1.49",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.49/terraform-provider-zerotier_0.1.49_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.49/terraform-provider-zerotier_0.1.49_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.49_darwin_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.49/terraform-provider-zerotier_0.1.49_darwin_amd64.zip",
+          "shasum": "da4e805856a6d6c265c7e7b0ecc555153a366a46a1fa6e036b2953fb72ed1c3d"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.49_darwin_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.49/terraform-provider-zerotier_0.1.49_darwin_arm64.zip",
+          "shasum": "adfca45d80f8a2bf8d9f9232f469cbfe6f00d8c7c887b330dbe87c52b6da1a36"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.49_freebsd_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.49/terraform-provider-zerotier_0.1.49_freebsd_386.zip",
+          "shasum": "07e5bcc69846ce7c505005f3179ddc14d03b6961577bcb228e79579daa7cc9cf"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.49_freebsd_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.49/terraform-provider-zerotier_0.1.49_freebsd_amd64.zip",
+          "shasum": "4b1c326017d88a41cc446ebaa0f9516e247d9a99e32c3d0f3e804b500884732a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.49_freebsd_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.49/terraform-provider-zerotier_0.1.49_freebsd_arm.zip",
+          "shasum": "f3c4d74eed4c9aef6c08cb14db5d07661b6950713caca0a5b06f413707bffe0a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.49_freebsd_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.49/terraform-provider-zerotier_0.1.49_freebsd_arm64.zip",
+          "shasum": "16a7cb803f9858005b16a129308777b08ad75bb3a7da1b68ae669b714f33a53e"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.49_linux_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.49/terraform-provider-zerotier_0.1.49_linux_386.zip",
+          "shasum": "3b4d50a577d82712e605a06043379cdb42ba53cf551de5628c37583333399746"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.49_linux_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.49/terraform-provider-zerotier_0.1.49_linux_amd64.zip",
+          "shasum": "617885e0b70fabe479d9d6bb02614f52438fe5c9a22231d48bd39e8fa6e9c686"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.49_linux_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.49/terraform-provider-zerotier_0.1.49_linux_arm.zip",
+          "shasum": "f5ecf4b066741acd47cf11b0857b655dde5912bf77b7c414ec28e97e4b8206c3"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.49_linux_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.49/terraform-provider-zerotier_0.1.49_linux_arm64.zip",
+          "shasum": "8fe9025c9686a911dd4415ea25e26c80db00afe4fe126cfcfc5c4174da64b28e"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.49_windows_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.49/terraform-provider-zerotier_0.1.49_windows_386.zip",
+          "shasum": "0774ed2ab88930c8dde31c66163d38b5ce5f73d2b605f21658c0aaa78b24b2d5"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.49_windows_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.49/terraform-provider-zerotier_0.1.49_windows_amd64.zip",
+          "shasum": "b60e5ed7802ef8400a4c4e45d62e499fdbd0a704a0506d1acd96b84915cb1b6f"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.49_windows_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.49/terraform-provider-zerotier_0.1.49_windows_arm.zip",
+          "shasum": "e726dcb15922db9324202ef4fd5c274d55e3539840c7ff6bee6f9eff872edaa7"
+        }
+      ]
+    },
+    {
+      "version": "0.1.48",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.48/terraform-provider-zerotier_0.1.48_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.48/terraform-provider-zerotier_0.1.48_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.48_darwin_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.48/terraform-provider-zerotier_0.1.48_darwin_amd64.zip",
+          "shasum": "b91d17f92cff89f376c3b8b58d821221b5a985404b30a0ac6ce41d6849b281b0"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.48_darwin_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.48/terraform-provider-zerotier_0.1.48_darwin_arm64.zip",
+          "shasum": "a966e63ce02c13813d756496a6c1bc4c7e4e75cb748021d0424bb43d83b2e3ed"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.48_freebsd_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.48/terraform-provider-zerotier_0.1.48_freebsd_386.zip",
+          "shasum": "69239f088b21a2035a04c049e19045bebe19275939f5966cf8dabb40295eb43e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.48_freebsd_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.48/terraform-provider-zerotier_0.1.48_freebsd_amd64.zip",
+          "shasum": "d92058f77e865ddc490298189c5611a763aa85267c5394c1c9f978d4c211e14e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.48_freebsd_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.48/terraform-provider-zerotier_0.1.48_freebsd_arm.zip",
+          "shasum": "4a09249a124d8c8df24e3c3cf4560416ca9c0f21faac241182ac0e9e361199d1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.48_freebsd_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.48/terraform-provider-zerotier_0.1.48_freebsd_arm64.zip",
+          "shasum": "765b89828ba6049665d030a54f784414ac3966fe65b5f2e4c8ad4dd3699ff243"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.48_linux_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.48/terraform-provider-zerotier_0.1.48_linux_386.zip",
+          "shasum": "2de84356b59f1a31ffcae8d42dc38ed345ad6e6a5d09ef8b832c41507d8564ff"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.48_linux_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.48/terraform-provider-zerotier_0.1.48_linux_amd64.zip",
+          "shasum": "21bc1b1b8603da8c59ea3f86946f7fa48c527f9683c654ea1ba0bd6f77a24689"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.48_linux_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.48/terraform-provider-zerotier_0.1.48_linux_arm.zip",
+          "shasum": "643eb7a2195a3a4a783908e6fea53330c67662bbcfd4028f5cfcf1f337f51192"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.48_linux_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.48/terraform-provider-zerotier_0.1.48_linux_arm64.zip",
+          "shasum": "1ab9a2efa846d80d507c2aa16305ccf81329edf67e1a59c5c89dad4ceb7e4cd7"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.48_windows_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.48/terraform-provider-zerotier_0.1.48_windows_386.zip",
+          "shasum": "d9879c94f2e28f7017825186d449b51404db64d4eaac63fe08622efc8d70320c"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.48_windows_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.48/terraform-provider-zerotier_0.1.48_windows_amd64.zip",
+          "shasum": "574b9da744ad28d419ad79cc620352eca292e862c8d979ae9e5068dceb6be002"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.48_windows_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.48/terraform-provider-zerotier_0.1.48_windows_arm.zip",
+          "shasum": "73825fed50ca7d42e9705b8051525f53fd9dd8b207020672df29c96e1e77a157"
+        }
+      ]
+    },
+    {
+      "version": "0.1.47",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.47/terraform-provider-zerotier_0.1.47_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.47/terraform-provider-zerotier_0.1.47_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.47_darwin_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.47/terraform-provider-zerotier_0.1.47_darwin_amd64.zip",
+          "shasum": "53cfeae4461a25a475389ae8125a9ea15e9d8248cc41798c09082f71b21bb614"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.47_darwin_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.47/terraform-provider-zerotier_0.1.47_darwin_arm64.zip",
+          "shasum": "0c5bdb264082c5e521773b3ef4cd349bacf2518ca31f94a1e72899b61f8943dc"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.47_freebsd_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.47/terraform-provider-zerotier_0.1.47_freebsd_386.zip",
+          "shasum": "a99270d8073ff07ec131f94b0c23ea3dd4aa5323dc5e92de6c082b228fed22ea"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.47_freebsd_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.47/terraform-provider-zerotier_0.1.47_freebsd_amd64.zip",
+          "shasum": "541958d8b7364a02117bbbd7d399cebc76d335b4726a4d67145f94700d71ba9c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.47_freebsd_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.47/terraform-provider-zerotier_0.1.47_freebsd_arm.zip",
+          "shasum": "196c5c0ecf6a2e7353d3e82d00a30c8ce0e3b54c16e7b53afa866e7218ba5d40"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.47_freebsd_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.47/terraform-provider-zerotier_0.1.47_freebsd_arm64.zip",
+          "shasum": "2852841033eb2b5643f4a8510ff7a2dd8a845da770aa626797d0197b2d54a999"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.47_linux_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.47/terraform-provider-zerotier_0.1.47_linux_386.zip",
+          "shasum": "05b712baece47d8f31e97fd12fba0062f4fe963180d7d7d3a3028f610e4ddb7e"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.47_linux_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.47/terraform-provider-zerotier_0.1.47_linux_amd64.zip",
+          "shasum": "763674696dcdcd54453636641a71ddf8ef5509938dd5f7c079df6166dfd1af41"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.47_linux_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.47/terraform-provider-zerotier_0.1.47_linux_arm.zip",
+          "shasum": "98707030f8ff210404af697f74b090d4f4198ab715195df60e9d9cd8923f9ceb"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-zerotier_0.1.47_linux_arm64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.47/terraform-provider-zerotier_0.1.47_linux_arm64.zip",
+          "shasum": "065d51caaa7c744e2d3771d6273af308dc23db28eb8e4d5eb54c22fd7a25204f"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-zerotier_0.1.47_windows_386.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.47/terraform-provider-zerotier_0.1.47_windows_386.zip",
+          "shasum": "0a2f09f4231b0706b2eab00329fc2bca2d4a726db43d7c4e589920eb73a73527"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-zerotier_0.1.47_windows_amd64.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.47/terraform-provider-zerotier_0.1.47_windows_amd64.zip",
+          "shasum": "63b4cf23eb8d567834b44615ed7dc0b86a456e7cb7cecb15c6f9d7e76972279f"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-zerotier_0.1.47_windows_arm.zip",
+          "download_url": "https://github.com/someara/terraform-provider-zerotier/releases/download/v0.1.47/terraform-provider-zerotier_0.1.47_windows_arm.zip",
+          "shasum": "5e1d3fbbb59226021432dcf92b7c87dc72c0393b7d51f58a6a2a7e3f216e4a44"
+        }
+      ]
+    }
+  ]
+}

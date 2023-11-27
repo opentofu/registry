@@ -1,0 +1,1826 @@
+{
+  "versions": [
+    {
+      "version": "1.3.3",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.3/terraform-provider-snowsql_1.3.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.3/terraform-provider-snowsql_1.3.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.3.3_darwin_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.3/terraform-provider-snowsql_1.3.3_darwin_amd64.zip",
+          "shasum": "bb0ea94c67cfbee091ea65123405866f6f2c974dc07decf32a9fc5831be2d161"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.3.3_darwin_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.3/terraform-provider-snowsql_1.3.3_darwin_arm64.zip",
+          "shasum": "3878e603efeae736ebf10b81a755c237eb0855298c92082268034683214d5c1c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.3.3_freebsd_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.3/terraform-provider-snowsql_1.3.3_freebsd_386.zip",
+          "shasum": "7dddbf3370231f231fd4927df57f6fe2d152ef5a910b9247d94eaecf49bf8cfd"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.3.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.3/terraform-provider-snowsql_1.3.3_freebsd_amd64.zip",
+          "shasum": "49e47eed164fd6f53a3af49cbf19a8a8b52678b0e64aafed3d21b76210572b6d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.3.3_freebsd_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.3/terraform-provider-snowsql_1.3.3_freebsd_arm.zip",
+          "shasum": "50579aeaeb3f824aa4188134d660f25fddbb6a3c8f2750ceef849b9cf3f4763a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.3.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.3/terraform-provider-snowsql_1.3.3_freebsd_arm64.zip",
+          "shasum": "5eda17bc5ac1d9b4208dd05c97c4632cdbb33ff8eb9a0f7ba73a62cbe0269566"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.3.3_linux_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.3/terraform-provider-snowsql_1.3.3_linux_386.zip",
+          "shasum": "12eab32d2e5cfcb0b000b03a42320a6beb302171e1980e46022cd09efb99bf2b"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.3.3_linux_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.3/terraform-provider-snowsql_1.3.3_linux_amd64.zip",
+          "shasum": "f03dd907d1db3ba2373e468c982d27d0c7bdb922d88feb96964db71c7c3b63d3"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.3.3_linux_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.3/terraform-provider-snowsql_1.3.3_linux_arm.zip",
+          "shasum": "d89a25df17829b54a75b46ad25394bec49b38aac8f6662f2e7e1e696287836e0"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.3.3_linux_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.3/terraform-provider-snowsql_1.3.3_linux_arm64.zip",
+          "shasum": "f48c36f30f311dae1c456e91434bf7f2e11dcda1180abefd5fa202f3d0f9ad45"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.3.3_windows_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.3/terraform-provider-snowsql_1.3.3_windows_386.zip",
+          "shasum": "82a7432916f5626201a0c6287199716cea8dd297f136e219a7439e0bc2e611f8"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.3.3_windows_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.3/terraform-provider-snowsql_1.3.3_windows_amd64.zip",
+          "shasum": "f3b4fd51a439652309fc3dfd49e3c61f5e48ef0d5f11a0879fc692a554719a42"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.3.3_windows_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.3/terraform-provider-snowsql_1.3.3_windows_arm.zip",
+          "shasum": "cf5f88e106e545c2fae850d95862b91d389133c5661a92db92cc393074f834ee"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.3.3_windows_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.3/terraform-provider-snowsql_1.3.3_windows_arm64.zip",
+          "shasum": "a65586a7359d95eaa577605e381eb074262df26d3e0a079c3923c3b1448c9134"
+        }
+      ]
+    },
+    {
+      "version": "1.3.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.2/terraform-provider-snowsql_1.3.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.2/terraform-provider-snowsql_1.3.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.3.2_darwin_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.2/terraform-provider-snowsql_1.3.2_darwin_amd64.zip",
+          "shasum": "0aefe0bb02f6b5261e3c0d8b7aeed1bf7b0035092d50a8ddc4eba2d40e17de69"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.3.2_darwin_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.2/terraform-provider-snowsql_1.3.2_darwin_arm64.zip",
+          "shasum": "b51c47845931fb076c65b68e4143f4ba5f156f4126204f2f1660778968a30d53"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.3.2_freebsd_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.2/terraform-provider-snowsql_1.3.2_freebsd_386.zip",
+          "shasum": "40ad1269676168459685887120c85f3712a1f8dbaec9772a968f7ebdfac86f7a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.3.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.2/terraform-provider-snowsql_1.3.2_freebsd_amd64.zip",
+          "shasum": "9788cba82f9ff65cef7fb4ad3327604d410712f9b4a8ba9a03e76a997b540b69"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.3.2_freebsd_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.2/terraform-provider-snowsql_1.3.2_freebsd_arm.zip",
+          "shasum": "8dac8abc1cd32666cebf8badb9bde4592d917e0f7b5ff4abe855a762d24c5b75"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.3.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.2/terraform-provider-snowsql_1.3.2_freebsd_arm64.zip",
+          "shasum": "772f19843506ec21a8316342fca30a8df3ff949bc717409b1e962ef70802bc27"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.3.2_linux_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.2/terraform-provider-snowsql_1.3.2_linux_386.zip",
+          "shasum": "35da1bfa0487fa8933d64edfb73783c0a24f7848eeca8460e90b80ba30c916d1"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.3.2_linux_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.2/terraform-provider-snowsql_1.3.2_linux_amd64.zip",
+          "shasum": "a60f1c82d0262bce5cd06a05e8950c023c62d08c56807276ca1931d670aec705"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.3.2_linux_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.2/terraform-provider-snowsql_1.3.2_linux_arm.zip",
+          "shasum": "5e0c39477e13d3c5b7ebe5eab1d9b93332b1623bdd3cb8bdc5c2816b31016790"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.3.2_linux_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.2/terraform-provider-snowsql_1.3.2_linux_arm64.zip",
+          "shasum": "dd02df76c5db36371a3ece11366171cb253d968240ff782088d426396afe7d17"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.3.2_windows_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.2/terraform-provider-snowsql_1.3.2_windows_386.zip",
+          "shasum": "70d08be8a49490f33ba2172e9cab35326776c59215e7d4d7da4eabc0a23e4610"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.3.2_windows_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.2/terraform-provider-snowsql_1.3.2_windows_amd64.zip",
+          "shasum": "7ffdde162d88f0315977082bb666d8e6ca078e43095b931360490cd96f907385"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.3.2_windows_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.2/terraform-provider-snowsql_1.3.2_windows_arm.zip",
+          "shasum": "c6f542878c6b85397c550f0d63f4536ad2d5153ad8cc625c187ff9baeb0db3b7"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.3.2_windows_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.2/terraform-provider-snowsql_1.3.2_windows_arm64.zip",
+          "shasum": "4a3c6b9e21a74c9fed70ec7f966067221a057be03c5abdc3a38bcc285872aa3f"
+        }
+      ]
+    },
+    {
+      "version": "1.3.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.1/terraform-provider-snowsql_1.3.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.1/terraform-provider-snowsql_1.3.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.3.1_darwin_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.1/terraform-provider-snowsql_1.3.1_darwin_amd64.zip",
+          "shasum": "f093bbb8643b39d7e5355eee931e589fb69d8659a0986699496b33969c369b2e"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.3.1_darwin_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.1/terraform-provider-snowsql_1.3.1_darwin_arm64.zip",
+          "shasum": "a8fa35c62db0d541c60b4117571f5303795bc6453caa5bd30e322fce38fd74f2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.3.1_freebsd_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.1/terraform-provider-snowsql_1.3.1_freebsd_386.zip",
+          "shasum": "0fcb4a103bf9512c5c1820dd5670787002d32640b6c4251dbac12b4f16eb8847"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.3.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.1/terraform-provider-snowsql_1.3.1_freebsd_amd64.zip",
+          "shasum": "c756e690a9bf67a7f1613d9583765d016d7c7f965844f061e12ae035b8ba1f64"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.3.1_freebsd_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.1/terraform-provider-snowsql_1.3.1_freebsd_arm.zip",
+          "shasum": "3f75183ac4690ed991f9dcf92c388cea988ef0b740c0f0650fb13793a831ffae"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.3.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.1/terraform-provider-snowsql_1.3.1_freebsd_arm64.zip",
+          "shasum": "676a98b5c85546d2637e81ecede2aa5ce827ade2e1c2f774b1fc84f8ebc7ff9e"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.3.1_linux_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.1/terraform-provider-snowsql_1.3.1_linux_386.zip",
+          "shasum": "b851ac875b830e32b300f00dd9f8e9f5ce49df4fecc322480d948053c9dba10e"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.3.1_linux_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.1/terraform-provider-snowsql_1.3.1_linux_amd64.zip",
+          "shasum": "350101c7b66912fd3764144c72d63cc89b0ca03a98171bde4f52c4dd9be6fb19"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.3.1_linux_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.1/terraform-provider-snowsql_1.3.1_linux_arm.zip",
+          "shasum": "68a85ef6c7c2e30e6020b48e34470671dcf4e0fa10200cbeff9f07ed43d4621a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.3.1_linux_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.1/terraform-provider-snowsql_1.3.1_linux_arm64.zip",
+          "shasum": "b5610d5bd835df2185302cf7a8161652eb63b73309be0135a334350d11a126ee"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.3.1_windows_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.1/terraform-provider-snowsql_1.3.1_windows_386.zip",
+          "shasum": "29098808b0499fc1c1434fef4f7020ec86e3e1af9854003f08ef7b546c7fb766"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.3.1_windows_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.1/terraform-provider-snowsql_1.3.1_windows_amd64.zip",
+          "shasum": "1953f153f606c503a2e9c580ec3a4b57b78a18ca0db64efdd388a4337e935a54"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.3.1_windows_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.1/terraform-provider-snowsql_1.3.1_windows_arm.zip",
+          "shasum": "337b9207a1a0c557140bef8839c959474bee2e8d21551b66c548d8e26776f86f"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.3.1_windows_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.1/terraform-provider-snowsql_1.3.1_windows_arm64.zip",
+          "shasum": "b36fbfa3dc0bef87adad2eef76521c6e73e61dab889070080464a2d9d1b1f5e2"
+        }
+      ]
+    },
+    {
+      "version": "1.3.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.0/terraform-provider-snowsql_1.3.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.0/terraform-provider-snowsql_1.3.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.3.0_darwin_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.0/terraform-provider-snowsql_1.3.0_darwin_amd64.zip",
+          "shasum": "d6982ab1a906ccc2a15fd8bdc5ca6424cd44e0a00ab951a9a67f553246d36b50"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.3.0_darwin_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.0/terraform-provider-snowsql_1.3.0_darwin_arm64.zip",
+          "shasum": "ec4e5cc355b39b5d089929649c507ed96dd9bdc23fc4550b36b587911fdc30c4"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.3.0_freebsd_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.0/terraform-provider-snowsql_1.3.0_freebsd_386.zip",
+          "shasum": "1641bea52b245c1caf0c8a860d4aa3fa14e71952e2e0b7fa1176dca3582ffa04"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.3.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.0/terraform-provider-snowsql_1.3.0_freebsd_amd64.zip",
+          "shasum": "dcc32cbc61b5f005a7d2b15173ac20f2fbe5238f257300cc9bc9830e3041dc79"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.3.0_freebsd_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.0/terraform-provider-snowsql_1.3.0_freebsd_arm.zip",
+          "shasum": "844801533b2a9f1516c2d8eda0eb3eaa2f3d39b8a2d8b38b46d7853a91ad26fe"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.3.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.0/terraform-provider-snowsql_1.3.0_freebsd_arm64.zip",
+          "shasum": "d86cb0378a72bec9b485e3087fa5b801bc32c9d95cc017b67b41342ae30da2f8"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.3.0_linux_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.0/terraform-provider-snowsql_1.3.0_linux_386.zip",
+          "shasum": "8672c7e9becbd32ffae3f165a11ed1ac172261721a43b1cad2f055ed23a3a2df"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.3.0_linux_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.0/terraform-provider-snowsql_1.3.0_linux_amd64.zip",
+          "shasum": "fc984fea711be69b57b6362fb3ef1af1ac19dbc24af9a1ff637ddfff79f5b968"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.3.0_linux_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.0/terraform-provider-snowsql_1.3.0_linux_arm.zip",
+          "shasum": "c40aaf89b090bfbe27dbc64a9fbc00bb923e8ccf7c98c5648cb1b9a95505a904"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.3.0_linux_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.0/terraform-provider-snowsql_1.3.0_linux_arm64.zip",
+          "shasum": "902c7ab6880dadcf481683189f23f6a9cf9ad14e48c4dffc39abc60ed4472ce7"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.3.0_windows_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.0/terraform-provider-snowsql_1.3.0_windows_386.zip",
+          "shasum": "7c4ea6b3e28d38d3a265c718a0be94e8a16c71fbe7f4d1b8f1f725c1ed8a8921"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.3.0_windows_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.0/terraform-provider-snowsql_1.3.0_windows_amd64.zip",
+          "shasum": "a1e14da9996c7251712308b8a2d00412407bb12f5a9361cc85ed2f287b7c9ae4"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.3.0_windows_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.0/terraform-provider-snowsql_1.3.0_windows_arm.zip",
+          "shasum": "b3f9624d6e9766763ed66015a88456602238fe0ae91371010c38410c773d66a0"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.3.0_windows_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.3.0/terraform-provider-snowsql_1.3.0_windows_arm64.zip",
+          "shasum": "f8318f57f8ae59eadafc3a07e466c5c1bd3ff7d3a9443b6821f1062bf6d3ef19"
+        }
+      ]
+    },
+    {
+      "version": "1.2.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.2.0/terraform-provider-snowsql_1.2.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.2.0/terraform-provider-snowsql_1.2.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.2.0_darwin_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.2.0/terraform-provider-snowsql_1.2.0_darwin_amd64.zip",
+          "shasum": "7400e68d07b1ab8959a8033579df0bd759b72b06ce099abeb8a0e78742920fb0"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.2.0_darwin_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.2.0/terraform-provider-snowsql_1.2.0_darwin_arm64.zip",
+          "shasum": "158d1e3c85cd32c7ef7cc60bbcb68b386c42f71697f4e1f29893ec59508aef36"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.2.0_freebsd_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.2.0/terraform-provider-snowsql_1.2.0_freebsd_386.zip",
+          "shasum": "7c62724f97461d48ecff4474481e45725358f5dbbf831e45aadc71c0a93faf6c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.2.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.2.0/terraform-provider-snowsql_1.2.0_freebsd_amd64.zip",
+          "shasum": "22462b11d11ba9d4ea7c47f76f90dc45c4fc95adbe70efe613a5385c75050a03"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.2.0_freebsd_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.2.0/terraform-provider-snowsql_1.2.0_freebsd_arm.zip",
+          "shasum": "a2bf45c6f51ba07a5767c950971d6d4b3caaff27f40029bfac190cec4fdfa102"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.2.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.2.0/terraform-provider-snowsql_1.2.0_freebsd_arm64.zip",
+          "shasum": "16d550d601f7d84f35114026b3f9be0e54658dd7aba05c2b0a85431f55451a0c"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.2.0_linux_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.2.0/terraform-provider-snowsql_1.2.0_linux_386.zip",
+          "shasum": "7f1a1120a1b110e8f749015873e1069d4319753f51fd6ecdaf2118d2948af520"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.2.0_linux_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.2.0/terraform-provider-snowsql_1.2.0_linux_amd64.zip",
+          "shasum": "9d6baee01623ec73fcc1243a798208ef3aebab442c6936a67a973deb30a1dffb"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.2.0_linux_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.2.0/terraform-provider-snowsql_1.2.0_linux_arm.zip",
+          "shasum": "4e9f0121d48ee3454c41be816d0bd25b768f01003053d1083cf064eba61a8644"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.2.0_linux_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.2.0/terraform-provider-snowsql_1.2.0_linux_arm64.zip",
+          "shasum": "e4fb3b2deebfc09159dca6be23fae5885c23a3dfc715a53e9c94cc863b954a29"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.2.0_windows_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.2.0/terraform-provider-snowsql_1.2.0_windows_386.zip",
+          "shasum": "bdd563a0b39e91034a6edf831b3a64618338616871f38d5988410c22bd0224d5"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.2.0_windows_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.2.0/terraform-provider-snowsql_1.2.0_windows_amd64.zip",
+          "shasum": "649f2c3cc8da1d304e47395b75c85778bd17acdbb01b1d5c930d83aa7280c97f"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.2.0_windows_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.2.0/terraform-provider-snowsql_1.2.0_windows_arm.zip",
+          "shasum": "f8929d7f29e9c1bf84f974545755b7b01a0814dffa5254d3313cd1770c72c7f2"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.2.0_windows_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.2.0/terraform-provider-snowsql_1.2.0_windows_arm64.zip",
+          "shasum": "a721c2ce327574ac7b15e15909c8af16dde775be92b50b1784da8cbd4d97db0b"
+        }
+      ]
+    },
+    {
+      "version": "1.1.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.1/terraform-provider-snowsql_1.1.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.1/terraform-provider-snowsql_1.1.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.1.1_darwin_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.1/terraform-provider-snowsql_1.1.1_darwin_amd64.zip",
+          "shasum": "0a3f3e0596715a4d74ef7f5ed816a1233f9b2d1f37af7f33a7cc564f0c9583f0"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.1.1_darwin_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.1/terraform-provider-snowsql_1.1.1_darwin_arm64.zip",
+          "shasum": "129b0786d79b1b09601085f16121e84793eff6dda330b9f6678646e272d68238"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.1.1_freebsd_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.1/terraform-provider-snowsql_1.1.1_freebsd_386.zip",
+          "shasum": "49206bf7000246d581733a7d52855cbbbcd90e6f4e973bcca780c2b288b29d65"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.1.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.1/terraform-provider-snowsql_1.1.1_freebsd_amd64.zip",
+          "shasum": "6c1babc0a7b64988a36abc4ad9b11a63971062c45b632df80c7287074e0095c8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.1.1_freebsd_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.1/terraform-provider-snowsql_1.1.1_freebsd_arm.zip",
+          "shasum": "45f746ce47f26ebda28380a9b41c9563ed85915f1fdd805f98efed543c69f6d8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.1.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.1/terraform-provider-snowsql_1.1.1_freebsd_arm64.zip",
+          "shasum": "a3a81b59f68197dfe007029c257d74f4044e8083e9304cdac0a1cf974f1849a9"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.1.1_linux_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.1/terraform-provider-snowsql_1.1.1_linux_386.zip",
+          "shasum": "60e982e4a794e5d5feacf6a74c3b6d98a9d9cab0d044620fa9b7f980c951986a"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.1.1_linux_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.1/terraform-provider-snowsql_1.1.1_linux_amd64.zip",
+          "shasum": "63b8be297d0d913b671eba5cef39baa4c02f1b497aa473c2a57871070cd80846"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.1.1_linux_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.1/terraform-provider-snowsql_1.1.1_linux_arm.zip",
+          "shasum": "3b6298e4c11eb18148e089c5ae0cf37fff76d801ea62d8031b957d7d6a56b92b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.1.1_linux_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.1/terraform-provider-snowsql_1.1.1_linux_arm64.zip",
+          "shasum": "287315cb907a09a795ce787a3afe3a7c2545c4eebf4d5eb5d84db2698271a984"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.1.1_windows_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.1/terraform-provider-snowsql_1.1.1_windows_386.zip",
+          "shasum": "6b12b4099547e628596f170814091647a4fc94e9cdaa8b23b3ba5cd7ad36676e"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.1.1_windows_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.1/terraform-provider-snowsql_1.1.1_windows_amd64.zip",
+          "shasum": "e13c6db2743acd800a12767074e0e27d8d30f13497a9f66d2e7e6e452f833e67"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.1.1_windows_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.1/terraform-provider-snowsql_1.1.1_windows_arm.zip",
+          "shasum": "7393ecc989ca00116f05f9a6d46dafa16dd01a75023226e10119f74c9c130491"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.1.1_windows_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.1/terraform-provider-snowsql_1.1.1_windows_arm64.zip",
+          "shasum": "21114ea296f4ee23ed466f8ad47fd9e29d9ac7aa1f196b01b71fd8b85da6ebc4"
+        }
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.0/terraform-provider-snowsql_1.1.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.0/terraform-provider-snowsql_1.1.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.1.0_darwin_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.0/terraform-provider-snowsql_1.1.0_darwin_amd64.zip",
+          "shasum": "7196647b4850fd7ec6d9d963630469c40deae03579d5e6352d89e3825fe7129a"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.1.0_darwin_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.0/terraform-provider-snowsql_1.1.0_darwin_arm64.zip",
+          "shasum": "8624bba69ca296e60555f556197871091e9e88eea77b4c015946e86f69f29723"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.1.0_freebsd_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.0/terraform-provider-snowsql_1.1.0_freebsd_386.zip",
+          "shasum": "b5403876d5c80895e8603ebb9700c65e66e9136ce1917c16e2f045d1febc3466"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.1.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.0/terraform-provider-snowsql_1.1.0_freebsd_amd64.zip",
+          "shasum": "0298272f0fe332964d8217b8f239a3c5dd5dba3c88cd87cac62737466749500c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.1.0_freebsd_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.0/terraform-provider-snowsql_1.1.0_freebsd_arm.zip",
+          "shasum": "20d23316e987402c90abdae23a2f6bd99b696796a1691a3031ad331413f5f6cc"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.1.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.0/terraform-provider-snowsql_1.1.0_freebsd_arm64.zip",
+          "shasum": "b9b618cd91e9075fcf5d19add7ec4e59fa452ddc9c71490d8dfdcf8e2f1a7f46"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.1.0_linux_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.0/terraform-provider-snowsql_1.1.0_linux_386.zip",
+          "shasum": "f123b5fb57f381e940f1f9344780c8e30cbd2fe05481a25bc433e045871d6cfc"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.1.0_linux_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.0/terraform-provider-snowsql_1.1.0_linux_amd64.zip",
+          "shasum": "96a632b962efb6d71a658704f8315eec4f1d9749c9af4bdf48f330ae211a20b3"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.1.0_linux_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.0/terraform-provider-snowsql_1.1.0_linux_arm.zip",
+          "shasum": "94bf7da6701744616d57fe57ebf7ff930b21e43a2c68e391f4f5e8c5da78e5af"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.1.0_linux_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.0/terraform-provider-snowsql_1.1.0_linux_arm64.zip",
+          "shasum": "4a67feea783a5edc21f43bb466fb8ccf8f63d5f9c885152b8ec61449b3d70e2c"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.1.0_windows_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.0/terraform-provider-snowsql_1.1.0_windows_386.zip",
+          "shasum": "121ee4b7a56052ac3eef7bbb9611500c7f8cc780e98a45c2b789850f30192717"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.1.0_windows_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.0/terraform-provider-snowsql_1.1.0_windows_amd64.zip",
+          "shasum": "041e9d215473a21d613952bacf5cf49fd6d92742edb0fe53f99ed909816f04eb"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.1.0_windows_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.0/terraform-provider-snowsql_1.1.0_windows_arm.zip",
+          "shasum": "26117a937b73138ef8ce979909428408bb118beaf44b8204d70acb3dece9d53f"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.1.0_windows_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.1.0/terraform-provider-snowsql_1.1.0_windows_arm64.zip",
+          "shasum": "a100ed7d9455d02e7fae034d7c801ad7c422be28dda084effa22217119e16b4f"
+        }
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.0.1/terraform-provider-snowsql_1.0.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.0.1/terraform-provider-snowsql_1.0.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.0.1_darwin_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.0.1/terraform-provider-snowsql_1.0.1_darwin_amd64.zip",
+          "shasum": "dcdb433b93039f2217d1f3a5704d80108699d48eddf7853027639811c534385c"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.0.1_darwin_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.0.1/terraform-provider-snowsql_1.0.1_darwin_arm64.zip",
+          "shasum": "c3a4c3fc0cb82e42024382193a2113ce548eb9856f117e39072f57cbd84474b1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.0.1_freebsd_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.0.1/terraform-provider-snowsql_1.0.1_freebsd_386.zip",
+          "shasum": "15f99b9445dfbf335246b5c72aa489b892bd2bf52cf7db6a7ca99be152824d2d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.0.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.0.1/terraform-provider-snowsql_1.0.1_freebsd_amd64.zip",
+          "shasum": "9ac1515608cad6939aec884ef14ad55d9c373911f510955a969129e3949dd8d0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.0.1_freebsd_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.0.1/terraform-provider-snowsql_1.0.1_freebsd_arm.zip",
+          "shasum": "c9dd1d8ffde24894ef5106e4fd25002f1d73c92126f3b49890f6a78c6e215987"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.0.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.0.1/terraform-provider-snowsql_1.0.1_freebsd_arm64.zip",
+          "shasum": "a5e87c25849f65722d524d2f22fa8eb85fa0073ba30d0be6bc5028f4f7f34b7c"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.0.1_linux_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.0.1/terraform-provider-snowsql_1.0.1_linux_386.zip",
+          "shasum": "814c93423ff32dcf8e2d0565ad0205d0328b93fc9067d90d88066bfe7bf6d63e"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.0.1_linux_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.0.1/terraform-provider-snowsql_1.0.1_linux_amd64.zip",
+          "shasum": "ff0c603bf150e88526bb086d8028929b511eb0d2cdad347815b4af04d79d3355"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.0.1_linux_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.0.1/terraform-provider-snowsql_1.0.1_linux_arm.zip",
+          "shasum": "958a48a44861288111c3eac115dc21c5c1e5e1b55862c2a9c202ba9b5738957f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.0.1_linux_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.0.1/terraform-provider-snowsql_1.0.1_linux_arm64.zip",
+          "shasum": "8f3cad0e54ad1902fd6e5d056013efb8c4ff57c8a37b6f7f5c247846e845950d"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_1.0.1_windows_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.0.1/terraform-provider-snowsql_1.0.1_windows_386.zip",
+          "shasum": "8380f68d91a83d9d26b03a0ce633b576a6f565425095c9513d467df5581fa32e"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_1.0.1_windows_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.0.1/terraform-provider-snowsql_1.0.1_windows_amd64.zip",
+          "shasum": "97abea5b2226bf144cb8d67a5525d69c92f562c580381d34d9760f74d8369851"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_1.0.1_windows_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.0.1/terraform-provider-snowsql_1.0.1_windows_arm.zip",
+          "shasum": "c4cd0cbdcfd65847a6d6d91baa4912ba297a0edbc6bccfb182bd4beb3b47cef0"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_1.0.1_windows_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v1.0.1/terraform-provider-snowsql_1.0.1_windows_arm64.zip",
+          "shasum": "8f304723bef04c9df2c37436cd043e9da8bd3036c2dbea86f3e89fafac162059"
+        }
+      ]
+    },
+    {
+      "version": "0.4.4",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.4/terraform-provider-snowsql_0.4.4_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.4/terraform-provider-snowsql_0.4.4_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.4.4_darwin_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.4/terraform-provider-snowsql_0.4.4_darwin_amd64.zip",
+          "shasum": "9a94f76561e0c6c3636d3d3fe8f5951646283fc004032f01fb7ee0edb4d34746"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.4.4_darwin_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.4/terraform-provider-snowsql_0.4.4_darwin_arm64.zip",
+          "shasum": "0d179aa14aaa60ab4a1b2015ca554c1a9271daf2d89a1805013eef9a1e803fe4"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.4.4_freebsd_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.4/terraform-provider-snowsql_0.4.4_freebsd_386.zip",
+          "shasum": "2c627505d4475ce7d006e2a04825d86c0632d5f48f6726d309e43787f8890af5"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.4.4_freebsd_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.4/terraform-provider-snowsql_0.4.4_freebsd_amd64.zip",
+          "shasum": "356e14878ec87b86140a7edb8dfb5ce6005aedca2d75c1b04bc378977adad940"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.4.4_freebsd_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.4/terraform-provider-snowsql_0.4.4_freebsd_arm.zip",
+          "shasum": "8bb1bb4cb109b642d6fae731fd05e300e3c687aa16a5aabdcce104aad67eca69"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.4.4_freebsd_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.4/terraform-provider-snowsql_0.4.4_freebsd_arm64.zip",
+          "shasum": "84d8b5714a119e8c483b74924e4f61b1580f4d3ef3452e3e994be69ead2f8d7c"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.4.4_linux_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.4/terraform-provider-snowsql_0.4.4_linux_386.zip",
+          "shasum": "395a6df0de0e90dfcbb21cd6591897ab66a920a55fb65b3b879ea826b8ac4aa1"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.4.4_linux_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.4/terraform-provider-snowsql_0.4.4_linux_amd64.zip",
+          "shasum": "2126f890152d2682a929093a02bc1f5f5acc593eeb8aa76afa44fba640a029c7"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.4.4_linux_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.4/terraform-provider-snowsql_0.4.4_linux_arm.zip",
+          "shasum": "50c6442dc4565656b09440c570b3cb678ac4b58c44e42f7d9def67df21013d90"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.4.4_linux_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.4/terraform-provider-snowsql_0.4.4_linux_arm64.zip",
+          "shasum": "4cf54318556188b96f32d74eff2e6f140885ae330300e8b3abd74dea41f4df63"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.4.4_windows_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.4/terraform-provider-snowsql_0.4.4_windows_386.zip",
+          "shasum": "94fa7b3277a28e1572eb4dcbf86134e4408d107eabb207f8698a2637081c0166"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.4.4_windows_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.4/terraform-provider-snowsql_0.4.4_windows_amd64.zip",
+          "shasum": "7fee372742f0cd03c071a1fcefd0c68d63fca8efe5f9e68d482f58a4bb5aaf28"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.4.4_windows_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.4/terraform-provider-snowsql_0.4.4_windows_arm.zip",
+          "shasum": "ed4b0ba5e96a2ea67be5e149efb2490b7ef279c3e5814e35f23ee24e58538266"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.4.4_windows_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.4/terraform-provider-snowsql_0.4.4_windows_arm64.zip",
+          "shasum": "85df2213b9218e4f742a9928698e7d780e53b9be28c053eff5bffbee4e79b749"
+        }
+      ]
+    },
+    {
+      "version": "0.4.3",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.3/terraform-provider-snowsql_0.4.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.3/terraform-provider-snowsql_0.4.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.4.3_darwin_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.3/terraform-provider-snowsql_0.4.3_darwin_amd64.zip",
+          "shasum": "3078e841808a6b1d02f67b1ea2242e8429c9652a625e31f887076ae7b461e3e4"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.4.3_darwin_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.3/terraform-provider-snowsql_0.4.3_darwin_arm64.zip",
+          "shasum": "d24890e6cf3798cdac5f309c237651c0f1c8b3c7ca03ba2dd0e5f27121102534"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.4.3_freebsd_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.3/terraform-provider-snowsql_0.4.3_freebsd_386.zip",
+          "shasum": "957ee0badfc8c58bf632fd3c0d12b951b35b3e216c679cd49af53858cf3a14dc"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.4.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.3/terraform-provider-snowsql_0.4.3_freebsd_amd64.zip",
+          "shasum": "1a0aa75a8dc0716e25a0273a92bd3ce6b3953bd60437ec0e4f38e145d4d1093d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.4.3_freebsd_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.3/terraform-provider-snowsql_0.4.3_freebsd_arm.zip",
+          "shasum": "5f4a6c08dbe44a4366761e94ebeb61ee764da03aa8766d92e43c33803cd1d4dd"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.4.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.3/terraform-provider-snowsql_0.4.3_freebsd_arm64.zip",
+          "shasum": "83706065be0801ffbfa2f32bc1fa6becb2fe33970f8ea51ded1affa9b682f9f1"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.4.3_linux_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.3/terraform-provider-snowsql_0.4.3_linux_386.zip",
+          "shasum": "8311acf8290a63f62833a97ce6110af9e6946b41028f3714ed34145c43c0198f"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.4.3_linux_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.3/terraform-provider-snowsql_0.4.3_linux_amd64.zip",
+          "shasum": "f8c0eaa99b90c83e6f24f6ef32d4010f30816165068a38fac5eda42c7edc608d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.4.3_linux_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.3/terraform-provider-snowsql_0.4.3_linux_arm.zip",
+          "shasum": "1f0eac1b5615be7f0b6b7f57663b70462d612de363a048f2bed05a75528c1c1b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.4.3_linux_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.3/terraform-provider-snowsql_0.4.3_linux_arm64.zip",
+          "shasum": "75449892b1be8fdefa13f5986121f30af685cc3c648dcce0d96547ab6afb66a6"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.4.3_windows_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.3/terraform-provider-snowsql_0.4.3_windows_386.zip",
+          "shasum": "f471d553b0992445152d8a8562b8343e3dbe9622a102ce32cf9c78c7b9e4c26f"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.4.3_windows_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.3/terraform-provider-snowsql_0.4.3_windows_amd64.zip",
+          "shasum": "99a344d15caf63171553c5ba934a8e43779d4937fb1c576dc46a336fafa6e660"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.4.3_windows_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.3/terraform-provider-snowsql_0.4.3_windows_arm.zip",
+          "shasum": "fa1963729eaa7a3ef5bf380ef83cc3101cb9bf22bb72da8eb931987b1e1a80da"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.4.3_windows_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.3/terraform-provider-snowsql_0.4.3_windows_arm64.zip",
+          "shasum": "385b540d4c4947f17ecd654ac91072067f81ef32d038b83f5dc025aeb862d60f"
+        }
+      ]
+    },
+    {
+      "version": "0.4.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.2/terraform-provider-snowsql_0.4.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.2/terraform-provider-snowsql_0.4.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.4.2_darwin_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.2/terraform-provider-snowsql_0.4.2_darwin_amd64.zip",
+          "shasum": "e93b745ffcef247addd473142b531a6298880227c38a50ead78d14e998dad33a"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.4.2_darwin_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.2/terraform-provider-snowsql_0.4.2_darwin_arm64.zip",
+          "shasum": "440d8ce583ae94bbbc5ea5a2dda2640b2926391ff79254c14c302376b1593158"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.4.2_freebsd_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.2/terraform-provider-snowsql_0.4.2_freebsd_386.zip",
+          "shasum": "eb0d064e30e9e11a2494e6719ae93bbe939f366e8dbefc5702314b9b66038ad9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.4.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.2/terraform-provider-snowsql_0.4.2_freebsd_amd64.zip",
+          "shasum": "ee2a79f34fbe7155acd6047779660b76ba0653537cb08aa545cbc418e89c247f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.4.2_freebsd_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.2/terraform-provider-snowsql_0.4.2_freebsd_arm.zip",
+          "shasum": "a115a81311c8efdb506bbf8553c40278b1cb613e32c54d470ef17806bd042646"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.4.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.2/terraform-provider-snowsql_0.4.2_freebsd_arm64.zip",
+          "shasum": "d3996baa812d531e40b325f7bd44ba6010e33a463ed53e913bb98f31610a2bcb"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.4.2_linux_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.2/terraform-provider-snowsql_0.4.2_linux_386.zip",
+          "shasum": "731832c149a82577ae4468a7048fde32dc87317e1e20d6c1652394f31169b523"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.4.2_linux_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.2/terraform-provider-snowsql_0.4.2_linux_amd64.zip",
+          "shasum": "652202df7b373106f0b6835d722e288285790af9193b27c750eb88247dfd6e7b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.4.2_linux_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.2/terraform-provider-snowsql_0.4.2_linux_arm.zip",
+          "shasum": "a301eb286b63fe0d3a549f8152a290816d56bfb9c982cd0043d871caffa8d19f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.4.2_linux_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.2/terraform-provider-snowsql_0.4.2_linux_arm64.zip",
+          "shasum": "6079a9bbad22d5fa65f652654cceb26e3202abb7324f9191bab95838b2167bb7"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.4.2_windows_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.2/terraform-provider-snowsql_0.4.2_windows_386.zip",
+          "shasum": "501c11af9be80a76a01d8ee8775d5ba516c6f6f5feb9f51f8aa0ed78657371b3"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.4.2_windows_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.2/terraform-provider-snowsql_0.4.2_windows_amd64.zip",
+          "shasum": "6a8adcefe68b1c0317a9e63682387b739385953f9c6f40bdbf24de363ca3f988"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.4.2_windows_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.2/terraform-provider-snowsql_0.4.2_windows_arm.zip",
+          "shasum": "86553a49b844c74def424a28cb9cf289362dc166f034e9f940c90bb61a000a02"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.4.2_windows_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.2/terraform-provider-snowsql_0.4.2_windows_arm64.zip",
+          "shasum": "345763c6b2e1c32a8ba49a933ecc33d7571155be4b41526dfd9457fdd51654a6"
+        }
+      ]
+    },
+    {
+      "version": "0.4.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.1/terraform-provider-snowsql_0.4.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.1/terraform-provider-snowsql_0.4.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.4.1_darwin_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.1/terraform-provider-snowsql_0.4.1_darwin_amd64.zip",
+          "shasum": "4ba27fadfa3784d3bab5456b8fbc578754351b39d28a7ec1b446c8bb70ec6345"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.4.1_darwin_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.1/terraform-provider-snowsql_0.4.1_darwin_arm64.zip",
+          "shasum": "a211e5b0331cb16f62018296e25eec1ba48c7f85f44a1dd9ba5cf40c1abde652"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.4.1_freebsd_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.1/terraform-provider-snowsql_0.4.1_freebsd_386.zip",
+          "shasum": "a52e04a67eeadee54559224c5c4a2a207b1428a58597b76e61ecfc0ef88635b1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.4.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.1/terraform-provider-snowsql_0.4.1_freebsd_amd64.zip",
+          "shasum": "2759b5af353a3ca54285755230efc7f491333a1f13860e58c3c8e172a44fcaea"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.4.1_freebsd_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.1/terraform-provider-snowsql_0.4.1_freebsd_arm.zip",
+          "shasum": "121c3cdc99e6a0b789293e48079c921addaac2b6968b33c7caab9e26b9e9fb37"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.4.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.1/terraform-provider-snowsql_0.4.1_freebsd_arm64.zip",
+          "shasum": "8752a5869c62db49e77d12a92cc2d2480dae25e6b822cb5232846768595a1b32"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.4.1_linux_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.1/terraform-provider-snowsql_0.4.1_linux_386.zip",
+          "shasum": "1b789bdc69100ff959756265dc28405855acd611eaa2462507310b950d443032"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.4.1_linux_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.1/terraform-provider-snowsql_0.4.1_linux_amd64.zip",
+          "shasum": "8c343d41dee33847f84eed8471da9589e2901bc720bc6592aff8804c6111efea"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.4.1_linux_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.1/terraform-provider-snowsql_0.4.1_linux_arm.zip",
+          "shasum": "203e0a22e24c11e26ff8d6027e8a297a72e219102fcd8cc787ca7fb6a2f80525"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.4.1_linux_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.1/terraform-provider-snowsql_0.4.1_linux_arm64.zip",
+          "shasum": "6f53efa827a1b1336ff6059f8c8b5fb9ce854e7e357a3b3c765c65afe9860930"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.4.1_windows_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.1/terraform-provider-snowsql_0.4.1_windows_386.zip",
+          "shasum": "8220c6484bd8fd20369132829418bd845185a8a618f76f8c24f7397de72f1edd"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.4.1_windows_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.1/terraform-provider-snowsql_0.4.1_windows_amd64.zip",
+          "shasum": "21b42addbacf25df84cfd645b66b4b2f61e8a161166744ed4bf84e06d63569bb"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.4.1_windows_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.1/terraform-provider-snowsql_0.4.1_windows_arm.zip",
+          "shasum": "276020a0856dbe631ddb4d5fe5df18235bacdf84c8f83518e3f798ce9adf5049"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.4.1_windows_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.1/terraform-provider-snowsql_0.4.1_windows_arm64.zip",
+          "shasum": "711d59973d18a60186dd0b9b894a55963833ffb7d66523b46b65c99999f4aade"
+        }
+      ]
+    },
+    {
+      "version": "0.4.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.0/terraform-provider-snowsql_0.4.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.0/terraform-provider-snowsql_0.4.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.4.0_darwin_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.0/terraform-provider-snowsql_0.4.0_darwin_amd64.zip",
+          "shasum": "22ea9f7cc6577df26b14d07b402658ea5259d36c2c1ecc862add4c07f00dce7f"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.4.0_darwin_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.0/terraform-provider-snowsql_0.4.0_darwin_arm64.zip",
+          "shasum": "a2ca038a1b297d1050f85d96874ba68942c7fed23de26cdb6f4d07fc14e991db"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.4.0_freebsd_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.0/terraform-provider-snowsql_0.4.0_freebsd_386.zip",
+          "shasum": "d3315fceb1acc0595974e093f511646900d856e796e7bbf9fdd1b51899dd5779"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.4.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.0/terraform-provider-snowsql_0.4.0_freebsd_amd64.zip",
+          "shasum": "79f7c5a0caef2af18690dca0e70875d5bec34fcf9a3a2314106c1ca68bed5a48"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.4.0_freebsd_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.0/terraform-provider-snowsql_0.4.0_freebsd_arm.zip",
+          "shasum": "c3eb4e2de53587e0bc06ab1bbb130f817a74660bdcdc5e03ef756b8406bd89e8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.4.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.0/terraform-provider-snowsql_0.4.0_freebsd_arm64.zip",
+          "shasum": "73e26942c4abd4459e8912d3747c998ac1f49d33ab3f8186cf5ee0beb92c22ce"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.4.0_linux_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.0/terraform-provider-snowsql_0.4.0_linux_386.zip",
+          "shasum": "f93377788b8392f7c5dad19185d2b561cf08be335cbe20231bc76702b963275e"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.4.0_linux_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.0/terraform-provider-snowsql_0.4.0_linux_amd64.zip",
+          "shasum": "90fdf437c2188752698ec5a2e39c36d99ac91cdb99bdfdc064bb143443cde40d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.4.0_linux_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.0/terraform-provider-snowsql_0.4.0_linux_arm.zip",
+          "shasum": "a4f04cb399bc82feee7d817935803c43a311527bf43cde6fb4dd8533deff0c2f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.4.0_linux_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.0/terraform-provider-snowsql_0.4.0_linux_arm64.zip",
+          "shasum": "17710d31149b6055e59a0b9555f794a11f8454119b2ea6a3d7ed4d2c8d09d4bf"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.4.0_windows_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.0/terraform-provider-snowsql_0.4.0_windows_386.zip",
+          "shasum": "3789548437d4ed3b81f5c914b9f4c69fe97fbe2cdedea59c8124cfdc08db768a"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.4.0_windows_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.0/terraform-provider-snowsql_0.4.0_windows_amd64.zip",
+          "shasum": "96ad157378af30cb5ff38a2d294b9e18a3a98c0cfe8ace7a1dcb3fa044529206"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.4.0_windows_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.0/terraform-provider-snowsql_0.4.0_windows_arm.zip",
+          "shasum": "6b2a64e76516c0f17f264d09faa8409fae96efb65414790853544df21a0183f2"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.4.0_windows_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.4.0/terraform-provider-snowsql_0.4.0_windows_arm64.zip",
+          "shasum": "753208f07c65f098cabd71ba37e211552a13469bb3fee994fe6fa9125ee85c06"
+        }
+      ]
+    },
+    {
+      "version": "0.3.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.3.0/terraform-provider-snowsql_0.3.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.3.0/terraform-provider-snowsql_0.3.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.3.0_darwin_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.3.0/terraform-provider-snowsql_0.3.0_darwin_amd64.zip",
+          "shasum": "244ccdf9fca24892eb27cb3d26ff8d0ff739b11c8b7d8aeec93cf21e2b0b78fd"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.3.0_darwin_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.3.0/terraform-provider-snowsql_0.3.0_darwin_arm64.zip",
+          "shasum": "256745b0b4248a582eb2a8268a612238a57b03fb1e965f8fb642f35b2a551de0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.3.0_freebsd_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.3.0/terraform-provider-snowsql_0.3.0_freebsd_386.zip",
+          "shasum": "5ce2f12db6d1cb88adc01b3577fea1ed6c56c76fd945aae2be29042191850c16"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.3.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.3.0/terraform-provider-snowsql_0.3.0_freebsd_amd64.zip",
+          "shasum": "78ae0846897a11e6cba5d76bb6b592072b7f49ced116ced17e45a817c8ac7f95"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.3.0_freebsd_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.3.0/terraform-provider-snowsql_0.3.0_freebsd_arm.zip",
+          "shasum": "3cfa51aa023cb3ca4806c72d92845e9bb42b9d30042e6283c1b24b64ae38d82c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.3.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.3.0/terraform-provider-snowsql_0.3.0_freebsd_arm64.zip",
+          "shasum": "0e61b65069ab5bc242aeb8f67f07f54ff7a214a41ffee3412bb81e45fab80387"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.3.0_linux_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.3.0/terraform-provider-snowsql_0.3.0_linux_386.zip",
+          "shasum": "0b713ce2567d82c5bd0e606b717187ebd7f6992955b10e6bedcfbf14e2cf3c3c"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.3.0_linux_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.3.0/terraform-provider-snowsql_0.3.0_linux_amd64.zip",
+          "shasum": "d68dd4fdcd91cfb36b975e13bb75bf43049f36e81cff55a5f12a718c6ef3f86f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.3.0_linux_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.3.0/terraform-provider-snowsql_0.3.0_linux_arm.zip",
+          "shasum": "c81212aaf3f087a735076440358545d721c6b3c83c412ab86affd8aa81915817"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.3.0_linux_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.3.0/terraform-provider-snowsql_0.3.0_linux_arm64.zip",
+          "shasum": "907e51a66969adeb24dbbe3e329c8db43993c792e88aee69197e02340ea941cd"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.3.0_windows_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.3.0/terraform-provider-snowsql_0.3.0_windows_386.zip",
+          "shasum": "e08ab4d284ee568f7448ed3d9253aac92a57cf14ebb4de13c77913cb3cf1da25"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.3.0_windows_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.3.0/terraform-provider-snowsql_0.3.0_windows_amd64.zip",
+          "shasum": "51594330d20743df849198567340c0b05117ea16d2820b7dd81a4ac15b5f4143"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.3.0_windows_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.3.0/terraform-provider-snowsql_0.3.0_windows_arm.zip",
+          "shasum": "0823052b0c1d96ae9d44384be9d3a5b40f8b010052298782b72b339c045743ec"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.3.0_windows_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.3.0/terraform-provider-snowsql_0.3.0_windows_arm64.zip",
+          "shasum": "0ef6b1882ef82d4ebd0ddb80e58491d11b3ef61764fb01261e931bff9815474d"
+        }
+      ]
+    },
+    {
+      "version": "0.2.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.1/terraform-provider-snowsql_0.2.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.1/terraform-provider-snowsql_0.2.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.2.1_darwin_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.1/terraform-provider-snowsql_0.2.1_darwin_amd64.zip",
+          "shasum": "347676aed4bad75970d6b642a32c753d9b854efa321509559401a7fa09f29558"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.2.1_darwin_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.1/terraform-provider-snowsql_0.2.1_darwin_arm64.zip",
+          "shasum": "56cdf160154f5484bcb22969877536636c7a52c047dd2668143063243f8c1056"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.2.1_freebsd_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.1/terraform-provider-snowsql_0.2.1_freebsd_386.zip",
+          "shasum": "32e20acfe5a8ab543b04bb49e2b043a1dab916192b65eca29db44bda984f4c4c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.2.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.1/terraform-provider-snowsql_0.2.1_freebsd_amd64.zip",
+          "shasum": "53f0c56df860014a68d8bc55b3856daa662f4c66e62d3e4c5fd4e151c15bd861"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.2.1_freebsd_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.1/terraform-provider-snowsql_0.2.1_freebsd_arm.zip",
+          "shasum": "8c6c11ca5e1b1ad1a14f132f2f2fedb9b7c1550e186685563e45051d42cac995"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.2.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.1/terraform-provider-snowsql_0.2.1_freebsd_arm64.zip",
+          "shasum": "a3ebc7da8f237a289a51e628b3d2120d2d86dee4bb7960118dab7e85f7bb471f"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.2.1_linux_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.1/terraform-provider-snowsql_0.2.1_linux_386.zip",
+          "shasum": "fe4b3c9ff1339fc3f49d74c5c477da5cdb3297585be222101c561742e645e58a"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.2.1_linux_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.1/terraform-provider-snowsql_0.2.1_linux_amd64.zip",
+          "shasum": "4ca7c4f26f61d7a2039b6ae24f09695678b32eb2c36bad48c0be8845b2dcd14d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.2.1_linux_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.1/terraform-provider-snowsql_0.2.1_linux_arm.zip",
+          "shasum": "fcbb2b8a38e461c032ecd335c34471fb54f52cb931acebdf3d98f9c6e3cfd70e"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.2.1_linux_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.1/terraform-provider-snowsql_0.2.1_linux_arm64.zip",
+          "shasum": "d8cd29e7a6fe41dc6dca7b031d798fbbfc4e358289367e3a92329a36d05be4f5"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.2.1_windows_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.1/terraform-provider-snowsql_0.2.1_windows_386.zip",
+          "shasum": "0ceafb2fae070872807ace745086f54d7febb97c078c2926373c7d527a70424b"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.2.1_windows_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.1/terraform-provider-snowsql_0.2.1_windows_amd64.zip",
+          "shasum": "417d5f94e9ae65b06827ef4c07fcd09e5a8ed0c54d1de1e4e5e4ad4924f8cc89"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.2.1_windows_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.1/terraform-provider-snowsql_0.2.1_windows_arm.zip",
+          "shasum": "b97a27d9f5037a48edc55f31efbcbb45dfeba5229fc756b8de15c2cf4e491a0f"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.2.1_windows_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.1/terraform-provider-snowsql_0.2.1_windows_arm64.zip",
+          "shasum": "2e0d830097ce2779db0b0b9bee5951f8660eb485e9da80503e7e6558821b9c8c"
+        }
+      ]
+    },
+    {
+      "version": "0.2.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.0/terraform-provider-snowsql_0.2.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.0/terraform-provider-snowsql_0.2.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.2.0_darwin_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.0/terraform-provider-snowsql_0.2.0_darwin_amd64.zip",
+          "shasum": "7cdfcbbc6894fd32aab47ee0709ba7da2a743ac0ebd5be962b848c365c7bec49"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.2.0_darwin_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.0/terraform-provider-snowsql_0.2.0_darwin_arm64.zip",
+          "shasum": "c8f073d46daad95f2263266883986749227c22f05cf20bd07874a50f091f4bbb"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.2.0_freebsd_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.0/terraform-provider-snowsql_0.2.0_freebsd_386.zip",
+          "shasum": "ba130da9968c2fb23421283ce3c73439e158e9fccede308a101985f3d4cc582f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.2.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.0/terraform-provider-snowsql_0.2.0_freebsd_amd64.zip",
+          "shasum": "728b190d6d2d35f2865129b8a7706395aa75123d27a168a3776e2cb508b4a9c5"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.2.0_freebsd_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.0/terraform-provider-snowsql_0.2.0_freebsd_arm.zip",
+          "shasum": "6514aaff98b4c9446aed278c267aef31b5ad0f751b734c3e4562e30d580ff5b3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.2.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.0/terraform-provider-snowsql_0.2.0_freebsd_arm64.zip",
+          "shasum": "c953501e3dc2485722da48ba169b7edf7570ace9c90bd97f4d48110b81a0e560"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.2.0_linux_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.0/terraform-provider-snowsql_0.2.0_linux_386.zip",
+          "shasum": "36468ae02ebb6ef66fa62dd83986ab25ce669ad86c434e13b2a183991c16a534"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.2.0_linux_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.0/terraform-provider-snowsql_0.2.0_linux_amd64.zip",
+          "shasum": "5c4eabb42c3520880e90e96a6192db23a859aafc5e47ef38e26ce05abefc1339"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.2.0_linux_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.0/terraform-provider-snowsql_0.2.0_linux_arm.zip",
+          "shasum": "892e5fb12b78278c9da045870ce8b215921c0492d35b27c8de4cc3d6fa68f796"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.2.0_linux_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.0/terraform-provider-snowsql_0.2.0_linux_arm64.zip",
+          "shasum": "a91021eb5a8533480d2f6d414590caa774ca0df28a868b535700264e64f8a8ad"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.2.0_windows_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.0/terraform-provider-snowsql_0.2.0_windows_386.zip",
+          "shasum": "4b6bf2b3e1439613437da41baffe5bcb73baec63f856d883c1bd003d97a05bfd"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.2.0_windows_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.0/terraform-provider-snowsql_0.2.0_windows_amd64.zip",
+          "shasum": "8e06171308f0129af129b76738d6a81395e7b8d92fbc7d6a0ec3e4cfcf78516f"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.2.0_windows_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.0/terraform-provider-snowsql_0.2.0_windows_arm.zip",
+          "shasum": "266beab96cd858e1a202360b68f6f4aea6188c9e340d74d1c9de666234d09d0c"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.2.0_windows_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.2.0/terraform-provider-snowsql_0.2.0_windows_arm64.zip",
+          "shasum": "9c00f7eab3a69a63ba1f47c2fbca87878d3a3ca1fb5f57d778ac9a9aadeeef25"
+        }
+      ]
+    },
+    {
+      "version": "0.1.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.1.0/terraform-provider-snowsql_0.1.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.1.0/terraform-provider-snowsql_0.1.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.1.0_darwin_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.1.0/terraform-provider-snowsql_0.1.0_darwin_amd64.zip",
+          "shasum": "2315b869ddac063255deb0215b2854ca882ab0161e36d61d856c7f8526fe7076"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.1.0_freebsd_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.1.0/terraform-provider-snowsql_0.1.0_freebsd_386.zip",
+          "shasum": "3121c0d917cc460beee3fac6eaf67e8873ca8908a406575ae00537f12948386b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.1.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.1.0/terraform-provider-snowsql_0.1.0_freebsd_amd64.zip",
+          "shasum": "310fba251d432c5fb3ac4f0b4fdfd5ad7bace08cbb3c2e07c9fe1c9d3b7c7f52"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.1.0_freebsd_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.1.0/terraform-provider-snowsql_0.1.0_freebsd_arm.zip",
+          "shasum": "fe789f495c578dbcdd0dea02f1813d9051b3462a9d51142e04593d7470ba4f86"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.1.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.1.0/terraform-provider-snowsql_0.1.0_freebsd_arm64.zip",
+          "shasum": "b075733243be637464308b473ec95e67d93abc4fa9024ab53754ea51e95fc6da"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.1.0_linux_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.1.0/terraform-provider-snowsql_0.1.0_linux_386.zip",
+          "shasum": "a8e742164c377a453ae9478e64bb0f599da1c751d9295b1ee6323c6192a7929a"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.1.0_linux_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.1.0/terraform-provider-snowsql_0.1.0_linux_amd64.zip",
+          "shasum": "172738138c2f570db8afd2631978e58c6cee1a37cb639828aea86d2fbe0d7abb"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.1.0_linux_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.1.0/terraform-provider-snowsql_0.1.0_linux_arm.zip",
+          "shasum": "c2f93368e1453ff4652ad9153983565d60a893af73c214e1723590fa08c958d1"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-snowsql_0.1.0_linux_arm64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.1.0/terraform-provider-snowsql_0.1.0_linux_arm64.zip",
+          "shasum": "fda67f29773bc79aa4b35f7d23ce3d3e70d9ec9369253c4bab2d61d251d3a49f"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-snowsql_0.1.0_windows_386.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.1.0/terraform-provider-snowsql_0.1.0_windows_386.zip",
+          "shasum": "c2b132fb8aedf9cb8479c679e370eae99beb23e8dbb01847864603219a6e4813"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-snowsql_0.1.0_windows_amd64.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.1.0/terraform-provider-snowsql_0.1.0_windows_amd64.zip",
+          "shasum": "af8e0409e65ce44b19e6d9906c0a7a6e8c41084facbd4635906b9ed9ba7521d0"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-snowsql_0.1.0_windows_arm.zip",
+          "download_url": "https://github.com/aidanmelen/terraform-provider-snowsql/releases/download/v0.1.0/terraform-provider-snowsql_0.1.0_windows_arm.zip",
+          "shasum": "0c2d576ee1e2647ab9b2d1f2709ddf80503c13b2f42509ed2e3609b2a6f78910"
+        }
+      ]
+    }
+  ]
+}

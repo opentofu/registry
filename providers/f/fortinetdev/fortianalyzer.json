@@ -1,0 +1,746 @@
+{
+  "versions": [
+    {
+      "version": "1.3.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.3.0/terraform-provider-fortianalyzer_1.3.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.3.0/terraform-provider-fortianalyzer_1.3.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.3.0_darwin_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.3.0/terraform-provider-fortianalyzer_1.3.0_darwin_amd64.zip",
+          "shasum": "924d14f6ebd22dea4e0c8b56a173f72404edf544182307f95bd172a3f16b5a1e"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.3.0_darwin_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.3.0/terraform-provider-fortianalyzer_1.3.0_darwin_arm64.zip",
+          "shasum": "fc7e0d6d0cf452b6147a4ba702505873ad57e7f05a2f7e4f2c370f253ca4b172"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-fortianalyzer_1.3.0_freebsd_386.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.3.0/terraform-provider-fortianalyzer_1.3.0_freebsd_386.zip",
+          "shasum": "c417dcdaa58828388b1930cdecb977a68ad7a30e1c80ad31f4f15c7b80292fb9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.3.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.3.0/terraform-provider-fortianalyzer_1.3.0_freebsd_amd64.zip",
+          "shasum": "3493ce725d8660bffc5392e3c12d346de1fbbeadfc193c37fd1857d0190c415c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-fortianalyzer_1.3.0_freebsd_arm.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.3.0/terraform-provider-fortianalyzer_1.3.0_freebsd_arm.zip",
+          "shasum": "83ce7733e7f805d02cc2a06b27328167deca7334caba19ba7097cdf4c373ff5d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.3.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.3.0/terraform-provider-fortianalyzer_1.3.0_freebsd_arm64.zip",
+          "shasum": "bace7e7b442ec69f1c6c7b270d0da6feb622965babbc727fe32e196213458fd6"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-fortianalyzer_1.3.0_linux_386.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.3.0/terraform-provider-fortianalyzer_1.3.0_linux_386.zip",
+          "shasum": "317afdc36af177337a919e1cb02595e1c6671a2a32dc739b3aa3ea403275e72b"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.3.0_linux_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.3.0/terraform-provider-fortianalyzer_1.3.0_linux_amd64.zip",
+          "shasum": "8a13e1e7cc1ca41394ec4045eddfe1e7d7fdf3988c1973f45b26e2a2e0acde1e"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-fortianalyzer_1.3.0_linux_arm.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.3.0/terraform-provider-fortianalyzer_1.3.0_linux_arm.zip",
+          "shasum": "857f91879279883b1ba6b18a48a24459f1819d9e99060035b9722d40f123e27a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.3.0_linux_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.3.0/terraform-provider-fortianalyzer_1.3.0_linux_arm64.zip",
+          "shasum": "64cd383acaa41270031eadfc3eb4027a7f7bfa7fee8379b915fb540bf7b8a3fe"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-fortianalyzer_1.3.0_windows_386.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.3.0/terraform-provider-fortianalyzer_1.3.0_windows_386.zip",
+          "shasum": "1cfa0ccfc8330edcfc7b839bed23c56367d4b5fdd07c6cfcb0fff2b3e14f7f43"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.3.0_windows_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.3.0/terraform-provider-fortianalyzer_1.3.0_windows_amd64.zip",
+          "shasum": "ffdbf965d03bc42b8bbe0220e279c421729c4ebe23bb1c417e3a27185ea1d558"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-fortianalyzer_1.3.0_windows_arm.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.3.0/terraform-provider-fortianalyzer_1.3.0_windows_arm.zip",
+          "shasum": "b3b16edd103d3477628e19d03e0ebe4bc4df70ba7381662ab489ffe3ec01746a"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.3.0_windows_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.3.0/terraform-provider-fortianalyzer_1.3.0_windows_arm64.zip",
+          "shasum": "6513fc711f3f698d61bbe6682edb74daf9e91623be659c066bdd6d615e908f64"
+        }
+      ]
+    },
+    {
+      "version": "1.2.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.2.0/terraform-provider-fortianalyzer_1.2.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.2.0/terraform-provider-fortianalyzer_1.2.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.2.0_darwin_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.2.0/terraform-provider-fortianalyzer_1.2.0_darwin_amd64.zip",
+          "shasum": "3fca5592ac2c4999951588730e27d38503c4c1444e3879c169d39a7b39ee7d9d"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.2.0_darwin_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.2.0/terraform-provider-fortianalyzer_1.2.0_darwin_arm64.zip",
+          "shasum": "af0f57579fdb924dd445604964271c1b982de756211aa4678cdcef800459a8b6"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-fortianalyzer_1.2.0_freebsd_386.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.2.0/terraform-provider-fortianalyzer_1.2.0_freebsd_386.zip",
+          "shasum": "d21c19b23f81d157b9ebd1fe1e7d36fbccf42fe30ad135c328f6e54b2edb5b03"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.2.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.2.0/terraform-provider-fortianalyzer_1.2.0_freebsd_amd64.zip",
+          "shasum": "221dcafcff459d395a72ff173b650ba388da4ebd443b5dc27736a35b3a0d302b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-fortianalyzer_1.2.0_freebsd_arm.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.2.0/terraform-provider-fortianalyzer_1.2.0_freebsd_arm.zip",
+          "shasum": "8f461029e5b3542b43caf9a10b6b636cb9af67dd83d37b2bfe4cce06f82cc6cf"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.2.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.2.0/terraform-provider-fortianalyzer_1.2.0_freebsd_arm64.zip",
+          "shasum": "23a6b091604431af22fef9636a8b15251bfe86acdfbe062f80c03a30982d9c1a"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-fortianalyzer_1.2.0_linux_386.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.2.0/terraform-provider-fortianalyzer_1.2.0_linux_386.zip",
+          "shasum": "2cdf9ea6e326c71b24745da5df604f5bb292f804551904f17bf4ef60f29e346b"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.2.0_linux_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.2.0/terraform-provider-fortianalyzer_1.2.0_linux_amd64.zip",
+          "shasum": "c2ae54cb485582655ec1406f1f54c28e4ae25a891fccb8708ddc111dd938ee35"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-fortianalyzer_1.2.0_linux_arm.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.2.0/terraform-provider-fortianalyzer_1.2.0_linux_arm.zip",
+          "shasum": "726e3ff2f1238b419bdbf3149c92c5ef928dfd443531beb25237090d64066c77"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.2.0_linux_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.2.0/terraform-provider-fortianalyzer_1.2.0_linux_arm64.zip",
+          "shasum": "98b4a35966a81f68d2d5f4fca87dd1a652680db6a16bd2ecb2c22b95ad1a51a6"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-fortianalyzer_1.2.0_windows_386.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.2.0/terraform-provider-fortianalyzer_1.2.0_windows_386.zip",
+          "shasum": "ab234fdf2403eefaa70a1074571fc67493745c6c6450912ca2a310a4e3ae4775"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.2.0_windows_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.2.0/terraform-provider-fortianalyzer_1.2.0_windows_amd64.zip",
+          "shasum": "4ebb59e1caf41125abe2f8cb94fc2fa9853432e9069c8df0d26aaa5acb09d6be"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-fortianalyzer_1.2.0_windows_arm.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.2.0/terraform-provider-fortianalyzer_1.2.0_windows_arm.zip",
+          "shasum": "8f90faee8d58b332e718510e3f984b70adbdfe91b66a0d3aac083b4b5a51ac23"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.2.0_windows_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.2.0/terraform-provider-fortianalyzer_1.2.0_windows_arm64.zip",
+          "shasum": "c22f6a84eba9017fe31437b682b312fbedee51ee2a13c95d2620fd1bf9324e85"
+        }
+      ]
+    },
+    {
+      "version": "1.1.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.1/terraform-provider-fortianalyzer_1.1.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.1/terraform-provider-fortianalyzer_1.1.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.1.1_darwin_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.1/terraform-provider-fortianalyzer_1.1.1_darwin_amd64.zip",
+          "shasum": "7ace821a1ed2e99a14db7af057ee7c376bc1f2cde1bb77fe9b0b51dca8205d78"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.1.1_darwin_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.1/terraform-provider-fortianalyzer_1.1.1_darwin_arm64.zip",
+          "shasum": "42dea819be5f00f4ee510d77f55ffb2fe2d3892bfcab0fa7c2343efa25b3f560"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-fortianalyzer_1.1.1_freebsd_386.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.1/terraform-provider-fortianalyzer_1.1.1_freebsd_386.zip",
+          "shasum": "a72f973d52a8050b74e6e0a023ebf0ae4bbe8b3c5d38b6de40d3dc0b996bf140"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.1.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.1/terraform-provider-fortianalyzer_1.1.1_freebsd_amd64.zip",
+          "shasum": "a201149efebe6a23cfea3dc6b9ae95ae550826d81ba0333d3bdc41b9d2c9d236"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-fortianalyzer_1.1.1_freebsd_arm.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.1/terraform-provider-fortianalyzer_1.1.1_freebsd_arm.zip",
+          "shasum": "122a0b41cf4d8bd0fda0e7555cdde42ebbd904b1e695722be0b0fd47f03694dc"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.1.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.1/terraform-provider-fortianalyzer_1.1.1_freebsd_arm64.zip",
+          "shasum": "6170f3c780a40aeef15672de893eee095a3cd451f7a7f2cbb880ad08f51d7aac"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-fortianalyzer_1.1.1_linux_386.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.1/terraform-provider-fortianalyzer_1.1.1_linux_386.zip",
+          "shasum": "14b5b79716d8ee578e8b062fc966e144b8fd4d14ace15098755a593bb99499af"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.1.1_linux_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.1/terraform-provider-fortianalyzer_1.1.1_linux_amd64.zip",
+          "shasum": "38e6db5f0a8cdebd1b054c0323028ea50fc766903493074e1f6f3dd78b16b035"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-fortianalyzer_1.1.1_linux_arm.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.1/terraform-provider-fortianalyzer_1.1.1_linux_arm.zip",
+          "shasum": "e52eaf53dfc71c7391e3a0419a96849bb401f9d057051fd1bc8ebaaafe33be7d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.1.1_linux_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.1/terraform-provider-fortianalyzer_1.1.1_linux_arm64.zip",
+          "shasum": "e551659864ba899965bd9825d696cc0ea165ce3db8e2fd5b82df01baf89cefb2"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-fortianalyzer_1.1.1_windows_386.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.1/terraform-provider-fortianalyzer_1.1.1_windows_386.zip",
+          "shasum": "6b14e9c908c72e444cc1aff8a99f36bb145990339fec47d9b85a94c91c74997c"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.1.1_windows_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.1/terraform-provider-fortianalyzer_1.1.1_windows_amd64.zip",
+          "shasum": "eab877970da7e0f58335781be5fa5009130a64a00a81fbfa0788dc279f1ac14b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-fortianalyzer_1.1.1_windows_arm.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.1/terraform-provider-fortianalyzer_1.1.1_windows_arm.zip",
+          "shasum": "82de02f71e4a8e1cabe38c06ce3b1387f2c772701e2d40d22ff56e5949b76398"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.1.1_windows_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.1/terraform-provider-fortianalyzer_1.1.1_windows_arm64.zip",
+          "shasum": "0deb99b4d69c238cb13eeee975b2229424fc6770e605d00b0f0d4848fec2ba01"
+        }
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.0/terraform-provider-fortianalyzer_1.1.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.0/terraform-provider-fortianalyzer_1.1.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.1.0_darwin_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.0/terraform-provider-fortianalyzer_1.1.0_darwin_amd64.zip",
+          "shasum": "5945c98e5807d92b7f63329ce2c8123dc8ffe89e5f791965d67754d9447794eb"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.1.0_darwin_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.0/terraform-provider-fortianalyzer_1.1.0_darwin_arm64.zip",
+          "shasum": "08254294df622cb508a2bfba29a32ff9f5fbe5daedab1f480acbf50b4c1b6b1b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-fortianalyzer_1.1.0_freebsd_386.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.0/terraform-provider-fortianalyzer_1.1.0_freebsd_386.zip",
+          "shasum": "d11574c04072f8dc577f9586c8ddb2e994aabb706fb4b9a7ad71dc4c01ba53ac"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.1.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.0/terraform-provider-fortianalyzer_1.1.0_freebsd_amd64.zip",
+          "shasum": "25db9af39623aa16007178469ea0c1edef7b6252fd46c2a2f956c230ee50aad4"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-fortianalyzer_1.1.0_freebsd_arm.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.0/terraform-provider-fortianalyzer_1.1.0_freebsd_arm.zip",
+          "shasum": "6c1d93a4d5db2cdfdca8f235b7f217eed7e7f72846b2b7e07bb746d9324e27b0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.1.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.0/terraform-provider-fortianalyzer_1.1.0_freebsd_arm64.zip",
+          "shasum": "680b50d29cbac9d65e83bedbd554c1aee5f046ba066d0d88afb5bcaa5d1f1141"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-fortianalyzer_1.1.0_linux_386.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.0/terraform-provider-fortianalyzer_1.1.0_linux_386.zip",
+          "shasum": "0578441a80f7ec5f7b9d9428994504d6ab8be5b49a0091f7616b8ff48f4b7f67"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.1.0_linux_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.0/terraform-provider-fortianalyzer_1.1.0_linux_amd64.zip",
+          "shasum": "6d8e1ff2a8131381066940dbf399b8d0fb8ac56f313eb23388e6beb5f50e8f9c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-fortianalyzer_1.1.0_linux_arm.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.0/terraform-provider-fortianalyzer_1.1.0_linux_arm.zip",
+          "shasum": "82cb975f747d7650ac16b15108cb9f27f020966ea6d2e2d91f9b21aefbde51a1"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.1.0_linux_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.0/terraform-provider-fortianalyzer_1.1.0_linux_arm64.zip",
+          "shasum": "60b3c435207a94a1ebbe24f745a6cf6d3cc0af100e325d26d10cdeb745f40c49"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-fortianalyzer_1.1.0_windows_386.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.0/terraform-provider-fortianalyzer_1.1.0_windows_386.zip",
+          "shasum": "b94ef975665c709850976d1c4a7b18f36649a616d3d25c25773cabe1538e2e24"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.1.0_windows_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.0/terraform-provider-fortianalyzer_1.1.0_windows_amd64.zip",
+          "shasum": "9347d11591f088ca9cb55b53c6723b848261f8ba1eb265bafa8bbf7d77b6ecd0"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-fortianalyzer_1.1.0_windows_arm.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.0/terraform-provider-fortianalyzer_1.1.0_windows_arm.zip",
+          "shasum": "fcccd0b71d7aca4a8c6b98626f0801fcb36419dbbf0a5899b203da57430194ce"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.1.0_windows_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.1.0/terraform-provider-fortianalyzer_1.1.0_windows_arm64.zip",
+          "shasum": "f00282c5d8b2b85c1cc05a04e13073d87407a4bef1e7120ab63b6d5010cd234f"
+        }
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.2/terraform-provider-fortianalyzer_1.0.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.2/terraform-provider-fortianalyzer_1.0.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.0.2_darwin_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.2/terraform-provider-fortianalyzer_1.0.2_darwin_amd64.zip",
+          "shasum": "a238f76df7b52ad8baf953baee81c2697a534bfdecb0cec99864eae73fe9cce9"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.0.2_darwin_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.2/terraform-provider-fortianalyzer_1.0.2_darwin_arm64.zip",
+          "shasum": "86cba7fca66e1614c7d4561403e49efb75ee8deb140f19ccf3d91e2228b53df3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-fortianalyzer_1.0.2_freebsd_386.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.2/terraform-provider-fortianalyzer_1.0.2_freebsd_386.zip",
+          "shasum": "5347f81891455c32d84f28a019f33ea3041fa4cd846184a312273eff17353f08"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.0.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.2/terraform-provider-fortianalyzer_1.0.2_freebsd_amd64.zip",
+          "shasum": "2206b5db8ec5ff4b4d5152130a50f94f87ed0b5b6385982bbdfca7a8e74a5499"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-fortianalyzer_1.0.2_freebsd_arm.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.2/terraform-provider-fortianalyzer_1.0.2_freebsd_arm.zip",
+          "shasum": "444d14f77c1bf40cf1f2be139eea1021fc73cb635f8118326da22ee653f14e34"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.0.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.2/terraform-provider-fortianalyzer_1.0.2_freebsd_arm64.zip",
+          "shasum": "fe7d38bc358a4a3ca317ca90177f0e8272f00359d0c9c8d3ced532d88f34a340"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-fortianalyzer_1.0.2_linux_386.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.2/terraform-provider-fortianalyzer_1.0.2_linux_386.zip",
+          "shasum": "2b1ace6274251e8db7c997fa647e982100a60667ef66bc7e3c5e1b158b4fca4b"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.0.2_linux_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.2/terraform-provider-fortianalyzer_1.0.2_linux_amd64.zip",
+          "shasum": "e13355d67383785e401aa6a5081dd3cbf22b0ba7acb5f7dd659dd4da412001f6"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-fortianalyzer_1.0.2_linux_arm.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.2/terraform-provider-fortianalyzer_1.0.2_linux_arm.zip",
+          "shasum": "acc9756fcdffa7339123d2680844a3d370c0391e44d552d36da2d6bd40cb1e36"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.0.2_linux_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.2/terraform-provider-fortianalyzer_1.0.2_linux_arm64.zip",
+          "shasum": "b060e3e8b8e1de692b7005359c4ede66f39cd3d1cd257257aa283a03ad50d5c9"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-fortianalyzer_1.0.2_windows_386.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.2/terraform-provider-fortianalyzer_1.0.2_windows_386.zip",
+          "shasum": "67948300f7962f313559e7f8af11cb4ab846004ea4b07806d676d46f83494cbc"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.0.2_windows_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.2/terraform-provider-fortianalyzer_1.0.2_windows_amd64.zip",
+          "shasum": "9cdb0f37b05aa1f7899353a4f48bba3f1ff1c973c5a6c4f7d0883bd524812863"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-fortianalyzer_1.0.2_windows_arm.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.2/terraform-provider-fortianalyzer_1.0.2_windows_arm.zip",
+          "shasum": "d0448bb981dfe235e8eeda0437c2071967cb93cf99d06d1c4135ba26195084bc"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.0.2_windows_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.2/terraform-provider-fortianalyzer_1.0.2_windows_arm64.zip",
+          "shasum": "b9a178218cfcee40bbcd76531b542c4b5234d1440c74d389c4edda4665221f37"
+        }
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.1/terraform-provider-fortianalyzer_1.0.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.1/terraform-provider-fortianalyzer_1.0.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.0.1_darwin_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.1/terraform-provider-fortianalyzer_1.0.1_darwin_amd64.zip",
+          "shasum": "35b0acc323dcb57b7be6a017de33f575aafaf4453c7e71d58ffdd41dc3a29747"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.0.1_darwin_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.1/terraform-provider-fortianalyzer_1.0.1_darwin_arm64.zip",
+          "shasum": "9c7aa31d7562f56589149dbf20de7966077876e1a1220989904c658bc9953049"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-fortianalyzer_1.0.1_freebsd_386.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.1/terraform-provider-fortianalyzer_1.0.1_freebsd_386.zip",
+          "shasum": "6f3bb5ffd6cdecd01177d6c3b3bbef52fb49627b5a4f962af81fca9a89b88300"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.0.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.1/terraform-provider-fortianalyzer_1.0.1_freebsd_amd64.zip",
+          "shasum": "702dd9f50af44a6a71607750a81cb39fdf1c99ede7b8955402b8083c9e0d28ed"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-fortianalyzer_1.0.1_freebsd_arm.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.1/terraform-provider-fortianalyzer_1.0.1_freebsd_arm.zip",
+          "shasum": "81f9e1cb8e39f825447ee7e8b5b79fa0b2804a1c66f64281246536fc306d6fc0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.0.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.1/terraform-provider-fortianalyzer_1.0.1_freebsd_arm64.zip",
+          "shasum": "794ed91c6abc247324158034b5845b0cc3c5ae4ee55a7e02a6d42d938e585ad7"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-fortianalyzer_1.0.1_linux_386.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.1/terraform-provider-fortianalyzer_1.0.1_linux_386.zip",
+          "shasum": "85542c1e06932057e50b612f84ae9d6df64c8bcec8b71a7c306c1d6fcbfafef1"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.0.1_linux_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.1/terraform-provider-fortianalyzer_1.0.1_linux_amd64.zip",
+          "shasum": "c8bd77f7472b90a89aba5c0d55987f1b871126e6e117f22f56cc92b3c65df73f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-fortianalyzer_1.0.1_linux_arm.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.1/terraform-provider-fortianalyzer_1.0.1_linux_arm.zip",
+          "shasum": "3af67b92a036d537db3ff8b2dfa62e75c4b75406909c732f9ea43912978c5cac"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.0.1_linux_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.1/terraform-provider-fortianalyzer_1.0.1_linux_arm64.zip",
+          "shasum": "f970ec6a4e821ff0120207040f380d61757b16847187052352baa8fff502522b"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-fortianalyzer_1.0.1_windows_386.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.1/terraform-provider-fortianalyzer_1.0.1_windows_386.zip",
+          "shasum": "d00ea62e147fe945a664ded8f1eb32e2ca954620e3905931060a92409a397941"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.0.1_windows_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.1/terraform-provider-fortianalyzer_1.0.1_windows_amd64.zip",
+          "shasum": "9cf45480a9615a1f595db087e806012356e5d15ecf236bcdda6c64847d1d5b60"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-fortianalyzer_1.0.1_windows_arm.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.1/terraform-provider-fortianalyzer_1.0.1_windows_arm.zip",
+          "shasum": "8fc86ac59e4a7e2dd2eec8eb5eeb24911336bbaf71ea72eae25a9eb3a37f161c"
+        }
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.0/terraform-provider-fortianalyzer_1.0.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.0/terraform-provider-fortianalyzer_1.0.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.0.0_darwin_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.0/terraform-provider-fortianalyzer_1.0.0_darwin_amd64.zip",
+          "shasum": "8ecd6013e2cd49be4bc4ddcc8eb32862625aced0915b6ef7b6924898665a8d73"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.0.0_darwin_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.0/terraform-provider-fortianalyzer_1.0.0_darwin_arm64.zip",
+          "shasum": "816020d482cb401eeb0b37cff971b7158467fc5c66d63c5f02d1e64dca625739"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-fortianalyzer_1.0.0_freebsd_386.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.0/terraform-provider-fortianalyzer_1.0.0_freebsd_386.zip",
+          "shasum": "163154454e3dbcea1d8a92738ea7ea37a1a4547663c57a29cc1aa340d1362c58"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.0.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.0/terraform-provider-fortianalyzer_1.0.0_freebsd_amd64.zip",
+          "shasum": "3e21df754625983be473215ec6ce0b700775b5925ed65ede8dc6cd1acf6dc11e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-fortianalyzer_1.0.0_freebsd_arm.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.0/terraform-provider-fortianalyzer_1.0.0_freebsd_arm.zip",
+          "shasum": "ea278d888195c4503dcb93f2290a0e821b6c9073bb578b53869024e99eea0c0d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.0.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.0/terraform-provider-fortianalyzer_1.0.0_freebsd_arm64.zip",
+          "shasum": "920424dd1717b494a57ae2847142f4b821aa2e8ed64d1c55650a0e5e06121439"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-fortianalyzer_1.0.0_linux_386.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.0/terraform-provider-fortianalyzer_1.0.0_linux_386.zip",
+          "shasum": "52f339ec7e2ce79ef09e144298ec3c2701fcbaa3143d3acc7a9d65b6376d7c11"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.0.0_linux_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.0/terraform-provider-fortianalyzer_1.0.0_linux_amd64.zip",
+          "shasum": "966dfadc1324de64bd0abced6f3a058c0986cb79667ec70f25d8079f0038b4de"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-fortianalyzer_1.0.0_linux_arm.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.0/terraform-provider-fortianalyzer_1.0.0_linux_arm.zip",
+          "shasum": "9ef78b90f4feb27e906dcca36e74ec51d2e1867bdf6f14dd9c48c98774168549"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-fortianalyzer_1.0.0_linux_arm64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.0/terraform-provider-fortianalyzer_1.0.0_linux_arm64.zip",
+          "shasum": "218f5bc6dc461369a9d3765967c8ef369d7c50ee2ea647f2795c1dea1fbb8025"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-fortianalyzer_1.0.0_windows_386.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.0/terraform-provider-fortianalyzer_1.0.0_windows_386.zip",
+          "shasum": "aff8ca5bbc96a975accb1f762059768f96a479a2f2a6f82f8811ca49b32a5cd8"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-fortianalyzer_1.0.0_windows_amd64.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.0/terraform-provider-fortianalyzer_1.0.0_windows_amd64.zip",
+          "shasum": "16c0fc44b86646e5b093e1f361b14f1c8b7356bef31cb26c837423f586192159"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-fortianalyzer_1.0.0_windows_arm.zip",
+          "download_url": "https://github.com/fortinetdev/terraform-provider-fortianalyzer/releases/download/1.0.0/terraform-provider-fortianalyzer_1.0.0_windows_arm.zip",
+          "shasum": "40c4ea9917335efb413c4eb74214a80690db24cde948c0eda256d7580c62835b"
+        }
+      ]
+    }
+  ]
+}

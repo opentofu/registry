@@ -1,0 +1,2243 @@
+{
+  "versions": [
+    {
+      "version": "23.4.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.4.0/terraform-provider-netapp-gcp_23.4.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.4.0/terraform-provider-netapp-gcp_23.4.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_23.4.0_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.4.0/terraform-provider-netapp-gcp_23.4.0_darwin_amd64.zip",
+          "shasum": "d631a2bf6735db26bfcc6c65782a6fb5b46d0e402fdbd9cb62445d126f38f56c"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_23.4.0_darwin_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.4.0/terraform-provider-netapp-gcp_23.4.0_darwin_arm64.zip",
+          "shasum": "cd2e4d1081d6f6966a423a8a29871aa19eca29819203b30c0316ea0fc7243bb1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_23.4.0_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.4.0/terraform-provider-netapp-gcp_23.4.0_freebsd_386.zip",
+          "shasum": "b73b08334ec41b52bb89a1de3be8e2ead6f09f9f4e7cff9d9b74e387ff8c58a1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_23.4.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.4.0/terraform-provider-netapp-gcp_23.4.0_freebsd_amd64.zip",
+          "shasum": "a0052bdc281bbc078c1d5c22319cd2972044938b5fac7ecd355b3f9d731c9d79"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_23.4.0_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.4.0/terraform-provider-netapp-gcp_23.4.0_freebsd_arm.zip",
+          "shasum": "01e4e46067257e2367d6a04f732ca64d304660f4e33a6c845b7085b8fe8fb50f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_23.4.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.4.0/terraform-provider-netapp-gcp_23.4.0_freebsd_arm64.zip",
+          "shasum": "7afaa306c743689f93a954d5e2317d45e6a9a0205d3f04374829a4a5f3ea074c"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_23.4.0_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.4.0/terraform-provider-netapp-gcp_23.4.0_linux_386.zip",
+          "shasum": "c41955801303f83526630ba47c6aa77612aedd74eb07404f07fa856555a90061"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_23.4.0_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.4.0/terraform-provider-netapp-gcp_23.4.0_linux_amd64.zip",
+          "shasum": "d2c2713023b53534d07bbd04da14712211e500b838682222466731e84e69b245"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_23.4.0_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.4.0/terraform-provider-netapp-gcp_23.4.0_linux_arm.zip",
+          "shasum": "3ddbe774557098b82c38ed5a3669d23ea83495869f89824249af6cb5684be181"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_23.4.0_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.4.0/terraform-provider-netapp-gcp_23.4.0_linux_arm64.zip",
+          "shasum": "d3bf482bc3dcbb2192753dd5f4bafe091f9e6b2004c8b5d66a5ae27c2a7d9505"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_23.4.0_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.4.0/terraform-provider-netapp-gcp_23.4.0_windows_386.zip",
+          "shasum": "f78b64deb58475c5731ce82ec391d279a1fc1af3478a4cb80c9ee61e2b66dd19"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_23.4.0_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.4.0/terraform-provider-netapp-gcp_23.4.0_windows_amd64.zip",
+          "shasum": "9c7176201d65fc4c68e0629440803554d791e0f1b1dfede52bf087fec830699b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_23.4.0_windows_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.4.0/terraform-provider-netapp-gcp_23.4.0_windows_arm.zip",
+          "shasum": "98bf5ad59516ce077af775206a1d22b8500e0ec088840ff174f2cb709553c254"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_23.4.0_windows_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.4.0/terraform-provider-netapp-gcp_23.4.0_windows_arm64.zip",
+          "shasum": "b241243cd9e3fb5ddfe48692900e029485a8b6bd2d017e48b86c2913eea5a3b8"
+        }
+      ]
+    },
+    {
+      "version": "23.1.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.1.0/terraform-provider-netapp-gcp_23.1.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.1.0/terraform-provider-netapp-gcp_23.1.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_23.1.0_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.1.0/terraform-provider-netapp-gcp_23.1.0_darwin_amd64.zip",
+          "shasum": "f2ccfb4ac0db0b26175e33f0826ae6c206ef5e1da576887aaa8290c7038dc050"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_23.1.0_darwin_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.1.0/terraform-provider-netapp-gcp_23.1.0_darwin_arm64.zip",
+          "shasum": "69e7dba7899be37f2b58fb1d22b006ef9c7c2e1c63919fd3d4f7fd5b6bd47e5d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_23.1.0_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.1.0/terraform-provider-netapp-gcp_23.1.0_freebsd_386.zip",
+          "shasum": "4ae3a3b1dbb002629fea036145e356cbddb9a5fed335f945b7af9e4ff811c235"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_23.1.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.1.0/terraform-provider-netapp-gcp_23.1.0_freebsd_amd64.zip",
+          "shasum": "fccb2c742997b20603eba410ab084636057a754a185d5844faa3c9eeb317be51"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_23.1.0_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.1.0/terraform-provider-netapp-gcp_23.1.0_freebsd_arm.zip",
+          "shasum": "9f1e26ceca8aa92338015c60a894a394225dd34c16087f5e849bf2fbb15744a8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_23.1.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.1.0/terraform-provider-netapp-gcp_23.1.0_freebsd_arm64.zip",
+          "shasum": "9ef88e278fea26ef87e417cb51fd8934eb0e99301d3b782a466c99a18575b5df"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_23.1.0_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.1.0/terraform-provider-netapp-gcp_23.1.0_linux_386.zip",
+          "shasum": "1054782a2b15da1062f10b1c8e55a90f66c1fd8f5aa7cd22b0c52a5384be5630"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_23.1.0_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.1.0/terraform-provider-netapp-gcp_23.1.0_linux_amd64.zip",
+          "shasum": "8c58f3acbc35dce85dc7aac59f8eb293d01429195b75bcd1b86dcbcd54f5caf7"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_23.1.0_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.1.0/terraform-provider-netapp-gcp_23.1.0_linux_arm.zip",
+          "shasum": "cb7632d0b52bff8604f2a85d2188a8d97cab07f905cf4679734a284368f32522"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_23.1.0_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.1.0/terraform-provider-netapp-gcp_23.1.0_linux_arm64.zip",
+          "shasum": "bcca3155431409b1608a7529444de368a145d68a412f6ba556825d558da045bf"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_23.1.0_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.1.0/terraform-provider-netapp-gcp_23.1.0_windows_386.zip",
+          "shasum": "ad172795cc8b85cc4ed16035ce887d89bc3ca897c004ee0738b92697659d72ac"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_23.1.0_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.1.0/terraform-provider-netapp-gcp_23.1.0_windows_amd64.zip",
+          "shasum": "a6c020ad7c094b7d3daacae94ca6680eb4328f9f033ff6ef51ca87ee989e696c"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_23.1.0_windows_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.1.0/terraform-provider-netapp-gcp_23.1.0_windows_arm.zip",
+          "shasum": "e42282601037499a78b8af032fd6a0da15c1cb71dc6a9fdb7ccb763a9f3f52bb"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_23.1.0_windows_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v23.1.0/terraform-provider-netapp-gcp_23.1.0_windows_arm64.zip",
+          "shasum": "ffb29e053a0bdac3c264a1f3cfd686e2f01a6336d94d7239253408a53526e5d2"
+        }
+      ]
+    },
+    {
+      "version": "22.12.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.12.0/terraform-provider-netapp-gcp_22.12.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.12.0/terraform-provider-netapp-gcp_22.12.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.12.0_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.12.0/terraform-provider-netapp-gcp_22.12.0_darwin_amd64.zip",
+          "shasum": "c29f9787f085406488f66b447e5f8917501b01892916239383afad1209c8e1e6"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.12.0_darwin_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.12.0/terraform-provider-netapp-gcp_22.12.0_darwin_arm64.zip",
+          "shasum": "137b103e132131f7dcadbd5fbce773b0e7bfe7af37d4a52502199bcd6d21bf8c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.12.0_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.12.0/terraform-provider-netapp-gcp_22.12.0_freebsd_386.zip",
+          "shasum": "41fb0a3884ad2883abbf9a6f3230847e88e1d9292b6e4c85fe7c1841952c9b84"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.12.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.12.0/terraform-provider-netapp-gcp_22.12.0_freebsd_amd64.zip",
+          "shasum": "fb40bdeba834b648a7ccfbc5798e9bf19cb94d11f471e492166d91dd56313f77"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.12.0_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.12.0/terraform-provider-netapp-gcp_22.12.0_freebsd_arm.zip",
+          "shasum": "c2c8e34c9f53d2e26fafb7afe682df5e436223be96034e9dcd0b7eb5880010e4"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.12.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.12.0/terraform-provider-netapp-gcp_22.12.0_freebsd_arm64.zip",
+          "shasum": "d73c6a1db67253edce80e8a5ebb66b30f6333a6b8e5815087ab5d3beadc24258"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.12.0_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.12.0/terraform-provider-netapp-gcp_22.12.0_linux_386.zip",
+          "shasum": "b319eb5e8d0377589dd2f63a7f81ef0e88508966e6115e5dd2f8199fc50a3a67"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.12.0_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.12.0/terraform-provider-netapp-gcp_22.12.0_linux_amd64.zip",
+          "shasum": "18ebde4939123c1b1dce162a45d74a778a484d5b8b95557bdf050cfb2319c816"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.12.0_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.12.0/terraform-provider-netapp-gcp_22.12.0_linux_arm.zip",
+          "shasum": "853de7a7ce9e09e0a5fe7f52b3e41e3f112466b0fa282813368ba655722f5f6b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.12.0_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.12.0/terraform-provider-netapp-gcp_22.12.0_linux_arm64.zip",
+          "shasum": "5c69337beb2822c25f8cce85428cad1c3888a02c0da6f2645cdc3b315285ae9d"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.12.0_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.12.0/terraform-provider-netapp-gcp_22.12.0_windows_386.zip",
+          "shasum": "cfdc7486e3b6c27fbf0f6df387ceccee7dded7e385b72ca2aa8793fdad01bb81"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.12.0_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.12.0/terraform-provider-netapp-gcp_22.12.0_windows_amd64.zip",
+          "shasum": "45d7c7fc393072257e6b835ef5375381922b56f6d278dd2fe22a3171033005e8"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.12.0_windows_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.12.0/terraform-provider-netapp-gcp_22.12.0_windows_arm.zip",
+          "shasum": "a869a11af138fdb375cfc1981946292fed917307b6778c67230c255c147df51b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.12.0_windows_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.12.0/terraform-provider-netapp-gcp_22.12.0_windows_arm64.zip",
+          "shasum": "9e1f2c40cf967a99c69088c8416990044509abb7f036f8f8e60d3734d35752cf"
+        }
+      ]
+    },
+    {
+      "version": "22.10.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.10.0/terraform-provider-netapp-gcp_22.10.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.10.0/terraform-provider-netapp-gcp_22.10.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.10.0_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.10.0/terraform-provider-netapp-gcp_22.10.0_darwin_amd64.zip",
+          "shasum": "0567dcd230814a3fc9afa8d5b24029427ff755f92c986aad5ad0b0e0cd53fa5f"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.10.0_darwin_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.10.0/terraform-provider-netapp-gcp_22.10.0_darwin_arm64.zip",
+          "shasum": "cad11c1c7030cdbba0322bd6f45913c14bdaf519012b05d84e71fd7881c36056"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.10.0_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.10.0/terraform-provider-netapp-gcp_22.10.0_freebsd_386.zip",
+          "shasum": "60bdcaf24492ce963dd3cd19c014fb787bfc984be03122d1b3b712ffd2b82fe2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.10.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.10.0/terraform-provider-netapp-gcp_22.10.0_freebsd_amd64.zip",
+          "shasum": "c106a64e78618afe57b0fe02ebfc942f6c20427bb1231b86551fe800877ef33d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.10.0_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.10.0/terraform-provider-netapp-gcp_22.10.0_freebsd_arm.zip",
+          "shasum": "6dcf3b0425a9bac8b11f500ea071f5faa7f4d16fb258dc43a550be938527e1be"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.10.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.10.0/terraform-provider-netapp-gcp_22.10.0_freebsd_arm64.zip",
+          "shasum": "87eab14b9029af9cf5b60dec452346b99ccd9216068e8029ccd0a69995e5299a"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.10.0_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.10.0/terraform-provider-netapp-gcp_22.10.0_linux_386.zip",
+          "shasum": "22417ff6ac411900e5c9a46a60578182dcacfd63dc1cd1c060d20459549667a9"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.10.0_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.10.0/terraform-provider-netapp-gcp_22.10.0_linux_amd64.zip",
+          "shasum": "ccd767dba8861e07b79affa9de61846c88ed85ad8048efad91b8222ba4f58e20"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.10.0_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.10.0/terraform-provider-netapp-gcp_22.10.0_linux_arm.zip",
+          "shasum": "18f94628e11c0f68b7f5ddba074052ac64aef500996d33de060d0be6e88e7786"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.10.0_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.10.0/terraform-provider-netapp-gcp_22.10.0_linux_arm64.zip",
+          "shasum": "c038332dfb8f2f3ae09914a43168f25650b147bec7401200ca47d5177015f2cc"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.10.0_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.10.0/terraform-provider-netapp-gcp_22.10.0_windows_386.zip",
+          "shasum": "11f3ab0007750b0c2f95a707abf797286a578c89a417656d30f41557aacda157"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.10.0_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.10.0/terraform-provider-netapp-gcp_22.10.0_windows_amd64.zip",
+          "shasum": "cda110cb08831c78456c9dd930c68ed1ca2a784ea43307abc7c78853dfa59783"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.10.0_windows_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.10.0/terraform-provider-netapp-gcp_22.10.0_windows_arm.zip",
+          "shasum": "18b9fb000084b39db48243e2778a89c6c1a9b3b052a4e0b0ff11cb0e0aa57ce5"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.10.0_windows_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.10.0/terraform-provider-netapp-gcp_22.10.0_windows_arm64.zip",
+          "shasum": "5ba7e36113c03fdd33ca0ed3e9dd8888038d2b5b6b09eb69b084dc883379c6af"
+        }
+      ]
+    },
+    {
+      "version": "22.8.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.2/terraform-provider-netapp-gcp_22.8.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.2/terraform-provider-netapp-gcp_22.8.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.8.2_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.2/terraform-provider-netapp-gcp_22.8.2_darwin_amd64.zip",
+          "shasum": "bfffea18486d41e8dff5eaa12af2d22165b2151fc5fdb7222d970066ea40443c"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.8.2_darwin_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.2/terraform-provider-netapp-gcp_22.8.2_darwin_arm64.zip",
+          "shasum": "ef4dd44fb3f7ffeb16e8decdcfbf83416c70233590219bc86d1132ab0cf636a5"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.8.2_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.2/terraform-provider-netapp-gcp_22.8.2_freebsd_386.zip",
+          "shasum": "de4447bc1677a7b72d56a52a473574277683107c584cbe5e0323286a6752a1f2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.8.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.2/terraform-provider-netapp-gcp_22.8.2_freebsd_amd64.zip",
+          "shasum": "24ebc814b7f1c39b6c4b565cbab55661248c82df7199d5020a26085d31605ace"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.8.2_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.2/terraform-provider-netapp-gcp_22.8.2_freebsd_arm.zip",
+          "shasum": "54eb13fad9e22149d1988d46de49e728643bfe2d814f1f81c0e5a70853711375"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.8.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.2/terraform-provider-netapp-gcp_22.8.2_freebsd_arm64.zip",
+          "shasum": "7031c8fca1c0c0bfc7a59bc73c206d2a4b4994dd5d23d3357408e56b7f7f5cff"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.8.2_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.2/terraform-provider-netapp-gcp_22.8.2_linux_386.zip",
+          "shasum": "e4e30c62007af3c595989022edc5cf46d782e0990c30e1b3cf53c5b047e2c8b6"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.8.2_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.2/terraform-provider-netapp-gcp_22.8.2_linux_amd64.zip",
+          "shasum": "63b966d733a3f83711c2a31cfb995965c4c9a5e941505ecdc52b86ab52eb61be"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.8.2_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.2/terraform-provider-netapp-gcp_22.8.2_linux_arm.zip",
+          "shasum": "af1e672a499303ab271561382476e3049ef55e45bd79cde56177ebf1c7686a8c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.8.2_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.2/terraform-provider-netapp-gcp_22.8.2_linux_arm64.zip",
+          "shasum": "6dcf4dd943b5191b28e2cf7c1ea304b9b1f28db2815e3246702b1c4322e5e1ff"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.8.2_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.2/terraform-provider-netapp-gcp_22.8.2_windows_386.zip",
+          "shasum": "93fd1657bae9f88945ec05dc37a54049d259a6ce748fc3884288d54aafb1a5f5"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.8.2_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.2/terraform-provider-netapp-gcp_22.8.2_windows_amd64.zip",
+          "shasum": "49a508483e001fcfb2d85f1563b282be7e1c861fab6ef77a528b67046f7262f6"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.8.2_windows_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.2/terraform-provider-netapp-gcp_22.8.2_windows_arm.zip",
+          "shasum": "710c1141a45cdb9ba4c64c51beb2b6307ac0ae48f9e70ac7b7eb6e856853ecb7"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.8.2_windows_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.2/terraform-provider-netapp-gcp_22.8.2_windows_arm64.zip",
+          "shasum": "d79174dea24807fde57dcf8f4e90dbef9ebd261d6187f322ab48979210bb4d4e"
+        }
+      ]
+    },
+    {
+      "version": "22.8.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.1/terraform-provider-netapp-gcp_22.8.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.1/terraform-provider-netapp-gcp_22.8.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.8.1_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.1/terraform-provider-netapp-gcp_22.8.1_darwin_amd64.zip",
+          "shasum": "decadd42822d86d0ba6ae85cecc7ebaa41b6204b8f68a1609ab30e5c3a079d98"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.8.1_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.1/terraform-provider-netapp-gcp_22.8.1_freebsd_386.zip",
+          "shasum": "d23a5e90ae22ff73ead92db5fd944607d1639c56c51be73b326c9c1dd9c79055"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.8.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.1/terraform-provider-netapp-gcp_22.8.1_freebsd_amd64.zip",
+          "shasum": "3ea0678f8ed2350ee4f760900933c728d172d9e2bea9932e3c148fe99d9ec2d7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.8.1_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.1/terraform-provider-netapp-gcp_22.8.1_freebsd_arm.zip",
+          "shasum": "8aff1768824c24e05cfac4221941d61dff2d5a009cf380d97330796d42b49206"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.8.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.1/terraform-provider-netapp-gcp_22.8.1_freebsd_arm64.zip",
+          "shasum": "355de8c57b5016f5e5fd29aa6126d43278f5aa4de298cce31f356d3ad31cd5bd"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.8.1_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.1/terraform-provider-netapp-gcp_22.8.1_linux_386.zip",
+          "shasum": "7a5c9675b0cebcf662f13b7c233b38e692404205415bee73fb837808aa13abe8"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.8.1_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.1/terraform-provider-netapp-gcp_22.8.1_linux_amd64.zip",
+          "shasum": "8c468d712eadf39fdc654a79f2877b92aba069f0621ea42f23832ce5c53524c2"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.8.1_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.1/terraform-provider-netapp-gcp_22.8.1_linux_arm.zip",
+          "shasum": "039149e31ddb080f6a953e636c8bcc682b3bbcbdb280168aa9032f4bb5ac91cf"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.8.1_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.1/terraform-provider-netapp-gcp_22.8.1_linux_arm64.zip",
+          "shasum": "fdb621286c9d1008ad985dc81f4c9742380646ffe96ba299caca54fcbaaab38b"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.8.1_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.1/terraform-provider-netapp-gcp_22.8.1_windows_386.zip",
+          "shasum": "7b8ecd73cd805776a19bca63e743b32f15b9b78858e164d0e60d4282a2121612"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.8.1_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.1/terraform-provider-netapp-gcp_22.8.1_windows_amd64.zip",
+          "shasum": "62e51bf08a2bb643afad5cb0ec2d0c9072cc4dd488656fa5b6699beb5191c03c"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.8.1_windows_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.1/terraform-provider-netapp-gcp_22.8.1_windows_arm.zip",
+          "shasum": "a5001bcb09552bf5d13227f8371d78486f23d41e861128d80c5b0852749d89d2"
+        }
+      ]
+    },
+    {
+      "version": "22.8.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.0/terraform-provider-netapp-gcp_22.8.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.0/terraform-provider-netapp-gcp_22.8.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.8.0_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.0/terraform-provider-netapp-gcp_22.8.0_darwin_amd64.zip",
+          "shasum": "72de87c8b9df21e607429c7b11eadf0a46489b9b295146b0ba7b7b77ee56eec9"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.8.0_darwin_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.0/terraform-provider-netapp-gcp_22.8.0_darwin_arm64.zip",
+          "shasum": "946db123bc786b8c8631c4b00579111d87bae1e81549a1c38fbf4b36eb1333e0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.8.0_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.0/terraform-provider-netapp-gcp_22.8.0_freebsd_386.zip",
+          "shasum": "cb70b4160b385564a598545dba64038897ba16b033a458ce2d874cf819aa04d5"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.8.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.0/terraform-provider-netapp-gcp_22.8.0_freebsd_amd64.zip",
+          "shasum": "2a76c732a43f54edfc13227f092dc84c830baeaadff4703706f18c755929d388"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.8.0_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.0/terraform-provider-netapp-gcp_22.8.0_freebsd_arm.zip",
+          "shasum": "5f8c784ba9db4d1673aeb8465fd9d0c3d3253a98948223ac2ca28294254b9336"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.8.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.0/terraform-provider-netapp-gcp_22.8.0_freebsd_arm64.zip",
+          "shasum": "5b12e9e6f0e3dd05385ee10bd0f37c676c408333c28d6d5df0e0175eb6bbec6e"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.8.0_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.0/terraform-provider-netapp-gcp_22.8.0_linux_386.zip",
+          "shasum": "de5905c9ac7b35cbeaea263c1d8f4a1e812ba570d276dae0b6215fb31034d3a2"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.8.0_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.0/terraform-provider-netapp-gcp_22.8.0_linux_amd64.zip",
+          "shasum": "8116dec2fc6c272eb78ccbc716f9214e3b71c2023b161082f1c6db569d1394b6"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.8.0_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.0/terraform-provider-netapp-gcp_22.8.0_linux_arm.zip",
+          "shasum": "d3079397bf664b2d5df0a419594761d02e1ab2d6d04f21d1a1479b0a846ebdb3"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.8.0_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.0/terraform-provider-netapp-gcp_22.8.0_linux_arm64.zip",
+          "shasum": "8e641e2fbc69219990b5d70382a7cc6c522132eecd4687520dadda6efe74e8de"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.8.0_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.0/terraform-provider-netapp-gcp_22.8.0_windows_386.zip",
+          "shasum": "d3d9f5a8b85358371444e207079a7f769e60c5978f4b1cd8af600d406e418855"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.8.0_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.0/terraform-provider-netapp-gcp_22.8.0_windows_amd64.zip",
+          "shasum": "9fb6c4c390d4d1488e3cf9e4c2ad52bfdf9d7f80dc4a8bf8d122c0731a161623"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.8.0_windows_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.8.0/terraform-provider-netapp-gcp_22.8.0_windows_arm.zip",
+          "shasum": "aeac60cf1c57e5a6774da8cf95e67ba481b75f25120b058ab6bb63772029f79b"
+        }
+      ]
+    },
+    {
+      "version": "22.6.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.1/terraform-provider-netapp-gcp_22.6.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.1/terraform-provider-netapp-gcp_22.6.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.6.1_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.1/terraform-provider-netapp-gcp_22.6.1_darwin_amd64.zip",
+          "shasum": "aeebb5d1ec4d87cd8a12b4287fa3ade0121c728b82f5e25c385fdb2e7792ec8c"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.6.1_darwin_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.1/terraform-provider-netapp-gcp_22.6.1_darwin_arm64.zip",
+          "shasum": "cf6c1b476d1bae94d3c842de72e3b976ec1fdf43e67b45e6c2a3fee267408856"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.6.1_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.1/terraform-provider-netapp-gcp_22.6.1_freebsd_386.zip",
+          "shasum": "1edebb43599593836f364ffb669e7742e36a1c9669921dfc2feaef304ba37a6a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.6.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.1/terraform-provider-netapp-gcp_22.6.1_freebsd_amd64.zip",
+          "shasum": "7d943b4f8f7b068accc2291769cfc0e798365e2d1058e4a2a0cdf72b472e2b60"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.6.1_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.1/terraform-provider-netapp-gcp_22.6.1_freebsd_arm.zip",
+          "shasum": "71f32744dde1182ded8cdee7db6029c6a6a922e001a978bf333c64fa683bc677"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.6.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.1/terraform-provider-netapp-gcp_22.6.1_freebsd_arm64.zip",
+          "shasum": "e7fad24ce77331418453074296f49ed189a40e58ff9d9794170ac14297d55d38"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.6.1_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.1/terraform-provider-netapp-gcp_22.6.1_linux_386.zip",
+          "shasum": "a6ecf3c892197cf87f73e28ac93f11a587bd1071e3ae07ece8739107732718f2"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.6.1_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.1/terraform-provider-netapp-gcp_22.6.1_linux_amd64.zip",
+          "shasum": "b41fdf9a53c767731e47a0489fd591c6450ecf2d0c5c330e714a78e3b2ac039c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.6.1_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.1/terraform-provider-netapp-gcp_22.6.1_linux_arm.zip",
+          "shasum": "eb6400eea28c1b21a99b8b8da5908b0100ddfde9db6d97da5d686ab9ec1d4660"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.6.1_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.1/terraform-provider-netapp-gcp_22.6.1_linux_arm64.zip",
+          "shasum": "04eb1752f62a7399590c00af64a64c99d71b925ff2b3f94e1bfa550709662764"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.6.1_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.1/terraform-provider-netapp-gcp_22.6.1_windows_386.zip",
+          "shasum": "f73d839ac67aa6bbd70740827c20df0fb40b5c61927c52eb245e4e210bf0a71e"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.6.1_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.1/terraform-provider-netapp-gcp_22.6.1_windows_amd64.zip",
+          "shasum": "98d2e11db6a25adf8c09ed666075d64e14b85a26d838fee89f0c20fbbef0d3b2"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.6.1_windows_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.1/terraform-provider-netapp-gcp_22.6.1_windows_arm.zip",
+          "shasum": "95c19eefbd696f2938369e379b54b16f8c5a7b3ba95623c8ede4377ec4604476"
+        }
+      ]
+    },
+    {
+      "version": "22.6.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.0/terraform-provider-netapp-gcp_22.6.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.0/terraform-provider-netapp-gcp_22.6.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.6.0_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.0/terraform-provider-netapp-gcp_22.6.0_darwin_amd64.zip",
+          "shasum": "3cfed538f0b12c3842a0357efb2e22b386849cee328d1232838a9c2860e7397c"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.6.0_darwin_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.0/terraform-provider-netapp-gcp_22.6.0_darwin_arm64.zip",
+          "shasum": "bf50aeb4d9f199d49bd68b7c9dde1155743faeaec1d8241b161a510d61f38b28"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.6.0_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.0/terraform-provider-netapp-gcp_22.6.0_freebsd_386.zip",
+          "shasum": "fa3ef779483ca19cf6e7d8fca69ed73123385e46f3fced4cba0863e971875656"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.6.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.0/terraform-provider-netapp-gcp_22.6.0_freebsd_amd64.zip",
+          "shasum": "1e2fb6af4a8bc133d37476caf53909dd50924209d3506a196395b34fcb08bea9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.6.0_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.0/terraform-provider-netapp-gcp_22.6.0_freebsd_arm.zip",
+          "shasum": "cbcaed30deb7d1e9e9b9b66ee2047f69ac1f87ed25bab78b5f19464816f7d5de"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.6.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.0/terraform-provider-netapp-gcp_22.6.0_freebsd_arm64.zip",
+          "shasum": "1e0fc760e88e2f82b7cc2ee7abb7ecc88300e5f4f79efb703cbd6ff1f7d50f92"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.6.0_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.0/terraform-provider-netapp-gcp_22.6.0_linux_386.zip",
+          "shasum": "9784e9cecda14f4770bcd0455c7c8f587081449c0142c897a699e15ac6824bf5"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.6.0_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.0/terraform-provider-netapp-gcp_22.6.0_linux_amd64.zip",
+          "shasum": "c68595f44ee06bf0de46230bf16b13f1bb26da6d83c761beeec43784b30e4ead"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.6.0_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.0/terraform-provider-netapp-gcp_22.6.0_linux_arm.zip",
+          "shasum": "592c8db5e6e31e37b9870630cf28b6fde2f0a32ce572db006f9629d31c34c2f8"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.6.0_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.0/terraform-provider-netapp-gcp_22.6.0_linux_arm64.zip",
+          "shasum": "2d021c4c5d448d0c9ab6c3d5fcdd75622ad8c99413716f08720e5977bea620e1"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.6.0_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.0/terraform-provider-netapp-gcp_22.6.0_windows_386.zip",
+          "shasum": "707fce7ffff9d64fc9782d9d9b0d48fb6fec6bc29f3c34ef05710b72223705b7"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.6.0_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.0/terraform-provider-netapp-gcp_22.6.0_windows_amd64.zip",
+          "shasum": "fa527f2106fbdefcfb3a5963c817da3bd971b2a878fa5a4a7f0388f1a09af9d4"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.6.0_windows_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.6.0/terraform-provider-netapp-gcp_22.6.0_windows_arm.zip",
+          "shasum": "e8f90bbed656d2927dc5ffda2a60e3e6d4ac8871114b9f8b3f8a3bbfde8d5795"
+        }
+      ]
+    },
+    {
+      "version": "22.4.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.4.0/terraform-provider-netapp-gcp_22.4.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.4.0/terraform-provider-netapp-gcp_22.4.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.4.0_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.4.0/terraform-provider-netapp-gcp_22.4.0_darwin_amd64.zip",
+          "shasum": "c7293017f1010eb7d46022e1f14ca52ffd36c04c6971e9ce43b7bad337472488"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.4.0_darwin_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.4.0/terraform-provider-netapp-gcp_22.4.0_darwin_arm64.zip",
+          "shasum": "dcb4ce5e72c85c62d0fcbcf1ab949dd1d55b4685454dc4724917e7997f26e94f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.4.0_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.4.0/terraform-provider-netapp-gcp_22.4.0_freebsd_386.zip",
+          "shasum": "02bfb90011d754571b8c62d03402821057c252a2eb35eb6536aa5f84e745690b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.4.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.4.0/terraform-provider-netapp-gcp_22.4.0_freebsd_amd64.zip",
+          "shasum": "d9b39f5464355bde4986078d332c557ac792631489d9bd4ed4f3bcab6a526312"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.4.0_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.4.0/terraform-provider-netapp-gcp_22.4.0_freebsd_arm.zip",
+          "shasum": "2c407bcdec80ce5ac7def036c27be4f86a89c69e9a69f1b14ce02e836f4099b6"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.4.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.4.0/terraform-provider-netapp-gcp_22.4.0_freebsd_arm64.zip",
+          "shasum": "1aebd445ddef01fee4d298cc51a207d1cee20daf111e142ea2c24a32ab6071e5"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.4.0_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.4.0/terraform-provider-netapp-gcp_22.4.0_linux_386.zip",
+          "shasum": "f3bdc8a7036aad5d1887a3b02f223420364a017a554b77968feeabaf375716c0"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.4.0_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.4.0/terraform-provider-netapp-gcp_22.4.0_linux_amd64.zip",
+          "shasum": "2477da273526b1f217a22e0e41d042d4011164a5d41c2a089731b4c2ffa121d2"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.4.0_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.4.0/terraform-provider-netapp-gcp_22.4.0_linux_arm.zip",
+          "shasum": "50db8dade3ff145e0f9018f653c54958cc312f72c2f5895524a323a81c04ee8d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.4.0_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.4.0/terraform-provider-netapp-gcp_22.4.0_linux_arm64.zip",
+          "shasum": "29961bcd46ffdc9c2278379188dfa8ac63d9a620b79c7b0447f48e718cf24408"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.4.0_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.4.0/terraform-provider-netapp-gcp_22.4.0_windows_386.zip",
+          "shasum": "a614ecc5fe8e4638163f6ab1538a6016dbe64e94e876d033ce713ca39e0cd871"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.4.0_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.4.0/terraform-provider-netapp-gcp_22.4.0_windows_amd64.zip",
+          "shasum": "d20b0a136dbf6bf676659e614fc2e6b8aaba526d3b537e7670ec542e9735c44e"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.4.0_windows_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.4.0/terraform-provider-netapp-gcp_22.4.0_windows_arm.zip",
+          "shasum": "2b1ad81162347b0c1b93909c42ceef15dff99e1e17ce8d4d0a8c2dea22f2f54c"
+        }
+      ]
+    },
+    {
+      "version": "22.3.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.3.0/terraform-provider-netapp-gcp_22.3.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.3.0/terraform-provider-netapp-gcp_22.3.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.3.0_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.3.0/terraform-provider-netapp-gcp_22.3.0_darwin_amd64.zip",
+          "shasum": "e81a7ebb9938bdd2401a74d4c325946168635b604e767caeee85c1db14e7d6cb"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.3.0_darwin_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.3.0/terraform-provider-netapp-gcp_22.3.0_darwin_arm64.zip",
+          "shasum": "757f754f867e2b05ef56ac4f6d574b1affde14c54c58540f809e75d650480b78"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.3.0_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.3.0/terraform-provider-netapp-gcp_22.3.0_freebsd_386.zip",
+          "shasum": "5b9044163e548dad01f1da7538a2e59f164e2415d7583db3001b272de855e717"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.3.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.3.0/terraform-provider-netapp-gcp_22.3.0_freebsd_amd64.zip",
+          "shasum": "6ec071db795ee8723d29b5b64ed10e05f3bf72656ee279aa740cf24817427d51"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.3.0_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.3.0/terraform-provider-netapp-gcp_22.3.0_freebsd_arm.zip",
+          "shasum": "167f6a9be16e2616040213b4944558e04b0ca0e1f58a85a10cb25a9685a44125"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.3.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.3.0/terraform-provider-netapp-gcp_22.3.0_freebsd_arm64.zip",
+          "shasum": "8dfc5826bf1a1e0b06791bd6c6f9a641b87ed7a32bbe4553719f08e8d7f4c63f"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.3.0_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.3.0/terraform-provider-netapp-gcp_22.3.0_linux_386.zip",
+          "shasum": "4ea0b299e44d2d68381eb3e29e1986f7da8b39b47420be288b10cc24de9093da"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.3.0_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.3.0/terraform-provider-netapp-gcp_22.3.0_linux_amd64.zip",
+          "shasum": "1a3e3c8865e3779d417abad2064f528c760f2892ed964317cb2091267a20176e"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.3.0_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.3.0/terraform-provider-netapp-gcp_22.3.0_linux_arm.zip",
+          "shasum": "93e0721e7983d1a421f7f6aabb48a5d5aa2b0fdafdc38658cbad662a883098df"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.3.0_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.3.0/terraform-provider-netapp-gcp_22.3.0_linux_arm64.zip",
+          "shasum": "84c803757933cc604cc4791ae17684990c441f8a980f698858d83ba3c0d23d8d"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.3.0_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.3.0/terraform-provider-netapp-gcp_22.3.0_windows_386.zip",
+          "shasum": "800100f2d2233d96a6e381a93d93491ee7697040440230e562cf76326c7fa131"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.3.0_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.3.0/terraform-provider-netapp-gcp_22.3.0_windows_amd64.zip",
+          "shasum": "e7b6bfe895528bb9af614d43b27f8c307951295c024601921bd98ead2691306e"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.3.0_windows_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.3.0/terraform-provider-netapp-gcp_22.3.0_windows_arm.zip",
+          "shasum": "0dec066bc70cb6f443d2952a95a339cd648f78976787e0c0996e69a8958dc36b"
+        }
+      ]
+    },
+    {
+      "version": "22.2.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.2.0/terraform-provider-netapp-gcp_22.2.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.2.0/terraform-provider-netapp-gcp_22.2.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.2.0_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.2.0/terraform-provider-netapp-gcp_22.2.0_darwin_amd64.zip",
+          "shasum": "8679ef63f1b6f5960ed61db39c4f6a6bffbcf58a35f57eaa14190d6beb34a130"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.2.0_darwin_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.2.0/terraform-provider-netapp-gcp_22.2.0_darwin_arm64.zip",
+          "shasum": "69acb2830b6e69f10c86478cf3d6c367ce2dc8f1cee7d27d99052892bef797e3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.2.0_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.2.0/terraform-provider-netapp-gcp_22.2.0_freebsd_386.zip",
+          "shasum": "6e68512d54137f364b31c4b4d54c94a671310e442af77c8e620c188d1e194545"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.2.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.2.0/terraform-provider-netapp-gcp_22.2.0_freebsd_amd64.zip",
+          "shasum": "7426853ed3251172a5ae50cc265f0b17cc9281ea5c1f0dd914f904502de31ec1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.2.0_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.2.0/terraform-provider-netapp-gcp_22.2.0_freebsd_arm.zip",
+          "shasum": "a0d5fb615a610b30f0a4bdb55b5b30b13f2fa2c66a347e3c84674f5de3c182b9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.2.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.2.0/terraform-provider-netapp-gcp_22.2.0_freebsd_arm64.zip",
+          "shasum": "a1434851e14e58fe436635257e10c46dc66e480ad8e9e6e9c158e5954ac39dd0"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.2.0_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.2.0/terraform-provider-netapp-gcp_22.2.0_linux_386.zip",
+          "shasum": "75fb8c8410cd040a31c96ed3f14f1f5e05bfdb4e06b89607d153379ccadf9f6b"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.2.0_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.2.0/terraform-provider-netapp-gcp_22.2.0_linux_amd64.zip",
+          "shasum": "4dc62c0313ff16f8df6f6c8f36f47ad6eb27ef57319da5ede9780341d17241ff"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.2.0_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.2.0/terraform-provider-netapp-gcp_22.2.0_linux_arm.zip",
+          "shasum": "ee5934f9836a288a76a8235f50468ebffa7fde4e73ff6cb627008c0e0a2c44e7"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.2.0_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.2.0/terraform-provider-netapp-gcp_22.2.0_linux_arm64.zip",
+          "shasum": "82044a8faa5d31e58e03ad570774f1c67151ac42ebe62c05029a6bcc0c03a7c6"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.2.0_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.2.0/terraform-provider-netapp-gcp_22.2.0_windows_386.zip",
+          "shasum": "377ed3ea9c3e97487a4979f190adb6f1e870e46f70eeb97a2ea52d1296439380"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.2.0_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.2.0/terraform-provider-netapp-gcp_22.2.0_windows_amd64.zip",
+          "shasum": "e67944ec049e3e23653d8c51531eb7416476d90d0086f4ea7a98edda25584493"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.2.0_windows_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.2.0/terraform-provider-netapp-gcp_22.2.0_windows_arm.zip",
+          "shasum": "0982ba43ac098291aaa991f50c7989037dbb256522b11a7a16c8ecb882825a33"
+        }
+      ]
+    },
+    {
+      "version": "22.1.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.1.0/terraform-provider-netapp-gcp_22.1.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.1.0/terraform-provider-netapp-gcp_22.1.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.1.0_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.1.0/terraform-provider-netapp-gcp_22.1.0_darwin_amd64.zip",
+          "shasum": "d1b41f50f68193b496977d67cbe76ad4b305e224a480d4955208c480fc213193"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.1.0_darwin_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.1.0/terraform-provider-netapp-gcp_22.1.0_darwin_arm64.zip",
+          "shasum": "ec26163852f090772a1598af2a3b7ca59bad6ed8a0ddc43747ec2cf1b52e949d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.1.0_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.1.0/terraform-provider-netapp-gcp_22.1.0_freebsd_386.zip",
+          "shasum": "f3641ed3b9dbd433dc6354076a263ed0bf92ded92bddcf7bb636d54067bbc763"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.1.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.1.0/terraform-provider-netapp-gcp_22.1.0_freebsd_amd64.zip",
+          "shasum": "ab4682bf9e8f101d1fe3050c5ef34edfda7d47de41d7d5eb148d45868b4807b1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.1.0_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.1.0/terraform-provider-netapp-gcp_22.1.0_freebsd_arm.zip",
+          "shasum": "6b48ecd70265a0dc33d5982db5086871e1e654dd25b71ce9bf535e4b6e20d5d3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.1.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.1.0/terraform-provider-netapp-gcp_22.1.0_freebsd_arm64.zip",
+          "shasum": "00300612e59846c94a142df02c721e11701d7af23da87ed96a9df6e43f6420bb"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.1.0_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.1.0/terraform-provider-netapp-gcp_22.1.0_linux_386.zip",
+          "shasum": "610c458006e33fcabf8ef9a1287e66e3180ac052c9a39a617cffe2072ae6108e"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.1.0_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.1.0/terraform-provider-netapp-gcp_22.1.0_linux_amd64.zip",
+          "shasum": "418f7e41acd42efaad81dbebbca2e4983a6efcbfae11c8973bb8ed35ea9ebb10"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.1.0_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.1.0/terraform-provider-netapp-gcp_22.1.0_linux_arm.zip",
+          "shasum": "74eb0fb1e3538124fe183cd010c917c5f22062c91625db12fd62c7bd20f125ae"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_22.1.0_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.1.0/terraform-provider-netapp-gcp_22.1.0_linux_arm64.zip",
+          "shasum": "6b14546b58d72aabb1d602f8ca74d0a54d7294ea0984796d679493c2898210f4"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_22.1.0_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.1.0/terraform-provider-netapp-gcp_22.1.0_windows_386.zip",
+          "shasum": "405e4417d917b07fbcece73b01efbdf1eb6cccb2b7d4d7714e539a72311daada"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_22.1.0_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.1.0/terraform-provider-netapp-gcp_22.1.0_windows_amd64.zip",
+          "shasum": "0b06406498d079e85dfc67f262e42175f9d7e1787e4aa07de5caacb9410f5944"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_22.1.0_windows_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v22.1.0/terraform-provider-netapp-gcp_22.1.0_windows_arm.zip",
+          "shasum": "87e6438eddf210abdee9b5e064e3dc8eacddd90f4a1926680ab3ca39f861aa56"
+        }
+      ]
+    },
+    {
+      "version": "21.10.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.10.1/terraform-provider-netapp-gcp_21.10.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.10.1/terraform-provider-netapp-gcp_21.10.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_21.10.1_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.10.1/terraform-provider-netapp-gcp_21.10.1_darwin_amd64.zip",
+          "shasum": "e1d826645595d66f92b4689347a4da4e469c9b85f3317dfcaa5e1e1528d82f87"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_21.10.1_darwin_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.10.1/terraform-provider-netapp-gcp_21.10.1_darwin_arm64.zip",
+          "shasum": "9fb1e97ac007084e0725dc5f1d5a6247ddf4da1ede61159bacd682fa701c882f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_21.10.1_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.10.1/terraform-provider-netapp-gcp_21.10.1_freebsd_386.zip",
+          "shasum": "17d6ed33616b44375d023b1b90e1f4e55ee836cf34e7c3946f862b51d0fa26f4"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_21.10.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.10.1/terraform-provider-netapp-gcp_21.10.1_freebsd_amd64.zip",
+          "shasum": "306d0579402a696be1cf9b9bc287be89f87eee425da692e60f1eeeac6dda0014"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_21.10.1_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.10.1/terraform-provider-netapp-gcp_21.10.1_freebsd_arm.zip",
+          "shasum": "44c710bea97d3913fc412ec0e9cd96623e9a9996c2e1b6ecab4fe0f26025780f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_21.10.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.10.1/terraform-provider-netapp-gcp_21.10.1_freebsd_arm64.zip",
+          "shasum": "c12bbdb5e17922261d11b15331150d4998d233f2cfa0de32920e032c2bb4654a"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_21.10.1_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.10.1/terraform-provider-netapp-gcp_21.10.1_linux_386.zip",
+          "shasum": "f4c208c5e50f5502a6bbefdb30792e324e188f099fea901a3ca6be091fd4df41"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_21.10.1_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.10.1/terraform-provider-netapp-gcp_21.10.1_linux_amd64.zip",
+          "shasum": "6dcae7f791fe04424590e59e8bdc5db89ed4843a4094573f857216c9d0942bb6"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_21.10.1_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.10.1/terraform-provider-netapp-gcp_21.10.1_linux_arm.zip",
+          "shasum": "c557aaee19101b86fa0dc068af0190da234d4c31711dafac101203ed0b0914ae"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_21.10.1_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.10.1/terraform-provider-netapp-gcp_21.10.1_linux_arm64.zip",
+          "shasum": "021af69501edb5e054ca4f293c5bc7d6f416e547c952d6e2f3310d2b6ec1ff63"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_21.10.1_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.10.1/terraform-provider-netapp-gcp_21.10.1_windows_386.zip",
+          "shasum": "c2fe19ec94b272e5b0ee9c70418ce11da168c1d436d5e52ea082e76231e86dfc"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_21.10.1_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.10.1/terraform-provider-netapp-gcp_21.10.1_windows_amd64.zip",
+          "shasum": "2cd23519eb9ae2971c88b684ce071f1d46e24787e23c8f6f0bfa7460451d2b5e"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_21.10.1_windows_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.10.1/terraform-provider-netapp-gcp_21.10.1_windows_arm.zip",
+          "shasum": "fb1a96a64703e1c005902f5f5ddaebc599067da28b232c674db1e583a969e399"
+        }
+      ]
+    },
+    {
+      "version": "21.9.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.9.0/terraform-provider-netapp-gcp_21.9.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.9.0/terraform-provider-netapp-gcp_21.9.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_21.9.0_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.9.0/terraform-provider-netapp-gcp_21.9.0_darwin_amd64.zip",
+          "shasum": "c787f5e4b5578c29bc5960580389479d916e6dc437c95d71790770283f03e0c8"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_21.9.0_darwin_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.9.0/terraform-provider-netapp-gcp_21.9.0_darwin_arm64.zip",
+          "shasum": "c05cfd10de96d8651059b68f4d15039ae282788443edd20393edf41563e8b387"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_21.9.0_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.9.0/terraform-provider-netapp-gcp_21.9.0_freebsd_386.zip",
+          "shasum": "d1458c47bd900a017cddce426fb5cc0695ebf33bf8aef4112cdc8de2a1f4525b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_21.9.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.9.0/terraform-provider-netapp-gcp_21.9.0_freebsd_amd64.zip",
+          "shasum": "11ecd76286a76fc41fa38dc4fe22e57548342ca56cf850366be1f698bc283f94"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_21.9.0_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.9.0/terraform-provider-netapp-gcp_21.9.0_freebsd_arm.zip",
+          "shasum": "6581d4955f304a4f8f2c859ddc52695f23f91982569dd6113818f4fa13ea84b6"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_21.9.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.9.0/terraform-provider-netapp-gcp_21.9.0_freebsd_arm64.zip",
+          "shasum": "33288770b75207b389d4b2ea087794c8b0a6410a9ae5473749cac70b67b5daa0"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_21.9.0_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.9.0/terraform-provider-netapp-gcp_21.9.0_linux_386.zip",
+          "shasum": "2a03e6e8f79499910a3d559da4ed8e0513246a3f21924be8e9ec03c49bd1e53b"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_21.9.0_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.9.0/terraform-provider-netapp-gcp_21.9.0_linux_amd64.zip",
+          "shasum": "de97206e36e1532ca3bf1aa0cc2db53ca092209d701a91858583c422031e6777"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_21.9.0_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.9.0/terraform-provider-netapp-gcp_21.9.0_linux_arm.zip",
+          "shasum": "16f5780a2564293dc2ec6ff6150179ac0d9437207b6efe9f007638cd625cc0ba"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_21.9.0_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.9.0/terraform-provider-netapp-gcp_21.9.0_linux_arm64.zip",
+          "shasum": "648ea40086d2e6b9d8aae512c47868e3be7d7dacdceb12c6913a041855489546"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_21.9.0_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.9.0/terraform-provider-netapp-gcp_21.9.0_windows_386.zip",
+          "shasum": "36cc55652a98b0f35ce7d5d0004a838204ffe0d83700af53f17771342f14ffbd"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_21.9.0_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.9.0/terraform-provider-netapp-gcp_21.9.0_windows_amd64.zip",
+          "shasum": "8fae6a041c0fbe00f7455af6c47d449e87b7f9017d1aa27caa3d1bd3ab93f619"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_21.9.0_windows_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.9.0/terraform-provider-netapp-gcp_21.9.0_windows_arm.zip",
+          "shasum": "47edd09a3ab6d9809d2d6a906af18d7b3ebcc60d1558ccf5ff823b038a4812bd"
+        }
+      ]
+    },
+    {
+      "version": "21.5.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.5.0/terraform-provider-netapp-gcp_21.5.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.5.0/terraform-provider-netapp-gcp_21.5.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_21.5.0_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.5.0/terraform-provider-netapp-gcp_21.5.0_darwin_amd64.zip",
+          "shasum": "28995086e5f31d98aef569d81a1928ac91d7e557c6bcd8c47074e820beac7bb7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_21.5.0_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.5.0/terraform-provider-netapp-gcp_21.5.0_freebsd_386.zip",
+          "shasum": "6a197139877698054fb3bb5a945708d9292e185dcf7a6c1ae5a725eb39acfaaa"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_21.5.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.5.0/terraform-provider-netapp-gcp_21.5.0_freebsd_amd64.zip",
+          "shasum": "e5422ecd35bd8b56cd7bd16552f196617542b45fd4b133dd2e5aa69e60421fc8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_21.5.0_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.5.0/terraform-provider-netapp-gcp_21.5.0_freebsd_arm.zip",
+          "shasum": "7ccebb69abbf0dcb87eb08ddbc5484d873591ed6705b11d57a09f62467a7709f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_21.5.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.5.0/terraform-provider-netapp-gcp_21.5.0_freebsd_arm64.zip",
+          "shasum": "3c43b78881e1375b2f1cb1622498bd94823ca8b357b105814d95f0d83fd69ff4"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_21.5.0_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.5.0/terraform-provider-netapp-gcp_21.5.0_linux_386.zip",
+          "shasum": "7c15e73bead9ee72bd805e5f73c0608080676e34eb5671b73fb4013e2841b1a0"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_21.5.0_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.5.0/terraform-provider-netapp-gcp_21.5.0_linux_amd64.zip",
+          "shasum": "961491de4be703ea17574a668dc5fca08ed6d5943131a7874c2bc1fc8c7964db"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_21.5.0_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.5.0/terraform-provider-netapp-gcp_21.5.0_linux_arm.zip",
+          "shasum": "d2bc89dd69b0e4bfb49da10072631d807c72c049bd01ec0cabb5e15a1807d0ce"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_21.5.0_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.5.0/terraform-provider-netapp-gcp_21.5.0_linux_arm64.zip",
+          "shasum": "86bc49b009ce1e6df7e9f07206bcf672d2fc1388b0acf0e32404089caeca0bbe"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_21.5.0_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.5.0/terraform-provider-netapp-gcp_21.5.0_windows_386.zip",
+          "shasum": "1ab8ecf98fbad617d5ee78f3d6e81cafb7139d12ad3cf908a00bfd3699068734"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_21.5.0_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.5.0/terraform-provider-netapp-gcp_21.5.0_windows_amd64.zip",
+          "shasum": "6fc549f746da1e2593617f1792999ee3f491909df3efa3457c5299275d40d994"
+        }
+      ]
+    },
+    {
+      "version": "21.4.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.4.0/terraform-provider-netapp-gcp_21.4.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.4.0/terraform-provider-netapp-gcp_21.4.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_21.4.0_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.4.0/terraform-provider-netapp-gcp_21.4.0_darwin_amd64.zip",
+          "shasum": "061696c3668eebe9ef1c465c92eb5411ddd3f6510f318d9e4ec198b066899f75"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_21.4.0_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.4.0/terraform-provider-netapp-gcp_21.4.0_freebsd_386.zip",
+          "shasum": "ecd5c6583a92a1be74c676e6e5e3ed3e27279809340134e841bd319fd8e25d20"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_21.4.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.4.0/terraform-provider-netapp-gcp_21.4.0_freebsd_amd64.zip",
+          "shasum": "59e49b09a15c372783aa09e7273300e576dd4c2b8aa3059b0d90b071e63c3e3b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_21.4.0_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.4.0/terraform-provider-netapp-gcp_21.4.0_freebsd_arm.zip",
+          "shasum": "aa3bf00aac058ca14352f79f5b52be114bd9ca7db3b1baab012c4869dc52eab6"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_21.4.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.4.0/terraform-provider-netapp-gcp_21.4.0_freebsd_arm64.zip",
+          "shasum": "a1974968156c5d67f602ec005fd39c43301aa60df0c0a89b54e0948d510175ef"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_21.4.0_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.4.0/terraform-provider-netapp-gcp_21.4.0_linux_386.zip",
+          "shasum": "ddb7e9bccf55291bff10d6b51a252aae0f47f2dcd7a2368f7ff3d86f24bdb1cf"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_21.4.0_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.4.0/terraform-provider-netapp-gcp_21.4.0_linux_amd64.zip",
+          "shasum": "cd759fdaa00c03c1b9e6cb8ee010494292a626c12675a55aaa273c112f7b99e3"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_21.4.0_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.4.0/terraform-provider-netapp-gcp_21.4.0_linux_arm.zip",
+          "shasum": "c643d5f021325e65e35ff5a0c217f3a3e3bbf89ee0505589d485d685d916374b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_21.4.0_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.4.0/terraform-provider-netapp-gcp_21.4.0_linux_arm64.zip",
+          "shasum": "6790dc5312ca474ec222c1b2fb96a1e903003f3668e03c6eb90cefe722c81679"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_21.4.0_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.4.0/terraform-provider-netapp-gcp_21.4.0_windows_386.zip",
+          "shasum": "49a82a0445aac345518f978ecd49145f3cc7b594f443c5a0d25808af95932eab"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_21.4.0_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.4.0/terraform-provider-netapp-gcp_21.4.0_windows_amd64.zip",
+          "shasum": "2d409f46ec074c400ced085f9532185333fd7839b821b536d59a4965d54b48eb"
+        }
+      ]
+    },
+    {
+      "version": "21.2.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.2.0/terraform-provider-netapp-gcp_21.2.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.2.0/terraform-provider-netapp-gcp_21.2.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_21.2.0_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.2.0/terraform-provider-netapp-gcp_21.2.0_darwin_amd64.zip",
+          "shasum": "0fedabac9b7fcb2e78f77b9067ddebbfb5213a9d900167705c82bea10a0b2e6d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_21.2.0_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.2.0/terraform-provider-netapp-gcp_21.2.0_freebsd_386.zip",
+          "shasum": "df2566ebe5dbb25061bbbb8343bb404c0b7a164d7ffc857af920a8699162c1fa"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_21.2.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.2.0/terraform-provider-netapp-gcp_21.2.0_freebsd_amd64.zip",
+          "shasum": "3158e99d13d7cf39ff2f9a0a9a0a8bfbc951f650049c9244941de978212db7e0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_21.2.0_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.2.0/terraform-provider-netapp-gcp_21.2.0_freebsd_arm.zip",
+          "shasum": "3fe2a7ec3bd58bfcdea6ec530be81592970d61b6c6165e1a8157b9159b6add3f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_21.2.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.2.0/terraform-provider-netapp-gcp_21.2.0_freebsd_arm64.zip",
+          "shasum": "41b5f3c4d3fab2bc3b623c18ee5596da7d246598ebafdc23a67a29313b5ae046"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_21.2.0_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.2.0/terraform-provider-netapp-gcp_21.2.0_linux_386.zip",
+          "shasum": "72675af4a6caf4e748dd18c7b5652d71039300668ad3c954bbc02465e011516f"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_21.2.0_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.2.0/terraform-provider-netapp-gcp_21.2.0_linux_amd64.zip",
+          "shasum": "d493dc23fab2ee53cc3d77652dba059633a905110d989d614cb56f1de846d579"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_21.2.0_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.2.0/terraform-provider-netapp-gcp_21.2.0_linux_arm.zip",
+          "shasum": "6a25d5aa26d94d3b0ea16d1169f8ff50e15c4af106cf0ff26be0b8b3375c3ed0"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_21.2.0_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.2.0/terraform-provider-netapp-gcp_21.2.0_linux_arm64.zip",
+          "shasum": "c5e4f8658220fc09a976367a7aa8d0e455cd2e0da38e341fc95f554192ddfa85"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_21.2.0_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.2.0/terraform-provider-netapp-gcp_21.2.0_windows_386.zip",
+          "shasum": "0177fcac2a5026c890afc31f19b5e39f06e5623057aa2a79254687aa2a25abea"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_21.2.0_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v21.2.0/terraform-provider-netapp-gcp_21.2.0_windows_amd64.zip",
+          "shasum": "6ca3c118bbceacc3911f342cd5ecd4094158dd2a21d16489c49cffc5fbde8300"
+        }
+      ]
+    },
+    {
+      "version": "20.11.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.1/terraform-provider-netapp-gcp_20.11.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.1/terraform-provider-netapp-gcp_20.11.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_20.11.1_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.1/terraform-provider-netapp-gcp_20.11.1_darwin_amd64.zip",
+          "shasum": "995da45a96d00e9123437c7b3aea91348eb238aeed00f1b37cd5e7adc89d1270"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_20.11.1_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.1/terraform-provider-netapp-gcp_20.11.1_freebsd_386.zip",
+          "shasum": "7ae23619e31827e5ce18d716d49ec1a80b5c1e0fa9ccc2763e8f56a205aaf049"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_20.11.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.1/terraform-provider-netapp-gcp_20.11.1_freebsd_amd64.zip",
+          "shasum": "1e174bf7f8f747a52ba8d1220d0c35e9e872111f7017af43ed87ee162b3a5b48"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_20.11.1_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.1/terraform-provider-netapp-gcp_20.11.1_freebsd_arm.zip",
+          "shasum": "ed66318427218c9d813bab2469a21e23b337c6396864a514c336e7d8ea3eb399"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_20.11.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.1/terraform-provider-netapp-gcp_20.11.1_freebsd_arm64.zip",
+          "shasum": "fc92de71cfcdafc1ffa50c1959b553643c526339495230935e4859d23b68ef45"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_20.11.1_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.1/terraform-provider-netapp-gcp_20.11.1_linux_386.zip",
+          "shasum": "f4392a9869cf121f535dc6610ad7e076b6516c742cffc3763613616ede954cd0"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_20.11.1_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.1/terraform-provider-netapp-gcp_20.11.1_linux_amd64.zip",
+          "shasum": "3159ac8110c67497e23685eb999e8496b14d39e832f2eff4e84db376a0769732"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_20.11.1_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.1/terraform-provider-netapp-gcp_20.11.1_linux_arm.zip",
+          "shasum": "b6103388464d543a917fcbcc7b5ff235ae74946e8e12b699291a71fc69e2dc3a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_20.11.1_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.1/terraform-provider-netapp-gcp_20.11.1_linux_arm64.zip",
+          "shasum": "a0267cdc23bef406b66c87ddcc23a7c21a457a1d2d130b3624f05b3285e6340c"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_20.11.1_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.1/terraform-provider-netapp-gcp_20.11.1_windows_386.zip",
+          "shasum": "c0d3a3a5bbf3904df2cae62c4edad44ba7e0da9d22b68a0fe9e5eed92506630d"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_20.11.1_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.1/terraform-provider-netapp-gcp_20.11.1_windows_amd64.zip",
+          "shasum": "357ac3a08a104a9b2f3ad241f92e1048776223630662c5cc35e4e115f34ac16a"
+        }
+      ]
+    },
+    {
+      "version": "20.11.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.0/terraform-provider-netapp-gcp_20.11.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.0/terraform-provider-netapp-gcp_20.11.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_20.11.0_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.0/terraform-provider-netapp-gcp_20.11.0_darwin_amd64.zip",
+          "shasum": "ebe6721180ac44b3ed0fbbedc75b7735a9505db09f67dd2f91ac1318245b387d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_20.11.0_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.0/terraform-provider-netapp-gcp_20.11.0_freebsd_386.zip",
+          "shasum": "45e2728ebf5a2e927a6285df509ae7501ec3652cd07d63130c6484cf854fc9d3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_20.11.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.0/terraform-provider-netapp-gcp_20.11.0_freebsd_amd64.zip",
+          "shasum": "09332540c074b7d7772566342bde3a1ade4351fd7b49d66cce6412fdd27f225c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_20.11.0_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.0/terraform-provider-netapp-gcp_20.11.0_freebsd_arm.zip",
+          "shasum": "ae0eff29d9ffdc274bb4f7b7011e8a6d884d8c40f31298ef8732a14977ab7753"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_20.11.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.0/terraform-provider-netapp-gcp_20.11.0_freebsd_arm64.zip",
+          "shasum": "b55d96d5a4a253f629ea9cac15df57024154598336bfc0a1a46375937c215342"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_20.11.0_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.0/terraform-provider-netapp-gcp_20.11.0_linux_386.zip",
+          "shasum": "2f162ab04c1fa852d8e44ee52bafa6065505a973f151f3a69e7d9cf485e98800"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_20.11.0_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.0/terraform-provider-netapp-gcp_20.11.0_linux_amd64.zip",
+          "shasum": "cb50cd91c609178b35126a1ba8b2e6e6cc05b80a7693cb3494950dcdd454dc50"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_20.11.0_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.0/terraform-provider-netapp-gcp_20.11.0_linux_arm.zip",
+          "shasum": "da70c71af1d78e436df9034c9ec673a6f1b06b1b89c98bddff3b5649e35ce377"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_20.11.0_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.0/terraform-provider-netapp-gcp_20.11.0_linux_arm64.zip",
+          "shasum": "9d244a223e0da055237f41122236edf985e6de9f7b9505fd8fb22633436b60d9"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_20.11.0_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.0/terraform-provider-netapp-gcp_20.11.0_windows_386.zip",
+          "shasum": "da3be478cea832a587bcb7143579b811b03509e758a76899923efd03325e1ccb"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_20.11.0_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.11.0/terraform-provider-netapp-gcp_20.11.0_windows_amd64.zip",
+          "shasum": "1772ad81623d4e12c59945a795d9a66ea9ce2afca7f2b6c1cf50b60935f401db"
+        }
+      ]
+    },
+    {
+      "version": "20.10.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.10.0/terraform-provider-netapp-gcp_20.10.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.10.0/terraform-provider-netapp-gcp_20.10.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_20.10.0_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.10.0/terraform-provider-netapp-gcp_20.10.0_darwin_amd64.zip",
+          "shasum": "b077b498bbcb83bf7a0ff3893a5d92f92357b7075a805461286d46028443b5b6"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_20.10.0_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.10.0/terraform-provider-netapp-gcp_20.10.0_freebsd_386.zip",
+          "shasum": "b878271d896554b278177df239c2c0c0f84bf70a95c5de96062ed6d618901cad"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_20.10.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.10.0/terraform-provider-netapp-gcp_20.10.0_freebsd_amd64.zip",
+          "shasum": "cb279c6a9eeeb6d7d9cf28c9e0508dde028c16bb870ed8091208f2874a04e366"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_20.10.0_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.10.0/terraform-provider-netapp-gcp_20.10.0_freebsd_arm.zip",
+          "shasum": "420325b118437adc4712f172c09e72d8e5e91da6ea090d3e91e32a128b469a01"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_20.10.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.10.0/terraform-provider-netapp-gcp_20.10.0_freebsd_arm64.zip",
+          "shasum": "71a1ae0d623670e61950b1c05e77debeba8c0c5d0ce342328c7f6abc105a7ad1"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_20.10.0_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.10.0/terraform-provider-netapp-gcp_20.10.0_linux_386.zip",
+          "shasum": "9585099d34c9473dcec8f75242e5fc1816b2c89a9f05b662298cfee518967c65"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_20.10.0_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.10.0/terraform-provider-netapp-gcp_20.10.0_linux_amd64.zip",
+          "shasum": "59f565413d90bf0f142fa67e40e5cddb30bc90fc76662fcfb887efc22185462d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_20.10.0_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.10.0/terraform-provider-netapp-gcp_20.10.0_linux_arm.zip",
+          "shasum": "3f20d15fe640e799dc3389c108dc38c349c40c9ca644dd58989535cbb3f5706e"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_20.10.0_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.10.0/terraform-provider-netapp-gcp_20.10.0_linux_arm64.zip",
+          "shasum": "788731815d2f1a28202c1c71432ed48412831b54dc5e028cfbc1eee6c553b6d9"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_20.10.0_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.10.0/terraform-provider-netapp-gcp_20.10.0_windows_386.zip",
+          "shasum": "63b41c47a6e4a9bab663f71715d169b1a18a9f3aa3e71c6ce3e518c2c87fbbb6"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_20.10.0_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v20.10.0/terraform-provider-netapp-gcp_20.10.0_windows_amd64.zip",
+          "shasum": "23fe9bced47a6a9f4ed306826145becac0631715d26c23c749df3c03c64934ed"
+        }
+      ]
+    },
+    {
+      "version": "0.1.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.1/terraform-provider-netapp-gcp_0.1.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.1/terraform-provider-netapp-gcp_0.1.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_0.1.1_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.1/terraform-provider-netapp-gcp_0.1.1_darwin_amd64.zip",
+          "shasum": "76109e0e0e23d30c901a00c4983e2f44a172ee7bffbd6bf554364c4e2e7e25f7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_0.1.1_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.1/terraform-provider-netapp-gcp_0.1.1_freebsd_386.zip",
+          "shasum": "07e68e519fca66aa3e2aa780280ce6c1ff8e23bbc6c1c0cf698c54ac59b40e26"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_0.1.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.1/terraform-provider-netapp-gcp_0.1.1_freebsd_amd64.zip",
+          "shasum": "66439a6dedd0c80ee48316eec5dacab8d1560e080e8771fdac075a2c008d414d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_0.1.1_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.1/terraform-provider-netapp-gcp_0.1.1_freebsd_arm.zip",
+          "shasum": "2b3aed113d923badeb1f47446ad815a8f434036b208d96069c0813e2f4f4ad0d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_0.1.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.1/terraform-provider-netapp-gcp_0.1.1_freebsd_arm64.zip",
+          "shasum": "1275f94ac16821eeaa395206e3d23e7165f8a949aa19a1244610297659268816"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_0.1.1_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.1/terraform-provider-netapp-gcp_0.1.1_linux_386.zip",
+          "shasum": "087542dd45d38bf34bd4cf9396ec277a6259f6cdb3898bb6edd00a5369c4a318"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_0.1.1_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.1/terraform-provider-netapp-gcp_0.1.1_linux_amd64.zip",
+          "shasum": "892e6798c24f93da947922add589b06beb0957dd901948ac6fe8a3ff2086750d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_0.1.1_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.1/terraform-provider-netapp-gcp_0.1.1_linux_arm.zip",
+          "shasum": "7306ad372660ddd7f525371cc16a2e24d896d266b7ee6afda54e694c7fdbbf22"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_0.1.1_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.1/terraform-provider-netapp-gcp_0.1.1_linux_arm64.zip",
+          "shasum": "48f762c60d0102599999c9cd908b739668610c356dc7138f4f72ce631815588c"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_0.1.1_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.1/terraform-provider-netapp-gcp_0.1.1_windows_386.zip",
+          "shasum": "3adc79ac4f2a8582cb1d4568c384415b25bf76490102e31190057efb367edb72"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_0.1.1_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.1/terraform-provider-netapp-gcp_0.1.1_windows_amd64.zip",
+          "shasum": "19e5aa52e1a4b71039cb9c085f03fe089a6d815f5dc39e536940195aff238a63"
+        }
+      ]
+    },
+    {
+      "version": "0.1.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.0/terraform-provider-netapp-gcp_0.1.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.0/terraform-provider-netapp-gcp_0.1.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_0.1.0_darwin_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.0/terraform-provider-netapp-gcp_0.1.0_darwin_amd64.zip",
+          "shasum": "6912edb324280f24249bad9e32abdb320deccd93e4a77b8fa61e7cd57f8a21f9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_0.1.0_freebsd_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.0/terraform-provider-netapp-gcp_0.1.0_freebsd_386.zip",
+          "shasum": "4c1e5f8ba483a3c86973f07525d74d90e8a3a361ab6ce992ad9682f902b4b412"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_0.1.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.0/terraform-provider-netapp-gcp_0.1.0_freebsd_amd64.zip",
+          "shasum": "929eb5788deb902cd2094847ef65a4fe26148d2543cfa976789e5560b33ad340"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_0.1.0_freebsd_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.0/terraform-provider-netapp-gcp_0.1.0_freebsd_arm.zip",
+          "shasum": "3524316512aa39d5b5788b0075e6e6295c7b66f61d854a1bca73b9b33a11f090"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_0.1.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.0/terraform-provider-netapp-gcp_0.1.0_freebsd_arm64.zip",
+          "shasum": "5aacaac33603c477298ce1a3e1587e3fe9b712aa8e43c83ba0d50c72afb3a529"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_0.1.0_linux_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.0/terraform-provider-netapp-gcp_0.1.0_linux_386.zip",
+          "shasum": "3afeb0e93050c3e54306aff6bef812d6bd1b4f1e8de47ebd5468c9bb72becd66"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_0.1.0_linux_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.0/terraform-provider-netapp-gcp_0.1.0_linux_amd64.zip",
+          "shasum": "d1f47519cc570eaf4e9075c166181c6156575ae16ec566e17c0ed430ce2af502"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-gcp_0.1.0_linux_arm.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.0/terraform-provider-netapp-gcp_0.1.0_linux_arm.zip",
+          "shasum": "5d1ae5a04719e40595c2cc2d544e84fd1f0eb1b98475e101d115dbc74735e889"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-gcp_0.1.0_linux_arm64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.0/terraform-provider-netapp-gcp_0.1.0_linux_arm64.zip",
+          "shasum": "3e0fa974aeb97ae5cd40ada8eb050992c0de7bfffc5b4baf01840bbc2c8f17b0"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-gcp_0.1.0_windows_386.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.0/terraform-provider-netapp-gcp_0.1.0_windows_386.zip",
+          "shasum": "f80c1fce4d6a9863f1f71a6e253d6ee717b265fa076970cba2f559cce689d6f1"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-gcp_0.1.0_windows_amd64.zip",
+          "download_url": "https://github.com/NetApp/terraform-provider-netapp-gcp/releases/download/v0.1.0/terraform-provider-netapp-gcp_0.1.0_windows_amd64.zip",
+          "shasum": "dff4c4b1eb2b8012f391892c3e53cf0febc25ec4c3522a7272b670596ef6223f"
+        }
+      ]
+    }
+  ]
+}

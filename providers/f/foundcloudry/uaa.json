@@ -1,0 +1,980 @@
+{
+  "versions": [
+    {
+      "version": "1.0.3",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.3/terraform-provider-uaa_1.0.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.3/terraform-provider-uaa_1.0.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_1.0.3_darwin_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.3/terraform-provider-uaa_1.0.3_darwin_amd64.zip",
+          "shasum": "109e4f95b48ff8175f172a01872826e3d0372058d68a33efeaea4608bb56bd1f"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_1.0.3_darwin_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.3/terraform-provider-uaa_1.0.3_darwin_arm64.zip",
+          "shasum": "69b839a280c3dee5f8e143c5bb72331fbc0fd50086810ba67dd3d8f19ed48b65"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_1.0.3_freebsd_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.3/terraform-provider-uaa_1.0.3_freebsd_386.zip",
+          "shasum": "ea3986c2d0c6929dddecd71c3f00b940e90990354bb8a33b8602bd2cedf3e21d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_1.0.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.3/terraform-provider-uaa_1.0.3_freebsd_amd64.zip",
+          "shasum": "1988789e163aa60c1e9e5cdc5b2d6e02a56d0755271dbfb8c903a3b08515bf93"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_1.0.3_freebsd_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.3/terraform-provider-uaa_1.0.3_freebsd_arm.zip",
+          "shasum": "2c4f3a682130a435bbb07f2281935f30f7986ea80905edd6ad84e6aa8ddb0d8f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_1.0.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.3/terraform-provider-uaa_1.0.3_freebsd_arm64.zip",
+          "shasum": "a10284be1809d8d6f65f64afaca6d587523dd6e6564df00cd33f39d473b8efc4"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_1.0.3_linux_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.3/terraform-provider-uaa_1.0.3_linux_386.zip",
+          "shasum": "13b2cd0934a007dba5927c0210062da96a44c3dc208094aedf65dde15fd924e5"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_1.0.3_linux_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.3/terraform-provider-uaa_1.0.3_linux_amd64.zip",
+          "shasum": "f317e32ed09ae9bfd3c9ca776fb7632c7a72b9e5cb247b2805a3887bc9df4a08"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_1.0.3_linux_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.3/terraform-provider-uaa_1.0.3_linux_arm.zip",
+          "shasum": "c0835ae91c1feb039c394f0ff78e6cb2fb35ec7766991ca9fbbcc6a6aea9104e"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_1.0.3_linux_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.3/terraform-provider-uaa_1.0.3_linux_arm64.zip",
+          "shasum": "72a0498f7fc7245277c331633ca14585bc6244a4f24ba90fb906afb69420a981"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_1.0.3_windows_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.3/terraform-provider-uaa_1.0.3_windows_386.zip",
+          "shasum": "d149f137c38b38719c17cc162a40b7d65ef0b5f1962f43d64839f13f9fff9c75"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_1.0.3_windows_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.3/terraform-provider-uaa_1.0.3_windows_amd64.zip",
+          "shasum": "45b13a77aa1deb2cf131bfae96311bb8220f90f21be0bb88e17af963e4c02668"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_1.0.3_windows_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.3/terraform-provider-uaa_1.0.3_windows_arm.zip",
+          "shasum": "cdd1c2ff3929055ee2570a9532fb67900b593633e8a969f3149b968ee7d9fe6a"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_1.0.3_windows_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.3/terraform-provider-uaa_1.0.3_windows_arm64.zip",
+          "shasum": "d4fe9c4694fc2bbebfe90c9ae9caaeee59c2ce90280b718c7b0f8785c85cd258"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_1.0.3_openbsd_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.3/terraform-provider-uaa_1.0.3_openbsd_386.zip",
+          "shasum": "b160acbf93dd2a3cacde23ef97bc514cbfb97ef39feb955a0d0406a7ac6a1b4b"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_1.0.3_openbsd_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.3/terraform-provider-uaa_1.0.3_openbsd_amd64.zip",
+          "shasum": "5a7cb9175fc77e1500cf44f713e5c28bad294f788c701e89b70394c62106f401"
+        }
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.2/terraform-provider-uaa_1.0.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.2/terraform-provider-uaa_1.0.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_1.0.2_darwin_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.2/terraform-provider-uaa_1.0.2_darwin_amd64.zip",
+          "shasum": "5b7ea7cd386a4c562fe4dbc3698b1adf72c3a094453441f5032dd9480606f00d"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_1.0.2_darwin_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.2/terraform-provider-uaa_1.0.2_darwin_arm64.zip",
+          "shasum": "7bec47f39a0e2d1a130cc20a8866ebbb63edae579260451293a6479839aa5d81"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_1.0.2_freebsd_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.2/terraform-provider-uaa_1.0.2_freebsd_386.zip",
+          "shasum": "c43ada31e9eff6ea497a6cbe6f8ae51e376214f1ea0cadfbc13b4f2492d5b862"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_1.0.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.2/terraform-provider-uaa_1.0.2_freebsd_amd64.zip",
+          "shasum": "e4f92f6fd26715876b970aa7c4c06a8d4b74f08a9434b4439bfd8e6abe6c98ae"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_1.0.2_freebsd_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.2/terraform-provider-uaa_1.0.2_freebsd_arm.zip",
+          "shasum": "9b49028f6fd12a2f247a5f59751a9cd75cec691bcca4403e31a3b9c51b06f792"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_1.0.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.2/terraform-provider-uaa_1.0.2_freebsd_arm64.zip",
+          "shasum": "5cabe6817c35f27c5acc29b951142cacabafbb4e3e7c6e872cecfd90e066846d"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_1.0.2_linux_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.2/terraform-provider-uaa_1.0.2_linux_386.zip",
+          "shasum": "f6a45cb88451594e9b654d3478bfb7c0c33ddd8987426be89b613537dcd112d1"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_1.0.2_linux_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.2/terraform-provider-uaa_1.0.2_linux_amd64.zip",
+          "shasum": "ccaeb703aafc6f8cc20dd8c30db6b6b3942dfb5e7022904524747b88166cdeba"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_1.0.2_linux_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.2/terraform-provider-uaa_1.0.2_linux_arm.zip",
+          "shasum": "1052da767762b4483935ffa4a278ffe4135d0433f4a872cee80e8ccfdddf435b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_1.0.2_linux_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.2/terraform-provider-uaa_1.0.2_linux_arm64.zip",
+          "shasum": "82f99c3fe2f1df94d558bb04a00434238702205b61231ff49164f8043704b6e2"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_1.0.2_windows_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.2/terraform-provider-uaa_1.0.2_windows_386.zip",
+          "shasum": "0e92b664b394e1c967a74b0a7a7bd7e6747257da6571f2f6e75f7c35de1f012a"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_1.0.2_windows_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.2/terraform-provider-uaa_1.0.2_windows_amd64.zip",
+          "shasum": "30a59264f7ba63ee7d8b9283e2eef0e98c6fce56033d35b3f2419277f61e21f7"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_1.0.2_windows_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.2/terraform-provider-uaa_1.0.2_windows_arm.zip",
+          "shasum": "c1e093566897e784dfa100a00697e39dcf3c1df9bece275a8169dcf58bbddfa8"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_1.0.2_windows_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.2/terraform-provider-uaa_1.0.2_windows_arm64.zip",
+          "shasum": "bdf1e79aa98f1696bd13567e9c21b8993513e0f10585b37a7c762c109726f371"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_1.0.2_openbsd_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.2/terraform-provider-uaa_1.0.2_openbsd_386.zip",
+          "shasum": "6423c890d36360a69bbd721f8a495d669c679d39c0fd21ace4cf749337f11e24"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_1.0.2_openbsd_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.2/terraform-provider-uaa_1.0.2_openbsd_amd64.zip",
+          "shasum": "5b09be80a0ea7ac8afd1f3e596072741f84badad16abb766af4f47cf64ff820a"
+        }
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.1/terraform-provider-uaa_1.0.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.1/terraform-provider-uaa_1.0.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_1.0.1_darwin_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.1/terraform-provider-uaa_1.0.1_darwin_amd64.zip",
+          "shasum": "024db5cea0699fb56a95f0a66f2aa7298a88d38d4b0b5de72d3d598e255e46d6"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_1.0.1_darwin_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.1/terraform-provider-uaa_1.0.1_darwin_arm64.zip",
+          "shasum": "12f47c9b0b48c9eb42db288f483ee796439199dc4dc83fb0dd900a153b607319"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_1.0.1_freebsd_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.1/terraform-provider-uaa_1.0.1_freebsd_386.zip",
+          "shasum": "96f5700265e7427765aadaea8ebf1d8059c4491cfbc4eaa78b9d02eb69747a85"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_1.0.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.1/terraform-provider-uaa_1.0.1_freebsd_amd64.zip",
+          "shasum": "f98dd9c7301e55c6e43ebf5653677384c227e7673db951df60896dce6a217a10"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_1.0.1_freebsd_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.1/terraform-provider-uaa_1.0.1_freebsd_arm.zip",
+          "shasum": "1c0128149fdb115b931e011a38e48c6ed225adbbf5b1b46b025f4d7897515f4d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_1.0.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.1/terraform-provider-uaa_1.0.1_freebsd_arm64.zip",
+          "shasum": "cb12e3f9d0171cdb4ec6606128b58a288173e0356515a73a4f13062a53b8524a"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_1.0.1_linux_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.1/terraform-provider-uaa_1.0.1_linux_386.zip",
+          "shasum": "7e0b8fd03c42b2f6e60a28e99b035d76f9d9d234e8f485a7498c95456a8266cc"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_1.0.1_linux_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.1/terraform-provider-uaa_1.0.1_linux_amd64.zip",
+          "shasum": "74cae2af83e9530ac32edde1cad6fdd38ff0629e3aed1d939fcc08152fc4e619"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_1.0.1_linux_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.1/terraform-provider-uaa_1.0.1_linux_arm.zip",
+          "shasum": "9434aba6623c8858f31dae03600a78e1ffed442d137e9984810736a08bff87c8"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_1.0.1_linux_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.1/terraform-provider-uaa_1.0.1_linux_arm64.zip",
+          "shasum": "b93caf648ecc0eefa1cc5081f60fb2a6d2f0a49a747cf0e2f7bf459d97e2edd0"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_1.0.1_windows_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.1/terraform-provider-uaa_1.0.1_windows_386.zip",
+          "shasum": "5c0eba6bf739763e8cea3eaae66bcc7f76d811759047e798c88166cc41b50cf3"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_1.0.1_windows_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.1/terraform-provider-uaa_1.0.1_windows_amd64.zip",
+          "shasum": "20d13b35866c6ea14974efefd5d1d248f05c61ed9ee9287822c0ba2b0b80375e"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_1.0.1_windows_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.1/terraform-provider-uaa_1.0.1_windows_arm.zip",
+          "shasum": "9a07db41e538debf5463559e9800b429ae8aeba4b36f14b4c8edf22712fb179e"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_1.0.1_windows_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.1/terraform-provider-uaa_1.0.1_windows_arm64.zip",
+          "shasum": "64275fd9d96406c9babbfc8d3777621978cb71bb35878cebe0a84df373180e1e"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_1.0.1_openbsd_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.1/terraform-provider-uaa_1.0.1_openbsd_386.zip",
+          "shasum": "c0abf56cddb90b215fd6c9de38411c73b68f21188d0c64d547bfc7127beae2f4"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_1.0.1_openbsd_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.1/terraform-provider-uaa_1.0.1_openbsd_amd64.zip",
+          "shasum": "40ddaac09646c1d9efbf4b72812331efc4738156e7bd209f958b5ca4d7cb5257"
+        }
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.0/terraform-provider-uaa_1.0.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.0/terraform-provider-uaa_1.0.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_1.0.0_darwin_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.0/terraform-provider-uaa_1.0.0_darwin_amd64.zip",
+          "shasum": "0c5b9c3953f614e8763a32976856fe72365a734a76c9089e60ee0447a62e2fdb"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_1.0.0_darwin_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.0/terraform-provider-uaa_1.0.0_darwin_arm64.zip",
+          "shasum": "b9741b0029d024719bb363074e5f7abda344e597810138b745170e87bdb6d949"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_1.0.0_freebsd_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.0/terraform-provider-uaa_1.0.0_freebsd_386.zip",
+          "shasum": "f33a91e0f86732b96b0a7a59aed2872d838323d1463c3713654dfc671b248685"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_1.0.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.0/terraform-provider-uaa_1.0.0_freebsd_amd64.zip",
+          "shasum": "321a104aa02945f7d339ab171d5bb540d5805b3ab0a440258f0c5489dc5a3bf1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_1.0.0_freebsd_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.0/terraform-provider-uaa_1.0.0_freebsd_arm.zip",
+          "shasum": "5a78713c3bc635ad69fb1281c8b5f4d93200658c27b1314a0b9af5e3ba2c5fca"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_1.0.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.0/terraform-provider-uaa_1.0.0_freebsd_arm64.zip",
+          "shasum": "5b127d9542ca8b11d1568bfdb8b41e01e1b1a85fbbaf52fc92992e83cfb13a6b"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_1.0.0_linux_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.0/terraform-provider-uaa_1.0.0_linux_386.zip",
+          "shasum": "83b71c6897c09be57c4bc4b4d9927f79aa1f526e85bea7839615a0d5e64007b6"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_1.0.0_linux_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.0/terraform-provider-uaa_1.0.0_linux_amd64.zip",
+          "shasum": "328c5930f9dfe721ee04bfdce1e416ee9dd79b95ebfccfd3823d9b5e0693fb50"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_1.0.0_linux_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.0/terraform-provider-uaa_1.0.0_linux_arm.zip",
+          "shasum": "21ad7187d713d4d73e5eaed18b50a265f7e33e93ad29f22719861ccfa3bb9709"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_1.0.0_linux_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.0/terraform-provider-uaa_1.0.0_linux_arm64.zip",
+          "shasum": "990339d3cee4481bded6a6231137400db5cfa1a4cd1165a3d900b4a0619701d9"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_1.0.0_windows_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.0/terraform-provider-uaa_1.0.0_windows_386.zip",
+          "shasum": "2753fd6ac2a918c2622253000a5e0b5ddc99b5fef58655994c0bbee02d477e07"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_1.0.0_windows_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.0/terraform-provider-uaa_1.0.0_windows_amd64.zip",
+          "shasum": "879d05e31a5405b6fb7dc4cc32c4df429c9d7a897fb551fdd7b369115577ae7b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_1.0.0_windows_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.0/terraform-provider-uaa_1.0.0_windows_arm.zip",
+          "shasum": "70f74dc490438758328277e309a19715c6e78975b62dcf6bda217aac285a32ed"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_1.0.0_windows_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.0/terraform-provider-uaa_1.0.0_windows_arm64.zip",
+          "shasum": "34da86c94f2da058392415bbc20b181b1fcbc39dbd39bce821034e250563bdbb"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_1.0.0_openbsd_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.0/terraform-provider-uaa_1.0.0_openbsd_386.zip",
+          "shasum": "2be2ed97c1d6ec39ee064c31ade5a78cf972f3b20d608ef756d80ed1b71cfd18"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_1.0.0_openbsd_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v1.0.0/terraform-provider-uaa_1.0.0_openbsd_amd64.zip",
+          "shasum": "f8a873b699cd091ea4b8f6ec606e82de02f9ed17ee1a65a4d929db36201b6e6f"
+        }
+      ]
+    },
+    {
+      "version": "0.0.5",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.5/terraform-provider-uaa_0.0.5_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.5/terraform-provider-uaa_0.0.5_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_0.0.5_darwin_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.5/terraform-provider-uaa_0.0.5_darwin_amd64.zip",
+          "shasum": "571ce1eb10e0611e672ff32282b70518dbfd10300aad1100155c278bdbaefb07"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_0.0.5_darwin_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.5/terraform-provider-uaa_0.0.5_darwin_arm64.zip",
+          "shasum": "52298de7fe7799821e3154c483cc23ece07c214bea7c74b93e6d8f357061b41a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_0.0.5_freebsd_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.5/terraform-provider-uaa_0.0.5_freebsd_386.zip",
+          "shasum": "a888628f6f8676fe12cf51d123ca7f35a80dc2eb9b98b6bb32d1bd14ea041f09"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_0.0.5_freebsd_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.5/terraform-provider-uaa_0.0.5_freebsd_amd64.zip",
+          "shasum": "7038b3e1bb7f2c1e3d10eebf92e3026b531805fe7df3cc6296357ed138fc52f8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_0.0.5_freebsd_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.5/terraform-provider-uaa_0.0.5_freebsd_arm.zip",
+          "shasum": "507413887d27a4999372a237e24f12f5495cc45e68e7b98db1029c1a8b57975d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_0.0.5_freebsd_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.5/terraform-provider-uaa_0.0.5_freebsd_arm64.zip",
+          "shasum": "4fd84438a18b3e92f35751b03af8781d6665b8f4dacff7f5faecf191cc5342c9"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_0.0.5_linux_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.5/terraform-provider-uaa_0.0.5_linux_386.zip",
+          "shasum": "beede006805f873fafc7b32151ec3a4c5d1d04f5ac37cce879fbcbd290820893"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_0.0.5_linux_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.5/terraform-provider-uaa_0.0.5_linux_amd64.zip",
+          "shasum": "c571ab957d483059958fce37a0cb9afa6e405a6a183d9693222778a999cefdbd"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_0.0.5_linux_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.5/terraform-provider-uaa_0.0.5_linux_arm.zip",
+          "shasum": "e2c1ed47013c3522d3be3a25122aaa1e9f87b294ec421a99fbc65bea990d331c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_0.0.5_linux_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.5/terraform-provider-uaa_0.0.5_linux_arm64.zip",
+          "shasum": "10a6315cea4e5e93eeb083430e597b916e822718803b73ebad2476bab3483fc2"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_0.0.5_windows_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.5/terraform-provider-uaa_0.0.5_windows_386.zip",
+          "shasum": "517e5aa779ec6c2cc908586e2438418704f0de2ed3d6e1a75377dc3ca62fc473"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_0.0.5_windows_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.5/terraform-provider-uaa_0.0.5_windows_amd64.zip",
+          "shasum": "5be734d05b31e990047c2fcd1e86d68b901057b4afde7d405fba6467d74c4f96"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_0.0.5_windows_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.5/terraform-provider-uaa_0.0.5_windows_arm.zip",
+          "shasum": "a09bb7b6a7522063bf1c01f73694d15259263ba8baa7e7c80e54264990c9e77c"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_0.0.5_windows_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.5/terraform-provider-uaa_0.0.5_windows_arm64.zip",
+          "shasum": "be5393ea134d918321cb44e4ab5bc534b4b4ba90560fa34d7497f4d7b1d8099e"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_0.0.5_openbsd_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.5/terraform-provider-uaa_0.0.5_openbsd_386.zip",
+          "shasum": "4865ae89eb44d5e834461e1767f6e26806f729c3ea1d2dbd64c9530df4fcb3da"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_0.0.5_openbsd_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.5/terraform-provider-uaa_0.0.5_openbsd_amd64.zip",
+          "shasum": "70b034b0b43bf73af06cb8d98c613be561775369a6aaa52beaf77c6a86124fc7"
+        }
+      ]
+    },
+    {
+      "version": "0.0.4",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.4/terraform-provider-uaa_0.0.4_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.4/terraform-provider-uaa_0.0.4_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_0.0.4_darwin_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.4/terraform-provider-uaa_0.0.4_darwin_amd64.zip",
+          "shasum": "8d6ff1651bb5c5eff0439e7f3312eec55cb4e110980678f274e52235b2b65b01"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_0.0.4_darwin_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.4/terraform-provider-uaa_0.0.4_darwin_arm64.zip",
+          "shasum": "43a40d4f5a17f27c4a49a4a08e65ae1ca26536c1ec95b8184d008f7741daf4c2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_0.0.4_freebsd_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.4/terraform-provider-uaa_0.0.4_freebsd_386.zip",
+          "shasum": "490ce656a0d7acfe28a3b6261e62679be9f5892004180ed850c62eb270b08145"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_0.0.4_freebsd_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.4/terraform-provider-uaa_0.0.4_freebsd_amd64.zip",
+          "shasum": "ccecb2a1f54225ea9a0cfb323eb98df5ed7b8a4fa8e1016bb5fa82416835992e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_0.0.4_freebsd_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.4/terraform-provider-uaa_0.0.4_freebsd_arm.zip",
+          "shasum": "6d1c086eba36984a2ebaf4d755d539d9e694827267f5ec5f2fc67b0d0086506a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_0.0.4_freebsd_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.4/terraform-provider-uaa_0.0.4_freebsd_arm64.zip",
+          "shasum": "ae328c56f14d30cce8f1404f01890d29709ee622ca99ba8cc94a597cfc1b0009"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_0.0.4_linux_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.4/terraform-provider-uaa_0.0.4_linux_386.zip",
+          "shasum": "b8a9a3333cad64d073662a6caccc319853c2fd478aa824a471a6e6fb6b6114c5"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_0.0.4_linux_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.4/terraform-provider-uaa_0.0.4_linux_amd64.zip",
+          "shasum": "5f44bcf72b584f91aced6dc9a3f20a6e0a8e9a89922dcd660f9310e9ebd3056d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_0.0.4_linux_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.4/terraform-provider-uaa_0.0.4_linux_arm.zip",
+          "shasum": "d1014e841d0e49aa92400a2d79637a285993ce702b5bc6ff16ad9d4c245f5296"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_0.0.4_linux_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.4/terraform-provider-uaa_0.0.4_linux_arm64.zip",
+          "shasum": "0e028f6365baccdee5c3df2973486e999ff7c58419abf65ee537a8faf88969b0"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_0.0.4_windows_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.4/terraform-provider-uaa_0.0.4_windows_386.zip",
+          "shasum": "662359af5620f04a431dc6688f90311ae02fdc99e31cd8a0427b75c024ad487a"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_0.0.4_windows_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.4/terraform-provider-uaa_0.0.4_windows_amd64.zip",
+          "shasum": "13b12130372ceff16faee197a33923eef20272e87a694cf1ad46c73009fb4b57"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_0.0.4_windows_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.4/terraform-provider-uaa_0.0.4_windows_arm.zip",
+          "shasum": "d99b51935b1f866bbd1835e92fe56c6252a65c4a26616c19e0409e13996c886b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_0.0.4_windows_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.4/terraform-provider-uaa_0.0.4_windows_arm64.zip",
+          "shasum": "9d996db96790820e590df411ef276874217a536000e7070fabc81947a42bc6ee"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_0.0.4_openbsd_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.4/terraform-provider-uaa_0.0.4_openbsd_386.zip",
+          "shasum": "bfae2510072581f41e8f4f64f0208cbd796fed171a8c701a3e286f1a30b8a9aa"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_0.0.4_openbsd_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.4/terraform-provider-uaa_0.0.4_openbsd_amd64.zip",
+          "shasum": "b009298a8133a95cab7926f083488fc71d5b6b18aeb357391bedef55d7fb0eab"
+        }
+      ]
+    },
+    {
+      "version": "0.0.3",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.3/terraform-provider-uaa_0.0.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.3/terraform-provider-uaa_0.0.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_0.0.3_darwin_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.3/terraform-provider-uaa_0.0.3_darwin_amd64.zip",
+          "shasum": "1c4bcf3cc646e1797ddc08bc34e01378aeb5579a45d4d9f61abf4d541a9b3f8d"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_0.0.3_darwin_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.3/terraform-provider-uaa_0.0.3_darwin_arm64.zip",
+          "shasum": "c5a44680f07e935dd20ba9e36d3abd59da3f240afe9b7c087ac3ab4fc509f905"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_0.0.3_freebsd_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.3/terraform-provider-uaa_0.0.3_freebsd_386.zip",
+          "shasum": "71c075f2877d2b692367f6aa0b5704ae404c0f856c3692ebe14a9e5ccc76d4e2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_0.0.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.3/terraform-provider-uaa_0.0.3_freebsd_amd64.zip",
+          "shasum": "d6574a9ada5f539c50a7dc8cdcf5c3a93079b635a6a7ea40cb5c8a1e741baa4e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_0.0.3_freebsd_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.3/terraform-provider-uaa_0.0.3_freebsd_arm.zip",
+          "shasum": "c3d0f7b8f9b1d0eef1baa4ea168668fbc58c5920aa86693558051fc7b3b09815"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_0.0.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.3/terraform-provider-uaa_0.0.3_freebsd_arm64.zip",
+          "shasum": "368cd4e78e86441d61e39e51b73ec2cb683e349461b9cd18c164d7e14913a896"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_0.0.3_linux_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.3/terraform-provider-uaa_0.0.3_linux_386.zip",
+          "shasum": "4ea4f697622395971aed25e5b10a85ec91cb5c0c3487af57d5f48ab29baed4ea"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_0.0.3_linux_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.3/terraform-provider-uaa_0.0.3_linux_amd64.zip",
+          "shasum": "df60147de642f6c085ce95f6e54e929b09c1a232da83f2202d271570d6cefc61"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_0.0.3_linux_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.3/terraform-provider-uaa_0.0.3_linux_arm.zip",
+          "shasum": "6307d916f952e1b4cc5b8f5e57e229c847e160cf097811b0c07e75ad68bd523a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_0.0.3_linux_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.3/terraform-provider-uaa_0.0.3_linux_arm64.zip",
+          "shasum": "82cd634e65c2947adab22e1d7321dcdf4a6b017abd0602034100c43bacfe0884"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_0.0.3_windows_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.3/terraform-provider-uaa_0.0.3_windows_386.zip",
+          "shasum": "65e124aa15e4f695a52759b7430cdb7276752e4fc5c1196effc783bae0e6c19e"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_0.0.3_windows_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.3/terraform-provider-uaa_0.0.3_windows_amd64.zip",
+          "shasum": "cb6bbfdb62eb1eba3983c98c67bd4ccb8f72e9bc28f648fe0c714fcc62325e4a"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_0.0.3_windows_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.3/terraform-provider-uaa_0.0.3_windows_arm.zip",
+          "shasum": "fda581196726ff38f65accfc947759e1aa435760838c1a8d7385be0b40e60028"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_0.0.3_windows_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.3/terraform-provider-uaa_0.0.3_windows_arm64.zip",
+          "shasum": "9cf88531ae5b2eb87411ae99211c9f9b8084fc389deb92ae0ebf6ca6a7031791"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_0.0.3_openbsd_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.3/terraform-provider-uaa_0.0.3_openbsd_386.zip",
+          "shasum": "faf5a48b74cad0850fc93a7575ed154e1091ef47d6eb1dc24f0174b0e965ec47"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_0.0.3_openbsd_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.3/terraform-provider-uaa_0.0.3_openbsd_amd64.zip",
+          "shasum": "922788caa3cd59f6cdcb0c1a41fa576f9bbb3ef35cd0547da4f49f4278f8f740"
+        }
+      ]
+    },
+    {
+      "version": "0.0.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.2/terraform-provider-uaa_0.0.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.2/terraform-provider-uaa_0.0.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_0.0.2_darwin_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.2/terraform-provider-uaa_0.0.2_darwin_amd64.zip",
+          "shasum": "77b235c9d0aac176471a2cb26a6193ca91742172f706c3eca71d0aa8e75ba0c0"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_0.0.2_darwin_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.2/terraform-provider-uaa_0.0.2_darwin_arm64.zip",
+          "shasum": "c899753c49db82b1eefdb780a87d25193d82f991932df78c3593d7b291504872"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_0.0.2_freebsd_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.2/terraform-provider-uaa_0.0.2_freebsd_386.zip",
+          "shasum": "89e84075ef9c10e956f3050908afe034ee3fac5fae7cb5797f6d2696e468b4a6"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_0.0.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.2/terraform-provider-uaa_0.0.2_freebsd_amd64.zip",
+          "shasum": "d6619b9123277257a0201a091abacb7121e2c3789577912d6dda1d7a6f873246"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_0.0.2_freebsd_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.2/terraform-provider-uaa_0.0.2_freebsd_arm.zip",
+          "shasum": "960ba784baeb1e84ce00772e751479de6a2405185d11c28245cdc12e80fd7ad7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_0.0.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.2/terraform-provider-uaa_0.0.2_freebsd_arm64.zip",
+          "shasum": "78269ef9e77fdd91df2fbb41f7437c6d2fe2a1b527dcd4539f98747f7be7a615"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_0.0.2_linux_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.2/terraform-provider-uaa_0.0.2_linux_386.zip",
+          "shasum": "0cb6684917ffbf6804b1723d3a5458cb6aed1ad7b57bec5e9310c68f02df356b"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_0.0.2_linux_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.2/terraform-provider-uaa_0.0.2_linux_amd64.zip",
+          "shasum": "82b2ea86aaf59073bdaf8f773c04a901cf9f4cd86283b01fb2d0665145a72739"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_0.0.2_linux_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.2/terraform-provider-uaa_0.0.2_linux_arm.zip",
+          "shasum": "5ef39a973629f3a3a5ed178da5ceacc9f1ae01e7f3e11829c160fdb41f27b575"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_0.0.2_linux_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.2/terraform-provider-uaa_0.0.2_linux_arm64.zip",
+          "shasum": "4bb091f9c5746582e48713f0a8e793d53a3aad865b38f1b933bddc0483dd945d"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_0.0.2_windows_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.2/terraform-provider-uaa_0.0.2_windows_386.zip",
+          "shasum": "6d12c97e1337306062bcb074d74c56616af26eb9fb3a7fffca38db9b453f8bf6"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_0.0.2_windows_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.2/terraform-provider-uaa_0.0.2_windows_amd64.zip",
+          "shasum": "5831d0772c7b0cc5449fbe70556cc4f181ae11e4810d362aad49a39ecd3be85b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-uaa_0.0.2_windows_arm.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.2/terraform-provider-uaa_0.0.2_windows_arm.zip",
+          "shasum": "264d4a0989b3e4edca9355360aef747f4584174469862a2c1ed16b8129bd98d8"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-uaa_0.0.2_windows_arm64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.2/terraform-provider-uaa_0.0.2_windows_arm64.zip",
+          "shasum": "0e7ae7dc01810996af2522247cea86993a54769765f9f8fed1fe65e91e8cfcdc"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-uaa_0.0.2_openbsd_386.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.2/terraform-provider-uaa_0.0.2_openbsd_386.zip",
+          "shasum": "bdf8000dfed51f5f08732f8d6953c7157ee4e4a6a70d59d7dab5417b793c0ec8"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-uaa_0.0.2_openbsd_amd64.zip",
+          "download_url": "https://github.com/foundcloudry/terraform-provider-uaa/releases/download/v0.0.2/terraform-provider-uaa_0.0.2_openbsd_amd64.zip",
+          "shasum": "6135782633765830413094deb6c208a67b7efea63d05c7cbb9530b82c13ccf05"
+        }
+      ]
+    }
+  ]
+}

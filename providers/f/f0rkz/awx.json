@@ -1,0 +1,906 @@
+{
+  "versions": [
+    {
+      "version": "0.9.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.1/terraform-provider-awx_0.9.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.1/terraform-provider-awx_0.9.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.9.1_darwin_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.1/terraform-provider-awx_0.9.1_darwin_amd64.zip",
+          "shasum": "9fea0f727d432b96b1319c202f34b2ab76a6b44e233e24bbf73c3f4c36cb4861"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.9.1_darwin_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.1/terraform-provider-awx_0.9.1_darwin_arm64.zip",
+          "shasum": "4cfe4ca1dc54cb342b947afa5937cbcd2365eae27f2aad62f0538613b48e1efa"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.9.1_freebsd_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.1/terraform-provider-awx_0.9.1_freebsd_386.zip",
+          "shasum": "61f28c56214d54e76aec9120413553500f16cfd94747aaec09a7250f49daf796"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.9.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.1/terraform-provider-awx_0.9.1_freebsd_amd64.zip",
+          "shasum": "8009c55303258415933f8eff5b8b46b2b1661ca3f09c5b3ed86e891df07d0bab"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.9.1_freebsd_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.1/terraform-provider-awx_0.9.1_freebsd_arm.zip",
+          "shasum": "da88972305f00c6c4828831e35defb76a87688be4df54fa7fc37f81661b0faba"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.9.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.1/terraform-provider-awx_0.9.1_freebsd_arm64.zip",
+          "shasum": "0e12110e2d19e90011cd1b9845c6d448ea965f2edd4453dfe18e2aa2c791f604"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.9.1_linux_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.1/terraform-provider-awx_0.9.1_linux_386.zip",
+          "shasum": "6046233b87d391644589ae5d280d167b537f396fd800eb93e5c6c9e1e2384c56"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.9.1_linux_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.1/terraform-provider-awx_0.9.1_linux_amd64.zip",
+          "shasum": "ba76e9898d0c79f93824293e8ed09604356119b5b987e1f592b9105cc2b7e840"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.9.1_linux_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.1/terraform-provider-awx_0.9.1_linux_arm.zip",
+          "shasum": "c42b06463379c31360170699d7e57914698371e6e5ed9da951be09855ee765cf"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.9.1_linux_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.1/terraform-provider-awx_0.9.1_linux_arm64.zip",
+          "shasum": "aa4b834e9883cd6aa969c17900412099577a1f10967f238771bd62f83b816ca4"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.9.1_windows_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.1/terraform-provider-awx_0.9.1_windows_386.zip",
+          "shasum": "7675fa0eea8cc095542cfa11cf568c7dae51986f6b0d308feb32c5e07531f01c"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.9.1_windows_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.1/terraform-provider-awx_0.9.1_windows_amd64.zip",
+          "shasum": "64320f1579a25cedd2238a8d1596365db6ec7e15ad7a9921c4ba64cd5841463f"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.9.1_windows_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.1/terraform-provider-awx_0.9.1_windows_arm.zip",
+          "shasum": "5b1990f87b900c95eb0b204db61a2fdf91a45610cbc041e29f2510cce5c34218"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.9.1_windows_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.1/terraform-provider-awx_0.9.1_windows_arm64.zip",
+          "shasum": "664ea5bf4d17a75c874282eff92ae9e704b447d709088ddb537fdc8f8d05e897"
+        }
+      ]
+    },
+    {
+      "version": "0.9.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.0/terraform-provider-awx_0.9.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.0/terraform-provider-awx_0.9.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.9.0_darwin_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.0/terraform-provider-awx_0.9.0_darwin_amd64.zip",
+          "shasum": "5834516e86ab4874527e92ff3c8365a9330aabcd5edb4eca9b6df5d389bf6792"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.9.0_darwin_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.0/terraform-provider-awx_0.9.0_darwin_arm64.zip",
+          "shasum": "69fdc86c33946f3e67aa6a0d49087d2f6d7583c294fa3c2de63e880717a8e425"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.9.0_freebsd_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.0/terraform-provider-awx_0.9.0_freebsd_386.zip",
+          "shasum": "da949ecb20e7908d57b326533fac661f51c2a36de9170c56ce3293d8d002b104"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.9.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.0/terraform-provider-awx_0.9.0_freebsd_amd64.zip",
+          "shasum": "d2763368aa3cdfe2dc15b2a54430cd046b2d342ac50559ba86f77f41ffac87d8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.9.0_freebsd_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.0/terraform-provider-awx_0.9.0_freebsd_arm.zip",
+          "shasum": "de38fcd529017060f3fa997a27a1dc699f38546facb5820c2d80932028e96749"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.9.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.0/terraform-provider-awx_0.9.0_freebsd_arm64.zip",
+          "shasum": "282a4a5fb2110edfe67f15d47212a859f0bafa3fe72352f161b782b71b887dbe"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.9.0_linux_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.0/terraform-provider-awx_0.9.0_linux_386.zip",
+          "shasum": "9d055b7b70db642e80b6ef01daa526142a95a040fb88f6f9a2c409711d44afbd"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.9.0_linux_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.0/terraform-provider-awx_0.9.0_linux_amd64.zip",
+          "shasum": "9cdf0a2a82806949832d8aeca0ba01a1eb02e53e1932822f016177c429acbbe3"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.9.0_linux_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.0/terraform-provider-awx_0.9.0_linux_arm.zip",
+          "shasum": "71115a4d7cded59855ae356105f37b73f3be84889ab402551f901a9b4951d5bc"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.9.0_linux_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.0/terraform-provider-awx_0.9.0_linux_arm64.zip",
+          "shasum": "957d8cd2ee23c59834fe7fa0ef68dae05489f89f1d3831f835847928eb10c5ac"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.9.0_windows_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.0/terraform-provider-awx_0.9.0_windows_386.zip",
+          "shasum": "12ac0ef3f8615cf84ff375e05598e0cca5cff093908ce9cce981e1507747bbf3"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.9.0_windows_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.0/terraform-provider-awx_0.9.0_windows_amd64.zip",
+          "shasum": "48256b99c1dc19f3995c08cc3b9a134c1d6e84832079f4b526b15d4cbcd7c7f8"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.9.0_windows_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.0/terraform-provider-awx_0.9.0_windows_arm.zip",
+          "shasum": "92cd7f90978d133d6dcc54a6da0e92ca76a63bc63d1218845bf4a6d9ea9ddd2b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.9.0_windows_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.9.0/terraform-provider-awx_0.9.0_windows_arm64.zip",
+          "shasum": "bb7fab12e1c834e66e05c53249e62c8fd25fbd7ea974ec0507cb7a7113e9c6de"
+        }
+      ]
+    },
+    {
+      "version": "0.8.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.1/terraform-provider-awx_0.8.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.1/terraform-provider-awx_0.8.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.8.1_darwin_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.1/terraform-provider-awx_0.8.1_darwin_amd64.zip",
+          "shasum": "ec416d9c4f2a2153247d34bc7530a88ca748c4c62d06727445815911058c9328"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.8.1_darwin_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.1/terraform-provider-awx_0.8.1_darwin_arm64.zip",
+          "shasum": "0f9dfa1d0d7aa88926ccfaa1feb5572a8c347a80ee72088d5f7653d8b86de39c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.8.1_freebsd_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.1/terraform-provider-awx_0.8.1_freebsd_386.zip",
+          "shasum": "50f6d0779396a253076a78a678fe284552c1a609d1678cb1cdce026c1365c5f2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.8.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.1/terraform-provider-awx_0.8.1_freebsd_amd64.zip",
+          "shasum": "4ea2f32c095c15d651dd915d51de391238699a024beef2b7a63917b2ac335e7c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.8.1_freebsd_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.1/terraform-provider-awx_0.8.1_freebsd_arm.zip",
+          "shasum": "5743895248853aa19f2bd542c5290c9c706cce21dad499c990047f727bbdc7a1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.8.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.1/terraform-provider-awx_0.8.1_freebsd_arm64.zip",
+          "shasum": "142b7dff635dc54a7799028da767868dd311c371e2e918ef91fc86bfa37a7b53"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.8.1_linux_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.1/terraform-provider-awx_0.8.1_linux_386.zip",
+          "shasum": "c851fdeafc2dbd8be8b734d3dc79be63f15790783adbe8d84f5d8ae380576bb9"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.8.1_linux_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.1/terraform-provider-awx_0.8.1_linux_amd64.zip",
+          "shasum": "0b6ab0b32e31ef839b833eaf4cceae107b207207840ea2871682803af5cf0802"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.8.1_linux_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.1/terraform-provider-awx_0.8.1_linux_arm.zip",
+          "shasum": "d7f42cf9cf9af1bafd04d19adc4656044f3e2232bbf44fda5f3047727c55ea2a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.8.1_linux_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.1/terraform-provider-awx_0.8.1_linux_arm64.zip",
+          "shasum": "f132e888397ed19a0df505cdfb8222db67c43fd073c021b3b9568e87617466ab"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.8.1_windows_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.1/terraform-provider-awx_0.8.1_windows_386.zip",
+          "shasum": "1d863c6fe6f2268170a7ea33ed0a66f044b545f306999e63bfb8867f7a44b17a"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.8.1_windows_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.1/terraform-provider-awx_0.8.1_windows_amd64.zip",
+          "shasum": "b5c1fd428196c3f88eee6ab497d1b4edf7a6daee94a3428262f61e5b3fe847e2"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.8.1_windows_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.1/terraform-provider-awx_0.8.1_windows_arm.zip",
+          "shasum": "a9e0aa6198dd1c95936d9291c5c1867f34b9e3d7299dc92e40d9289f99a3e0aa"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.8.1_windows_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.1/terraform-provider-awx_0.8.1_windows_arm64.zip",
+          "shasum": "d3a9f75d9092f0055484cfcef427b084d555a0c32e2f4e6ad730f62dece312dc"
+        }
+      ]
+    },
+    {
+      "version": "0.8.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.0/terraform-provider-awx_0.8.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.0/terraform-provider-awx_0.8.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.8.0_darwin_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.0/terraform-provider-awx_0.8.0_darwin_amd64.zip",
+          "shasum": "8d9744fb06ae67aee3c16ff4aa5950cdfe1c9bbde007d34fcb67c217044a3e4c"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.8.0_darwin_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.0/terraform-provider-awx_0.8.0_darwin_arm64.zip",
+          "shasum": "ed02804c250bbd7185c55995083e10a90b8297d537687ae31ee821e198f4209e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.8.0_freebsd_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.0/terraform-provider-awx_0.8.0_freebsd_386.zip",
+          "shasum": "b11b1cf63cb2c278e3996c366309f145d19d2455d225187d2428b01f02dc0320"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.8.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.0/terraform-provider-awx_0.8.0_freebsd_amd64.zip",
+          "shasum": "12b56758ee7dc9e6445c3adee2aeb82a029644cfa635553a42e9a932b4452c24"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.8.0_freebsd_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.0/terraform-provider-awx_0.8.0_freebsd_arm.zip",
+          "shasum": "16a2a41822991e6062574fc3e51eba07021125c4c0ea2f0263ad0cee60e8ed13"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.8.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.0/terraform-provider-awx_0.8.0_freebsd_arm64.zip",
+          "shasum": "c0ac7f61c24f91d978c14dab94d4dd526eb600d7acdd35e90ee2d58686877de4"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.8.0_linux_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.0/terraform-provider-awx_0.8.0_linux_386.zip",
+          "shasum": "0ad5c20ae24a9355b2a2d7fb8bf1000af6498cb00b67683c907299be8db1814f"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.8.0_linux_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.0/terraform-provider-awx_0.8.0_linux_amd64.zip",
+          "shasum": "4cc835f5c3f4f43afea4310ce6419cf6a07d3b6e3dc3bd7452cc4fba902f1525"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.8.0_linux_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.0/terraform-provider-awx_0.8.0_linux_arm.zip",
+          "shasum": "531fcfeaf6b2a56761327e87d5e712b5410c17a70104a669380d4b3a87c99da5"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.8.0_linux_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.0/terraform-provider-awx_0.8.0_linux_arm64.zip",
+          "shasum": "2265f4353eda92220453195f11b4efed60cf6720017869984433330aa4d60f7f"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.8.0_windows_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.0/terraform-provider-awx_0.8.0_windows_386.zip",
+          "shasum": "569fa9ccbe45a190ed9facbc394a03c6776a52a54b5af87de5013a01bb8cda9e"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.8.0_windows_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.0/terraform-provider-awx_0.8.0_windows_amd64.zip",
+          "shasum": "66df1561604a352d954eb11c2a506e07d15d7a6501d746f897b4926b59a48be0"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.8.0_windows_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.0/terraform-provider-awx_0.8.0_windows_arm.zip",
+          "shasum": "fd949dd05e80ed30ffed429b2c15b18aa5cabf1e66e2210c7bdae98d6bd8478d"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.8.0_windows_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.8.0/terraform-provider-awx_0.8.0_windows_arm64.zip",
+          "shasum": "0798c8354c1d7ab5eb1df5081fd1b4f325e21dc4431fd325ae4ce2f7a50ad22b"
+        }
+      ]
+    },
+    {
+      "version": "0.7.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.7.1/terraform-provider-awx_0.7.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.7.1/terraform-provider-awx_0.7.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.7.1_darwin_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.7.1/terraform-provider-awx_0.7.1_darwin_amd64.zip",
+          "shasum": "96b741acea25447ce1f59c53ae36f2214a499b073e870da5e3775d196bc7fe29"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.7.1_freebsd_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.7.1/terraform-provider-awx_0.7.1_freebsd_386.zip",
+          "shasum": "f78b7ba2493d9d10e1fff328fa4330ca6d275bf95d283ad18f7c153262cecf05"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.7.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.7.1/terraform-provider-awx_0.7.1_freebsd_amd64.zip",
+          "shasum": "ac19414b47d02f893019f390bbb45bb6be4fc942cbea65f90d786e5ce7902f51"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.7.1_freebsd_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.7.1/terraform-provider-awx_0.7.1_freebsd_arm.zip",
+          "shasum": "2cddca4795ceebd7421297b18150e2df798e4a5d6373c2becb70b1c2c564ddfe"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.7.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.7.1/terraform-provider-awx_0.7.1_freebsd_arm64.zip",
+          "shasum": "d8474b1a15f3f0794b33f19d7e458d170a2cf60ca97ed9a475d6fe81c128df53"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.7.1_linux_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.7.1/terraform-provider-awx_0.7.1_linux_386.zip",
+          "shasum": "10143cb3eb64b645f264aa1e26d956cf7ef48a965dae2dd888b3f529632cc8bb"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.7.1_linux_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.7.1/terraform-provider-awx_0.7.1_linux_amd64.zip",
+          "shasum": "985c5b04449c5be5f536dc5550e04adc05c8dd3f1bbcbff1d355b6a76389f2ce"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.7.1_linux_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.7.1/terraform-provider-awx_0.7.1_linux_arm.zip",
+          "shasum": "33baa37513d84f262c43dfc6a1f7da9b2df6699e3793167eecbdf4bb2abd1c39"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.7.1_linux_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.7.1/terraform-provider-awx_0.7.1_linux_arm64.zip",
+          "shasum": "c7d40ab417f98a11c769982001a72f326e57d295f602c173825004da90cb849f"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.7.1_windows_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.7.1/terraform-provider-awx_0.7.1_windows_386.zip",
+          "shasum": "2cfcc5003c24ac6589bcc0c80c779d6dd6257697b64410e49902d5fd763f4b3d"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.7.1_windows_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.7.1/terraform-provider-awx_0.7.1_windows_amd64.zip",
+          "shasum": "43cf97edc664f2a40395fd563de0f50af18db198fe8dcd0a72dda740353e1da1"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.7.1_windows_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.7.1/terraform-provider-awx_0.7.1_windows_arm.zip",
+          "shasum": "0ceb0eae7986bb82f4d6583e3a1e74b249b9c4afcb2b6b7098e60272283b9aa8"
+        }
+      ]
+    },
+    {
+      "version": "0.6.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.6.0/terraform-provider-awx_0.6.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.6.0/terraform-provider-awx_0.6.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.6.0_darwin_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.6.0/terraform-provider-awx_0.6.0_darwin_amd64.zip",
+          "shasum": "3df868713997f4922daac9f129ee52e8e6485c547c20470ac0018a99fd15da28"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.6.0_freebsd_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.6.0/terraform-provider-awx_0.6.0_freebsd_386.zip",
+          "shasum": "e5c2ae8d04e98d81256c97865063009566b96a1d39b3e14cb9b0ca720f5a8926"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.6.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.6.0/terraform-provider-awx_0.6.0_freebsd_amd64.zip",
+          "shasum": "3ceef3db5987e662fdcd0e5bd509d427423797c4aa576af20d9efbbf2f90c2b1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.6.0_freebsd_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.6.0/terraform-provider-awx_0.6.0_freebsd_arm.zip",
+          "shasum": "4c43a0e1790ce81d5c424a19b68459610e41aa96187ec581ebdcd492802c4c52"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.6.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.6.0/terraform-provider-awx_0.6.0_freebsd_arm64.zip",
+          "shasum": "c8888395a78b56e339f30d35e60609828f2fba2672c98504117d2da7dde3fe26"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.6.0_linux_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.6.0/terraform-provider-awx_0.6.0_linux_386.zip",
+          "shasum": "0753f7613484faa7bce8a31fe0424903bc9950ef6cd6808d7e7a6d66ae585b66"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.6.0_linux_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.6.0/terraform-provider-awx_0.6.0_linux_amd64.zip",
+          "shasum": "d84b79dea687df12b891566828e2508a4d8b7e8e9e7299900d000501394bcd44"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.6.0_linux_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.6.0/terraform-provider-awx_0.6.0_linux_arm.zip",
+          "shasum": "a07669ec5c708493618f208eba9a203d3c197a43671ad9e0857fd76247aca177"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.6.0_linux_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.6.0/terraform-provider-awx_0.6.0_linux_arm64.zip",
+          "shasum": "ded7f77dd4a26a53008eaef42bace4ddcd48c1846a6bcb50ac2a8d7e751b0511"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.6.0_windows_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.6.0/terraform-provider-awx_0.6.0_windows_386.zip",
+          "shasum": "4855f97dd2d6c9454990160ca91b5091b671c9a2169a16941d803924accd9dc7"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.6.0_windows_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.6.0/terraform-provider-awx_0.6.0_windows_amd64.zip",
+          "shasum": "4e6928d38e84f010786ded6f067cca3aada464d165fa80fcce68e79bedf0f701"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.6.0_windows_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.6.0/terraform-provider-awx_0.6.0_windows_arm.zip",
+          "shasum": "44f98ddf79c8efec4452d4e83cd1eb4aff70513219c59a3c523b7f507dd5c489"
+        }
+      ]
+    },
+    {
+      "version": "0.5.3",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.3/terraform-provider-awx_0.5.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.3/terraform-provider-awx_0.5.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.5.3_darwin_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.3/terraform-provider-awx_0.5.3_darwin_amd64.zip",
+          "shasum": "faa48338dbee1ebf5b5f3dc5e60e952094809483eb222617a2933faa37e7c234"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.5.3_freebsd_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.3/terraform-provider-awx_0.5.3_freebsd_386.zip",
+          "shasum": "bdffa731e7501ffe489fcae4521549ee902888d15d6176744309f7ba2966b661"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.5.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.3/terraform-provider-awx_0.5.3_freebsd_amd64.zip",
+          "shasum": "bff2555786be96f20c5ac783dafa202b30f006fa65a243cc65d8e97197c831a0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.5.3_freebsd_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.3/terraform-provider-awx_0.5.3_freebsd_arm.zip",
+          "shasum": "e903589b1c3bd620e91eb7d132368fb15d8ab640f4b2d05662daf2c2050c1f09"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.5.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.3/terraform-provider-awx_0.5.3_freebsd_arm64.zip",
+          "shasum": "d0922f31b178b191716bc20287b70e202bee4cade91b4d940eda98447e1f13c3"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.5.3_linux_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.3/terraform-provider-awx_0.5.3_linux_386.zip",
+          "shasum": "56276982342c007eebe16a51d8f9dc310308fb3a1cf90ee328bfc3f12e6d1ecb"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.5.3_linux_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.3/terraform-provider-awx_0.5.3_linux_amd64.zip",
+          "shasum": "64b77f18b0137140fdfa050d11b79a7e02f2048eff502a0c4dca889119865664"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.5.3_linux_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.3/terraform-provider-awx_0.5.3_linux_arm.zip",
+          "shasum": "860a7b17419b512ea5a40f4fe792ed764976188daf2cd8640a4e4d03a0f9e160"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.5.3_linux_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.3/terraform-provider-awx_0.5.3_linux_arm64.zip",
+          "shasum": "3e20e12873f4fad61ce4d45ee76590cf78bc8c6f2c9f55d8a774be12663c601d"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.5.3_windows_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.3/terraform-provider-awx_0.5.3_windows_386.zip",
+          "shasum": "ff65b0e125e18297339a44c8bf8a5e7e751afb93fd19702b425c30b00b1e1498"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.5.3_windows_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.3/terraform-provider-awx_0.5.3_windows_amd64.zip",
+          "shasum": "f311b60772f1ca3870a051b775d7a8ef218e096bd9a133aaae621748a01d9793"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.5.3_windows_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.3/terraform-provider-awx_0.5.3_windows_arm.zip",
+          "shasum": "30f5aa0566c7a3a8c593e9eaa82877ee252346cfccc31937a580937dce918673"
+        }
+      ]
+    },
+    {
+      "version": "0.5.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.0/terraform-provider-awx_0.5.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.0/terraform-provider-awx_0.5.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.5.0_darwin_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.0/terraform-provider-awx_0.5.0_darwin_amd64.zip",
+          "shasum": "78b1c475281f5f8062c5f9c0740cfc15349eb83d3366c4e86948bfdc5b6dec7f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.5.0_freebsd_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.0/terraform-provider-awx_0.5.0_freebsd_386.zip",
+          "shasum": "33c0b90195524c0777e99fb403adc4e9e5e1daf31f086a9c21f12585d731f5c4"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.5.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.0/terraform-provider-awx_0.5.0_freebsd_amd64.zip",
+          "shasum": "fe6d54ee3525dc829c946a260c220ac07cefe38e8ec4f14459df805df614f867"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.5.0_freebsd_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.0/terraform-provider-awx_0.5.0_freebsd_arm.zip",
+          "shasum": "28485320a9a4b87d0d7603a9526a76659bcee1d7337b2fd0a59828b8ff69a899"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.5.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.0/terraform-provider-awx_0.5.0_freebsd_arm64.zip",
+          "shasum": "63aaa8ed5406da0bd638a1ffb68f83c843afb1d7ed50fa9a1091178647f70679"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.5.0_linux_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.0/terraform-provider-awx_0.5.0_linux_386.zip",
+          "shasum": "e3d9ce4666f94ec2e5d5f1722902fe5ccf140c0d84f4b5af34fa6e161b71f6b2"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.5.0_linux_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.0/terraform-provider-awx_0.5.0_linux_amd64.zip",
+          "shasum": "c7bb8c1e40313ed7cf559be583f7067bce4033d90a513062a93a2206340daf04"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.5.0_linux_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.0/terraform-provider-awx_0.5.0_linux_arm.zip",
+          "shasum": "427492bc36fdeca18ac14139a5a6e9caf375115b20b6ebec794cda8ad30a9d10"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.5.0_linux_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.0/terraform-provider-awx_0.5.0_linux_arm64.zip",
+          "shasum": "aec02b3900925f0457eeff4d211201d751af70ac237cd85cd8530af9360afc99"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.5.0_windows_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.0/terraform-provider-awx_0.5.0_windows_386.zip",
+          "shasum": "e873556a6f8cdbcb79347c51434f711560b716138892f71004bb56f59818da4a"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.5.0_windows_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.0/terraform-provider-awx_0.5.0_windows_amd64.zip",
+          "shasum": "f86bc6ad953b07a0ad7a4bf33059c2e1be9fa5b273bac602b713dea84e532af9"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.5.0_windows_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.5.0/terraform-provider-awx_0.5.0_windows_arm.zip",
+          "shasum": "5db5e0aa20c87b3dd1b3185da912e300219c85220d4a8036e7fa8dbc7e5a3835"
+        }
+      ]
+    },
+    {
+      "version": "0.3.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.3.0/terraform-provider-awx_0.3.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.3.0/terraform-provider-awx_0.3.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.3.0_darwin_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.3.0/terraform-provider-awx_0.3.0_darwin_amd64.zip",
+          "shasum": "f0ddc682bde3a29e8afd15cb8c0cfeb65abab88d570c8afc25472cefd7ec687c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.3.0_freebsd_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.3.0/terraform-provider-awx_0.3.0_freebsd_386.zip",
+          "shasum": "af9e62aeb9990c96abc15ebb2db1bb3910b6638fedd67792738a34f50234397a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.3.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.3.0/terraform-provider-awx_0.3.0_freebsd_amd64.zip",
+          "shasum": "bb2779f0215f57a98a30e54fe7fd4d19ee573135323d831138660b1db033df54"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.3.0_freebsd_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.3.0/terraform-provider-awx_0.3.0_freebsd_arm.zip",
+          "shasum": "84df7b020a3ccf88c38cb5c812a9405d115ff55ee5142baa39057ff00eb744fe"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.3.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.3.0/terraform-provider-awx_0.3.0_freebsd_arm64.zip",
+          "shasum": "88150fd0e8b78ead75c5983234a671a876805f463759758e1ec16c736f5232ac"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.3.0_linux_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.3.0/terraform-provider-awx_0.3.0_linux_386.zip",
+          "shasum": "d24c42c57bad2a00081fcbe2f483e2c6a8e45e2ce84567b386df0f3c98012192"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.3.0_linux_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.3.0/terraform-provider-awx_0.3.0_linux_amd64.zip",
+          "shasum": "79e765dfd6c9b4ef8819b706002cdc11ebffef5937038a32ffe769a4944358d1"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.3.0_linux_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.3.0/terraform-provider-awx_0.3.0_linux_arm.zip",
+          "shasum": "665c2c6bbeedb2a9fcf3a34a8ea66edd56910980d8ed9c2ffcc5f08f0607cd75"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-awx_0.3.0_linux_arm64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.3.0/terraform-provider-awx_0.3.0_linux_arm64.zip",
+          "shasum": "03aff3e3aef76fab0ec37227142283c869a34205fee494f3c90e3545af1b244f"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-awx_0.3.0_windows_386.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.3.0/terraform-provider-awx_0.3.0_windows_386.zip",
+          "shasum": "17b333dc569b7fa72b265d1539f72cdc8927825424e4910c6fae225e4a0a4034"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-awx_0.3.0_windows_amd64.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.3.0/terraform-provider-awx_0.3.0_windows_amd64.zip",
+          "shasum": "53a43ef549b5615169f23e43ad1cf83e51f6979afa395980bbd62db963f5f1b9"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-awx_0.3.0_windows_arm.zip",
+          "download_url": "https://github.com/f0rkz/terraform-provider-awx/releases/download/v0.3.0/terraform-provider-awx_0.3.0_windows_arm.zip",
+          "shasum": "6f37242822ba9a5f81aed53f01cda79a9590b76264f89c08aa8e32f78c2d4d6e"
+        }
+      ]
+    }
+  ]
+}

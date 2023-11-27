@@ -1,0 +1,815 @@
+{
+  "versions": [
+    {
+      "version": "0.11.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.1/terraform-provider-pingaccess_0.11.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.1/terraform-provider-pingaccess_0.11.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.11.1_darwin_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.1/terraform-provider-pingaccess_0.11.1_darwin_amd64.zip",
+          "shasum": "d684ee0c5318db1f61a297714c7b4f22af78d9f5941268cae19a0e06ddaa1968"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-pingaccess_0.11.1_darwin_arm64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.1/terraform-provider-pingaccess_0.11.1_darwin_arm64.zip",
+          "shasum": "7b1013fac592c5dc68eeb5b5b32cc86f9b97f51548d5b1dcb78f8db397280234"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.11.1_linux_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.1/terraform-provider-pingaccess_0.11.1_linux_386.zip",
+          "shasum": "22cf540cfb2df13ceb5c5ed236fa7b21e4ac0c0eb6ecdc752740414e23e93378"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.11.1_linux_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.1/terraform-provider-pingaccess_0.11.1_linux_amd64.zip",
+          "shasum": "f424f6e874737eff4b566f7016630fba5ed21b02cc68314fa165756608139e80"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-pingaccess_0.11.1_linux_arm.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.1/terraform-provider-pingaccess_0.11.1_linux_arm.zip",
+          "shasum": "5c032cc7d14627eeec36ed6b05d33f2da92ac8ecb114e91808dea5a821515e31"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-pingaccess_0.11.1_linux_arm64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.1/terraform-provider-pingaccess_0.11.1_linux_arm64.zip",
+          "shasum": "6573acbd106249a98f98816556d1f93c9d34c8e1975c3ae41934a35be5f73573"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.11.1_windows_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.1/terraform-provider-pingaccess_0.11.1_windows_386.zip",
+          "shasum": "14df3ba8646e8ef2b44e6ab90cb7a9fba7025633ff3e644fa0048de076b96030"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.11.1_windows_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.1/terraform-provider-pingaccess_0.11.1_windows_amd64.zip",
+          "shasum": "2761b53564768d2e4bb61cf1d776be7c20cf29521ebf77e08f68160cbc6d275d"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-pingaccess_0.11.1_windows_arm.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.1/terraform-provider-pingaccess_0.11.1_windows_arm.zip",
+          "shasum": "a9c5813eb794ac34ebfb5df4d05ce1a964c73c7ca55eb073a3dce4676a082823"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-pingaccess_0.11.1_windows_arm64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.1/terraform-provider-pingaccess_0.11.1_windows_arm64.zip",
+          "shasum": "7a5e909ffaade28c25d6e1a4e6c43d26ace4725b39312ded5c14e53ff34254d3"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.11.1_openbsd_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.1/terraform-provider-pingaccess_0.11.1_openbsd_386.zip",
+          "shasum": "a081d5220f19795169997165e08155661e62404c708f67f39b3734f0ffe53917"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.11.1_openbsd_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.1/terraform-provider-pingaccess_0.11.1_openbsd_amd64.zip",
+          "shasum": "85c24bdc9de40e60bb8be084b00b3ce6f6924d0c7f089d67d745415513193655"
+        },
+        {
+          "os": "solaris",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.11.1_solaris_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.1/terraform-provider-pingaccess_0.11.1_solaris_amd64.zip",
+          "shasum": "582fcc1da65ecee286a9ffd5ef33f266c715247142b2ee726fbedee1af35b57a"
+        }
+      ]
+    },
+    {
+      "version": "0.11.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.0/terraform-provider-pingaccess_0.11.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.0/terraform-provider-pingaccess_0.11.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.11.0_darwin_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.0/terraform-provider-pingaccess_0.11.0_darwin_amd64.zip",
+          "shasum": "a927d3b39f2678a152b6f4de33923bb8b8f6f0dd7b02f1733f82b466d0cca183"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-pingaccess_0.11.0_darwin_arm64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.0/terraform-provider-pingaccess_0.11.0_darwin_arm64.zip",
+          "shasum": "cbd973d3152cf989ec353ba8c57c23bc0dea3e981808a1e1efc1281656576493"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.11.0_linux_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.0/terraform-provider-pingaccess_0.11.0_linux_386.zip",
+          "shasum": "24f848e390dd795a6a0c36e9ce6ea599709acceea2d8ef3279452cd2a8e11da6"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.11.0_linux_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.0/terraform-provider-pingaccess_0.11.0_linux_amd64.zip",
+          "shasum": "bbce71578776ed21fceb7d3109bd6d3592520b4f28c04a7bd9afcf0b3f747289"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-pingaccess_0.11.0_linux_arm.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.0/terraform-provider-pingaccess_0.11.0_linux_arm.zip",
+          "shasum": "fcfd70cfb0e425cfb649182905bb5188b0187ecf76eabfdf0ac501a99909ef29"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-pingaccess_0.11.0_linux_arm64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.0/terraform-provider-pingaccess_0.11.0_linux_arm64.zip",
+          "shasum": "427e6132dcdd4c5e8e051caa64c6a86c5580035582dace3dd341142cd0408210"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.11.0_windows_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.0/terraform-provider-pingaccess_0.11.0_windows_386.zip",
+          "shasum": "19ff5088aaa02b194e57acb3b6b69c9edc2fee5d4a7271e94d710fd906bb059c"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.11.0_windows_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.0/terraform-provider-pingaccess_0.11.0_windows_amd64.zip",
+          "shasum": "8cc2662598223396faa49302a70ffcae1a5fd5719368943e38406f10c642e959"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-pingaccess_0.11.0_windows_arm.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.0/terraform-provider-pingaccess_0.11.0_windows_arm.zip",
+          "shasum": "c19e711acf7c271e13e4f9439f36101996db6d05b99b733c9d519d133bb382b7"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-pingaccess_0.11.0_windows_arm64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.0/terraform-provider-pingaccess_0.11.0_windows_arm64.zip",
+          "shasum": "e4170cb86cff22832528a6e7e65eb9a6293a202205906cffd3d40e30de5cca62"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.11.0_openbsd_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.0/terraform-provider-pingaccess_0.11.0_openbsd_386.zip",
+          "shasum": "9ecacf8ce9d954268bfcc7d3649e5482f2fa7537c9d54a25939af25b499ae5f5"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.11.0_openbsd_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.0/terraform-provider-pingaccess_0.11.0_openbsd_amd64.zip",
+          "shasum": "f71e85e7ef64023c367d18d40e073b31f9b39e34dd60729eb616196b77385ba6"
+        },
+        {
+          "os": "solaris",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.11.0_solaris_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.11.0/terraform-provider-pingaccess_0.11.0_solaris_amd64.zip",
+          "shasum": "a80f313c69929564761e1ea06908f71cc8ba27d6eba30b3d01665a324aef63a7"
+        }
+      ]
+    },
+    {
+      "version": "0.10.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.10.0/terraform-provider-pingaccess_0.10.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.10.0/terraform-provider-pingaccess_0.10.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.10.0_darwin_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.10.0/terraform-provider-pingaccess_0.10.0_darwin_amd64.zip",
+          "shasum": "50971aa67a1da7ae7b8215dd202e291be5f91d39dd1220dbd186ea41cbb24898"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-pingaccess_0.10.0_darwin_arm64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.10.0/terraform-provider-pingaccess_0.10.0_darwin_arm64.zip",
+          "shasum": "fa1fdc9ca99593ba4cf90c6fde429a4cefc2948d8c066a030cafb3d131f078e9"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.10.0_linux_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.10.0/terraform-provider-pingaccess_0.10.0_linux_386.zip",
+          "shasum": "c9dc7ca9d796cbcae4ce6cdf6d793170a1cdbe95cf0604840d4ea7508a721797"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.10.0_linux_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.10.0/terraform-provider-pingaccess_0.10.0_linux_amd64.zip",
+          "shasum": "17b1ab06d7a966cd00abd6215be1d4f83f8313927dd37a125fe5bfdaad658ae9"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-pingaccess_0.10.0_linux_arm.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.10.0/terraform-provider-pingaccess_0.10.0_linux_arm.zip",
+          "shasum": "b74b7f2016a32088b157971476c3a5a8605d74c0a1aa074bc1ba0c9c8b8d3861"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-pingaccess_0.10.0_linux_arm64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.10.0/terraform-provider-pingaccess_0.10.0_linux_arm64.zip",
+          "shasum": "974297f010e3f99de1590457ffdeafc602455fe02a2cba35aebd831ace0b812e"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.10.0_windows_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.10.0/terraform-provider-pingaccess_0.10.0_windows_386.zip",
+          "shasum": "d3d710dae252864beb3b1d6d3567afe07ff04be0e9f2db327847c3319849be5b"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.10.0_windows_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.10.0/terraform-provider-pingaccess_0.10.0_windows_amd64.zip",
+          "shasum": "2807613c8ffe7586e6cadb9460773c020ece619c9bef44c6ff5e6253926161aa"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-pingaccess_0.10.0_windows_arm.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.10.0/terraform-provider-pingaccess_0.10.0_windows_arm.zip",
+          "shasum": "7ee9eb7a0a712c945ae1deed89a4d18c01746be92a9c83e7d790172d830f9bf5"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-pingaccess_0.10.0_windows_arm64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.10.0/terraform-provider-pingaccess_0.10.0_windows_arm64.zip",
+          "shasum": "56e581d93e3e97fa801f645eb7810abf6d2fc312547730abaa61b64c86c99f96"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.10.0_openbsd_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.10.0/terraform-provider-pingaccess_0.10.0_openbsd_386.zip",
+          "shasum": "51e57984619778e5c19eee1b27cfddd24dd4c4a61ca315ba6b285f0170701e3c"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.10.0_openbsd_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.10.0/terraform-provider-pingaccess_0.10.0_openbsd_amd64.zip",
+          "shasum": "b82f91fb2a200c51c34e51bd3b9a50cbd141f6f01a12f9f9f66875eeede0ef49"
+        },
+        {
+          "os": "solaris",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.10.0_solaris_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.10.0/terraform-provider-pingaccess_0.10.0_solaris_amd64.zip",
+          "shasum": "1eddfd55b711db5852cdf3aebbc1b7d21d1c4235236dab990f4f2447921af09b"
+        }
+      ]
+    },
+    {
+      "version": "0.9.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.9.0/terraform-provider-pingaccess_0.9.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.9.0/terraform-provider-pingaccess_0.9.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.9.0_darwin_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.9.0/terraform-provider-pingaccess_0.9.0_darwin_amd64.zip",
+          "shasum": "6d9578c26a8b8af26276abc69cc24964b39f489ed8da6d6eb955c5163f462698"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-pingaccess_0.9.0_darwin_arm64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.9.0/terraform-provider-pingaccess_0.9.0_darwin_arm64.zip",
+          "shasum": "948b25e78da6d9b98ca3b0e3a0891c85c72433d6e7ee129aa69ee7f7c4f83222"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.9.0_linux_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.9.0/terraform-provider-pingaccess_0.9.0_linux_386.zip",
+          "shasum": "20b7437f3e773cf3918dc3486fc6ba039b7f4126ffcf5b25e66c24dd2efeecd8"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.9.0_linux_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.9.0/terraform-provider-pingaccess_0.9.0_linux_amd64.zip",
+          "shasum": "adc386e647f73221fe50ab374d30068822a4757638e013e31cce0c9c3c748e2a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-pingaccess_0.9.0_linux_arm.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.9.0/terraform-provider-pingaccess_0.9.0_linux_arm.zip",
+          "shasum": "174fedfb30eaaa2c094a7441181987dd194bd579b3d4c6360b84372c6d99bf61"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-pingaccess_0.9.0_linux_arm64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.9.0/terraform-provider-pingaccess_0.9.0_linux_arm64.zip",
+          "shasum": "064861c1e60ca3419508fe82e59ff15e01558dccc02bbc5fa2eccbbf2c2cc9cb"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.9.0_windows_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.9.0/terraform-provider-pingaccess_0.9.0_windows_386.zip",
+          "shasum": "a545b7f1150f4845cdaca2359d7249d36d9ca81f746cbc370d7ff29d90980bb3"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.9.0_windows_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.9.0/terraform-provider-pingaccess_0.9.0_windows_amd64.zip",
+          "shasum": "855234f185d8268092d339bad290142507beb03b7a92b6c01690072c115c63d0"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-pingaccess_0.9.0_windows_arm.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.9.0/terraform-provider-pingaccess_0.9.0_windows_arm.zip",
+          "shasum": "6f544ecb02787d6ff507f176a9d85f556e846b79a575b1a1018013ece43b9a87"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.9.0_openbsd_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.9.0/terraform-provider-pingaccess_0.9.0_openbsd_386.zip",
+          "shasum": "ef0c76376a01faaef7b409c68af66708ee05710051294bcf7ddc7ac4d188105c"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.9.0_openbsd_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.9.0/terraform-provider-pingaccess_0.9.0_openbsd_amd64.zip",
+          "shasum": "2192aee5d2f513aa5a8fb9534b1c519b3751e8aea0055fcfdda9eb716109e27e"
+        },
+        {
+          "os": "solaris",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.9.0_solaris_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.9.0/terraform-provider-pingaccess_0.9.0_solaris_amd64.zip",
+          "shasum": "fb968d73580627ca29fc2dd41ebccbac904d676dc6f3811a196f65a9ccc43319"
+        }
+      ]
+    },
+    {
+      "version": "0.8.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.8.0/terraform-provider-pingaccess_0.8.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.8.0/terraform-provider-pingaccess_0.8.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.8.0_darwin_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.8.0/terraform-provider-pingaccess_0.8.0_darwin_amd64.zip",
+          "shasum": "636a7d0266068e0b19ab0f20c9c279635b18dc0103472a734f3dd92a85382735"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-pingaccess_0.8.0_darwin_arm64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.8.0/terraform-provider-pingaccess_0.8.0_darwin_arm64.zip",
+          "shasum": "2cf019d301ffa67e3e3ff84bf27f5db68f81850405d85f73abc31a6d93479014"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.8.0_linux_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.8.0/terraform-provider-pingaccess_0.8.0_linux_386.zip",
+          "shasum": "359a21879b7bea698906bb08bc30cba504d3f1c66087069ffc76dbe225a3b44a"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.8.0_linux_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.8.0/terraform-provider-pingaccess_0.8.0_linux_amd64.zip",
+          "shasum": "380615b2d1d6e6f18fd259fc81eed367cc4ea778bffc13c651fb158867631c92"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-pingaccess_0.8.0_linux_arm.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.8.0/terraform-provider-pingaccess_0.8.0_linux_arm.zip",
+          "shasum": "57d10af8ba50035256da138aa204faad732e04d9111cbc89696a29a81dc9e8e1"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-pingaccess_0.8.0_linux_arm64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.8.0/terraform-provider-pingaccess_0.8.0_linux_arm64.zip",
+          "shasum": "9640f561f03b8627886479d55f6f45c2f91c28cdf9508e311a7a918af27d1ea4"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.8.0_windows_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.8.0/terraform-provider-pingaccess_0.8.0_windows_386.zip",
+          "shasum": "4a1aaa7daf499d355579f235b07ff7ad917533297484518a740553e85a34fca9"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.8.0_windows_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.8.0/terraform-provider-pingaccess_0.8.0_windows_amd64.zip",
+          "shasum": "6de7f6101a7ef90b1e64317d0d1a179d2f9dc5fc1e456e37f25133793ff6f4ea"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-pingaccess_0.8.0_windows_arm.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.8.0/terraform-provider-pingaccess_0.8.0_windows_arm.zip",
+          "shasum": "d4821da59f9ab474676804151fd91ad6d3a93e37fd462f7ce75242712eb35962"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.8.0_openbsd_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.8.0/terraform-provider-pingaccess_0.8.0_openbsd_386.zip",
+          "shasum": "2b8f26144354d428d187756f214e8ea8d50cb35b679e9ed9ccaed67ec56aa436"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.8.0_openbsd_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.8.0/terraform-provider-pingaccess_0.8.0_openbsd_amd64.zip",
+          "shasum": "a579cda766fdfcae21c99812fe87ff9d541d1f7d89756dae0283cca458216acf"
+        },
+        {
+          "os": "solaris",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.8.0_solaris_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.8.0/terraform-provider-pingaccess_0.8.0_solaris_amd64.zip",
+          "shasum": "abda20251e396f8980dc2799b7e3ca4dceb8a5373731995ea8eedcd2e41b976d"
+        }
+      ]
+    },
+    {
+      "version": "0.7.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.7.0/terraform-provider-pingaccess_0.7.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.7.0/terraform-provider-pingaccess_0.7.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.7.0_darwin_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.7.0/terraform-provider-pingaccess_0.7.0_darwin_amd64.zip",
+          "shasum": "b879b8f7f5ff97445a1b5071001fee75e465f5242c0d1953d8292f71d8738d5a"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.7.0_linux_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.7.0/terraform-provider-pingaccess_0.7.0_linux_386.zip",
+          "shasum": "7ba064a826fc1029581c6d4c2d390c8bb5bc429972057b8e2f81400f84e8e3c3"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.7.0_linux_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.7.0/terraform-provider-pingaccess_0.7.0_linux_amd64.zip",
+          "shasum": "9d687b5d1f1ae08ff4b7acca3d32aefa0cc3e75f66021f85ba315fedb79e2d12"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-pingaccess_0.7.0_linux_arm.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.7.0/terraform-provider-pingaccess_0.7.0_linux_arm.zip",
+          "shasum": "7a8cb28a10a1bf1108495f962d6cafe0955b9bde1fb568e321c3c5cdaae6bc86"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-pingaccess_0.7.0_linux_arm64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.7.0/terraform-provider-pingaccess_0.7.0_linux_arm64.zip",
+          "shasum": "150ef76b875832fcf9464257bb680e0f9728ea8235808f647b45753efccca19e"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.7.0_windows_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.7.0/terraform-provider-pingaccess_0.7.0_windows_386.zip",
+          "shasum": "602668223fa03163de3d93ee62ed29563e768e184e52f57bcbcdca129211f1ef"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.7.0_windows_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.7.0/terraform-provider-pingaccess_0.7.0_windows_amd64.zip",
+          "shasum": "2e541bb6dc099871fb01e677b9118bc34ab6cad5bdeb0c7c361f7da6a56dccd9"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.7.0_openbsd_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.7.0/terraform-provider-pingaccess_0.7.0_openbsd_386.zip",
+          "shasum": "cc7ea998a58c3c91d4f5321873f3220533dce98421fe753fe78922c209bf804e"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.7.0_openbsd_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.7.0/terraform-provider-pingaccess_0.7.0_openbsd_amd64.zip",
+          "shasum": "704b133ec55bf36ea6478288f7dd3e2d6d4c3256d1363e90751142f7bfff7b70"
+        },
+        {
+          "os": "solaris",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.7.0_solaris_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.7.0/terraform-provider-pingaccess_0.7.0_solaris_amd64.zip",
+          "shasum": "2057b88fd5e2c139a0223488f9bafc7caa6f0fe5ac7c23d97d2294e29b2b0914"
+        }
+      ]
+    },
+    {
+      "version": "0.6.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.6.0/terraform-provider-pingaccess_0.6.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.6.0/terraform-provider-pingaccess_0.6.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.6.0_darwin_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.6.0/terraform-provider-pingaccess_0.6.0_darwin_amd64.zip",
+          "shasum": "ca56cd8fe9089d726565c94f35fdbd19be67d7b62bce82b2a46a10cdd27869a1"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.6.0_linux_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.6.0/terraform-provider-pingaccess_0.6.0_linux_386.zip",
+          "shasum": "3ec512b042c8212d37d2e69d53c7109dc33def62773b42a3a9d2ddfbb945b6bc"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.6.0_linux_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.6.0/terraform-provider-pingaccess_0.6.0_linux_amd64.zip",
+          "shasum": "e0b23c8ed65fb7d1392626a69cc795dcd9a733b692b128ce95758833ece7ee21"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-pingaccess_0.6.0_linux_arm.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.6.0/terraform-provider-pingaccess_0.6.0_linux_arm.zip",
+          "shasum": "3d9f0a1a698393ac5a299bd2fd3247c3113939597901424d88e2ec927abb33ad"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-pingaccess_0.6.0_linux_arm64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.6.0/terraform-provider-pingaccess_0.6.0_linux_arm64.zip",
+          "shasum": "b3d176560f148a30ac8b910dd4c69c78dc15e1fbe798e0346480e17172828212"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.6.0_windows_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.6.0/terraform-provider-pingaccess_0.6.0_windows_386.zip",
+          "shasum": "3e5c5ddcb69f3312d4861cb085f5324af04ccdaeb39caa018d4c02e41efd9d87"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.6.0_windows_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.6.0/terraform-provider-pingaccess_0.6.0_windows_amd64.zip",
+          "shasum": "1ca100e5b32a8cac040abd9b5c2c0efc3eadb1be0ea21e908ec6a4858a2d073c"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.6.0_openbsd_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.6.0/terraform-provider-pingaccess_0.6.0_openbsd_386.zip",
+          "shasum": "e8091cee081eeea0b779e74fb7ab6eb0037bec1c449995b031a19bef5e85981b"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.6.0_openbsd_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.6.0/terraform-provider-pingaccess_0.6.0_openbsd_amd64.zip",
+          "shasum": "04348fc5f40b7fa5f2e292ab202e48e0d7b1105d3efa749f86a3f3930c232421"
+        },
+        {
+          "os": "solaris",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.6.0_solaris_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.6.0/terraform-provider-pingaccess_0.6.0_solaris_amd64.zip",
+          "shasum": "2cbf82752ca9341d79f1be8e63ed01d63a4a40c4af882c94515150f496d9022b"
+        }
+      ]
+    },
+    {
+      "version": "0.5.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0/terraform-provider-pingaccess_0.5.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0/terraform-provider-pingaccess_0.5.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.5.0_darwin_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0/terraform-provider-pingaccess_0.5.0_darwin_amd64.zip",
+          "shasum": "6efb8d64d04a0977eb365c6ac3f8e07f390e7f3a0d2027b05f281808dc38ff56"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.5.0_linux_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0/terraform-provider-pingaccess_0.5.0_linux_386.zip",
+          "shasum": "4b6930c9e606eddcbe7386b533cd5626589a71033bafe67dbee6d5d196536871"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.5.0_linux_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0/terraform-provider-pingaccess_0.5.0_linux_amd64.zip",
+          "shasum": "1ba57d28b59c514fdbdcb805ac978a94a4e8ce455469614bf7d27fcc23580cdf"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-pingaccess_0.5.0_linux_arm.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0/terraform-provider-pingaccess_0.5.0_linux_arm.zip",
+          "shasum": "b326dfebd18f8aa6a82a57da97a93c36a69eea85dc41630d44fcd1780ef8f948"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-pingaccess_0.5.0_linux_arm64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0/terraform-provider-pingaccess_0.5.0_linux_arm64.zip",
+          "shasum": "bb99b13a6d7cd12c09c054d7791b26a99c32769acd8fa3afa2ad28cc0c842e18"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.5.0_windows_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0/terraform-provider-pingaccess_0.5.0_windows_386.zip",
+          "shasum": "31b8e7feb0c3bad517885b3df74aea97cfe6b89cebff77f4db43d1a789c93502"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.5.0_windows_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0/terraform-provider-pingaccess_0.5.0_windows_amd64.zip",
+          "shasum": "5aed1765a5bc62fbc8193b0b98fbb019c7ae312cbf96367658f1b73fc4e3bc68"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.5.0_openbsd_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0/terraform-provider-pingaccess_0.5.0_openbsd_386.zip",
+          "shasum": "b5f521ee787715a9f92690baba6fd6a264347679326814e3a34238f5a3c93233"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.5.0_openbsd_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0/terraform-provider-pingaccess_0.5.0_openbsd_amd64.zip",
+          "shasum": "bfe788a26c44e7e48971b783fd639455f53f234223ebc7063f02d3f7aef6fc59"
+        },
+        {
+          "os": "solaris",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.5.0_solaris_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0/terraform-provider-pingaccess_0.5.0_solaris_amd64.zip",
+          "shasum": "b33334e0ae2911d126ec6a4b939bcb89e4ce2ab6a381ab6f8e2b0b3345e6ad64"
+        }
+      ]
+    },
+    {
+      "version": "0.5.0-beta1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0-beta1/terraform-provider-pingaccess_0.5.0-beta1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0-beta1/terraform-provider-pingaccess_0.5.0-beta1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.5.0-beta1_darwin_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0-beta1/terraform-provider-pingaccess_0.5.0-beta1_darwin_amd64.zip",
+          "shasum": "83c0ad4533dab33ab4342dbf350b6a03c67bbfc955f82bc05484e6f43d0a7eae"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.5.0-beta1_linux_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0-beta1/terraform-provider-pingaccess_0.5.0-beta1_linux_386.zip",
+          "shasum": "1294cce8a2a12b181b4e68e6fcb78fdfb9260e12f6f3ae516cfef8cb62696ae8"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.5.0-beta1_linux_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0-beta1/terraform-provider-pingaccess_0.5.0-beta1_linux_amd64.zip",
+          "shasum": "03101ecf5daee07eefb85161fb89d6fe8a2f7ef437fd24928fe36836065597ba"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-pingaccess_0.5.0-beta1_linux_arm.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0-beta1/terraform-provider-pingaccess_0.5.0-beta1_linux_arm.zip",
+          "shasum": "96f855f058df49103693fec15e50906030796607856517140c1d9714da93d7d1"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-pingaccess_0.5.0-beta1_linux_arm64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0-beta1/terraform-provider-pingaccess_0.5.0-beta1_linux_arm64.zip",
+          "shasum": "8a50438a9db61e046995bd609413f88e0842b062f3345a46d92ddd084f78e43f"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.5.0-beta1_windows_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0-beta1/terraform-provider-pingaccess_0.5.0-beta1_windows_386.zip",
+          "shasum": "057e129b8474e8c399e82da54adf8dd0788a940d4cfe1113f305e9f765725dcf"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.5.0-beta1_windows_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0-beta1/terraform-provider-pingaccess_0.5.0-beta1_windows_amd64.zip",
+          "shasum": "526f35fb70453a79476468adfc5e3a8173e11437e1c4d63df6ae09acec9d45bd"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-pingaccess_0.5.0-beta1_openbsd_386.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0-beta1/terraform-provider-pingaccess_0.5.0-beta1_openbsd_386.zip",
+          "shasum": "b10b81b7d7528265260cf461406e582f919f7fad1c67ccdf97d8bf4d2c2f563e"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.5.0-beta1_openbsd_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0-beta1/terraform-provider-pingaccess_0.5.0-beta1_openbsd_amd64.zip",
+          "shasum": "784e7f6a48f14f689ba6ee93a7e060900f07e9c33bdf6ee89b90637355d3a5df"
+        },
+        {
+          "os": "solaris",
+          "arch": "amd64",
+          "filename": "terraform-provider-pingaccess_0.5.0-beta1_solaris_amd64.zip",
+          "download_url": "https://github.com/iwarapter/terraform-provider-pingaccess/releases/download/v0.5.0-beta1/terraform-provider-pingaccess_0.5.0-beta1_solaris_amd64.zip",
+          "shasum": "dc2ff6f9ee391cadffe8f605d3481fec2c7d26dc7f3f11bf750755cbc0a8e6f3"
+        }
+      ]
+    }
+  ]
+}

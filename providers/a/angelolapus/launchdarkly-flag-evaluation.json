@@ -1,0 +1,1624 @@
+{
+  "versions": [
+    {
+      "version": "0.2.29",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.29/terraform-provider-launchdarkly-flag-evaluation_0.2.29_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.29/terraform-provider-launchdarkly-flag-evaluation_0.2.29_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.29_darwin_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.29/terraform-provider-launchdarkly-flag-evaluation_0.2.29_darwin_amd64.zip",
+          "shasum": "ed47c88094a7a6b339c12571fc68cba3c04f49b404465596fc647b7428e9ef7e"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.29_darwin_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.29/terraform-provider-launchdarkly-flag-evaluation_0.2.29_darwin_arm64.zip",
+          "shasum": "e9b8eb16852aff490500a78ebbd5a0eba380484dabf71b2ed251a6d215964357"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.29_freebsd_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.29/terraform-provider-launchdarkly-flag-evaluation_0.2.29_freebsd_386.zip",
+          "shasum": "5d662502ab753d117575ab68331511df38ac2feb46d06962cf016f4cd789caf8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.29_freebsd_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.29/terraform-provider-launchdarkly-flag-evaluation_0.2.29_freebsd_amd64.zip",
+          "shasum": "bed23e6237bfaf0f9725ce86138cf91aee858f4e9b5dd0751dc5a475e2b3c24b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.29_freebsd_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.29/terraform-provider-launchdarkly-flag-evaluation_0.2.29_freebsd_arm.zip",
+          "shasum": "48b9543a0316d92c711e4e5b683121821e685a2c7442faf48824c50a93b85855"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.29_freebsd_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.29/terraform-provider-launchdarkly-flag-evaluation_0.2.29_freebsd_arm64.zip",
+          "shasum": "02445f9f3ef4a773cb46faabee7a347bae598ed62d3375c5b9c3c42e11938466"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.29_linux_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.29/terraform-provider-launchdarkly-flag-evaluation_0.2.29_linux_386.zip",
+          "shasum": "8fc0f881d7361c0665ea787e3b00cd98d0df3f0417fc29abb0512579c0af207e"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.29_linux_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.29/terraform-provider-launchdarkly-flag-evaluation_0.2.29_linux_amd64.zip",
+          "shasum": "79c4784b1e0ba8ad88f2b513b272540974991b01efd65aeb6a719923a073db9d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.29_linux_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.29/terraform-provider-launchdarkly-flag-evaluation_0.2.29_linux_arm.zip",
+          "shasum": "9a87f3f3a6952668d3d2d3b5e7852d08c84d4ef38875badfd361df650f18dd2b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.29_linux_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.29/terraform-provider-launchdarkly-flag-evaluation_0.2.29_linux_arm64.zip",
+          "shasum": "a4221d1be1af805372fc97fb38775df9820c3fa76f73c23fc892fd3dee2fa9ca"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.29_windows_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.29/terraform-provider-launchdarkly-flag-evaluation_0.2.29_windows_386.zip",
+          "shasum": "9cdd4c7dbe23009a5b61694f6f614fa555e50402eb3f8b54d0c02f39392adde1"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.29_windows_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.29/terraform-provider-launchdarkly-flag-evaluation_0.2.29_windows_amd64.zip",
+          "shasum": "d20e62939dc3e27567f5ac26a2a24f428c691be4121e33b32bf84653a16bd752"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.29_windows_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.29/terraform-provider-launchdarkly-flag-evaluation_0.2.29_windows_arm.zip",
+          "shasum": "00bab9fbd1ed3fa4461290a4efd80a650dcadeeb455448670abd713d4b61fb1c"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.29_windows_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.29/terraform-provider-launchdarkly-flag-evaluation_0.2.29_windows_arm64.zip",
+          "shasum": "c1159655c300b151d4ecbfc6c1af266fdeb619939b3cde25c23bdee0b37c09f6"
+        }
+      ]
+    },
+    {
+      "version": "0.2.28",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.28/terraform-provider-launchdarkly-flag-evaluation_0.2.28_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.28/terraform-provider-launchdarkly-flag-evaluation_0.2.28_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.28_darwin_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.28/terraform-provider-launchdarkly-flag-evaluation_0.2.28_darwin_amd64.zip",
+          "shasum": "75d89bac42bf5ac820b8a90ab4d226150ebb01d21bee3036472478aad778e1e0"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.28_darwin_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.28/terraform-provider-launchdarkly-flag-evaluation_0.2.28_darwin_arm64.zip",
+          "shasum": "6a6c04e43dce249c13f4c970b0247f47ab720dddc10bcbba842027203d163c14"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.28_freebsd_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.28/terraform-provider-launchdarkly-flag-evaluation_0.2.28_freebsd_386.zip",
+          "shasum": "70045e0cf6b0860c107abfa3e19ae799b334091665b6e585913b2f3de0521651"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.28_freebsd_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.28/terraform-provider-launchdarkly-flag-evaluation_0.2.28_freebsd_amd64.zip",
+          "shasum": "950d1b7ed9ff73e678b3040fe8172c14559413f150777a0787725bdaa51ad6e6"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.28_freebsd_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.28/terraform-provider-launchdarkly-flag-evaluation_0.2.28_freebsd_arm.zip",
+          "shasum": "b4ae7e5d01f236d7ebdc2447ff8009013b6f3901d281667740d0e83419860a9f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.28_freebsd_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.28/terraform-provider-launchdarkly-flag-evaluation_0.2.28_freebsd_arm64.zip",
+          "shasum": "caa1d95e3b798db3a1018119feedb2a39ab31662068fef54b9b3b6e6323d7e1a"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.28_linux_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.28/terraform-provider-launchdarkly-flag-evaluation_0.2.28_linux_386.zip",
+          "shasum": "019029be65ad10b3f64c61e06442155452c576627f8f04211a940cc7cf89b71f"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.28_linux_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.28/terraform-provider-launchdarkly-flag-evaluation_0.2.28_linux_amd64.zip",
+          "shasum": "0443a511058fef44b1713228f93c0ca4095ab9eef084429c23f7d6470badfc36"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.28_linux_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.28/terraform-provider-launchdarkly-flag-evaluation_0.2.28_linux_arm.zip",
+          "shasum": "b60367825f8d3b7c1ec62108d2d483c6ebc935cb007b1de3e1a3cf3e1279da28"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.28_linux_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.28/terraform-provider-launchdarkly-flag-evaluation_0.2.28_linux_arm64.zip",
+          "shasum": "e2633cf39ab992749cacd13a872466c14680a081258cd5f06c50be035efccf36"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.28_windows_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.28/terraform-provider-launchdarkly-flag-evaluation_0.2.28_windows_386.zip",
+          "shasum": "df8e784a2c36da322330fe7b29691883f01011049ec3585035939dde09d2f2f0"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.28_windows_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.28/terraform-provider-launchdarkly-flag-evaluation_0.2.28_windows_amd64.zip",
+          "shasum": "11ec736d116f1db220fbea1d2226bc6a15a37c6efe2a43b96779c43fdb5829f9"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.28_windows_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.28/terraform-provider-launchdarkly-flag-evaluation_0.2.28_windows_arm.zip",
+          "shasum": "8e681ecd294e07df60d37bc66f6baf7ee49cc4e7641dfb0355f287779c0f4604"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.28_windows_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.28/terraform-provider-launchdarkly-flag-evaluation_0.2.28_windows_arm64.zip",
+          "shasum": "ab661c6c9cdf4a92681005a729667b8d215615e4d12fb6180a2b90c3742f8416"
+        }
+      ]
+    },
+    {
+      "version": "0.2.27",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.27/terraform-provider-launchdarkly-flag-evaluation_0.2.27_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.27/terraform-provider-launchdarkly-flag-evaluation_0.2.27_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.27_darwin_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.27/terraform-provider-launchdarkly-flag-evaluation_0.2.27_darwin_amd64.zip",
+          "shasum": "b9d67a5a5d25a12ab2f098660d28273a680f81000251ee398381dbd05c79319a"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.27_darwin_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.27/terraform-provider-launchdarkly-flag-evaluation_0.2.27_darwin_arm64.zip",
+          "shasum": "ef307977294da1a67c50be6288c53d1b2e2e4f507a36645fbc2836bce859ea72"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.27_freebsd_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.27/terraform-provider-launchdarkly-flag-evaluation_0.2.27_freebsd_386.zip",
+          "shasum": "8cf3998d0e1923a1b6d779fef8a466cc691f4f2a2f820c7e18f298cd60bef267"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.27_freebsd_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.27/terraform-provider-launchdarkly-flag-evaluation_0.2.27_freebsd_amd64.zip",
+          "shasum": "1d52e9167bfe7635b89d54de4cae5ac45fed7e3034b210ae6e938662b0f549c8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.27_freebsd_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.27/terraform-provider-launchdarkly-flag-evaluation_0.2.27_freebsd_arm.zip",
+          "shasum": "ac190a812429dd36d961798829f5a8629d6087547abc07eefd0d69e6b4e9b042"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.27_freebsd_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.27/terraform-provider-launchdarkly-flag-evaluation_0.2.27_freebsd_arm64.zip",
+          "shasum": "fa4f06a489ec51c70a468191648f6f09becfa5de0de2d741d60d320c6b6ab20d"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.27_linux_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.27/terraform-provider-launchdarkly-flag-evaluation_0.2.27_linux_386.zip",
+          "shasum": "88b31e62aad7313d03c2554bf4453ca672d5682315c523637a26dd99ba76dd62"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.27_linux_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.27/terraform-provider-launchdarkly-flag-evaluation_0.2.27_linux_amd64.zip",
+          "shasum": "15818f070c3befb02b7ec7f974568d31029f4bac41e67f9170c66cf111622afa"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.27_linux_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.27/terraform-provider-launchdarkly-flag-evaluation_0.2.27_linux_arm.zip",
+          "shasum": "9132a84007bf85e09ffd504cca7d825418bff9e9faad2f0389a77426ffe32778"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.27_linux_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.27/terraform-provider-launchdarkly-flag-evaluation_0.2.27_linux_arm64.zip",
+          "shasum": "25803fe4126bde68d770823777a69d7eb1812debc72c1d7124d846d1e6806272"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.27_windows_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.27/terraform-provider-launchdarkly-flag-evaluation_0.2.27_windows_386.zip",
+          "shasum": "d9fc71928933f49fc52ba436fdd87dfc79ce4b16871124940eab9e39d9199889"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.27_windows_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.27/terraform-provider-launchdarkly-flag-evaluation_0.2.27_windows_amd64.zip",
+          "shasum": "ead1cb20029f0a809957dc031e6bc8fe378e09212637bc19cb3683826d761297"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.27_windows_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.27/terraform-provider-launchdarkly-flag-evaluation_0.2.27_windows_arm.zip",
+          "shasum": "c3d4fbe11d8fb3d7a04bf3e3d1966abd4ba3b1388a7fc9a93ef7f74443dc11af"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.27_windows_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.27/terraform-provider-launchdarkly-flag-evaluation_0.2.27_windows_arm64.zip",
+          "shasum": "cae2b7519cdd8edb0567945cadc04f48ba6cbc55f22ee13f21008285bfb4c1fd"
+        }
+      ]
+    },
+    {
+      "version": "0.2.26",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.26/terraform-provider-launchdarkly-flag-evaluation_0.2.26_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.26/terraform-provider-launchdarkly-flag-evaluation_0.2.26_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.26_darwin_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.26/terraform-provider-launchdarkly-flag-evaluation_0.2.26_darwin_amd64.zip",
+          "shasum": "d902ec708313c767dbd707eaedfa57ec5a89adac664cd76ca708900ac67dfa5d"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.26_darwin_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.26/terraform-provider-launchdarkly-flag-evaluation_0.2.26_darwin_arm64.zip",
+          "shasum": "684b8955bb26f79cdd6fe99e4a27ce1d924926d69f4b538d115c2f7cdebc7cc3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.26_freebsd_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.26/terraform-provider-launchdarkly-flag-evaluation_0.2.26_freebsd_386.zip",
+          "shasum": "7bfd970ea164c6386eb31e749629975a0d3b216658dff40d1402ac944feb7340"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.26_freebsd_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.26/terraform-provider-launchdarkly-flag-evaluation_0.2.26_freebsd_amd64.zip",
+          "shasum": "794e32ecf20caa40bdd005aa34fab4cd410cb8953a620280941a66e95f388cd4"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.26_freebsd_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.26/terraform-provider-launchdarkly-flag-evaluation_0.2.26_freebsd_arm.zip",
+          "shasum": "ffc3533bcba598d3918173ff6616d927e567ef0b62582f622d81051d0f857c8b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.26_freebsd_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.26/terraform-provider-launchdarkly-flag-evaluation_0.2.26_freebsd_arm64.zip",
+          "shasum": "dd370519eb7a8c2198876ada6beb96b78bc49ab2e72331aff026987cb928f2bf"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.26_linux_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.26/terraform-provider-launchdarkly-flag-evaluation_0.2.26_linux_386.zip",
+          "shasum": "72203e1103a21315b31afdc5e881e8c02a73beff71aea2bda724046c49da86b5"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.26_linux_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.26/terraform-provider-launchdarkly-flag-evaluation_0.2.26_linux_amd64.zip",
+          "shasum": "881ca2c9e65410e35a64329c3bbca9b6187b55fde4f39994c64139349363bd43"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.26_linux_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.26/terraform-provider-launchdarkly-flag-evaluation_0.2.26_linux_arm.zip",
+          "shasum": "ff89f4217fbbadf9c914bba6bbcf7d3bf4d8dea2ea26d26ada512115b09e07a4"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.26_linux_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.26/terraform-provider-launchdarkly-flag-evaluation_0.2.26_linux_arm64.zip",
+          "shasum": "d0b604b1b9bd96ec470665377b11564b7546d84709dcca8369a77038d1e876a9"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.26_windows_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.26/terraform-provider-launchdarkly-flag-evaluation_0.2.26_windows_386.zip",
+          "shasum": "d3765f656dc8f437fb81299c032f12b2566889cc52b5012c6b8852c3e1e53943"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.26_windows_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.26/terraform-provider-launchdarkly-flag-evaluation_0.2.26_windows_amd64.zip",
+          "shasum": "78f28dc32fe7e94c66b9b271ec56cd8eccaa91edc378bb627b22f1b35779ec67"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.26_windows_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.26/terraform-provider-launchdarkly-flag-evaluation_0.2.26_windows_arm.zip",
+          "shasum": "bf8637340ca2f999c643386fcdbb844fe146414226e616b8f3b98f07e5938c32"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.26_windows_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.26/terraform-provider-launchdarkly-flag-evaluation_0.2.26_windows_arm64.zip",
+          "shasum": "9a0ab00deb8d5ac400d0610d24fba613b1c2baccbec8980b0842afdaaf252f7b"
+        }
+      ]
+    },
+    {
+      "version": "0.2.24",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.24/terraform-provider-launchdarkly-flag-evaluation_0.2.24_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.24/terraform-provider-launchdarkly-flag-evaluation_0.2.24_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.24_darwin_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.24/terraform-provider-launchdarkly-flag-evaluation_0.2.24_darwin_amd64.zip",
+          "shasum": "5ff56d0673a9a40cda5cf63893421e8afc195743ed03bdf7b161059158ff340e"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.24_darwin_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.24/terraform-provider-launchdarkly-flag-evaluation_0.2.24_darwin_arm64.zip",
+          "shasum": "a7f8c0d42d24e980d9a88f10419f7ab35824a152074ea3ff79ec68b9cdfa166d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.24_freebsd_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.24/terraform-provider-launchdarkly-flag-evaluation_0.2.24_freebsd_386.zip",
+          "shasum": "6f7221224ad5d86b5a781ccf3f0ba0ba70c0d8fe5b79c953e0392a1fc3262d65"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.24_freebsd_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.24/terraform-provider-launchdarkly-flag-evaluation_0.2.24_freebsd_amd64.zip",
+          "shasum": "274ed2ad93834d2d2bff30b227287bd7752db334c000b02d4dfee4ce93286fab"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.24_freebsd_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.24/terraform-provider-launchdarkly-flag-evaluation_0.2.24_freebsd_arm.zip",
+          "shasum": "2fff9b396f37c9451fe78519fdfcd075fd1de0c65e1f2376be533e20dc080c8a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.24_freebsd_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.24/terraform-provider-launchdarkly-flag-evaluation_0.2.24_freebsd_arm64.zip",
+          "shasum": "be86b4a178382e5d50753f33c3ec7eaa40204d8c3fe7793dfedb139525d03aba"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.24_linux_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.24/terraform-provider-launchdarkly-flag-evaluation_0.2.24_linux_386.zip",
+          "shasum": "6859129605c1e8242e01f4e75a003d2ce24b8f15f1ee3e67ecf185aad8a7d610"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.24_linux_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.24/terraform-provider-launchdarkly-flag-evaluation_0.2.24_linux_amd64.zip",
+          "shasum": "169ecae6145e81f59cabf1b2072f81c051b65179909c410422404ac43c2da26d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.24_linux_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.24/terraform-provider-launchdarkly-flag-evaluation_0.2.24_linux_arm.zip",
+          "shasum": "74a52f0c7c31d1952e691ddd3e26589c374de0c5a4eca49841aeb6a81638754b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.24_linux_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.24/terraform-provider-launchdarkly-flag-evaluation_0.2.24_linux_arm64.zip",
+          "shasum": "a6484cd1aecfb9745a447a286c57e26e76b4a0e2a35cd9a3cd8dfcd4f04c78fb"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.24_windows_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.24/terraform-provider-launchdarkly-flag-evaluation_0.2.24_windows_386.zip",
+          "shasum": "7a96cf2504a0af516551f977f68348d4335e77fad895e0b53a7617d764415560"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.24_windows_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.24/terraform-provider-launchdarkly-flag-evaluation_0.2.24_windows_amd64.zip",
+          "shasum": "dec4333bb717bc57505ffa32ce45855cd3d9cc9e2c5e04a38de6cec1494ba837"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.24_windows_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.24/terraform-provider-launchdarkly-flag-evaluation_0.2.24_windows_arm.zip",
+          "shasum": "c521fd0269baf1f232d0c11fff44197572046b3106353c29ef367eefd9908cc7"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.24_windows_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.24/terraform-provider-launchdarkly-flag-evaluation_0.2.24_windows_arm64.zip",
+          "shasum": "8910aeb9af30c23f2fb1fe497a01be32b92b2855e4c9603da8e2bc452710f5cb"
+        }
+      ]
+    },
+    {
+      "version": "0.2.21",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.21/terraform-provider-launchdarkly-flag-evaluation_0.2.21_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.21/terraform-provider-launchdarkly-flag-evaluation_0.2.21_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.21_darwin_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.21/terraform-provider-launchdarkly-flag-evaluation_0.2.21_darwin_amd64.zip",
+          "shasum": "e03369a47a7db6f5181a7984ceb49cc5c6b754410f136926b74cd93f15bec692"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.21_darwin_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.21/terraform-provider-launchdarkly-flag-evaluation_0.2.21_darwin_arm64.zip",
+          "shasum": "cbc48d5acf5392e5f7b2410d69b3b801f2f7795c297589d50c296bcd6144ed21"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.21_freebsd_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.21/terraform-provider-launchdarkly-flag-evaluation_0.2.21_freebsd_386.zip",
+          "shasum": "84ef038c942aaf3e581d7635d31ae583967090f80805b728dae58585313a5afd"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.21_freebsd_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.21/terraform-provider-launchdarkly-flag-evaluation_0.2.21_freebsd_amd64.zip",
+          "shasum": "c60f23303233682c0c45a97cd8184d3e460baaae7b339c7871ce97d5637967f2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.21_freebsd_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.21/terraform-provider-launchdarkly-flag-evaluation_0.2.21_freebsd_arm.zip",
+          "shasum": "4b67834d1288dc67fe65ede0acb3b4466930fca86cba415545810138303bc7dd"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.21_freebsd_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.21/terraform-provider-launchdarkly-flag-evaluation_0.2.21_freebsd_arm64.zip",
+          "shasum": "438b72678a78fada9c52ae9f752624856a77ecc8c00fbcdedab722a6aab35da4"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.21_linux_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.21/terraform-provider-launchdarkly-flag-evaluation_0.2.21_linux_386.zip",
+          "shasum": "d995fc34e977de8e967a91c5509feca1b9fbc9bfc338ae72ac5ce87e6a1f2c0d"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.21_linux_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.21/terraform-provider-launchdarkly-flag-evaluation_0.2.21_linux_amd64.zip",
+          "shasum": "7f5ff8101573f9ab32098c606d399e1b803a276d1fc457e0734673129ffc2304"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.21_linux_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.21/terraform-provider-launchdarkly-flag-evaluation_0.2.21_linux_arm.zip",
+          "shasum": "57b1ef71741c6d89fd1921d1f48d994237811bb0f1093c31fe30dff4d3e5b71f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.21_linux_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.21/terraform-provider-launchdarkly-flag-evaluation_0.2.21_linux_arm64.zip",
+          "shasum": "a998680f836270e87c16c2b9720584779ad5cbf247d1eb3e3f56b3df988287b3"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.21_windows_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.21/terraform-provider-launchdarkly-flag-evaluation_0.2.21_windows_386.zip",
+          "shasum": "c63485e227a6f6b131a3efceac81ecb22798443e4ff960611f8d6f9423c3fc29"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.21_windows_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.21/terraform-provider-launchdarkly-flag-evaluation_0.2.21_windows_amd64.zip",
+          "shasum": "fcce1b37ae83143fd37d99106de9a68a5254c61fe3babab5ea2fc8908ebfa567"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.21_windows_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.21/terraform-provider-launchdarkly-flag-evaluation_0.2.21_windows_arm.zip",
+          "shasum": "5a90fe6eccb854d92400d7c1864308d99cae3cbb19e388220c561d3516a85683"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.21_windows_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.21/terraform-provider-launchdarkly-flag-evaluation_0.2.21_windows_arm64.zip",
+          "shasum": "320221be9dc6ca7c23ced139f931273d9c321ee22d9118f395455a2ec9478598"
+        }
+      ]
+    },
+    {
+      "version": "0.2.20",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.20/terraform-provider-launchdarkly-flag-evaluation_0.2.20_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.20/terraform-provider-launchdarkly-flag-evaluation_0.2.20_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.20_darwin_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.20/terraform-provider-launchdarkly-flag-evaluation_0.2.20_darwin_amd64.zip",
+          "shasum": "964573d9cfb339ffbd927bebb407b5eafe95afcbb0ae3eda970f677f9ea4d457"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.20_darwin_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.20/terraform-provider-launchdarkly-flag-evaluation_0.2.20_darwin_arm64.zip",
+          "shasum": "ad317bfd191afc4d9f8279c693343cb532abf1c62971573dd6ac19e343f07b69"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.20_freebsd_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.20/terraform-provider-launchdarkly-flag-evaluation_0.2.20_freebsd_386.zip",
+          "shasum": "d208c97c133fce52aaeb308af30379d6431cb9ae3d44c87c5551e08f5a0fb427"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.20_freebsd_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.20/terraform-provider-launchdarkly-flag-evaluation_0.2.20_freebsd_amd64.zip",
+          "shasum": "4a811a08ed4b188f057a9781292949c99d3d11f823467bd16729f9a4315b8a8b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.20_freebsd_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.20/terraform-provider-launchdarkly-flag-evaluation_0.2.20_freebsd_arm.zip",
+          "shasum": "c55f1256ad5e4419159ac2b460b1aff4869d0baa2f6f03a11689157027aab31e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.20_freebsd_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.20/terraform-provider-launchdarkly-flag-evaluation_0.2.20_freebsd_arm64.zip",
+          "shasum": "e01d5b2c6dd90fe1f170f8d74cfcffa708e33794ba53f541f20201e7d20f80a1"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.20_linux_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.20/terraform-provider-launchdarkly-flag-evaluation_0.2.20_linux_386.zip",
+          "shasum": "c8a9cc75341c072a1f9bcf7e30e3b878cc99ed20065c8640a2b63d7b61577d4c"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.20_linux_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.20/terraform-provider-launchdarkly-flag-evaluation_0.2.20_linux_amd64.zip",
+          "shasum": "08fe57b351402d637204691c53ed25d88eca41aab108311e4fc99173891a0ffa"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.20_linux_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.20/terraform-provider-launchdarkly-flag-evaluation_0.2.20_linux_arm.zip",
+          "shasum": "24848a2cc3af69ed7645c6b81f7ab85a029e57828226611ef210cdd1afe3b8e7"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.20_linux_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.20/terraform-provider-launchdarkly-flag-evaluation_0.2.20_linux_arm64.zip",
+          "shasum": "1dd9d3ca4f7850e625da4e507ea69d253aa8adb178a9276f79ecca0457eba3f2"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.20_windows_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.20/terraform-provider-launchdarkly-flag-evaluation_0.2.20_windows_386.zip",
+          "shasum": "64393bba8e4193716e46b1b46cfa6d52728b38f03b26537b28cc4e6a2105d988"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.20_windows_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.20/terraform-provider-launchdarkly-flag-evaluation_0.2.20_windows_amd64.zip",
+          "shasum": "d8bf4e6bda84cf5f4b9f4d6ab0977e72c3aaaaaf8593cacf33c04298493573de"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.20_windows_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.20/terraform-provider-launchdarkly-flag-evaluation_0.2.20_windows_arm.zip",
+          "shasum": "345b97bcb375bc56dd94fe6e8b44ff3d2067e359ed58f80a0769ff7918340eb7"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.20_windows_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.20/terraform-provider-launchdarkly-flag-evaluation_0.2.20_windows_arm64.zip",
+          "shasum": "1ebec7f66e11352d4973c47c98a9bb465d3d451f9c5f629ba33a4c75095f58ab"
+        }
+      ]
+    },
+    {
+      "version": "0.2.19",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.19/terraform-provider-launchdarkly-flag-evaluation_0.2.19_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.19/terraform-provider-launchdarkly-flag-evaluation_0.2.19_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.19_darwin_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.19/terraform-provider-launchdarkly-flag-evaluation_0.2.19_darwin_amd64.zip",
+          "shasum": "37603019559c5570e76e36ab7d8f5a9e39f886db377eb041aed426a2b5716955"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.19_darwin_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.19/terraform-provider-launchdarkly-flag-evaluation_0.2.19_darwin_arm64.zip",
+          "shasum": "84ca4997a242b9e09abac6237c74ee72e2c71ddcf13032c3e5e27c5f6b3a81af"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.19_freebsd_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.19/terraform-provider-launchdarkly-flag-evaluation_0.2.19_freebsd_386.zip",
+          "shasum": "8476669bae05d2cf654559b3d09edd8a7f2ca148d15655fdb9f6762d2c871b75"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.19_freebsd_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.19/terraform-provider-launchdarkly-flag-evaluation_0.2.19_freebsd_amd64.zip",
+          "shasum": "8ab6509fe717a9e13dad4656a775176514a939d9dad9b2c4825c1ca3b1543426"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.19_freebsd_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.19/terraform-provider-launchdarkly-flag-evaluation_0.2.19_freebsd_arm.zip",
+          "shasum": "b346dc3687e73032058d66523a2467fcfea8917f2e864b986712e026d7617d82"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.19_freebsd_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.19/terraform-provider-launchdarkly-flag-evaluation_0.2.19_freebsd_arm64.zip",
+          "shasum": "4fb74969b5bb6efea016a88378b4393990d0167adf01dd69a6de2c7808a4ddd7"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.19_linux_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.19/terraform-provider-launchdarkly-flag-evaluation_0.2.19_linux_386.zip",
+          "shasum": "e32286d2ef6a2fe637be900a8c12af5f48c5fdd49a408867aaa2e9956f90f19a"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.19_linux_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.19/terraform-provider-launchdarkly-flag-evaluation_0.2.19_linux_amd64.zip",
+          "shasum": "ffd29e7dee0aa75b3283c2c10a3a5368558ed1de9e5fa2a4b03a3f7e63fc5f82"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.19_linux_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.19/terraform-provider-launchdarkly-flag-evaluation_0.2.19_linux_arm.zip",
+          "shasum": "787e53f37fc765d8a856875625483b727b3837406e5740c9e6a17d6b434cf089"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.19_linux_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.19/terraform-provider-launchdarkly-flag-evaluation_0.2.19_linux_arm64.zip",
+          "shasum": "a552971ed7c3f4722a24b6041fdfe7017c3b3878b92328354f92f56a2248aabf"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.19_windows_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.19/terraform-provider-launchdarkly-flag-evaluation_0.2.19_windows_386.zip",
+          "shasum": "2048f19cf88e62b854553cfe245334c56c71050a80fd545056d42751798c594d"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.19_windows_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.19/terraform-provider-launchdarkly-flag-evaluation_0.2.19_windows_amd64.zip",
+          "shasum": "8b21923a88bea582cb70b64f19cdb296e09ea5d19fe4583a2af0e21b80c44d97"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.19_windows_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.19/terraform-provider-launchdarkly-flag-evaluation_0.2.19_windows_arm.zip",
+          "shasum": "c6b8e82e6c33165f50bcf08aeee401080a6ee19748071a77a5ec711cf852b164"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.19_windows_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.19/terraform-provider-launchdarkly-flag-evaluation_0.2.19_windows_arm64.zip",
+          "shasum": "00bcc01688e996378997ae4382f632592525bae5a115c9266cf3063e5921c517"
+        }
+      ]
+    },
+    {
+      "version": "0.2.18",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.18/terraform-provider-launchdarkly-flag-evaluation_0.2.18_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.18/terraform-provider-launchdarkly-flag-evaluation_0.2.18_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.18_darwin_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.18/terraform-provider-launchdarkly-flag-evaluation_0.2.18_darwin_amd64.zip",
+          "shasum": "af7ba9c51e9ee77692e6db0e540bde5f4a56c47f57879af86b1537cf69e06353"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.18_darwin_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.18/terraform-provider-launchdarkly-flag-evaluation_0.2.18_darwin_arm64.zip",
+          "shasum": "ff6eb886cdb197d3660d3dd16cad1ad2083c051b948cab59e95cca5e0bf510bc"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.18_freebsd_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.18/terraform-provider-launchdarkly-flag-evaluation_0.2.18_freebsd_386.zip",
+          "shasum": "1f30bcae200f4289bd2657684ff064298c32d67e6f1ba2f82ef23b19484d34a2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.18_freebsd_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.18/terraform-provider-launchdarkly-flag-evaluation_0.2.18_freebsd_amd64.zip",
+          "shasum": "af232fefba3a6586f2f60219edc9af53fcd393706edb4939a472f131bfb10cf0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.18_freebsd_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.18/terraform-provider-launchdarkly-flag-evaluation_0.2.18_freebsd_arm.zip",
+          "shasum": "5e05db6f4f329e1ad5737c16a8963e7ebe1a832a766b2f4037ece2a0248b605d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.18_freebsd_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.18/terraform-provider-launchdarkly-flag-evaluation_0.2.18_freebsd_arm64.zip",
+          "shasum": "1c02697c8df1b6e77f2c0a56ca9112905523d00dc3c4e89a3b4461da362cad13"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.18_linux_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.18/terraform-provider-launchdarkly-flag-evaluation_0.2.18_linux_386.zip",
+          "shasum": "d3ad7690a89c7ef870dd6debeb460daab9d7ed3772711c51fd28871457b95ad0"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.18_linux_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.18/terraform-provider-launchdarkly-flag-evaluation_0.2.18_linux_amd64.zip",
+          "shasum": "61dbc63f0c41e211a37bec2e2306e2fc945cf3d1402cfc69d702b92b4be1839f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.18_linux_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.18/terraform-provider-launchdarkly-flag-evaluation_0.2.18_linux_arm.zip",
+          "shasum": "f1dacb148c541dae23b78cdf5c1d8dd633f3222106c096e5c43093c6bdf47a2d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.18_linux_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.18/terraform-provider-launchdarkly-flag-evaluation_0.2.18_linux_arm64.zip",
+          "shasum": "cf617980546c6fccc5e416f492de066d45cc01c7ab8ddbf98ee3a2532ae7e71e"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.18_windows_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.18/terraform-provider-launchdarkly-flag-evaluation_0.2.18_windows_386.zip",
+          "shasum": "2a418f290940b2ec94793b8c8638211f665873807737cd7351b6ffa218f86d71"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.18_windows_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.18/terraform-provider-launchdarkly-flag-evaluation_0.2.18_windows_amd64.zip",
+          "shasum": "6ca2d1b11ae188d8576400f31e95d3d7490a15b5460663f0f242b95b6104b039"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.18_windows_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.18/terraform-provider-launchdarkly-flag-evaluation_0.2.18_windows_arm.zip",
+          "shasum": "807d9c758f8fcb8415727f64a10c7ca07fdabf02a177b7727f487b324ddf6408"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.18_windows_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.18/terraform-provider-launchdarkly-flag-evaluation_0.2.18_windows_arm64.zip",
+          "shasum": "0aa1dbfa2254886665ce811b580bb3ac5729cfd045287ef6eb85dfc9ceb72197"
+        }
+      ]
+    },
+    {
+      "version": "0.2.17",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.17/terraform-provider-launchdarkly-flag-evaluation_0.2.17_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.17/terraform-provider-launchdarkly-flag-evaluation_0.2.17_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.17_darwin_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.17/terraform-provider-launchdarkly-flag-evaluation_0.2.17_darwin_amd64.zip",
+          "shasum": "cde67fca994fb01d88b40b1f894ccadb60126a0db6a70ecfe162fc2cd3494b79"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.17_darwin_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.17/terraform-provider-launchdarkly-flag-evaluation_0.2.17_darwin_arm64.zip",
+          "shasum": "4a8c03ce65141bfecd5809a32262613d892fbe6949a40ff7a96a6db7c6a3bd8a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.17_freebsd_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.17/terraform-provider-launchdarkly-flag-evaluation_0.2.17_freebsd_386.zip",
+          "shasum": "a31f04193ef3a709804b9243ce0e64fefb4e4309d33efb0c9db29e10818edb6a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.17_freebsd_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.17/terraform-provider-launchdarkly-flag-evaluation_0.2.17_freebsd_amd64.zip",
+          "shasum": "11dbc2836e4af08bcafd62022cece142053fa0ec000a3c404e38a7f0bd34d1e1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.17_freebsd_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.17/terraform-provider-launchdarkly-flag-evaluation_0.2.17_freebsd_arm.zip",
+          "shasum": "35f55a5726f95192a772d29a9fef07de2533b7b1414fc7d39bcaa76cb351bd8c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.17_freebsd_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.17/terraform-provider-launchdarkly-flag-evaluation_0.2.17_freebsd_arm64.zip",
+          "shasum": "296b9de6464ebdd362ea7a8c2dd42ae4e3b34e02c00867c4127fe83fe247fc1b"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.17_linux_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.17/terraform-provider-launchdarkly-flag-evaluation_0.2.17_linux_386.zip",
+          "shasum": "c50d6dadab945378eb159eb7ab6d1e2c47415df233ae654d3a04904595203064"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.17_linux_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.17/terraform-provider-launchdarkly-flag-evaluation_0.2.17_linux_amd64.zip",
+          "shasum": "58fefa20f1ab6d61aff599cbd2692f136dd9d099d912abb0d14935526ddc2f4c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.17_linux_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.17/terraform-provider-launchdarkly-flag-evaluation_0.2.17_linux_arm.zip",
+          "shasum": "f7de9889c855b98c0ff198fc223d543aef32724d4c882153efae4f2623f5a296"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.17_linux_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.17/terraform-provider-launchdarkly-flag-evaluation_0.2.17_linux_arm64.zip",
+          "shasum": "8952af337e0a8ba7dccf9fa532ff587b27849441c0fa0d5a0e314cbca9b42400"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.17_windows_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.17/terraform-provider-launchdarkly-flag-evaluation_0.2.17_windows_386.zip",
+          "shasum": "d72c0c914b6d63a605df0acc2008edc3cdfd1e8fed90d7f3d5ac5c1cccf6b671"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.17_windows_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.17/terraform-provider-launchdarkly-flag-evaluation_0.2.17_windows_amd64.zip",
+          "shasum": "a217ea91ed473f47c21e689215a008b742d7012e0e4b74ac043a29116ae6c6f4"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.17_windows_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.17/terraform-provider-launchdarkly-flag-evaluation_0.2.17_windows_arm.zip",
+          "shasum": "3b3b5c11cb10140a6a06348770d889683c5dcc01a045b65f04c1388b46a90127"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.17_windows_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.17/terraform-provider-launchdarkly-flag-evaluation_0.2.17_windows_arm64.zip",
+          "shasum": "9de0b995d8ec1fa895e4d046aeb746742f835fbb2d1af0074d41078db3ff1453"
+        }
+      ]
+    },
+    {
+      "version": "0.2.15",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.15/terraform-provider-launchdarkly-flag-evaluation_0.2.15_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.15/terraform-provider-launchdarkly-flag-evaluation_0.2.15_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.15_darwin_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.15/terraform-provider-launchdarkly-flag-evaluation_0.2.15_darwin_amd64.zip",
+          "shasum": "c4fe5075e8e9bb4381e1b83eb36d728c471a80193c5da04096e83f36afc5674f"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.15_darwin_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.15/terraform-provider-launchdarkly-flag-evaluation_0.2.15_darwin_arm64.zip",
+          "shasum": "b0cebbde89264905a8f10212f073f98c55422ad34428cd2dc4a2cad3f3a06f96"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.15_freebsd_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.15/terraform-provider-launchdarkly-flag-evaluation_0.2.15_freebsd_386.zip",
+          "shasum": "dc5493aec730ce4e22560325877697a494187186b6a96cffcf6c00503ce6bcf2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.15_freebsd_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.15/terraform-provider-launchdarkly-flag-evaluation_0.2.15_freebsd_amd64.zip",
+          "shasum": "357e675f6578563463a3782c9efb229ac113b0f3fe1653a524f9cdfa68a8757d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.15_freebsd_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.15/terraform-provider-launchdarkly-flag-evaluation_0.2.15_freebsd_arm.zip",
+          "shasum": "7dfd4c748fe3bc028b7d0da7e4c17f9902187efb05bb25406d440634b47c4851"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.15_freebsd_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.15/terraform-provider-launchdarkly-flag-evaluation_0.2.15_freebsd_arm64.zip",
+          "shasum": "5b5248a1c117967a434c4bd6fdb9aa6d0b0a9a5b3af6e33cdb8a74497c76e24d"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.15_linux_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.15/terraform-provider-launchdarkly-flag-evaluation_0.2.15_linux_386.zip",
+          "shasum": "62a2c24f235cfeada3a2b6a9388a014b36cc93467ff2c667c80484e6f5be65db"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.15_linux_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.15/terraform-provider-launchdarkly-flag-evaluation_0.2.15_linux_amd64.zip",
+          "shasum": "f325472bcc711d941e883e4d3f349fb6a3b7c5667a1612a439ca79182461ebd0"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.15_linux_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.15/terraform-provider-launchdarkly-flag-evaluation_0.2.15_linux_arm.zip",
+          "shasum": "f648d04054e9d6cde1997cbc9e68355ff88e901db76be923366a0bca07bab952"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.15_linux_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.15/terraform-provider-launchdarkly-flag-evaluation_0.2.15_linux_arm64.zip",
+          "shasum": "78142853dbf9548afe302cef2de4b35e126914ed9eefee3f813042e3d4f58213"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.15_windows_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.15/terraform-provider-launchdarkly-flag-evaluation_0.2.15_windows_386.zip",
+          "shasum": "153df9df1122d8ad0bcaa5f8379a072f1d1164ca760ddf62e0ba7d92b196da54"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.15_windows_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.15/terraform-provider-launchdarkly-flag-evaluation_0.2.15_windows_amd64.zip",
+          "shasum": "67e042a9a31d103006e971e526b9a68732e8e25d7ea62996183002166c692a99"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.15_windows_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.15/terraform-provider-launchdarkly-flag-evaluation_0.2.15_windows_arm.zip",
+          "shasum": "14d38bbe4e79f91a79bce33bd74f08b1ea666b71738b383f996786bc038f8327"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.15_windows_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.15/terraform-provider-launchdarkly-flag-evaluation_0.2.15_windows_arm64.zip",
+          "shasum": "ae333207224e18737409efacd7cc94ac2b781c39c1ca80c581eb1223429113d4"
+        }
+      ]
+    },
+    {
+      "version": "0.2.9",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.9/terraform-provider-launchdarkly-flag-evaluation_0.2.9_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.9/terraform-provider-launchdarkly-flag-evaluation_0.2.9_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.9_darwin_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.9/terraform-provider-launchdarkly-flag-evaluation_0.2.9_darwin_amd64.zip",
+          "shasum": "dc4f9ce19a2032612955058a614e62df8afea5533c38db4ac164e1c6e8844742"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.9_darwin_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.9/terraform-provider-launchdarkly-flag-evaluation_0.2.9_darwin_arm64.zip",
+          "shasum": "ea7282cc4a88c01e2be33076cd87ca1bf917b271e233a585c96420e27d573165"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.9_freebsd_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.9/terraform-provider-launchdarkly-flag-evaluation_0.2.9_freebsd_386.zip",
+          "shasum": "77eb6b26e175ed04188a63750f1afb21c864cd0a2edd18b14c9f01d09c104dd1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.9_freebsd_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.9/terraform-provider-launchdarkly-flag-evaluation_0.2.9_freebsd_amd64.zip",
+          "shasum": "874171aa395e8b7631d42cdf17e90bcd1a076e6a187ee6ef60d0cfd827d3c0e6"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.9_freebsd_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.9/terraform-provider-launchdarkly-flag-evaluation_0.2.9_freebsd_arm.zip",
+          "shasum": "ced17e39f4fb330c8dd907f470764fee6527deb19a906af27c77c5982638c271"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.9_freebsd_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.9/terraform-provider-launchdarkly-flag-evaluation_0.2.9_freebsd_arm64.zip",
+          "shasum": "a292ed9b8bc47c1a8909a3a7dccb168de700e2c1ca5f18d04ca39c6281217b7f"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.9_linux_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.9/terraform-provider-launchdarkly-flag-evaluation_0.2.9_linux_386.zip",
+          "shasum": "1d8f9dd477a141d3d42d501d98b7b39aa08ca6761ea9e269add4e3ffd5b1017a"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.9_linux_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.9/terraform-provider-launchdarkly-flag-evaluation_0.2.9_linux_amd64.zip",
+          "shasum": "5b78b2d10653dacc1b69a90fc82ad11cdf475202b44ee3984e7cce2e187df987"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.9_linux_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.9/terraform-provider-launchdarkly-flag-evaluation_0.2.9_linux_arm.zip",
+          "shasum": "e69658bb1eea606dc74b0a02474c1a5f9cf9fa8a8473334f2860bc965af8f5fa"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.9_linux_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.9/terraform-provider-launchdarkly-flag-evaluation_0.2.9_linux_arm64.zip",
+          "shasum": "2c4b854c32cfd3bbbcba50e33b8c1756b1dae49046fa31a690c7b17ab83b81b5"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.9_windows_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.9/terraform-provider-launchdarkly-flag-evaluation_0.2.9_windows_386.zip",
+          "shasum": "cfb2ce2dcf6885b4e85bc1f334386b40544c01a7a5c18fe1891579bfb97a4ef6"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.9_windows_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.9/terraform-provider-launchdarkly-flag-evaluation_0.2.9_windows_amd64.zip",
+          "shasum": "f972df3d1080de3fde49464b57f0faf81a5f4f6f2198bcd46d133b98883fa2ef"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.9_windows_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.9/terraform-provider-launchdarkly-flag-evaluation_0.2.9_windows_arm.zip",
+          "shasum": "07da2644c06ae8c69a058737ebaf2a79ee9d29fcc25fa7feace69fff8920ba05"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.9_windows_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.9/terraform-provider-launchdarkly-flag-evaluation_0.2.9_windows_arm64.zip",
+          "shasum": "02c772cd2822bc222c239c6bcae3bc4b8bc973e14b4206a1513be526a6aa20f1"
+        }
+      ]
+    },
+    {
+      "version": "0.2.8",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.8/terraform-provider-launchdarkly-flag-evaluation_0.2.8_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.8/terraform-provider-launchdarkly-flag-evaluation_0.2.8_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.8_darwin_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.8/terraform-provider-launchdarkly-flag-evaluation_0.2.8_darwin_amd64.zip",
+          "shasum": "e7be2d651f47f1d9573562563949cc611841dd9586caa4161babbb9eb0788a0f"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.8_darwin_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.8/terraform-provider-launchdarkly-flag-evaluation_0.2.8_darwin_arm64.zip",
+          "shasum": "e0eafd66133305d793956038b2bde80a17855b293b7cdbce160595524315b709"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.8_freebsd_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.8/terraform-provider-launchdarkly-flag-evaluation_0.2.8_freebsd_386.zip",
+          "shasum": "036281b581d71946ab7d5f9ec4c3d8cc064d822f5f7a204eebc14e7accc27fbe"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.8_freebsd_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.8/terraform-provider-launchdarkly-flag-evaluation_0.2.8_freebsd_amd64.zip",
+          "shasum": "1ee2fc49b9d0c65724c6d056611d65d57dd68fb0e481cc8c4cc4a1fd050d92f2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.8_freebsd_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.8/terraform-provider-launchdarkly-flag-evaluation_0.2.8_freebsd_arm.zip",
+          "shasum": "612f4943026cad4db3d78353e3bee90e938fc92b18a5db08b7cbe7d9f0f49b81"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.8_freebsd_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.8/terraform-provider-launchdarkly-flag-evaluation_0.2.8_freebsd_arm64.zip",
+          "shasum": "206e9c51d4d218f7c5abfc6b0e91f3cb387eb10010e14ce0a23fa26d9a112558"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.8_linux_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.8/terraform-provider-launchdarkly-flag-evaluation_0.2.8_linux_386.zip",
+          "shasum": "b1bcc92a24ccbf15de1b11571d4450419cfcb9f2d0b40ece3cb00e08c0f552a2"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.8_linux_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.8/terraform-provider-launchdarkly-flag-evaluation_0.2.8_linux_amd64.zip",
+          "shasum": "854209490b0c68f0680dbc81899e768a719bd3f0a1165e4ff7ab349e7aa8b79b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.8_linux_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.8/terraform-provider-launchdarkly-flag-evaluation_0.2.8_linux_arm.zip",
+          "shasum": "e7aa12fe0437bacadcc6d5ba14fc1106a8fa0a17b0bcabaab12a72b21eb84208"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.8_linux_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.8/terraform-provider-launchdarkly-flag-evaluation_0.2.8_linux_arm64.zip",
+          "shasum": "856ee7b54c72545c2b5042607599f4234591fc322f3d62060c68a922e132204d"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.8_windows_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.8/terraform-provider-launchdarkly-flag-evaluation_0.2.8_windows_386.zip",
+          "shasum": "26ba50cd5403a9f3613c8b028711e3e9430509ceea477a00713a15f74aaf392f"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.8_windows_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.8/terraform-provider-launchdarkly-flag-evaluation_0.2.8_windows_amd64.zip",
+          "shasum": "5548da5d35d873f55d811bee7dd99425ce5df1c60cf8a0d808b055c0514f2b80"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.8_windows_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.8/terraform-provider-launchdarkly-flag-evaluation_0.2.8_windows_arm.zip",
+          "shasum": "91e72fca63f5765d978b31f7853fa4fece17981e9e182420972b8e3f54792c2b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.8_windows_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.8/terraform-provider-launchdarkly-flag-evaluation_0.2.8_windows_arm64.zip",
+          "shasum": "3468088ed3143e6b2e30fd50dc7665601108a55159c62551b44dd3f4fe23ad60"
+        }
+      ]
+    },
+    {
+      "version": "0.2.4",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.4/terraform-provider-launchdarkly-flag-evaluation_0.2.4_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.4/terraform-provider-launchdarkly-flag-evaluation_0.2.4_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.4_darwin_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.4/terraform-provider-launchdarkly-flag-evaluation_0.2.4_darwin_amd64.zip",
+          "shasum": "d8fec0a616380f344a13f4c1d2fa710b09f2a1a450d15e4bf0dcb0fa3775e23b"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.4_darwin_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.4/terraform-provider-launchdarkly-flag-evaluation_0.2.4_darwin_arm64.zip",
+          "shasum": "59384dbb141408619ad7aa720afa4a433914acb33d38d7abb6f75e62c4e10dfd"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.4_freebsd_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.4/terraform-provider-launchdarkly-flag-evaluation_0.2.4_freebsd_386.zip",
+          "shasum": "ba97081e3e4301397f3d267177f3d4846d93ee62c35444a17aa87e0c4b53549c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.4_freebsd_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.4/terraform-provider-launchdarkly-flag-evaluation_0.2.4_freebsd_amd64.zip",
+          "shasum": "222bbeca8030e77966cf636fac3eda216d12f0b5015e6480cc3db786c41ac825"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.4_freebsd_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.4/terraform-provider-launchdarkly-flag-evaluation_0.2.4_freebsd_arm.zip",
+          "shasum": "5b8e9baf2e503999f351e8cf7ddafc938aa787ea68475e23be339f457e806ac7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.4_freebsd_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.4/terraform-provider-launchdarkly-flag-evaluation_0.2.4_freebsd_arm64.zip",
+          "shasum": "4af2f65939308496728968a4050028b12914c28eb1da48d6d11fd2063f303d65"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.4_linux_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.4/terraform-provider-launchdarkly-flag-evaluation_0.2.4_linux_386.zip",
+          "shasum": "3b5014684d5affea35a7066c14d76c963df1b5d165babe15e6192d8ff7e6456c"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.4_linux_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.4/terraform-provider-launchdarkly-flag-evaluation_0.2.4_linux_amd64.zip",
+          "shasum": "5436dff9f0801bd40adb49349c15431e95b890c95a7390453cf79f8631d87d71"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.4_linux_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.4/terraform-provider-launchdarkly-flag-evaluation_0.2.4_linux_arm.zip",
+          "shasum": "b88f41c0f4e53f92ad9ef61d11a4c5b1fe424919e2a8366ab38cdb15b851770a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.4_linux_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.4/terraform-provider-launchdarkly-flag-evaluation_0.2.4_linux_arm64.zip",
+          "shasum": "a4570207dbd34909a817e12ae2ff3b243c0f28133996b7ae0ca90babef13f9d4"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.4_windows_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.4/terraform-provider-launchdarkly-flag-evaluation_0.2.4_windows_386.zip",
+          "shasum": "bf04f38e49a409a5135530d24ae4392da56a9599a384063775a257add9f55ac4"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.4_windows_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.4/terraform-provider-launchdarkly-flag-evaluation_0.2.4_windows_amd64.zip",
+          "shasum": "5f3c5a8cdc2775e9779b3595703f38596a26712ebf0e229960364788e2fddcdf"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.4_windows_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.4/terraform-provider-launchdarkly-flag-evaluation_0.2.4_windows_arm.zip",
+          "shasum": "dc6c7225b705d79a037ab0301a4d8208d1de77fcb3b5041d43ba49e40cf2012b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.4_windows_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.4/terraform-provider-launchdarkly-flag-evaluation_0.2.4_windows_arm64.zip",
+          "shasum": "a06c522f12e5517d604ba0cc405f2a8a92c98bcff7441b23fc2d157ebb779dbd"
+        }
+      ]
+    },
+    {
+      "version": "0.2.3",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.3/terraform-provider-launchdarkly-flag-evaluation_0.2.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.3/terraform-provider-launchdarkly-flag-evaluation_0.2.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.3_darwin_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.3/terraform-provider-launchdarkly-flag-evaluation_0.2.3_darwin_amd64.zip",
+          "shasum": "7f51e9f103896b9de2f4ea8eab7df3f697a2fabd0d894af23fc743b46e89b7a6"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.3_darwin_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.3/terraform-provider-launchdarkly-flag-evaluation_0.2.3_darwin_arm64.zip",
+          "shasum": "f564394bcb8ff7d263e6b2fbf2e5e286d10387b31a0bdf27679ef12a9d1b36e7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.3_freebsd_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.3/terraform-provider-launchdarkly-flag-evaluation_0.2.3_freebsd_386.zip",
+          "shasum": "4d294dbebee0c2e9558735b852a02e4a83dfe2f1cab68e9df25345a21d690582"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.3/terraform-provider-launchdarkly-flag-evaluation_0.2.3_freebsd_amd64.zip",
+          "shasum": "fe1f9ccce0c6039d79bf4b75cda59710b91f819ba427a929f2cb16a49ebde776"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.3_freebsd_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.3/terraform-provider-launchdarkly-flag-evaluation_0.2.3_freebsd_arm.zip",
+          "shasum": "4e3c4f9ce31c34f0a6d549b75162db4e937aec282758853c0c0fac20528c4f3c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.3/terraform-provider-launchdarkly-flag-evaluation_0.2.3_freebsd_arm64.zip",
+          "shasum": "4557f73601a0d5c9a686d8a2f612b9194180840ee2c9b6183d1bfdc49d82c5e1"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.3_linux_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.3/terraform-provider-launchdarkly-flag-evaluation_0.2.3_linux_386.zip",
+          "shasum": "8ab950598978c9c186c4ecab9f228af953d78dbee21beceeb8ad790086a7b827"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.3_linux_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.3/terraform-provider-launchdarkly-flag-evaluation_0.2.3_linux_amd64.zip",
+          "shasum": "eaf2b830ebdca69fb77659675eb48b9f72e7f05d58eec3b6c7c7f8c2024da0c3"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.3_linux_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.3/terraform-provider-launchdarkly-flag-evaluation_0.2.3_linux_arm.zip",
+          "shasum": "2a311edfb0d0c8bc74bdf1f52ea0a18efc5c30c045ca04fb6318297cadaf001a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.3_linux_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.3/terraform-provider-launchdarkly-flag-evaluation_0.2.3_linux_arm64.zip",
+          "shasum": "40549a137c4900abed3111f07253b682b833ebc1af46ec62a37f2e0be323f12d"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.3_windows_386.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.3/terraform-provider-launchdarkly-flag-evaluation_0.2.3_windows_386.zip",
+          "shasum": "eda153886e38a6160b82297d67b90b16f78f52e609b91661383ed24a164c5a44"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.3_windows_amd64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.3/terraform-provider-launchdarkly-flag-evaluation_0.2.3_windows_amd64.zip",
+          "shasum": "ac6dac6f54d842564be2374e928d503f042c6b13d08e448c13fd8e05f8d4955d"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.3_windows_arm.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.3/terraform-provider-launchdarkly-flag-evaluation_0.2.3_windows_arm.zip",
+          "shasum": "cf8baf367f928d0f5ea59c05e13b18e3cd8f49286da90338ece79cfc7f61d210"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-launchdarkly-flag-evaluation_0.2.3_windows_arm64.zip",
+          "download_url": "https://github.com/angelolapus/terraform-provider-launchdarkly-flag-evaluation/releases/download/v0.2.3/terraform-provider-launchdarkly-flag-evaluation_0.2.3_windows_arm64.zip",
+          "shasum": "743a08bf08a2b87b737d23154b6f2bf3ba95bb38f2f3dfe5ec7a2b05679e7946"
+        }
+      ]
+    }
+  ]
+}
