@@ -1,0 +1,868 @@
+{
+  "versions": [
+    {
+      "version": "0.4.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0/terraform-provider-rhoas_0.4.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0/terraform-provider-rhoas_0.4.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.4.0_darwin_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0/terraform-provider-rhoas_0.4.0_darwin_amd64.zip",
+          "shasum": "e46b5839726d4b1fb9e1a4d463ea61d275d78f79d234f694b55bdcc6b90f5ec3"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.4.0_darwin_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0/terraform-provider-rhoas_0.4.0_darwin_arm64.zip",
+          "shasum": "199dbe68468a1aedf64ed874d4fe80820eade38fedc0cd29ff3d580b7ee2c019"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.4.0_freebsd_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0/terraform-provider-rhoas_0.4.0_freebsd_386.zip",
+          "shasum": "2b02038d46a5ca4a52dbbf1e9a341b9f9b26d116c4183e5f4fd2924a92d95035"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.4.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0/terraform-provider-rhoas_0.4.0_freebsd_amd64.zip",
+          "shasum": "e05ff7cc001db62d41e9aea710a66582e82747f3c667da7ac7dd71983526b325"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.4.0_freebsd_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0/terraform-provider-rhoas_0.4.0_freebsd_arm.zip",
+          "shasum": "38794df9808a0902e5e386c8b1ff1c983229b689eaf379dee256978b2636142b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.4.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0/terraform-provider-rhoas_0.4.0_freebsd_arm64.zip",
+          "shasum": "de123e1883229390a81f41e665f57c7fec0ffb939b06ca9fbbc53f101719c2ee"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.4.0_linux_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0/terraform-provider-rhoas_0.4.0_linux_386.zip",
+          "shasum": "98d8e91dcd7d4ed5ca9758de0b081b268085c5b1364499127bb98bffc6c0a4e5"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.4.0_linux_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0/terraform-provider-rhoas_0.4.0_linux_amd64.zip",
+          "shasum": "7976f8e0a4b3cc57867f53242c6881b201594a2f39e0e58e59704859779711f6"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.4.0_linux_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0/terraform-provider-rhoas_0.4.0_linux_arm.zip",
+          "shasum": "ae9569b94b678d79fb1c2081bb2dc8e524857016572a5c81a181751565e5178c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.4.0_linux_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0/terraform-provider-rhoas_0.4.0_linux_arm64.zip",
+          "shasum": "6c57532956396eeb45fa952fc424c3e6a1eea9a985320a7f11646518268ccd85"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.4.0_windows_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0/terraform-provider-rhoas_0.4.0_windows_386.zip",
+          "shasum": "b749f4fc2ead3abbd241d056bc36c6ffc11ec6b9e8262195c9fbd637897d8c3b"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.4.0_windows_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0/terraform-provider-rhoas_0.4.0_windows_amd64.zip",
+          "shasum": "8aebed61dc93ce18e7d9dea7df3611e574d47fdf2ea1ab6bb8beabe914ce2f71"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.4.0_windows_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0/terraform-provider-rhoas_0.4.0_windows_arm.zip",
+          "shasum": "08c67dd6997ad1f8332ee4fc49672a57efef2369e4cd69a8a5fda2c7783b2fc0"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.4.0_windows_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0/terraform-provider-rhoas_0.4.0_windows_arm64.zip",
+          "shasum": "ef963c1174efd792b1ed143b79b154d63a43c6df23fb6c2134fc730c23ec886c"
+        }
+      ]
+    },
+    {
+      "version": "0.4.0-alpha1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0-alpha1/terraform-provider-rhoas_0.4.0-alpha1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0-alpha1/terraform-provider-rhoas_0.4.0-alpha1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.4.0-alpha1_darwin_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0-alpha1/terraform-provider-rhoas_0.4.0-alpha1_darwin_amd64.zip",
+          "shasum": "c8d55c2e67b42369a6e6c7c6e6838c19a03d600552d166dc0f8ce42fb1eef87e"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.4.0-alpha1_darwin_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0-alpha1/terraform-provider-rhoas_0.4.0-alpha1_darwin_arm64.zip",
+          "shasum": "8ba21a31bf80b8ba55d53644ff6a6607cc536466dc6ad24917a834143432b43b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.4.0-alpha1_freebsd_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0-alpha1/terraform-provider-rhoas_0.4.0-alpha1_freebsd_386.zip",
+          "shasum": "fe76cd2f5d5ee9658a84f24a41017eb73da2612d10559295ad5c355c35f2b393"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.4.0-alpha1_freebsd_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0-alpha1/terraform-provider-rhoas_0.4.0-alpha1_freebsd_amd64.zip",
+          "shasum": "215db872039854b1fe614f042502632719fd99b73df4e1e0de5a193bf55633c8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.4.0-alpha1_freebsd_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0-alpha1/terraform-provider-rhoas_0.4.0-alpha1_freebsd_arm.zip",
+          "shasum": "ab6dfec206c7414f5be8f30ac2c142fb367383cea78b01632ac55ee0b66e7913"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.4.0-alpha1_freebsd_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0-alpha1/terraform-provider-rhoas_0.4.0-alpha1_freebsd_arm64.zip",
+          "shasum": "1c171b3564ae8262ef3039e59f1fbb9898bfcdd7b14d0d20b7f258e5aecbdf3b"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.4.0-alpha1_linux_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0-alpha1/terraform-provider-rhoas_0.4.0-alpha1_linux_386.zip",
+          "shasum": "3eac1f7591b38a6b84723cd1f3d7b573e794c7e2705f3b76dc9458b10cce1343"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.4.0-alpha1_linux_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0-alpha1/terraform-provider-rhoas_0.4.0-alpha1_linux_amd64.zip",
+          "shasum": "292426f1f523373256190f9b30eef86799e9a4bce6a21b10e7c75675f5dff585"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.4.0-alpha1_linux_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0-alpha1/terraform-provider-rhoas_0.4.0-alpha1_linux_arm.zip",
+          "shasum": "e33636c679cc1295102aa6b3fa08a014a53bdc18f5981686a7672446e1c0c47c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.4.0-alpha1_linux_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0-alpha1/terraform-provider-rhoas_0.4.0-alpha1_linux_arm64.zip",
+          "shasum": "8f2f25ff8c0e4f3f2b5869fe494cf74b4ca79f351e0dc598cb4bd875ebde9d61"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.4.0-alpha1_windows_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0-alpha1/terraform-provider-rhoas_0.4.0-alpha1_windows_386.zip",
+          "shasum": "cb713a14ed04ff1c9fc6fb11a9a316ca23b2093a0c0f8915415c4169387ea4f9"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.4.0-alpha1_windows_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0-alpha1/terraform-provider-rhoas_0.4.0-alpha1_windows_amd64.zip",
+          "shasum": "89f2b09ecf503ce9ff5c31a5becee35aa53a7c673f118be8d6d6845db6823b58"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.4.0-alpha1_windows_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0-alpha1/terraform-provider-rhoas_0.4.0-alpha1_windows_arm.zip",
+          "shasum": "e5e26f821f7501862e1a68f8b3dc0cabbfe822b442b217d4e7ce24b4bbfc1e37"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.4.0-alpha1_windows_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.4.0-alpha1/terraform-provider-rhoas_0.4.0-alpha1_windows_arm64.zip",
+          "shasum": "6121e534d3f1b632c7f9fd8c436fda5362e6482a58312b27ed1d7e9c9f2611f7"
+        }
+      ]
+    },
+    {
+      "version": "0.3.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0/terraform-provider-rhoas_0.3.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0/terraform-provider-rhoas_0.3.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.3.0_darwin_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0/terraform-provider-rhoas_0.3.0_darwin_amd64.zip",
+          "shasum": "69f87111c3d739baae1fa700e1b4c4fb887d132269c7b773c8706a53db353828"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.3.0_darwin_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0/terraform-provider-rhoas_0.3.0_darwin_arm64.zip",
+          "shasum": "da6d14571239914bdbd04d5fc379f0a35651884232704f29c9c5ee0194ab7a64"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.3.0_freebsd_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0/terraform-provider-rhoas_0.3.0_freebsd_386.zip",
+          "shasum": "17f9764af1feb66118926d62d39af3911b74739bcfef09dd4560a9bda2d990da"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.3.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0/terraform-provider-rhoas_0.3.0_freebsd_amd64.zip",
+          "shasum": "0f3be0e3280c36afd5bc51900ef3c805bb259d997d13a7538a05f07978c214ba"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.3.0_freebsd_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0/terraform-provider-rhoas_0.3.0_freebsd_arm.zip",
+          "shasum": "44470777fa1e65f407b1e6eccaf55d7af5267fc9cdadf500b8e118a0543fe24b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.3.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0/terraform-provider-rhoas_0.3.0_freebsd_arm64.zip",
+          "shasum": "e4656db750a7ec6739efadea3022829b35aac6c75d02070652a9b84caf63e88c"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.3.0_linux_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0/terraform-provider-rhoas_0.3.0_linux_386.zip",
+          "shasum": "7aea0e8a85fccafe323c69ca308a84b401f898ddfd8ca2ecc305c5e7cdcf7a24"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.3.0_linux_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0/terraform-provider-rhoas_0.3.0_linux_amd64.zip",
+          "shasum": "efc12d8ecc32c9a028de9dbe3b588b301eafca5e0a74f3e1f7e3c20320400463"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.3.0_linux_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0/terraform-provider-rhoas_0.3.0_linux_arm.zip",
+          "shasum": "76e7dbae4c593f27149367dfcd660b14fc48b8a3cb46dc3ff8f17b5be88188f7"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.3.0_linux_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0/terraform-provider-rhoas_0.3.0_linux_arm64.zip",
+          "shasum": "926a90796fb6e854b5fb66788906d6420d2e22d721d2a665c0b289d19542e370"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.3.0_windows_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0/terraform-provider-rhoas_0.3.0_windows_386.zip",
+          "shasum": "3c1a55d117f1a68fa52a64bd4016a91ff64f3449a72664dc2e88030e76d462e7"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.3.0_windows_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0/terraform-provider-rhoas_0.3.0_windows_amd64.zip",
+          "shasum": "552bfdcd1c6c3b49fd37bfe81ff2f321146790cd04fa363cb6a6a7dad74b9eb1"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.3.0_windows_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0/terraform-provider-rhoas_0.3.0_windows_arm.zip",
+          "shasum": "06fb0e9ad4c7489d1b6ffb6af037b7a47463fbf0a6cfe66604250bc3ddb9f947"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.3.0_windows_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0/terraform-provider-rhoas_0.3.0_windows_arm64.zip",
+          "shasum": "b4ff26ad10c4fa161db19d9f47d026eeb93e1be0d8a76e8489106e7303e868dc"
+        }
+      ]
+    },
+    {
+      "version": "0.3.0-aplha1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-aplha1/terraform-provider-rhoas_0.3.0-aplha1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-aplha1/terraform-provider-rhoas_0.3.0-aplha1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.3.0-aplha1_darwin_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-aplha1/terraform-provider-rhoas_0.3.0-aplha1_darwin_amd64.zip",
+          "shasum": "1053b1f01917eebd32240f86588c4964606b0ab5aa43af4e1c5303163cf259fc"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.3.0-aplha1_darwin_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-aplha1/terraform-provider-rhoas_0.3.0-aplha1_darwin_arm64.zip",
+          "shasum": "c9efb516ac52a94d91a51121c20f818eeb03d74899dc0cace4d537ab14bf19a3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.3.0-aplha1_freebsd_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-aplha1/terraform-provider-rhoas_0.3.0-aplha1_freebsd_386.zip",
+          "shasum": "7b932ee14738234651b3d0540d6a2cb061ff385fa8b0119f51138d81d339371b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.3.0-aplha1_freebsd_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-aplha1/terraform-provider-rhoas_0.3.0-aplha1_freebsd_amd64.zip",
+          "shasum": "8a0c5c1a0ab5cac2f8394a752f0b12c6146da6399e25a0226d55857bb64e3a7b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.3.0-aplha1_freebsd_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-aplha1/terraform-provider-rhoas_0.3.0-aplha1_freebsd_arm.zip",
+          "shasum": "1d11ecf7a5f6743e361f806d1781b7e70be04850bd7f402af0ca3dcb04340f11"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.3.0-aplha1_freebsd_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-aplha1/terraform-provider-rhoas_0.3.0-aplha1_freebsd_arm64.zip",
+          "shasum": "847e5986587fe412a0999aa4fef3a3ba63ae6bace8edbcc3b141713c48302792"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.3.0-aplha1_linux_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-aplha1/terraform-provider-rhoas_0.3.0-aplha1_linux_386.zip",
+          "shasum": "e2f2e3785b948a0e8254a5c10fd2d5da0a434a148a5c076363f3da7fc0ad4e55"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.3.0-aplha1_linux_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-aplha1/terraform-provider-rhoas_0.3.0-aplha1_linux_amd64.zip",
+          "shasum": "fb1f52fca288c30bab0133c078cff16e3e41408f4a2155c07664f4de9359e07e"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.3.0-aplha1_linux_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-aplha1/terraform-provider-rhoas_0.3.0-aplha1_linux_arm.zip",
+          "shasum": "d678ce4be4c80e27f54ad69bc583648d875791bd9c49fcf683cc2cd01b4ba8c1"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.3.0-aplha1_linux_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-aplha1/terraform-provider-rhoas_0.3.0-aplha1_linux_arm64.zip",
+          "shasum": "8de9991896436715ae64697fda1aaa17b22ed1f049dcf7a90f668f23efd2354e"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.3.0-aplha1_windows_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-aplha1/terraform-provider-rhoas_0.3.0-aplha1_windows_386.zip",
+          "shasum": "ebdd1679c3e26995a1be9e9fd753f8c625bdf8fdb756484686cbb970d2f104e9"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.3.0-aplha1_windows_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-aplha1/terraform-provider-rhoas_0.3.0-aplha1_windows_amd64.zip",
+          "shasum": "f929c89961484f3dec9d1b0794b52ce2c2fa8f2b45f808b1a61f49fd9271e218"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.3.0-aplha1_windows_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-aplha1/terraform-provider-rhoas_0.3.0-aplha1_windows_arm.zip",
+          "shasum": "27195322f9c7d4070bf6995966491a081c0b305674eebeef2b3e7e8c7ee54acf"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.3.0-aplha1_windows_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-aplha1/terraform-provider-rhoas_0.3.0-aplha1_windows_arm64.zip",
+          "shasum": "d9334c5ced32ea3ab0e3173a22120b13821138ff808da9cecc329887405285ee"
+        }
+      ]
+    },
+    {
+      "version": "0.3.0-alpha2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-alpha2/terraform-provider-rhoas_0.3.0-alpha2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-alpha2/terraform-provider-rhoas_0.3.0-alpha2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.3.0-alpha2_darwin_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-alpha2/terraform-provider-rhoas_0.3.0-alpha2_darwin_amd64.zip",
+          "shasum": "d25b59b3c5a9b3714c8a2813790f588b59f569a1a8f0792771602bdcc9d9cb84"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.3.0-alpha2_darwin_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-alpha2/terraform-provider-rhoas_0.3.0-alpha2_darwin_arm64.zip",
+          "shasum": "9a24680f722a525e0f1851fd0ed2f2bf583c9b926216af5ce529b8f1e1bed05f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.3.0-alpha2_freebsd_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-alpha2/terraform-provider-rhoas_0.3.0-alpha2_freebsd_386.zip",
+          "shasum": "46779abc9fcba802cd830f703425255d6473bb34bb4ad324df1a88ad322c6dec"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.3.0-alpha2_freebsd_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-alpha2/terraform-provider-rhoas_0.3.0-alpha2_freebsd_amd64.zip",
+          "shasum": "884fa942d097c3d8649548bbb1730841598d7c8c7f9e14a158ae0248ea709929"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.3.0-alpha2_freebsd_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-alpha2/terraform-provider-rhoas_0.3.0-alpha2_freebsd_arm.zip",
+          "shasum": "af5689ab2b798efd60ffffe6a1adfc02de0a58d6783c267ccdd24b7cd8cd890f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.3.0-alpha2_freebsd_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-alpha2/terraform-provider-rhoas_0.3.0-alpha2_freebsd_arm64.zip",
+          "shasum": "cbcd2e20d58587a2aca967d8f4f8f4981b931f90635065e7fd2f82465162e30c"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.3.0-alpha2_linux_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-alpha2/terraform-provider-rhoas_0.3.0-alpha2_linux_386.zip",
+          "shasum": "d32acf059b60c2f7f5e2a0e3cd29d46a646c8159c4be7c4d6d6f7603f0e5aa38"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.3.0-alpha2_linux_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-alpha2/terraform-provider-rhoas_0.3.0-alpha2_linux_amd64.zip",
+          "shasum": "4e14a0d6dfc9b8274ed43ef5323b78b7d4983f2f9561f062f98441c357a13f00"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.3.0-alpha2_linux_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-alpha2/terraform-provider-rhoas_0.3.0-alpha2_linux_arm.zip",
+          "shasum": "f4645546cc5f24027b42a9c8b9baa0f2c5a002458975cbbebdb539c1ef6e53f6"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.3.0-alpha2_linux_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-alpha2/terraform-provider-rhoas_0.3.0-alpha2_linux_arm64.zip",
+          "shasum": "a77ba2971a6c75aaafb2cb84991b4053b244d207b4b706f4ed261114f7713a1a"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.3.0-alpha2_windows_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-alpha2/terraform-provider-rhoas_0.3.0-alpha2_windows_386.zip",
+          "shasum": "3c16f2514b50963cf6d83c54b248af9d72e57119afbb610ec94af20ee063a3d9"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.3.0-alpha2_windows_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-alpha2/terraform-provider-rhoas_0.3.0-alpha2_windows_amd64.zip",
+          "shasum": "b5f922b56f1514fa970452ccacd12061b7965d9ed7e23b89d75b0fbe51590889"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.3.0-alpha2_windows_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-alpha2/terraform-provider-rhoas_0.3.0-alpha2_windows_arm.zip",
+          "shasum": "a67108b7962c9f52d103886176261dce71b5846ab9890653d76524f8a3da9619"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.3.0-alpha2_windows_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.3.0-alpha2/terraform-provider-rhoas_0.3.0-alpha2_windows_arm64.zip",
+          "shasum": "6fdfea38bf87884d50c024a385c490c72d778e831ceba72f784e4c55027fb687"
+        }
+      ]
+    },
+    {
+      "version": "0.2.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.1/terraform-provider-rhoas_0.2.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.1/terraform-provider-rhoas_0.2.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.2.1_darwin_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.1/terraform-provider-rhoas_0.2.1_darwin_amd64.zip",
+          "shasum": "c7461e05da0f68fa1675684e864f5a8524202b35d776a9c956d64de98a102090"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.2.1_darwin_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.1/terraform-provider-rhoas_0.2.1_darwin_arm64.zip",
+          "shasum": "6e787720e4891789c6c86bfe5c19faf900fc4c22e9f6b2d37d7bfcc9f96264d3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.2.1_freebsd_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.1/terraform-provider-rhoas_0.2.1_freebsd_386.zip",
+          "shasum": "1bd79e3f997be6590f408f4ed41cdc3bba0680e500937104c2fa066179b2f0d8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.2.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.1/terraform-provider-rhoas_0.2.1_freebsd_amd64.zip",
+          "shasum": "23a737a070f3dc119cab9255eb42192b8612665b183313ceacd348c3b4963f6b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.2.1_freebsd_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.1/terraform-provider-rhoas_0.2.1_freebsd_arm.zip",
+          "shasum": "d436300e2388703d035f9c77c8460ff037dad35722b2dd6185832781a6b2c945"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.2.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.1/terraform-provider-rhoas_0.2.1_freebsd_arm64.zip",
+          "shasum": "b645200b5dda0954895e67b27b54c845073a725dd7a53f9eb09d631a75f02024"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.2.1_linux_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.1/terraform-provider-rhoas_0.2.1_linux_386.zip",
+          "shasum": "167583e0a84cc70138c6d0b3819ad542b3265a578a2b8154f66e15e194db4a1b"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.2.1_linux_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.1/terraform-provider-rhoas_0.2.1_linux_amd64.zip",
+          "shasum": "596f173e2cecde44ce93f3959dbc7226d11ade90e67d2e5564bb8a2c799639b0"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.2.1_linux_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.1/terraform-provider-rhoas_0.2.1_linux_arm.zip",
+          "shasum": "9bb0f8b9a6e87cabc2b3424a7d1f0858485d5177f605b043c794b1473a64cf6d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.2.1_linux_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.1/terraform-provider-rhoas_0.2.1_linux_arm64.zip",
+          "shasum": "b826ef5065807232ef788bc0b1e4b3e57b75ae0c75b89fd1bf51da040c651b92"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.2.1_windows_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.1/terraform-provider-rhoas_0.2.1_windows_386.zip",
+          "shasum": "0cf70982e70b3b6517ecc649ec29c3a2f66d1329df2808fb206df3bf381cd795"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.2.1_windows_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.1/terraform-provider-rhoas_0.2.1_windows_amd64.zip",
+          "shasum": "ac4055a90b0f86a5bd088b99c99df2dee32e87675c75c619143f0616ac3af640"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.2.1_windows_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.1/terraform-provider-rhoas_0.2.1_windows_arm.zip",
+          "shasum": "c4491d19dcf49ad6cec46ed9d3e597401048b6e8893d79eab045bad702a74ed5"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.2.1_windows_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.1/terraform-provider-rhoas_0.2.1_windows_arm64.zip",
+          "shasum": "875256ef8d52e72beb94b2c31fe20aca441cc04ff0b94757697ced1fd1b37d9e"
+        }
+      ]
+    },
+    {
+      "version": "0.2.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.0/terraform-provider-rhoas_0.2.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.0/terraform-provider-rhoas_0.2.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.2.0_darwin_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.0/terraform-provider-rhoas_0.2.0_darwin_amd64.zip",
+          "shasum": "1201a8131f78db1832a5ec288f483c11f487224392d120e7a73e557370325522"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.2.0_darwin_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.0/terraform-provider-rhoas_0.2.0_darwin_arm64.zip",
+          "shasum": "af5a75a7c98716f468c07377fb476de2a0b513223f8456b99110a0df4606e38c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.2.0_freebsd_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.0/terraform-provider-rhoas_0.2.0_freebsd_386.zip",
+          "shasum": "ba1e1bdbcdcfeddf5b55cb75c61fa41a5694cb5c4881d832f4a9e25d68d684e9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.2.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.0/terraform-provider-rhoas_0.2.0_freebsd_amd64.zip",
+          "shasum": "183dcecd019b0654b23d16327ee15afc7b4ae4a2804152689677331590685166"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.2.0_freebsd_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.0/terraform-provider-rhoas_0.2.0_freebsd_arm.zip",
+          "shasum": "03ac75bc5898a076f46af936ec60a8dcca932ca9e351ef0f6942fef5fc94c44b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.2.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.0/terraform-provider-rhoas_0.2.0_freebsd_arm64.zip",
+          "shasum": "3fc5b2fa1968f81f97155e9c8d5c1370b1ef517ca4da373c631626106c195bc9"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.2.0_linux_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.0/terraform-provider-rhoas_0.2.0_linux_386.zip",
+          "shasum": "faed0914a87fce08b2673724b1bc93e5166b280f66478d862364ab70d44d3fac"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.2.0_linux_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.0/terraform-provider-rhoas_0.2.0_linux_amd64.zip",
+          "shasum": "abaa2fe3f6d04322d9b5adb702d0684a76848d631796dcc25c20b6e0450cf404"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.2.0_linux_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.0/terraform-provider-rhoas_0.2.0_linux_arm.zip",
+          "shasum": "598371a1554f8a9ed2d1af86fe6801b9f13ae77a89066a8fde3fd6fe5f3e9c04"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.2.0_linux_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.0/terraform-provider-rhoas_0.2.0_linux_arm64.zip",
+          "shasum": "c4deb858f89c6ad81b2a19e73ad8ed4ac10eb42731152bc4a7c198591e8332fc"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.2.0_windows_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.0/terraform-provider-rhoas_0.2.0_windows_386.zip",
+          "shasum": "b16f0aefc08d46e4284f80534662c12623642c0530adc6cdc96886089a8cc564"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.2.0_windows_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.0/terraform-provider-rhoas_0.2.0_windows_amd64.zip",
+          "shasum": "3f6d10a0f9be49d085e1c4c45633d2965e1d2c4375e42503091375daeb385cc4"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.2.0_windows_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.0/terraform-provider-rhoas_0.2.0_windows_arm.zip",
+          "shasum": "454f3e3d26af4eb541f99868888753f2178942299dd2b11203c0430030289ba4"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.2.0_windows_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.2.0/terraform-provider-rhoas_0.2.0_windows_arm64.zip",
+          "shasum": "51d993b2d52f57ec956687475f8218690fed636d33c4a8f3a397bc476e75ca5b"
+        }
+      ]
+    },
+    {
+      "version": "0.1.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.1.0/terraform-provider-rhoas_0.1.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.1.0/terraform-provider-rhoas_0.1.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.1.0_darwin_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.1.0/terraform-provider-rhoas_0.1.0_darwin_amd64.zip",
+          "shasum": "d80cc894f24b85f2cfd33d534c99dba8e70aed370433442730e9993858665123"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.1.0_darwin_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.1.0/terraform-provider-rhoas_0.1.0_darwin_arm64.zip",
+          "shasum": "d9675ffcf7f40067220f1b53a8e88c5835a9eee99df72075e1ee3f7d436e8eae"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.1.0_freebsd_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.1.0/terraform-provider-rhoas_0.1.0_freebsd_386.zip",
+          "shasum": "9113ef0bc686983064e0588c7d71c6271108e30ae073fc0789d78f382a4252eb"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.1.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.1.0/terraform-provider-rhoas_0.1.0_freebsd_amd64.zip",
+          "shasum": "ba642e6cbc9ea322d441f449f11b072a7561e0b57a394f0218ffe7fb02d76307"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.1.0_freebsd_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.1.0/terraform-provider-rhoas_0.1.0_freebsd_arm.zip",
+          "shasum": "97fdd6d87ee1a15d73dc3f4066c7e232040412f1f221aa582d0837e9fcdff3c9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.1.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.1.0/terraform-provider-rhoas_0.1.0_freebsd_arm64.zip",
+          "shasum": "2f06dcf36a7c2b95d7ac15a6c4d1f86f3433a56b2241961c2cfc6efe267ea30b"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.1.0_linux_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.1.0/terraform-provider-rhoas_0.1.0_linux_386.zip",
+          "shasum": "0fdae643e84bf05acb07e5e44145b0e23d42c0b718dcdb94eb15e8efb76c5625"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.1.0_linux_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.1.0/terraform-provider-rhoas_0.1.0_linux_amd64.zip",
+          "shasum": "aa19b36864c2b0546ad19f1f9410ea8b4206a59cb9aa86cdcb21ffabe7ca42b6"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.1.0_linux_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.1.0/terraform-provider-rhoas_0.1.0_linux_arm.zip",
+          "shasum": "0b6e6749ef640a6d3bff0f2d7c225f9d723189fdfa921c1c02f784d4eb27f069"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.1.0_linux_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.1.0/terraform-provider-rhoas_0.1.0_linux_arm64.zip",
+          "shasum": "a3775d0f1bf6cd158d2b186aae4b084ebb94168b32fce5222c4b057d3dd39988"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rhoas_0.1.0_windows_386.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.1.0/terraform-provider-rhoas_0.1.0_windows_386.zip",
+          "shasum": "860f6a8ad7546aacb7edeff34a6769a95aa55fe8459566fb4f24634429bbdaea"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhoas_0.1.0_windows_amd64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.1.0/terraform-provider-rhoas_0.1.0_windows_amd64.zip",
+          "shasum": "184e191c9c407d0a7d8be7a7ce00b9cbfd1d348eb149e3ff2d85b5a6b57d4590"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-rhoas_0.1.0_windows_arm.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.1.0/terraform-provider-rhoas_0.1.0_windows_arm.zip",
+          "shasum": "28cf8b22cc45f4d3688e2f6660c92ee1d51bce07eacbf83949598c9a0b911557"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhoas_0.1.0_windows_arm64.zip",
+          "download_url": "https://github.com/redhat-developer/terraform-provider-rhoas/releases/download/v0.1.0/terraform-provider-rhoas_0.1.0_windows_arm64.zip",
+          "shasum": "a6670e748ac4b95a81e34aa764192b063cf205e5fe40bf693dbff1b4b7f8e3e4"
+        }
+      ]
+    }
+  ]
+}

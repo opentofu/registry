@@ -1,0 +1,976 @@
+{
+  "versions": [
+    {
+      "version": "0.4.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.4.0/terraform-provider-oktapam_0.4.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.4.0/terraform-provider-oktapam_0.4.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.4.0_darwin_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.4.0/terraform-provider-oktapam_0.4.0_darwin_amd64.zip",
+          "shasum": "e8ba32d8132ed41c69863caabddf729345bed58c7b0504b31912cd8bd2b264f1"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.4.0_darwin_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.4.0/terraform-provider-oktapam_0.4.0_darwin_arm64.zip",
+          "shasum": "525245e4a579474a09a142da13e5db90e39add7e1982f671aaa56b25618e7dca"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.4.0_freebsd_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.4.0/terraform-provider-oktapam_0.4.0_freebsd_386.zip",
+          "shasum": "fd88bb500ccaabab11eae11fdef1ce8b025f0c77991de1da291318a8d2610995"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.4.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.4.0/terraform-provider-oktapam_0.4.0_freebsd_amd64.zip",
+          "shasum": "adcdd2ade67307d6235bd512ba75ce95784f25e4c47a36211ff04e5575e7afdd"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.4.0_freebsd_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.4.0/terraform-provider-oktapam_0.4.0_freebsd_arm.zip",
+          "shasum": "2ea2e2de4e6f728dba2ff3975493c98e71e850cc23286f0593bcc2a7dd2d3cb7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.4.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.4.0/terraform-provider-oktapam_0.4.0_freebsd_arm64.zip",
+          "shasum": "54b54b7b00438a2269bbeff8edb69c16772d3738aecbce7bd1cae2f603f322b6"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.4.0_linux_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.4.0/terraform-provider-oktapam_0.4.0_linux_386.zip",
+          "shasum": "b198bc9a7399ea3e9fa8a14d384404b63ea017446b44e51ba91ff0d1d29026c8"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.4.0_linux_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.4.0/terraform-provider-oktapam_0.4.0_linux_amd64.zip",
+          "shasum": "6670568d4afff9675cff4eece640cf9d50b2290ca5d01a5c2effdbce2fe787b2"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.4.0_linux_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.4.0/terraform-provider-oktapam_0.4.0_linux_arm.zip",
+          "shasum": "65196500963f7bda20b6bc5ba3ec370fa33c27a84edb6e8603e146bcaefa158d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.4.0_linux_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.4.0/terraform-provider-oktapam_0.4.0_linux_arm64.zip",
+          "shasum": "596159f5bdc75b96bc8c3acbf57428543b55c345927d60102a0889fad4fb7f49"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.4.0_windows_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.4.0/terraform-provider-oktapam_0.4.0_windows_386.zip",
+          "shasum": "91b353e6e11b919364e9c7c5efc23c52914e6f194570a189b8c0c7ffe35624e4"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.4.0_windows_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.4.0/terraform-provider-oktapam_0.4.0_windows_amd64.zip",
+          "shasum": "7b2ba1255a1c71b7a27ad1bee7c594a3e70254031ef0137e9b45730b9cefd1e1"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.4.0_windows_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.4.0/terraform-provider-oktapam_0.4.0_windows_arm.zip",
+          "shasum": "fec717ed2ebe57823dffb32559dbcf07463fa83636396681d0eae48fa3b0b14d"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.4.0_windows_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.4.0/terraform-provider-oktapam_0.4.0_windows_arm64.zip",
+          "shasum": "475694c9c26f2008df06af45f41dae91978d72445aa33029a330ad431339ebdb"
+        }
+      ]
+    },
+    {
+      "version": "0.3.3",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.3/terraform-provider-oktapam_0.3.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.3/terraform-provider-oktapam_0.3.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.3.3_darwin_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.3/terraform-provider-oktapam_0.3.3_darwin_amd64.zip",
+          "shasum": "5a3ce5902d99d000fe6b0c0da583d9553a84ca4234b8af8512ab66fa271bb471"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.3.3_darwin_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.3/terraform-provider-oktapam_0.3.3_darwin_arm64.zip",
+          "shasum": "5b890711e99522c34d642980b6ab4a6c5c3cfd26fd0f5bac9d6c3f8ca83eeec4"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.3.3_freebsd_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.3/terraform-provider-oktapam_0.3.3_freebsd_386.zip",
+          "shasum": "abe33961c940dde88a5c07de0cc5cd5207ecf2512eaf946864c34bb3ec1ab372"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.3.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.3/terraform-provider-oktapam_0.3.3_freebsd_amd64.zip",
+          "shasum": "6985ac0fd1f18dabcdc36e9264c31e36a7ed373ee5b2ded46fc8976f74908085"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.3.3_freebsd_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.3/terraform-provider-oktapam_0.3.3_freebsd_arm.zip",
+          "shasum": "a10efda985f6a15f98a27ac913b40895158033bb39c059bc6a08a57b0a1cf6d0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.3.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.3/terraform-provider-oktapam_0.3.3_freebsd_arm64.zip",
+          "shasum": "26341b5685d760d42e9677e714d335891f3f206a31b4be0c1a57bbd725840433"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.3.3_linux_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.3/terraform-provider-oktapam_0.3.3_linux_386.zip",
+          "shasum": "3ce8213cd92d97789c711ba4fb445b82f63db21c99b25aac881302d194d3ab80"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.3.3_linux_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.3/terraform-provider-oktapam_0.3.3_linux_amd64.zip",
+          "shasum": "6f4950c20c2ed39ed1cdb4b3a9475dd21a91186eba3acdba4d3061914d9bcd27"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.3.3_linux_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.3/terraform-provider-oktapam_0.3.3_linux_arm.zip",
+          "shasum": "5940ed884678bd7b92052d87922b8bcd3409e453159e0399fd4d10f0b904b3f2"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.3.3_linux_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.3/terraform-provider-oktapam_0.3.3_linux_arm64.zip",
+          "shasum": "6c1261963f807c1b8e004f1a513687de2284b9b279941396a19b243ba2c0c095"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.3.3_windows_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.3/terraform-provider-oktapam_0.3.3_windows_386.zip",
+          "shasum": "1a0bb037981fef7eeb80ec53edbe970f29b43e7a6c89906f860a1bfbad3b3889"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.3.3_windows_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.3/terraform-provider-oktapam_0.3.3_windows_amd64.zip",
+          "shasum": "b3775b63059a10ce0ece3af1b776e104ef1ce319fafcf7ff4445e703ca090156"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.3.3_windows_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.3/terraform-provider-oktapam_0.3.3_windows_arm.zip",
+          "shasum": "c464c7be25fd5bbc3cb9f5694b967350c22500e1f18ed7664419bf2dac430216"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.3.3_windows_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.3/terraform-provider-oktapam_0.3.3_windows_arm64.zip",
+          "shasum": "0bd217471685607601c3a75546898fcbf1f2128cf02dcadf4f17d2b506004d67"
+        }
+      ]
+    },
+    {
+      "version": "0.3.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.2/terraform-provider-oktapam_0.3.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.2/terraform-provider-oktapam_0.3.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.3.2_darwin_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.2/terraform-provider-oktapam_0.3.2_darwin_amd64.zip",
+          "shasum": "1e8361cebca1f95c6b66ab2ce36083b654454612796c37940095b7f585090929"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.3.2_darwin_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.2/terraform-provider-oktapam_0.3.2_darwin_arm64.zip",
+          "shasum": "1782778dcb95e8efd221de9ee36087968c7483b23834eaa34fa8d3b07d0eff31"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.3.2_freebsd_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.2/terraform-provider-oktapam_0.3.2_freebsd_386.zip",
+          "shasum": "ae6276c3c5f1000dc44bd020c13ae3c208f6e105c54b0a37d66990e4a2e8b05f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.3.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.2/terraform-provider-oktapam_0.3.2_freebsd_amd64.zip",
+          "shasum": "51543e50606125fb28fcb41d0d5dd838549afbbbb229c04cc1b97d3562b03760"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.3.2_freebsd_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.2/terraform-provider-oktapam_0.3.2_freebsd_arm.zip",
+          "shasum": "995828ed9e42f2c3f330e2915c3a78aa0745dda93bc5234c31ec8cea8a8af9f1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.3.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.2/terraform-provider-oktapam_0.3.2_freebsd_arm64.zip",
+          "shasum": "dd00fa94c7afef6cbd6890ed55fe7dd7eb564028e9dcba21d61c0ed8cf327c0b"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.3.2_linux_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.2/terraform-provider-oktapam_0.3.2_linux_386.zip",
+          "shasum": "33f0dc49af60d59908ca96f79853e7299ec49a83f7fa58d5a054570516b10667"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.3.2_linux_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.2/terraform-provider-oktapam_0.3.2_linux_amd64.zip",
+          "shasum": "a9e8e003ad59f3fe9f27ab25f1258e755289b9f4dfecf79908a22d404a7a62cc"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.3.2_linux_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.2/terraform-provider-oktapam_0.3.2_linux_arm.zip",
+          "shasum": "36ed552898f6861460b378c07366bdeee28229a1cb02a029c7469c691e8c0a96"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.3.2_linux_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.2/terraform-provider-oktapam_0.3.2_linux_arm64.zip",
+          "shasum": "c99af6ad5d366fcd0377af6ccbeda92916798ed16da483854bd8d4ff009d8320"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.3.2_windows_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.2/terraform-provider-oktapam_0.3.2_windows_386.zip",
+          "shasum": "313b6b0405da0116b6f5558d89fe8ec8706f78b53b4722d68a7001514d6f95cc"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.3.2_windows_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.2/terraform-provider-oktapam_0.3.2_windows_amd64.zip",
+          "shasum": "bf86ed923c1b2c112f23211234cf8ad96d410a41a266b2f325aeba8918e8800c"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.3.2_windows_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.2/terraform-provider-oktapam_0.3.2_windows_arm.zip",
+          "shasum": "792eb8ee4660d5ea073871f2f18f1867e5d61feaac81f444f55242b5b15dc869"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.3.2_windows_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.2/terraform-provider-oktapam_0.3.2_windows_arm64.zip",
+          "shasum": "dc04761df3e82c2ef39a5ba13e50a05ae9cd969b0f97353113a0530cad680dcb"
+        }
+      ]
+    },
+    {
+      "version": "0.3.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.1/terraform-provider-oktapam_0.3.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.1/terraform-provider-oktapam_0.3.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.3.1_darwin_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.1/terraform-provider-oktapam_0.3.1_darwin_amd64.zip",
+          "shasum": "c79fccb573f2ffb04f3353742a7f2c56ee86b866273f3409abc13fae5f5bb77b"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.3.1_darwin_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.1/terraform-provider-oktapam_0.3.1_darwin_arm64.zip",
+          "shasum": "18ab467f7358494dc6e390020adcae40832b2b898f983a348cd886fe5d119981"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.3.1_freebsd_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.1/terraform-provider-oktapam_0.3.1_freebsd_386.zip",
+          "shasum": "4559525aec74c9b52e2064a0d35b952459f78cd1cd4b8f4ef4bcd7b756d217fe"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.3.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.1/terraform-provider-oktapam_0.3.1_freebsd_amd64.zip",
+          "shasum": "fdc0e014f7d6e68d5dd0baf29ffae97d9fba521d6c83347f7fe6165f44b5628f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.3.1_freebsd_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.1/terraform-provider-oktapam_0.3.1_freebsd_arm.zip",
+          "shasum": "48c01ac4a06efc539401825cdc126b59d750bb38bebd96977fbe198868e26586"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.3.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.1/terraform-provider-oktapam_0.3.1_freebsd_arm64.zip",
+          "shasum": "76d7034d662dd9947f447e94b527478c0d54ded428593fae794c16c53a74785f"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.3.1_linux_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.1/terraform-provider-oktapam_0.3.1_linux_386.zip",
+          "shasum": "3ec9abe71b44886fe4bb12f2398af6dd76f56d7bf28fe47ad153125c526a3c02"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.3.1_linux_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.1/terraform-provider-oktapam_0.3.1_linux_amd64.zip",
+          "shasum": "425a44b2fab83185b9e19380e0d2f3c3fac9c50ce99adb91aea0c24ade19c9cb"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.3.1_linux_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.1/terraform-provider-oktapam_0.3.1_linux_arm.zip",
+          "shasum": "ae49249c2d0165ef6d717b9517fd1173b22b76ca6c10e95bb587852800f49228"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.3.1_linux_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.1/terraform-provider-oktapam_0.3.1_linux_arm64.zip",
+          "shasum": "e681a2d45f4060e96e75846a6652a9a0654fe50dbdebbfe6ad06de8a0e73a5c0"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.3.1_windows_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.1/terraform-provider-oktapam_0.3.1_windows_386.zip",
+          "shasum": "e29ba89ef7b719e232bb3d32c48f4ec9488177b5a5415a455027c5458addda56"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.3.1_windows_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.1/terraform-provider-oktapam_0.3.1_windows_amd64.zip",
+          "shasum": "d21d486e0b6ce894f8e271fa41c95be51aeb26f0e12f286f14946053284c367b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.3.1_windows_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.1/terraform-provider-oktapam_0.3.1_windows_arm.zip",
+          "shasum": "bef5a3c319d64d265ce653f8c6932698ba21ef4cde9ebd6b246971e72bca4f44"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.3.1_windows_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.1/terraform-provider-oktapam_0.3.1_windows_arm64.zip",
+          "shasum": "afaaf784d0779749c8dd2220f9f3194893158326394199b55ad84045949fe20d"
+        }
+      ]
+    },
+    {
+      "version": "0.3.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.0/terraform-provider-oktapam_0.3.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.0/terraform-provider-oktapam_0.3.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.3.0_darwin_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.0/terraform-provider-oktapam_0.3.0_darwin_amd64.zip",
+          "shasum": "d47e5b63edeb5694d401318c1f2b426bd8b92ef0751681d7d2a94675355005b8"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.3.0_darwin_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.0/terraform-provider-oktapam_0.3.0_darwin_arm64.zip",
+          "shasum": "670e3b6e2ca54c2e3cccf9494a0624a3bb504966883716b9c8a8d4edf67f8c4d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.3.0_freebsd_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.0/terraform-provider-oktapam_0.3.0_freebsd_386.zip",
+          "shasum": "c50b656cea10cbc9922c0e90e1ccb04f1337a6d73cf6dae871ec6cb6ce71aea0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.3.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.0/terraform-provider-oktapam_0.3.0_freebsd_amd64.zip",
+          "shasum": "b1a96f408251aa33d5c3e2115c4998a454d465eccebbd0564ff4cb9f1ddf3976"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.3.0_freebsd_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.0/terraform-provider-oktapam_0.3.0_freebsd_arm.zip",
+          "shasum": "1d9fcd807075cf0b7232c4d510a387919566c86820202fb87348c9db7063f618"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.3.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.0/terraform-provider-oktapam_0.3.0_freebsd_arm64.zip",
+          "shasum": "47e3d85e714930e0f69405ff200c6c04d22252a96abec689abf5bee5d33e6ade"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.3.0_linux_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.0/terraform-provider-oktapam_0.3.0_linux_386.zip",
+          "shasum": "b39aa18e68e30b4aefc0c9ba1217b1d5d65085b6643026eb79101370affe4a8a"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.3.0_linux_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.0/terraform-provider-oktapam_0.3.0_linux_amd64.zip",
+          "shasum": "bbcb757c28ff3f0172a8b32531e2ad53b4a15e26685ff18f1c1f51d7a2774a64"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.3.0_linux_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.0/terraform-provider-oktapam_0.3.0_linux_arm.zip",
+          "shasum": "9dbbcf65c1f22deee12d90dbb86c89fbf496efe705b39b256a00b8f332c95949"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.3.0_linux_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.0/terraform-provider-oktapam_0.3.0_linux_arm64.zip",
+          "shasum": "14f24bc0fc91f771cdfbab6d19106ff6b88610c7eba4d7e48e76aad6688f8cc5"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.3.0_windows_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.0/terraform-provider-oktapam_0.3.0_windows_386.zip",
+          "shasum": "774efe7a85c4568e258a29126801197424ff9ccdbe97118f9dfaef158305f3cb"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.3.0_windows_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.0/terraform-provider-oktapam_0.3.0_windows_amd64.zip",
+          "shasum": "7f65a61367fa9ae2203bdb4e853152e908366ff2d73e71e82bc55516d2943cd4"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.3.0_windows_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.0/terraform-provider-oktapam_0.3.0_windows_arm.zip",
+          "shasum": "da4656fac74609e88873aea5f71ed991e10941deeb02a929cefa337befd2bdb8"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.3.0_windows_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.3.0/terraform-provider-oktapam_0.3.0_windows_arm64.zip",
+          "shasum": "e437f259b3c89b778286d1d41f5a9b50414782a594fcd1965ea5d442a2b1a5af"
+        }
+      ]
+    },
+    {
+      "version": "0.2.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.2/terraform-provider-oktapam_0.2.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.2/terraform-provider-oktapam_0.2.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.2.2_darwin_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.2/terraform-provider-oktapam_0.2.2_darwin_amd64.zip",
+          "shasum": "d24b236c3740d637e322b8d6125ba60454d1f0998b0b6af7badd04bb20e88da0"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.2.2_darwin_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.2/terraform-provider-oktapam_0.2.2_darwin_arm64.zip",
+          "shasum": "54f5da030f146fb8283c45f54658b490449d1fbfea1916b9c9be3b1d24db6536"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.2.2_freebsd_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.2/terraform-provider-oktapam_0.2.2_freebsd_386.zip",
+          "shasum": "2fae8ecc84f02b5f8f8291a6ea5e7b54cf4db50201af9c29136c6f3aa7c1ed91"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.2.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.2/terraform-provider-oktapam_0.2.2_freebsd_amd64.zip",
+          "shasum": "0e5d9fdc8a98caa45af2f3e2e7858286af2685f5d2b6e9f80367b11cfa2b3f76"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.2.2_freebsd_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.2/terraform-provider-oktapam_0.2.2_freebsd_arm.zip",
+          "shasum": "27bd6035a5cd571dba97efacc273d415a6386869ba11f2cad4b86781ab17f987"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.2.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.2/terraform-provider-oktapam_0.2.2_freebsd_arm64.zip",
+          "shasum": "cf7a1a9182e5db32f6bf360601ed3c21675cfe18f53e6ecbf53ffbaf5259ea99"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.2.2_linux_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.2/terraform-provider-oktapam_0.2.2_linux_386.zip",
+          "shasum": "cab1ddf53098cb65b2e28db6991d300dcc60f81656f2bbf20283bc4cdfc7d150"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.2.2_linux_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.2/terraform-provider-oktapam_0.2.2_linux_amd64.zip",
+          "shasum": "1f604eead37700d98a11b266d71e628d43e15603c011de18dedf8c39f182bb65"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.2.2_linux_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.2/terraform-provider-oktapam_0.2.2_linux_arm.zip",
+          "shasum": "e2b10092ac63308decec40e6450674aa8c060ddafda53fd634c9e15e5de4be99"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.2.2_linux_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.2/terraform-provider-oktapam_0.2.2_linux_arm64.zip",
+          "shasum": "cf20043d28834e82df887163b8b2c4a49352606ad9f6ed780bd3f8ab0f4230a3"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.2.2_windows_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.2/terraform-provider-oktapam_0.2.2_windows_386.zip",
+          "shasum": "ff506472bb084529bc6f66d692b87d5eab571e10e95cfed94255324b809e8339"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.2.2_windows_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.2/terraform-provider-oktapam_0.2.2_windows_amd64.zip",
+          "shasum": "54fa986e0f93268aecd66259a0b6f9897d7576be9baf9381d43dc0aa9332d344"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.2.2_windows_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.2/terraform-provider-oktapam_0.2.2_windows_arm.zip",
+          "shasum": "32fca65290475a4965d53d3d08d126c0f82b67c621d787064fb130b7a6e711cb"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.2.2_windows_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.2/terraform-provider-oktapam_0.2.2_windows_arm64.zip",
+          "shasum": "44154cecabd8d46c7c8298952f5aa5f6c0929872d343ca8d2926a8f22150d8b7"
+        }
+      ]
+    },
+    {
+      "version": "0.2.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.1/terraform-provider-oktapam_0.2.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.1/terraform-provider-oktapam_0.2.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.2.1_darwin_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.1/terraform-provider-oktapam_0.2.1_darwin_amd64.zip",
+          "shasum": "a12b16a01dc7d92fb0deeaca4d7844ba5acd379f5978883c21f0e6e7ae5be945"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.2.1_darwin_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.1/terraform-provider-oktapam_0.2.1_darwin_arm64.zip",
+          "shasum": "ab66882139f6eeb79e6a42d8c052db0020a5cd75a9a1febaa74bbf5d18be0cdd"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.2.1_freebsd_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.1/terraform-provider-oktapam_0.2.1_freebsd_386.zip",
+          "shasum": "f28f7d84ed435391a61e39cb7b992ed9007b0263974a49961bb53f75341d4f41"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.2.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.1/terraform-provider-oktapam_0.2.1_freebsd_amd64.zip",
+          "shasum": "78eedfd773faf5fc98487d01517fee6f3c4f8b3e80dac34600dea651131eed00"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.2.1_freebsd_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.1/terraform-provider-oktapam_0.2.1_freebsd_arm.zip",
+          "shasum": "45cdc2b27e16952a7853dd41a194103d1162c9af3f3b706e175280239de471f1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.2.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.1/terraform-provider-oktapam_0.2.1_freebsd_arm64.zip",
+          "shasum": "584288ec3fb3ed8089a2184faeb5cd3aa31d1c835ddb1460772ab582cc79be01"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.2.1_linux_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.1/terraform-provider-oktapam_0.2.1_linux_386.zip",
+          "shasum": "75e5dc8353befd6465718012b60a0026e652ce3ca6dd2b1eff82de9139f1eef0"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.2.1_linux_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.1/terraform-provider-oktapam_0.2.1_linux_amd64.zip",
+          "shasum": "e47db8a1ad3f478204ce11befb2884265a63cda244ba98f5043f087cc9c631fa"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.2.1_linux_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.1/terraform-provider-oktapam_0.2.1_linux_arm.zip",
+          "shasum": "178e5299de4d4d064b42ba6611a3fadafa4c3b372fd24915154c435b0caf63c3"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.2.1_linux_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.1/terraform-provider-oktapam_0.2.1_linux_arm64.zip",
+          "shasum": "5ad8288d8a0d9cb91b026352e0ced640cb95d3bd3eda39f9d52f9ea1cc67f3b8"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.2.1_windows_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.1/terraform-provider-oktapam_0.2.1_windows_386.zip",
+          "shasum": "28318df90ee666108b04b32f3f6a8717c649e7e0d059fdd4b666101208489f36"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.2.1_windows_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.1/terraform-provider-oktapam_0.2.1_windows_amd64.zip",
+          "shasum": "f1060d48a3995fcde697c7552eef81d86931fd23906f02056de2a04ff0c56ef7"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.2.1_windows_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.1/terraform-provider-oktapam_0.2.1_windows_arm.zip",
+          "shasum": "12b6ff088f8edfd21bbe8123781f17b805285be55239ef2920d205d584aa7eec"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.2.1_windows_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.1/terraform-provider-oktapam_0.2.1_windows_arm64.zip",
+          "shasum": "3377f29539b050b46e43b74254dc05fc4c3b263b829bf5e18a0bc6ada1dfedf9"
+        }
+      ]
+    },
+    {
+      "version": "0.2.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.0/terraform-provider-oktapam_0.2.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.0/terraform-provider-oktapam_0.2.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.2.0_darwin_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.0/terraform-provider-oktapam_0.2.0_darwin_amd64.zip",
+          "shasum": "7884bcfa6d62ca6a9a0baf85f106ae2b586abcffb37b8e334d98fbe3e2a762e7"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.2.0_darwin_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.0/terraform-provider-oktapam_0.2.0_darwin_arm64.zip",
+          "shasum": "1074f48ebd50401958eaaa0ae7cbd8d99d853e057c5c8a9f4e4fd291207a8464"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.2.0_freebsd_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.0/terraform-provider-oktapam_0.2.0_freebsd_386.zip",
+          "shasum": "a321f692c74a64230239dbaa5fe1ddbf17363d499d36970cff54f9409fa91739"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.2.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.0/terraform-provider-oktapam_0.2.0_freebsd_amd64.zip",
+          "shasum": "e1d9c330cd0460178cef3ac737ecffd27089777a2b294ed0248d4dd81a7992ab"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.2.0_freebsd_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.0/terraform-provider-oktapam_0.2.0_freebsd_arm.zip",
+          "shasum": "cb11b9a11dd8246af040ccfa44baac68055f3fa87393c0c7d4e74eb49ad91e7a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.2.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.0/terraform-provider-oktapam_0.2.0_freebsd_arm64.zip",
+          "shasum": "0980f206fe1e48da8a7c6febafb79ef7df42c1ae63178c8efbf83afb85364305"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.2.0_linux_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.0/terraform-provider-oktapam_0.2.0_linux_386.zip",
+          "shasum": "2876222e767a8416e096a0d61daabbf176cf70576e4254413fa19d39596795aa"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.2.0_linux_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.0/terraform-provider-oktapam_0.2.0_linux_amd64.zip",
+          "shasum": "79545b12bbc179fc74864a91ad92c3efbdd94c9232a9b02f66bfad0806ee0bd5"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.2.0_linux_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.0/terraform-provider-oktapam_0.2.0_linux_arm.zip",
+          "shasum": "105c42c8b29c249a57f63958a96ea6a5886174f350039b3b2c55fa77c46cadab"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.2.0_linux_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.0/terraform-provider-oktapam_0.2.0_linux_arm64.zip",
+          "shasum": "dcd4074b872f282b927e4d453f48af23b74bda6f4c1d7088515fd24c19fa6b29"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.2.0_windows_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.0/terraform-provider-oktapam_0.2.0_windows_386.zip",
+          "shasum": "df7d3f3c53cfb91dd479a6933ac9054003ec1d1dc62f0b7497db58746681e0ed"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.2.0_windows_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.0/terraform-provider-oktapam_0.2.0_windows_amd64.zip",
+          "shasum": "03f8500e123179f6ff9b5561b24b1ab32802014a9918212434ebbd6cbcceb3db"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.2.0_windows_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.0/terraform-provider-oktapam_0.2.0_windows_arm.zip",
+          "shasum": "0ba61c70e0696b505d1c636986444c15c6f910d15f9d99bc63e4be98f29b35d9"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.2.0_windows_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.2.0/terraform-provider-oktapam_0.2.0_windows_arm64.zip",
+          "shasum": "8a284d5875023880a0e56f866482ba625b4b4c5fae6fe9b5ca3a58027d3c9beb"
+        }
+      ]
+    },
+    {
+      "version": "0.1.9",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.1.9/terraform-provider-oktapam_0.1.9_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.1.9/terraform-provider-oktapam_0.1.9_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.1.9_darwin_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.1.9/terraform-provider-oktapam_0.1.9_darwin_amd64.zip",
+          "shasum": "c23d8f434ac43a613acf7589c33a7941d7465c24b476d954b6c48dab19bdd70b"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.1.9_darwin_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.1.9/terraform-provider-oktapam_0.1.9_darwin_arm64.zip",
+          "shasum": "cc13ee2ff0ce2b62c508cfdd297125a2ecf4c69b22ec2dffe902f06c3f304451"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.1.9_freebsd_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.1.9/terraform-provider-oktapam_0.1.9_freebsd_386.zip",
+          "shasum": "267100f75dbb789935ea01ef61c7666b58efddb08af2917b617f41123b4511e0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.1.9_freebsd_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.1.9/terraform-provider-oktapam_0.1.9_freebsd_amd64.zip",
+          "shasum": "ed35fdcfce036028cb7ebafea95ddaed07a4b94f92cb6016e403a32101572ef1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.1.9_freebsd_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.1.9/terraform-provider-oktapam_0.1.9_freebsd_arm.zip",
+          "shasum": "cbbf108791391416a8c51c6be566f8ec2e78d87e8092407fb96c74447f6c8fbb"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.1.9_freebsd_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.1.9/terraform-provider-oktapam_0.1.9_freebsd_arm64.zip",
+          "shasum": "02b6faaaedfb1d4116ec35570cea9636f13509a39150e6d503389f286fd8f2ca"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.1.9_linux_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.1.9/terraform-provider-oktapam_0.1.9_linux_386.zip",
+          "shasum": "9c197a58a1712d56abced76760aaeb682bca4f0ac6785faa34e9b4af5322020f"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.1.9_linux_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.1.9/terraform-provider-oktapam_0.1.9_linux_amd64.zip",
+          "shasum": "0e9513ec064732f7ce19ee3a0c2fdfb8775999184d10e633acff671bb788ae4c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.1.9_linux_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.1.9/terraform-provider-oktapam_0.1.9_linux_arm.zip",
+          "shasum": "4e80b6f00c69ff0bdf4732149f59dd6ff44a3c6eb63bd7de3da4713c60a9224b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.1.9_linux_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.1.9/terraform-provider-oktapam_0.1.9_linux_arm64.zip",
+          "shasum": "b35d1f7d650d3b3c210046dabf2d8e51ac1acce1041d62c1bf5c0c84f5e753b2"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-oktapam_0.1.9_windows_386.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.1.9/terraform-provider-oktapam_0.1.9_windows_386.zip",
+          "shasum": "cf0328f0de712b0ca043bfcc14509f2e7fca731dd8374d210699df4536408100"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-oktapam_0.1.9_windows_amd64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.1.9/terraform-provider-oktapam_0.1.9_windows_amd64.zip",
+          "shasum": "32c9d6928339d05bbaf6cb164202b9a9dd62b37b8fc5a8061e07b8d9c66edf8d"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-oktapam_0.1.9_windows_arm.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.1.9/terraform-provider-oktapam_0.1.9_windows_arm.zip",
+          "shasum": "cd6351b1cc8416e4c058860f83b0c82de309e706971f735e8fec46b1acb6bff4"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-oktapam_0.1.9_windows_arm64.zip",
+          "download_url": "https://github.com/okta/terraform-provider-oktapam/releases/download/v0.1.9/terraform-provider-oktapam_0.1.9_windows_arm64.zip",
+          "shasum": "3387769c77a53be45f031b8888037d7d220110f4b82809aed2a8157aea656e9c"
+        }
+      ]
+    }
+  ]
+}

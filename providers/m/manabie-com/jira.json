@@ -1,0 +1,913 @@
+{
+  "versions": [
+    {
+      "version": "0.3.3",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.3/terraform-provider-jira_0.3.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.3/terraform-provider-jira_0.3.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.3.3_darwin_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.3/terraform-provider-jira_0.3.3_darwin_amd64.zip",
+          "shasum": "91451323b229e4d6154ed9a3cbd097a159ddb38e00a96ec1342ebe8203700dd3"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.3.3_darwin_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.3/terraform-provider-jira_0.3.3_darwin_arm64.zip",
+          "shasum": "1a7591918f1ebae42dc4c747126f497013a878b4bf7e326aacd9af82d67f2488"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.3.3_freebsd_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.3/terraform-provider-jira_0.3.3_freebsd_386.zip",
+          "shasum": "c8359a45ed3b0a9edf4b6139341590ae3a82a230892222ad4d9aaf89f6e45b97"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.3.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.3/terraform-provider-jira_0.3.3_freebsd_amd64.zip",
+          "shasum": "c74cd98fdeb37c0a0235c180cc979dcb349110cddb1aab73a97ead5834e05c01"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.3.3_freebsd_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.3/terraform-provider-jira_0.3.3_freebsd_arm.zip",
+          "shasum": "59a4f84da526789157a8d85673040dadc9ca6c3a10ec51a0b62eefb4823a2d5d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.3.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.3/terraform-provider-jira_0.3.3_freebsd_arm64.zip",
+          "shasum": "94b56980d8b71c706b8bc0dc0c7ad146735d919f2ff91f66e84c4989207a2271"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.3.3_linux_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.3/terraform-provider-jira_0.3.3_linux_386.zip",
+          "shasum": "e4880828ef9372d0fe8caccc9e6af5d5cc81c3146009a9d4d23d55573b2c4c71"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.3.3_linux_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.3/terraform-provider-jira_0.3.3_linux_amd64.zip",
+          "shasum": "799f26b7432888ade496ccdcd469c115d9d5b161c3d9510f70a2e941be4f6310"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.3.3_linux_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.3/terraform-provider-jira_0.3.3_linux_arm.zip",
+          "shasum": "78ff1324bce64a4af251fb1c244c451878982c6f3b6244f97b4150bcac073abb"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.3.3_linux_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.3/terraform-provider-jira_0.3.3_linux_arm64.zip",
+          "shasum": "8cdb3118cf825ee3a57229952c1da597d28388d4c109830b67a1d4b69216f0f4"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.3.3_windows_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.3/terraform-provider-jira_0.3.3_windows_386.zip",
+          "shasum": "67d020991a2ecffda6991280cd0dfa0486495383a182ec10e5c3f98bcdc40bc1"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.3.3_windows_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.3/terraform-provider-jira_0.3.3_windows_amd64.zip",
+          "shasum": "7f094d659da6c75376dc127cabf97b41b24ee24a0e3c0a3a3a631e7ddf93de8f"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.3.3_windows_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.3/terraform-provider-jira_0.3.3_windows_arm.zip",
+          "shasum": "ece9b017b318c438714be68df01286acb19b3c4d4c9588047cad4488b454fefc"
+        }
+      ]
+    },
+    {
+      "version": "0.3.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.2/terraform-provider-jira_0.3.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.2/terraform-provider-jira_0.3.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.3.2_darwin_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.2/terraform-provider-jira_0.3.2_darwin_amd64.zip",
+          "shasum": "f1b7241fdfc92a55e13b476d9f2ea1a60a5ff258d6df6e251375146074dcf8cb"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.3.2_darwin_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.2/terraform-provider-jira_0.3.2_darwin_arm64.zip",
+          "shasum": "66849558dc6cc275e7813e80292b287b405b16170bd0f87a7f7d5c243690c95c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.3.2_freebsd_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.2/terraform-provider-jira_0.3.2_freebsd_386.zip",
+          "shasum": "153c3dcd3881ae92a5d70b848f3171e8ba4af01fde7ad11c45735f1bd43d4f0c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.3.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.2/terraform-provider-jira_0.3.2_freebsd_amd64.zip",
+          "shasum": "a39ce3957b61be7e7cba18848a47167d08d2136b11afacf9d7954b36009d9c26"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.3.2_freebsd_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.2/terraform-provider-jira_0.3.2_freebsd_arm.zip",
+          "shasum": "0b05f09f95fed97d26cfb0847f8a6433d5ac877fcb8219d67f337d3a5f16bd79"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.3.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.2/terraform-provider-jira_0.3.2_freebsd_arm64.zip",
+          "shasum": "3f62ad048fc9f0cbda2ca239a3676087175b391be0bd7bc447101964824d76cd"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.3.2_linux_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.2/terraform-provider-jira_0.3.2_linux_386.zip",
+          "shasum": "c55d6f318888fc4206eca1ac4462007d9742ae909da7169ad0502cb41ba4ca73"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.3.2_linux_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.2/terraform-provider-jira_0.3.2_linux_amd64.zip",
+          "shasum": "b54ff6470dc2c30d2fe00bb7e8d121defbe7e2fe06237b009efa0f93ead2e4c0"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.3.2_linux_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.2/terraform-provider-jira_0.3.2_linux_arm.zip",
+          "shasum": "629ad90fe08f374b47ce01b098777b205c6673d19c17e8963de0d9efc5467685"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.3.2_linux_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.2/terraform-provider-jira_0.3.2_linux_arm64.zip",
+          "shasum": "6f2be28709534f3b7eb888f2bf767a95e620af31f139154988c1b658cddc7333"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.3.2_windows_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.2/terraform-provider-jira_0.3.2_windows_386.zip",
+          "shasum": "dae9f7a5c85135cc2adc444fd7a717137698bfc5f3077dacef1afb2607b4afc6"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.3.2_windows_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.2/terraform-provider-jira_0.3.2_windows_amd64.zip",
+          "shasum": "8b76792d9c1dd59bc27e7b3d2331849fa066586806c65bdc36782a1e381de6e2"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.3.2_windows_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.2/terraform-provider-jira_0.3.2_windows_arm.zip",
+          "shasum": "9d2fda0753d6a784e442d857906783e82073eed98e2552de571f1d1e9449cea3"
+        }
+      ]
+    },
+    {
+      "version": "0.3.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.1/terraform-provider-jira_0.3.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.1/terraform-provider-jira_0.3.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.3.1_darwin_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.1/terraform-provider-jira_0.3.1_darwin_amd64.zip",
+          "shasum": "d955aadaf6d6bf4663a0ef1339285ee99060fbc63f9e37773d0a94044aecba1f"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.3.1_darwin_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.1/terraform-provider-jira_0.3.1_darwin_arm64.zip",
+          "shasum": "d8fad59e74e802d246310c1a8ce50eef5534cdbb78e57b4f461abc7d35de6522"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.3.1_freebsd_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.1/terraform-provider-jira_0.3.1_freebsd_386.zip",
+          "shasum": "932439ca3a4eabe9a826e8061198ac91afc54e9980f35bf60ffa489836ea2b71"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.3.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.1/terraform-provider-jira_0.3.1_freebsd_amd64.zip",
+          "shasum": "6dc216e9e1c5f3fd7899c62ae73a9545a91b8ed260c8f6f8761ce6483c2cd19d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.3.1_freebsd_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.1/terraform-provider-jira_0.3.1_freebsd_arm.zip",
+          "shasum": "6c73b4985e506c75ff3e67fb646c70d6db2824bd9be64a1e19c35a5861cab90d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.3.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.1/terraform-provider-jira_0.3.1_freebsd_arm64.zip",
+          "shasum": "6a98b44d0f530bc5a53e49f879d0cd1f873d48cef1c688daa7fa3e59343daf4d"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.3.1_linux_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.1/terraform-provider-jira_0.3.1_linux_386.zip",
+          "shasum": "b0d55c0c6feb8a2db1fd4b8a752be4cbd640ad1701d4effafb2573987d56643c"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.3.1_linux_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.1/terraform-provider-jira_0.3.1_linux_amd64.zip",
+          "shasum": "e61f08a8ceb06bbf6179c40b2b0a39a4afe468010d074fc822035ecf3dcca6a2"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.3.1_linux_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.1/terraform-provider-jira_0.3.1_linux_arm.zip",
+          "shasum": "9d255fcfd97220b75c6e54a6aec7d96eb27c7b9cd359da10b593d65b2f0933df"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.3.1_linux_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.1/terraform-provider-jira_0.3.1_linux_arm64.zip",
+          "shasum": "4a2d2eadc18075c01eeb52bab93d7822ba463f96d9fdc89bcf2dfb5021e92739"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.3.1_windows_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.1/terraform-provider-jira_0.3.1_windows_386.zip",
+          "shasum": "3bc8695c7167f84dfdb3c9c82f099c380bca758025c93f0ee96bd16f1cf3ba5b"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.3.1_windows_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.1/terraform-provider-jira_0.3.1_windows_amd64.zip",
+          "shasum": "dcba28ad3daccf54faf10161a737702de4f104fb8f7f92c97531130220f7207d"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.3.1_windows_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.1/terraform-provider-jira_0.3.1_windows_arm.zip",
+          "shasum": "a25ce310a73f7bff2bf3cbc324be8572cc86b08964d11c54a13b938b3f95e665"
+        }
+      ]
+    },
+    {
+      "version": "0.3.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.0/terraform-provider-jira_0.3.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.0/terraform-provider-jira_0.3.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.3.0_darwin_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.0/terraform-provider-jira_0.3.0_darwin_amd64.zip",
+          "shasum": "150f34a6544c5e1ac0dcfc810a7d8418571b09ee1cd7971c67178ede8fc84e83"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.3.0_darwin_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.0/terraform-provider-jira_0.3.0_darwin_arm64.zip",
+          "shasum": "3a80fde6d669cdd864f295e06e5ad04d2ff0432e2d5cb88fe57c70b17ba07558"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.3.0_freebsd_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.0/terraform-provider-jira_0.3.0_freebsd_386.zip",
+          "shasum": "ab54e2cb63b290d76d529e128fa0535f5273fed60edf13741309ac835e943a6c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.3.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.0/terraform-provider-jira_0.3.0_freebsd_amd64.zip",
+          "shasum": "47557bdbc4ef3e45a000432ce3710b1d0e3fb07d6caa0a507c46da0341f8e8ce"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.3.0_freebsd_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.0/terraform-provider-jira_0.3.0_freebsd_arm.zip",
+          "shasum": "085cd72d0bc1032859b803a374e82547d49e4ab90fb34abcc7915735e855ac75"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.3.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.0/terraform-provider-jira_0.3.0_freebsd_arm64.zip",
+          "shasum": "76dad82b7909ad01e27f7d852cbbbd1b7ca3893815abcf173b1debf9f4bd9b5c"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.3.0_linux_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.0/terraform-provider-jira_0.3.0_linux_386.zip",
+          "shasum": "6542dee6aa98e60d40d18a320600480626955fbb6b97f80d3d0f25962f04bef0"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.3.0_linux_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.0/terraform-provider-jira_0.3.0_linux_amd64.zip",
+          "shasum": "8897d1bc8218a2095c6629b47a647580483ee9521450d1066c7ef0dd52da0e82"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.3.0_linux_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.0/terraform-provider-jira_0.3.0_linux_arm.zip",
+          "shasum": "61beb471cc0b11c4680208994e94ad19385fca8e756a6045ba9b24002b3cf43a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.3.0_linux_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.0/terraform-provider-jira_0.3.0_linux_arm64.zip",
+          "shasum": "18e02011f8909b13ed9aadef12d6230ce44c99c8fbe728ce7c6e905bee9fe166"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.3.0_windows_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.0/terraform-provider-jira_0.3.0_windows_386.zip",
+          "shasum": "04174a3f42291c96c60b0c5726bf36e62cf5f3f259b77753c0846b4fa5333a0b"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.3.0_windows_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.0/terraform-provider-jira_0.3.0_windows_amd64.zip",
+          "shasum": "1f3baf9b9dd682ce7aeb0c8032508e18bfafe79a172af6576381f3c93f15bcf7"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.3.0_windows_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.3.0/terraform-provider-jira_0.3.0_windows_arm.zip",
+          "shasum": "946c17810e20751cf93c5401bff9218184fbe8feacb356bb561207f3781edc0d"
+        }
+      ]
+    },
+    {
+      "version": "0.2.5",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.5/terraform-provider-jira_0.2.5_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.5/terraform-provider-jira_0.2.5_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.2.5_darwin_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.5/terraform-provider-jira_0.2.5_darwin_amd64.zip",
+          "shasum": "c81f80a6a7a05507c4924a58af58fbbb7069f169a705d69f9ba0100ee6a161d5"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.2.5_darwin_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.5/terraform-provider-jira_0.2.5_darwin_arm64.zip",
+          "shasum": "cd319ca9c1b5bf71b6b4b283b4f57451fa3ce356e3158e09f2151f53bf0fe078"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.2.5_freebsd_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.5/terraform-provider-jira_0.2.5_freebsd_386.zip",
+          "shasum": "ac171a90914a7ac969f0bf0d86d3f33b72a344a6db35c88bd4a3fcbf085f08dd"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.2.5_freebsd_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.5/terraform-provider-jira_0.2.5_freebsd_amd64.zip",
+          "shasum": "ebb47f9d53532b95c6cc0689c6ddb01a39459ec3031d672b4fb8772f9c5ba479"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.2.5_freebsd_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.5/terraform-provider-jira_0.2.5_freebsd_arm.zip",
+          "shasum": "f22d8d82f3b0af024a83a61b2888120859eb00ad94f66c3f8418588e8e1a94ec"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.2.5_freebsd_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.5/terraform-provider-jira_0.2.5_freebsd_arm64.zip",
+          "shasum": "5c7efdab51d1cfa1df78a3b3d06b7512cab857ce538db24d7a1bb16b3ace390a"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.2.5_linux_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.5/terraform-provider-jira_0.2.5_linux_386.zip",
+          "shasum": "386fd044a8e777d566ac4ee9fe5c7d91b513ded9cbcd3647b713f02173e83ea5"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.2.5_linux_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.5/terraform-provider-jira_0.2.5_linux_amd64.zip",
+          "shasum": "630b281c28799f9ea27b25c1d6a4e1bbf984a1936f9751f3fd4da61e66523615"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.2.5_linux_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.5/terraform-provider-jira_0.2.5_linux_arm.zip",
+          "shasum": "a6680a8e9940d4e89d68dc78268cf0b675bf96cc7a6e4614a788ca67ceac0b27"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.2.5_linux_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.5/terraform-provider-jira_0.2.5_linux_arm64.zip",
+          "shasum": "f74fbb382a83c6577eb234dd442d30d074e617b1d3d5d6d1e88383f10cd8634c"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.2.5_windows_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.5/terraform-provider-jira_0.2.5_windows_386.zip",
+          "shasum": "a2e279ba7140e10a05d10b6c48c4d9082ce040df5ba624d8501fe1bc5a9f805b"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.2.5_windows_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.5/terraform-provider-jira_0.2.5_windows_amd64.zip",
+          "shasum": "fae6efa177cd81391adfc4b7caafb8760d71d5f04a7b9ff5b5e5d0882febaf70"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.2.5_windows_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.5/terraform-provider-jira_0.2.5_windows_arm.zip",
+          "shasum": "d481434fcf2f9ea17ebeb5df64bc69b00e0de6363102bcc73c1cf23108b6ee11"
+        }
+      ]
+    },
+    {
+      "version": "0.2.4",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.4/terraform-provider-jira_0.2.4_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.4/terraform-provider-jira_0.2.4_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.2.4_darwin_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.4/terraform-provider-jira_0.2.4_darwin_amd64.zip",
+          "shasum": "9d404a8b08616f6b4b81bc82e5e48491e04bdae3e91f99004cdcb13ed6dd9006"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.2.4_darwin_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.4/terraform-provider-jira_0.2.4_darwin_arm64.zip",
+          "shasum": "33640aeba105f4062b9f021a5ed772186b4b9ff7b5fe286ec76750fa642ee698"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.2.4_freebsd_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.4/terraform-provider-jira_0.2.4_freebsd_386.zip",
+          "shasum": "456c84e9639d6ebe03bcde4373fc96e9d65f30b9e1c5b3d66896e09093d1428d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.2.4_freebsd_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.4/terraform-provider-jira_0.2.4_freebsd_amd64.zip",
+          "shasum": "cbac241c02b8c9a8f985ce6fa8aad3079aeb082f95e9ee96108c0a724e8b80c2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.2.4_freebsd_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.4/terraform-provider-jira_0.2.4_freebsd_arm.zip",
+          "shasum": "46421a0944b41ccb193247adc256df161ba2025013492c7258992f8abf4d3d10"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.2.4_freebsd_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.4/terraform-provider-jira_0.2.4_freebsd_arm64.zip",
+          "shasum": "cb95984607a674a51514a52ef107464a2c08b93f63b0003c5bc9944f4bf5a4e4"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.2.4_linux_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.4/terraform-provider-jira_0.2.4_linux_386.zip",
+          "shasum": "a35fca792e3dc1e283d1a7d822b580eb31f2dc235913523f7d9054abf7635b63"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.2.4_linux_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.4/terraform-provider-jira_0.2.4_linux_amd64.zip",
+          "shasum": "bdcdb074b01eee1961133e132f21a4c254016fdb4fb03a73faf556d4059d8d53"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.2.4_linux_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.4/terraform-provider-jira_0.2.4_linux_arm.zip",
+          "shasum": "a5ed404b3c91f0e512582949702e8d9f8a25301816f5e704a68ec32a38f1746b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.2.4_linux_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.4/terraform-provider-jira_0.2.4_linux_arm64.zip",
+          "shasum": "936df4085ea91ecc38f9cac94eb657180a39f58a0cf89a1207e89a8f911ba94d"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.2.4_windows_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.4/terraform-provider-jira_0.2.4_windows_386.zip",
+          "shasum": "b1fbcf820517f7830f8df4b286b8e7e11d9ca4e24bb5db0673cb0fdb15104551"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.2.4_windows_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.4/terraform-provider-jira_0.2.4_windows_amd64.zip",
+          "shasum": "d3f0898ef736b751826329c0a42fb4504c3d39d33bb289d93703cd698745e7a4"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.2.4_windows_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.4/terraform-provider-jira_0.2.4_windows_arm.zip",
+          "shasum": "40d0f53aaf2a2c77de07227d967613a7a3f508688ce142d2e1e4d45c19ad842b"
+        }
+      ]
+    },
+    {
+      "version": "0.2.3",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.3/terraform-provider-jira_0.2.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.3/terraform-provider-jira_0.2.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.2.3_darwin_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.3/terraform-provider-jira_0.2.3_darwin_amd64.zip",
+          "shasum": "65d6aa7d0dbacdd1cca744e59c180f5d37cb7b9cdf0972136d002d76c52d771c"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.2.3_darwin_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.3/terraform-provider-jira_0.2.3_darwin_arm64.zip",
+          "shasum": "0495089125a1e727a73d13123432be0d42be9f0422da7bc88e08015bfbc53cd8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.2.3_freebsd_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.3/terraform-provider-jira_0.2.3_freebsd_386.zip",
+          "shasum": "575c480483d9a6c1c23153a931fbf2abbe1ed80085c3256f9e00bf8a3ea78c95"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.2.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.3/terraform-provider-jira_0.2.3_freebsd_amd64.zip",
+          "shasum": "f0b55e84f35344324beb65121f89450a78e2a9ad6d19b555675b1e174ebcb141"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.2.3_freebsd_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.3/terraform-provider-jira_0.2.3_freebsd_arm.zip",
+          "shasum": "681ad5640c360bb170e0d71d4242b4e5f02141b2c0fe5d2c0ba3c69259c33b2a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.2.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.3/terraform-provider-jira_0.2.3_freebsd_arm64.zip",
+          "shasum": "ea568575f47495a3dc969726b769132225e3bfe0786c9d6695781e4db4000089"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.2.3_linux_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.3/terraform-provider-jira_0.2.3_linux_386.zip",
+          "shasum": "70a8b2c46895b18fb2c0284a6dd71cf7169ca5ee491b2a62e7ca959500833e0e"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.2.3_linux_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.3/terraform-provider-jira_0.2.3_linux_amd64.zip",
+          "shasum": "7200590fb744deacde61daafff5b2dfe2fc83eb4335d0382f79fbabdec94b9bc"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.2.3_linux_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.3/terraform-provider-jira_0.2.3_linux_arm.zip",
+          "shasum": "711a0eff81081e3ee28cfa427eeb92c3491a4aee82b2cbfb4f1ab0de617d58ca"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.2.3_linux_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.3/terraform-provider-jira_0.2.3_linux_arm64.zip",
+          "shasum": "42b9d5f75ea6d8944cdb510aad71634fed0ca155eaa32912383bfda6112777f4"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.2.3_windows_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.3/terraform-provider-jira_0.2.3_windows_386.zip",
+          "shasum": "4dfbc77f355085b1ce689017a86c5a206711a5d099e499962b43ce37586f328a"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.2.3_windows_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.3/terraform-provider-jira_0.2.3_windows_amd64.zip",
+          "shasum": "2e58b50a5259464f93f6459b28fa09ee855c4256991e3d08d9c348d34d6a104e"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.2.3_windows_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.3/terraform-provider-jira_0.2.3_windows_arm.zip",
+          "shasum": "e4fc3b3c4601fea92420fd256e471973441d7b2c81e2f8a4e125b929190b5ca8"
+        }
+      ]
+    },
+    {
+      "version": "0.2.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.2/terraform-provider-jira_0.2.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.2/terraform-provider-jira_0.2.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.2.2_darwin_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.2/terraform-provider-jira_0.2.2_darwin_amd64.zip",
+          "shasum": "3b8538d8f70b78ffa60ae68d10e8e32ff4e94dea0c2b2dbbdbcda3713f8bdb49"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.2.2_darwin_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.2/terraform-provider-jira_0.2.2_darwin_arm64.zip",
+          "shasum": "8b4b5087f1d967896e8bb6ea72a66f70352e4329de5c8144a6361cbb6fa963c7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.2.2_freebsd_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.2/terraform-provider-jira_0.2.2_freebsd_386.zip",
+          "shasum": "2071c22ca6417860dd7aa6bed3435e873d2e3732d182ce63c93d1981c4fb2e87"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.2.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.2/terraform-provider-jira_0.2.2_freebsd_amd64.zip",
+          "shasum": "1d889d434ee9b9b876a28d28a2867109f86bf815c64f48f77eb11e339a134e25"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.2.2_freebsd_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.2/terraform-provider-jira_0.2.2_freebsd_arm.zip",
+          "shasum": "6d1bff6057a6c5d8e6800f86c2ef00fe555c85f4e9dc25100b54fd432c3338e9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.2.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.2/terraform-provider-jira_0.2.2_freebsd_arm64.zip",
+          "shasum": "7d0760dcb64da38d0f3752018dccac14ba2d12883793ade685a9886cad5a7615"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.2.2_linux_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.2/terraform-provider-jira_0.2.2_linux_386.zip",
+          "shasum": "d64941b7e110257b9648603aacb892bca8043390ecc672c4faf7aac4f55310f3"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.2.2_linux_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.2/terraform-provider-jira_0.2.2_linux_amd64.zip",
+          "shasum": "de2ef1cee332ce95d5579ee0eaac36e23c767e3eb59aeb094e6f710e3118e452"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.2.2_linux_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.2/terraform-provider-jira_0.2.2_linux_arm.zip",
+          "shasum": "f9b346f1c7d43e56c48e835dcd36af90043d2795c4f871f86bd9a016c5404e89"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.2.2_linux_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.2/terraform-provider-jira_0.2.2_linux_arm64.zip",
+          "shasum": "a9064f1cd0e7a9ed8fd260c9199495f699d40851518676b38b2ff417d3946dab"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.2.2_windows_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.2/terraform-provider-jira_0.2.2_windows_386.zip",
+          "shasum": "f0190de0dc34ca5986b57d936c3bb60f9da048b62e8881fd5bb93133ba91d459"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.2.2_windows_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.2/terraform-provider-jira_0.2.2_windows_amd64.zip",
+          "shasum": "e5b3b514671ba29f9ab1270a28e6d0b26f001cf75f05278bf29f36367e547077"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.2.2_windows_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.2/terraform-provider-jira_0.2.2_windows_arm.zip",
+          "shasum": "3d3a242a14cddf1f5344f63d9109dfdb2717ce8928a50dff3e8100d027a49066"
+        }
+      ]
+    },
+    {
+      "version": "0.2.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.1/terraform-provider-jira_0.2.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.1/terraform-provider-jira_0.2.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.2.1_darwin_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.1/terraform-provider-jira_0.2.1_darwin_amd64.zip",
+          "shasum": "e39f55a037f1443786bf811be042a4c8582cec96f51a0914d7b9033804468376"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.2.1_darwin_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.1/terraform-provider-jira_0.2.1_darwin_arm64.zip",
+          "shasum": "f072f94b52b305ce79e69f14258e4a01d3d54240f9f742b54221770bdd6b3fff"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.2.1_freebsd_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.1/terraform-provider-jira_0.2.1_freebsd_386.zip",
+          "shasum": "06377cbaa6d3699dc37f3cc8ba78f43a4fdcc5f8559d14ec590ddc5ffc0368ce"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.2.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.1/terraform-provider-jira_0.2.1_freebsd_amd64.zip",
+          "shasum": "28aaa0c2ff3e55893daf154ed87862872161087bf7bd97bbfa88c133b2acd606"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.2.1_freebsd_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.1/terraform-provider-jira_0.2.1_freebsd_arm.zip",
+          "shasum": "6dfc8c1f28724b493b0fabaee1634f2987fd2b333c6cb394ba46201af862c222"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.2.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.1/terraform-provider-jira_0.2.1_freebsd_arm64.zip",
+          "shasum": "e6f592f933747d6d20d075a4e667059322cfe41ddd6b139f727adc93dfc2c49d"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.2.1_linux_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.1/terraform-provider-jira_0.2.1_linux_386.zip",
+          "shasum": "f2cf73d1d153ad4256e4263814276402a055f449a6d3d114ae0f7db4770e6281"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.2.1_linux_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.1/terraform-provider-jira_0.2.1_linux_amd64.zip",
+          "shasum": "92bd35c7b54ecf67b3058417fb7769e0836dd9a74fbf6a8631d4a554e5ef5172"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.2.1_linux_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.1/terraform-provider-jira_0.2.1_linux_arm.zip",
+          "shasum": "e2068b24fff9ed2be5951ad14a30fa3c99bbc517e986b50521dd4763830da6d7"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-jira_0.2.1_linux_arm64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.1/terraform-provider-jira_0.2.1_linux_arm64.zip",
+          "shasum": "be322f6b9bd77a3965cb107876e8cbdb1348cabda2ec5cff8ba6f908b0f70372"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-jira_0.2.1_windows_386.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.1/terraform-provider-jira_0.2.1_windows_386.zip",
+          "shasum": "ba3fd405fdcc19dc16179074459951eb24c6b921b2636d85aabef12021b47ad4"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-jira_0.2.1_windows_amd64.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.1/terraform-provider-jira_0.2.1_windows_amd64.zip",
+          "shasum": "51138af992eaa8ad83ed2cc846de9a209090947c5677dabd54daf94a07a5aa0b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-jira_0.2.1_windows_arm.zip",
+          "download_url": "https://github.com/manabie-com/terraform-provider-jira/releases/download/v0.2.1/terraform-provider-jira_0.2.1_windows_arm.zip",
+          "shasum": "ccf087ded65bd5f3557a8dd890907f9ed0897d3b53351369ad353455a9e54c1f"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,699 @@
+{
+  "versions": [
+    {
+      "version": "3.10.3",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.3/terraform-provider-okta_3.10.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.3/terraform-provider-okta_3.10.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.10.3_darwin_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.3/terraform-provider-okta_3.10.3_darwin_amd64.zip",
+          "shasum": "3e36dd4a84f2036666a764f3bd4a2a3f77906dbabb4509c6ae9d520d090d5829"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-okta_3.10.3_freebsd_386.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.3/terraform-provider-okta_3.10.3_freebsd_386.zip",
+          "shasum": "b338954e6775991cc5674b5d0ec17460c3e94d199ea34555677d00529808113c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.10.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.3/terraform-provider-okta_3.10.3_freebsd_amd64.zip",
+          "shasum": "6d9c6f6bafd7812e456bdbd7ee8b1067642a227b36b2dba79b8c9253d3f72942"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-okta_3.10.3_freebsd_arm.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.3/terraform-provider-okta_3.10.3_freebsd_arm.zip",
+          "shasum": "7f2330f325dd20dc8b2bbef64fe9c4175375484561825c708626a3ac1b20c021"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-okta_3.10.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.3/terraform-provider-okta_3.10.3_freebsd_arm64.zip",
+          "shasum": "82a16e0236bc2e4e6c80ff951bd35d2bc6324034fdfaa75b27b29797ef453c46"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-okta_3.10.3_linux_386.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.3/terraform-provider-okta_3.10.3_linux_386.zip",
+          "shasum": "343d04a19e8e8dbc36cf365d10f1c405c092aa05884fa207bb04e031d3fb4510"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.10.3_linux_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.3/terraform-provider-okta_3.10.3_linux_amd64.zip",
+          "shasum": "8775697bf8ce8c34c41cb055b0408fca4aa6dd2c5c7dd6d3880537bcc831f6be"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-okta_3.10.3_linux_arm.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.3/terraform-provider-okta_3.10.3_linux_arm.zip",
+          "shasum": "53a5d56d102d8534624dec5a8546c1ea9634d3d65366c6b3f8002a77a46138f8"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-okta_3.10.3_linux_arm64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.3/terraform-provider-okta_3.10.3_linux_arm64.zip",
+          "shasum": "c775ba46812c7ce501308075462f663aac6783fe283d1a636123ce2b9f9e709c"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-okta_3.10.3_windows_386.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.3/terraform-provider-okta_3.10.3_windows_386.zip",
+          "shasum": "f7d0b83c25080a4f848ca6947c191ebb6f7afc49fade848e51a80e67f65a0684"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.10.3_windows_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.3/terraform-provider-okta_3.10.3_windows_amd64.zip",
+          "shasum": "f8efbcd694f0b95e6a72dfa6e473a7daad9075148f0c7317b304d61fad6da0cd"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-okta_3.10.3_openbsd_386.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.3/terraform-provider-okta_3.10.3_openbsd_386.zip",
+          "shasum": "2952330de4d1404930233deef7ff2536868870a57157108d90a15377adfbffda"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.10.3_openbsd_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.3/terraform-provider-okta_3.10.3_openbsd_amd64.zip",
+          "shasum": "92e06c3e339622a8b41b9c451c915bd7f73ae31cbc095bfd1289f7b975f6100e"
+        },
+        {
+          "os": "solaris",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.10.3_solaris_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.3/terraform-provider-okta_3.10.3_solaris_amd64.zip",
+          "shasum": "beda27b5bf477c2bcdd141356622051e71ccd4ee5704240a5af28e8e11ae1e9c"
+        }
+      ]
+    },
+    {
+      "version": "3.10.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.2/terraform-provider-okta_3.10.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.2/terraform-provider-okta_3.10.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.10.2_darwin_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.2/terraform-provider-okta_3.10.2_darwin_amd64.zip",
+          "shasum": "3a7b698825e210aa7e2ddf3faab4bf644a78984583f4da39de37ccaa52979489"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-okta_3.10.2_freebsd_386.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.2/terraform-provider-okta_3.10.2_freebsd_386.zip",
+          "shasum": "484f98c720ee9c232876d11ca450d1fdfd32fca604f9e26f0be7916dfb03d7dd"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.10.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.2/terraform-provider-okta_3.10.2_freebsd_amd64.zip",
+          "shasum": "b6289116c1261a177fc38c2aef5fc705e88973080051713bf62cff6bd4c7ce9b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-okta_3.10.2_freebsd_arm.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.2/terraform-provider-okta_3.10.2_freebsd_arm.zip",
+          "shasum": "1a4af88b4aaa489331d084829cb42c39ca0c093731a483067615941b1dd27bee"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-okta_3.10.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.2/terraform-provider-okta_3.10.2_freebsd_arm64.zip",
+          "shasum": "d2ebbcb816269716177582a678c736ae7d1a7a448e89f95a9bc309a956593db2"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-okta_3.10.2_linux_386.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.2/terraform-provider-okta_3.10.2_linux_386.zip",
+          "shasum": "20042fc93e91411b4a98da0b92e4523f21caf112745614e35c37bec696b2cf8d"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.10.2_linux_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.2/terraform-provider-okta_3.10.2_linux_amd64.zip",
+          "shasum": "e684df02ac7c3ad48b8f34252a95039190d73a8578f1a5c86469db74ae8a0834"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-okta_3.10.2_linux_arm.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.2/terraform-provider-okta_3.10.2_linux_arm.zip",
+          "shasum": "b09a3371fa142469af1a78f0aa5ad421002b176ab6c0f94d33670b9ab0727b29"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-okta_3.10.2_linux_arm64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.2/terraform-provider-okta_3.10.2_linux_arm64.zip",
+          "shasum": "92fb86ddf29625bb8cd5e37bbfbc29057df086ce3721c9971df8f5db36cbca76"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-okta_3.10.2_windows_386.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.2/terraform-provider-okta_3.10.2_windows_386.zip",
+          "shasum": "88d8c1c4462931f899843ac60a17936c3a845b245bab6129e4e59301f6299914"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.10.2_windows_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.2/terraform-provider-okta_3.10.2_windows_amd64.zip",
+          "shasum": "0b6881872bc02b739986cebcb5bdb2d49900c4a7bf8621456900c3b8b354d09c"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-okta_3.10.2_openbsd_386.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.2/terraform-provider-okta_3.10.2_openbsd_386.zip",
+          "shasum": "c4086981a29161b05dcba56498ef723a27fe75a50c2e9f3c1d85e2864c8bacbe"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.10.2_openbsd_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.2/terraform-provider-okta_3.10.2_openbsd_amd64.zip",
+          "shasum": "e840396773ecc4750139e2ea7b436a667d73486922e9c8eba0af427820a82404"
+        },
+        {
+          "os": "solaris",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.10.2_solaris_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.2/terraform-provider-okta_3.10.2_solaris_amd64.zip",
+          "shasum": "7b8140836f6f0326b2337e9f48b8414c06beaa49fca191016d8d7763405d844c"
+        }
+      ]
+    },
+    {
+      "version": "3.10.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.1/terraform-provider-okta_3.10.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.1/terraform-provider-okta_3.10.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.10.1_darwin_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.1/terraform-provider-okta_3.10.1_darwin_amd64.zip",
+          "shasum": "558868a6bad08d41bed8373daa80e022ac8206f10100e12cf5e7c359626587ce"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-okta_3.10.1_freebsd_386.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.1/terraform-provider-okta_3.10.1_freebsd_386.zip",
+          "shasum": "8dd5180f260f3eff569c577b7228bad7c2c417f4c99dd7458bcd38810fd18333"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.10.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.1/terraform-provider-okta_3.10.1_freebsd_amd64.zip",
+          "shasum": "5aad2d2312e2d97fdf1ecb2106eb8336c8d39564ef3a5fcd2d197c42e2ea0929"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-okta_3.10.1_freebsd_arm.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.1/terraform-provider-okta_3.10.1_freebsd_arm.zip",
+          "shasum": "4381e07b926a12df78461bc4cddf32516e195cea7ef4d6ef6928316ce77eca05"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-okta_3.10.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.1/terraform-provider-okta_3.10.1_freebsd_arm64.zip",
+          "shasum": "3c96988d29edc1659f244cf88754e07b0f30674fda76130833d65abf5bf7d7bb"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-okta_3.10.1_linux_386.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.1/terraform-provider-okta_3.10.1_linux_386.zip",
+          "shasum": "9664e7532a3f8486ac799cd455d334b386ab673c43059294002591da6f91ee8e"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.10.1_linux_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.1/terraform-provider-okta_3.10.1_linux_amd64.zip",
+          "shasum": "764121d317e329e79e4bd10b80b14db5cbc1615e32e5efa9b7588015b15a2d67"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-okta_3.10.1_linux_arm.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.1/terraform-provider-okta_3.10.1_linux_arm.zip",
+          "shasum": "1cdcaf0d4b9997f9fd1fbd30d8b4ce3106b629371b071634c37d1c0982cda6a4"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-okta_3.10.1_linux_arm64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.1/terraform-provider-okta_3.10.1_linux_arm64.zip",
+          "shasum": "325c337424c8398cc49b9364605bb2399ee640a3ee92f476170a195554c6479c"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-okta_3.10.1_windows_386.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.1/terraform-provider-okta_3.10.1_windows_386.zip",
+          "shasum": "274d13cd3f2157ead9ef891a027fc481cba879189fda14935089bf8b09a532f8"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.10.1_windows_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.1/terraform-provider-okta_3.10.1_windows_amd64.zip",
+          "shasum": "90fadc0b71f2d593cbc47b8c63e6c11734317ab43ce1854d1dedb7a932d9c3d2"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-okta_3.10.1_openbsd_386.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.1/terraform-provider-okta_3.10.1_openbsd_386.zip",
+          "shasum": "f02eae9bba1f2a3c185058af75cadb8d8d17ac740f40ad60019569085f96443d"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.10.1_openbsd_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.1/terraform-provider-okta_3.10.1_openbsd_amd64.zip",
+          "shasum": "4a1b917f82c25f25d017c56e1b99927f75b640ed23945913b1846070a23deb78"
+        },
+        {
+          "os": "solaris",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.10.1_solaris_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.10.1/terraform-provider-okta_3.10.1_solaris_amd64.zip",
+          "shasum": "c90efc911f0b6003520e37436a9741b4fae3f5e331e398b3c588321d48b99ba7"
+        }
+      ]
+    },
+    {
+      "version": "3.7.5",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.7.5/terraform-provider-okta_3.7.5_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.7.5/terraform-provider-okta_3.7.5_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.7.5_darwin_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.7.5/terraform-provider-okta_3.7.5_darwin_amd64.zip",
+          "shasum": "e2a3541d3463d3198fbc9459c3d340db06778a9d9b36ee86378ce6410382cee0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-okta_3.7.5_freebsd_386.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.7.5/terraform-provider-okta_3.7.5_freebsd_386.zip",
+          "shasum": "4a4370775e46c00be9971ff6d3e0d026c6c35a06c0396110644bd7ec5d1de017"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.7.5_freebsd_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.7.5/terraform-provider-okta_3.7.5_freebsd_amd64.zip",
+          "shasum": "6a7c2ee94af9e6469f3262b2dad3b8c7c57e0cd1268c04d64c4bc6e59232365e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-okta_3.7.5_freebsd_arm.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.7.5/terraform-provider-okta_3.7.5_freebsd_arm.zip",
+          "shasum": "8ad87f7c4cc7196eb4171d09cb7f48292b7c6f77ceb67e38cf9784602603da9b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-okta_3.7.5_freebsd_arm64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.7.5/terraform-provider-okta_3.7.5_freebsd_arm64.zip",
+          "shasum": "d38a137c46b0ad41d28b30ae0c7172503894d178782a36b7a71da6a18fe6274b"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-okta_3.7.5_linux_386.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.7.5/terraform-provider-okta_3.7.5_linux_386.zip",
+          "shasum": "c611e616f05130b877c39f9dbb13dbc36b9a52b6e423d49accbfbaac1fb0174e"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.7.5_linux_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.7.5/terraform-provider-okta_3.7.5_linux_amd64.zip",
+          "shasum": "2df3aea5e45032ae483e8c692687d3c8895b0b37f7b501025e59a18256b20fa7"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-okta_3.7.5_linux_arm.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.7.5/terraform-provider-okta_3.7.5_linux_arm.zip",
+          "shasum": "b4a0be605bf3889dfc48e3303b0d88d70e98e098fe6bbc04937b6391baf8bda3"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-okta_3.7.5_linux_arm64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.7.5/terraform-provider-okta_3.7.5_linux_arm64.zip",
+          "shasum": "187a64994047d5598eff7fa44154b5a1f73a6e6ec97d58963b3a7e5015265902"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-okta_3.7.5_windows_386.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.7.5/terraform-provider-okta_3.7.5_windows_386.zip",
+          "shasum": "e1f958e6bb7541a111566d7c30c8de292018741d03c4f514f345757c87e4d7f1"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.7.5_windows_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.7.5/terraform-provider-okta_3.7.5_windows_amd64.zip",
+          "shasum": "13221c2f33cf81034e63ad7049f4fb4ff039a072f0d6be9442b68c415186bdba"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-okta_3.7.5_openbsd_386.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.7.5/terraform-provider-okta_3.7.5_openbsd_386.zip",
+          "shasum": "098ce7a78c9aaf0b68037c779ea4db54e8a2b31fc3178b6660c1dce8c72b440c"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.7.5_openbsd_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.7.5/terraform-provider-okta_3.7.5_openbsd_amd64.zip",
+          "shasum": "9094111f78ab51e3b3cf909d73693b277200c2eebb4e6102a451cdc12e5a56eb"
+        },
+        {
+          "os": "solaris",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.7.5_solaris_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.7.5/terraform-provider-okta_3.7.5_solaris_amd64.zip",
+          "shasum": "eda706e93092b39f3405faeb9aa256a92a282e05b23512eb81045af59010a8ed"
+        }
+      ]
+    },
+    {
+      "version": "3.7.4",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.7.4/terraform-provider-okta_3.7.4_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.7.4/terraform-provider-okta_3.7.4_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.7.4_darwin_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.7.4/terraform-provider-okta_3.7.4_darwin_amd64.zip",
+          "shasum": "3eb37d8fee0903ef4148762b3d53e573493f964c245cec63dc058ec08a15504d"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.7.4_linux_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.7.4/terraform-provider-okta_3.7.4_linux_amd64.zip",
+          "shasum": "f0e76730b36c7084271dfd2b56a94be1d3d44c222b03de071e6417d610517a5b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-okta_3.7.4_linux_arm64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.7.4/terraform-provider-okta_3.7.4_linux_arm64.zip",
+          "shasum": "5fad20df859dff45f600f64cca32ccd9f51c6cd1331873ff6e5efbe606639b96"
+        }
+      ]
+    },
+    {
+      "version": "3.7.4",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/3.7.4/terraform-provider-okta_3.7.4_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/3.7.4/terraform-provider-okta_3.7.4_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.7.4_darwin_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/3.7.4/terraform-provider-okta_3.7.4_darwin_amd64.zip",
+          "shasum": "3571b191bc642d085a279d3bb9548a0703d22caed022b2f956754fe21591683b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-okta_3.7.4_freebsd_386.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/3.7.4/terraform-provider-okta_3.7.4_freebsd_386.zip",
+          "shasum": "7e3e3ec76caf8ae6316bc0560e643bd9bacdb61dcd0e4da02eb7f7958636ce40"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.7.4_freebsd_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/3.7.4/terraform-provider-okta_3.7.4_freebsd_amd64.zip",
+          "shasum": "b7717b8a644b5500b3c1f91b3c482b6436dbb3bcafac0e51917c19fcbf7fc534"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-okta_3.7.4_freebsd_arm.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/3.7.4/terraform-provider-okta_3.7.4_freebsd_arm.zip",
+          "shasum": "ff377c5922ed0da79c017d743bca0c6ce69b3d4d894f0774f649c1ce83f2e6b3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-okta_3.7.4_freebsd_arm64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/3.7.4/terraform-provider-okta_3.7.4_freebsd_arm64.zip",
+          "shasum": "abac51463cf5851ba9b42578cf3f1993c70257835a5c37c6262a203fc403174d"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-okta_3.7.4_linux_386.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/3.7.4/terraform-provider-okta_3.7.4_linux_386.zip",
+          "shasum": "64568e4b0053a2218863560fb881228ce27a57edc935dd34812877ee2c2fb02d"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.7.4_linux_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/3.7.4/terraform-provider-okta_3.7.4_linux_amd64.zip",
+          "shasum": "9102b2ff950b740dd172dd4007895f1d8d670bf9bfe621b01cf1ea971b5f5078"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-okta_3.7.4_linux_arm.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/3.7.4/terraform-provider-okta_3.7.4_linux_arm.zip",
+          "shasum": "68f6ddd278c26e3ede2fa84ad11f62e06ffbf4ea5db16495936b70f93d0349e8"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-okta_3.7.4_linux_arm64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/3.7.4/terraform-provider-okta_3.7.4_linux_arm64.zip",
+          "shasum": "3e866c96a73c29acbda47ff017fd314199a98b09decbdaa2d471470debe1f1e8"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-okta_3.7.4_windows_386.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/3.7.4/terraform-provider-okta_3.7.4_windows_386.zip",
+          "shasum": "b406b9c687304e48966beecc3f8b6ef1db97efe8c2d69e6e88e684402f44750c"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.7.4_windows_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/3.7.4/terraform-provider-okta_3.7.4_windows_amd64.zip",
+          "shasum": "85b768060f009940613483e365be0da290a8f4efa9dfe89cb9bdd53cd2981b6f"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-okta_3.7.4_openbsd_386.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/3.7.4/terraform-provider-okta_3.7.4_openbsd_386.zip",
+          "shasum": "f6b0deed204412f53b6b7cf897bf4345fc8f98d046375f4ba6de28abb69a983a"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.7.4_openbsd_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/3.7.4/terraform-provider-okta_3.7.4_openbsd_amd64.zip",
+          "shasum": "165cc22ace8fcf17ea62cb862091b14f1c14b9e62928288427b1baf231a42519"
+        },
+        {
+          "os": "solaris",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.7.4_solaris_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/3.7.4/terraform-provider-okta_3.7.4_solaris_amd64.zip",
+          "shasum": "936969d7798f67847e11f6eefccd196f4def38493ef0353769cfde47c7f4f13f"
+        }
+      ]
+    },
+    {
+      "version": "3.6.3",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.6.3/terraform-provider-okta_3.6.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.6.3/terraform-provider-okta_3.6.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.6.3_darwin_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.6.3/terraform-provider-okta_3.6.3_darwin_amd64.zip",
+          "shasum": "e1ec9e64946614850af752c75f58aad871a3b8b28d226e685410961e92350b3b"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.6.3_linux_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.6.3/terraform-provider-okta_3.6.3_linux_amd64.zip",
+          "shasum": "f67478c03769f66a09644608f49d3289ebe9e78e387c38f62c23186d81c5c778"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-okta_3.6.3_linux_arm64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.6.3/terraform-provider-okta_3.6.3_linux_arm64.zip",
+          "shasum": "238b155d2237fa97963e13fef895722724f13dd8fe8b400531a19e54d9af525c"
+        }
+      ]
+    },
+    {
+      "version": "3.6.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.6.2/terraform-provider-okta_3.6.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.6.2/terraform-provider-okta_3.6.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.6.2_darwin_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.6.2/terraform-provider-okta_3.6.2_darwin_amd64.zip",
+          "shasum": "149a49aeb922658c334ec547e4be09b25302ebefcbdcf9d4b04e9e45172c9eb7"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.6.2_linux_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.6.2/terraform-provider-okta_3.6.2_linux_amd64.zip",
+          "shasum": "737115bac14d2e690e0dce54ae5c9982e5d6fb0240c15d736190d90e168dfbe4"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-okta_3.6.2_linux_arm64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.6.2/terraform-provider-okta_3.6.2_linux_arm64.zip",
+          "shasum": "9e1c7d47d5c2511362819a3ffb3f592b4a050fb80791739daa837eb7a70f5ad7"
+        }
+      ]
+    },
+    {
+      "version": "3.6.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.6.1/terraform-provider-okta_3.6.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.6.1/terraform-provider-okta_3.6.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.6.1_darwin_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.6.1/terraform-provider-okta_3.6.1_darwin_amd64.zip",
+          "shasum": "3efa95587b89fa4bed58bcfae8ea9fc7000c3f22022423d41467029c7f385014"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.6.1_linux_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.6.1/terraform-provider-okta_3.6.1_linux_amd64.zip",
+          "shasum": "89e915bfce89a06418f2a4d1230920293d0e17a669a33c1f960a68bbdbf129c4"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-okta_3.6.1_linux_arm64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.6.1/terraform-provider-okta_3.6.1_linux_arm64.zip",
+          "shasum": "a32b56a29f6da95ff7ccb98b492f1882c6ea9552667373893d54ea5c117f30e8"
+        }
+      ]
+    },
+    {
+      "version": "3.6.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.6.0/terraform-provider-okta_3.6.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.6.0/terraform-provider-okta_3.6.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.6.0_darwin_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.6.0/terraform-provider-okta_3.6.0_darwin_amd64.zip",
+          "shasum": "5bb8499661f2b3b3ec8f0416d0f379584a2f9e41437dcb3c0ff8cf6a21ddec75"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-okta_3.6.0_linux_amd64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.6.0/terraform-provider-okta_3.6.0_linux_amd64.zip",
+          "shasum": "d187f14059aff95ae5ba42a1af5fcdd9c3b76d734b780e7e93267fff059bb68a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-okta_3.6.0_linux_arm64.zip",
+          "download_url": "https://github.com/chanzuckerberg/terraform-provider-okta/releases/download/v3.6.0/terraform-provider-okta_3.6.0_linux_arm64.zip",
+          "shasum": "fa049afb40c61e9bdd082c6ed7776d90f686a298068defe1aea9952d92bc1210"
+        }
+      ]
+    }
+  ]
+}

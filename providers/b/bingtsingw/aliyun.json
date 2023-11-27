@@ -1,0 +1,958 @@
+{
+  "versions": [
+    {
+      "version": "0.10.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.10.0/terraform-provider-aliyun_0.10.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.10.0/terraform-provider-aliyun_0.10.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.10.0_darwin_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.10.0/terraform-provider-aliyun_0.10.0_darwin_amd64.zip",
+          "shasum": "34d2a85c13c290dce052d175f2d3d426af4e4439ea4475e271b44e65ea04ccc8"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-aliyun_0.10.0_darwin_arm64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.10.0/terraform-provider-aliyun_0.10.0_darwin_arm64.zip",
+          "shasum": "8b062e7e19155e17f68e132ff037254ba2c292f61e026ce4dfa5e6352d6631ea"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.10.0_freebsd_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.10.0/terraform-provider-aliyun_0.10.0_freebsd_386.zip",
+          "shasum": "0a6c53dfb46c50f24c745f909519f6c4dddc30352f88a3ae30cd200acd77c265"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.10.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.10.0/terraform-provider-aliyun_0.10.0_freebsd_amd64.zip",
+          "shasum": "3e98a1ee2517f6fac0f60e745b544ff2e7d7536108da9419b705ac658baec6ec"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.10.0_freebsd_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.10.0/terraform-provider-aliyun_0.10.0_freebsd_arm.zip",
+          "shasum": "d712a1ab3779d4e6918a1735f39ca014a8523fd7e75bf3891cdeebdb616a8604"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-aliyun_0.10.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.10.0/terraform-provider-aliyun_0.10.0_freebsd_arm64.zip",
+          "shasum": "9f23cfbff88452860f3a1982ae8cc9ae8aae7aa925ecf608196559eb27c38dae"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.10.0_linux_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.10.0/terraform-provider-aliyun_0.10.0_linux_386.zip",
+          "shasum": "e370132e3ee306110966140a308d1b2589b9a7f9908ae768cad6ac64cdb0e6c4"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.10.0_linux_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.10.0/terraform-provider-aliyun_0.10.0_linux_amd64.zip",
+          "shasum": "4e809edcaee4a3e8c41a4a99aa4b60df537bb986f22a1cc870a14cbeae8a585c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.10.0_linux_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.10.0/terraform-provider-aliyun_0.10.0_linux_arm.zip",
+          "shasum": "12380a4b312dfe59cdab401f3da35de8d5b880aa15e48e94ca46852375369536"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-aliyun_0.10.0_linux_arm64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.10.0/terraform-provider-aliyun_0.10.0_linux_arm64.zip",
+          "shasum": "631cbdfe6ea1762661740636aa8f930313535059fb17f2c0f50d9c150408d4ec"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.10.0_windows_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.10.0/terraform-provider-aliyun_0.10.0_windows_386.zip",
+          "shasum": "8004cb8df492e7dc512a19bfb12cfdbace2698b84fe9ea8387ba13660b8681b8"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.10.0_windows_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.10.0/terraform-provider-aliyun_0.10.0_windows_amd64.zip",
+          "shasum": "d5d2a006278c4798777fe6910527cb30d8345083936e2b15f3f45b8d6fa7d29d"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.10.0_windows_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.10.0/terraform-provider-aliyun_0.10.0_windows_arm.zip",
+          "shasum": "52fae7c38ecf201943aba8f7306d71f63643721b71c5040d2a89e17bbc5a7537"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-aliyun_0.10.0_windows_arm64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.10.0/terraform-provider-aliyun_0.10.0_windows_arm64.zip",
+          "shasum": "d57307b5750407925abea6f2bac329f66b23eefd84d313ee3f7a7c732de66829"
+        }
+      ]
+    },
+    {
+      "version": "0.7.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.7.0/terraform-provider-aliyun_0.7.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.7.0/terraform-provider-aliyun_0.7.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.7.0_darwin_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.7.0/terraform-provider-aliyun_0.7.0_darwin_amd64.zip",
+          "shasum": "0352d35345fa95d492261de1368d953bdea5b1e09174e0201fe71ff375db8987"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.7.0_freebsd_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.7.0/terraform-provider-aliyun_0.7.0_freebsd_386.zip",
+          "shasum": "6dc2272cdf79b5da2542e308e7a74f2435f157a9e46c719cb95eefdafa47421d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.7.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.7.0/terraform-provider-aliyun_0.7.0_freebsd_amd64.zip",
+          "shasum": "e33d164f80a79ad8332f0d845781121bab5cae6dc1ac3c491018c28f3515a105"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.7.0_freebsd_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.7.0/terraform-provider-aliyun_0.7.0_freebsd_arm.zip",
+          "shasum": "3afa16387d1828e1e26c9ea6311f1bfcb1068b64c420a40185ee251eef851a16"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-aliyun_0.7.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.7.0/terraform-provider-aliyun_0.7.0_freebsd_arm64.zip",
+          "shasum": "4b23f287f01cda4b14821e659027f075e589362cd593ca7fa20230b37bb6ca96"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.7.0_linux_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.7.0/terraform-provider-aliyun_0.7.0_linux_386.zip",
+          "shasum": "13d458b6111b4a88c899bb7137b4ed6bff520506efc28efd5a8aa0da4cf960f0"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.7.0_linux_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.7.0/terraform-provider-aliyun_0.7.0_linux_amd64.zip",
+          "shasum": "0a00f5c05fda90b46d76a3777e77e559e6df5b66823970d23518f835118babd1"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.7.0_linux_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.7.0/terraform-provider-aliyun_0.7.0_linux_arm.zip",
+          "shasum": "95f2a82a6c635a47653ff8414ea6fdedbe315a4fcbf8070d9ab7ee7fef558196"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-aliyun_0.7.0_linux_arm64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.7.0/terraform-provider-aliyun_0.7.0_linux_arm64.zip",
+          "shasum": "e51379c454db1f98ac9b64f93a2fd6eb8a494a11dbfb9556ab8677d2f7a9f512"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.7.0_windows_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.7.0/terraform-provider-aliyun_0.7.0_windows_386.zip",
+          "shasum": "02e3df1cfeced97c3d0e466af4f048914124a11904f84e4f11ca0ed3f8e6d385"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.7.0_windows_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.7.0/terraform-provider-aliyun_0.7.0_windows_amd64.zip",
+          "shasum": "c39fdae18cfb1d51f8fda4a2849c9fbd9cf29ec21743e3ecb087571b4f1d2e8e"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.7.0_windows_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.7.0/terraform-provider-aliyun_0.7.0_windows_arm.zip",
+          "shasum": "5886726c47b6d8481b506ade4f3e55a94ef80e0a3a772c1c17ecdb29c632307b"
+        }
+      ]
+    },
+    {
+      "version": "0.6.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.6.0/terraform-provider-aliyun_0.6.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.6.0/terraform-provider-aliyun_0.6.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.6.0_darwin_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.6.0/terraform-provider-aliyun_0.6.0_darwin_amd64.zip",
+          "shasum": "7e93ea6a2a84683b2dc6a428c80c058391a3f88eed901186ad26a1258a9f30c7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.6.0_freebsd_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.6.0/terraform-provider-aliyun_0.6.0_freebsd_386.zip",
+          "shasum": "2380fbef137a5fa8681bb85f94cd47c4721a870b367838de2172db3b1f508516"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.6.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.6.0/terraform-provider-aliyun_0.6.0_freebsd_amd64.zip",
+          "shasum": "9669133b833f81f8956ad553fdc5ba893f456a309d27ba2f3e5a8775b19edb05"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.6.0_freebsd_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.6.0/terraform-provider-aliyun_0.6.0_freebsd_arm.zip",
+          "shasum": "d1b069be63505eaea1176cf0a3200d44d0247f3dfdf47bdce85b94b97cab14c0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-aliyun_0.6.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.6.0/terraform-provider-aliyun_0.6.0_freebsd_arm64.zip",
+          "shasum": "a43cc5e0c22eeaa2aa286d6bec0e4bf646078027f9258143a9f9b3ef333d46ad"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.6.0_linux_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.6.0/terraform-provider-aliyun_0.6.0_linux_386.zip",
+          "shasum": "a63106f296db653efad5ccf3c4b443c9cac5b2ac45f0ca47c85bfc810d8a1455"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.6.0_linux_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.6.0/terraform-provider-aliyun_0.6.0_linux_amd64.zip",
+          "shasum": "c33a508e550c20d9b1692e9fad071ceb3c920872f22d18ab12a81e8d67dd451a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.6.0_linux_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.6.0/terraform-provider-aliyun_0.6.0_linux_arm.zip",
+          "shasum": "6c1ca7edf53eee8292818c96bd179aa20ac75523cae97ab0b0d72606d33bd4a3"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-aliyun_0.6.0_linux_arm64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.6.0/terraform-provider-aliyun_0.6.0_linux_arm64.zip",
+          "shasum": "2aef9ddad3de7efadd88f41032d1a9580069cc97288ec2356dee3208860e2ea0"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.6.0_windows_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.6.0/terraform-provider-aliyun_0.6.0_windows_386.zip",
+          "shasum": "e75739afefd40f7d142606e1b2479a514a5674838571557a405ee2eb9ea060a2"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.6.0_windows_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.6.0/terraform-provider-aliyun_0.6.0_windows_amd64.zip",
+          "shasum": "577750cc8ef82ebbe6d3ebaa66713da90b3fa0686b950c1d0738878a7211c6b8"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.6.0_windows_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.6.0/terraform-provider-aliyun_0.6.0_windows_arm.zip",
+          "shasum": "2599d7c810079621142ac7d9109f2727035ddbd0335c082430805e8bb1d58ae5"
+        }
+      ]
+    },
+    {
+      "version": "0.5.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.5.0/terraform-provider-aliyun_0.5.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.5.0/terraform-provider-aliyun_0.5.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.5.0_darwin_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.5.0/terraform-provider-aliyun_0.5.0_darwin_amd64.zip",
+          "shasum": "729b8bee5ea841373a19d98fe260a8be8f1a5eef3a36c1f1cb301f6cb3f87692"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.5.0_freebsd_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.5.0/terraform-provider-aliyun_0.5.0_freebsd_386.zip",
+          "shasum": "e6174e09e7adffa5a18210ad263bcfc462912302d321e17e7c40c21c4781748b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.5.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.5.0/terraform-provider-aliyun_0.5.0_freebsd_amd64.zip",
+          "shasum": "539a379bc15e2b2d8d7adfb95a16c44015ce9836bf310676fb90a274ef6cac1e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.5.0_freebsd_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.5.0/terraform-provider-aliyun_0.5.0_freebsd_arm.zip",
+          "shasum": "a321d8d322a59e7c4cef5fbb76d229d00613de9f36bee1682cea020b5b0456af"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-aliyun_0.5.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.5.0/terraform-provider-aliyun_0.5.0_freebsd_arm64.zip",
+          "shasum": "441ae6f1c20fd8328e77d16e668cfd609a1b223692d0c78829eabee1cdac42c9"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.5.0_linux_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.5.0/terraform-provider-aliyun_0.5.0_linux_386.zip",
+          "shasum": "effc5a3a673e1fcce79e18820faa1f03d503591c4e0fb72d4fda6f72e7c525c9"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.5.0_linux_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.5.0/terraform-provider-aliyun_0.5.0_linux_amd64.zip",
+          "shasum": "3f0d381c6b40290fea39c4d6797df06f9b903ded8cef0cba4f27a26ac9c3c626"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.5.0_linux_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.5.0/terraform-provider-aliyun_0.5.0_linux_arm.zip",
+          "shasum": "46aa487847ca64ae5d6cf20b273c2546062d3c13f0204b92b827e600fd475a41"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-aliyun_0.5.0_linux_arm64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.5.0/terraform-provider-aliyun_0.5.0_linux_arm64.zip",
+          "shasum": "9d42d696548d6db16726a07c9773705b4552a65cff10ef16a93d14f9d3e10717"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.5.0_windows_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.5.0/terraform-provider-aliyun_0.5.0_windows_386.zip",
+          "shasum": "47b1de49d208bfc15ef0b553bead3101b898b668440e3ac601d848e18dc0ed45"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.5.0_windows_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.5.0/terraform-provider-aliyun_0.5.0_windows_amd64.zip",
+          "shasum": "e466acf928f45d6ff623bc3c03d6d879322d19a753886499077950528142c557"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.5.0_windows_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.5.0/terraform-provider-aliyun_0.5.0_windows_arm.zip",
+          "shasum": "bb4a958872a0a3efe7a6183c2e38d0cc9aacbb6f7a4753b28e0233cae2df20cc"
+        }
+      ]
+    },
+    {
+      "version": "0.4.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.4.0/terraform-provider-aliyun_0.4.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.4.0/terraform-provider-aliyun_0.4.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.4.0_darwin_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.4.0/terraform-provider-aliyun_0.4.0_darwin_amd64.zip",
+          "shasum": "d4c854627a2485b1e0eeeac20779e03995811509fb0a7db25f42c4243249e965"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.4.0_freebsd_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.4.0/terraform-provider-aliyun_0.4.0_freebsd_386.zip",
+          "shasum": "3ae6b40d61d6e597cc472b74bdd2320930b43452ad7499ac73be6eda1913fd6b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.4.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.4.0/terraform-provider-aliyun_0.4.0_freebsd_amd64.zip",
+          "shasum": "48506da4773e39561ab20a3907f76c9a49bda076b72cf1d5955412a9e84a5fa9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.4.0_freebsd_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.4.0/terraform-provider-aliyun_0.4.0_freebsd_arm.zip",
+          "shasum": "9385fcd4a863e7b3af5269fdb9f7a2d17a72ed06e1dbb3100e5bc18edddb51e6"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-aliyun_0.4.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.4.0/terraform-provider-aliyun_0.4.0_freebsd_arm64.zip",
+          "shasum": "0ee872da8e451696af54977482d8b7d809cc0280ec04daa6adf385e088033bbc"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.4.0_linux_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.4.0/terraform-provider-aliyun_0.4.0_linux_386.zip",
+          "shasum": "d67cdbaa2ab720cdd0efbfd10b2c6dc13924e1219b6d70d9932da538f35a547a"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.4.0_linux_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.4.0/terraform-provider-aliyun_0.4.0_linux_amd64.zip",
+          "shasum": "b8df78dfd72fee9b273a480c8db6bcec0d553298b56aeff5ace504ea048d4a17"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.4.0_linux_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.4.0/terraform-provider-aliyun_0.4.0_linux_arm.zip",
+          "shasum": "0a72fd70aa7ca9eb74c6668052f7b21aa3882c58e99ad225385126563c69694f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-aliyun_0.4.0_linux_arm64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.4.0/terraform-provider-aliyun_0.4.0_linux_arm64.zip",
+          "shasum": "f6c8a867b2ff368c7fac8d0753ce97d4e56ea53d065c9fe3d3d1647d954bdac7"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.4.0_windows_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.4.0/terraform-provider-aliyun_0.4.0_windows_386.zip",
+          "shasum": "1be03577efede12166036163097e230518e678c64dc322391ae6738436572d82"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.4.0_windows_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.4.0/terraform-provider-aliyun_0.4.0_windows_amd64.zip",
+          "shasum": "8ca3470d3abbcad704021067c21dac0f315c854d6395bf7aeb6f0663323d566f"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.4.0_windows_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.4.0/terraform-provider-aliyun_0.4.0_windows_arm.zip",
+          "shasum": "7b85439e5113e37b0b7a91a37b3908367d178dbe2b233d63f97e625c11c703df"
+        }
+      ]
+    },
+    {
+      "version": "0.3.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.3.0/terraform-provider-aliyun_0.3.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.3.0/terraform-provider-aliyun_0.3.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.3.0_darwin_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.3.0/terraform-provider-aliyun_0.3.0_darwin_amd64.zip",
+          "shasum": "a87a44f9d0468e2d2968c1cd0435ec79b79c816caa13f612a98f8c727827e695"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.3.0_freebsd_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.3.0/terraform-provider-aliyun_0.3.0_freebsd_386.zip",
+          "shasum": "7f7f18ad2602b562517f3fed3dfe5f9ea26be3401a71b490a17cfc5a2a95f451"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.3.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.3.0/terraform-provider-aliyun_0.3.0_freebsd_amd64.zip",
+          "shasum": "89f49a15bf713832551458c6254b555586fdcd092a8db520256ca1c8b0288b3d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.3.0_freebsd_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.3.0/terraform-provider-aliyun_0.3.0_freebsd_arm.zip",
+          "shasum": "e593c558589a8cf47a8d053cdbdf421ef8641bd2843d4b5c4fd0529fe7cc160b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-aliyun_0.3.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.3.0/terraform-provider-aliyun_0.3.0_freebsd_arm64.zip",
+          "shasum": "d9637f8b7381b6680af6e3fd0389a83c7ea7f181cdfffb66345c46cd62cb935b"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.3.0_linux_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.3.0/terraform-provider-aliyun_0.3.0_linux_386.zip",
+          "shasum": "69e7f8c0efee4b7beec1b8714b2f8c2bb3f8bf10208493e072139374049e6bba"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.3.0_linux_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.3.0/terraform-provider-aliyun_0.3.0_linux_amd64.zip",
+          "shasum": "62021fda93ff9f07f5bca9b03be5351025af60602a473ad13734e32e6fae02af"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.3.0_linux_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.3.0/terraform-provider-aliyun_0.3.0_linux_arm.zip",
+          "shasum": "72476b52062f197dd978bdf320e2563860b66a5cff01fa666335ca519bb05db1"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-aliyun_0.3.0_linux_arm64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.3.0/terraform-provider-aliyun_0.3.0_linux_arm64.zip",
+          "shasum": "9e21187672ff13b96157058cb4c559f727396a8f0765ae0268b8c698d10b081a"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.3.0_windows_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.3.0/terraform-provider-aliyun_0.3.0_windows_386.zip",
+          "shasum": "113a0ce937ca1e30f87505d1e77bcd951c7f485996bd3689bcf1760fbf5258a2"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.3.0_windows_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.3.0/terraform-provider-aliyun_0.3.0_windows_amd64.zip",
+          "shasum": "acf0e78c42fed50f952fa7ae66f9b1731c456fefcffddd51438b08653ebd5f4e"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.3.0_windows_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.3.0/terraform-provider-aliyun_0.3.0_windows_arm.zip",
+          "shasum": "c4b19cd8d3b344f005202c8b0beed678a6baab35e347b3852dcb2b30d2143f48"
+        }
+      ]
+    },
+    {
+      "version": "0.2.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.2.0/terraform-provider-aliyun_0.2.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.2.0/terraform-provider-aliyun_0.2.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.2.0_darwin_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.2.0/terraform-provider-aliyun_0.2.0_darwin_amd64.zip",
+          "shasum": "185fe78a2f2db775cdac3c0996e69d30a63282c332ce9e369ea5074c587f6fb2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.2.0_freebsd_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.2.0/terraform-provider-aliyun_0.2.0_freebsd_386.zip",
+          "shasum": "46b065e6ed4aa297ab8d0322765bac8a7497c1e1f4bd89ae60f753761f4ebe5b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.2.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.2.0/terraform-provider-aliyun_0.2.0_freebsd_amd64.zip",
+          "shasum": "af67abc6ee3e67be8a3c9b3b5afdf59fc1695d75fa8c0fb65283d96409210e5b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.2.0_freebsd_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.2.0/terraform-provider-aliyun_0.2.0_freebsd_arm.zip",
+          "shasum": "1c3e68cf4935909c58795046ecefafdbc76b4862889b5280ffabad8f2fdb9f01"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-aliyun_0.2.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.2.0/terraform-provider-aliyun_0.2.0_freebsd_arm64.zip",
+          "shasum": "34cb0e3c2a10f2e5df358e0cb596c5a50c076d406c0d9f2f73fe87008ac64bc6"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.2.0_linux_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.2.0/terraform-provider-aliyun_0.2.0_linux_386.zip",
+          "shasum": "0e55a58e70a69795fef30c8be31459f0790167017eb38707ef6f68fbfa875cf7"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.2.0_linux_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.2.0/terraform-provider-aliyun_0.2.0_linux_amd64.zip",
+          "shasum": "54df7d9b39d23444b07964b00d864e9550a32f686ae102e63d15e9dd85ac5ebc"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.2.0_linux_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.2.0/terraform-provider-aliyun_0.2.0_linux_arm.zip",
+          "shasum": "944ef589113cd7c658ee1afeea78fa98fc9d2b80a0cf1f0c46cb01b19a7b1dac"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-aliyun_0.2.0_linux_arm64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.2.0/terraform-provider-aliyun_0.2.0_linux_arm64.zip",
+          "shasum": "1c77145e356045859f4d9ed7a0ed8165fa4b4d35cdf560f9d4bc657bc5f5cd21"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.2.0_windows_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.2.0/terraform-provider-aliyun_0.2.0_windows_386.zip",
+          "shasum": "2de923d9251e4be2593d9897a30886f44b4c5e03b6075126950001fbfe45b197"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.2.0_windows_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.2.0/terraform-provider-aliyun_0.2.0_windows_amd64.zip",
+          "shasum": "fe659ec34bf45556b8295460eb6db65acaeceab93d8650a3be233c30249a7f08"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.2.0_windows_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.2.0/terraform-provider-aliyun_0.2.0_windows_arm.zip",
+          "shasum": "4e52153e938f6ce7ceb58154ea9956ac6963a10fe48b0771b7ca56738586bb93"
+        }
+      ]
+    },
+    {
+      "version": "0.1.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.1/terraform-provider-aliyun_0.1.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.1/terraform-provider-aliyun_0.1.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.1.1_darwin_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.1/terraform-provider-aliyun_0.1.1_darwin_amd64.zip",
+          "shasum": "6f39a48bc71d447bf58871864edf83dff8cc49a43e1620efc3845d1531bd7890"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.1.1_freebsd_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.1/terraform-provider-aliyun_0.1.1_freebsd_386.zip",
+          "shasum": "b5c4b8ac025c188934bd7f8ef9878e2dd3cc184be89ff70fcc44722a5c767ba5"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.1.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.1/terraform-provider-aliyun_0.1.1_freebsd_amd64.zip",
+          "shasum": "47062ab524d542eabf50a7c118296530715f703f8fbef0c957aad76123df2c01"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.1.1_freebsd_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.1/terraform-provider-aliyun_0.1.1_freebsd_arm.zip",
+          "shasum": "316f9a7667b73c2571554ca1e82dac8bcab08a697ca5a71c3bf6194901e0a203"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-aliyun_0.1.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.1/terraform-provider-aliyun_0.1.1_freebsd_arm64.zip",
+          "shasum": "aca8c7025904547f67d028b3a4cca80da2c1a7aa57f16ed2691b981383780ead"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.1.1_linux_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.1/terraform-provider-aliyun_0.1.1_linux_386.zip",
+          "shasum": "3632e837832406b58707697be153c0d064c3d0f32d914a6dffb9c520f65398ec"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.1.1_linux_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.1/terraform-provider-aliyun_0.1.1_linux_amd64.zip",
+          "shasum": "375571cbaa73598d53fa8aed9ace2c11c19bf105e5899ad7ce4792b5d0b43cec"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.1.1_linux_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.1/terraform-provider-aliyun_0.1.1_linux_arm.zip",
+          "shasum": "b93e326ffaa7f19358a11283d3a3f9c6e93e2e29dae5861de7dad61488d1d486"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-aliyun_0.1.1_linux_arm64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.1/terraform-provider-aliyun_0.1.1_linux_arm64.zip",
+          "shasum": "6deafd1be953751485449feff67265565e2da203e5658d1da25514de2ae960df"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.1.1_windows_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.1/terraform-provider-aliyun_0.1.1_windows_386.zip",
+          "shasum": "95071000848ce73cc4699ccda19c76dce820e4e07a554bb2f957e21ccc5f63aa"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.1.1_windows_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.1/terraform-provider-aliyun_0.1.1_windows_amd64.zip",
+          "shasum": "a9f44f558454af3b61ef310fb0f6cbdfbe4992c8450f63c8574456196262a898"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.1.1_windows_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.1/terraform-provider-aliyun_0.1.1_windows_arm.zip",
+          "shasum": "021a861acc95bba0b0d742f7217010e464d3ad1e684b82a411d6b5fc8f4356ce"
+        }
+      ]
+    },
+    {
+      "version": "0.1.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.0/terraform-provider-aliyun_0.1.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.0/terraform-provider-aliyun_0.1.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.1.0_darwin_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.0/terraform-provider-aliyun_0.1.0_darwin_amd64.zip",
+          "shasum": "658a528a45df63129a4c98835659ff46f60724aed9bacfefedb984b8a141b0c7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.1.0_freebsd_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.0/terraform-provider-aliyun_0.1.0_freebsd_386.zip",
+          "shasum": "9649ad0ec86d148d07e06522013b3bf855b186ea9e2dfcd2550710e839fac5a1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.1.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.0/terraform-provider-aliyun_0.1.0_freebsd_amd64.zip",
+          "shasum": "0939ab83a29c1909717fc0468714bbdd86af8208f7f4338c336a095f6b060283"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.1.0_freebsd_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.0/terraform-provider-aliyun_0.1.0_freebsd_arm.zip",
+          "shasum": "95e4f2edd754cfd2dba3b5543bf08b4c2031f9d1605b71d29af15a430db043c9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-aliyun_0.1.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.0/terraform-provider-aliyun_0.1.0_freebsd_arm64.zip",
+          "shasum": "263ad7083669e891abdf8af16586008c20cff6bb3fecf872ecc61312e38fdf25"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.1.0_linux_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.0/terraform-provider-aliyun_0.1.0_linux_386.zip",
+          "shasum": "0c61607be857c10b54f6f042914679ca17410f2d2ba9139d1ea38e78edd99c45"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.1.0_linux_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.0/terraform-provider-aliyun_0.1.0_linux_amd64.zip",
+          "shasum": "b17bf107f036085976aa4f93570bdfbe94d08e23192e17b62fef2049d3f42607"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.1.0_linux_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.0/terraform-provider-aliyun_0.1.0_linux_arm.zip",
+          "shasum": "7c55f5032cedccf8f578c9c77ea0ad789c191eca7a930487382d2482afa51b15"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-aliyun_0.1.0_linux_arm64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.0/terraform-provider-aliyun_0.1.0_linux_arm64.zip",
+          "shasum": "c80fab042ef4883ca2b848a968ccba74c2f1e6fa1f7d67808cd8e22229331930"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.1.0_windows_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.0/terraform-provider-aliyun_0.1.0_windows_386.zip",
+          "shasum": "f291bd04aa210f85fe40cb9c1ab7bc418c7756352c7e3d7d3e2f613b0d4892f9"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.1.0_windows_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.0/terraform-provider-aliyun_0.1.0_windows_amd64.zip",
+          "shasum": "19a4c0e2bfaa9dfc7176103d733046e16c970ed7a8668607870acf4bb0fa648d"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.1.0_windows_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.1.0/terraform-provider-aliyun_0.1.0_windows_arm.zip",
+          "shasum": "72106a4c2b1ae6056372252f396b97e08a7bfcfcc483d04f93c25469ee89ffdf"
+        }
+      ]
+    },
+    {
+      "version": "0.0.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.0.1/terraform-provider-aliyun_0.0.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.0.1/terraform-provider-aliyun_0.0.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.0.1_darwin_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.0.1/terraform-provider-aliyun_0.0.1_darwin_amd64.zip",
+          "shasum": "6b92565fa927c493783d8d35522b0836c8de91b2330575606245c9a4b7f08e76"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.0.1_freebsd_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.0.1/terraform-provider-aliyun_0.0.1_freebsd_386.zip",
+          "shasum": "5b00f657103c6c46f56768c966a0937a4bca0a3304d4bc4055bd4b968988f939"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.0.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.0.1/terraform-provider-aliyun_0.0.1_freebsd_amd64.zip",
+          "shasum": "be2db8b9b32c9eb4722c25fc08fc204f887df5f651bc995aa64b31bedbd116fb"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.0.1_freebsd_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.0.1/terraform-provider-aliyun_0.0.1_freebsd_arm.zip",
+          "shasum": "ebfc5d33b015c1fd9e88ca718d661be9be468bf02965e297953a4e2d1fe2d32d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-aliyun_0.0.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.0.1/terraform-provider-aliyun_0.0.1_freebsd_arm64.zip",
+          "shasum": "38b20ebb242707ba1cc66d75818f8dc310948ffc0dc1a2a1ed0342284944163d"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.0.1_linux_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.0.1/terraform-provider-aliyun_0.0.1_linux_386.zip",
+          "shasum": "d5389e5da4362349307b9eb13c29ed0b10be757a8b0be5f16320e24f8b64e6c3"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.0.1_linux_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.0.1/terraform-provider-aliyun_0.0.1_linux_amd64.zip",
+          "shasum": "f21e44584dcc3332d11fb124d20fdb4ce5a2449f93fe1f74075fcc097aab25f5"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.0.1_linux_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.0.1/terraform-provider-aliyun_0.0.1_linux_arm.zip",
+          "shasum": "f669b96f1d1f533909faa33dc83c8222e35a8be8a9e23a2a867e62434f738749"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-aliyun_0.0.1_linux_arm64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.0.1/terraform-provider-aliyun_0.0.1_linux_arm64.zip",
+          "shasum": "c1becef302c98e73d56ccee469d06dd9928c16735e75ec4e8909b7fcd5473eca"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-aliyun_0.0.1_windows_386.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.0.1/terraform-provider-aliyun_0.0.1_windows_386.zip",
+          "shasum": "d1a52869dc4436028e6940a241c634d6981278f66abeee78cb9130f89c0f766d"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-aliyun_0.0.1_windows_amd64.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.0.1/terraform-provider-aliyun_0.0.1_windows_amd64.zip",
+          "shasum": "1f63bc305533dfa32db44aeb25a3b1e5d52e3217ec6a13b9fda5a40cd277e741"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-aliyun_0.0.1_windows_arm.zip",
+          "download_url": "https://github.com/bingtsingw/terraform-provider-aliyun/releases/download/v0.0.1/terraform-provider-aliyun_0.0.1_windows_arm.zip",
+          "shasum": "3181828e67f78d9c85d91601c160799ce3b72b57c6e8c2abb0a6f1cdf06e0476"
+        }
+      ]
+    }
+  ]
+}

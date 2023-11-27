@@ -1,0 +1,976 @@
+{
+  "versions": [
+    {
+      "version": "0.0.9",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.9/terraform-provider-elastic-siem_0.0.9_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.9/terraform-provider-elastic-siem_0.0.9_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.9_darwin_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.9/terraform-provider-elastic-siem_0.0.9_darwin_amd64.zip",
+          "shasum": "f57f638f1e1f1f0c47fb26d61a3be5c61ab183cefb2f8a42af749cddd13a76ee"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.9_darwin_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.9/terraform-provider-elastic-siem_0.0.9_darwin_arm64.zip",
+          "shasum": "40e1487e6ec5299652d05b585ac33c007cbee8bdd954017fb761f9354a66dccf"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.9_freebsd_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.9/terraform-provider-elastic-siem_0.0.9_freebsd_386.zip",
+          "shasum": "00edded95bb78a445eecd1ac37e4ff2f578dc6d3cc32bbf919969931e886df7f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.9_freebsd_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.9/terraform-provider-elastic-siem_0.0.9_freebsd_amd64.zip",
+          "shasum": "299d54c8b91463e3d61d28633bf7c0a4752590dff157ac944d04b28c1cf22ed7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.9_freebsd_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.9/terraform-provider-elastic-siem_0.0.9_freebsd_arm.zip",
+          "shasum": "0a022f1f2774dd9c2bde638c108682958f758aba9798e483fb19eb421bb257a3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.9_freebsd_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.9/terraform-provider-elastic-siem_0.0.9_freebsd_arm64.zip",
+          "shasum": "79504507aa957cad02f555f24b7ba29fdc1ceb85c2c295e589193d62bb34ddba"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.9_linux_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.9/terraform-provider-elastic-siem_0.0.9_linux_386.zip",
+          "shasum": "4f139500f357c4fc1f0563ff0398456cbf86244bede39dba5833532f4c007507"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.9_linux_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.9/terraform-provider-elastic-siem_0.0.9_linux_amd64.zip",
+          "shasum": "81984a3ef8e9578f36818c657c69690068f180e8ee00ddc99b456885f5670991"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.9_linux_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.9/terraform-provider-elastic-siem_0.0.9_linux_arm.zip",
+          "shasum": "7fb1d0f9633208f965bf85c50947609a6eb22d032f68f69ac9384bdb95c14391"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.9_linux_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.9/terraform-provider-elastic-siem_0.0.9_linux_arm64.zip",
+          "shasum": "51d40548d71dc6a9da923ed6c20899c42a264e7d24385de2b1bd498f8b010e47"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.9_windows_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.9/terraform-provider-elastic-siem_0.0.9_windows_386.zip",
+          "shasum": "06a0f6f387b7a38625f6652f4b8ef7a1f28f70b7458414f93f3c2e7323c32f8d"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.9_windows_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.9/terraform-provider-elastic-siem_0.0.9_windows_amd64.zip",
+          "shasum": "09dd2b35ce8b6fb4ecf4115c130e32308a07b18f758efbddd7da5b4c5848b844"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.9_windows_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.9/terraform-provider-elastic-siem_0.0.9_windows_arm.zip",
+          "shasum": "1022b30ebf772b295a24dc4bf89ccd9fb66440a304cc67727222a756e5e11736"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.9_windows_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.9/terraform-provider-elastic-siem_0.0.9_windows_arm64.zip",
+          "shasum": "dcd3ff005944e1991b8ae086eb65cd5721c5a7bc9d181cff91dcafa9251d20e5"
+        }
+      ]
+    },
+    {
+      "version": "0.0.8",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.8/terraform-provider-elastic-siem_0.0.8_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.8/terraform-provider-elastic-siem_0.0.8_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.8_darwin_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.8/terraform-provider-elastic-siem_0.0.8_darwin_amd64.zip",
+          "shasum": "4e7619520ab3290b504afdb5eeebf2753dbf65019ecf46e84d539c68458252f6"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.8_darwin_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.8/terraform-provider-elastic-siem_0.0.8_darwin_arm64.zip",
+          "shasum": "5998e0ced25b9a06358f91bd93da39758fc2f3693e67babe8edde98073c5772c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.8_freebsd_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.8/terraform-provider-elastic-siem_0.0.8_freebsd_386.zip",
+          "shasum": "ffdde3ab5c79f21cbb546ca7a9508435f00d06ca050a796fde766ced9c8d896c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.8_freebsd_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.8/terraform-provider-elastic-siem_0.0.8_freebsd_amd64.zip",
+          "shasum": "2b277aae93b91a7fe20864d2d2561019ae15e0534f30754e54b520d5e918275a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.8_freebsd_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.8/terraform-provider-elastic-siem_0.0.8_freebsd_arm.zip",
+          "shasum": "dea1444ae1e89608fdcd3b5319deabd6740a6673d9577c5f172fc6eb9b491ee9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.8_freebsd_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.8/terraform-provider-elastic-siem_0.0.8_freebsd_arm64.zip",
+          "shasum": "fd7d469a3483c6d83f44589f721fb39087cb9affe5b059812ca2b2bad3ef8d6b"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.8_linux_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.8/terraform-provider-elastic-siem_0.0.8_linux_386.zip",
+          "shasum": "7f8cced8ccf07c400d33f5e3f8c70e548cb42862f8f1af2cad4bdef7f5cf2a44"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.8_linux_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.8/terraform-provider-elastic-siem_0.0.8_linux_amd64.zip",
+          "shasum": "2040de876c4c14d9ab1dc0ef9344aed3f89c41a9c11f02745cd60cba0dd98860"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.8_linux_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.8/terraform-provider-elastic-siem_0.0.8_linux_arm.zip",
+          "shasum": "6cdf077a334f81902c6a96e02de5c88879c32c3f09bc8f448aecec3dfcb3b28a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.8_linux_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.8/terraform-provider-elastic-siem_0.0.8_linux_arm64.zip",
+          "shasum": "f4b1cb17022757e0dc9b51ae5d0968fd7bc4745a416e7ee38ade7a333ce3a850"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.8_windows_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.8/terraform-provider-elastic-siem_0.0.8_windows_386.zip",
+          "shasum": "427ac8e943473443f26c5ff64c2198fdac7ed67a3ac1403a7b6bd31cda106ca6"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.8_windows_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.8/terraform-provider-elastic-siem_0.0.8_windows_amd64.zip",
+          "shasum": "f408a809ac16c6c881a605d99dd542509a778d119b39037981d33d0496206af2"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.8_windows_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.8/terraform-provider-elastic-siem_0.0.8_windows_arm.zip",
+          "shasum": "b1de41bfc46c3ca979445778822356b0f00948ff79d129833d643c875d71288b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.8_windows_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.8/terraform-provider-elastic-siem_0.0.8_windows_arm64.zip",
+          "shasum": "c59c7934eb7a4aeaafb8ac75af599b7159452cfad21f671e7c794064931c5922"
+        }
+      ]
+    },
+    {
+      "version": "0.0.7",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.7/terraform-provider-elastic-siem_0.0.7_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.7/terraform-provider-elastic-siem_0.0.7_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.7_darwin_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.7/terraform-provider-elastic-siem_0.0.7_darwin_amd64.zip",
+          "shasum": "e5ec43d3955b406831bd155aa229636bbc6799b5985a5e786f097f6dcc63ede5"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.7_darwin_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.7/terraform-provider-elastic-siem_0.0.7_darwin_arm64.zip",
+          "shasum": "da30ed850447ab16ea9b966248eb6149728c5a138fe79ecb5c563e87091e7a68"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.7_freebsd_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.7/terraform-provider-elastic-siem_0.0.7_freebsd_386.zip",
+          "shasum": "055484b78e9d428e7a2f53124b49c8bfb29bd08d686f60f040f991b481c50b16"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.7_freebsd_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.7/terraform-provider-elastic-siem_0.0.7_freebsd_amd64.zip",
+          "shasum": "734c9d436d8738415b1ff1b8c7a880beb80ae2411a12b48ca1ea68859528afd5"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.7_freebsd_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.7/terraform-provider-elastic-siem_0.0.7_freebsd_arm.zip",
+          "shasum": "99e50cc92e113f65b00e9c4771e2a3320d722355a0692c19115bc71fc8fdf2ff"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.7_freebsd_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.7/terraform-provider-elastic-siem_0.0.7_freebsd_arm64.zip",
+          "shasum": "f99acde5f808fb09b5063a28d100866ced4fafa321c0e7240d23ef346c886fcd"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.7_linux_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.7/terraform-provider-elastic-siem_0.0.7_linux_386.zip",
+          "shasum": "49d44ed15974c9368c3b53f83f9022a46dddec8c1575cd8a2b4bb834fff650fe"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.7_linux_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.7/terraform-provider-elastic-siem_0.0.7_linux_amd64.zip",
+          "shasum": "8e1085c44b38e4955beaad3f783357fcc5c9d875f49489444f7e0dd85707de7f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.7_linux_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.7/terraform-provider-elastic-siem_0.0.7_linux_arm.zip",
+          "shasum": "be99334246df57b2e7ea9c460270e6b62ea3b43ad81eaf7a544a3e7016da03e8"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.7_linux_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.7/terraform-provider-elastic-siem_0.0.7_linux_arm64.zip",
+          "shasum": "13bc7f404a35b29127aa3d1afccca0c402298e815ca09b6ab3c7e48a26285710"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.7_windows_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.7/terraform-provider-elastic-siem_0.0.7_windows_386.zip",
+          "shasum": "62cd35d8c7e27e452afc869b4081f6359c669fca504839c01e81a083bea44502"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.7_windows_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.7/terraform-provider-elastic-siem_0.0.7_windows_amd64.zip",
+          "shasum": "2ec01232ce90881de3a9adb9d8f647ee50cdca688fb482204d39e4124611c25b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.7_windows_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.7/terraform-provider-elastic-siem_0.0.7_windows_arm.zip",
+          "shasum": "e99a7b1045a2d2ca37a5636c07d5640edb7a9a92271b374f98662f900adecc37"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.7_windows_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.7/terraform-provider-elastic-siem_0.0.7_windows_arm64.zip",
+          "shasum": "ad30e2eecbe6b7ab8baa4029608e2e56d1335d5e2489d8b066fe99b59dfd52eb"
+        }
+      ]
+    },
+    {
+      "version": "0.0.6",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.6/terraform-provider-elastic-siem_0.0.6_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.6/terraform-provider-elastic-siem_0.0.6_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.6_darwin_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.6/terraform-provider-elastic-siem_0.0.6_darwin_amd64.zip",
+          "shasum": "a877a6f8f1141bf519ced375adc427938fe6f74f4f479f134b7fa4411ae617e8"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.6_darwin_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.6/terraform-provider-elastic-siem_0.0.6_darwin_arm64.zip",
+          "shasum": "90caf07fd3123cf7c6cfc7f1797d592cdd07c95484e80bfca16dc61303c29c32"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.6_freebsd_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.6/terraform-provider-elastic-siem_0.0.6_freebsd_386.zip",
+          "shasum": "69c9a32f085e7976fc5ddbcb910dc001107a15a3f679bead43db4a2dc4ddb1e9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.6_freebsd_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.6/terraform-provider-elastic-siem_0.0.6_freebsd_amd64.zip",
+          "shasum": "0ffdbb0bc5a462bed354f6c075feef3ad8eba6e9bd954252ed3efd3e12a9d13b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.6_freebsd_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.6/terraform-provider-elastic-siem_0.0.6_freebsd_arm.zip",
+          "shasum": "6a4e3c904b9f88599cf062bb3a37752d61ae09994afa26ba4a392c707a00b519"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.6_freebsd_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.6/terraform-provider-elastic-siem_0.0.6_freebsd_arm64.zip",
+          "shasum": "7a6a28810ddba6af042928f2e97ca48f8eba193a91e80c58ecb3ef3dce6c9e7a"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.6_linux_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.6/terraform-provider-elastic-siem_0.0.6_linux_386.zip",
+          "shasum": "afe31ba924f0ccd2176e930294d7b318c32caa92455da7f28e2561d040f540f3"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.6_linux_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.6/terraform-provider-elastic-siem_0.0.6_linux_amd64.zip",
+          "shasum": "d2f87e3c44e498d23e96429f5927ca42d7062c022b5741edc980c4f9282c8002"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.6_linux_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.6/terraform-provider-elastic-siem_0.0.6_linux_arm.zip",
+          "shasum": "f27fbaa2fb2938c04f374ac0d2ae2cbfc4514f28c9320e7ac41841cf5ddf5b2a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.6_linux_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.6/terraform-provider-elastic-siem_0.0.6_linux_arm64.zip",
+          "shasum": "b995519bd4d1c5bfdb617d631461e55714bb1b72e40fffab8be4e81b289619be"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.6_windows_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.6/terraform-provider-elastic-siem_0.0.6_windows_386.zip",
+          "shasum": "a742bc86b38b2de06c5554448bac8b8a43d13ce020488b40d7f6767f0d8fd7a7"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.6_windows_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.6/terraform-provider-elastic-siem_0.0.6_windows_amd64.zip",
+          "shasum": "8c8cb5740318b4ca48f36f536f94c9a0ffcc109f9d38f6e396caf7f3bb8a27a7"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.6_windows_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.6/terraform-provider-elastic-siem_0.0.6_windows_arm.zip",
+          "shasum": "2439a2ca927cb0b55fb6acfbd1480bdcd1204850e5ca4280a5d7cfcfb858c09b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.6_windows_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.6/terraform-provider-elastic-siem_0.0.6_windows_arm64.zip",
+          "shasum": "9caa744876bf623f0f8a1ec7273ef1b8430ae4953b993ee60a712ead88b93069"
+        }
+      ]
+    },
+    {
+      "version": "0.0.5",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.5/terraform-provider-elastic-siem_0.0.5_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.5/terraform-provider-elastic-siem_0.0.5_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.5_darwin_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.5/terraform-provider-elastic-siem_0.0.5_darwin_amd64.zip",
+          "shasum": "6d931efc819e659bf013cfbaf708ba0fd306c2fba1ba76c5f7b2ef8e211b2181"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.5_darwin_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.5/terraform-provider-elastic-siem_0.0.5_darwin_arm64.zip",
+          "shasum": "0028a930cefb8615714dc031e9ee4a16b67b7383bfdb809e7f7235beb8144ce5"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.5_freebsd_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.5/terraform-provider-elastic-siem_0.0.5_freebsd_386.zip",
+          "shasum": "5d43f43c21b5ea87144628dde50b9f85cbd386ed4b5dee436485662443fb73ce"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.5_freebsd_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.5/terraform-provider-elastic-siem_0.0.5_freebsd_amd64.zip",
+          "shasum": "ed433fca389dba480571b14f5d55dbb4064989a31ce819dbc078823660dca543"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.5_freebsd_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.5/terraform-provider-elastic-siem_0.0.5_freebsd_arm.zip",
+          "shasum": "078c7855990cbacf890b9104efbd60fb0963fa323c9eaed8dd28bb2558bc6e3c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.5_freebsd_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.5/terraform-provider-elastic-siem_0.0.5_freebsd_arm64.zip",
+          "shasum": "3e9901aebc4b98cdbd43a89db485914e2d0c412e17e5bde5d75d83275e151483"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.5_linux_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.5/terraform-provider-elastic-siem_0.0.5_linux_386.zip",
+          "shasum": "f3f0729625c70f7aa452e95917119efa7214d94bdc605ebcf7e94bd63c2bb80b"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.5_linux_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.5/terraform-provider-elastic-siem_0.0.5_linux_amd64.zip",
+          "shasum": "04f92a95b0ea92fa8a67fb06e5a9f7ba6a220fa44f6ab689c323b9571f623898"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.5_linux_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.5/terraform-provider-elastic-siem_0.0.5_linux_arm.zip",
+          "shasum": "35184be1605096e9c7401518a90ca72a69e3bde3eaeebe94d1bd8bf8b57a3152"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.5_linux_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.5/terraform-provider-elastic-siem_0.0.5_linux_arm64.zip",
+          "shasum": "29d81ca4f8b16d2f0ebcf5065f7d628a96060dd79eaf649edbbaa789e765d4cd"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.5_windows_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.5/terraform-provider-elastic-siem_0.0.5_windows_386.zip",
+          "shasum": "e5c33451dc204bf8448294ccb52d6f7fe0578b2e055cde558f20c2841fe6839d"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.5_windows_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.5/terraform-provider-elastic-siem_0.0.5_windows_amd64.zip",
+          "shasum": "469c07f5b22d3b963ed80d83fa3f3f1caa2738f258e14db3e76b7c5411105e3c"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.5_windows_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.5/terraform-provider-elastic-siem_0.0.5_windows_arm.zip",
+          "shasum": "f9c623e7602d2311f568a84fef534b6eda550971f2274aa55216bbbe4c191cea"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.5_windows_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.5/terraform-provider-elastic-siem_0.0.5_windows_arm64.zip",
+          "shasum": "85cc4d51ade04bc4011f9df6619d2fcaa0a9d525827ba0547f4406618299321c"
+        }
+      ]
+    },
+    {
+      "version": "0.0.4",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.4/terraform-provider-elastic-siem_0.0.4_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.4/terraform-provider-elastic-siem_0.0.4_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.4_darwin_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.4/terraform-provider-elastic-siem_0.0.4_darwin_amd64.zip",
+          "shasum": "0860fc9006b678c192481d8556f64872cc4bc62889987713c3c3e43282f115fd"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.4_darwin_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.4/terraform-provider-elastic-siem_0.0.4_darwin_arm64.zip",
+          "shasum": "80dc7b3e532affc3d9e74c620f0064f97b41f7a0e40fd0e28a4bf893632c641e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.4_freebsd_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.4/terraform-provider-elastic-siem_0.0.4_freebsd_386.zip",
+          "shasum": "febbde2d30ab0a3060acc2d5a0716c47e86a80e6123ca6066a1d43c850bfa850"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.4_freebsd_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.4/terraform-provider-elastic-siem_0.0.4_freebsd_amd64.zip",
+          "shasum": "50754c5f24aa2caf4912b8df1581b4e2242dc36b165534809b57c81dd36d839c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.4_freebsd_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.4/terraform-provider-elastic-siem_0.0.4_freebsd_arm.zip",
+          "shasum": "d8d3c8d9c289bf9195ffc666e07ddf3a2099d7ac16dea6cfdbad132df90e5fdc"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.4_freebsd_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.4/terraform-provider-elastic-siem_0.0.4_freebsd_arm64.zip",
+          "shasum": "f9bf674f2e810825f2b192077aca66a77193b6eb1b0e144b722c6340b592f341"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.4_linux_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.4/terraform-provider-elastic-siem_0.0.4_linux_386.zip",
+          "shasum": "82c699bf54dcf5455bee891f76471862ccc35d1621c6973a67d1da7dc7e4a055"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.4_linux_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.4/terraform-provider-elastic-siem_0.0.4_linux_amd64.zip",
+          "shasum": "dec6f083074eaf4f6bad2278ab191381d700d40cabb16b22e7ac897f066abf1b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.4_linux_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.4/terraform-provider-elastic-siem_0.0.4_linux_arm.zip",
+          "shasum": "ec88dfd75d73f6c00d7b2acaf60f8b54b3df51e8acef600efbbfed1b6862e929"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.4_linux_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.4/terraform-provider-elastic-siem_0.0.4_linux_arm64.zip",
+          "shasum": "30217a1c8d64350851336d0efdca89a88b43a8db88232b3a5276b2276fd07306"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.4_windows_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.4/terraform-provider-elastic-siem_0.0.4_windows_386.zip",
+          "shasum": "e05a8a521b48206dd930d84441e2a76876b6343e9afe2145f51c337f1b2966ed"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.4_windows_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.4/terraform-provider-elastic-siem_0.0.4_windows_amd64.zip",
+          "shasum": "7a5659a45fbe9276d45d45f300007eee7f771405e98d0d971f9b51486e09217a"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.4_windows_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.4/terraform-provider-elastic-siem_0.0.4_windows_arm.zip",
+          "shasum": "8f540ef67a4b2b4e586f01152c684041cafb6e968b796f0537c61d64fee97643"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.4_windows_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.4/terraform-provider-elastic-siem_0.0.4_windows_arm64.zip",
+          "shasum": "7c913468b5a454ff7bdf8b379a4910e59979d7eceae9a840d1bc2412a0d29978"
+        }
+      ]
+    },
+    {
+      "version": "0.0.3",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.3/terraform-provider-elastic-siem_0.0.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.3/terraform-provider-elastic-siem_0.0.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.3_darwin_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.3/terraform-provider-elastic-siem_0.0.3_darwin_amd64.zip",
+          "shasum": "f97a260871d54ee06e57369502306a5c03547ed1f6e92e7f1952164195fa39bc"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.3_darwin_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.3/terraform-provider-elastic-siem_0.0.3_darwin_arm64.zip",
+          "shasum": "168fc5a83a40243998231e5db9b3645038b8ab2e96019cf9441701a579c9d5ef"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.3_freebsd_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.3/terraform-provider-elastic-siem_0.0.3_freebsd_386.zip",
+          "shasum": "334dced91cf29dfe45af6e5169d72f987ec7a671138c6a6e0af6f1d281618e81"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.3/terraform-provider-elastic-siem_0.0.3_freebsd_amd64.zip",
+          "shasum": "d967104065209a3e529b69455f28f886b18f21391be006e34dd5a428126ade3c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.3_freebsd_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.3/terraform-provider-elastic-siem_0.0.3_freebsd_arm.zip",
+          "shasum": "2b5f86bb13b8334326a65f07947dce09aa746267de39447c35368e4aa075d828"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.3/terraform-provider-elastic-siem_0.0.3_freebsd_arm64.zip",
+          "shasum": "f48de9ecc828fcb3579a67b0e449febe650eefebc4584b7715b6502e764a7fb3"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.3_linux_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.3/terraform-provider-elastic-siem_0.0.3_linux_386.zip",
+          "shasum": "a20c49695e7fbbba0c6e63baa08f28a49399caad61797762933de39a639207d9"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.3_linux_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.3/terraform-provider-elastic-siem_0.0.3_linux_amd64.zip",
+          "shasum": "d43ecfa421e41de560da2e22d686342efd407a3580faab605b0c571f8fde7f72"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.3_linux_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.3/terraform-provider-elastic-siem_0.0.3_linux_arm.zip",
+          "shasum": "f5cabd443d6e46b9a207a1f952fbf97d87e5aef56b1536e6cab5993fd6f7a28d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.3_linux_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.3/terraform-provider-elastic-siem_0.0.3_linux_arm64.zip",
+          "shasum": "705599b4cd704722222746ab95e031da511d41150ec0ecb3fdf7b5aee02a70cd"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.3_windows_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.3/terraform-provider-elastic-siem_0.0.3_windows_386.zip",
+          "shasum": "9b654730d2787475abfc879e4431608ab860a091b61e32d1f08758c94af54570"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.3_windows_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.3/terraform-provider-elastic-siem_0.0.3_windows_amd64.zip",
+          "shasum": "1dfd1bc97d8aafd383bd13b8659b25f5a436a59ea5e8b76b0b167f4b58b619aa"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.3_windows_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.3/terraform-provider-elastic-siem_0.0.3_windows_arm.zip",
+          "shasum": "65cff6154cfc2b3228c36aef1e8c350ac569ec437b14af0641275a6328a37730"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.3_windows_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.3/terraform-provider-elastic-siem_0.0.3_windows_arm64.zip",
+          "shasum": "90297d4754431b08e3b8f7db91b52a5f956efae0a0a2a6a2c79b348adac36707"
+        }
+      ]
+    },
+    {
+      "version": "0.0.2",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.2/terraform-provider-elastic-siem_0.0.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.2/terraform-provider-elastic-siem_0.0.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.2_darwin_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.2/terraform-provider-elastic-siem_0.0.2_darwin_amd64.zip",
+          "shasum": "b39c21bbffab0063acd9e5db36e1f0e6044df537b593d651e22e1c097c20071c"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.2_darwin_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.2/terraform-provider-elastic-siem_0.0.2_darwin_arm64.zip",
+          "shasum": "8fcc0c5a7e5981a0816f50ad4f8f4d49a802e333d4844ffe15ba285848f4b994"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.2_freebsd_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.2/terraform-provider-elastic-siem_0.0.2_freebsd_386.zip",
+          "shasum": "85e5b53b4faa51af2e331a22d7b790e1a3fd7a5de86322a33ee5470c89cdc2c6"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.2/terraform-provider-elastic-siem_0.0.2_freebsd_amd64.zip",
+          "shasum": "9d18f7af695287e2357f16228dc78a8c77e657edaf347018da7d8ced4d306419"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.2_freebsd_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.2/terraform-provider-elastic-siem_0.0.2_freebsd_arm.zip",
+          "shasum": "8e2de22e5fe1161ec83a83946edb48783c0050951081283e8fde37bf117af342"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.2/terraform-provider-elastic-siem_0.0.2_freebsd_arm64.zip",
+          "shasum": "6799e891e8dae89c5834f60146aa7bbb67d8673ea1dabbeac86c14dc48f29ee0"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.2_linux_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.2/terraform-provider-elastic-siem_0.0.2_linux_386.zip",
+          "shasum": "c0b2f2a8f62770080d623b165c75ba887b6ec934d191c0c5bf93082c6706c2c2"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.2_linux_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.2/terraform-provider-elastic-siem_0.0.2_linux_amd64.zip",
+          "shasum": "092521331f89959866319b09ebe94d82d0bf543bf3734a826fa9d518d9b34757"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.2_linux_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.2/terraform-provider-elastic-siem_0.0.2_linux_arm.zip",
+          "shasum": "7f9dd59f2966dd609101bfcc7df971983817c51c06ce8d37e36f7672b700f062"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.2_linux_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.2/terraform-provider-elastic-siem_0.0.2_linux_arm64.zip",
+          "shasum": "2c4cd9f1d2ad31a235e3e2bc74ea18a2c479eca5d44f346fb09057d4444aaa4a"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.2_windows_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.2/terraform-provider-elastic-siem_0.0.2_windows_386.zip",
+          "shasum": "8659c777793060bd82005152622467e7233b226c2cb94d17e6d164718fd909cb"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.2_windows_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.2/terraform-provider-elastic-siem_0.0.2_windows_amd64.zip",
+          "shasum": "f0ace4ec61345075102419b617d29fff2c12e6bbb904b084385f692a287e3683"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.2_windows_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.2/terraform-provider-elastic-siem_0.0.2_windows_arm.zip",
+          "shasum": "4922261065ce1edb762a70dab6432eef2386cc1fb483d92bbb55b4c3227867a7"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.2_windows_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.2/terraform-provider-elastic-siem_0.0.2_windows_arm64.zip",
+          "shasum": "dcf807e2e0539561ea71f44d4245f232fa600155303d485fe305b493f7db3b38"
+        }
+      ]
+    },
+    {
+      "version": "0.0.1",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.1/terraform-provider-elastic-siem_0.0.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.1/terraform-provider-elastic-siem_0.0.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.1_darwin_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.1/terraform-provider-elastic-siem_0.0.1_darwin_amd64.zip",
+          "shasum": "e785cf8104852db8872c11a99612de132d81dadbc8b8c94ecf47538d21a5a284"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.1_darwin_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.1/terraform-provider-elastic-siem_0.0.1_darwin_arm64.zip",
+          "shasum": "25766785325968b7fdba97c0331021e754864cbe344284280c4e8d4ebedccd78"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.1_freebsd_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.1/terraform-provider-elastic-siem_0.0.1_freebsd_386.zip",
+          "shasum": "3a6079ce8cb6c15f9754e170d962827783a5f0ae72c0f478a2e7e0198a74e630"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.1/terraform-provider-elastic-siem_0.0.1_freebsd_amd64.zip",
+          "shasum": "9ba28edd7f26fd09d3ddb9240d7caf4d541be02c327ba477844fe27b1e32b563"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.1_freebsd_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.1/terraform-provider-elastic-siem_0.0.1_freebsd_arm.zip",
+          "shasum": "ce3e1e7157be3a6335362aab5b84fbd189d3d381a5ea22b752f7732233666927"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.1/terraform-provider-elastic-siem_0.0.1_freebsd_arm64.zip",
+          "shasum": "c70f88bc760eeb41b0de7aab926e9a7b5a6bf5b8e3bd032240f2b42e7aad5c17"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.1_linux_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.1/terraform-provider-elastic-siem_0.0.1_linux_386.zip",
+          "shasum": "81f8591f432fa22f876758c69ed90b028ac6553bf98fc42d52ea08e36ef470c5"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.1_linux_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.1/terraform-provider-elastic-siem_0.0.1_linux_amd64.zip",
+          "shasum": "b97316fd5abb3a8f5eea45ee38996bffa5a38cb017a5470f84bbfd88cf00e68c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.1_linux_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.1/terraform-provider-elastic-siem_0.0.1_linux_arm.zip",
+          "shasum": "9c639d68de5bf660ae9e672f7e7ed7bff4998908e145a37011bf5c8d9c060fd8"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.1_linux_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.1/terraform-provider-elastic-siem_0.0.1_linux_arm64.zip",
+          "shasum": "87438896b5dd189a85e54ebdc6bd0cf1377bf96f30a0a7e793d21bd68fcf46f2"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-elastic-siem_0.0.1_windows_386.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.1/terraform-provider-elastic-siem_0.0.1_windows_386.zip",
+          "shasum": "3b539f1e8b31fd38848505666cb38a6d3623d9aadb13ddee75c6ecfe4d9a802d"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-elastic-siem_0.0.1_windows_amd64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.1/terraform-provider-elastic-siem_0.0.1_windows_amd64.zip",
+          "shasum": "6640c857b62522e13c95390805d177ac16fd129cbc75767e95cf78c5ae3ff0d9"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-elastic-siem_0.0.1_windows_arm.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.1/terraform-provider-elastic-siem_0.0.1_windows_arm.zip",
+          "shasum": "9a877a50490dd89b692733f160eb17d6ad6ffa79b7624dacea44b9514a078cab"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-elastic-siem_0.0.1_windows_arm64.zip",
+          "download_url": "https://github.com/fabiogermann/terraform-provider-elastic-siem/releases/download/v0.0.1/terraform-provider-elastic-siem_0.0.1_windows_arm64.zip",
+          "shasum": "792b902cdde9480dc81d64c5a10efdd34b362d120fa3c9bcd28a1864448b75f9"
+        }
+      ]
+    }
+  ]
+}

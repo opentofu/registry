@@ -1,0 +1,976 @@
+{
+  "versions": [
+    {
+      "version": "0.6.2",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.2/terraform-provider-azuredevops_0.6.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.2/terraform-provider-azuredevops_0.6.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.6.2_darwin_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.2/terraform-provider-azuredevops_0.6.2_darwin_amd64.zip",
+          "shasum": "f6563567c8eb52406923f8f850a70daab58da87017b17d641ce3548fe7095194"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.6.2_darwin_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.2/terraform-provider-azuredevops_0.6.2_darwin_arm64.zip",
+          "shasum": "4163d377e3a5579b974a3231897cff17e46c08f3c6bfdde1eaeebfaec4cdff4a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.6.2_freebsd_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.2/terraform-provider-azuredevops_0.6.2_freebsd_386.zip",
+          "shasum": "09abbf94fbe83b8c45ec58fad9a429a7407498a9c1c245ffedb5fedbb15782cd"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.6.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.2/terraform-provider-azuredevops_0.6.2_freebsd_amd64.zip",
+          "shasum": "8f4b18d4a6f829f71814daf4a95514275f61440ba6b729df4019561f8c0fdeb1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.6.2_freebsd_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.2/terraform-provider-azuredevops_0.6.2_freebsd_arm.zip",
+          "shasum": "93b0f783d6f9c4b9e2416f2879803574cfb93642ef6b76062cffd706f5db5e07"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.6.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.2/terraform-provider-azuredevops_0.6.2_freebsd_arm64.zip",
+          "shasum": "623445928f5cc6968e5dab89e505ada20d5948a94dc41f89ed5608b0931e3741"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.6.2_linux_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.2/terraform-provider-azuredevops_0.6.2_linux_386.zip",
+          "shasum": "f57f12bf625b14da835d68c668dd194f5bbb615202604a017ae35a7288321a26"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.6.2_linux_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.2/terraform-provider-azuredevops_0.6.2_linux_amd64.zip",
+          "shasum": "a465df24450daf65fc5f8545dbf0530985a3c08b8b8dc92f54799da7115d84cc"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.6.2_linux_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.2/terraform-provider-azuredevops_0.6.2_linux_arm.zip",
+          "shasum": "bd53dfd2797b7bb8d4ac06ccae42e4eb0512702c9c43d82877631dd35c0938c5"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.6.2_linux_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.2/terraform-provider-azuredevops_0.6.2_linux_arm64.zip",
+          "shasum": "abacbb19bf95af9e4b0c8fb2b4fb42a85dad03142a341576539278721fe7fb27"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.6.2_windows_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.2/terraform-provider-azuredevops_0.6.2_windows_386.zip",
+          "shasum": "8c52937d69b100d30790842f3ee9fd936a958b5b2d6b813634f7cbe6041d62c0"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.6.2_windows_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.2/terraform-provider-azuredevops_0.6.2_windows_amd64.zip",
+          "shasum": "9d1e866b0b755f9bc802529b93fbc3c97db24549913d43c3346b2be02465aa5a"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.6.2_windows_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.2/terraform-provider-azuredevops_0.6.2_windows_arm.zip",
+          "shasum": "1b0b7ca3e00603a33789824dcc6d50a1597556d3590fa58dfaf07a6c2831f4a9"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.6.2_windows_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.2/terraform-provider-azuredevops_0.6.2_windows_arm64.zip",
+          "shasum": "a091e1254c2fae8d124019025f9fd82f2ceb53e4514defffe228e06ff3cae1e6"
+        }
+      ]
+    },
+    {
+      "version": "0.6.1",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.1/terraform-provider-azuredevops_0.6.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.1/terraform-provider-azuredevops_0.6.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.6.1_darwin_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.1/terraform-provider-azuredevops_0.6.1_darwin_amd64.zip",
+          "shasum": "14d8973bdb5d6d8785a62248a809153e64830d003e2037b8e701c94301b5400a"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.6.1_darwin_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.1/terraform-provider-azuredevops_0.6.1_darwin_arm64.zip",
+          "shasum": "24ddd9f220f7f558bd58809ddd91c1957089da8427788abab7fa37c3c893880e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.6.1_freebsd_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.1/terraform-provider-azuredevops_0.6.1_freebsd_386.zip",
+          "shasum": "4d09dd9ac524e816b0c4b3102e556904edb528772c5319dafcd03ded4ad63978"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.6.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.1/terraform-provider-azuredevops_0.6.1_freebsd_amd64.zip",
+          "shasum": "3c4bb9c97347b79f00d7db7fc6464bb834b6c06146c4d6e199a081612408243c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.6.1_freebsd_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.1/terraform-provider-azuredevops_0.6.1_freebsd_arm.zip",
+          "shasum": "87198d28cea7dfd7f90e62f444f9704403db35b5abf885743a2bc5ebf57fba81"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.6.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.1/terraform-provider-azuredevops_0.6.1_freebsd_arm64.zip",
+          "shasum": "3f60a8d5e3f4d76ab26030d21ec68cc0439305c7c211ac9e8076a22f6add0ba7"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.6.1_linux_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.1/terraform-provider-azuredevops_0.6.1_linux_386.zip",
+          "shasum": "860bf15a6170d5732d072387077d30a628341baea8fb043a28ae52ccb227517d"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.6.1_linux_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.1/terraform-provider-azuredevops_0.6.1_linux_amd64.zip",
+          "shasum": "ee8fcbd9c2fc7c84889e24decd58615a0940fb27c3696266bf94e21c97c3d22b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.6.1_linux_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.1/terraform-provider-azuredevops_0.6.1_linux_arm.zip",
+          "shasum": "ca057e715c1e87f851317f1923da7e39fc6ddb9ecf15d037f5056f1b2b1aadea"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.6.1_linux_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.1/terraform-provider-azuredevops_0.6.1_linux_arm64.zip",
+          "shasum": "2d285bf4dd1b02fd407459edf147e5ae452e33b0f3f0d520dcec933b84471909"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.6.1_windows_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.1/terraform-provider-azuredevops_0.6.1_windows_386.zip",
+          "shasum": "03314fca18e069a5ac3d4e82ab7f810e78daeb24b89cfd2c32cce7f3ffb462ab"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.6.1_windows_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.1/terraform-provider-azuredevops_0.6.1_windows_amd64.zip",
+          "shasum": "50dc73a26098fb5e62304fd8e8fe4305620299836f5b7ef25b68ca0de6aaed60"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.6.1_windows_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.1/terraform-provider-azuredevops_0.6.1_windows_arm.zip",
+          "shasum": "e710942cf760e9262b7d045a8e1c5715a3a3ef14b06cb400437aaad4e214e2b8"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.6.1_windows_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.1/terraform-provider-azuredevops_0.6.1_windows_arm64.zip",
+          "shasum": "00ed3191a1634d169d2c99d41427350eba700c735e7ab3405ec76834d6d7d27e"
+        }
+      ]
+    },
+    {
+      "version": "0.6.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.0/terraform-provider-azuredevops_0.6.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.0/terraform-provider-azuredevops_0.6.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.6.0_darwin_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.0/terraform-provider-azuredevops_0.6.0_darwin_amd64.zip",
+          "shasum": "a25c93d597a954a41a841440f0f59d54b768141e0bb6f0dbf1baf32407095a6f"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.6.0_darwin_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.0/terraform-provider-azuredevops_0.6.0_darwin_arm64.zip",
+          "shasum": "df8d0ef24352b8945dd392e4e798549754c2c78061db6de54c7f573bffd6bce9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.6.0_freebsd_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.0/terraform-provider-azuredevops_0.6.0_freebsd_386.zip",
+          "shasum": "53a7619b3382ba22069ad8e54278450a4829e220bea55d7cf2ffc21b62afce2f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.6.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.0/terraform-provider-azuredevops_0.6.0_freebsd_amd64.zip",
+          "shasum": "034e7c5e536d1283829afe53b201ba89f879042135cdb8b8c74a9f73bb854e87"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.6.0_freebsd_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.0/terraform-provider-azuredevops_0.6.0_freebsd_arm.zip",
+          "shasum": "94a0741b0d632be45fb67c82e19be01ec8191666ecf9c738bed6092bc50fd83a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.6.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.0/terraform-provider-azuredevops_0.6.0_freebsd_arm64.zip",
+          "shasum": "9a564fd5642f3d3502309540997894fe6f94547bbd1a93a980dbe9448141216c"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.6.0_linux_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.0/terraform-provider-azuredevops_0.6.0_linux_386.zip",
+          "shasum": "f3471010085ac9594c0494b6723b175b277d1daee0870c4b48204f751337cad6"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.6.0_linux_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.0/terraform-provider-azuredevops_0.6.0_linux_amd64.zip",
+          "shasum": "5de8143d04f0be25db7b90c00cd3094b7c2a3d969f303bfb3cc473633570ac65"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.6.0_linux_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.0/terraform-provider-azuredevops_0.6.0_linux_arm.zip",
+          "shasum": "34ec1dcb828e89faf296e84cdfde65fb46c94ceb2c1d26755436ba7779c5200c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.6.0_linux_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.0/terraform-provider-azuredevops_0.6.0_linux_arm64.zip",
+          "shasum": "a82a1e737a7262e72f1ba95d270aab3b0df06c3a602a20f418f681b059fb80c7"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.6.0_windows_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.0/terraform-provider-azuredevops_0.6.0_windows_386.zip",
+          "shasum": "30533df0b202d1eb105916d970a4ceade6fa8dd141d39a271b323372019f7d30"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.6.0_windows_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.0/terraform-provider-azuredevops_0.6.0_windows_amd64.zip",
+          "shasum": "b6eb2d48a59c000a63471707467503324973681e5b85a4d7f3b5a249bac5e301"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.6.0_windows_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.0/terraform-provider-azuredevops_0.6.0_windows_arm.zip",
+          "shasum": "1b35d323aee8914fca2b8e37e7b68744ae0d03feebabc3fe4aa6053d33a91f50"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.6.0_windows_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.6.0/terraform-provider-azuredevops_0.6.0_windows_arm64.zip",
+          "shasum": "c5fa1d7866e3e1e28aefc9db45b5791cb523501352b57e02970ebfca107a75a6"
+        }
+      ]
+    },
+    {
+      "version": "0.5.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.5.0/terraform-provider-azuredevops_0.5.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.5.0/terraform-provider-azuredevops_0.5.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.5.0_darwin_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.5.0/terraform-provider-azuredevops_0.5.0_darwin_amd64.zip",
+          "shasum": "aca5575a2fa5884dc2183f2554fc020db347e4423f13370f7379230be818c594"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.5.0_darwin_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.5.0/terraform-provider-azuredevops_0.5.0_darwin_arm64.zip",
+          "shasum": "3ea12861e964104e0871b728f33dd6dd18633c4803f4c5d276f2463d51231564"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.5.0_freebsd_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.5.0/terraform-provider-azuredevops_0.5.0_freebsd_386.zip",
+          "shasum": "3510162a5099e1723f07135cf76dad3030fa079ee41d5481313293748b492694"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.5.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.5.0/terraform-provider-azuredevops_0.5.0_freebsd_amd64.zip",
+          "shasum": "73e7bd2d74cee8beaf7b5bbce9c23777cfc1439c285d1a1df94cc355b9049361"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.5.0_freebsd_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.5.0/terraform-provider-azuredevops_0.5.0_freebsd_arm.zip",
+          "shasum": "170578b8b437de8e04509e2fa79069407f365e5e4959f732b4ea704042ec26ef"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.5.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.5.0/terraform-provider-azuredevops_0.5.0_freebsd_arm64.zip",
+          "shasum": "04a155051afca9f0b9df0cfaedd08f290c162f7ceaf1144a47a3346281d1a0a1"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.5.0_linux_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.5.0/terraform-provider-azuredevops_0.5.0_linux_386.zip",
+          "shasum": "92e8b495e6f324666ea789b44d8b0cdfcbd79a42e048630a953efb4c1d8e43f4"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.5.0_linux_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.5.0/terraform-provider-azuredevops_0.5.0_linux_amd64.zip",
+          "shasum": "06f365f0b0087dcdd63bc9696e055303f75575c32b0859048bee8ba72d853058"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.5.0_linux_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.5.0/terraform-provider-azuredevops_0.5.0_linux_arm.zip",
+          "shasum": "fc08545dd51b46705dcd934a9b95292850ae3e6098c020394b741de29d6da2c6"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.5.0_linux_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.5.0/terraform-provider-azuredevops_0.5.0_linux_arm64.zip",
+          "shasum": "13dadaf42e94cb1c0fe30029e9a01db9deba66e5911772ec65bd770eac74784a"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.5.0_windows_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.5.0/terraform-provider-azuredevops_0.5.0_windows_386.zip",
+          "shasum": "478998ea8368c737e7d7e4a97ac3c4636a66970b346d41186c4f991558305eb0"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.5.0_windows_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.5.0/terraform-provider-azuredevops_0.5.0_windows_amd64.zip",
+          "shasum": "1d843b00ea47b1dd3ab052cecd7a9c711893f13e2d0193c738cbf21a6f42378f"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.5.0_windows_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.5.0/terraform-provider-azuredevops_0.5.0_windows_arm.zip",
+          "shasum": "486ad36265d0309e0bb096ece5251dbdc69b19ebbaf74e277bbaef70490b68fa"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.5.0_windows_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.5.0/terraform-provider-azuredevops_0.5.0_windows_arm64.zip",
+          "shasum": "ffb8b2bc62ca9bb3e31f094bf442b3e041f7c4823901697530335a7c7fedb57f"
+        }
+      ]
+    },
+    {
+      "version": "0.4.1",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.1/terraform-provider-azuredevops_0.4.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.1/terraform-provider-azuredevops_0.4.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.4.1_darwin_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.1/terraform-provider-azuredevops_0.4.1_darwin_amd64.zip",
+          "shasum": "9954b0af0579acec248e4df1bd8bfb6b59b4a49e3877497d54e5faa42bfa8f3e"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.4.1_darwin_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.1/terraform-provider-azuredevops_0.4.1_darwin_arm64.zip",
+          "shasum": "ec062fc2eaf5ef1a40c2d26d5660643a001c0f0026ad5df24f76cd649869204c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.4.1_freebsd_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.1/terraform-provider-azuredevops_0.4.1_freebsd_386.zip",
+          "shasum": "42e50e6cbccc0ce50e3034b44719dffe7204a71ced40328dc10f322d15567dfe"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.4.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.1/terraform-provider-azuredevops_0.4.1_freebsd_amd64.zip",
+          "shasum": "568754423a7dba12dfb8b376565aa55284a161d9017d2e40e3ee9b4999fea88c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.4.1_freebsd_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.1/terraform-provider-azuredevops_0.4.1_freebsd_arm.zip",
+          "shasum": "3c508bfa1c221b12c1c0be31ef22428e36c44d1558a085dd092f6a5882db8d0d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.4.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.1/terraform-provider-azuredevops_0.4.1_freebsd_arm64.zip",
+          "shasum": "590a3381b947aa9565175036996da4c6f53e8c457fada2578dbc0517814339b0"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.4.1_linux_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.1/terraform-provider-azuredevops_0.4.1_linux_386.zip",
+          "shasum": "59a809ff146590743a5cc8f4d1dfb3faf98d3010882a25a7dade1151eeda8311"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.4.1_linux_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.1/terraform-provider-azuredevops_0.4.1_linux_amd64.zip",
+          "shasum": "1cb62f80ea33efae0a248dbb909eecb7fdd1f18d6e7b0fd5e40b54353ef5fea6"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.4.1_linux_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.1/terraform-provider-azuredevops_0.4.1_linux_arm.zip",
+          "shasum": "52c2c02c4201073a06f4a4e9d757b4bb6fa8327342e179382b9fa23f7331e5b7"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.4.1_linux_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.1/terraform-provider-azuredevops_0.4.1_linux_arm64.zip",
+          "shasum": "f4cac87e7e740f822f22a437721cb678160791186ac8549a7de4c127d2908c8a"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.4.1_windows_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.1/terraform-provider-azuredevops_0.4.1_windows_386.zip",
+          "shasum": "9ec4aedea4610ad7950ad880d9cf38febfbc3a9057bdc2a116fb5924c5d744c8"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.4.1_windows_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.1/terraform-provider-azuredevops_0.4.1_windows_amd64.zip",
+          "shasum": "ca6eca4c37cd46e19d571513867b7ad7df4565814ed25e11078e3e85886939c3"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.4.1_windows_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.1/terraform-provider-azuredevops_0.4.1_windows_arm.zip",
+          "shasum": "9fc0f5599f110716e0786e659111db8dcab48fcd327eb9a1b405065150f4f62a"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.4.1_windows_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.1/terraform-provider-azuredevops_0.4.1_windows_arm64.zip",
+          "shasum": "1ea27cbdcdf3f5258da098bc426e7717b72a512f55d8a84bc712362e854cbec2"
+        }
+      ]
+    },
+    {
+      "version": "0.4.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.0/terraform-provider-azuredevops_0.4.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.0/terraform-provider-azuredevops_0.4.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.4.0_darwin_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.0/terraform-provider-azuredevops_0.4.0_darwin_amd64.zip",
+          "shasum": "5e40ed773470889f97d4ccb3694d23e8a42b018d0e83cfb92ddcc3cd432efbdf"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.4.0_darwin_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.0/terraform-provider-azuredevops_0.4.0_darwin_arm64.zip",
+          "shasum": "5c37bd88b76cf7c2070c723b359125a37b2f5a219b208132b6587e2890771934"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.4.0_freebsd_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.0/terraform-provider-azuredevops_0.4.0_freebsd_386.zip",
+          "shasum": "d0737149f289d6cbea80a42d837e9c9c97d2f70360f124f65f33ddcc6bd19d57"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.4.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.0/terraform-provider-azuredevops_0.4.0_freebsd_amd64.zip",
+          "shasum": "dd2476975624f297f993386434d1a86deab134b47278927fdd55d38a4a7a8512"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.4.0_freebsd_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.0/terraform-provider-azuredevops_0.4.0_freebsd_arm.zip",
+          "shasum": "eabc1265a33f0687d96f6f31d617e062aff523df8de012d9099cb1d144704635"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.4.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.0/terraform-provider-azuredevops_0.4.0_freebsd_arm64.zip",
+          "shasum": "e13bcec1b7a5f81c4792f82a8233d3dc0cd3ccb4b9a1a7b52eb216180949e465"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.4.0_linux_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.0/terraform-provider-azuredevops_0.4.0_linux_386.zip",
+          "shasum": "9e8249807eb3bf4a32f2caba149488da614a4b137e4b4f45a9a5a612cef0bc5c"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.4.0_linux_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.0/terraform-provider-azuredevops_0.4.0_linux_amd64.zip",
+          "shasum": "5efc8d7486299bcd59a986220ce5e526e3eb5735ad0686b236d3b26ab9c7fa1c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.4.0_linux_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.0/terraform-provider-azuredevops_0.4.0_linux_arm.zip",
+          "shasum": "0ae3063d7520e92a46f3a704ef5eed0e70007d92fae4d542d96444816a91def5"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.4.0_linux_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.0/terraform-provider-azuredevops_0.4.0_linux_arm64.zip",
+          "shasum": "669de9f7468c7dc08129f0abe31e1f6b73634b7b4b3576507cfe0ba779ef4719"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.4.0_windows_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.0/terraform-provider-azuredevops_0.4.0_windows_386.zip",
+          "shasum": "b07b4fe3e02e5b0514a3e34a6c4d32388e77f2a8dfbb1c82900a2bee768ae391"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.4.0_windows_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.0/terraform-provider-azuredevops_0.4.0_windows_amd64.zip",
+          "shasum": "15a70b190bad9eaf5480ab6d43f5b6ee112e8a688073346bd3d52832716435fc"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.4.0_windows_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.0/terraform-provider-azuredevops_0.4.0_windows_arm.zip",
+          "shasum": "2c300f238272a8142ce0f269a14b9dfddc80387e622753bfc368f844750a1a43"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.4.0_windows_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.4.0/terraform-provider-azuredevops_0.4.0_windows_arm64.zip",
+          "shasum": "f9ee6f540236855daf533ccb2fa381a150183ef1a458216e01398d22063afc9c"
+        }
+      ]
+    },
+    {
+      "version": "0.3.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.3.0/terraform-provider-azuredevops_0.3.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.3.0/terraform-provider-azuredevops_0.3.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.3.0_darwin_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.3.0/terraform-provider-azuredevops_0.3.0_darwin_amd64.zip",
+          "shasum": "a28ea38cbe9d264e8c2e2d127ebf18f890ca3d2dc157d5d4a2bf1a736d1dc5c9"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.3.0_darwin_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.3.0/terraform-provider-azuredevops_0.3.0_darwin_arm64.zip",
+          "shasum": "f51ea7c4991ccd41c3eb54d84571b02685f4288246f05fd7525282ee5af524c7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.3.0_freebsd_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.3.0/terraform-provider-azuredevops_0.3.0_freebsd_386.zip",
+          "shasum": "6a6afa1efa5acb14002b123ccadc0b9ed292c1e9cf6e4368e68a516865b2793f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.3.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.3.0/terraform-provider-azuredevops_0.3.0_freebsd_amd64.zip",
+          "shasum": "9ab817d80c92710e81fc9fb6ba23c2f28a549ba1af056c5dc463b3b240fc2a8f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.3.0_freebsd_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.3.0/terraform-provider-azuredevops_0.3.0_freebsd_arm.zip",
+          "shasum": "ff1b5765f8ad6827c5025c0735a2f0c56f774df661c2bcb25021a872e1af075d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.3.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.3.0/terraform-provider-azuredevops_0.3.0_freebsd_arm64.zip",
+          "shasum": "986eb1f0310a84513baa4290ca9b5320e8c799555667fefc9b611a8f7d20ef48"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.3.0_linux_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.3.0/terraform-provider-azuredevops_0.3.0_linux_386.zip",
+          "shasum": "1f569429bf7e20dce23c61061285696c4bb9503507dc942c4c940116d41455df"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.3.0_linux_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.3.0/terraform-provider-azuredevops_0.3.0_linux_amd64.zip",
+          "shasum": "8b191e9ec9ca2337053e11eaf1700dc22f162cd387ad33db7d2d1caed167aeb7"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.3.0_linux_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.3.0/terraform-provider-azuredevops_0.3.0_linux_arm.zip",
+          "shasum": "43bd761456beb28988c57c223dc44f3866aa1278681e67a33a95823fa2c3114f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.3.0_linux_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.3.0/terraform-provider-azuredevops_0.3.0_linux_arm64.zip",
+          "shasum": "11d179869dc714b8ae79c57c5ee3b2633cb5778aad2a6385b0f1038f772cd5f2"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.3.0_windows_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.3.0/terraform-provider-azuredevops_0.3.0_windows_386.zip",
+          "shasum": "e2413d3edde890c5f225b575e846a259a9afd009d4e7ea8fca4d25ef1966d592"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.3.0_windows_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.3.0/terraform-provider-azuredevops_0.3.0_windows_amd64.zip",
+          "shasum": "06c4ec37a2fca2b52ae4b90d8dc80cc1fbe48bdccfdd184a996a60adfe9b15d5"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.3.0_windows_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.3.0/terraform-provider-azuredevops_0.3.0_windows_arm.zip",
+          "shasum": "6d7ef81be89063b9db4032e10cad9dec99c2121159cecbb64e66984ea77efc75"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.3.0_windows_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.3.0/terraform-provider-azuredevops_0.3.0_windows_arm64.zip",
+          "shasum": "546a2c8281606cb7d1bd071afba1574abfa43ad67825305129dde4f2c9238ef7"
+        }
+      ]
+    },
+    {
+      "version": "0.2.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.2.0/terraform-provider-azuredevops_0.2.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.2.0/terraform-provider-azuredevops_0.2.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.2.0_darwin_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.2.0/terraform-provider-azuredevops_0.2.0_darwin_amd64.zip",
+          "shasum": "7934003d4d174072491d21b05312f07993e94e5f608966235d7270dfb29e3324"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.2.0_darwin_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.2.0/terraform-provider-azuredevops_0.2.0_darwin_arm64.zip",
+          "shasum": "d0e6c412cc4afdeb8cdf6643687d0b39d935cdf6e6540409b7217c438975d986"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.2.0_freebsd_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.2.0/terraform-provider-azuredevops_0.2.0_freebsd_386.zip",
+          "shasum": "9d3ae78123eb536d56dc59539189b88f6e178a15b69a640c1d85f17547ab36cb"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.2.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.2.0/terraform-provider-azuredevops_0.2.0_freebsd_amd64.zip",
+          "shasum": "88ae7f002ebb1a8ddbd17ebc706a7dc5887eb656cf7a314966888b6f4f2c24d8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.2.0_freebsd_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.2.0/terraform-provider-azuredevops_0.2.0_freebsd_arm.zip",
+          "shasum": "cb218b3258ecfa5c4f13adc2c39376176f10f085b5df168db5bc90cd11a37955"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.2.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.2.0/terraform-provider-azuredevops_0.2.0_freebsd_arm64.zip",
+          "shasum": "73a63ef67c7a73123027c4b65ddb65dc74f2064f643830ea62f80663d4019b62"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.2.0_linux_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.2.0/terraform-provider-azuredevops_0.2.0_linux_386.zip",
+          "shasum": "09d24b60f939afba3e9b2749ae15ae5dcf1b7804322e6a50284f9246c3b557bc"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.2.0_linux_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.2.0/terraform-provider-azuredevops_0.2.0_linux_amd64.zip",
+          "shasum": "49e8a053714ff8e59089fccea468c4a8e92e0ed00153dad2b7642e66a37e77eb"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.2.0_linux_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.2.0/terraform-provider-azuredevops_0.2.0_linux_arm.zip",
+          "shasum": "04116ab5c2f7ec909f500013a47109c7111743c556140bdfc2b60e12b134840e"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.2.0_linux_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.2.0/terraform-provider-azuredevops_0.2.0_linux_arm64.zip",
+          "shasum": "cdd416d7d191058d70e8a45218ea2db1a96af7539aa19d0d9db172380aa978c7"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.2.0_windows_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.2.0/terraform-provider-azuredevops_0.2.0_windows_386.zip",
+          "shasum": "c13c3a627c79d1244eef2af325baf2648c0d7a78f301c9dab4d0200a308dc3c7"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.2.0_windows_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.2.0/terraform-provider-azuredevops_0.2.0_windows_amd64.zip",
+          "shasum": "9b05fb776f3e8ce71785723dd8d4a386987ad31173dbbf8e45c8794ead1dbb8b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.2.0_windows_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.2.0/terraform-provider-azuredevops_0.2.0_windows_arm.zip",
+          "shasum": "ec552c78e43c1a3b43c92e0b75dfec6efa754341f97299a6a4f87ce09262bf3f"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.2.0_windows_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.2.0/terraform-provider-azuredevops_0.2.0_windows_arm64.zip",
+          "shasum": "112e0ea8bd6251584ad54a58c1becb406a0e645c00cc4d4823fd1b351756ea12"
+        }
+      ]
+    },
+    {
+      "version": "0.1.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.1.0/terraform-provider-azuredevops_0.1.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.1.0/terraform-provider-azuredevops_0.1.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.1.0_darwin_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.1.0/terraform-provider-azuredevops_0.1.0_darwin_amd64.zip",
+          "shasum": "1e14dc37b1d920f5c30335c30f37119a9f41bc8b29633624f71ccd381f3d99c1"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.1.0_darwin_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.1.0/terraform-provider-azuredevops_0.1.0_darwin_arm64.zip",
+          "shasum": "3dc7860f491c8173d0acb2e397a3ba152eb3aad4eaf17145fb4d8311d678cb4d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.1.0_freebsd_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.1.0/terraform-provider-azuredevops_0.1.0_freebsd_386.zip",
+          "shasum": "d92cf38c56e686ead6fd705e759cb72c50603464564b8b10d683f7892896d08b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.1.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.1.0/terraform-provider-azuredevops_0.1.0_freebsd_amd64.zip",
+          "shasum": "5a08a84e767f8eb88333fd3e3cd37f056633e98393488e4b36c4cc46a1b5a3b8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.1.0_freebsd_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.1.0/terraform-provider-azuredevops_0.1.0_freebsd_arm.zip",
+          "shasum": "ec714596711245ba7b379a9fb069144709ee0c91c0729537b5d439cd63999871"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.1.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.1.0/terraform-provider-azuredevops_0.1.0_freebsd_arm64.zip",
+          "shasum": "11d5ac3cecbb4f1f977131e6bee93dacff9053e2839a0c66da1b1a334ddc82cd"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.1.0_linux_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.1.0/terraform-provider-azuredevops_0.1.0_linux_386.zip",
+          "shasum": "42ef9f197ba52710607f0d2e64167b96bb56cbcb46f4ed6d5ae1d47bd35b99b8"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.1.0_linux_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.1.0/terraform-provider-azuredevops_0.1.0_linux_amd64.zip",
+          "shasum": "2602d097932685abd7bbb43f06816cf567beab01e8126db1afe645d5b2af81cc"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.1.0_linux_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.1.0/terraform-provider-azuredevops_0.1.0_linux_arm.zip",
+          "shasum": "e8fae264ec503eb6afe1d836fc7f393087be79af59598ce5c5f7704fe1b95bd6"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.1.0_linux_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.1.0/terraform-provider-azuredevops_0.1.0_linux_arm64.zip",
+          "shasum": "84284cf1863c329e30ee128ccc5b45fe3df312b323b344b611e2200d5b09a279"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-azuredevops_0.1.0_windows_386.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.1.0/terraform-provider-azuredevops_0.1.0_windows_386.zip",
+          "shasum": "5c00f9a3dd4523cf8eb651e57ce9ee15fff2d20064536ed127f2bf9f88895a6f"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-azuredevops_0.1.0_windows_amd64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.1.0/terraform-provider-azuredevops_0.1.0_windows_amd64.zip",
+          "shasum": "c11cd102ffec0f9ec1701fafbfd8fea20f00e0f05a8fc3007138d1f7b906b723"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-azuredevops_0.1.0_windows_arm.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.1.0/terraform-provider-azuredevops_0.1.0_windows_arm.zip",
+          "shasum": "b2b4786746eab243d860956ac893a794d8eb5273a49a6564815f9220605b6f1d"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-azuredevops_0.1.0_windows_arm64.zip",
+          "download_url": "https://github.com/scordonnier/terraform-provider-azuredevops/releases/download/v0.1.0/terraform-provider-azuredevops_0.1.0_windows_arm64.zip",
+          "shasum": "b2e785209881395a1a5e4d17cd398af2217a1a9a8d16a7c1361dbf5625a9e1d0"
+        }
+      ]
+    }
+  ]
+}

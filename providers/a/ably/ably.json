@@ -1,0 +1,976 @@
+{
+  "versions": [
+    {
+      "version": "0.5.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.5.0/terraform-provider-ably_0.5.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.5.0/terraform-provider-ably_0.5.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.5.0_darwin_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.5.0/terraform-provider-ably_0.5.0_darwin_amd64.zip",
+          "shasum": "209b306618b0ed60be6f8d7f5e3fa59398a229b2cb1485a565631e48f5d0cd6e"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.5.0_darwin_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.5.0/terraform-provider-ably_0.5.0_darwin_arm64.zip",
+          "shasum": "3c54a9a20be5d0707f3e30b5061c40cdee5d4e9358973db33ac91ea8e7101714"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.5.0_freebsd_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.5.0/terraform-provider-ably_0.5.0_freebsd_386.zip",
+          "shasum": "6ed0acccda9335266aae03b779f116edca7453722ed05c877e97296d66e344ef"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.5.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.5.0/terraform-provider-ably_0.5.0_freebsd_amd64.zip",
+          "shasum": "8e3e584c1ce38c6e3e454201ba9885b142e458bbec24475d873f72e8de36366b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.5.0_freebsd_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.5.0/terraform-provider-ably_0.5.0_freebsd_arm.zip",
+          "shasum": "cd8f46b2a5f26eb31a2fbf6f5ac7fe46801c4037264d540571baa038e5dab22d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.5.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.5.0/terraform-provider-ably_0.5.0_freebsd_arm64.zip",
+          "shasum": "93cb7ebc19478c3bd4ad0e1314108913fc04723ccfa5a96325300f8de6603b17"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.5.0_linux_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.5.0/terraform-provider-ably_0.5.0_linux_386.zip",
+          "shasum": "bd1d394ec9bf9e2c9cd8b77548352e746fcc34953fdc7c1875931667e71107c3"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.5.0_linux_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.5.0/terraform-provider-ably_0.5.0_linux_amd64.zip",
+          "shasum": "b49bebd9f1b8481614f61e195c09a698346c98cc04863bf41a293ad1634fc510"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.5.0_linux_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.5.0/terraform-provider-ably_0.5.0_linux_arm.zip",
+          "shasum": "8ed5bf18779639a526110e41fd3b4fe3ac71ba9b4d99d9faefee62684501f741"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.5.0_linux_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.5.0/terraform-provider-ably_0.5.0_linux_arm64.zip",
+          "shasum": "0c2a1a6929ad4b388ecdfb39a4819e99b9627ff331dc8390296b0ade1be5110c"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.5.0_windows_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.5.0/terraform-provider-ably_0.5.0_windows_386.zip",
+          "shasum": "4100e7f39dcb8a1125c8b7b51555a4e60fa63dd54472da62b97973832c1872b1"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.5.0_windows_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.5.0/terraform-provider-ably_0.5.0_windows_amd64.zip",
+          "shasum": "d879ecbca31c60b9800d0df8742092d9f285bb253c928f8e7cc7aa89ab578383"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.5.0_windows_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.5.0/terraform-provider-ably_0.5.0_windows_arm.zip",
+          "shasum": "718abb34ca3e9121803e2c4fbf30fe8aa2d48c7562df6926fe5eede984e4b472"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.5.0_windows_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.5.0/terraform-provider-ably_0.5.0_windows_arm64.zip",
+          "shasum": "af1a32fb228b3868970dd441c3ec4e7d0888458b2a83f23214158f88f4d5d4b5"
+        }
+      ]
+    },
+    {
+      "version": "0.4.3",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.3/terraform-provider-ably_0.4.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.3/terraform-provider-ably_0.4.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.4.3_darwin_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.3/terraform-provider-ably_0.4.3_darwin_amd64.zip",
+          "shasum": "da85a24b5795f07079b146ffdf3f4eaaf7b4d2246c7cb0f00b390d815f59205a"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.4.3_darwin_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.3/terraform-provider-ably_0.4.3_darwin_arm64.zip",
+          "shasum": "541080ab47e27c2870bd537289e64dbdb9e631b476dd36b1e298e968b0f6f474"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.4.3_freebsd_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.3/terraform-provider-ably_0.4.3_freebsd_386.zip",
+          "shasum": "7424d179300507d4757b473a21def953f05a84b0ae1e499271e5c7e8e470a448"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.4.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.3/terraform-provider-ably_0.4.3_freebsd_amd64.zip",
+          "shasum": "c800a1766279539bb55254f20ec68f7c206adec59aab55025662dbb650a5fae3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.4.3_freebsd_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.3/terraform-provider-ably_0.4.3_freebsd_arm.zip",
+          "shasum": "8baab34eb308a54ae5fb570cf1a5e6bb8fa2143370c4717d65f945bbc84a9ea9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.4.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.3/terraform-provider-ably_0.4.3_freebsd_arm64.zip",
+          "shasum": "2bdeae3e0f9f2c21795d48454d663763613d572cde60dc97be40cd3ae3d6d75f"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.4.3_linux_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.3/terraform-provider-ably_0.4.3_linux_386.zip",
+          "shasum": "379bdac6a57b03a9270765389ee567e7ff417eaf28204241dc179fd349a9f103"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.4.3_linux_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.3/terraform-provider-ably_0.4.3_linux_amd64.zip",
+          "shasum": "d6702663d90230c77a4bb4aa7079c2f10df1b69264134fb0bfd06edfa531c388"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.4.3_linux_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.3/terraform-provider-ably_0.4.3_linux_arm.zip",
+          "shasum": "81fadf4e81a5dfa5e29049252d2146ab68f8cc262c5830a58679904ee5abbcdf"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.4.3_linux_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.3/terraform-provider-ably_0.4.3_linux_arm64.zip",
+          "shasum": "0b49832a7b2058630db9213b0ea775bf74330f8964d47f891b5c69d8b0e5bf6f"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.4.3_windows_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.3/terraform-provider-ably_0.4.3_windows_386.zip",
+          "shasum": "0abbb236e5b5928a2260198bb96d4042b5b46ab9a972a3f4ee2a790f62fe821d"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.4.3_windows_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.3/terraform-provider-ably_0.4.3_windows_amd64.zip",
+          "shasum": "fe572636b2e42a4191ed26cbe9df2f0a37a776c5343035bddb361f626162270d"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.4.3_windows_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.3/terraform-provider-ably_0.4.3_windows_arm.zip",
+          "shasum": "2bb13ea0ef04919cc0c89e105a996731ba8ebec3597e25aed1a4b63c793a3f56"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.4.3_windows_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.3/terraform-provider-ably_0.4.3_windows_arm64.zip",
+          "shasum": "3c5d65243d653c821d44ec2738c1f1f9f23edfd0d8356580219fa1d1c9d431a0"
+        }
+      ]
+    },
+    {
+      "version": "0.4.2",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.2/terraform-provider-ably_0.4.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.2/terraform-provider-ably_0.4.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.4.2_darwin_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.2/terraform-provider-ably_0.4.2_darwin_amd64.zip",
+          "shasum": "ca3c6b8aa0397c32dad5323f8d189f9f45ffe386b72074c1912c6561b9624d22"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.4.2_darwin_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.2/terraform-provider-ably_0.4.2_darwin_arm64.zip",
+          "shasum": "fca55bbe67a2c5b281617b498e6999685b09ea91d4685baf94457d434a51e6a7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.4.2_freebsd_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.2/terraform-provider-ably_0.4.2_freebsd_386.zip",
+          "shasum": "3c56b06c544729fe0b211cfa0d96d8755630c28e4aff9f3c32026bd82d184c8c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.4.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.2/terraform-provider-ably_0.4.2_freebsd_amd64.zip",
+          "shasum": "2fdf4b78ddf8ba73dc7353f7d34ae82fd2a23eb97f9bea53672bf9ba386bba3c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.4.2_freebsd_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.2/terraform-provider-ably_0.4.2_freebsd_arm.zip",
+          "shasum": "45a3a15a09c18a0cf9a79f7963f7378de60c5a20244d74689fbcf5315600c16e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.4.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.2/terraform-provider-ably_0.4.2_freebsd_arm64.zip",
+          "shasum": "08ce2e9a270c0ca9fe765377fd52a3b50ce26d75a8a001d6a8106ca34e977a33"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.4.2_linux_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.2/terraform-provider-ably_0.4.2_linux_386.zip",
+          "shasum": "e3c20d5c17810c2ba7c4fa45c461152dac25571e751bc4f160e8e4581bff2aa8"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.4.2_linux_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.2/terraform-provider-ably_0.4.2_linux_amd64.zip",
+          "shasum": "991f8f0eb5639f8e00df9daea3832d2d5d3cf2774be026cf235ad6adc81feaf3"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.4.2_linux_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.2/terraform-provider-ably_0.4.2_linux_arm.zip",
+          "shasum": "6c47f29f1ea2de6b453ff70154e0c097f7add97e11fa9693566602373e5b0607"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.4.2_linux_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.2/terraform-provider-ably_0.4.2_linux_arm64.zip",
+          "shasum": "70f74cec2a38f63d358f729f8e7a7890869f811e27e9bddf245304e5088f19cc"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.4.2_windows_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.2/terraform-provider-ably_0.4.2_windows_386.zip",
+          "shasum": "8bd14ee32fb76fade2c38a9cd4b47a0460ac12c8f60baf1a005a979ff7c092da"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.4.2_windows_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.2/terraform-provider-ably_0.4.2_windows_amd64.zip",
+          "shasum": "eddcf38daaecc9967093d35c376441dec04bdf3a902d086b312a4bc3aaba4a1f"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.4.2_windows_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.2/terraform-provider-ably_0.4.2_windows_arm.zip",
+          "shasum": "f90ee294daf1f212a1996e1ad4be6bd352d49a0b2adb22b25b65276b68bf1484"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.4.2_windows_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.2/terraform-provider-ably_0.4.2_windows_arm64.zip",
+          "shasum": "5631aab29ed4131daa5487a7fc88661b0bea5aabd9c68e22920758e6df972c38"
+        }
+      ]
+    },
+    {
+      "version": "0.4.1",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.1/terraform-provider-ably_0.4.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.1/terraform-provider-ably_0.4.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.4.1_darwin_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.1/terraform-provider-ably_0.4.1_darwin_amd64.zip",
+          "shasum": "ff39502dd91ee2c91cb8c43f5d7ca507807344b73e9c9873b1602d6e7de2c301"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.4.1_darwin_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.1/terraform-provider-ably_0.4.1_darwin_arm64.zip",
+          "shasum": "4aa966a3d7fbe332c3d76ce5ff3d07b959888c5b8fc19a60c6d8ab4a0e72bb4b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.4.1_freebsd_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.1/terraform-provider-ably_0.4.1_freebsd_386.zip",
+          "shasum": "5c4ddabe63b6f3390dfc72397afd8da50f65b8082e22ec7a2e1ba84a08549bae"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.4.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.1/terraform-provider-ably_0.4.1_freebsd_amd64.zip",
+          "shasum": "2494ec8d0cd60b748668c9599561ce972d0c55455d754390ae30379110f09d4f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.4.1_freebsd_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.1/terraform-provider-ably_0.4.1_freebsd_arm.zip",
+          "shasum": "ecd4dc2902b7c3a9c01b5a5653d03081c4bf7b5dc4fbe2893565b0d613eeb81b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.4.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.1/terraform-provider-ably_0.4.1_freebsd_arm64.zip",
+          "shasum": "06749761c16f5544541c90562a3659d6a68f8a3d60a293c922dea58482577193"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.4.1_linux_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.1/terraform-provider-ably_0.4.1_linux_386.zip",
+          "shasum": "c83f3c133524d8ff762c0484b63cdd95f7b613f6691c698739233c9000cbf47e"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.4.1_linux_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.1/terraform-provider-ably_0.4.1_linux_amd64.zip",
+          "shasum": "f8f70e53319bfd9b0b9e0ad387e20ba75b04997b7e6a06f46f31e3bd33d3df64"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.4.1_linux_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.1/terraform-provider-ably_0.4.1_linux_arm.zip",
+          "shasum": "dd5d93c8202950a8bfad4812e36fcea02a9b10e02669eaa8f2eeb4de9422b9ec"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.4.1_linux_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.1/terraform-provider-ably_0.4.1_linux_arm64.zip",
+          "shasum": "fc7859aef6625580b9ec8c893697aa924a34acd7bdf719860c675d764c00f886"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.4.1_windows_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.1/terraform-provider-ably_0.4.1_windows_386.zip",
+          "shasum": "d2795ef08e7208eb54f0e4f509a4df875ba7e1001b81199354397879d1d10593"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.4.1_windows_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.1/terraform-provider-ably_0.4.1_windows_amd64.zip",
+          "shasum": "8897d759a6aa49027ff6278af0bc50de048ec7ef2ce546b8784d67eaec47abdb"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.4.1_windows_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.1/terraform-provider-ably_0.4.1_windows_arm.zip",
+          "shasum": "428d72e8e300c5a15248dcb099d2b0c9959a6e2b30b29df7fc72c8b546817ad8"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.4.1_windows_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.1/terraform-provider-ably_0.4.1_windows_arm64.zip",
+          "shasum": "b505b257bfd196cc7224276614bf2da4895ce19fc0af3f197f213768dc86c6c5"
+        }
+      ]
+    },
+    {
+      "version": "0.4.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.0/terraform-provider-ably_0.4.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.0/terraform-provider-ably_0.4.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.4.0_darwin_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.0/terraform-provider-ably_0.4.0_darwin_amd64.zip",
+          "shasum": "c3876e96c55cb0d0ff3adf1eb975ecf3b118996c16b2c86bd7e606a8faf2fccf"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.4.0_darwin_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.0/terraform-provider-ably_0.4.0_darwin_arm64.zip",
+          "shasum": "b728fbd416c7eb2f68fa75135608f7ffe4944cca49e0fb786c10bc6477d2df1d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.4.0_freebsd_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.0/terraform-provider-ably_0.4.0_freebsd_386.zip",
+          "shasum": "7783fd4dd8d7571499262d97a2e74c1fdd2dff5f3a976736660c738e3862f490"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.4.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.0/terraform-provider-ably_0.4.0_freebsd_amd64.zip",
+          "shasum": "39d3b06f9f5c16bae0bb0fcd8e8bb497236f88811af4a1f30c9a2f80a00c5e17"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.4.0_freebsd_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.0/terraform-provider-ably_0.4.0_freebsd_arm.zip",
+          "shasum": "71c26ed389b2ed797108f0372281669cfaf7757de591a29088bc33e2d48d4a1f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.4.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.0/terraform-provider-ably_0.4.0_freebsd_arm64.zip",
+          "shasum": "f8ec48d4e29fb8d6606f66d746e663bbc1c4dda27ad5aaad59cb4afd7076c9f4"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.4.0_linux_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.0/terraform-provider-ably_0.4.0_linux_386.zip",
+          "shasum": "863f4dea0956cd1674bae783fedc9c683db81a6365235c42047d2a81323abcfb"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.4.0_linux_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.0/terraform-provider-ably_0.4.0_linux_amd64.zip",
+          "shasum": "beb03a2fdc78862a1df9d66ba6616bb981b0252162350cb67f3f58909cdb6f75"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.4.0_linux_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.0/terraform-provider-ably_0.4.0_linux_arm.zip",
+          "shasum": "75602a1fb8055665e2167b9f8c187fe4677a60ec919cc20c8557780008c4a021"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.4.0_linux_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.0/terraform-provider-ably_0.4.0_linux_arm64.zip",
+          "shasum": "bfebc9f040a6fac3a5c5385a2c1a0b4b9f245dae87327d6bbc90efa3a8e7774c"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.4.0_windows_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.0/terraform-provider-ably_0.4.0_windows_386.zip",
+          "shasum": "fe6b6f86b5e595a12465c372385d351925cbcd60e12cd408324ad7edc3724be7"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.4.0_windows_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.0/terraform-provider-ably_0.4.0_windows_amd64.zip",
+          "shasum": "c843bbf089f18956274fee182a89c99cd9425d95e0bcbfb4dcb2d70f4792e336"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.4.0_windows_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.0/terraform-provider-ably_0.4.0_windows_arm.zip",
+          "shasum": "7ff40f7a6439f1b4a9aca3a364f68ef00ff970fd3f7ce36d1293fce4c20eda62"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.4.0_windows_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.4.0/terraform-provider-ably_0.4.0_windows_arm64.zip",
+          "shasum": "6da521f04fd9d7731f38408a6bc3abaf470bcf8b7166a21589849732806452f4"
+        }
+      ]
+    },
+    {
+      "version": "0.3.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.3.0/terraform-provider-ably_0.3.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.3.0/terraform-provider-ably_0.3.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.3.0_darwin_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.3.0/terraform-provider-ably_0.3.0_darwin_amd64.zip",
+          "shasum": "da9e19c73e169fb1209e4c4069d6e2b68cc006c4bb9d6b42a150bd60ce63661f"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.3.0_darwin_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.3.0/terraform-provider-ably_0.3.0_darwin_arm64.zip",
+          "shasum": "8a3dd3878eabb5ed0522a6ce9531a9cba537b8fd256445221fa3e69c4b6af3cf"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.3.0_freebsd_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.3.0/terraform-provider-ably_0.3.0_freebsd_386.zip",
+          "shasum": "77bc024d137c7f22ed5eba5a2a965f9a2a69c0557506df27e4d55dd67056f5be"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.3.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.3.0/terraform-provider-ably_0.3.0_freebsd_amd64.zip",
+          "shasum": "aa4b01f2375a5cc0a9186df81c483cf1854a009e3b57633e87cc383e00933969"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.3.0_freebsd_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.3.0/terraform-provider-ably_0.3.0_freebsd_arm.zip",
+          "shasum": "b95783185ff0934fb162faf9bedb051aac748ceaefee1260d28dacba193c013e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.3.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.3.0/terraform-provider-ably_0.3.0_freebsd_arm64.zip",
+          "shasum": "65d309775ca4e33b0ef8212cee27e78c0fbc9e31e62135eaa8716f89216b27a1"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.3.0_linux_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.3.0/terraform-provider-ably_0.3.0_linux_386.zip",
+          "shasum": "a416449ced7e9e0efb0e538a45841e2b0f0323547e36abaf86cbe61415fb832b"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.3.0_linux_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.3.0/terraform-provider-ably_0.3.0_linux_amd64.zip",
+          "shasum": "252bb9d02acb99682827667b790a975896f287308e5f1b7915ab2b145ef14073"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.3.0_linux_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.3.0/terraform-provider-ably_0.3.0_linux_arm.zip",
+          "shasum": "b4a7fe5268a2090ea4421d7cf0dd331c4abbe20aeef2be8829709664d2d26c17"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.3.0_linux_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.3.0/terraform-provider-ably_0.3.0_linux_arm64.zip",
+          "shasum": "795784be3814be2414ecdf94a8c4f246ef31f5d464935a2bfba9efe7e96163d7"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.3.0_windows_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.3.0/terraform-provider-ably_0.3.0_windows_386.zip",
+          "shasum": "60dab063935e28908494f4026076861b2096d1abf465684925a4a5ce49422d3e"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.3.0_windows_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.3.0/terraform-provider-ably_0.3.0_windows_amd64.zip",
+          "shasum": "135ddce6a166416ffea037957584905400f4a334187bc629ced7a0218b51ec39"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.3.0_windows_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.3.0/terraform-provider-ably_0.3.0_windows_arm.zip",
+          "shasum": "8b19cc005dec817a33c1fb1878584dc16146bed3dbeb0b09b0cb67c84e1f1b98"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.3.0_windows_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.3.0/terraform-provider-ably_0.3.0_windows_arm64.zip",
+          "shasum": "c2a262e1e8dd2d8063b63c4b68c6aa173cc7a6ddc09e1e4db6cb630049ca5304"
+        }
+      ]
+    },
+    {
+      "version": "0.2.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.2.0/terraform-provider-ably_0.2.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.2.0/terraform-provider-ably_0.2.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.2.0_darwin_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.2.0/terraform-provider-ably_0.2.0_darwin_amd64.zip",
+          "shasum": "c4f57167509e76ee7bd4995f91ccd21a11438e474435794bd1f6ee70f1e87ada"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.2.0_darwin_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.2.0/terraform-provider-ably_0.2.0_darwin_arm64.zip",
+          "shasum": "bc5b824aef1f28078826bb97bb2324c98d0601873dee286022ecfe48c457ce9e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.2.0_freebsd_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.2.0/terraform-provider-ably_0.2.0_freebsd_386.zip",
+          "shasum": "71a9106985a395d0dffd4b444d6777557ce012ce8f8d16db61e3f128040eb0c1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.2.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.2.0/terraform-provider-ably_0.2.0_freebsd_amd64.zip",
+          "shasum": "6058af70022ec55bed9b9d42dfae480565ba742bc8cd7efb09084dc0187dc301"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.2.0_freebsd_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.2.0/terraform-provider-ably_0.2.0_freebsd_arm.zip",
+          "shasum": "5396e9a3453a48169560ca7cae665c591e63480c66b9e6f1a5cd3ad23ed1bca0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.2.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.2.0/terraform-provider-ably_0.2.0_freebsd_arm64.zip",
+          "shasum": "1ebc6ef1f7beb36104ef8300fbb1875b094e75d35380e90b25691303e4a88d03"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.2.0_linux_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.2.0/terraform-provider-ably_0.2.0_linux_386.zip",
+          "shasum": "a6760a156a8adc9752c3fd7e50d9fa138452b1c6b408b0c740047e1fa115af9d"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.2.0_linux_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.2.0/terraform-provider-ably_0.2.0_linux_amd64.zip",
+          "shasum": "58f016d7cc9b2bf6bd4ead71150f1f361c9db0fa63501d5470e7ade78dc877a1"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.2.0_linux_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.2.0/terraform-provider-ably_0.2.0_linux_arm.zip",
+          "shasum": "f14007314260b25472b116a63d5c2c5c1b35a7f8df2f26c8a6bfc37c5459d8a4"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.2.0_linux_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.2.0/terraform-provider-ably_0.2.0_linux_arm64.zip",
+          "shasum": "fe3b2c82d3c3d96f38437aba80435fb324c695c2894d6db05e6c731c98b96b3d"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.2.0_windows_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.2.0/terraform-provider-ably_0.2.0_windows_386.zip",
+          "shasum": "04c48a0ccf0570c77612660f16072576a52950de8cb4e00a78e58a6fe8281bd6"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.2.0_windows_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.2.0/terraform-provider-ably_0.2.0_windows_amd64.zip",
+          "shasum": "eb5ec12e7380b16163a80334332f5c75587eb0bd9a3cba8d89f66693616abe23"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.2.0_windows_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.2.0/terraform-provider-ably_0.2.0_windows_arm.zip",
+          "shasum": "0719e7cb4b6ff08d15a350c9e9f169cc825544ceec74b9829486c6396b05f19d"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.2.0_windows_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.2.0/terraform-provider-ably_0.2.0_windows_arm64.zip",
+          "shasum": "fb8bd837ea83615f9dc2b089b279fc20a5ed2eacdce5203a573ddadf19af21ea"
+        }
+      ]
+    },
+    {
+      "version": "0.1.0-beta",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.1.0-beta/terraform-provider-ably_0.1.0-beta_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.1.0-beta/terraform-provider-ably_0.1.0-beta_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.1.0-beta_darwin_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.1.0-beta/terraform-provider-ably_0.1.0-beta_darwin_amd64.zip",
+          "shasum": "b2a0376b0d7dda3b6ddcafabda0379a1e061e7a31f2289bc82c1b67dee5cb318"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.1.0-beta_darwin_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.1.0-beta/terraform-provider-ably_0.1.0-beta_darwin_arm64.zip",
+          "shasum": "2662e2a1a88f57275cba317628e7cfb9f6ef035cf5c0b06ca1fd6e63ea5224da"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.1.0-beta_freebsd_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.1.0-beta/terraform-provider-ably_0.1.0-beta_freebsd_386.zip",
+          "shasum": "2547db85da998b5f098d44d25da76ec0b553ed9eb79cdfd1095d534359a1ce2d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.1.0-beta_freebsd_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.1.0-beta/terraform-provider-ably_0.1.0-beta_freebsd_amd64.zip",
+          "shasum": "9cf2c13b32051204b99978cb79381176895d6422fde94e9755bd74cbd50594b9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.1.0-beta_freebsd_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.1.0-beta/terraform-provider-ably_0.1.0-beta_freebsd_arm.zip",
+          "shasum": "229a0993ad727fb2ed4cc53165f267c98d5bacbd54c8c8c2bd4c99108ddf93b9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.1.0-beta_freebsd_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.1.0-beta/terraform-provider-ably_0.1.0-beta_freebsd_arm64.zip",
+          "shasum": "7642003e6d33b5b48cc6522a65ed9d1132fe62baf6dfdad5190023b6fe29d892"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.1.0-beta_linux_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.1.0-beta/terraform-provider-ably_0.1.0-beta_linux_386.zip",
+          "shasum": "8c6aa3baf5e43604ac6df64796da47900163a90d47fc1042c8614576ba50b7ed"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.1.0-beta_linux_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.1.0-beta/terraform-provider-ably_0.1.0-beta_linux_amd64.zip",
+          "shasum": "522265237c0597b795210459a455b1867d44a030c157e2a91d1dcb17d3c1393a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.1.0-beta_linux_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.1.0-beta/terraform-provider-ably_0.1.0-beta_linux_arm.zip",
+          "shasum": "e6c77155c99cb18156df4cafaabb0f73f14e03b1d5877f2fd151311a025766e5"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.1.0-beta_linux_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.1.0-beta/terraform-provider-ably_0.1.0-beta_linux_arm64.zip",
+          "shasum": "54884582bb5df19fd176c5533a3c1060fffdd2a72e7a33c1e48c230e365b209d"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.1.0-beta_windows_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.1.0-beta/terraform-provider-ably_0.1.0-beta_windows_386.zip",
+          "shasum": "cf102296c1fd7e1ba7fa09102c33135c171b2e4762ecd964b4687a7d9a693be2"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.1.0-beta_windows_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.1.0-beta/terraform-provider-ably_0.1.0-beta_windows_amd64.zip",
+          "shasum": "cc4dd71fc4a96903e892527a6a9878fe1e1545e7d614a19cf0e552c9341bcfc7"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.1.0-beta_windows_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.1.0-beta/terraform-provider-ably_0.1.0-beta_windows_arm.zip",
+          "shasum": "4f4c779f9b2026b7f93d05a3c4702015832505a1e975a67bceb41b000423baae"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.1.0-beta_windows_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.1.0-beta/terraform-provider-ably_0.1.0-beta_windows_arm64.zip",
+          "shasum": "2b2565520bae100e17459d26714f5ac027bf4dbd8e44546c23b61e15dc129b5b"
+        }
+      ]
+    },
+    {
+      "version": "0.0.0-experiment",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.0.0-experiment/terraform-provider-ably_0.0.0-experiment_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.0.0-experiment/terraform-provider-ably_0.0.0-experiment_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.0.0-experiment_darwin_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.0.0-experiment/terraform-provider-ably_0.0.0-experiment_darwin_amd64.zip",
+          "shasum": "c99feafecaf9534319bd0ce4bcf8ddafedb330df88d8683a6cee017d09f198af"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.0.0-experiment_darwin_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.0.0-experiment/terraform-provider-ably_0.0.0-experiment_darwin_arm64.zip",
+          "shasum": "8dfefdb3e85ac712a36da49d57702821315155bf5bb2ed8f1a550274e6e84aae"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.0.0-experiment_freebsd_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.0.0-experiment/terraform-provider-ably_0.0.0-experiment_freebsd_386.zip",
+          "shasum": "04b5b3acc9c222449f2b4b7ba0012f2b5f1c6e460122286a35c7ad8564974a71"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.0.0-experiment_freebsd_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.0.0-experiment/terraform-provider-ably_0.0.0-experiment_freebsd_amd64.zip",
+          "shasum": "fb0ca92f6913df2f7b2339748d3dfc18345ad7db1d4e50448b0e9156a7905118"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.0.0-experiment_freebsd_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.0.0-experiment/terraform-provider-ably_0.0.0-experiment_freebsd_arm.zip",
+          "shasum": "8ba2b8e4548df90fc37ebee3556f1e6135e0b66148c653a9df52d05f654ec48b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.0.0-experiment_freebsd_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.0.0-experiment/terraform-provider-ably_0.0.0-experiment_freebsd_arm64.zip",
+          "shasum": "059ce462e31db786aaca15ce8e6b52113622b6c915fa1094463c16e152000643"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.0.0-experiment_linux_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.0.0-experiment/terraform-provider-ably_0.0.0-experiment_linux_386.zip",
+          "shasum": "710f73b3824936349d84f80b09d40fbb0c5b5fcf966d403bd31c2cf917938425"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.0.0-experiment_linux_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.0.0-experiment/terraform-provider-ably_0.0.0-experiment_linux_amd64.zip",
+          "shasum": "23df32483a1dedcc99b8f50cb88a24cddfd1e068f066db39fb9cb8bf520c85ef"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.0.0-experiment_linux_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.0.0-experiment/terraform-provider-ably_0.0.0-experiment_linux_arm.zip",
+          "shasum": "993742fe33a3d4513f1a6e5ef551e1860f87e4d952cb47d101da49e14849d923"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.0.0-experiment_linux_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.0.0-experiment/terraform-provider-ably_0.0.0-experiment_linux_arm64.zip",
+          "shasum": "7f81f9cf7c58bae4f5902495b37737c8a8316e3bb826f36454ff8bdb7d15254b"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-ably_0.0.0-experiment_windows_386.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.0.0-experiment/terraform-provider-ably_0.0.0-experiment_windows_386.zip",
+          "shasum": "d7a7b5d7e7b41239d1576b0ba3044c89e979505093252006fa15f1feb15e9a0e"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-ably_0.0.0-experiment_windows_amd64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.0.0-experiment/terraform-provider-ably_0.0.0-experiment_windows_amd64.zip",
+          "shasum": "537433163c0122fe838ab68de47f44dc69aa144a60c7df2482ccc13115377e69"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-ably_0.0.0-experiment_windows_arm.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.0.0-experiment/terraform-provider-ably_0.0.0-experiment_windows_arm.zip",
+          "shasum": "0c437648a0e99c49782645afa2d20e20e19f7d344c10dc9ec6a8808bf49e3094"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-ably_0.0.0-experiment_windows_arm64.zip",
+          "download_url": "https://github.com/ably/terraform-provider-ably/releases/download/v0.0.0-experiment/terraform-provider-ably_0.0.0-experiment_windows_arm64.zip",
+          "shasum": "3efde9a32f2005b01fe0311e95ccda239d0e74c00fa03e24afe1abc7d769f1f4"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,777 @@
+{
+  "versions": [
+    {
+      "version": "2.2.4",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.4/terraform-provider-gandi_2.2.4_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.4/terraform-provider-gandi_2.2.4_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.2.4_darwin_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.4/terraform-provider-gandi_2.2.4_darwin_amd64.zip",
+          "shasum": "4741bc0fa17bf72dc52cdd163d677086aa7cee0e89f0362b9c2c60be726e7d00"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.2.4_darwin_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.4/terraform-provider-gandi_2.2.4_darwin_arm64.zip",
+          "shasum": "382cf49780bd603e4961ef1b4a5cd1297890dc556c1f5418e26b7b2127e021e0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.2.4_freebsd_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.4/terraform-provider-gandi_2.2.4_freebsd_386.zip",
+          "shasum": "52d6567865c9e019d3263a7d525d8246fd0b9f9c907d312112b1c1591ecd5b8b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.2.4_freebsd_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.4/terraform-provider-gandi_2.2.4_freebsd_amd64.zip",
+          "shasum": "54be4075a892351a251de77f740e46ae46cfe8fab8898f4cdbaa3a49f55754c1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-gandi_2.2.4_freebsd_arm.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.4/terraform-provider-gandi_2.2.4_freebsd_arm.zip",
+          "shasum": "75026b377518711d5a5e2aa04e087e743adcb163c528c57ad8f3803c8831a52f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.2.4_freebsd_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.4/terraform-provider-gandi_2.2.4_freebsd_arm64.zip",
+          "shasum": "9178a088e99d1d590b6b41d0e98711da41abda396cc6a46c5408debb8ddadeeb"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.2.4_linux_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.4/terraform-provider-gandi_2.2.4_linux_386.zip",
+          "shasum": "939939fb7dd57d845eaea0b9b68ebd302a6aed790818faf74fc328532b27de0d"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.2.4_linux_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.4/terraform-provider-gandi_2.2.4_linux_amd64.zip",
+          "shasum": "108c9270d9d9875413009644a3600e5831d55f52ec35f125004e0509f5060d27"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-gandi_2.2.4_linux_arm.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.4/terraform-provider-gandi_2.2.4_linux_arm.zip",
+          "shasum": "60d5c6a34cec2facf7c1eddb4dbf62be3301b1859380ec1d8ebaf9e2454e0510"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.2.4_linux_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.4/terraform-provider-gandi_2.2.4_linux_arm64.zip",
+          "shasum": "6a5fe35bdeb163c3f5bf8ae98130bde1bc21016332b54de22705ef02d85f5a48"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.2.4_windows_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.4/terraform-provider-gandi_2.2.4_windows_386.zip",
+          "shasum": "c6fee34bb9b9445f54ea0d20283451861e54d43fc77dbaefe92a0973e7a0ec61"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.2.4_windows_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.4/terraform-provider-gandi_2.2.4_windows_amd64.zip",
+          "shasum": "00757767c7937c1e69bd5469c35c252745500e31afc9d797d6651a0bd343708c"
+        }
+      ]
+    },
+    {
+      "version": "2.2.3",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.3/terraform-provider-gandi_2.2.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.3/terraform-provider-gandi_2.2.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.2.3_darwin_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.3/terraform-provider-gandi_2.2.3_darwin_amd64.zip",
+          "shasum": "a030027413d3dc7695691917f328fecb9b15d6b9e0d72b35439534cc22abb782"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.2.3_darwin_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.3/terraform-provider-gandi_2.2.3_darwin_arm64.zip",
+          "shasum": "1e912145a1819fc7516353369332a41558a3c6e9edac8bdcc09aa8c2735d29e3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.2.3_freebsd_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.3/terraform-provider-gandi_2.2.3_freebsd_386.zip",
+          "shasum": "1059865208c4ce9a827d0e1fa09a74297476d064d5aebd598633b10036cdff5d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.2.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.3/terraform-provider-gandi_2.2.3_freebsd_amd64.zip",
+          "shasum": "d03f6bd478f2b57091f2e82dde17a4adfe0b423eaaa0f99c59838fc64dd965ab"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-gandi_2.2.3_freebsd_arm.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.3/terraform-provider-gandi_2.2.3_freebsd_arm.zip",
+          "shasum": "4211fa55947c3b7841931a2f944fe02fa50d2dca5fe850113d7dc5713574c0de"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.2.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.3/terraform-provider-gandi_2.2.3_freebsd_arm64.zip",
+          "shasum": "a5019df0ce14c20483f397eef4e91d9f60ad78644acb3134130c4ebbc26059b5"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.2.3_linux_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.3/terraform-provider-gandi_2.2.3_linux_386.zip",
+          "shasum": "784ee8dd57193dfcb38fe06fedc2931b02a887ce887744ce92b856f121d6fb50"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.2.3_linux_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.3/terraform-provider-gandi_2.2.3_linux_amd64.zip",
+          "shasum": "e1b23742e9d98391fb84a4fad4e577ca2827bb25c40e310f3faaa3dcbde3a508"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-gandi_2.2.3_linux_arm.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.3/terraform-provider-gandi_2.2.3_linux_arm.zip",
+          "shasum": "9e296c6b33a4b3042c030a44368a45c95a531b7c6c369db30a7fd2e9503bb4d8"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.2.3_linux_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.3/terraform-provider-gandi_2.2.3_linux_arm64.zip",
+          "shasum": "2977e335cb1df04baa200933679048a7b4151f48cbd551917abe45dc3b62f85d"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.2.3_windows_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.3/terraform-provider-gandi_2.2.3_windows_386.zip",
+          "shasum": "509f2262f4d682504eb412eeb58968c23208ddab8ebd0b0371a9eb1332b57f33"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.2.3_windows_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.3/terraform-provider-gandi_2.2.3_windows_amd64.zip",
+          "shasum": "81a9bcbae602d32d71fa8ff3b2140c3d86692736a4c3379ebcfa06c858fae549"
+        }
+      ]
+    },
+    {
+      "version": "2.2.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.2/terraform-provider-gandi_2.2.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.2/terraform-provider-gandi_2.2.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.2.2_darwin_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.2/terraform-provider-gandi_2.2.2_darwin_amd64.zip",
+          "shasum": "1c451b2b82e009c7719e59fd00ff7fefbde920c710854baf45e031828f468ef3"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.2.2_darwin_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.2/terraform-provider-gandi_2.2.2_darwin_arm64.zip",
+          "shasum": "8e31fee9c1a0135b279eeac1b997f38392f9db5ff19fbb91abbcc2a8c6276c9e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.2.2_freebsd_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.2/terraform-provider-gandi_2.2.2_freebsd_386.zip",
+          "shasum": "8611335a225fed5ef69a49e70fdd0612b19052c5498c87b5f7b961befa2baff8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.2.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.2/terraform-provider-gandi_2.2.2_freebsd_amd64.zip",
+          "shasum": "83178cc108db05c127c2a6d89c365caa3dc4e873a69833bcdbdf04588d7b8ed9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-gandi_2.2.2_freebsd_arm.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.2/terraform-provider-gandi_2.2.2_freebsd_arm.zip",
+          "shasum": "350fcf52dc9a64b87367af2cec9c38114501e3db3ae1d1ad31d91bb8e2ab6916"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.2.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.2/terraform-provider-gandi_2.2.2_freebsd_arm64.zip",
+          "shasum": "b36db5799f84848619190aa7865cdf9c26dc979d418563eea634ac371896e5b4"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.2.2_linux_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.2/terraform-provider-gandi_2.2.2_linux_386.zip",
+          "shasum": "a1cd61555d3ab66500c29ab9373b95a251969c24b659f7521328a5b4dc1ffc62"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.2.2_linux_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.2/terraform-provider-gandi_2.2.2_linux_amd64.zip",
+          "shasum": "55dccee40a00edf0eae56a127fcc5683c8d3e4284e58daaac0a088f43776bafc"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-gandi_2.2.2_linux_arm.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.2/terraform-provider-gandi_2.2.2_linux_arm.zip",
+          "shasum": "08a1b24fc5674d130e7d8fe10ec194c08e745a3ec979ca18bebe130db77fcd21"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.2.2_linux_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.2/terraform-provider-gandi_2.2.2_linux_arm64.zip",
+          "shasum": "742287e2d35ddcb514ab238b513049d2d19b7459a2c64b0899a14b404c6b2b08"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.2.2_windows_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.2/terraform-provider-gandi_2.2.2_windows_386.zip",
+          "shasum": "33b85b52552dae4e89069d07e16e53fa4b1834ae35e0c0b4cc8b5b4f2dac0049"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.2.2_windows_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.2/terraform-provider-gandi_2.2.2_windows_amd64.zip",
+          "shasum": "5722d5e9bf6b72c8e52b561e72eb7e32a98124caebe996caf21e0fffbdcb4e66"
+        }
+      ]
+    },
+    {
+      "version": "2.2.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.1/terraform-provider-gandi_2.2.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.1/terraform-provider-gandi_2.2.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.2.1_darwin_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.1/terraform-provider-gandi_2.2.1_darwin_amd64.zip",
+          "shasum": "e2b845949fe9527790d9dad108166ced74228b6a1e5df70e8c41fa2256753868"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.2.1_darwin_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.1/terraform-provider-gandi_2.2.1_darwin_arm64.zip",
+          "shasum": "144447f27a30619893236fac31a9f207be75674d17c154ed4b887620aa99f030"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.2.1_freebsd_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.1/terraform-provider-gandi_2.2.1_freebsd_386.zip",
+          "shasum": "1b4284635437e7accc5415bbdc89b5dd7772fb3222ca07e87a005aa27d3fbf89"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.2.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.1/terraform-provider-gandi_2.2.1_freebsd_amd64.zip",
+          "shasum": "0ffd5be11960ecced30d55a6e154d78d72a49aa14b130a78b07a3214cfb16a3d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-gandi_2.2.1_freebsd_arm.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.1/terraform-provider-gandi_2.2.1_freebsd_arm.zip",
+          "shasum": "138d8ec5654c61bf138dd4ca18e23ae6e55a5bf2fa8ac4450ba8f9d7899f52c4"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.2.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.1/terraform-provider-gandi_2.2.1_freebsd_arm64.zip",
+          "shasum": "236ea54890b67907e011a7b4aaf61f07f200a67743c69424b085ce39d3370922"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.2.1_linux_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.1/terraform-provider-gandi_2.2.1_linux_386.zip",
+          "shasum": "c769d61d119775bbb150f44c462a0b08ec88d51ae998b0199892886ba379aac8"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.2.1_linux_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.1/terraform-provider-gandi_2.2.1_linux_amd64.zip",
+          "shasum": "a9fd5d493d33f4752ea8cf2c128de03443a3d96fdc87a7f57826849cfba6a05b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-gandi_2.2.1_linux_arm.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.1/terraform-provider-gandi_2.2.1_linux_arm.zip",
+          "shasum": "ac0cac423a0b937b079af4b15ad72630a93aa397700ff70275f2b2b8801853cd"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.2.1_linux_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.1/terraform-provider-gandi_2.2.1_linux_arm64.zip",
+          "shasum": "a43507a76858a97c25539e6236870e23e7f53d0dabaf6de825bee61ea3e6e5dc"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.2.1_windows_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.1/terraform-provider-gandi_2.2.1_windows_386.zip",
+          "shasum": "a2bb57f2b748b6e39e4cd65865818bda0ca51d3a116f33201a30020c61fffd60"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.2.1_windows_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.1/terraform-provider-gandi_2.2.1_windows_amd64.zip",
+          "shasum": "03b46a2dc04528686143361dfac9ae5cbe6db179c922509c5962f85f9f17f93d"
+        }
+      ]
+    },
+    {
+      "version": "2.2.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.0/terraform-provider-gandi_2.2.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.0/terraform-provider-gandi_2.2.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.2.0_darwin_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.0/terraform-provider-gandi_2.2.0_darwin_amd64.zip",
+          "shasum": "26d6be9690fdb878dae531a169127f49f35446161bb450cf48fcf940bc57b729"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.2.0_darwin_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.0/terraform-provider-gandi_2.2.0_darwin_arm64.zip",
+          "shasum": "0336266c82bf2ed4f10e93b4ac0dc39f053e93f3e101fa8e60a2cc30dc02d725"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.2.0_freebsd_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.0/terraform-provider-gandi_2.2.0_freebsd_386.zip",
+          "shasum": "2cd22e181908bb398fde93efbe610923900bdf618001b78ab2cbafa3558424ae"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.2.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.0/terraform-provider-gandi_2.2.0_freebsd_amd64.zip",
+          "shasum": "b6b2337f619cb6e7a2ddf03536bc79825ccf0261a3a21da54f271cb77ee80cf4"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-gandi_2.2.0_freebsd_arm.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.0/terraform-provider-gandi_2.2.0_freebsd_arm.zip",
+          "shasum": "2c16baba248181f5beb4191b5bb7f904dce0af7a0b7df8dccc4796c2c71ae71f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.2.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.0/terraform-provider-gandi_2.2.0_freebsd_arm64.zip",
+          "shasum": "d580f61513681520d41fc98b551380c407ee2b0404d40c3cbfabd023685c6749"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.2.0_linux_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.0/terraform-provider-gandi_2.2.0_linux_386.zip",
+          "shasum": "39aed733c5e51d6bb4e99016032db3405e6f52e1680bd5fbe7d35a33e0717d81"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.2.0_linux_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.0/terraform-provider-gandi_2.2.0_linux_amd64.zip",
+          "shasum": "b172eee98962e53e26297ce2d826a193d2b903724aca100c5a5c1e95e8bb866c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-gandi_2.2.0_linux_arm.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.0/terraform-provider-gandi_2.2.0_linux_arm.zip",
+          "shasum": "7b2166080d361d47e6cbd13423e7faa3f5e4b79583588d1fb218664db244e352"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.2.0_linux_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.0/terraform-provider-gandi_2.2.0_linux_arm64.zip",
+          "shasum": "c2fe7acffb196549a597768c9f3d145190ddfc7f626fd73a966b68c1753e61e2"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.2.0_windows_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.0/terraform-provider-gandi_2.2.0_windows_386.zip",
+          "shasum": "3bdfe06c678015ff96abf2dd98fa1ae85722ebdf027c33b4a390863733e79647"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.2.0_windows_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.2.0/terraform-provider-gandi_2.2.0_windows_amd64.zip",
+          "shasum": "adc9da9af7e1b3005383fd788dddec57c915378cb301313b948e2b4fc2aebfee"
+        }
+      ]
+    },
+    {
+      "version": "2.1.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.1.0/terraform-provider-gandi_2.1.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.1.0/terraform-provider-gandi_2.1.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.1.0_darwin_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.1.0/terraform-provider-gandi_2.1.0_darwin_amd64.zip",
+          "shasum": "6382c0f8f3658d24fda4256a59d17ccce3af23be634550163b395e8be5a8c29b"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.1.0_darwin_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.1.0/terraform-provider-gandi_2.1.0_darwin_arm64.zip",
+          "shasum": "1223895fc52781b737e4510f10e9b5654ca1cb141dfe2bf776bdc319b933223b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.1.0_freebsd_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.1.0/terraform-provider-gandi_2.1.0_freebsd_386.zip",
+          "shasum": "f3cc92e511e3d28425db80f2b8d2fb6b32a02aaae7b06065ed55b0bb204c040d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.1.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.1.0/terraform-provider-gandi_2.1.0_freebsd_amd64.zip",
+          "shasum": "bb39199b5de77394529b433fa47281110977629f40d10b884fa4c589505e2789"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-gandi_2.1.0_freebsd_arm.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.1.0/terraform-provider-gandi_2.1.0_freebsd_arm.zip",
+          "shasum": "8724a2cdf3613caf45f3b9dba75fb0cec96a12ef7672bc82e62e57168e84d96d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.1.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.1.0/terraform-provider-gandi_2.1.0_freebsd_arm64.zip",
+          "shasum": "1f3f9df2be1937b19ce068080f026db27df77d841d966a154edc2d4ef8579186"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.1.0_linux_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.1.0/terraform-provider-gandi_2.1.0_linux_386.zip",
+          "shasum": "772b212b59b8cb9ccb0b2d0006e45f93c264c7bfed325941fef8e35ad81e3178"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.1.0_linux_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.1.0/terraform-provider-gandi_2.1.0_linux_amd64.zip",
+          "shasum": "67511c8004a116202555980be1de89e61493c2db61b19018c92a8c32853fa3f5"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-gandi_2.1.0_linux_arm.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.1.0/terraform-provider-gandi_2.1.0_linux_arm.zip",
+          "shasum": "8eef8ca62214177b52a081c1a643fe2aa89c867da8b066470fe13c38f922d3e3"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.1.0_linux_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.1.0/terraform-provider-gandi_2.1.0_linux_arm64.zip",
+          "shasum": "95c115faa29f6fa8d6fdf35e3a2f15d08d241e520a4ea2a41c2efd1785c36fda"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.1.0_windows_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.1.0/terraform-provider-gandi_2.1.0_windows_386.zip",
+          "shasum": "a2c14cac3d1497852a0f6c8febfe35084f8f98c606853ff0bea63916de78d1c3"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.1.0_windows_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.1.0/terraform-provider-gandi_2.1.0_windows_amd64.zip",
+          "shasum": "65fc774f3ebca984113a65f2942e4863551cba8c9ff822767b8bae56330e8428"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-gandi_2.1.0_windows_arm.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.1.0/terraform-provider-gandi_2.1.0_windows_arm.zip",
+          "shasum": "6a08616cbfa3ed59003f3b8ccbd29831235c7dd8d124850151c25ca670154716"
+        }
+      ]
+    },
+    {
+      "version": "2.0.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.1/terraform-provider-gandi_2.0.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.1/terraform-provider-gandi_2.0.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.0.1_darwin_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.1/terraform-provider-gandi_2.0.1_darwin_amd64.zip",
+          "shasum": "6440b9904344b894f4ed8d27a3b091d4d5ce3707d9827b554f31b9aacca25d39"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.0.1_darwin_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.1/terraform-provider-gandi_2.0.1_darwin_arm64.zip",
+          "shasum": "9356408750becd9e710cc20dd24ee07d6e38fe7a904b01df74b4bfa78cf764d4"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.0.1_freebsd_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.1/terraform-provider-gandi_2.0.1_freebsd_386.zip",
+          "shasum": "199d314f4a7a71dfed4a1766c378654514993180886a4062ae1c169adc28e99b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.0.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.1/terraform-provider-gandi_2.0.1_freebsd_amd64.zip",
+          "shasum": "d9c1ff08b062ac8ef429c8424bfb6aa3634909b2d020b138e820c59948206f55"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-gandi_2.0.1_freebsd_arm.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.1/terraform-provider-gandi_2.0.1_freebsd_arm.zip",
+          "shasum": "3d78b552bb11a6d77dcc5f08f9477b234cd113c58c052f1ad3e98f3c3b6b4762"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.0.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.1/terraform-provider-gandi_2.0.1_freebsd_arm64.zip",
+          "shasum": "c0be4280f06c9d61eeb0de5dc91cd4234b523592b7f83d8eaaf76d88755c01d6"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.0.1_linux_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.1/terraform-provider-gandi_2.0.1_linux_386.zip",
+          "shasum": "511634aa419fea76aed2c74f81b90abad01587562ff3fa86aacfaa46c738f0b9"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.0.1_linux_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.1/terraform-provider-gandi_2.0.1_linux_amd64.zip",
+          "shasum": "59b0f060c8d385fdf4b83dcffd274470d8dc81654fe309eb0bb8d019f78092ad"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-gandi_2.0.1_linux_arm.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.1/terraform-provider-gandi_2.0.1_linux_arm.zip",
+          "shasum": "64277e9982b8c84e7d318fbeea046449fedb6f1891139f5ba37201badf2e8221"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.0.1_linux_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.1/terraform-provider-gandi_2.0.1_linux_arm64.zip",
+          "shasum": "48c75e3d7bba7f65ae2b0e3d046ec5470c97b42ee5a97089cc0479afe9bf8fc4"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.0.1_windows_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.1/terraform-provider-gandi_2.0.1_windows_386.zip",
+          "shasum": "9d894a60e2411eefc651a902a854cd7cee6c1e9b2ead59031f0cc9170d0d55c6"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.0.1_windows_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.1/terraform-provider-gandi_2.0.1_windows_amd64.zip",
+          "shasum": "120e59e52d1dc659a3b3be5a32edc43404f0713be30f03502a43fcae528548e4"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-gandi_2.0.1_windows_arm.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.1/terraform-provider-gandi_2.0.1_windows_arm.zip",
+          "shasum": "c27b1d4b7bbb263e3ea0f829066fe081021d2eea48a4c578a71acca97e779809"
+        }
+      ]
+    },
+    {
+      "version": "2.0.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.0/terraform-provider-gandi_2.0.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.0/terraform-provider-gandi_2.0.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.0.0_darwin_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.0/terraform-provider-gandi_2.0.0_darwin_amd64.zip",
+          "shasum": "bc5822beabcd86bdc6ac351adec1019bd1a85a257796a15c877b719521ec59a9"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.0.0_darwin_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.0/terraform-provider-gandi_2.0.0_darwin_arm64.zip",
+          "shasum": "b2caa1fecc0470e6cc5ca2a4aa64f0dfb54c2553f85155e9f210e38567b4babe"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.0.0_freebsd_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.0/terraform-provider-gandi_2.0.0_freebsd_386.zip",
+          "shasum": "a29483320c496294e9091c9f924ff18232ccd18dc514c6d83616a99ff0117130"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.0.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.0/terraform-provider-gandi_2.0.0_freebsd_amd64.zip",
+          "shasum": "ded2e51645f6457e5ae90c343d2b5b20df6dab2689910cadb40a1c1c75d7eb0d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-gandi_2.0.0_freebsd_arm.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.0/terraform-provider-gandi_2.0.0_freebsd_arm.zip",
+          "shasum": "db88d487ee10a1642b306be199d5a0e8e168ddab717d362bb2200db08405eb89"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.0.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.0/terraform-provider-gandi_2.0.0_freebsd_arm64.zip",
+          "shasum": "7d832637ff33a68d20330aee5bfac815829b03c627fdb1356faf88cc9722a243"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.0.0_linux_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.0/terraform-provider-gandi_2.0.0_linux_386.zip",
+          "shasum": "1644db11a8ce91191249d3885ccf3955f56f7e04b76e4ea08f85417aead2983f"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.0.0_linux_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.0/terraform-provider-gandi_2.0.0_linux_amd64.zip",
+          "shasum": "f4361d4ee1b8a2add3c75dfb3c40347742c9a013598209b7b6beb6e94b5693cd"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-gandi_2.0.0_linux_arm.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.0/terraform-provider-gandi_2.0.0_linux_arm.zip",
+          "shasum": "47229da7cfd58ee1041d51c3bfb6aae55d7799739f23270d06e7f4267f34af08"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-gandi_2.0.0_linux_arm64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.0/terraform-provider-gandi_2.0.0_linux_arm64.zip",
+          "shasum": "31581a8c919fbd5eff433ad323ec36fbce1188f96738187863b443c7b80a5ba5"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-gandi_2.0.0_windows_386.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.0/terraform-provider-gandi_2.0.0_windows_386.zip",
+          "shasum": "e48420e251d14a8c2df7b22e3dd6c9ed3b9479cee38cdf78cf3aa8c2eb4f7e05"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-gandi_2.0.0_windows_amd64.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.0/terraform-provider-gandi_2.0.0_windows_amd64.zip",
+          "shasum": "b36daa31a6df6be4f609de56caa0fa84028697cbaed7c4fc333a8b90b7543b9c"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-gandi_2.0.0_windows_arm.zip",
+          "download_url": "https://github.com/go-gandi/terraform-provider-gandi/releases/download/v2.0.0/terraform-provider-gandi_2.0.0_windows_arm.zip",
+          "shasum": "e1a2e831af7a122c08066c35b1d4f0eb9c6751b9baf111d7ac3b16e40cb802c2"
+        }
+      ]
+    }
+  ]
+}

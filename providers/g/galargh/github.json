@@ -1,0 +1,976 @@
+{
+  "versions": [
+    {
+      "version": "5.25.2-rc9",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc9/terraform-provider-github_5.25.2-rc9_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc9/terraform-provider-github_5.25.2-rc9_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc9_darwin_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc9/terraform-provider-github_5.25.2-rc9_darwin_amd64.zip",
+          "shasum": "6705b43479f379c1cf2760a174056b1f4442f23c455c4fb434ff8239ab93d774"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc9_darwin_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc9/terraform-provider-github_5.25.2-rc9_darwin_arm64.zip",
+          "shasum": "c9510ee738a1ab05d133fec17a23eb6f21855df987e62609c88bb5003200b42e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc9_freebsd_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc9/terraform-provider-github_5.25.2-rc9_freebsd_386.zip",
+          "shasum": "f0ce26561bbd02f09cb04aac59300c67a9275a8d2f88c5d6e39865b25bd49747"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc9_freebsd_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc9/terraform-provider-github_5.25.2-rc9_freebsd_amd64.zip",
+          "shasum": "7726ab84e1d0cb3cce0d0fa89187c76a4849ed66c64b287f31bd42698ca51e65"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc9_freebsd_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc9/terraform-provider-github_5.25.2-rc9_freebsd_arm.zip",
+          "shasum": "542730fa0f3615b5d6c092fb739a5c16caa70946389a90055ac552f53eccda7b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc9_freebsd_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc9/terraform-provider-github_5.25.2-rc9_freebsd_arm64.zip",
+          "shasum": "95cd136d383c45833984d0744e233b0423ed65323b509c5701652f32326bed5f"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc9_linux_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc9/terraform-provider-github_5.25.2-rc9_linux_386.zip",
+          "shasum": "9a14e689f88a1c441e414ccb6fa3a2bca9612e0680b3a0da99d968723ea6b568"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc9_linux_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc9/terraform-provider-github_5.25.2-rc9_linux_amd64.zip",
+          "shasum": "4921932b306e72034c8e978f94110cd9457a78476744569ae31bc45a1375ed1b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc9_linux_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc9/terraform-provider-github_5.25.2-rc9_linux_arm.zip",
+          "shasum": "71a8fd334d29dadc8f247f6b475da781246928a0a22792ee4b2336f0e8273741"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc9_linux_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc9/terraform-provider-github_5.25.2-rc9_linux_arm64.zip",
+          "shasum": "27174c96a2a1557170e74a7dc2787b6c9672a7f57e85deadef912849f91d3420"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc9_windows_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc9/terraform-provider-github_5.25.2-rc9_windows_386.zip",
+          "shasum": "27f2235ead22da468afdb9c8ab9420f61de9f8ddde6771dd682d4e31e85d23e8"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc9_windows_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc9/terraform-provider-github_5.25.2-rc9_windows_amd64.zip",
+          "shasum": "6330a2531de1d46f0a39a8da5685ba1cb1776ebe42fd12a8bdba28880caf0435"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc9_windows_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc9/terraform-provider-github_5.25.2-rc9_windows_arm.zip",
+          "shasum": "9dbe839d842cbbcc311f02589b881f7b40a769909e9180f4ea439a4ab928fd69"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc9_windows_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc9/terraform-provider-github_5.25.2-rc9_windows_arm64.zip",
+          "shasum": "772f58dc036a1587ec92b93a37b564b695ceacbe31e41f160a391fe3310b88c9"
+        }
+      ]
+    },
+    {
+      "version": "5.25.2-rc8",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc8/terraform-provider-github_5.25.2-rc8_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc8/terraform-provider-github_5.25.2-rc8_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc8_darwin_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc8/terraform-provider-github_5.25.2-rc8_darwin_amd64.zip",
+          "shasum": "3f961b6bf80220e2e83f7a26f69f2dadb10316c3a9a876c8040ed0e01fb50052"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc8_darwin_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc8/terraform-provider-github_5.25.2-rc8_darwin_arm64.zip",
+          "shasum": "3b487c12a7233f693c63b29ac3c7fc6e94d0267422edaf02a16c2e8e25d4511a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc8_freebsd_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc8/terraform-provider-github_5.25.2-rc8_freebsd_386.zip",
+          "shasum": "318e08ebbb08a8cf01102477a4fa0acbd05a3ef6dc509d34fb02c0a30bd959f3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc8_freebsd_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc8/terraform-provider-github_5.25.2-rc8_freebsd_amd64.zip",
+          "shasum": "92fd65ab45aa75775a2f26cf30eb19a5a85e398a2258acc0e4dc102fd16e9944"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc8_freebsd_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc8/terraform-provider-github_5.25.2-rc8_freebsd_arm.zip",
+          "shasum": "31b2977ff07aad6eb01b0006d5fb7c3524b153f4c6b1a835bd05637d87c486c0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc8_freebsd_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc8/terraform-provider-github_5.25.2-rc8_freebsd_arm64.zip",
+          "shasum": "826da0d683cdb93eb794c08348d3a31aeae72b4253a18494daf0066a5ed47136"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc8_linux_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc8/terraform-provider-github_5.25.2-rc8_linux_386.zip",
+          "shasum": "b1d216068035c1969c63269c56a92d066bff0fb559820d2b1533e39f3beec2fd"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc8_linux_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc8/terraform-provider-github_5.25.2-rc8_linux_amd64.zip",
+          "shasum": "1a694cc285194aaa7a3bde1d7ab0c25b903370bd1b42acef88862756ba10d669"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc8_linux_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc8/terraform-provider-github_5.25.2-rc8_linux_arm.zip",
+          "shasum": "a07164579335b8f00faed239dacd1dab3518b4f40c3fe17884a7babff09124be"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc8_linux_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc8/terraform-provider-github_5.25.2-rc8_linux_arm64.zip",
+          "shasum": "035549c23191cc210c2866f73ce9a0fd719c2b23544eba1d3f4d232a0e4e7afc"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc8_windows_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc8/terraform-provider-github_5.25.2-rc8_windows_386.zip",
+          "shasum": "9e56669de8e35a962006338209e683e56b4b7306b42b9b563f9a3a4b090d7bfd"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc8_windows_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc8/terraform-provider-github_5.25.2-rc8_windows_amd64.zip",
+          "shasum": "6b6649c415cbc037eecc90393a49c101473c27980a85551306ab86c519041c25"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc8_windows_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc8/terraform-provider-github_5.25.2-rc8_windows_arm.zip",
+          "shasum": "eb5c7eb84fa401e3e803783b28d58327a93f754caac769122265747aeb321447"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc8_windows_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc8/terraform-provider-github_5.25.2-rc8_windows_arm64.zip",
+          "shasum": "dda7902c34826fcc814d5d1ae2bbab24f10c567536b0c64a6b0f8c1eee2d4eed"
+        }
+      ]
+    },
+    {
+      "version": "5.25.2-rc7",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc7/terraform-provider-github_5.25.2-rc7_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc7/terraform-provider-github_5.25.2-rc7_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc7_darwin_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc7/terraform-provider-github_5.25.2-rc7_darwin_amd64.zip",
+          "shasum": "9cd04d8058e36654e7b06a101320819b3f3380042a770f10f4a1cebee98d1ce8"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc7_darwin_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc7/terraform-provider-github_5.25.2-rc7_darwin_arm64.zip",
+          "shasum": "0d5c296aa2eeab7e56f354d0fea3869828aefb53e0cec0ed7318a1511d15036a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc7_freebsd_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc7/terraform-provider-github_5.25.2-rc7_freebsd_386.zip",
+          "shasum": "4afb81bab4e09f6a0ef0f5771aaa6647fba660e8cbb94b146f53cc48ce1c74ce"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc7_freebsd_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc7/terraform-provider-github_5.25.2-rc7_freebsd_amd64.zip",
+          "shasum": "94cd320027d61d9363d978920ff256a8218d4ac0bd9b1e5c72e64362a55bfce6"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc7_freebsd_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc7/terraform-provider-github_5.25.2-rc7_freebsd_arm.zip",
+          "shasum": "be8021dc9edaf9fee0b8a2b44b0317ce4c0138686c79b04120f084f70be06433"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc7_freebsd_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc7/terraform-provider-github_5.25.2-rc7_freebsd_arm64.zip",
+          "shasum": "4dab7a896d3900ae0de8c49d5c0a7f1167ee74ff74d12fc592ce16e6a298cf90"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc7_linux_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc7/terraform-provider-github_5.25.2-rc7_linux_386.zip",
+          "shasum": "97f169f66bfd66dd90795cb68b2fc9f015581123e9a7e0b6b3b0d07a87cdb3f3"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc7_linux_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc7/terraform-provider-github_5.25.2-rc7_linux_amd64.zip",
+          "shasum": "9b50983b012f6fceda284199af4d9f0ffad3e6025a61129b127cc4fe6d67d43f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc7_linux_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc7/terraform-provider-github_5.25.2-rc7_linux_arm.zip",
+          "shasum": "e4cbec5507c35efa931c6b99deba23c54355c50b1861e783c6bafe671190bf07"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc7_linux_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc7/terraform-provider-github_5.25.2-rc7_linux_arm64.zip",
+          "shasum": "28ef860376751447cf5779839e714571da9769c9d74ad54405cf27488a3e21b6"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc7_windows_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc7/terraform-provider-github_5.25.2-rc7_windows_386.zip",
+          "shasum": "b5f90daa984da97428700cd9454a2a7fe243f7104866014324814ce4e3e14f34"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc7_windows_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc7/terraform-provider-github_5.25.2-rc7_windows_amd64.zip",
+          "shasum": "4aef34be200b5189dfb78e768beb8dae723f4340b44c16587f11abbe8bdb4762"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc7_windows_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc7/terraform-provider-github_5.25.2-rc7_windows_arm.zip",
+          "shasum": "04a2374f9589c00a2f2630331abb62fba8829e873cbf701100ebbc6af24ff0e0"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc7_windows_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc7/terraform-provider-github_5.25.2-rc7_windows_arm64.zip",
+          "shasum": "df98fc828aae5d1f5b6e65978b9df5035eb8ab3d373d5d30b9270e5ddc7f5fcc"
+        }
+      ]
+    },
+    {
+      "version": "5.25.2-rc6",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc6/terraform-provider-github_5.25.2-rc6_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc6/terraform-provider-github_5.25.2-rc6_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc6_darwin_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc6/terraform-provider-github_5.25.2-rc6_darwin_amd64.zip",
+          "shasum": "54d7a65793d432471fe388267737a38c1829f54bc841b2b8da69bf58f6b50a40"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc6_darwin_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc6/terraform-provider-github_5.25.2-rc6_darwin_arm64.zip",
+          "shasum": "d1942c7838a6ab56723fa1a48f75ba8d120b7ccc7a6f0a58eb2480adf4c0734c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc6_freebsd_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc6/terraform-provider-github_5.25.2-rc6_freebsd_386.zip",
+          "shasum": "3b03931ac0253ebdb861fdeea93b2dd7693d1b6602f8c56f4533f46b61011fbe"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc6_freebsd_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc6/terraform-provider-github_5.25.2-rc6_freebsd_amd64.zip",
+          "shasum": "1deaeac21c9693c0e74e286f8fc57a846d533cf4ab5f41e4336b4a2ac50a30eb"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc6_freebsd_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc6/terraform-provider-github_5.25.2-rc6_freebsd_arm.zip",
+          "shasum": "2f85c5686dfd55b0963ec1375b892225521d674dce8bb877a19b1dbe18786b7c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc6_freebsd_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc6/terraform-provider-github_5.25.2-rc6_freebsd_arm64.zip",
+          "shasum": "140f990bdb2af57dc983a93a68db68a5bb339f59a37df357e88ab2f3b3f16d02"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc6_linux_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc6/terraform-provider-github_5.25.2-rc6_linux_386.zip",
+          "shasum": "6fadcd9824750e8be65f812a44db55ffd08d15c243110b0c30044b10ee39c57e"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc6_linux_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc6/terraform-provider-github_5.25.2-rc6_linux_amd64.zip",
+          "shasum": "223ba0a0a4db2d9c0fd89f1f69f20a2b97a3edc212fc3f5bc66d3ced893400ab"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc6_linux_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc6/terraform-provider-github_5.25.2-rc6_linux_arm.zip",
+          "shasum": "e89d7a5066d3fe8cd5f9a707da446434e78b67423a5b9d7f9516a468baf0fc31"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc6_linux_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc6/terraform-provider-github_5.25.2-rc6_linux_arm64.zip",
+          "shasum": "940c794bb6f4c204fd3ee5516aef083278a401fa0bdca173da22376869e883fd"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc6_windows_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc6/terraform-provider-github_5.25.2-rc6_windows_386.zip",
+          "shasum": "e88a5129071d56629a24602ed00b767e92291c434e132fbcaedfc97f871bf673"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc6_windows_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc6/terraform-provider-github_5.25.2-rc6_windows_amd64.zip",
+          "shasum": "6ce8892c5a728f5521b966add1092c413e9f4ea151b6a08b2c3dd555ebf701dc"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc6_windows_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc6/terraform-provider-github_5.25.2-rc6_windows_arm.zip",
+          "shasum": "e79f50971ff9e2f9038ff592103e5cc3d416f7d2d70e39df7f345c50ccad196d"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc6_windows_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc6/terraform-provider-github_5.25.2-rc6_windows_arm64.zip",
+          "shasum": "eba38b4ffaf737b9995a5c3347c67c4351f3fd52e130e251287e57d4c9320eba"
+        }
+      ]
+    },
+    {
+      "version": "5.25.2-rc5",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc5/terraform-provider-github_5.25.2-rc5_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc5/terraform-provider-github_5.25.2-rc5_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc5_darwin_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc5/terraform-provider-github_5.25.2-rc5_darwin_amd64.zip",
+          "shasum": "3dcf2c1ab0c67cb5a4b6531bf7d60bf89d79617f122bfe23c4d137a74091da61"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc5_darwin_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc5/terraform-provider-github_5.25.2-rc5_darwin_arm64.zip",
+          "shasum": "d15c4b6ac8a6ac80d3044621b8968e5d58ee65ba32fbf671ab3a5f6af763650a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc5_freebsd_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc5/terraform-provider-github_5.25.2-rc5_freebsd_386.zip",
+          "shasum": "53b7ed7c44bd218c8896236c9b827f61ea2f80af9abf8c117c6ef79203aaa016"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc5_freebsd_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc5/terraform-provider-github_5.25.2-rc5_freebsd_amd64.zip",
+          "shasum": "50d41097b2de27a3407e704dbe6dc6322193a5b049a43252900cd559c94ee157"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc5_freebsd_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc5/terraform-provider-github_5.25.2-rc5_freebsd_arm.zip",
+          "shasum": "e18ecd077a055145b2ee163efc026af20282aba3bd1b958db0b4422fd840058b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc5_freebsd_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc5/terraform-provider-github_5.25.2-rc5_freebsd_arm64.zip",
+          "shasum": "b9999dcd29e2b6d226fc495a88770b8641396bc1a02dd45c5f1e2aaf776388ee"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc5_linux_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc5/terraform-provider-github_5.25.2-rc5_linux_386.zip",
+          "shasum": "3380d3fae62225e108a08e8024f912f19a584a8c90cb36d988c3e69d0a1d42a9"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc5_linux_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc5/terraform-provider-github_5.25.2-rc5_linux_amd64.zip",
+          "shasum": "45221b132a7c2cdf1b67eb1a80f5937707b36e27f979bc1b28d6dc28cad3113a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc5_linux_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc5/terraform-provider-github_5.25.2-rc5_linux_arm.zip",
+          "shasum": "5bc88f89ddd9f4fbf5008ebf9d16d057c4ee953785ad4b8fc13fa0afa1d12431"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc5_linux_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc5/terraform-provider-github_5.25.2-rc5_linux_arm64.zip",
+          "shasum": "b74739ab71c55f91828989d7b5f1b01746ff588eeff06971422ebdd0157852f3"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc5_windows_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc5/terraform-provider-github_5.25.2-rc5_windows_386.zip",
+          "shasum": "acb4ad1590cb6243f27c5be3866642c0e453491cbea87a8bf3ed02f8c9185cd5"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc5_windows_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc5/terraform-provider-github_5.25.2-rc5_windows_amd64.zip",
+          "shasum": "7cc2bfb4f11ca09c573b9ce5e977b598ef22c0c1e269b4f2bfbce86ce81d10f3"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc5_windows_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc5/terraform-provider-github_5.25.2-rc5_windows_arm.zip",
+          "shasum": "1dbda35b1845462acb0783c254e2b4f5dc8c299cb1c649bcdd5a7e7b7b14f033"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc5_windows_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc5/terraform-provider-github_5.25.2-rc5_windows_arm64.zip",
+          "shasum": "d002e13b842504040a66e9d334f7febaa04b9418dda62164f66924eef89aa6e7"
+        }
+      ]
+    },
+    {
+      "version": "5.25.2-rc4",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc4/terraform-provider-github_5.25.2-rc4_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc4/terraform-provider-github_5.25.2-rc4_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc4_darwin_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc4/terraform-provider-github_5.25.2-rc4_darwin_amd64.zip",
+          "shasum": "fc22724f5808114839a7214be2c5bf7098e97c58b02dca2ffa244d454cad0d1d"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc4_darwin_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc4/terraform-provider-github_5.25.2-rc4_darwin_arm64.zip",
+          "shasum": "d50ebba88c8b2219f0acd944c2e51b852b40d28107f767eb22bc14ea3b359b14"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc4_freebsd_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc4/terraform-provider-github_5.25.2-rc4_freebsd_386.zip",
+          "shasum": "5f292716a206d3adaf54f9e8ae6c70f2c3c5c51761be1270638daa99f0b508d1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc4_freebsd_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc4/terraform-provider-github_5.25.2-rc4_freebsd_amd64.zip",
+          "shasum": "2f5fbe88257da6224528634d5f608a2115b4c62c28dc1e749b8647cd39681b6f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc4_freebsd_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc4/terraform-provider-github_5.25.2-rc4_freebsd_arm.zip",
+          "shasum": "9eb9622ea5f7c278c705e7bb56760e2903d7ef67f816cd5d5f75702d4e7bce4a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc4_freebsd_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc4/terraform-provider-github_5.25.2-rc4_freebsd_arm64.zip",
+          "shasum": "dcbf73f8071ac826ae450fac22a6040aa28ab53891e956342dd90281c21b6bb5"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc4_linux_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc4/terraform-provider-github_5.25.2-rc4_linux_386.zip",
+          "shasum": "b3241a06824ef70d01294f03ac0907bf5fc31300941f670e9ce256f394d00252"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc4_linux_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc4/terraform-provider-github_5.25.2-rc4_linux_amd64.zip",
+          "shasum": "cea6df8700ee8c358fb1e83b7df65be58dc1ba8bdf00fd8b2af8acd8c2a68e74"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc4_linux_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc4/terraform-provider-github_5.25.2-rc4_linux_arm.zip",
+          "shasum": "f3bbd5a33ca71fd08da680d6a58fd97c1191273b868bf3a506037a667cdb2fd8"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc4_linux_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc4/terraform-provider-github_5.25.2-rc4_linux_arm64.zip",
+          "shasum": "933ef6dbed5ea2a2dfb5a5767651872178cfc2adc91ff3e03f57398f67569c48"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc4_windows_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc4/terraform-provider-github_5.25.2-rc4_windows_386.zip",
+          "shasum": "04a3a2e06f69cccf402436508690fbe5c8c8e1e8cc62edb3c84731f5f7ab4260"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc4_windows_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc4/terraform-provider-github_5.25.2-rc4_windows_amd64.zip",
+          "shasum": "ba1c8ebf1ddae785b3dc32e5c064959d3f05a427110a53d2d3d60c9d9640225d"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc4_windows_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc4/terraform-provider-github_5.25.2-rc4_windows_arm.zip",
+          "shasum": "e50540ffba4cfe7bce16b8a91c3b65be960706cd8074b8130338858ccfec44c7"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc4_windows_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc4/terraform-provider-github_5.25.2-rc4_windows_arm64.zip",
+          "shasum": "b24a397a19c102daa9641c1ff66efdf678ed2f0373ef8c6d9435e7d63df76778"
+        }
+      ]
+    },
+    {
+      "version": "5.25.2-rc3",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc3/terraform-provider-github_5.25.2-rc3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc3/terraform-provider-github_5.25.2-rc3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc3_darwin_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc3/terraform-provider-github_5.25.2-rc3_darwin_amd64.zip",
+          "shasum": "2872806dd17f63ec92232e258eb73b43ff046fd9f444ed87a05c31d7931edca6"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc3_darwin_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc3/terraform-provider-github_5.25.2-rc3_darwin_arm64.zip",
+          "shasum": "221867a37da84589ee04b17a79458ada728462ca0cf08a046403ac85c42876fc"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc3_freebsd_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc3/terraform-provider-github_5.25.2-rc3_freebsd_386.zip",
+          "shasum": "75299fd97f6be761851d86fc60cb7885a6af236ccdaa3d31bf67d86c4751c61c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc3_freebsd_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc3/terraform-provider-github_5.25.2-rc3_freebsd_amd64.zip",
+          "shasum": "6d55f585cdb71f23769ba77f6f53eec65d1518f7ee1c1285b30095821e2ca14d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc3_freebsd_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc3/terraform-provider-github_5.25.2-rc3_freebsd_arm.zip",
+          "shasum": "40b212aa7c36f42d40df6f01ce4cd98ad4bf2cd035586689b2dde41fcc8108c8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc3_freebsd_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc3/terraform-provider-github_5.25.2-rc3_freebsd_arm64.zip",
+          "shasum": "6f6e168fb8cafdf37a48f79b54d9a49a5caab566343efd9869fa9e2317b1b3e4"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc3_linux_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc3/terraform-provider-github_5.25.2-rc3_linux_386.zip",
+          "shasum": "70747f6d525507cbf4d99473c865a4de22a9f0092c6bda84a5e90746d257e571"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc3_linux_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc3/terraform-provider-github_5.25.2-rc3_linux_amd64.zip",
+          "shasum": "011a3c9fca48b48152a2db548e01a3419749444373ba72f4c356ae73ee1ccccf"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc3_linux_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc3/terraform-provider-github_5.25.2-rc3_linux_arm.zip",
+          "shasum": "f65f2d98f21be718cbec304944a05ae8b48a1c2604d88d28e5fd52e49187d811"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc3_linux_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc3/terraform-provider-github_5.25.2-rc3_linux_arm64.zip",
+          "shasum": "164297db07ed78178ce2c102343337acfb503a4fb467a86c27c5505e09974133"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc3_windows_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc3/terraform-provider-github_5.25.2-rc3_windows_386.zip",
+          "shasum": "459ff7e659c915aa2d1ded7de80007c75664fd54d89e2e2de13c3563b0ccfa56"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc3_windows_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc3/terraform-provider-github_5.25.2-rc3_windows_amd64.zip",
+          "shasum": "5562a21a2f1343e9d1e9601f8a8cea67f47d48b116a9efeac3971e512357f3e4"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc3_windows_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc3/terraform-provider-github_5.25.2-rc3_windows_arm.zip",
+          "shasum": "4659fc2fa77747c69d1246f73635789977d6d9b9c0ce34918f2ae70d10f1f3a6"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc3_windows_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc3/terraform-provider-github_5.25.2-rc3_windows_arm64.zip",
+          "shasum": "1090ac948553f06bdd162d3dcad90f471b77a30e5f26339d5507340be6a468f2"
+        }
+      ]
+    },
+    {
+      "version": "5.25.2-rc2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc2/terraform-provider-github_5.25.2-rc2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc2/terraform-provider-github_5.25.2-rc2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc2_darwin_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc2/terraform-provider-github_5.25.2-rc2_darwin_amd64.zip",
+          "shasum": "e543e51951dfcd9051d2652086d5e97780be750d6c1420bce95d293deeccda21"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc2_darwin_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc2/terraform-provider-github_5.25.2-rc2_darwin_arm64.zip",
+          "shasum": "3c1d157ab7c1f907ca214880db67fe2597d9fc47d3da37708b508fc1dee0f131"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc2_freebsd_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc2/terraform-provider-github_5.25.2-rc2_freebsd_386.zip",
+          "shasum": "c519aa02d7851f1ea77cc981b4c74c8ba98d233095a17bb7d9439f9a9948299b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc2_freebsd_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc2/terraform-provider-github_5.25.2-rc2_freebsd_amd64.zip",
+          "shasum": "4036ba12fc59e5bc782979e6a6290b21ec7324651d07cad119fd11cbce39b789"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc2_freebsd_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc2/terraform-provider-github_5.25.2-rc2_freebsd_arm.zip",
+          "shasum": "81e0fbb40d3bd7cd61f9a53121d604ff252b40816e4183b40eed847ad89719d3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc2_freebsd_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc2/terraform-provider-github_5.25.2-rc2_freebsd_arm64.zip",
+          "shasum": "4b83edd7defb979ac0e763fc9473831da8d7c13ce56b3c56e955d5dc2cc9abdc"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc2_linux_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc2/terraform-provider-github_5.25.2-rc2_linux_386.zip",
+          "shasum": "6d8356e96188d8931003d7800011477c7eb2b166feaa66a9db1d964ba68f1bd2"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc2_linux_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc2/terraform-provider-github_5.25.2-rc2_linux_amd64.zip",
+          "shasum": "c32d2cc3c9b903772988d20fe81492def46a9edce033d424775a93d0b0fdefc9"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc2_linux_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc2/terraform-provider-github_5.25.2-rc2_linux_arm.zip",
+          "shasum": "d9be4549c000b025c646eb3575596b66a47db3adaf7a0d747bcf7926b965041d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc2_linux_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc2/terraform-provider-github_5.25.2-rc2_linux_arm64.zip",
+          "shasum": "09b2fd55546a9b23c57896908b24a2965133d2161ebd5de391b3ec1bfc27dd88"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc2_windows_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc2/terraform-provider-github_5.25.2-rc2_windows_386.zip",
+          "shasum": "2056d6158e9ce08ce601244a7b065727dc0e6c9ab36bdbcedb0b208ccbf7146d"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc2_windows_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc2/terraform-provider-github_5.25.2-rc2_windows_amd64.zip",
+          "shasum": "f3031fb0fc92f79fc2134f9b643c35d18198ebe948ef08a40da8928166e2409a"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc2_windows_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc2/terraform-provider-github_5.25.2-rc2_windows_arm.zip",
+          "shasum": "6a2a4984f922c8ea145c1dc623a1fb1fc1a220e78730c1596dce56e3c4159579"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc2_windows_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc2/terraform-provider-github_5.25.2-rc2_windows_arm64.zip",
+          "shasum": "25a1a87389d35578703b2269af6aac6f0153bb1a593f44b5272d748a75c7aaee"
+        }
+      ]
+    },
+    {
+      "version": "5.25.2-rc1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc1/terraform-provider-github_5.25.2-rc1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc1/terraform-provider-github_5.25.2-rc1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc1_darwin_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc1/terraform-provider-github_5.25.2-rc1_darwin_amd64.zip",
+          "shasum": "acba11f311b1aa3a80b7bd977ae0e07d5615cbaa5ead87785139aa4fd02bf2de"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc1_darwin_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc1/terraform-provider-github_5.25.2-rc1_darwin_arm64.zip",
+          "shasum": "908a1abfd648b3813996e7447659cf952c22c574d95c05171a36ab5e8dd86c32"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc1_freebsd_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc1/terraform-provider-github_5.25.2-rc1_freebsd_386.zip",
+          "shasum": "8695dd7eaede9afc3a9d6186f299b9c3cbe30302b7203d9ce35f845a558141ab"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc1_freebsd_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc1/terraform-provider-github_5.25.2-rc1_freebsd_amd64.zip",
+          "shasum": "2254f23743a3d77bbaeab619f90eb58e1f99b8ea562229779c725f2893d53267"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc1_freebsd_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc1/terraform-provider-github_5.25.2-rc1_freebsd_arm.zip",
+          "shasum": "dc7e6cd80a56e8300fb64b331ac98bc67c051e0b23fd8209868c74fe72567a58"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc1_freebsd_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc1/terraform-provider-github_5.25.2-rc1_freebsd_arm64.zip",
+          "shasum": "7033c5988b641dacc6658f12dd9137abc73fc327d46c1d8cc6c55e0302ec57b2"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc1_linux_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc1/terraform-provider-github_5.25.2-rc1_linux_386.zip",
+          "shasum": "9b6a245e3e46a9ff41cb361b679a038a24244e19a8ffe421ce1543a0564e60ed"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc1_linux_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc1/terraform-provider-github_5.25.2-rc1_linux_amd64.zip",
+          "shasum": "29023d0c512e28d4bf7198a1bdd4d663d0fac31e4d89165c77672807a563d227"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc1_linux_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc1/terraform-provider-github_5.25.2-rc1_linux_arm.zip",
+          "shasum": "77f6b1a9772f0adf35ff2743e32198d322dcfa0b859785a6066ef13668ca2203"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc1_linux_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc1/terraform-provider-github_5.25.2-rc1_linux_arm64.zip",
+          "shasum": "2b001c7254865694cfba0e3c107deef13a6e7356032e0a80d0f088b1eb85273e"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-github_5.25.2-rc1_windows_386.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc1/terraform-provider-github_5.25.2-rc1_windows_386.zip",
+          "shasum": "00667accae5e633ff56fe42563b66923abfeee1b22d88df35a2e6506c65b4150"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-github_5.25.2-rc1_windows_amd64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc1/terraform-provider-github_5.25.2-rc1_windows_amd64.zip",
+          "shasum": "6311027b9457cf001f85a02d8e64468ac12839a7b7c31c6e1d44775c92e68b14"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-github_5.25.2-rc1_windows_arm.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc1/terraform-provider-github_5.25.2-rc1_windows_arm.zip",
+          "shasum": "4c68350a7b43e643db50672ed8e3ee7d8d3157d23a7802b0e507fc5007e4b41d"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-github_5.25.2-rc1_windows_arm64.zip",
+          "download_url": "https://github.com/galargh/terraform-provider-github/releases/download/v5.25.2-rc1/terraform-provider-github_5.25.2-rc1_windows_arm64.zip",
+          "shasum": "a4f5903737d7dc4b0b7d8ca193af8b50cfc5330b918f3a89aea2a0b641611d46"
+        }
+      ]
+    }
+  ]
+}

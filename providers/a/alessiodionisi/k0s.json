@@ -1,0 +1,868 @@
+{
+  "versions": [
+    {
+      "version": "0.2.1",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.1/terraform-provider-k0s_0.2.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.1/terraform-provider-k0s_0.2.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.2.1_darwin_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.1/terraform-provider-k0s_0.2.1_darwin_amd64.zip",
+          "shasum": "5f1f01dbf7fbf1cfddd5d478ef5d63d26dd52cdb5c15c0edd755f70d32f58f5c"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.2.1_darwin_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.1/terraform-provider-k0s_0.2.1_darwin_arm64.zip",
+          "shasum": "e0d539eba1eb1a5fc96333caa30d4a75306e5d5450ebfa890d466752259917ad"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.2.1_freebsd_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.1/terraform-provider-k0s_0.2.1_freebsd_386.zip",
+          "shasum": "e715f273548cf67d1e419d2aca828fa5fb2d27e7111399eda01c29282850b49c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.2.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.1/terraform-provider-k0s_0.2.1_freebsd_amd64.zip",
+          "shasum": "0560d20aab5d6809be0c558840fcfc7cf4e33f72b5f074d18eed6076d63b8d07"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.2.1_freebsd_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.1/terraform-provider-k0s_0.2.1_freebsd_arm.zip",
+          "shasum": "c7cc647eb1a3f1e4927de5b2805f33c4dd24bb8023e39a19e72a04d81c86b9f4"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.2.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.1/terraform-provider-k0s_0.2.1_freebsd_arm64.zip",
+          "shasum": "69a54c669965b5965f7f5d1c47a82ff088b620c0fddf5b5fd54a93ff6bca973e"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.2.1_linux_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.1/terraform-provider-k0s_0.2.1_linux_386.zip",
+          "shasum": "e0892e31eb5e1cf23c8db6f9a72a1dffe4d9111e20fc8469677774c362037455"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.2.1_linux_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.1/terraform-provider-k0s_0.2.1_linux_amd64.zip",
+          "shasum": "039ef8da6764da5be2c04799241685ac5a50900001fbb1109726240bb107a0c2"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.2.1_linux_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.1/terraform-provider-k0s_0.2.1_linux_arm.zip",
+          "shasum": "01fa03c209b71898e5d1bbad09a335de1714f55fb56f6e4528793e953ae2d01e"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.2.1_linux_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.1/terraform-provider-k0s_0.2.1_linux_arm64.zip",
+          "shasum": "bf43645516f70636c839a48ee8d2d7beab574d9575f8090ea9a4202adee1c134"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.2.1_windows_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.1/terraform-provider-k0s_0.2.1_windows_386.zip",
+          "shasum": "9e169d1792ffcdd651f196bf0840149662052c9e5bc7f0c523dc1db84eb515af"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.2.1_windows_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.1/terraform-provider-k0s_0.2.1_windows_amd64.zip",
+          "shasum": "149dc502f70f26ced0dc1ea3227c8b871fc9df66879a8e140e7657a211d5f68c"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.2.1_windows_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.1/terraform-provider-k0s_0.2.1_windows_arm.zip",
+          "shasum": "8099cee56a0538005d2a4ee5ad8d0e2e6f7d35c38c914c435d9548bcfe6d08c2"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.2.1_windows_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.1/terraform-provider-k0s_0.2.1_windows_arm64.zip",
+          "shasum": "803daab6ca4c778c37b898a61a67d76fab5d32fd4fdee3074c2ed84d0c5baacf"
+        }
+      ]
+    },
+    {
+      "version": "0.2.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.0/terraform-provider-k0s_0.2.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.0/terraform-provider-k0s_0.2.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.2.0_darwin_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.0/terraform-provider-k0s_0.2.0_darwin_amd64.zip",
+          "shasum": "93630f8a95321f7fafc6546803341b5d48afcd450166c5d6be81fade14a9a7fa"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.2.0_darwin_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.0/terraform-provider-k0s_0.2.0_darwin_arm64.zip",
+          "shasum": "fd1e187c149d9606a0dafb25ea78ff9e4d4bb94f68c601a482c4e47df3b18749"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.2.0_freebsd_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.0/terraform-provider-k0s_0.2.0_freebsd_386.zip",
+          "shasum": "11e7564ecac0bb30cd7c4c6f6f622f7750ff277be90ece23fa19fccd72d48afc"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.2.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.0/terraform-provider-k0s_0.2.0_freebsd_amd64.zip",
+          "shasum": "a7cf11ba0143b41e21852e04d5fd95a27fa8b6040baca1f50ef7b1a373048309"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.2.0_freebsd_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.0/terraform-provider-k0s_0.2.0_freebsd_arm.zip",
+          "shasum": "c1f6efd0a6f90f5721d258eb45468a85b73b42deb9b66820e974b3fb5a5c8d14"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.2.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.0/terraform-provider-k0s_0.2.0_freebsd_arm64.zip",
+          "shasum": "8b94f5ec6fe0c548b89fae6448ca239699fcadd21f53582826f6c0f356589bf3"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.2.0_linux_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.0/terraform-provider-k0s_0.2.0_linux_386.zip",
+          "shasum": "7318cb0dbeb452585cfcd47b8698753e6b42983a368f056ceae29fee45539064"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.2.0_linux_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.0/terraform-provider-k0s_0.2.0_linux_amd64.zip",
+          "shasum": "602875a5f4a1fc74985ebe044ab6df6ea83ff4b4a9b0329531507b0f8110c477"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.2.0_linux_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.0/terraform-provider-k0s_0.2.0_linux_arm.zip",
+          "shasum": "460da714038f391150878426a62289cf20f333c14f55ccbc5327e1e49f6b6bb5"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.2.0_linux_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.0/terraform-provider-k0s_0.2.0_linux_arm64.zip",
+          "shasum": "17c320f70b7d0891733a8ddaeef79125ee4e107c820da29f2e412f59493108cd"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.2.0_windows_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.0/terraform-provider-k0s_0.2.0_windows_386.zip",
+          "shasum": "254d7e7d0fcbaecce214e484f82fefda67d0b93fc5d5b7ac05790b7e2c593942"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.2.0_windows_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.0/terraform-provider-k0s_0.2.0_windows_amd64.zip",
+          "shasum": "c0e2f3d52638f4aee061689029b52a67099ed280bb8de2d143b94520b92a06ec"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.2.0_windows_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.0/terraform-provider-k0s_0.2.0_windows_arm.zip",
+          "shasum": "addd266d43de174eb14e55ca727d64850448f0859c041f9a8eaf9be5d1eaeb3e"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.2.0_windows_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.2.0/terraform-provider-k0s_0.2.0_windows_arm64.zip",
+          "shasum": "f04b49d3fca788385994c727576f4682ca9fc77eb5d7c3755a95f548df5c4201"
+        }
+      ]
+    },
+    {
+      "version": "0.1.2",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.2/terraform-provider-k0s_0.1.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.2/terraform-provider-k0s_0.1.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.1.2_darwin_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.2/terraform-provider-k0s_0.1.2_darwin_amd64.zip",
+          "shasum": "b093af2d9cf8d85d886c2bb3b679a4e358ad2e8fbd3690f7faf88285ca4f930d"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.1.2_darwin_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.2/terraform-provider-k0s_0.1.2_darwin_arm64.zip",
+          "shasum": "346e8e8b89bb14d97d6be2c9f783c6039edae48bde824844beec3810059d88fc"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.1.2_freebsd_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.2/terraform-provider-k0s_0.1.2_freebsd_386.zip",
+          "shasum": "bb8c3326843a41410986887c770ca680c71c386163be70197bfbb25dd9adc3c6"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.1.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.2/terraform-provider-k0s_0.1.2_freebsd_amd64.zip",
+          "shasum": "0b2c6c62de419483cc9cd573a456a6e389d113270313ecaa469ef5325e2d9254"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.1.2_freebsd_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.2/terraform-provider-k0s_0.1.2_freebsd_arm.zip",
+          "shasum": "817a10dbfc2bef54f0774af4b1da1f65c6a2518b6208b0531f6c59f8fd56b155"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.1.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.2/terraform-provider-k0s_0.1.2_freebsd_arm64.zip",
+          "shasum": "7ca0e3c2d610138bdec806a98357747aada517650c8f555caf482eb95d7e886b"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.1.2_linux_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.2/terraform-provider-k0s_0.1.2_linux_386.zip",
+          "shasum": "95a8113e2bcb2bf0ad99b2c8c9c18234000f130d7a1f1cf19d4974e15af00c38"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.1.2_linux_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.2/terraform-provider-k0s_0.1.2_linux_amd64.zip",
+          "shasum": "18fc4005481f8795f753288d59c13ac68e2eb258a6903254049dfb2cd761b67c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.1.2_linux_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.2/terraform-provider-k0s_0.1.2_linux_arm.zip",
+          "shasum": "46503da6e294074a865eaffdfacb2dbe4f59f2495128f959f4a75cc17f37aa53"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.1.2_linux_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.2/terraform-provider-k0s_0.1.2_linux_arm64.zip",
+          "shasum": "d6af6638da39b4a53139c57b1585ab8833187d5b1366c4a5893b159b5d432116"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.1.2_windows_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.2/terraform-provider-k0s_0.1.2_windows_386.zip",
+          "shasum": "b4314b917112aa2192145e79303937a207e8c14af6851508186c4f7a71fcbb4a"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.1.2_windows_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.2/terraform-provider-k0s_0.1.2_windows_amd64.zip",
+          "shasum": "74f8ab9954c419cf45ad4a387f658521dd0af24b4f2cf994f33d77a85f8a3dde"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.1.2_windows_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.2/terraform-provider-k0s_0.1.2_windows_arm.zip",
+          "shasum": "a9a370c00f407c19aac7ff2ad5c94cb3bab515e41b1a44c80a1fb2d510d92749"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.1.2_windows_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.2/terraform-provider-k0s_0.1.2_windows_arm64.zip",
+          "shasum": "18188e980e5021144c34e1cbc8c08d443b4b08168ce27ae89adbea141ea2de1e"
+        }
+      ]
+    },
+    {
+      "version": "0.1.1",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.1/terraform-provider-k0s_0.1.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.1/terraform-provider-k0s_0.1.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.1.1_darwin_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.1/terraform-provider-k0s_0.1.1_darwin_amd64.zip",
+          "shasum": "d5730fa52dc4993cb6d5306b8d1e5e557fbb554a0eb54068e8faa6f388223ff5"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.1.1_darwin_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.1/terraform-provider-k0s_0.1.1_darwin_arm64.zip",
+          "shasum": "2e173b4e2c8b61679ca0724339d3ac6a24d84a204d4c5801b5dd561097dac9b2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.1.1_freebsd_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.1/terraform-provider-k0s_0.1.1_freebsd_386.zip",
+          "shasum": "9f96fc4b40c582f7c195c4151aa8c40b865e63e4465f00663456ea587d5eeef2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.1.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.1/terraform-provider-k0s_0.1.1_freebsd_amd64.zip",
+          "shasum": "5f13eec2f43419f2b0614dd7fcf69cad76367cf876ced89d5ff0e822a382c0c1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.1.1_freebsd_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.1/terraform-provider-k0s_0.1.1_freebsd_arm.zip",
+          "shasum": "8bdc650e928079efd64013612253715594cf60c5d73fd6051dbc16bf859d1bc3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.1.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.1/terraform-provider-k0s_0.1.1_freebsd_arm64.zip",
+          "shasum": "7bd16a2bbd3b3d5f845aeddf9d702559c8427c4eddab7fee2d18463339877a06"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.1.1_linux_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.1/terraform-provider-k0s_0.1.1_linux_386.zip",
+          "shasum": "9af04f289decadbb422f990a7a412d12fcf9f67190135c21fd492c1b584d18f8"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.1.1_linux_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.1/terraform-provider-k0s_0.1.1_linux_amd64.zip",
+          "shasum": "e5e406feca97ac533755d198736d96d4aa83c5d1f5f26c670cb8f8e5ac0db303"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.1.1_linux_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.1/terraform-provider-k0s_0.1.1_linux_arm.zip",
+          "shasum": "9b5beda11f4eeb69f9f7016fe27b5299b7f832f9fe5a7ef0ece38735fe78ddbd"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.1.1_linux_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.1/terraform-provider-k0s_0.1.1_linux_arm64.zip",
+          "shasum": "4f77f4b408ad88424c3e1d8b313757131404ecae9fa785a3c295b9cb5d1a617a"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.1.1_windows_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.1/terraform-provider-k0s_0.1.1_windows_386.zip",
+          "shasum": "71bdf66e0dfff2966b3de838c99b7ae690547a341125843606948c748ee2f261"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.1.1_windows_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.1/terraform-provider-k0s_0.1.1_windows_amd64.zip",
+          "shasum": "d6e2b348f7423d7a5f984518ea51a85ab8962d4e93d7c4f8eec7dd4cc099d953"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.1.1_windows_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.1/terraform-provider-k0s_0.1.1_windows_arm.zip",
+          "shasum": "9243b857a9e9c13fdf3856d7e768e83af442e3e54e7e4b17e8df59552cc10f49"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.1.1_windows_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.1/terraform-provider-k0s_0.1.1_windows_arm64.zip",
+          "shasum": "6a24374c54c69d44d51859171e9db02122cd38eeb9b45d1e9f45f6a142274663"
+        }
+      ]
+    },
+    {
+      "version": "0.1.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.0/terraform-provider-k0s_0.1.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.0/terraform-provider-k0s_0.1.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.1.0_darwin_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.0/terraform-provider-k0s_0.1.0_darwin_amd64.zip",
+          "shasum": "ae4504cd318b236c7076978d2031b78df515ce0045adc49478f1ffcff725649f"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.1.0_darwin_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.0/terraform-provider-k0s_0.1.0_darwin_arm64.zip",
+          "shasum": "273fb93c16288db8dc9b6cbf205c4006484be2208943cc6d11e3c8dede6fd5d2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.1.0_freebsd_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.0/terraform-provider-k0s_0.1.0_freebsd_386.zip",
+          "shasum": "62354822637e23ecbb419c904a72f84e0bd09fe3f4491dfc86931e5147c107f6"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.1.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.0/terraform-provider-k0s_0.1.0_freebsd_amd64.zip",
+          "shasum": "8cad4dcdedcba1c3afbe5de0217c36a4c90d4e808fab2f93996ae74c19b1b65c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.1.0_freebsd_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.0/terraform-provider-k0s_0.1.0_freebsd_arm.zip",
+          "shasum": "f5acaaf8e9876385ee33a0d37857d749a7921cafb86cdcc347380f6c6b25c863"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.1.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.0/terraform-provider-k0s_0.1.0_freebsd_arm64.zip",
+          "shasum": "8311e0c184a7bee0a3d4fafe578be5ad5323bdbbac26ca8d1528b840512af1a0"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.1.0_linux_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.0/terraform-provider-k0s_0.1.0_linux_386.zip",
+          "shasum": "6bfe1c1f85aa88434007fc74fd7855d8642d0b0cf2e8d58d11998969a3550515"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.1.0_linux_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.0/terraform-provider-k0s_0.1.0_linux_amd64.zip",
+          "shasum": "e559a43c63e2c5aed29b409086ac03f55b07193bd722b9e47a3483cb81d957d3"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.1.0_linux_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.0/terraform-provider-k0s_0.1.0_linux_arm.zip",
+          "shasum": "0598cd3174f63b0a84ad7eac892f53ad6272c5882d2bd4a0f9b00959d2d3124f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.1.0_linux_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.0/terraform-provider-k0s_0.1.0_linux_arm64.zip",
+          "shasum": "110c65c5c4e17c163142f3f2afc02a39fdbeda128184fccc136cb8785c345b8c"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.1.0_windows_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.0/terraform-provider-k0s_0.1.0_windows_386.zip",
+          "shasum": "a8ee5b37de5122141c02dde8e26fc5adb789b45743a4e3cf31021c0b21b43769"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.1.0_windows_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.0/terraform-provider-k0s_0.1.0_windows_amd64.zip",
+          "shasum": "9906b754c1484acaa1c33a5cd386d8e42b5cd5357cc3f5ca839231ce2befdc54"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.1.0_windows_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.0/terraform-provider-k0s_0.1.0_windows_arm.zip",
+          "shasum": "a5873f94790a174b2123ef6cd9b534a7413201dd54a0404313f72482ec268225"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.1.0_windows_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.1.0/terraform-provider-k0s_0.1.0_windows_arm64.zip",
+          "shasum": "f7c68a3767f4f345955b47d38bfd370fe7702c430aefd9423dfeac1655d4ae5f"
+        }
+      ]
+    },
+    {
+      "version": "0.0.3",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.3/terraform-provider-k0s_0.0.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.3/terraform-provider-k0s_0.0.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.0.3_darwin_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.3/terraform-provider-k0s_0.0.3_darwin_amd64.zip",
+          "shasum": "f7f5a2c551e53473f70608684494ca054643df5a109edda6683a47fd83442345"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.0.3_darwin_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.3/terraform-provider-k0s_0.0.3_darwin_arm64.zip",
+          "shasum": "82caa83186318a7547db05e74955c2a139563af0f6c3775484520e67d049121a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.0.3_freebsd_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.3/terraform-provider-k0s_0.0.3_freebsd_386.zip",
+          "shasum": "215c55e20d5e0b367a404c6063f53d1fb8b75385294437ab4bed3e5a9f3f1813"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.0.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.3/terraform-provider-k0s_0.0.3_freebsd_amd64.zip",
+          "shasum": "185840a2f2b074fdcb3eeb9e7840115fba06be50757319111a189cf634ea78f0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.0.3_freebsd_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.3/terraform-provider-k0s_0.0.3_freebsd_arm.zip",
+          "shasum": "dead837b70b7e73e4d056ec71e65f114549ac94c5795f204a436f38f2379f128"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.0.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.3/terraform-provider-k0s_0.0.3_freebsd_arm64.zip",
+          "shasum": "8f85645d66b5bbc586112e6e550332b23784a759f5cfc3b8894e6ff7c0b0625b"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.0.3_linux_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.3/terraform-provider-k0s_0.0.3_linux_386.zip",
+          "shasum": "8f1d7b524afbdc2d272ed3d1dc02f16a18c06a60ea4902c59c5f41d8ce20a21a"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.0.3_linux_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.3/terraform-provider-k0s_0.0.3_linux_amd64.zip",
+          "shasum": "283ab2b66afc59c4bcfc787e6af89433f614e19abc91b70daf82a6c4fb369026"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.0.3_linux_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.3/terraform-provider-k0s_0.0.3_linux_arm.zip",
+          "shasum": "afd795389c4144ec466f34633c6bf8e49d93564f5f30f707c69817a58555998c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.0.3_linux_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.3/terraform-provider-k0s_0.0.3_linux_arm64.zip",
+          "shasum": "4811d51ed5dcff61a700c62c9849b19c66830f5809dc83af1b943c6311da3a6a"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.0.3_windows_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.3/terraform-provider-k0s_0.0.3_windows_386.zip",
+          "shasum": "b11d3369a30b9126ab225e2bc7e2f18ecef3d41c7e9621b5af6fe49b94247da9"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.0.3_windows_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.3/terraform-provider-k0s_0.0.3_windows_amd64.zip",
+          "shasum": "a75319c054b07dd96455a07cf93a593b2dee135b13433a6c03a10d7d32e22d02"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.0.3_windows_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.3/terraform-provider-k0s_0.0.3_windows_arm.zip",
+          "shasum": "bf9ae628c7dec4f033181b8d41e7e421f3131cc9c97693de4b8e3dfd22b5005d"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.0.3_windows_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.3/terraform-provider-k0s_0.0.3_windows_arm64.zip",
+          "shasum": "264fd2d5dffcc484586179accdf7fd070c6e7d32d5030285a6a1c9e19dfa2904"
+        }
+      ]
+    },
+    {
+      "version": "0.0.2",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.2/terraform-provider-k0s_0.0.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.2/terraform-provider-k0s_0.0.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.0.2_darwin_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.2/terraform-provider-k0s_0.0.2_darwin_amd64.zip",
+          "shasum": "da0ee997c358783383907a450de13b4f422fbd9c1a106c6f8add206ffcf79966"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.0.2_darwin_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.2/terraform-provider-k0s_0.0.2_darwin_arm64.zip",
+          "shasum": "c57a007e44e0208ab7cf47904a37ec0db24d8caefdfe1b099d0034fb80326330"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.0.2_freebsd_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.2/terraform-provider-k0s_0.0.2_freebsd_386.zip",
+          "shasum": "81fff72eef58f63ae490277fd6688973a4f5e0d754462bf58e2d4128137d7d7e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.0.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.2/terraform-provider-k0s_0.0.2_freebsd_amd64.zip",
+          "shasum": "c083859968a4c38108d64cf0b31c7eb82fffe3ac8d069fc338a4f5a1a1d89971"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.0.2_freebsd_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.2/terraform-provider-k0s_0.0.2_freebsd_arm.zip",
+          "shasum": "44e23d6fa85afdf0cd711e71489f3d5b5fe65ab0ba972d355f02336d34d93fef"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.0.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.2/terraform-provider-k0s_0.0.2_freebsd_arm64.zip",
+          "shasum": "4e16980199f70c62d5836195c9bdf7e83d6652e94350a4751ffee5135ea2663e"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.0.2_linux_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.2/terraform-provider-k0s_0.0.2_linux_386.zip",
+          "shasum": "6a5cf2849d995311dfb149159cfcec3a392065ae1738c351ab1cf68b2e55e61c"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.0.2_linux_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.2/terraform-provider-k0s_0.0.2_linux_amd64.zip",
+          "shasum": "20e2254e2eac430c30e7b38f873847213564ca24437ca0c42302cc1728b054da"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.0.2_linux_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.2/terraform-provider-k0s_0.0.2_linux_arm.zip",
+          "shasum": "bb6b7c6ee9c37333a7b25bacc9bce96f87b9f87224e460f67df3aa4cce5668e3"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.0.2_linux_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.2/terraform-provider-k0s_0.0.2_linux_arm64.zip",
+          "shasum": "5fa6153e1b92aa46e76a4e5bf429b3cda68f237438a243f5b524375336b785c5"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.0.2_windows_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.2/terraform-provider-k0s_0.0.2_windows_386.zip",
+          "shasum": "4807c241944cbfe4fee5f1bf35c810f31dc4728ea914f6467766f402db0a05a6"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.0.2_windows_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.2/terraform-provider-k0s_0.0.2_windows_amd64.zip",
+          "shasum": "1f03c08ef2a3a2d18c2e013672a3058f9a477c8c2e2f2238bd17fe0852232cf7"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.0.2_windows_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.2/terraform-provider-k0s_0.0.2_windows_arm.zip",
+          "shasum": "a57269cd2148e97ef93f5fb8df979da3e62bbbee4614a7febddaaf2efbc39630"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.0.2_windows_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.2/terraform-provider-k0s_0.0.2_windows_arm64.zip",
+          "shasum": "bd4b68019bb5efe5eb059f2ab7de506bf2092b511777104d26f81df0b13bc259"
+        }
+      ]
+    },
+    {
+      "version": "0.0.1",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.1/terraform-provider-k0s_0.0.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.1/terraform-provider-k0s_0.0.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.0.1_darwin_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.1/terraform-provider-k0s_0.0.1_darwin_amd64.zip",
+          "shasum": "b1e22db201a40b9357e043d523ef1797e188347277827cc62769a0cdf83586f0"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.0.1_darwin_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.1/terraform-provider-k0s_0.0.1_darwin_arm64.zip",
+          "shasum": "55491c9e62abff80bac5c0e3b9e89f9a91c9ecfaa5829d688e96d34bdd1c69de"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.0.1_freebsd_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.1/terraform-provider-k0s_0.0.1_freebsd_386.zip",
+          "shasum": "2d7164088a5d8ae0660c0182e1443cbe4682b40ad192f878080ecc4d65ee0f41"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.0.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.1/terraform-provider-k0s_0.0.1_freebsd_amd64.zip",
+          "shasum": "2ee66b0adf9287c0873d391b1c70b8e48800a16057b3380cc2f5c3cb189841e3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.0.1_freebsd_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.1/terraform-provider-k0s_0.0.1_freebsd_arm.zip",
+          "shasum": "ec882506a2b6dfa7a5cdfcb8994931eec175de39c1831a30138ea2605f19bc08"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.0.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.1/terraform-provider-k0s_0.0.1_freebsd_arm64.zip",
+          "shasum": "15775fb2d7224ce761e3e8697f01699b4f99a03b89b51c6a58a9a850d108fc1d"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.0.1_linux_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.1/terraform-provider-k0s_0.0.1_linux_386.zip",
+          "shasum": "2b65cf78810cb0ab9dc4faeed47e741af794fe3a0ea1ce6315d85e42b41dc8a0"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.0.1_linux_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.1/terraform-provider-k0s_0.0.1_linux_amd64.zip",
+          "shasum": "36cdc95fb2d7c6f8194955a6ae560073347d8574e963097e590919f95ff7c42b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.0.1_linux_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.1/terraform-provider-k0s_0.0.1_linux_arm.zip",
+          "shasum": "b5ae4f4557b964d6827b6cf2f0eb1113faf02d7eea282ca539df2386c38fd952"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.0.1_linux_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.1/terraform-provider-k0s_0.0.1_linux_arm64.zip",
+          "shasum": "77beff836297d2bf395df219bf761b16eaac20b9a4a978dfcd3a0d0421da635a"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-k0s_0.0.1_windows_386.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.1/terraform-provider-k0s_0.0.1_windows_386.zip",
+          "shasum": "4156eb9894eb85dfc2b226ffd4e2c35a14f08605359d531839e33895f9559a62"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-k0s_0.0.1_windows_amd64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.1/terraform-provider-k0s_0.0.1_windows_amd64.zip",
+          "shasum": "01c693c0b43c39274f302e576ed4ce76fa53a0b9168989bc59f232ba8f99aa40"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-k0s_0.0.1_windows_arm.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.1/terraform-provider-k0s_0.0.1_windows_arm.zip",
+          "shasum": "28dd0af15521c2e10dcc15793c5354f6d35aa27eaea6c961ac46ce4b999e70c4"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-k0s_0.0.1_windows_arm64.zip",
+          "download_url": "https://github.com/alessiodionisi/terraform-provider-k0s/releases/download/v0.0.1/terraform-provider-k0s_0.0.1_windows_arm64.zip",
+          "shasum": "53c64e14aff2e77fc8ad0611c838b5c747c4974f9f2102b3ad17ac7bd4bec472"
+        }
+      ]
+    }
+  ]
+}

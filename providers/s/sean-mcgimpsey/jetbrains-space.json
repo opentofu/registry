@@ -1,0 +1,544 @@
+{
+  "versions": [
+    {
+      "version": "1.0.4-beta1",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.4-beta1/terraform-provider-jetbrains-space_1.0.4-beta1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.4-beta1/terraform-provider-jetbrains-space_1.0.4-beta1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-jetbrains-space_1.0.4-beta1_darwin_amd64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.4-beta1/terraform-provider-jetbrains-space_1.0.4-beta1_darwin_amd64.zip",
+          "shasum": "549b9236c8a98363feca4d4dbccd97a098a024f6caff5c8b2a5c97094d9746dc"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-jetbrains-space_1.0.4-beta1_darwin_arm64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.4-beta1/terraform-provider-jetbrains-space_1.0.4-beta1_darwin_arm64.zip",
+          "shasum": "4a1d5693c8e819b3238c024ff0588894e6bd9433318e9c46bb753af06ae10d89"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-jetbrains-space_1.0.4-beta1_freebsd_386.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.4-beta1/terraform-provider-jetbrains-space_1.0.4-beta1_freebsd_386.zip",
+          "shasum": "50adc68338ca6901dd0f012ed5d1f1c882a6b1c705fa984decd2192214d68c7a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-jetbrains-space_1.0.4-beta1_freebsd_amd64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.4-beta1/terraform-provider-jetbrains-space_1.0.4-beta1_freebsd_amd64.zip",
+          "shasum": "588d4f63a27195d1d0b5d4e6ae5605d11251b0cf78b23a7a7667eb21c2f5f53a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-jetbrains-space_1.0.4-beta1_freebsd_arm.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.4-beta1/terraform-provider-jetbrains-space_1.0.4-beta1_freebsd_arm.zip",
+          "shasum": "294b10ec222f023a8bc0fae9313053f45b64fc21dc4dade493ddec1568334b98"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-jetbrains-space_1.0.4-beta1_freebsd_arm64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.4-beta1/terraform-provider-jetbrains-space_1.0.4-beta1_freebsd_arm64.zip",
+          "shasum": "8306bf57ac6f2006819e37bd9890156cc602f7162e2067646a75aa5371b48022"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-jetbrains-space_1.0.4-beta1_linux_386.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.4-beta1/terraform-provider-jetbrains-space_1.0.4-beta1_linux_386.zip",
+          "shasum": "fadea803218dd18e4cf6551da28d1bfb9085de8a9ef3f4739e955006c92035a2"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-jetbrains-space_1.0.4-beta1_linux_amd64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.4-beta1/terraform-provider-jetbrains-space_1.0.4-beta1_linux_amd64.zip",
+          "shasum": "1261b1f258593b74483f246a16bc0617e4afff0c598b8763bef7dd0e0af71792"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-jetbrains-space_1.0.4-beta1_linux_arm.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.4-beta1/terraform-provider-jetbrains-space_1.0.4-beta1_linux_arm.zip",
+          "shasum": "5e70450c1dd8b9c87a09369de39652e9740acbfc09609ba12e0c7ac2b3a20e7a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-jetbrains-space_1.0.4-beta1_linux_arm64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.4-beta1/terraform-provider-jetbrains-space_1.0.4-beta1_linux_arm64.zip",
+          "shasum": "c58164c860f82ce949af2d3bcb5fb5f388de36b0e496808a1a3683cd9c4be503"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-jetbrains-space_1.0.4-beta1_windows_386.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.4-beta1/terraform-provider-jetbrains-space_1.0.4-beta1_windows_386.zip",
+          "shasum": "e1452f3b146fed2a658628e3f11c13dc86a9243970502a2ab6112094a73addd0"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-jetbrains-space_1.0.4-beta1_windows_amd64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.4-beta1/terraform-provider-jetbrains-space_1.0.4-beta1_windows_amd64.zip",
+          "shasum": "3062e61b32aef4ce8ee3c731dc32ce1e4d922ce70e2fa9be2c39d8d508246f58"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-jetbrains-space_1.0.4-beta1_windows_arm.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.4-beta1/terraform-provider-jetbrains-space_1.0.4-beta1_windows_arm.zip",
+          "shasum": "7fb1917be886f7aec33e20b33b25f3d28bfba65ec963dda8ad567a6269d3f473"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-jetbrains-space_1.0.4-beta1_windows_arm64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.4-beta1/terraform-provider-jetbrains-space_1.0.4-beta1_windows_arm64.zip",
+          "shasum": "6e0f86acc1a6d154f405ec095f464dcf3a5ffb5a2f56385b61387c46f0d94add"
+        }
+      ]
+    },
+    {
+      "version": "1.0.3-beta5",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta5/terraform-provider-jetbrains-space_1.0.3-beta5_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta5/terraform-provider-jetbrains-space_1.0.3-beta5_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta5_darwin_amd64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta5/terraform-provider-jetbrains-space_1.0.3-beta5_darwin_amd64.zip",
+          "shasum": "c4cd4aa8be0e12164d9bb94a17fc647bc0675ec50dbcf871a7c3c3f4cc56a281"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta5_darwin_arm64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta5/terraform-provider-jetbrains-space_1.0.3-beta5_darwin_arm64.zip",
+          "shasum": "a3315fdb51751d7469592a7299c0be0308c80cd89f82c0ba1220213f6b4d74b5"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta5_freebsd_386.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta5/terraform-provider-jetbrains-space_1.0.3-beta5_freebsd_386.zip",
+          "shasum": "af904125305a3aa5f3c067dc238beb082cb83e77fae1202e1663e2a5f11aa504"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta5_freebsd_amd64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta5/terraform-provider-jetbrains-space_1.0.3-beta5_freebsd_amd64.zip",
+          "shasum": "4f627c44a715f499ab68002c342e99ebffefc02cc20207f62131f38c6d23be90"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta5_freebsd_arm.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta5/terraform-provider-jetbrains-space_1.0.3-beta5_freebsd_arm.zip",
+          "shasum": "92b32415d4a9c715d920de26676d2b27d3e07dacf1d41eeeb9703cb3e092f706"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta5_freebsd_arm64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta5/terraform-provider-jetbrains-space_1.0.3-beta5_freebsd_arm64.zip",
+          "shasum": "6f08a0842cc827ad7cf1c4d7570a6e00c133d31c512d448c93bb91bf403c49e2"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta5_linux_386.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta5/terraform-provider-jetbrains-space_1.0.3-beta5_linux_386.zip",
+          "shasum": "f27db4c4579027cfc5490d1c5410eceb40dde1bedb0e8086241dfa5c0e66c953"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta5_linux_amd64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta5/terraform-provider-jetbrains-space_1.0.3-beta5_linux_amd64.zip",
+          "shasum": "1e5be9920b2ccaa1ec4a1c67287e455a89a38f3fd9ef418975d9ca50b6d9b48f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta5_linux_arm.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta5/terraform-provider-jetbrains-space_1.0.3-beta5_linux_arm.zip",
+          "shasum": "485b1ed5c6d3c7a909ffda7ade72348cbc865fe41c823091e7394044219ed208"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta5_linux_arm64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta5/terraform-provider-jetbrains-space_1.0.3-beta5_linux_arm64.zip",
+          "shasum": "e71f7e87e19971e962dd67d24ec664f60333fab0bbe51b7bddde35cfe42025b6"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta5_windows_386.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta5/terraform-provider-jetbrains-space_1.0.3-beta5_windows_386.zip",
+          "shasum": "c7007c68e6d6948b26b2b3015e902408693505ede4b9aaf3591e2c583c52ebf1"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta5_windows_amd64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta5/terraform-provider-jetbrains-space_1.0.3-beta5_windows_amd64.zip",
+          "shasum": "0a72632cfce1e1392c1128e358723aa8fd049711b1b30329c5b85cb31c4523ac"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta5_windows_arm.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta5/terraform-provider-jetbrains-space_1.0.3-beta5_windows_arm.zip",
+          "shasum": "a6b8bb723e5d23d22926a1cb24cbb3fd2692aa40bb8d1ed8592581e68e40896e"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta5_windows_arm64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta5/terraform-provider-jetbrains-space_1.0.3-beta5_windows_arm64.zip",
+          "shasum": "362074b17b7f5719d16ff8f96ac258906c6f4fe68f66dfa60f2dfa63e5963d5c"
+        }
+      ]
+    },
+    {
+      "version": "1.0.3-beta3",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta3/terraform-provider-jetbrains-space_1.0.3-beta3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta3/terraform-provider-jetbrains-space_1.0.3-beta3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta3_darwin_amd64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta3/terraform-provider-jetbrains-space_1.0.3-beta3_darwin_amd64.zip",
+          "shasum": "dcaf227046df519c10bed38ca0224db2817a5ee90074854cc524e941c53b9886"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta3_darwin_arm64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta3/terraform-provider-jetbrains-space_1.0.3-beta3_darwin_arm64.zip",
+          "shasum": "653ba9e18e729044a5465d195d0466bbdc0a8f1278d40ad232476ddacf342bc0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta3_freebsd_386.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta3/terraform-provider-jetbrains-space_1.0.3-beta3_freebsd_386.zip",
+          "shasum": "a059bc3bcc90a74605091ccd9676c1a4c642659e32faa1407575e6b1df9cb960"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta3_freebsd_amd64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta3/terraform-provider-jetbrains-space_1.0.3-beta3_freebsd_amd64.zip",
+          "shasum": "270ad895d7db5702e66fb7ce2ff70bc442bd7a2f91e071ae7d72e5466f6d92f1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta3_freebsd_arm.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta3/terraform-provider-jetbrains-space_1.0.3-beta3_freebsd_arm.zip",
+          "shasum": "f8f54dc5b27e11e3a7d8f1a1b1c4be6aad716c63e9e4bc7545f219a70b07e19f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta3_freebsd_arm64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta3/terraform-provider-jetbrains-space_1.0.3-beta3_freebsd_arm64.zip",
+          "shasum": "278b162320d6aa60449f974686334386b94dabb5c02b4c8be21a1116fd9cbac4"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta3_linux_386.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta3/terraform-provider-jetbrains-space_1.0.3-beta3_linux_386.zip",
+          "shasum": "b52994eb4f908cde4fc4e31028276364d5e1f795d18ed1c729ab930099ca5034"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta3_linux_amd64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta3/terraform-provider-jetbrains-space_1.0.3-beta3_linux_amd64.zip",
+          "shasum": "cacade1dafd6005279f52a5ba496ec6a0bf6ab0918bfcf1df3a45a922988965f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta3_linux_arm.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta3/terraform-provider-jetbrains-space_1.0.3-beta3_linux_arm.zip",
+          "shasum": "260cc95eac2c8e36c0197b9438f4f01819829d8491c4ced23fb9e74df13d7e83"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta3_linux_arm64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta3/terraform-provider-jetbrains-space_1.0.3-beta3_linux_arm64.zip",
+          "shasum": "afc74b072f0aa8eb6f9d0dd6f5599796435045f92684803df487c2775204e05d"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta3_windows_386.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta3/terraform-provider-jetbrains-space_1.0.3-beta3_windows_386.zip",
+          "shasum": "363fc49653960515ed7f70f531cd66723c0ecc9e19cb4143a133931b567ccb87"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta3_windows_amd64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta3/terraform-provider-jetbrains-space_1.0.3-beta3_windows_amd64.zip",
+          "shasum": "78a707701506f442e66d7757b67de3dc6d1c84f3e3d32c4666786e47dcac9e88"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta3_windows_arm.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta3/terraform-provider-jetbrains-space_1.0.3-beta3_windows_arm.zip",
+          "shasum": "de6aa46ae6fbd9f7d682181c53d653c462fd1b311aba33ec3454b02a70d3198e"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta3_windows_arm64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta3/terraform-provider-jetbrains-space_1.0.3-beta3_windows_arm64.zip",
+          "shasum": "2270613dfeaa0e4193dceb178da147900cd91ee00ad58a78fc834e0aca7f3f78"
+        }
+      ]
+    },
+    {
+      "version": "1.0.3-beta2",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta2/terraform-provider-jetbrains-space_1.0.3-beta2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta2/terraform-provider-jetbrains-space_1.0.3-beta2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta2_darwin_amd64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta2/terraform-provider-jetbrains-space_1.0.3-beta2_darwin_amd64.zip",
+          "shasum": "276811ab497b9c2f31e4abd69e70507d0cced09eb8f1f8ae2885d3220523ccfe"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta2_darwin_arm64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta2/terraform-provider-jetbrains-space_1.0.3-beta2_darwin_arm64.zip",
+          "shasum": "e27cd80b5cd2d4c06ccaaa7cf58ea3b202617fd79b82164b5d6f88f3739e88fd"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta2_freebsd_386.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta2/terraform-provider-jetbrains-space_1.0.3-beta2_freebsd_386.zip",
+          "shasum": "1d675220a8854ff1ee1addb51c5465556eca581144a40048ad5cc1253d399608"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta2_freebsd_amd64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta2/terraform-provider-jetbrains-space_1.0.3-beta2_freebsd_amd64.zip",
+          "shasum": "e257f43e3f50ab67f741334b2aa534ab73418ed4c9d4a747c967ba36d430ec35"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta2_freebsd_arm.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta2/terraform-provider-jetbrains-space_1.0.3-beta2_freebsd_arm.zip",
+          "shasum": "613ca7b5cc6f51b510017aab4596c1cb77eb5ec7baecc5bd46a4c2bbc4a9be02"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta2_freebsd_arm64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta2/terraform-provider-jetbrains-space_1.0.3-beta2_freebsd_arm64.zip",
+          "shasum": "04ddc5aff307abc14d56f43434aa738c10eaa4729e7a2e8eb4cd83c51912f0b3"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta2_linux_386.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta2/terraform-provider-jetbrains-space_1.0.3-beta2_linux_386.zip",
+          "shasum": "e5398b67167b863d0157c0eba7bf3a93f1feb0a68854932057a2d3243679d710"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta2_linux_amd64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta2/terraform-provider-jetbrains-space_1.0.3-beta2_linux_amd64.zip",
+          "shasum": "063e40e289c6e8c7deccc9fdeb97b9288fdfb1a5a218666f4c78e8b79d125e99"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta2_linux_arm.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta2/terraform-provider-jetbrains-space_1.0.3-beta2_linux_arm.zip",
+          "shasum": "ecbf9cac0bb196164501956669c6baa92f622fd035b13b7e1e397521b649b652"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta2_linux_arm64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta2/terraform-provider-jetbrains-space_1.0.3-beta2_linux_arm64.zip",
+          "shasum": "707a1400e942aba9f79757573c8fcf0c33fa58eadc7ab92567e6ab7b712b7d24"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta2_windows_386.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta2/terraform-provider-jetbrains-space_1.0.3-beta2_windows_386.zip",
+          "shasum": "f73ebae3d7b7286db5e1ac803d11bd99213f5a3d8c588f8fe605b8d4e3ae2423"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta2_windows_amd64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta2/terraform-provider-jetbrains-space_1.0.3-beta2_windows_amd64.zip",
+          "shasum": "4626b18dce039c394bdbf2a832cd601f6de044a464a256d097c3ddebcff49b3d"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta2_windows_arm.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta2/terraform-provider-jetbrains-space_1.0.3-beta2_windows_arm.zip",
+          "shasum": "3d5d881b8be5ac0052db5cf2220f4a991eb46181bfd4bcd7c3c2922e84c1c57a"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta2_windows_arm64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta2/terraform-provider-jetbrains-space_1.0.3-beta2_windows_arm64.zip",
+          "shasum": "1569b631df3a245a8b6afabd32cabca3323b4ffe102c4bf1fd30f82891c77071"
+        }
+      ]
+    },
+    {
+      "version": "1.0.3-beta1",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta1/terraform-provider-jetbrains-space_1.0.3-beta1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta1/terraform-provider-jetbrains-space_1.0.3-beta1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta1_darwin_amd64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta1/terraform-provider-jetbrains-space_1.0.3-beta1_darwin_amd64.zip",
+          "shasum": "157e1fafe81fca7a2037c6c2bb9cfdceb4f7ff457c3b47805a6cc959d4e830f6"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta1_darwin_arm64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta1/terraform-provider-jetbrains-space_1.0.3-beta1_darwin_arm64.zip",
+          "shasum": "17941cd30d0748ae8fb86fbd365a5e4f98c3144c57f5ad53a8f0cffe7bd42c9b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta1_freebsd_386.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta1/terraform-provider-jetbrains-space_1.0.3-beta1_freebsd_386.zip",
+          "shasum": "75a7bc06ed53e4c6ea8a1b59b64c6415e4dd36641cfb9408eaec392f1fcb2ba6"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta1_freebsd_amd64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta1/terraform-provider-jetbrains-space_1.0.3-beta1_freebsd_amd64.zip",
+          "shasum": "3c6367a7b801e351f25a54a724d11e1bf95dc89f967c6e5f4df2dd3b9fb6adbd"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta1_freebsd_arm.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta1/terraform-provider-jetbrains-space_1.0.3-beta1_freebsd_arm.zip",
+          "shasum": "7922d87a3af5e0ae0a7f58c188ae93381eac60a0402ca8e0e24f47609f2fc544"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta1_freebsd_arm64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta1/terraform-provider-jetbrains-space_1.0.3-beta1_freebsd_arm64.zip",
+          "shasum": "fe27552c3c894c2e6413ce6dfd3fa97c249b6f25a7400ed9c02135d4bfa9097b"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta1_linux_386.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta1/terraform-provider-jetbrains-space_1.0.3-beta1_linux_386.zip",
+          "shasum": "5ae974fb0599afa4ad782d70fa07489de201ca010b86df54f8d1536b42fd7994"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta1_linux_amd64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta1/terraform-provider-jetbrains-space_1.0.3-beta1_linux_amd64.zip",
+          "shasum": "2bf30e3103113b3e9c8b427c9ab3492655acfa907195d9e7761edd4131ca6a95"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta1_linux_arm.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta1/terraform-provider-jetbrains-space_1.0.3-beta1_linux_arm.zip",
+          "shasum": "e8c37c17b335e743132e809a66e80266d4c13de5c0fb2c200865d08f11f52d98"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta1_linux_arm64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta1/terraform-provider-jetbrains-space_1.0.3-beta1_linux_arm64.zip",
+          "shasum": "605ec8ed82bd4088e085399e41a70223cfdb54d01cfef8503ab8ad924562ca08"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta1_windows_386.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta1/terraform-provider-jetbrains-space_1.0.3-beta1_windows_386.zip",
+          "shasum": "8738580296e180a8805c94fca445ccb30768a5b2d93c55b1319b57988953d5e0"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta1_windows_amd64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta1/terraform-provider-jetbrains-space_1.0.3-beta1_windows_amd64.zip",
+          "shasum": "2f65bceae9a2b39b8b001d0d3c941a2b62271e51f0e3c696b7ddc46a6e04df46"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta1_windows_arm.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta1/terraform-provider-jetbrains-space_1.0.3-beta1_windows_arm.zip",
+          "shasum": "019e6a4522433156ef4602ebf7b54dd811877b4bb0d9b70a1a4215761cdb8aa9"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-jetbrains-space_1.0.3-beta1_windows_arm64.zip",
+          "download_url": "https://github.com/sean-mcgimpsey/terraform-provider-jetbrains-space/releases/download/v1.0.3-beta1/terraform-provider-jetbrains-space_1.0.3-beta1_windows_arm64.zip",
+          "shasum": "96f668864034f75bb7890fdf6ff9b73b4e14165a82bb088dbd143c092ae0f364"
+        }
+      ]
+    }
+  ]
+}
