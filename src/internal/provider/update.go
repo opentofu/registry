@@ -61,7 +61,7 @@ func (p Provider) getRssSemverTags() ([]string, error) {
 
 	var semverTags []string
 	for _, tag := range tags {
-		if semver.IsValid(tag) {
+		if semver.IsValid(tag) || semver.IsValid("v"+tag) {
 			semverTags = append(semverTags, tag)
 		}
 	}
