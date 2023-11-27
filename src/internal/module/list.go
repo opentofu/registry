@@ -89,7 +89,7 @@ func (l List) Parallel(maxConcurrency int, action Action) error {
 
 	errs := parallel.ForEach(actions, maxConcurrency)
 	if len(errs) != 0 {
-		return fmt.Errorf("encountered %d errors processing %d l", len(errs), len(l))
+		return fmt.Errorf("encountered %d errors processing %d modules", len(errs), len(l))
 	}
 	return nil
 }
