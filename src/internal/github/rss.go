@@ -18,26 +18,28 @@ func (c Client) GetTagsFromRss(releasesRssUrl string) ([]string, error) {
 
 	var tags = make([]string, 0)
 	for _, item := range feed.Items {
-		tag, err := extractTag(item)
+		tag, err := c.extractTag(item)
 		if err != nil {
 			return nil, err
 		}
-
-		tags = append(tags, tag)
+		if tag != nil {
+			tags = append(tags, *tag)
+		}
 	}
 
 	return tags, nil
 }
 
-func extractTag(item *gofeed.Item) (string, error) {
+func (c Client) extractTag(item *gofeed.Item) (*string, error) {
 	pattern := regexp.MustCompile(`.*/(?P<Version>[a-zA-Z0-9.\-_+]+)$`)
 	matches := pattern.FindStringSubmatch(item.GUID)
 
 	if matches == nil {
-		return "", fmt.Errorf("could not parse RSS item %s", item.Link)
+		c.log.Warn(fmt.Sprintf("Could not parse RSS item %s", item.Link))
+		return nil, nil
 	}
 
-	return matches[pattern.SubexpIndex("Version")], nil
+	return &matches[pattern.SubexpIndex("Version")], nil
 }
 
 func (c Client) getReleaseRssFeed(releasesRssUrl string) (*gofeed.Feed, error) {
