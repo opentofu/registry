@@ -1,4 +1,4 @@
-module registry-stable
+module github.com/opentofu/registry-stable
 
 go 1.21
 

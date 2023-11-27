@@ -6,8 +6,9 @@ import (
 	"log/slog"
 	"os"
 	"path/filepath"
-	"registry-stable/internal/files"
-	"registry-stable/internal/github"
+
+	"github.com/opentofu/registry-stable/internal/files"
+	"github.com/opentofu/registry-stable/internal/github"
 )
 
 type Version struct {
@@ -31,6 +32,7 @@ func (m Module) RepositoryURL() string {
 	return fmt.Sprintf("https://github.com/%s/terraform-%s-%s", m.Namespace, m.TargetSystem, m.Name)
 }
 
+// VersionDownloadURL returns the location to download the module from.
 // the file should just contain a link to GitHub to download the tarball, ie:
 // git::https://github.com/terraform-aws-modules/terraform-aws-iam?ref=v5.30.0
 func (m Module) VersionDownloadURL(version Version) string {
@@ -61,5 +63,5 @@ func (m Module) ReadMetadata() (MetadataFile, error) {
 
 func (m Module) WriteMetadata(meta MetadataFile) error {
 	path := m.MetadataPath()
-	return files.SafeWriteObjectToJsonFile(path, meta)
+	return files.SafeWriteObjectToJSONFile(path, meta)
 }

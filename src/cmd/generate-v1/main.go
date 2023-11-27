@@ -5,10 +5,10 @@ import (
 	"log/slog"
 	"os"
 
-	"registry-stable/internal/github"
-	"registry-stable/internal/module"
-	"registry-stable/internal/provider"
-	"registry-stable/internal/v1api"
+	"github.com/opentofu/registry-stable/internal/github"
+	"github.com/opentofu/registry-stable/internal/module"
+	"github.com/opentofu/registry-stable/internal/provider"
+	"github.com/opentofu/registry-stable/internal/v1api"
 )
 
 func main() {

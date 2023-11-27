@@ -3,7 +3,8 @@ package provider
 import (
 	"fmt"
 	"log/slog"
-	"registry-stable/internal"
+
+	"github.com/opentofu/registry-stable/internal"
 )
 
 var (

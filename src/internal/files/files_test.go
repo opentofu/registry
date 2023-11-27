@@ -19,7 +19,7 @@ func TestFiles_SafeWriteObjectToJsonFile_Success(t *testing.T) {
 
 	path := filepath.Join(dir, "subdir", "file.json")
 
-	err := SafeWriteObjectToJsonFile(path, data)
+	err := SafeWriteObjectToJSONFile(path, data)
 
 	if err != nil {
 		t.Error(err)
@@ -44,7 +44,7 @@ func TestFiles_SafeWriteObjectToJsonFile_InvalidMarshall(t *testing.T) {
 
 	path := filepath.Join(dir, "subdir", "file.json")
 
-	err := SafeWriteObjectToJsonFile(path, make(chan int))
+	err := SafeWriteObjectToJSONFile(path, make(chan int))
 
 	if err == nil {
 		t.Fatal("Expected marshal error, got <nil>")
@@ -56,7 +56,7 @@ func TestFiles_SafeWriteObjectToJsonFile_InvalidPath(t *testing.T) {
 	// TODO this might not be valid for non-posix systems
 	path := "/dev/null/foo"
 
-	err := SafeWriteObjectToJsonFile(path, nil)
+	err := SafeWriteObjectToJSONFile(path, nil)
 
 	if err == nil {
 		t.Fatal("Expected directory error, got <nil>")
@@ -67,7 +67,7 @@ func TestFiles_SafeWriteObjectToJsonFile_InvalidPath(t *testing.T) {
 func TestFiles_SafeWriteObjectToJsonFile_InvalidPath2(t *testing.T) {
 	dir := t.TempDir()
 
-	err := SafeWriteObjectToJsonFile(dir, nil)
+	err := SafeWriteObjectToJSONFile(dir, nil)
 
 	if err == nil {
 		t.Fatal("Expected file error, got <nil>")

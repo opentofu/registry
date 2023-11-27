@@ -20,7 +20,7 @@ func ForEach(actions []Action, maxConcurrency int) []error {
 	}
 
 	var errs []error
-	for _ = range actions {
+	for range actions {
 		err := <-errChan
 		if err != nil {
 			errs = append(errs, err)

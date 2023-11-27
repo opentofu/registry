@@ -5,9 +5,9 @@ import (
 	"log/slog"
 	"path/filepath"
 
-	"registry-stable/internal"
-	"registry-stable/internal/files"
-	"registry-stable/internal/module"
+	"github.com/opentofu/registry-stable/internal"
+	"github.com/opentofu/registry-stable/internal/files"
+	"github.com/opentofu/registry-stable/internal/module"
 )
 
 type ModuleGenerator struct {
@@ -24,24 +24,24 @@ func NewModuleGenerator(m module.Module, destination string) (ModuleGenerator, e
 	}
 
 	return ModuleGenerator{
-		m,
-		metadata,
-		destination,
-		m.Logger,
+		Module:       m,
+		MetadataFile: metadata,
+		Destination:  destination,
+		log:          m.Logger,
 	}, nil
 }
 
 func (m ModuleGenerator) VersionListingPath() string {
-	return filepath.Join(m.Destination, "v1", "modules", m.Namespace, m.Name, m.TargetSystem, "versions")
+	return filepath.Join(m.Destination, "v1", "modules", m.Module.Namespace, m.Module.Name, m.Module.TargetSystem, "versions")
 }
 
 func (m ModuleGenerator) VersionDownloadPath(v module.Version) string {
-	return filepath.Join(m.Destination, "v1", "modules", m.Namespace, m.Name, m.TargetSystem, internal.TrimTagPrefix(v.Version), "download")
+	return filepath.Join(m.Destination, "v1", "modules", m.Module.Namespace, m.Module.Name, m.Module.TargetSystem, internal.TrimTagPrefix(v.Version), "download")
 }
 
 func (m ModuleGenerator) VersionListing() ModuleVersionListingResponse {
-	versions := make([]ModuleVersionResponseItem, len(m.Versions))
-	for i, v := range m.Versions {
+	versions := make([]ModuleVersionResponseItem, len(m.MetadataFile.Versions))
+	for i, v := range m.MetadataFile.Versions {
 		versions[i] = ModuleVersionResponseItem{Version: v.Version}
 	}
 	return ModuleVersionListingResponse{[]ModuleVersionListingResponseItem{{versions}}}
@@ -49,8 +49,8 @@ func (m ModuleGenerator) VersionListing() ModuleVersionListingResponse {
 
 func (m ModuleGenerator) VersionDownloads() map[string]ModuleVersionDownloadResponse {
 	downloads := make(map[string]ModuleVersionDownloadResponse)
-	for _, v := range m.Versions {
-		downloads[m.VersionDownloadPath(v)] = ModuleVersionDownloadResponse{Location: m.VersionDownloadURL(v)}
+	for _, v := range m.MetadataFile.Versions {
+		downloads[m.VersionDownloadPath(v)] = ModuleVersionDownloadResponse{Location: m.Module.VersionDownloadURL(v)}
 	}
 	return downloads
 }
@@ -63,14 +63,14 @@ func (m ModuleGenerator) Generate() error {
 	m.log.Info("Generating")
 
 	for location, download := range m.VersionDownloads() {
-		err := files.SafeWriteObjectToJsonFile(location, download)
+		err := files.SafeWriteObjectToJSONFile(location, download)
 		if err != nil {
 			return fmt.Errorf("failed to write metadata version download file: %w", err)
 		}
 		m.log.Debug("Wrote metadata version download file", slog.String("path", location))
 	}
 
-	err := files.SafeWriteObjectToJsonFile(m.VersionListingPath(), m.VersionListing())
+	err := files.SafeWriteObjectToJSONFile(m.VersionListingPath(), m.VersionListing())
 	if err != nil {
 		return err
 	}
