@@ -22,8 +22,6 @@ func (c Client) GetTagsFromRSS(releasesRSSURL string) ([]string, error) {
 		if tag != nil {
 			tags = append(tags, *tag)
 		}
-
-		tags = append(tags, *tag)
 	}
 
 	return tags, nil
