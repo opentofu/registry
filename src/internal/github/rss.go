@@ -46,8 +46,8 @@ func (c Client) getReleaseRSSFeed(releasesRSSURL string) (*gofeed.Feed, error) {
 	// Q: why the logic implemented here https://github.com/RLRabinowitz/rlrabinowitz.github.io takes
 	// an order of magnitude less time to bump versions?
 
-	// done := c.rssThrottle()
-	// defer done()
+	done := c.rssThrottle()
+	defer done()
 
 	resp, err := c.httpClient.Get(releasesRSSURL)
 	if err != nil {

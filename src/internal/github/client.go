@@ -40,7 +40,6 @@ type Client struct {
 // NewClient creates a new GitHub client.
 func NewClient(ctx context.Context, log *slog.Logger, token string) Client {
 	httpClient := &http.Client{Transport: &transport{token: token, ctx: ctx}}
-
 	// As in the Arel's app:
 	retryClient := retryablehttp.NewClient()
 	retryClient.HTTPClient = httpClient
@@ -52,10 +51,10 @@ func NewClient(ctx context.Context, log *slog.Logger, token string) Client {
 		httpClient: retryClient,
 		ghClient:   githubv4.NewClient(httpClient),
 
-		cliThrottle:   NewThrottle(ctx, time.Second/30, 30),
+		cliThrottle:   NewThrottle(ctx, time.Second/50, 50),
 		apiThrottle:   NewThrottle(ctx, time.Second, 3),
 		assetThrottle: NewThrottle(ctx, time.Second/30, 30),
-		rssThrottle:   NewThrottle(ctx, time.Second/30, 30),
+		rssThrottle:   NewThrottle(ctx, time.Second/50, 50),
 	}
 	/* TODO
 	retryClient := retryablehttp.NewClient()
