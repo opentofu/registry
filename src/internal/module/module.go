@@ -6,6 +6,7 @@ import (
 	"log/slog"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"github.com/opentofu/registry-stable/internal/files"
 	"github.com/opentofu/registry-stable/internal/github"
@@ -52,7 +53,7 @@ func (m Module) VersionDownloadURL(version Version) string {
 
 // MetadataPath returns the path to the metadata file for the module.
 func (m Module) MetadataPath() string {
-	return filepath.Join(m.Directory, m.Namespace[0:1], m.Namespace, m.Name, m.TargetSystem+".json")
+	return filepath.Join(m.Directory, strings.ToLower(m.Namespace[0:1]), m.Namespace, m.Name, m.TargetSystem+".json")
 }
 
 // ReadMetadata reads the metadata file for the module.
