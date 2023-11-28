@@ -23,7 +23,7 @@ func (p Provider) GetProtocols(manifestDownloadUrl string) ([]string, error) {
 
 	manifest, err := parseManifestContents(contents)
 	if err != nil {
-		return nil, err
+		return nil, nil
 	}
 
 	return manifest.Metadata.ProtocolVersions, nil
