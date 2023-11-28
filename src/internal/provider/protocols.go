@@ -3,6 +3,7 @@ package provider
 import (
 	"encoding/json"
 	"fmt"
+	"log/slog"
 )
 
 // Manifest contains information about the provider manifest.
@@ -28,7 +29,8 @@ func (p Provider) GetProtocols(manifestDownloadUrl string) ([]string, error) {
 
 	manifest, err := parseManifestContents(contents)
 	if err != nil {
-		return nil, err
+		p.Logger.Warn("Manifest file invalid, ignoring...", slog.String("url", manifestDownloadUrl), slog.Any("err", err))
+		return nil, nil
 	}
 
 	return manifest.Metadata.ProtocolVersions, nil
