@@ -3,6 +3,7 @@ package provider
 import (
 	"encoding/json"
 	"fmt"
+	"log/slog"
 )
 
 type Manifest struct {
@@ -23,6 +24,7 @@ func (p Provider) GetProtocols(manifestDownloadUrl string) ([]string, error) {
 
 	manifest, err := parseManifestContents(contents)
 	if err != nil {
+		p.Logger.Warn("Manifest file invalid, ignoring...", slog.String("url", manifestDownloadUrl), slog.Any("err", err))
 		return nil, nil
 	}
 
