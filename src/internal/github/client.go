@@ -6,8 +6,9 @@ import (
 	"log/slog"
 	"net/http"
 	"os"
-	"time"
 
+	"github.com/hashicorp/go-cleanhttp"
+	"github.com/hashicorp/go-retryablehttp"
 	"github.com/shurcooL/githubv4"
 )
 
@@ -26,7 +27,7 @@ func EnvAuthToken() (string, error) {
 type Client struct {
 	ctx        context.Context
 	log        *slog.Logger
-	httpClient *http.Client
+	httpClient *retryablehttp.Client
 	ghClient   *githubv4.Client
 
 	cliThrottle   Throttle
@@ -38,16 +39,22 @@ type Client struct {
 // NewClient creates a new GitHub client.
 func NewClient(ctx context.Context, log *slog.Logger, token string) Client {
 	httpClient := &http.Client{Transport: &transport{token: token, ctx: ctx}}
+
+	// As in the Arel's app:
+	retryClient := retryablehttp.NewClient()
+	retryClient.HTTPClient = httpClient
+	retryClient.RetryMax = 10
+
 	return Client{
 		ctx:        ctx,
 		log:        log.WithGroup("github"),
-		httpClient: httpClient,
+		httpClient: retryClient,
 		ghClient:   githubv4.NewClient(httpClient),
 
-		cliThrottle:   NewThrottle(ctx, time.Second/60, 60),
-		apiThrottle:   NewThrottle(ctx, time.Second, 3),
-		assetThrottle: NewThrottle(ctx, time.Second/60, 30),
-		rssThrottle:   NewThrottle(ctx, time.Second/30, 30),
+		cliThrottle:   NewDummyThrottle(),
+		apiThrottle:   NewDummyThrottle(),
+		assetThrottle: NewDummyThrottle(),
+		rssThrottle:   NewDummyThrottle(),
 	}
 	/* TODO
 	retryClient := retryablehttp.NewClient()
@@ -84,5 +91,5 @@ func (t *transport) RoundTrip(req *http.Request) (*http.Response, error) {
 	req = req.WithContext(t.ctx)
 	req.Header.Set("User-Agent", UserAgent)
 	req.Header.Set("Authorization", "Bearer "+t.token)
-	return http.DefaultTransport.RoundTrip(req)
+	return cleanhttp.DefaultPooledTransport().RoundTrip(req)
 }

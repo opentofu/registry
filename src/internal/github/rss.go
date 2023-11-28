@@ -43,6 +43,9 @@ func (c Client) extractTag(item *gofeed.Item) *string {
 
 func (c Client) getReleaseRSSFeed(releasesRSSURL string) (*gofeed.Feed, error) {
 	// TODO: uncomment if we end up being kickoff by github
+	// Q: why the logic implemented here https://github.com/RLRabinowitz/rlrabinowitz.github.io takes
+	// an order of magnitude less time to bump versions?
+
 	// done := c.rssThrottle()
 	// defer done()
 

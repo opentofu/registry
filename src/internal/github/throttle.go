@@ -25,3 +25,9 @@ func NewThrottle(ctx context.Context, every time.Duration, concurrent int) Throt
 		return func() { checkout <- id }
 	}
 }
+
+// NewDummyThrottle fines a dummy throttle limiter used for test purposes.
+// Note that it does not apply any rate limits.
+func NewDummyThrottle() Throttle {
+	return func() ThrottleToken { return func() {} }
+}
