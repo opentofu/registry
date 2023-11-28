@@ -1,7 +1,5 @@
 package v1api
 
-import "github.com/opentofu/registry-stable/internal/github"
-
 // ModuleVersionDownloadResponse is the item returned by the module version download API.
 type ModuleVersionDownloadResponse struct {
 	// The URL to download the module from.
@@ -13,47 +11,50 @@ type ModuleVersionListingResponse struct {
 	Modules []ModuleVersionListingResponseItem `json:"modules"`
 }
 
+// ModuleVersionListingResponseItem returns information about all the versions of a module.
 type ModuleVersionListingResponseItem struct {
 	Versions []ModuleVersionResponseItem `json:"versions"`
 }
 
+// ModuleVersionResponseItem is the item returned by the module version listing API
 type ModuleVersionResponseItem struct {
 	Version string `json:"version"` // The version string
 
+	// TODO: Discuss if we want to keep or not.
 	// Root is not currently populated in the response, but may be in the future.
 	Root *ModuleMetadata `json:"root,omitempty"`
 }
 
 type ModuleMetadata struct {
 	Path         string                     `json:"path,omitempty"` // If this is a submodule, the path to the module root
-	Providers    []ModuleProviderDependency `json:"providers"`
-	Dependencies []ModuleDependency         `json:"dependencies"`
+	Providers    []ModuleProviderDependency `json:"providers"`      // The providers required by this module
+	Dependencies []ModuleDependency         `json:"dependencies"`   // The modules required by this module
 
-	SubModules []ModuleMetadata `json:"submodules"`
+	SubModules []ModuleMetadata `json:"submodules"` // The submodules of this module
 }
 
 type ModuleProviderDependency struct {
-	Name      string `json:"name"`
-	Namespace string `json:"namespace"`
-	Version   string `json:"version"` // The version constraint defined inside the module, ie. ">= 1.0.0"
-	Source    string `json:"source"`  // The name of the provider, ie. "hashicorp/aws" or "myregistry.com/myorg/myprovider"
+	Name      string `json:"name"`      // The name of the module
+	Namespace string `json:"namespace"` // The namespace of the module
+	Version   string `json:"version"`   // The version constraint defined inside the module, ie. ">= 1.0.0"
+	Source    string `json:"source"`    // The name of the provider, ie. "hashicorp/aws" or "myregistry.com/myorg/myprovider"
 }
 
 type ModuleDependency struct {
-	Name    string `json:"name"`
-	Source  string `json:"source"`
-	Version string `json:"version"`
+	Name    string `json:"name"`    // The name of the module
+	Source  string `json:"source"`  // The location of the module
+	Version string `json:"version"` // The version constraint defined inside the module, ie. ">= 1.0.0"
 }
 
 // ProviderVersionListingResponse is the item returned by the provider version listing API.
 type ProviderVersionListingResponse struct {
-	Versions []ProviderVersionResponseItem `json:"versions"`
+	Versions []ProviderVersionResponseItem `json:"versions"` // A list of provider versions.
 }
 
 type ProviderVersionResponseItem struct {
-	Version   string            `json:"version"`   // The version number of the provider.
-	Protocols []string          `json:"protocols"` // The protocol versions the provider supports.
-	Platforms []github.Platform `json:"platforms"` // A list of platforms for which this provider version is available.
+	Version   string     `json:"version"`   // The version number of the provider.
+	Protocols []string   `json:"protocols"` // The protocol versions the provider supports.
+	Platforms []Platform `json:"platforms"` // A list of platforms for which this provider version is available.
 }
 
 // ProviderVersionDetails provides comprehensive details about a specific provider version.

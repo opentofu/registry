@@ -12,12 +12,14 @@ import (
 	"github.com/opentofu/registry-stable/internal/github"
 )
 
-type MetadataFile struct {
+// Metadata contains information about the provider.
+type Metadata struct {
 	Repository string       `json:"repository,omitempty"` // Optional. Custom repository from which to fetch the provider's metadata.
 	Versions   []Version    `json:"versions"`             // A list of version data, for each supported provider version.
 	Logger     *slog.Logger `json:"-"`
 }
 
+// Version contains information about a specific provider version.
 type Version struct {
 	Version             string   `json:"version"`               // The version number of the provider.
 	Protocols           []string `json:"protocols"`             // The protocol versions the provider supports.
@@ -26,6 +28,7 @@ type Version struct {
 	Targets             []Target `json:"targets"`               // A list of target platforms for which this provider version is available.
 }
 
+// Target contains information about a specific provider version for a specific target platform.
 type Target struct {
 	OS          string `json:"os"`           // The operating system for which the provider is built.
 	Arch        string `json:"arch"`         // The architecture for which the provider is built.
@@ -34,6 +37,7 @@ type Target struct {
 	SHASum      string `json:"shasum"`       // The SHA checksum of the provider binary.
 }
 
+// Provider contains information about a provider.
 type Provider struct {
 	ProviderName string // The provider name
 	Namespace    string // The provider namespace
@@ -42,21 +46,23 @@ type Provider struct {
 	Github       github.Client
 }
 
+// RepositoryName returns the name of the repository that the provider is assumed to be living in.
 func (p Provider) RepositoryName() string {
 	return fmt.Sprintf("terraform-provider-%s", p.ProviderName)
 }
 
-// TODO custom repository url?
+// RepositoryURL returns the URL of the repository that the provider is assumed to be living in.
 func (p Provider) RepositoryURL() string {
 	return fmt.Sprintf("https://github.com/%s/%s", p.EffectiveNamespace(), p.RepositoryName())
 }
 
-func (p Provider) getRssUrl() string {
+// RSSURL returns the URL of the RSS feed for the repository's releases.
+func (p Provider) RSSURL() string {
 	repositoryUrl := p.RepositoryURL()
 	return fmt.Sprintf("%s/releases.atom", repositoryUrl)
 }
 
-// EffectiveProviderNamespace will map namespaces for providers in situations
+// EffectiveNamespace will map namespaces for providers in situations
 // where the author (owner of the namespace) does not release artifacts as
 // GitHub Releases.
 func (p Provider) EffectiveNamespace() string {
@@ -67,12 +73,14 @@ func (p Provider) EffectiveNamespace() string {
 	return p.Namespace
 } // TODO make more generic
 
+// MetadataPath returns the path to the provider's metadata file.
 func (p Provider) MetadataPath() string {
 	return filepath.Join(p.Directory, strings.ToLower(p.Namespace[0:1]), p.Namespace, p.ProviderName+".json")
 }
 
-func (p Provider) ReadMetadata() (MetadataFile, error) {
-	var metadata MetadataFile
+// ReadMetadata reads and parses the provider's metadata file and returns a Metadata struct.
+func (p Provider) ReadMetadata() (Metadata, error) {
+	var metadata Metadata
 
 	path := p.MetadataPath()
 
@@ -91,7 +99,8 @@ func (p Provider) ReadMetadata() (MetadataFile, error) {
 	return metadata, nil
 }
 
-func (p Provider) WriteMetadata(meta MetadataFile) error {
+// WriteMetadata writes the given Metadata struct to the provider's metadata file.
+func (p Provider) WriteMetadata(meta Metadata) error {
 	path := p.MetadataPath()
 	return files.SafeWriteObjectToJSONFile(path, meta)
 }

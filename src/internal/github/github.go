@@ -8,6 +8,8 @@ import (
 	"github.com/shurcooL/githubv4"
 )
 
+// FetchPublishedReleases fetches all published releases for the given repository.
+// This will fetch all releases, ignoring those that are marked as draft or prerelease, across all pages.
 func (c Client) FetchPublishedReleases(owner string, repoName string) (releases []GHRelease, err error) {
 	variables := map[string]interface{}{
 		"owner":     githubv4.String(owner),
@@ -18,32 +20,34 @@ func (c Client) FetchPublishedReleases(owner string, repoName string) (releases 
 	done := c.apiThrottle()
 	defer done()
 
+	logger := c.log.With(slog.String("owner", owner), slog.String("repo", repoName))
+
 	for {
 		var query GHRepository
 		if err := c.ghClient.Query(c.ctx, &query, variables); err != nil {
 			return nil, fmt.Errorf("failed to fetch releases for %s/%s: %w", owner, repoName, err)
 		}
 
-		c.log.Info("Checking for possible new releases", slog.Int("releases", len(query.Repository.Releases.Nodes)))
+		logger.Info("Checking for possible new releases", slog.Int("releases", len(query.Repository.Releases.Nodes)))
 
 		for _, r := range query.Repository.Releases.Nodes {
 			if r.IsDraft || r.IsPrerelease {
 				continue
 			}
 
-			c.log.Info("New release fetched", slog.String("release", r.TagName), slog.String("created", r.CreatedAt.String()))
+			logger.Info("Release fetched", slog.String("release", r.TagName), slog.String("created", r.CreatedAt.String()))
 			releases = append(releases, r)
 		}
 
 		if !query.Repository.Releases.PageInfo.HasNextPage {
-			c.log.Info("No more releases to fetch")
+			logger.Info("No more releases to fetch")
 			break
 		}
 
 		variables["endCursor"] = githubv4.String(query.Repository.Releases.PageInfo.EndCursor)
 	}
 
-	c.log.Info("New releases fetched", slog.Int("releases", len(releases)))
+	logger.Info("Releases fetched", slog.Int("releases", len(releases)))
 	return releases, nil
 }
 

@@ -7,29 +7,22 @@ import (
 	"net/http"
 )
 
-// TODO: probably move the Platform type inside providers as that's the only place this is used,
-// and its a bit strange being in the github package
-
-type Platform struct {
-	OS   string
-	Arch string
-}
-
+// DownloadAssetContents downloads the contents of the asset at the given URL and returns it directly
 func (c Client) DownloadAssetContents(downloadURL string) ([]byte, error) {
 	done := c.assetThrottle()
 	defer done()
 
-	c.log.Info("Downloading asset", slog.String("url", downloadURL))
+	logger := c.log.With(slog.String("url", downloadURL))
+	logger.Info("Downloading asset")
 
 	resp, err := c.httpClient.Get(downloadURL)
 	if err != nil {
 		return nil, fmt.Errorf("error downloading asset %s: %w", downloadURL, err)
 	}
-
 	defer resp.Body.Close()
 
 	if resp.StatusCode == http.StatusNotFound {
-		c.log.Info("Asset not found", slog.String("url", downloadURL))
+		logger.Warn("asset not found")
 		return nil, nil
 	}
 
@@ -42,7 +35,7 @@ func (c Client) DownloadAssetContents(downloadURL string) ([]byte, error) {
 		return nil, fmt.Errorf("failed to read asset contents of %s: %w", downloadURL, err)
 	}
 
-	c.log.Info("Asset downloaded", slog.String("url", downloadURL))
+	logger.Info("asset successfully downloaded", slog.Int("size", len(contents)))
 
 	return contents, nil
 }

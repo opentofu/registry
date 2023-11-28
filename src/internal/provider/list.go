@@ -35,28 +35,26 @@ func extractProviderDetailsFromPath(path string) *Provider {
 	return &p
 }
 
-type ProviderList []Provider
-
-func ListProviders(providerDataDir string, logger *slog.Logger, ghClient github.Client) (ProviderList, error) {
-	// walk the provider directory recursively and find all json files
-	// for each json file, parse it into a Provider struct
-	// return a slice of Provider structs
-
+// ListProviders returns a slice of Provider structs for each provider found in the providerDataDir.
+func ListProviders(providerDataDir string, logger *slog.Logger, ghClient github.Client) (List, error) {
 	var results []Provider
 	err := filepath.Walk(providerDataDir, func(path string, info os.FileInfo, err error) error {
 		p := extractProviderDetailsFromPath(path)
-		if p != nil {
-			p.Directory = providerDataDir
-			p.Logger = logger.With(
-				slog.String("type", "provider"),
-				slog.Group("provider", slog.String("namespace", p.Namespace), slog.String("name", p.ProviderName)),
-			)
-			p.Github = ghClient.WithLogger(p.Logger)
 
-			results = append(results, *p)
-		} else {
+		if p == nil {
 			logger.Debug("Failed to extract provider details from path, skipping", slog.String("path", path))
+			return nil
 		}
+
+		// enrich the provider object
+		p.Directory = providerDataDir
+		p.Logger = logger.With(
+			slog.String("type", "provider"),
+			slog.Group("provider", slog.String("namespace", p.Namespace), slog.String("name", p.ProviderName)),
+		)
+		p.Github = ghClient.WithLogger(p.Logger)
+
+		results = append(results, *p)
 		return nil
 	})
 
@@ -67,9 +65,13 @@ func ListProviders(providerDataDir string, logger *slog.Logger, ghClient github.
 	return results, nil
 }
 
+// List is a slice of Provider structs.
+type List []Provider
+
+// Action is a function that takes a Provider and returns an error, to be used with List.Parallel.
 type Action func(p Provider) error
 
-func (providers ProviderList) Parallel(maxConcurrency int, action Action) error {
+func (providers List) Parallel(maxConcurrency int, action Action) error {
 	actions := make([]parallel.Action, len(providers))
 	for i, p := range providers {
 		p := p
@@ -85,7 +87,7 @@ func (providers ProviderList) Parallel(maxConcurrency int, action Action) error 
 
 	errs := parallel.ForEach(actions, maxConcurrency)
 	if len(errs) != 0 {
-		return fmt.Errorf("Encountered %d errors processing %d providers", len(errs), len(providers))
+		return fmt.Errorf("encountered %d errors processing %d providers", len(errs), len(providers))
 	}
 	return nil
 }

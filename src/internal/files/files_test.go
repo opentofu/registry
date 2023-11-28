@@ -2,7 +2,6 @@ package files
 
 import (
 	"encoding/json"
-	"fmt"
 	"os"
 	"path/filepath"
 	"testing"
@@ -10,67 +9,62 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestFiles_SafeWriteObjectToJsonFile_Success(t *testing.T) {
+func TestFiles_SafeWriteObjectToJSONFile_Success(t *testing.T) {
 	dir := t.TempDir()
+	path := filepath.Join(dir, "subdir", "file.json")
 
 	data := map[string]interface{}{
 		"foo": "bar",
 	}
 
-	path := filepath.Join(dir, "subdir", "file.json")
-
 	err := SafeWriteObjectToJSONFile(path, data)
-
 	if err != nil {
-		t.Error(err)
+		t.Fatal(err)
 	}
 
 	raw, err := os.ReadFile(path)
 	if err != nil {
-		t.Error(err)
+		t.Fatal(err)
 	}
 
 	var read map[string]interface{}
 	err = json.Unmarshal(raw, &read)
 	if err != nil {
-		t.Error(err)
+		t.Fatal(err)
 	}
 
 	assert.Equal(t, data, read)
 }
 
-func TestFiles_SafeWriteObjectToJsonFile_InvalidMarshall(t *testing.T) {
+func TestFiles_SafeWriteObjectToJSONFile_InvalidMarshall(t *testing.T) {
 	dir := t.TempDir()
-
 	path := filepath.Join(dir, "subdir", "file.json")
-
 	err := SafeWriteObjectToJSONFile(path, make(chan int))
 
-	if err == nil {
-		t.Fatal("Expected marshal error, got <nil>")
-	}
-	assert.Contains(t, err.Error(), "json: unsupported type: chan int")
+	assert.Error(t, err)
+	assert.ErrorContains(t, err, "json: unsupported type: chan int")
 }
 
-func TestFiles_SafeWriteObjectToJsonFile_InvalidPath(t *testing.T) {
-	// TODO this might not be valid for non-posix systems
-	path := "/dev/null/foo"
-
-	err := SafeWriteObjectToJSONFile(path, nil)
-
-	if err == nil {
-		t.Fatal("Expected directory error, got <nil>")
+func TestFiles_SafeWriteObjectToJSONFile_InvalidPath(t *testing.T) {
+	dir := t.TempDir()
+	// create a file in the temp dir
+	file, err := os.CreateTemp(dir, "test")
+	if err != nil {
+		t.Fatal(err)
 	}
-	assert.Equal(t, "failed to create directory for /dev/null/foo: mkdir /dev/null: not a directory", err.Error())
+	file.Close()
+
+	path := filepath.Join(file.Name(), "file.json")
+	err = SafeWriteObjectToJSONFile(path, nil)
+
+	assert.Error(t, err)
+	assert.ErrorContains(t, err, "not a directory")
 }
 
 func TestFiles_SafeWriteObjectToJsonFile_InvalidPath2(t *testing.T) {
 	dir := t.TempDir()
-
 	err := SafeWriteObjectToJSONFile(dir, nil)
 
-	if err == nil {
-		t.Fatal("Expected file error, got <nil>")
-	}
-	assert.Equal(t, fmt.Sprintf("failed to write to file: open %s: is a directory", dir), err.Error())
+	assert.Error(t, err)
+	assert.ErrorContains(t, err, "is a directory")
 }

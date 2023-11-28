@@ -18,9 +18,9 @@ func Test_ModuleGenerator(t *testing.T) {
 			Name:         "name",
 			TargetSystem: "target",
 		},
-		MetadataFile: module.MetadataFile{},
-		Destination:  "gen",
-		log:          logger,
+		Metadata:    module.Metadata{},
+		Destination: "gen",
+		log:         logger,
 	}
 	v := module.Version{
 		Version: "v1.0.1",
