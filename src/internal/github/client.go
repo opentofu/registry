@@ -6,6 +6,7 @@ import (
 	"log/slog"
 	"net/http"
 	"os"
+	"time"
 
 	"github.com/hashicorp/go-cleanhttp"
 	"github.com/hashicorp/go-retryablehttp"
@@ -51,10 +52,10 @@ func NewClient(ctx context.Context, log *slog.Logger, token string) Client {
 		httpClient: retryClient,
 		ghClient:   githubv4.NewClient(httpClient),
 
-		cliThrottle:   NewDummyThrottle(),
-		apiThrottle:   NewDummyThrottle(),
-		assetThrottle: NewDummyThrottle(),
-		rssThrottle:   NewDummyThrottle(),
+		cliThrottle:   NewThrottle(ctx, time.Second/30, 30),
+		apiThrottle:   NewThrottle(ctx, time.Second, 3),
+		assetThrottle: NewThrottle(ctx, time.Second/30, 30),
+		rssThrottle:   NewThrottle(ctx, time.Second/30, 30),
 	}
 	/* TODO
 	retryClient := retryablehttp.NewClient()
