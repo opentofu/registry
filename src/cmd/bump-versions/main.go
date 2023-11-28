@@ -47,7 +47,10 @@ func main() {
 		logger.Error("Failed to list providers", slog.Any("err", err))
 		os.Exit(1)
 	}
-	err = providers.Parallel(20, func(p provider.Provider) error {
+
+	// FIXME: test assumption that we won't hit the throttling limit of the RSS feed
+	concurrencyProviders := len(providers)
+	err = providers.Parallel(concurrencyProviders, func(p provider.Provider) error {
 		return p.UpdateMetadataFile()
 	})
 	if err != nil {

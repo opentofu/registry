@@ -42,8 +42,9 @@ func (c Client) extractTag(item *gofeed.Item) *string {
 }
 
 func (c Client) getReleaseRSSFeed(releasesRSSURL string) (*gofeed.Feed, error) {
-	done := c.rssThrottle()
-	defer done()
+	// TODO: uncomment if we end up being kickoff by github
+	// done := c.rssThrottle()
+	// defer done()
 
 	resp, err := c.httpClient.Get(releasesRSSURL)
 	if err != nil {

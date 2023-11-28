@@ -1,0 +1,29 @@
+name: Bump Providers Test
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  bump-versions:
+    runs-on: ubuntu-latest
+
+    permissions:
+      # these permissions are required for RSS feed
+      # even if the runner writes nothing to the repo
+      contents: write
+      actions: write
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version-file: './src/go.mod'
+
+      - name: Run version bump script
+        working-directory: ./src
+        run: go run ./cmd/bump-versions
