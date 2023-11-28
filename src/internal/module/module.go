@@ -37,6 +37,12 @@ func (m Module) RepositoryURL() string {
 	return fmt.Sprintf("https://github.com/%s/terraform-%s-%s", m.Namespace, m.TargetSystem, m.Name)
 }
 
+// RSSURL returns the URL of the RSS feed for the repository's tags.
+func (m Module) RSSURL() string {
+	repositoryUrl := m.RepositoryURL()
+	return fmt.Sprintf("%s/tags.atom", repositoryUrl)
+}
+
 // VersionDownloadURL returns the location to download the module from.
 // the file should just contain a link to GitHub to download the tarball, ie:
 // git::https://github.com/terraform-aws-modules/terraform-aws-iam?ref=v5.30.0

@@ -47,7 +47,7 @@ func NewClient(ctx context.Context, log *slog.Logger, token string) Client {
 		cliThrottle:   NewThrottle(ctx, time.Second/30, 30),
 		apiThrottle:   NewThrottle(ctx, time.Second, 3),
 		assetThrottle: NewThrottle(ctx, time.Second/60, 30),
-		rssThrottle:   NewThrottle(ctx, time.Second/10, 10),
+		rssThrottle:   NewThrottle(ctx, time.Second/30, 30),
 	}
 	/* TODO
 	retryClient := retryablehttp.NewClient()
