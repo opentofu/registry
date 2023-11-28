@@ -45,6 +45,8 @@ func NewClient(ctx context.Context, log *slog.Logger, token string) Client {
 	retryClient.HTTPClient = httpClient
 	retryClient.RetryMax = 10
 
+	retryClient.Logger = log.WithGroup("retryClient")
+
 	return Client{
 		ctx:        ctx,
 		log:        log.WithGroup("github"),

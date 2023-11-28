@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
+	logger := slog.New(slog.NewJSONHandler(os.Stdout, &slog.HandlerOptions{Level: slog.LevelWarn}))
 	logger.Info("Starting version bump process for modules and providers")
 
 	moduleDataDir := flag.String("module-data", "../modules", "Directory containing the module data")
