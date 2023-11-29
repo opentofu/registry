@@ -1,5 +1,7 @@
 package v1api
 
+import "github.com/opentofu/registry-stable/internal/gpg"
+
 // ModuleVersionDownloadResponse is the item returned by the module version download API.
 type ModuleVersionDownloadResponse struct {
 	// The URL to download the module from.
@@ -74,11 +76,5 @@ type ProviderVersionDetails struct {
 
 // SigningKeys represents the GPG public keys used to sign a provider version.
 type SigningKeys struct {
-	GPGPublicKeys []GPGPublicKey `json:"gpg_public_keys"` // A list of GPG public keys.
-}
-
-// GPGPublicKey represents an individual GPG public key.
-type GPGPublicKey struct {
-	KeyID      string `json:"key_id"`      // The ID of the GPG key.
-	ASCIIArmor string `json:"ascii_armor"` // The ASCII armored representation of the GPG public key.
+	GPGPublicKeys []gpg.Key `json:"gpg_public_keys"` // A list of GPG public keys.
 }
