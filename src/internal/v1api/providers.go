@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log/slog"
 	"path/filepath"
+	"strings"
 
 	"github.com/opentofu/registry-stable/internal/files"
 	"github.com/opentofu/registry-stable/internal/provider"
@@ -34,12 +35,16 @@ func NewProviderGenerator(p provider.Provider, destination string) (ProviderGene
 
 // VersionListingPath returns the path to the provider version listing file.
 func (p ProviderGenerator) VersionListingPath() string {
-	return filepath.Join(p.Destination, "v1", "providers", p.Provider.Namespace, p.Provider.ProviderName, "versions")
+	namespacePath := strings.ToLower(p.Provider.Namespace)
+	providerNamePath := strings.ToLower(p.Provider.ProviderName)
+	return filepath.Join(p.Destination, "v1", "providers", namespacePath, providerNamePath, "versions")
 }
 
 // VersionDownloadPath returns the path to the provider version download file.
 func (p ProviderGenerator) VersionDownloadPath(ver provider.Version, details ProviderVersionDetails) string {
-	return filepath.Join(p.Destination, "v1", "providers", p.Provider.Namespace, p.Provider.ProviderName, ver.Version, "download", details.OS, details.Arch)
+	namespacePath := strings.ToLower(p.Provider.Namespace)
+	providerNamePath := strings.ToLower(p.Provider.ProviderName)
+	return filepath.Join(p.Destination, "v1", "providers", namespacePath, providerNamePath, ver.Version, "download", details.OS, details.Arch)
 }
 
 // VersionListing will take the provider metadata and generate the responses for the provider version listing API endpoints.
