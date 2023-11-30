@@ -7,6 +7,7 @@ import (
 	"strings"
 
 	"github.com/opentofu/registry-stable/internal/files"
+	"github.com/opentofu/registry-stable/internal/gpg"
 	"github.com/opentofu/registry-stable/internal/provider"
 )
 
@@ -14,20 +15,24 @@ import (
 type ProviderGenerator struct {
 	provider.Provider
 	provider.Metadata
+
+	KeyLocation string
 	Destination string
 	log         *slog.Logger
 }
 
 // NewProviderGenerator creates a new ProviderGenerator which will generate the response for the provider version listing API endpoints and write it to the given destination.
-func NewProviderGenerator(p provider.Provider, destination string) (ProviderGenerator, error) {
+func NewProviderGenerator(p provider.Provider, destination string, gpgKeyLocation string) (ProviderGenerator, error) {
 	metadata, err := p.ReadMetadata()
 	if err != nil {
 		return ProviderGenerator{}, err
 	}
 
 	return ProviderGenerator{
-		Provider:    p,
-		Metadata:    metadata,
+		Provider: p,
+		Metadata: metadata,
+
+		KeyLocation: gpgKeyLocation,
 		Destination: destination,
 		log:         p.Logger,
 	}, err
@@ -71,8 +76,19 @@ func (p ProviderGenerator) VersionListing() ProviderVersionListingResponse {
 }
 
 // VersionDetails will take the provider metadata and generate the responses for the provider version download API endpoints.
-func (p ProviderGenerator) VersionDetails() map[string]ProviderVersionDetails {
+func (p ProviderGenerator) VersionDetails() (map[string]ProviderVersionDetails, error) {
 	versionDetails := make(map[string]ProviderVersionDetails)
+
+	keyCollection := gpg.KeyCollection{
+		Namespace: p.Provider.EffectiveNamespace(),
+		Directory: p.KeyLocation,
+	}
+
+	keys, err := keyCollection.ListKeys()
+	if err != nil {
+		p.log.Error("Failed to list keys", slog.Any("err", err))
+		return nil, err
+	}
 
 	for _, ver := range p.Metadata.Versions {
 		for _, target := range ver.Targets {
@@ -85,26 +101,33 @@ func (p ProviderGenerator) VersionDetails() map[string]ProviderVersionDetails {
 				SHASumsURL:          ver.SHASumsURL,
 				SHASumsSignatureURL: ver.SHASumsSignatureURL,
 				SHASum:              target.SHASum,
-				SigningKeys:         SigningKeys{}, // TODO: Add gpg keys
+				SigningKeys: SigningKeys{
+					GPGPublicKeys: keys,
+				},
 			}
 			versionDetails[p.VersionDownloadPath(ver, details)] = details
 		}
 	}
-	return versionDetails
+	return versionDetails, nil
 }
 
 // Generate generates the responses for the provider version listing API endpoints.
 func (p ProviderGenerator) Generate() error {
 	p.log.Info("Generating")
 
-	for location, details := range p.VersionDetails() {
+	details, err := p.VersionDetails()
+	if err != nil {
+		return err
+	}
+
+	for location, details := range details {
 		err := files.SafeWriteObjectToJSONFile(location, details)
 		if err != nil {
 			return fmt.Errorf("failed to write metadata version download file: %w", err)
 		}
 	}
 
-	err := files.SafeWriteObjectToJSONFile(p.VersionListingPath(), p.VersionListing())
+	err = files.SafeWriteObjectToJSONFile(p.VersionListingPath(), p.VersionListing())
 	if err != nil {
 		return err
 	}

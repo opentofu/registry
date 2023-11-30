@@ -17,6 +17,8 @@ func main() {
 
 	moduleDataDir := flag.String("module-data", "../modules", "Directory containing the module data")
 	providerDataDir := flag.String("provider-data", "../providers", "Directory containing the provider data")
+	keyDataDir := flag.String("key-data", "../keys", "Directory containing the gpg keys")
+
 	destinationDir := flag.String("destination", "../generated", "Directory to write the generated responses to")
 
 	// Will panic if used, it should not be.
@@ -54,7 +56,7 @@ func main() {
 		os.Exit(1)
 	}
 	err = providers.Parallel(20, func(p provider.Provider) error {
-		g, err := v1api.NewProviderGenerator(p, *destinationDir)
+		g, err := v1api.NewProviderGenerator(p, *destinationDir, *keyDataDir)
 		if err != nil {
 			return err
 		}
