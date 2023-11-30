@@ -63,6 +63,13 @@ func (p Provider) VersionFromTag(release string) (*Version, error) {
 			target.SHASum, ok = checksums[target.Filename]
 			if ok {
 				v.Targets = append(v.Targets, target)
+				continue
+			}
+			// now try and pull it with the v in the version
+			target.Filename = fmt.Sprintf("%s_v%s_%s_%s.zip", p.RepositoryName(), version, os, arch)
+			target.SHASum, ok = checksums[target.Filename]
+			if ok {
+				v.Targets = append(v.Targets, target)
 			}
 		}
 	}
