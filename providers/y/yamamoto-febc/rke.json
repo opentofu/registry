@@ -1,0 +1,1576 @@
+{
+  "versions": [
+    {
+      "version": "1.4.3",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3/terraform-provider-rke_1.4.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3/terraform-provider-rke_1.4.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.4.3_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3/terraform-provider-rke_1.4.3_darwin_amd64.zip",
+          "shasum": "677f99ad008fa41ce78d6abb4a9f848cea95e2a3766a9302e6727937e245b4b7"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.4.3_darwin_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3/terraform-provider-rke_1.4.3_darwin_arm64.zip",
+          "shasum": "2a5f18d9076cb606e4a2c4eca8469491cc0fb20d68125870d506c33f3e48bc68"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.4.3_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3/terraform-provider-rke_1.4.3_linux_amd64.zip",
+          "shasum": "9268606d129b92a75f76d9cd34f9dfefbc82fc515829bece9c9005e266c2c311"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.4.3_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3/terraform-provider-rke_1.4.3_linux_arm.zip",
+          "shasum": "e4eb1e695a55fd9bb28e7a5a7c89889cce51ee0d75aa8f4cb06426fb012d24c8"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.4.3_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3/terraform-provider-rke_1.4.3_linux_arm64.zip",
+          "shasum": "daf397ebe23b514f7ec76be6e686440b6f58ef8cd10aa425e6dfcca7d3c41749"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.4.3_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3/terraform-provider-rke_1.4.3_windows_386.zip",
+          "shasum": "009e40c47b6bec48b93d0f1b88009415c781c69126dbbd4f25b08e4c855df31d"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.4.3_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3/terraform-provider-rke_1.4.3_windows_amd64.zip",
+          "shasum": "fb09965f815f8e04c2622376ba5a2dbb17071dd6b8f73644e57e60496126951d"
+        }
+      ]
+    },
+    {
+      "version": "1.4.3-rc2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3-rc2/terraform-provider-rke_1.4.3-rc2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3-rc2/terraform-provider-rke_1.4.3-rc2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.4.3-rc2_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3-rc2/terraform-provider-rke_1.4.3-rc2_darwin_amd64.zip",
+          "shasum": "cb1ec9a8e2ca3a15bc5e2acffe0f597c6fc734d054370ee08c1cef012cf43824"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.4.3-rc2_darwin_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3-rc2/terraform-provider-rke_1.4.3-rc2_darwin_arm64.zip",
+          "shasum": "5269e7a79ba9b32810e29acc142080f3b31417a8acdc71e91ca5949d0bdf852d"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.4.3-rc2_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3-rc2/terraform-provider-rke_1.4.3-rc2_linux_amd64.zip",
+          "shasum": "4d71736ac723d47a0500990640113f1d76a68725e9d7c9fd1cc56c3041cb50e2"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.4.3-rc2_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3-rc2/terraform-provider-rke_1.4.3-rc2_linux_arm.zip",
+          "shasum": "80ed4e97f0c59f08cd5fcde15d193fb107bbc89878c7dafbbd3c1bd0b22afcd9"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.4.3-rc2_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3-rc2/terraform-provider-rke_1.4.3-rc2_linux_arm64.zip",
+          "shasum": "75cc33882fcf634e19c0ca6deb70e465bb85bfeb251d4c9e311e87d66a1608c1"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.4.3-rc2_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3-rc2/terraform-provider-rke_1.4.3-rc2_windows_386.zip",
+          "shasum": "f5d9777154c6bc87c0b3a1c007528be985163e155ba4af56d359b2db9ff7b948"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.4.3-rc2_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3-rc2/terraform-provider-rke_1.4.3-rc2_windows_amd64.zip",
+          "shasum": "8b053020078bc8debd8efbc89631c1c5b03ef7df49974370f51c4e1aad07246a"
+        }
+      ]
+    },
+    {
+      "version": "1.4.3-rc1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3-rc1/terraform-provider-rke_1.4.3-rc1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3-rc1/terraform-provider-rke_1.4.3-rc1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.4.3-rc1_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3-rc1/terraform-provider-rke_1.4.3-rc1_darwin_amd64.zip",
+          "shasum": "2dba868a7fbbf4c574a24ae902d327232c40fa2b278c770002c3e17174b4acec"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.4.3-rc1_darwin_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3-rc1/terraform-provider-rke_1.4.3-rc1_darwin_arm64.zip",
+          "shasum": "8071478a01ed95a16737e19145dd2da5105e2f601a2fbb29719d5dee9237eb47"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.4.3-rc1_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3-rc1/terraform-provider-rke_1.4.3-rc1_linux_amd64.zip",
+          "shasum": "578aaae573c60585a4b1e8e87e4e14e4970a5deabf73b0f5837299c03ec8e1c3"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.4.3-rc1_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3-rc1/terraform-provider-rke_1.4.3-rc1_linux_arm.zip",
+          "shasum": "3ee338ff9f749bfa414c13e4995ffc23f779ab27fda4ba20d73d7724cf46dc3b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.4.3-rc1_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3-rc1/terraform-provider-rke_1.4.3-rc1_linux_arm64.zip",
+          "shasum": "5d7a4c645b12ca743d4d02d969d4b4ac2d58504e462fec4f7a222455e17ecaf5"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.4.3-rc1_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3-rc1/terraform-provider-rke_1.4.3-rc1_windows_386.zip",
+          "shasum": "da48c481deff957c1cc6b2e2c8e9a912559eecde3645b417558f4e9760175741"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.4.3-rc1_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.3-rc1/terraform-provider-rke_1.4.3-rc1_windows_amd64.zip",
+          "shasum": "8e257ab58e61b7bb96ce052852b95e4873271b8260156de43be7e2ea643bdc49"
+        }
+      ]
+    },
+    {
+      "version": "1.4.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.2/terraform-provider-rke_1.4.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.2/terraform-provider-rke_1.4.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.4.2_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.2/terraform-provider-rke_1.4.2_darwin_amd64.zip",
+          "shasum": "f496d2831498dc695f564951c11a5443b5cee2352c93c2fab5524f20e740f801"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.4.2_darwin_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.2/terraform-provider-rke_1.4.2_darwin_arm64.zip",
+          "shasum": "2d7404a8612f63c527cd60ca4426fd77c185609fa766549540e85c6493b43f3c"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.4.2_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.2/terraform-provider-rke_1.4.2_linux_amd64.zip",
+          "shasum": "24c95f0af490628335a30b38001b845825a601543c3b2e5d1ea2843c9d7305dc"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.4.2_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.2/terraform-provider-rke_1.4.2_linux_arm.zip",
+          "shasum": "fd3ad19aa16d0db82d79712240f5966fa3d29eb7eb94b8935a9cc2a853660c7c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.4.2_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.2/terraform-provider-rke_1.4.2_linux_arm64.zip",
+          "shasum": "e19254208d520086e1c8eea41d9e8bba8121bb752c4a8694a4ac4fb788c88d97"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.4.2_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.2/terraform-provider-rke_1.4.2_windows_386.zip",
+          "shasum": "70185a301d09df25a44d0a22b9ea1aaa2277bee9340ebaf303cf6dcd56c61ac5"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.4.2_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.2/terraform-provider-rke_1.4.2_windows_amd64.zip",
+          "shasum": "8cf854254b68cded8af414cdfb28a41586f0284a6a6747293413c7b361d735b9"
+        }
+      ]
+    },
+    {
+      "version": "1.4.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.1/terraform-provider-rke_1.4.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.1/terraform-provider-rke_1.4.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.4.1_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.1/terraform-provider-rke_1.4.1_darwin_amd64.zip",
+          "shasum": "c22cef162e29a8519cafbcd9a429b6797567e189e1ffb69407c3a35b9c72f7f3"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.4.1_darwin_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.1/terraform-provider-rke_1.4.1_darwin_arm64.zip",
+          "shasum": "e13f80de54be3a23a85ff08b7e565357384ab064fde6c7682a9c95e9e8b50f4e"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.4.1_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.1/terraform-provider-rke_1.4.1_linux_amd64.zip",
+          "shasum": "6e5333b7bf95eac4ec17734b8e5df55657384136995b72f9d0a46eec4c19ed70"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.4.1_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.1/terraform-provider-rke_1.4.1_linux_arm.zip",
+          "shasum": "f674f043dcf260896698c93e9056d8da05c8e68b934aa636f344449d51eebcda"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.4.1_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.1/terraform-provider-rke_1.4.1_linux_arm64.zip",
+          "shasum": "68df46382311e35dbbcd0c070e6b7356581017d5721680795dcf482a8652140f"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.4.1_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.1/terraform-provider-rke_1.4.1_windows_386.zip",
+          "shasum": "c37f6052593a4d715a79c733c1d4d6275a75516b226c0f0b42898336ff5901ce"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.4.1_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.1/terraform-provider-rke_1.4.1_windows_amd64.zip",
+          "shasum": "bc91fca2f139a5f523e8bcf1615340c0cab11528773c65f71fe425d46434cd42"
+        }
+      ]
+    },
+    {
+      "version": "1.4.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.0/terraform-provider-rke_1.4.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.0/terraform-provider-rke_1.4.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.4.0_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.0/terraform-provider-rke_1.4.0_darwin_amd64.zip",
+          "shasum": "25d07955392602acb373d27353b485644d4c058055b16816ab7379922889b3c0"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.4.0_darwin_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.0/terraform-provider-rke_1.4.0_darwin_arm64.zip",
+          "shasum": "921faadb7773b98815f0ed2a0f757a79458d377d007ca4cd1fe5834358fde9e0"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.4.0_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.0/terraform-provider-rke_1.4.0_linux_amd64.zip",
+          "shasum": "87f3c1d29ce5b3eede60baf557316c3269ee841f934d4224a71e889cacb6bf45"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.4.0_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.0/terraform-provider-rke_1.4.0_linux_arm.zip",
+          "shasum": "8524b1609e4c33bae99381446d1725b7fa1eeb28015798a4db57493817ebf390"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.4.0_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.0/terraform-provider-rke_1.4.0_linux_arm64.zip",
+          "shasum": "2d7fdba691d8cdde4c21243fda599ac8671ea771d101ce63132d6cb90073c378"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.4.0_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.0/terraform-provider-rke_1.4.0_windows_386.zip",
+          "shasum": "2eda44c2d7406da98f121ad309840de5b2cd4cdc8a4f737fb2c9aa448535aaef"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.4.0_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.4.0/terraform-provider-rke_1.4.0_windows_amd64.zip",
+          "shasum": "abb6d752fef08a4f1c80ad4d1452f4f861e2b486df1ff8146db9b86de504fb36"
+        }
+      ]
+    },
+    {
+      "version": "1.3.5",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.5/terraform-provider-rke_1.3.5_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.5/terraform-provider-rke_1.3.5_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.3.5_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.5/terraform-provider-rke_1.3.5_darwin_amd64.zip",
+          "shasum": "955155b589fa615e2bf8e4bea6589367885201f81e246ffcd66ca60e54e357db"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.3.5_darwin_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.5/terraform-provider-rke_1.3.5_darwin_arm64.zip",
+          "shasum": "f30b9b9bc267775e89534efe86925616eb637450b3becb49859fd8b48ee2763b"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.3.5_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.5/terraform-provider-rke_1.3.5_linux_amd64.zip",
+          "shasum": "5764f45b240886466623256375c3afd175755b22eb490fc00ae0a064dd40f91d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.3.5_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.5/terraform-provider-rke_1.3.5_linux_arm.zip",
+          "shasum": "10b52433c2346fb7f9d2396f0d148de557ed9f9fb0a4c563667b8fbd724f4030"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.3.5_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.5/terraform-provider-rke_1.3.5_linux_arm64.zip",
+          "shasum": "b83cfd2cf2d8bfd6dcc2c119f2df1534fb31722897fcb9eacb9212ff6f1c92c7"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.3.5_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.5/terraform-provider-rke_1.3.5_windows_386.zip",
+          "shasum": "44c25d3155daf65e57a94b58bda554aaad24c514fe1f8c641f1c876f99986c52"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.3.5_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.5/terraform-provider-rke_1.3.5_windows_amd64.zip",
+          "shasum": "6a7e951345c962bf21c9a16aba7daf00cb11d9698afb414d5c9accfe88a8ef56"
+        }
+      ]
+    },
+    {
+      "version": "1.3.4",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.4/terraform-provider-rke_1.3.4_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.4/terraform-provider-rke_1.3.4_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.3.4_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.4/terraform-provider-rke_1.3.4_darwin_amd64.zip",
+          "shasum": "a0c32c313cfd5a1e7d263620cf18954e72a4b426a6fb24fdcd9d00e60e550ea5"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.3.4_darwin_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.4/terraform-provider-rke_1.3.4_darwin_arm64.zip",
+          "shasum": "f82caf5ac58314fe0dba6a59e9af8c91e0729d3571125bf8f0eb01b3855558e6"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.3.4_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.4/terraform-provider-rke_1.3.4_linux_amd64.zip",
+          "shasum": "42f833a33db8deb4bafc6a62ab71628bfb9354c67d202eebe5cd5b50601dd188"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.3.4_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.4/terraform-provider-rke_1.3.4_linux_arm.zip",
+          "shasum": "5e956363756d924dcec939ea8d75f24ad100a8cef2338f1749be2da9528a65d0"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.3.4_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.4/terraform-provider-rke_1.3.4_linux_arm64.zip",
+          "shasum": "a35d711702094a8acf0cd2fd26703daa286c0b06b10a4256f29af0dd718d062a"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.3.4_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.4/terraform-provider-rke_1.3.4_windows_386.zip",
+          "shasum": "92304df2964d70e8b10e708dc5d9229250e7516beb5a76ba3a84850aa7dd1e4f"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.3.4_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.4/terraform-provider-rke_1.3.4_windows_amd64.zip",
+          "shasum": "c757ce81c382f39dd2ddc5f51175ccd8a189fbd2822ac676365b6ab040e711be"
+        }
+      ]
+    },
+    {
+      "version": "1.3.3",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.3/terraform-provider-rke_1.3.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.3/terraform-provider-rke_1.3.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.3.3_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.3/terraform-provider-rke_1.3.3_darwin_amd64.zip",
+          "shasum": "367423a7332523efed50dd643af7944ee3b9b9573effe008afae4c6ead9310f5"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.3.3_darwin_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.3/terraform-provider-rke_1.3.3_darwin_arm64.zip",
+          "shasum": "ac9a8807eae7033e3cf85e18ff8a78477657d6df883644587b1cbceec0df9418"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.3.3_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.3/terraform-provider-rke_1.3.3_linux_amd64.zip",
+          "shasum": "c23cc66069070e56095e6345ac660a546fd59f7c3ad1c160528bebb0c48dc08b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.3.3_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.3/terraform-provider-rke_1.3.3_linux_arm.zip",
+          "shasum": "2c0bd98ff07e8a4be0cee3ebd69e278ac3f949e31daf6548ef565d9cd93bca77"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.3.3_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.3/terraform-provider-rke_1.3.3_linux_arm64.zip",
+          "shasum": "3c0ab4e1f0be3c6a7171d4cf25140cb1862167bd34496306f9737c458697c594"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.3.3_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.3/terraform-provider-rke_1.3.3_windows_386.zip",
+          "shasum": "28a95e6830d379f4b2b42503012f18883acb7af2ef04e3ea910753fc6274a738"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.3.3_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.3/terraform-provider-rke_1.3.3_windows_amd64.zip",
+          "shasum": "ee9fc03f83b8f05b04b2ff2f023b8285f104dfdb77577142d5c738d01f88430d"
+        }
+      ]
+    },
+    {
+      "version": "1.3.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.2/terraform-provider-rke_1.3.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.2/terraform-provider-rke_1.3.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.3.2_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.2/terraform-provider-rke_1.3.2_darwin_amd64.zip",
+          "shasum": "bd1035746bbde5d16390ffb057f594a001a31017d048326264d6066e8d88052a"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.3.2_darwin_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.2/terraform-provider-rke_1.3.2_darwin_arm64.zip",
+          "shasum": "4124bd7d03c9863cc763b0b3c60134de760b7b83eac941df7c0ce04fcc7c5cff"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.3.2_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.2/terraform-provider-rke_1.3.2_linux_amd64.zip",
+          "shasum": "d929b6c209d9336e35fab6889b8e5327cad8265cd7b854345e00f00b5ca7f07b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.3.2_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.2/terraform-provider-rke_1.3.2_linux_arm.zip",
+          "shasum": "8702067745c8e68102a566fb56e9f99197628d4a8ccc1497408bcb30d896aa71"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.3.2_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.2/terraform-provider-rke_1.3.2_linux_arm64.zip",
+          "shasum": "581b36ea49c2860dcd12bba0481bf3d00a11debd7f0194f8be9629b1286c9263"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.3.2_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.2/terraform-provider-rke_1.3.2_windows_386.zip",
+          "shasum": "a2b7d18934460df0b6fa7d971bf0f922d87c88d2b82ee0aca6b8877dcd961fad"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.3.2_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.2/terraform-provider-rke_1.3.2_windows_amd64.zip",
+          "shasum": "7560b728b40a66632ab30fad28dd97edeed017f096c8cede49455ee643619cb2"
+        }
+      ]
+    },
+    {
+      "version": "1.3.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.1/terraform-provider-rke_1.3.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.1/terraform-provider-rke_1.3.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.3.1_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.1/terraform-provider-rke_1.3.1_darwin_amd64.zip",
+          "shasum": "cf39fcc94ba1c25021eff01b38286e6d103e32be1431b410fb65ad8bdd83962b"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.3.1_darwin_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.1/terraform-provider-rke_1.3.1_darwin_arm64.zip",
+          "shasum": "b2cc7a62025125d0aea42be8909f93c0ff035506947b4f90e46e42c2581f81bf"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.3.1_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.1/terraform-provider-rke_1.3.1_linux_amd64.zip",
+          "shasum": "678d0505ab60904d17f7167e1926b7cef13846282343ec0a302d2ff460c0cf2d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.3.1_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.1/terraform-provider-rke_1.3.1_linux_arm.zip",
+          "shasum": "97b9a10044026a489d090d8bd090042994fa77996b89026f4ec307b59f187f80"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.3.1_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.1/terraform-provider-rke_1.3.1_linux_arm64.zip",
+          "shasum": "792510a9515d08a67f69a2602ec3f3079c9500f8f1ac43ee1e38e528abcb7850"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.3.1_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.1/terraform-provider-rke_1.3.1_windows_386.zip",
+          "shasum": "6802203fdcad8f562b7927cc7b7e035240d820d542fff16771323db3fb451782"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.3.1_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.1/terraform-provider-rke_1.3.1_windows_amd64.zip",
+          "shasum": "173866412d42f5b731cfd2394eccd285d45ce12f9badb200d54bae40b7f544ba"
+        }
+      ]
+    },
+    {
+      "version": "1.3.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.0/terraform-provider-rke_1.3.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.0/terraform-provider-rke_1.3.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.3.0_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.0/terraform-provider-rke_1.3.0_darwin_amd64.zip",
+          "shasum": "192d29c7fdcf9ed18f0ad4cd4b3c4458483ec695bafdb9caf5c83d843625be3a"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.3.0_darwin_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.0/terraform-provider-rke_1.3.0_darwin_arm64.zip",
+          "shasum": "90c09ce14887d7a20558d5d14072139c7c33d6440c80773dc53be18689534d8b"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.3.0_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.0/terraform-provider-rke_1.3.0_linux_amd64.zip",
+          "shasum": "f3fce785a7d1f404f928a5ccdc4a1e2736c2f05fcc1f51f2c3d187f6a1344859"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.3.0_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.0/terraform-provider-rke_1.3.0_linux_arm.zip",
+          "shasum": "76476e9bd450d0b9c34426c066241cecf2934f41d4088e633c4a511c56206abe"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.3.0_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.0/terraform-provider-rke_1.3.0_linux_arm64.zip",
+          "shasum": "b5781dbdcb05636e3ffd172de7691ce684fe8a336fec0a624504d13c345bbff3"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.3.0_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.0/terraform-provider-rke_1.3.0_windows_386.zip",
+          "shasum": "50e9c6e5fccb1e43aa87117ee029cb5a9374babdf0c35d468543785013c51895"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.3.0_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.3.0/terraform-provider-rke_1.3.0_windows_amd64.zip",
+          "shasum": "f4ca9a812d9ea525e6f18b7b2701c61e6b1aa85974adea161f34c97ef76b1100"
+        }
+      ]
+    },
+    {
+      "version": "1.2.5",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.5/terraform-provider-rke_1.2.5_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.5/terraform-provider-rke_1.2.5_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.2.5_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.5/terraform-provider-rke_1.2.5_darwin_amd64.zip",
+          "shasum": "09f5893729451756581b14d66f2b79c2e8e4dc2f5af9888324c84f06db0179e4"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.2.5_darwin_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.5/terraform-provider-rke_1.2.5_darwin_arm64.zip",
+          "shasum": "b030ad5feaa21999c1d31aab4817fd284ff9838af5483f7d005d540a458c59da"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.2.5_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.5/terraform-provider-rke_1.2.5_linux_amd64.zip",
+          "shasum": "f9df176cf2e074958ee54c8011492b9cd11756f5e7d0b07ba8b7f18b8a3b6b7c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.2.5_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.5/terraform-provider-rke_1.2.5_linux_arm.zip",
+          "shasum": "0c842354a4d6206c26687a765be728fef11ed8c430468fd42c80e82c219e86ad"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.2.5_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.5/terraform-provider-rke_1.2.5_linux_arm64.zip",
+          "shasum": "a158a927996426d689f83e4523c0b2c7bef52790bb20d3dd4e221d1df3246637"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.2.5_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.5/terraform-provider-rke_1.2.5_windows_386.zip",
+          "shasum": "edb7d0bb86ef669e51ecaccd21066f119a9bd808d90e497b9b3f06690cc9624b"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.2.5_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.5/terraform-provider-rke_1.2.5_windows_amd64.zip",
+          "shasum": "bc3ebefe1c789a1d86a4ce73ae11c5f636cfda01c726e6ab68eb67f688547cf8"
+        }
+      ]
+    },
+    {
+      "version": "1.2.4",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.4/terraform-provider-rke_1.2.4_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.4/terraform-provider-rke_1.2.4_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.2.4_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.4/terraform-provider-rke_1.2.4_darwin_amd64.zip",
+          "shasum": "d8ae1dea32cfc737d784d8a7499201d46208961a8cc97b6b25ee29dac74e2f7d"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.2.4_darwin_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.4/terraform-provider-rke_1.2.4_darwin_arm64.zip",
+          "shasum": "da24aea85dab0f9fb688f272956d2f13ef45683f206b19ccfda8af4d342d3756"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.2.4_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.4/terraform-provider-rke_1.2.4_linux_amd64.zip",
+          "shasum": "e8317f1d46593500204a60fa40f2514d25cd2e9dc1dc7f8981e4280b83d42d78"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.2.4_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.4/terraform-provider-rke_1.2.4_linux_arm.zip",
+          "shasum": "a350467407c2191496fa678c4515947607a0590fa193504abc323c95d885aded"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.2.4_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.4/terraform-provider-rke_1.2.4_linux_arm64.zip",
+          "shasum": "b8017e2f60a235262b214888b1ebbc92786bf2b9baa281f78f33a80f1e27372c"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.2.4_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.4/terraform-provider-rke_1.2.4_windows_386.zip",
+          "shasum": "35372b7861e3f3687677346ab525ac3864da08cb9a13681f0c92e03145f5d430"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.2.4_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.4/terraform-provider-rke_1.2.4_windows_amd64.zip",
+          "shasum": "e6d29cc2b1bb165926c00b9bbc0c69ea974e728329b504f59bd60442cc5c6720"
+        }
+      ]
+    },
+    {
+      "version": "1.2.3",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.3/terraform-provider-rke_1.2.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.3/terraform-provider-rke_1.2.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.2.3_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.3/terraform-provider-rke_1.2.3_darwin_amd64.zip",
+          "shasum": "021d3b1837854cb603fb41b4d606293ba90667b3a2e9a55ff2271a25da1e7c45"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.2.3_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.3/terraform-provider-rke_1.2.3_linux_amd64.zip",
+          "shasum": "27d1ac4deb66c9666ef0e6237364c88cf209cdee23d0c3b59b513a653883bc25"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.2.3_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.3/terraform-provider-rke_1.2.3_linux_arm.zip",
+          "shasum": "8878c7f87dd52d4705ae137f8392cd43fe590a93f829ee713554a2944e5d7b31"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.2.3_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.3/terraform-provider-rke_1.2.3_linux_arm64.zip",
+          "shasum": "cd20ea8fb48992d02bc71cba625e482a9b4b7659857ee2cdac0d8c4518058abb"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.2.3_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.3/terraform-provider-rke_1.2.3_windows_386.zip",
+          "shasum": "961b0eeeb8296734e540caf480c087f58655849613bf3f52ad40f2a0c260282e"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.2.3_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.3/terraform-provider-rke_1.2.3_windows_amd64.zip",
+          "shasum": "35c9a0595b64ea3668955eef9d7fdca62faf98bad332f492c183dcadb0985a70"
+        }
+      ]
+    },
+    {
+      "version": "1.2.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.2/terraform-provider-rke_1.2.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.2/terraform-provider-rke_1.2.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.2.2_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.2/terraform-provider-rke_1.2.2_darwin_amd64.zip",
+          "shasum": "9baebd8b619dea744a57eb3129c5d0e766bc14df5f207d465409f33de3e423c9"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.2.2_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.2/terraform-provider-rke_1.2.2_linux_amd64.zip",
+          "shasum": "8c5a3f28309a2be9f9744eb0852bc2746bd53582940aff07550f887c200dc929"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.2.2_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.2/terraform-provider-rke_1.2.2_linux_arm.zip",
+          "shasum": "b6a33af13310a17c44fdd14a5255582c78e0c80e58c26b1879a36a6549112387"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.2.2_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.2/terraform-provider-rke_1.2.2_linux_arm64.zip",
+          "shasum": "2c69a6b2c076ceabf08312f25f5042be5afc0264d9d2f063d9ec6a3dd12205ed"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.2.2_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.2/terraform-provider-rke_1.2.2_windows_386.zip",
+          "shasum": "5c489814801acd28721f106b633c485595cb615c620a816dcc1eae108a4fdab4"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.2.2_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.2/terraform-provider-rke_1.2.2_windows_amd64.zip",
+          "shasum": "58ab4aa01574c8ca1a4b28b3bbc1f4501abf3d5dc1d51ed7120b5e41b3ec191f"
+        }
+      ]
+    },
+    {
+      "version": "1.2.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.1/terraform-provider-rke_1.2.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.1/terraform-provider-rke_1.2.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.2.1_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.1/terraform-provider-rke_1.2.1_darwin_amd64.zip",
+          "shasum": "49a06fdcbec632665175716defe37e7d9867e539c34cb27e0f36fc3b269f2252"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.2.1_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.1/terraform-provider-rke_1.2.1_linux_amd64.zip",
+          "shasum": "e1f8bd3a740322eb0e669b08543760db25d5754a703f5773ece50d533d7d57f2"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.2.1_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.1/terraform-provider-rke_1.2.1_linux_arm.zip",
+          "shasum": "c3d7e0bd1a2afb129f293ad9b78b727ff188404445c50abe734f105f2e7d62e0"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.2.1_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.1/terraform-provider-rke_1.2.1_linux_arm64.zip",
+          "shasum": "afb4341cf562fccee62509cf61b2eb8889c6666516d745371c1903b672c366ae"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.2.1_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.1/terraform-provider-rke_1.2.1_windows_386.zip",
+          "shasum": "e5f1f4a7d33da5834024fab3c4949e7852afcb99ffa62d5702017309ca661ea7"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.2.1_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.1/terraform-provider-rke_1.2.1_windows_amd64.zip",
+          "shasum": "d9a0bd876a575c21115a58c177f601eb1cde4c11af0f9be8f7d6f024cc89bfae"
+        }
+      ]
+    },
+    {
+      "version": "1.2.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.0/terraform-provider-rke_1.2.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.0/terraform-provider-rke_1.2.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.2.0_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.0/terraform-provider-rke_1.2.0_darwin_amd64.zip",
+          "shasum": "d6ddec26846722cbffc5b77906525eeed3f01d90c65c7a2f9a739ec18567e102"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.2.0_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.0/terraform-provider-rke_1.2.0_linux_amd64.zip",
+          "shasum": "0db14961d0508a41823aa9d629d3dd13c24d07722183be753db3ac88f2ce8029"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.2.0_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.0/terraform-provider-rke_1.2.0_linux_arm.zip",
+          "shasum": "8b650c89a1e9d8b79477afc17451366837dfceea99576b8e436dffad27bb0f77"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.2.0_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.0/terraform-provider-rke_1.2.0_linux_arm64.zip",
+          "shasum": "e6f0ebfa470599f9ce5e3747320e96712d8751fd0695bf17320ad94171884604"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.2.0_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.0/terraform-provider-rke_1.2.0_windows_386.zip",
+          "shasum": "5b6866e6e48cd83f1329aa94e0c104a68365cf5a641d366e32997b094ac3a153"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.2.0_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.2.0/terraform-provider-rke_1.2.0_windows_amd64.zip",
+          "shasum": "0a7c1fa137f69783a7d786ac025c091295fda2171a60aab8e2a39e566331cfe5"
+        }
+      ]
+    },
+    {
+      "version": "1.1.7",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.7/terraform-provider-rke_1.1.7_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.7/terraform-provider-rke_1.1.7_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.7_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.7/terraform-provider-rke_1.1.7_darwin_amd64.zip",
+          "shasum": "3aad664328330bda53e9b5788f3f8fb75ebf2fb818320c872ba9b65fca1497e5"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.7_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.7/terraform-provider-rke_1.1.7_linux_amd64.zip",
+          "shasum": "1163acbe12001291e60e0ccff5d40524ed2aa4df8c626348e74bec63f8a37aff"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.1.7_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.7/terraform-provider-rke_1.1.7_linux_arm.zip",
+          "shasum": "4cf3f496323122427e1da7e8bc7d02f9f5c68660f7e8310180555d7a89d2c2f0"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.1.7_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.7/terraform-provider-rke_1.1.7_linux_arm64.zip",
+          "shasum": "8c44a87540d9acd5078584e99aa8bd8088a8f1b55096f9ab4bf54c7c1949c6ce"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.1.7_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.7/terraform-provider-rke_1.1.7_windows_386.zip",
+          "shasum": "812cf750b1ad8c254b85069b644f2ab1859e53485a3c26160d0cac29091ca828"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.7_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.7/terraform-provider-rke_1.1.7_windows_amd64.zip",
+          "shasum": "3aed499c342213064525dc427e4b25dc1d892d5229252d8b0217262184aba8e1"
+        }
+      ]
+    },
+    {
+      "version": "1.1.6",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.6/terraform-provider-rke_1.1.6_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.6/terraform-provider-rke_1.1.6_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.6_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.6/terraform-provider-rke_1.1.6_darwin_amd64.zip",
+          "shasum": "4d4bdcecb39f89ba9c40dfaa692426e649b042c984a91fd15ae09e5deed4e705"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.6_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.6/terraform-provider-rke_1.1.6_linux_amd64.zip",
+          "shasum": "392ea255ec6275c57dd5cfcbdd8fb9e5bc0f3f878fddf85740ce92748e1093bb"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.1.6_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.6/terraform-provider-rke_1.1.6_linux_arm.zip",
+          "shasum": "08683a9050422127a9ed2dfee1ac938075a5f04b9adbd70873adfc6fbd8b1597"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.1.6_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.6/terraform-provider-rke_1.1.6_linux_arm64.zip",
+          "shasum": "da4bdb562c839ffd9c55061bb6452a03ec2b0db628b43a4c47eac48407c27e61"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.1.6_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.6/terraform-provider-rke_1.1.6_windows_386.zip",
+          "shasum": "1145d4dd581c9b0dce52ec8da2ff5d56512f2d36bd53e8d19e210f67047c07c1"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.6_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.6/terraform-provider-rke_1.1.6_windows_amd64.zip",
+          "shasum": "f7d39b62fd7c86e4bf6a1e6c30a72607e4877a81dfcd836db853592b356973f9"
+        }
+      ]
+    },
+    {
+      "version": "1.1.5",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.5/terraform-provider-rke_1.1.5_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.5/terraform-provider-rke_1.1.5_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.5_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.5/terraform-provider-rke_1.1.5_darwin_amd64.zip",
+          "shasum": "2e0fc04ab779635494b99f13ae1d76be61993e151c60e3a35479e2952b6710b2"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.5_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.5/terraform-provider-rke_1.1.5_linux_amd64.zip",
+          "shasum": "026a731ca839e5670bfbbc591b1af63ccaec1757c873e115d6b88618bce7014b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.1.5_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.5/terraform-provider-rke_1.1.5_linux_arm.zip",
+          "shasum": "0a8d9d2e5832c21011962f1d10251287929eb94e7f701515fd991aee03ea2953"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.1.5_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.5/terraform-provider-rke_1.1.5_linux_arm64.zip",
+          "shasum": "69a5113ccc0593a975557169143f9f50deeb85c7b2b2b2c044d141d649069e31"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.1.5_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.5/terraform-provider-rke_1.1.5_windows_386.zip",
+          "shasum": "101c3383581c975fc78984f370cb2b3e3b3b6b806f9ae4c5a5e680f502488c8d"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.5_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.5/terraform-provider-rke_1.1.5_windows_amd64.zip",
+          "shasum": "cc0b6e94b658cc69fd6819fc1e1f8ae05a128dfa37097fcf006a43a3f1c4cc5a"
+        }
+      ]
+    },
+    {
+      "version": "1.1.4",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.4/terraform-provider-rke_1.1.4_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.4/terraform-provider-rke_1.1.4_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.4_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.4/terraform-provider-rke_1.1.4_darwin_amd64.zip",
+          "shasum": "9d7f9b29a537fab398399a1f649c9d057dab655df11d19e858fa616a993ccf75"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.4_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.4/terraform-provider-rke_1.1.4_linux_amd64.zip",
+          "shasum": "7907a839bc30fa1a577b061a32dccfe6db9ac047ae56f48af5b3ed68432eb5ce"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.1.4_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.4/terraform-provider-rke_1.1.4_linux_arm.zip",
+          "shasum": "51d43bcb69d98d42d39673177f86c92be95793fb9edf6098b711ceef7cce7f28"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.1.4_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.4/terraform-provider-rke_1.1.4_linux_arm64.zip",
+          "shasum": "ecd40dcd4b25b466f82509d7291a7649b4cb46aa4e92894799ec30c45518dbdd"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.1.4_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.4/terraform-provider-rke_1.1.4_windows_386.zip",
+          "shasum": "8d31897574a91ed6ab1ba688d5ac7082feb8fddfd36bd808b1e4c1e33ea8602c"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.4_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.4/terraform-provider-rke_1.1.4_windows_amd64.zip",
+          "shasum": "0dc5ba47941ee2c565395d61a0b9f989c67ba453598c035d64d2268c49213a65"
+        }
+      ]
+    },
+    {
+      "version": "1.1.3",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.3/terraform-provider-rke_1.1.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.3/terraform-provider-rke_1.1.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.3_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.3/terraform-provider-rke_1.1.3_darwin_amd64.zip",
+          "shasum": "bb156f3e6889bf40167c652c11e227e41016729a313fe7e7a21b2c88fe5db017"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.3_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.3/terraform-provider-rke_1.1.3_linux_amd64.zip",
+          "shasum": "96b9114d86fbcec1dbc1feaa9c45f1261cf54a8cfe051b43feb65b3a751b5c80"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.1.3_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.3/terraform-provider-rke_1.1.3_linux_arm.zip",
+          "shasum": "b7c3674f0c9c5d81d395ed925aca95a88c999f976e0b0862a78e135d0ffd3463"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.1.3_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.3/terraform-provider-rke_1.1.3_linux_arm64.zip",
+          "shasum": "13d651561739454c07b4437693b1a7390ec32c4b6cb3a002de8f7ad2f31b0463"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.1.3_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.3/terraform-provider-rke_1.1.3_windows_386.zip",
+          "shasum": "96ad0da5517c5395450a71fe66b7a0afd8a39900962fd2107b8da13af311f380"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.3_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.3/terraform-provider-rke_1.1.3_windows_amd64.zip",
+          "shasum": "c0697b2a5c34be5e2474d077b7d5d1980fbf358c48369ede4bdf01633ba56c90"
+        }
+      ]
+    },
+    {
+      "version": "1.1.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.2/terraform-provider-rke_1.1.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.2/terraform-provider-rke_1.1.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.2_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.2/terraform-provider-rke_1.1.2_darwin_amd64.zip",
+          "shasum": "34e9991ddced21d697e2dc9961405837588a68d38918cd0cac5caff8e865997e"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.2_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.2/terraform-provider-rke_1.1.2_linux_amd64.zip",
+          "shasum": "1cb34cd4814f7b56e4df088b13360a390058972c18c1abbcbdcfdee582c72fa8"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.1.2_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.2/terraform-provider-rke_1.1.2_linux_arm.zip",
+          "shasum": "a0e8217b8070d815bc5c4be45fe51077b1cc5c7df420ad2aa3bae4fcb514db9a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.1.2_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.2/terraform-provider-rke_1.1.2_linux_arm64.zip",
+          "shasum": "46b4c5e6b30a723c4bc5a15c17dc150cfd633cb9f7fa8cb5582028db3e2a1ad9"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.1.2_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.2/terraform-provider-rke_1.1.2_windows_386.zip",
+          "shasum": "2815ca04ad7b299f98b307b43c686302bc0582d17a9f921085f59c68479fb222"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.2_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.2/terraform-provider-rke_1.1.2_windows_amd64.zip",
+          "shasum": "cd3a1e0785d45ddeee48b41f09d84361b57a1f775ddc4799ff1333941a768312"
+        }
+      ]
+    },
+    {
+      "version": "1.1.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.1/terraform-provider-rke_1.1.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.1/terraform-provider-rke_1.1.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.1_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.1/terraform-provider-rke_1.1.1_darwin_amd64.zip",
+          "shasum": "959ccc1d4807c08e78735d9974a36df5aabd514208283e30b740fe95b32397db"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.1_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.1/terraform-provider-rke_1.1.1_linux_amd64.zip",
+          "shasum": "2ff889f46043cfa76642967a30d3b23f1d401c71926f9a3d1c6e2eeaf4391684"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.1.1_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.1/terraform-provider-rke_1.1.1_linux_arm.zip",
+          "shasum": "fb39492eda3bf5c63c1d59d2d2d637d716fe278f59d98b593a1f3c889b225615"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.1.1_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.1/terraform-provider-rke_1.1.1_linux_arm64.zip",
+          "shasum": "b35006d8a5dcb224b0d2643dc00db597a8013f88570afe82c283460cbfff7f05"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.1.1_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.1/terraform-provider-rke_1.1.1_windows_386.zip",
+          "shasum": "c1b2ad1bb6cb7c5cacedf81d2da36860baf6cbd856c5a2173c07e7868b856da0"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.1_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.1/terraform-provider-rke_1.1.1_windows_amd64.zip",
+          "shasum": "cec2a1c197d9b2bbe899bc691bed13da68acf400897cf93384ada82f4985dff5"
+        }
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.0/terraform-provider-rke_1.1.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.0/terraform-provider-rke_1.1.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.0_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.0/terraform-provider-rke_1.1.0_darwin_amd64.zip",
+          "shasum": "c9f5861567cb84ac26a1f7d5fdbe9cac9eef1205155cc6047ef726eb7f8eafdf"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.1.0_freebsd_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.0/terraform-provider-rke_1.1.0_freebsd_386.zip",
+          "shasum": "63863426b0fe774dcca047ee4f226905f22a65e51364f37913d19e72c39065e3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.0/terraform-provider-rke_1.1.0_freebsd_amd64.zip",
+          "shasum": "4152ec3895696a95537a35f912f0b1a5884caa0bb29c4f8bd3f6db224a0ed7d2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.1.0_freebsd_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.0/terraform-provider-rke_1.1.0_freebsd_arm.zip",
+          "shasum": "a491ca5519ac575dfd051975098ae9cdf0ff7a322e4a949d0c8134bf48bfc466"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.0_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.0/terraform-provider-rke_1.1.0_linux_amd64.zip",
+          "shasum": "4f083419f3031ba9cb136b96935028b807a9fe3a212d1784f2affac75e080a4b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.1.0_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.0/terraform-provider-rke_1.1.0_linux_arm.zip",
+          "shasum": "4656b149255ebd166c742dc74bdea8cfe6b5d5bc1a34571dada352a2f794bd2a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.1.0_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.0/terraform-provider-rke_1.1.0_linux_arm64.zip",
+          "shasum": "bc470050062458bc925bf66b6371aaadcb12d3967029b2a8f6ff32eb7ebb2861"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.1.0_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.0/terraform-provider-rke_1.1.0_windows_386.zip",
+          "shasum": "aa0ecc02969e60aed95896449793067c2124fa4cdd710c3633312b0d67bb0706"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.0_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.0/terraform-provider-rke_1.1.0_windows_amd64.zip",
+          "shasum": "b8dce6f76449ad6bf128d1939aa48f5ea2e47c46e1cfa844f48ab5fb0b3ed066"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.1.0_openbsd_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.0/terraform-provider-rke_1.1.0_openbsd_386.zip",
+          "shasum": "0c3b45a0043134334892a89c2dca19cf25da173dee911b27e59e61c8404eb34b"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.1.0_openbsd_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.1.0/terraform-provider-rke_1.1.0_openbsd_amd64.zip",
+          "shasum": "7280ef150bc2a9c877c5662c1c21a1e451e52bd4e4505eb30d100da4117b2f1d"
+        }
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.0.1/terraform-provider-rke_1.0.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.0.1/terraform-provider-rke_1.0.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.0.1_darwin_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.0.1/terraform-provider-rke_1.0.1_darwin_amd64.zip",
+          "shasum": "0e47accae2e03847e15551252a2a6d18917febb087fe4fe3f62a59ad091e3b58"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.0.1_freebsd_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.0.1/terraform-provider-rke_1.0.1_freebsd_386.zip",
+          "shasum": "a1a7b8548a46e98f0e1c16fbedc8bfa119fa7ba1a6a34dec7f5cd22ea019933c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.0.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.0.1/terraform-provider-rke_1.0.1_freebsd_amd64.zip",
+          "shasum": "dd73cc46f5c22ddd0b526c8e7926ebb4e3543cd4c3fc8113daf09996e438dcfe"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.0.1_freebsd_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.0.1/terraform-provider-rke_1.0.1_freebsd_arm.zip",
+          "shasum": "01308cba83f7cf72a38d920fc226beab6cc9308f40141c923e57548cbe23fb38"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.0.1_linux_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.0.1/terraform-provider-rke_1.0.1_linux_amd64.zip",
+          "shasum": "35a104a420f42fe618e915263d5fce738db4c334f6ae024dd883306c565a8ed3"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rke_1.0.1_linux_arm.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.0.1/terraform-provider-rke_1.0.1_linux_arm.zip",
+          "shasum": "2e93b7f355fce9f9532d2258b274a55d08c58d8a4de2905bda9f57840a78c6fb"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rke_1.0.1_linux_arm64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.0.1/terraform-provider-rke_1.0.1_linux_arm64.zip",
+          "shasum": "1a56cad5b08af5e90cefbc927639d232e668f7e655a4d7cc82a04366b0b87eae"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.0.1_windows_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.0.1/terraform-provider-rke_1.0.1_windows_386.zip",
+          "shasum": "b56b9ff5c4e4013b0f4712ac37ea1e2b23fc9ee88a53f716dc46e561d92e348c"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.0.1_windows_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.0.1/terraform-provider-rke_1.0.1_windows_amd64.zip",
+          "shasum": "57d07be3041b6e7a4c142f06b52fcfb4c175759317cf4dca619cbea819240241"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-rke_1.0.1_openbsd_386.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.0.1/terraform-provider-rke_1.0.1_openbsd_386.zip",
+          "shasum": "8b8f76494729889e05602502e7dd2f83b1d0f4c9b23c4fdcdebdf62e44a8552e"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-rke_1.0.1_openbsd_amd64.zip",
+          "download_url": "https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/v1.0.1/terraform-provider-rke_1.0.1_openbsd_amd64.zip",
+          "shasum": "678c05f711ae41978a89d3983ef36511a99604ac7a15bdd42e4b65dc059c08c0"
+        }
+      ]
+    }
+  ]
+}

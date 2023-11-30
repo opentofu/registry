@@ -1,0 +1,794 @@
+{
+  "versions": [
+    {
+      "version": "0.2.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.2.0/terraform-provider-vmp_0.2.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.2.0/terraform-provider-vmp_0.2.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.2.0_darwin_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.2.0/terraform-provider-vmp_0.2.0_darwin_amd64.zip",
+          "shasum": "34105380ad2965eecc970e509a4ea086d379422d2e554191569640e8067e78c8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.2.0_freebsd_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.2.0/terraform-provider-vmp_0.2.0_freebsd_386.zip",
+          "shasum": "af57a1e744cc946a2445ba8d4a6782c4b8f17e8c39a588d784dee81a35293345"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.2.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.2.0/terraform-provider-vmp_0.2.0_freebsd_amd64.zip",
+          "shasum": "e0cb8b76c9d42536d840f31ce15d7c64c7af9657c1a0349a0433b1d2c9c1ad1a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-vmp_0.2.0_freebsd_arm.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.2.0/terraform-provider-vmp_0.2.0_freebsd_arm.zip",
+          "shasum": "9e1a3895203dc94a6eac57ee6457037301658e75769a01716a8b4cea357590e2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-vmp_0.2.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.2.0/terraform-provider-vmp_0.2.0_freebsd_arm64.zip",
+          "shasum": "73986f3078b1d4481c3dacc5799d8e379cb6367220851bf137e442acc26cdcb5"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.2.0_linux_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.2.0/terraform-provider-vmp_0.2.0_linux_386.zip",
+          "shasum": "bf1c4151fdb87f2d583c639c61bf0e75762d345e968dee3e772d07f957524cb1"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.2.0_linux_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.2.0/terraform-provider-vmp_0.2.0_linux_amd64.zip",
+          "shasum": "d7f45b32a287cb227a51a7b3f537d64976d44c617cf1ce01e76de0ccb26296f6"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-vmp_0.2.0_linux_arm.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.2.0/terraform-provider-vmp_0.2.0_linux_arm.zip",
+          "shasum": "fc9c20e141bdde0c67ce5c9eeaac0181ac09d9e771205480ae7e50370823e74e"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-vmp_0.2.0_linux_arm64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.2.0/terraform-provider-vmp_0.2.0_linux_arm64.zip",
+          "shasum": "46b5c3975bf39db3088ca6ff81aea04552e61d962a495c96af1f46f4a35443c3"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.2.0_windows_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.2.0/terraform-provider-vmp_0.2.0_windows_386.zip",
+          "shasum": "dd9be091bc7c314e81fd71f3fb10c022b91a2f451c0f1dd00d6b359f97819bf2"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.2.0_windows_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.2.0/terraform-provider-vmp_0.2.0_windows_amd64.zip",
+          "shasum": "b03f82032922e2315075d6c8e6194c826f87a4228bd4ba4a93c45b3450892c81"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-vmp_0.2.0_windows_arm.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.2.0/terraform-provider-vmp_0.2.0_windows_arm.zip",
+          "shasum": "c677a6e91751c4ed3666f8619920cec4ebbbabeff0918fc548c96ff77a303309"
+        }
+      ]
+    },
+    {
+      "version": "0.1.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.1/terraform-provider-vmp_0.1.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.1/terraform-provider-vmp_0.1.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.1.1_darwin_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.1/terraform-provider-vmp_0.1.1_darwin_amd64.zip",
+          "shasum": "878fb08076bd3196b24e49bbfe86a5a5e6893db5e1beb31e12f879caa8f4fb0c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.1.1_freebsd_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.1/terraform-provider-vmp_0.1.1_freebsd_386.zip",
+          "shasum": "7c0ab93f5d52f29d383f75a918c4ad366941865370a1cfdc19bc228102f06549"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.1.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.1/terraform-provider-vmp_0.1.1_freebsd_amd64.zip",
+          "shasum": "c6e123e10b5c598795a3a6e3d67c425dfc6d6224d2a0c9ac6296299df790d948"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-vmp_0.1.1_freebsd_arm.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.1/terraform-provider-vmp_0.1.1_freebsd_arm.zip",
+          "shasum": "f0f141d97ec5e1fcb2ca8cd93213d953bb1d60f2baec512d6c9712aa86752db9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-vmp_0.1.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.1/terraform-provider-vmp_0.1.1_freebsd_arm64.zip",
+          "shasum": "1533236459f8df91fc9ce48de068e0e96c0d388f4a9033680f2879adc6cab2b7"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.1.1_linux_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.1/terraform-provider-vmp_0.1.1_linux_386.zip",
+          "shasum": "d1563502eb2220858a20b25302213a0989dfe75b864b79db694a715efe47abf8"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.1.1_linux_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.1/terraform-provider-vmp_0.1.1_linux_amd64.zip",
+          "shasum": "e74690608686f0bffb1b1f0efb4919c1922a2e6a4cca862bce8d41d10329c479"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-vmp_0.1.1_linux_arm.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.1/terraform-provider-vmp_0.1.1_linux_arm.zip",
+          "shasum": "45285f093a7132ea1f0a85c08ae2989592c4bb5c4dc2f39a4f35a2e741dea1d3"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-vmp_0.1.1_linux_arm64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.1/terraform-provider-vmp_0.1.1_linux_arm64.zip",
+          "shasum": "1d35cec5e3e8c324f86362efdd122032e26457d75d8bd36f3d3c6e54af152ce5"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.1.1_windows_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.1/terraform-provider-vmp_0.1.1_windows_386.zip",
+          "shasum": "b6218440990ffbd9999d8b464ad112278e5e7206d7174d1028b64bba00e903a1"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.1.1_windows_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.1/terraform-provider-vmp_0.1.1_windows_amd64.zip",
+          "shasum": "1a981c44ab157ece8b42ba8c432bcb68d7f3b04a495b0bcac50d51a7a5843796"
+        }
+      ]
+    },
+    {
+      "version": "0.1.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.0/terraform-provider-vmp_0.1.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.0/terraform-provider-vmp_0.1.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.1.0_darwin_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.0/terraform-provider-vmp_0.1.0_darwin_amd64.zip",
+          "shasum": "61ad21358e48f413ad29f37e6f0378e7ebb66eec33f052accd99ad9c586e7974"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.1.0_freebsd_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.0/terraform-provider-vmp_0.1.0_freebsd_386.zip",
+          "shasum": "4aee0c7cf370d3395d03680846e7c0ade3b693e1b47977bad8f861a3f1f7987d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.1.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.0/terraform-provider-vmp_0.1.0_freebsd_amd64.zip",
+          "shasum": "02a79a1c3a2e6c02541de9737048079771ca4df2ac569334d94d5b42f1fc8e55"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-vmp_0.1.0_freebsd_arm.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.0/terraform-provider-vmp_0.1.0_freebsd_arm.zip",
+          "shasum": "7658d9498a796250bba21941ba8f27ae65df741cf8ec93f2bf37fc09c0bd900e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-vmp_0.1.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.0/terraform-provider-vmp_0.1.0_freebsd_arm64.zip",
+          "shasum": "69c12d04d1cd9014d135747e799374e4c500c6ac20de85ad286d5aaae7af3624"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.1.0_linux_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.0/terraform-provider-vmp_0.1.0_linux_386.zip",
+          "shasum": "8c372288bc6e9eb29f816629b0cebe03a640e9e9cae4bc968c0f5b600c690da9"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.1.0_linux_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.0/terraform-provider-vmp_0.1.0_linux_amd64.zip",
+          "shasum": "62e279ba3dbd06b743e22992aba1dac61272a3bc3490d36eecb64e2650949982"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-vmp_0.1.0_linux_arm.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.0/terraform-provider-vmp_0.1.0_linux_arm.zip",
+          "shasum": "8cbbf3ed2a3cc7bbec708a51483c95653a26c157c95e8e1fc72f4454f77b574c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-vmp_0.1.0_linux_arm64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.0/terraform-provider-vmp_0.1.0_linux_arm64.zip",
+          "shasum": "b0d178f486cf5f688db730a83fe3cb3d6551e11f01527268dcf25f1ed1f733c9"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.1.0_windows_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.0/terraform-provider-vmp_0.1.0_windows_386.zip",
+          "shasum": "f1b7a4e32079e766781a8717e821622e9eed3a9e571cab4743c689c5b3015bf1"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.1.0_windows_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.1.0/terraform-provider-vmp_0.1.0_windows_amd64.zip",
+          "shasum": "4133b17051d6c416415fa249abf19aadaaf5ebfc1502a0a15cc838fe7b07a1ba"
+        }
+      ]
+    },
+    {
+      "version": "0.0.9",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.9/terraform-provider-vmp_0.0.9_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.9/terraform-provider-vmp_0.0.9_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.9_darwin_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.9/terraform-provider-vmp_0.0.9_darwin_amd64.zip",
+          "shasum": "c2e4f2719a2e669f8b6d801c95f5947f107508a580990d545ef2e41d06acfbd5"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.0.9_freebsd_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.9/terraform-provider-vmp_0.0.9_freebsd_386.zip",
+          "shasum": "f63c11756adb22a90a697c9db994c3e909dc27a0494197ce3c574a4823bb3e42"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.9_freebsd_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.9/terraform-provider-vmp_0.0.9_freebsd_amd64.zip",
+          "shasum": "d0a4e0162ccf3659a5ebd95653539ee0fb86a6f3b479179da27e0e8c2ea59cbd"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-vmp_0.0.9_freebsd_arm.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.9/terraform-provider-vmp_0.0.9_freebsd_arm.zip",
+          "shasum": "4432c5ab6b3b819600ffc3759989d3c87a79c18838b7ba1c3fb4685b8b8b4f6f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-vmp_0.0.9_freebsd_arm64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.9/terraform-provider-vmp_0.0.9_freebsd_arm64.zip",
+          "shasum": "5813a99fce8d214dc81814dd9a560f4b9bddd2aa9b9a29359a41235bf9fa4cbe"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.0.9_linux_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.9/terraform-provider-vmp_0.0.9_linux_386.zip",
+          "shasum": "3206e47bbce1140022c741db911bac7a468484722c2e3857757438d3ba2b6844"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.9_linux_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.9/terraform-provider-vmp_0.0.9_linux_amd64.zip",
+          "shasum": "8ea2d1e5a2a12b5c4f5dc7f85b34c26654fc9bbb73049051341d0ba915a39229"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-vmp_0.0.9_linux_arm.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.9/terraform-provider-vmp_0.0.9_linux_arm.zip",
+          "shasum": "0303a548b77eb4dd0c5abd2b26b7869fe0700ce55294edcf21fef1463be62968"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-vmp_0.0.9_linux_arm64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.9/terraform-provider-vmp_0.0.9_linux_arm64.zip",
+          "shasum": "450eb13acf895d81c7ba113f392793a83f4ce184f4b359e95c5588e0eb4d7e7d"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.0.9_windows_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.9/terraform-provider-vmp_0.0.9_windows_386.zip",
+          "shasum": "dcd2bb6fdb1ee8362a48d358de1cf06593e17d3da593244b317f46859d630ca7"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.9_windows_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.9/terraform-provider-vmp_0.0.9_windows_amd64.zip",
+          "shasum": "e8cc3abe31ff662db1e8bd37660fb79fa6e166606f1bc0c4ece4f6bd22f34a89"
+        }
+      ]
+    },
+    {
+      "version": "0.0.8",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.8/terraform-provider-vmp_0.0.8_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.8/terraform-provider-vmp_0.0.8_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.8_darwin_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.8/terraform-provider-vmp_0.0.8_darwin_amd64.zip",
+          "shasum": "31d914a37e2c993ca5380c4b2ee6053c0bcea5bb0007fa2d725dc6dace1dc0f1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.0.8_freebsd_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.8/terraform-provider-vmp_0.0.8_freebsd_386.zip",
+          "shasum": "0cda1f7632348991b3bb16f14384d7515e6565934146e357e56363d49de89e3a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.8_freebsd_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.8/terraform-provider-vmp_0.0.8_freebsd_amd64.zip",
+          "shasum": "9ab53adbe948efd7e81e059975b61e9993425bfa0a5b340688e6ad688a4f3bb3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-vmp_0.0.8_freebsd_arm.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.8/terraform-provider-vmp_0.0.8_freebsd_arm.zip",
+          "shasum": "4c03a4f9d0742df68a731bd051928173e0a2fcb5bfe47f7dcec77094371042f7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-vmp_0.0.8_freebsd_arm64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.8/terraform-provider-vmp_0.0.8_freebsd_arm64.zip",
+          "shasum": "02730f12e6606ae62172c9cba0a27cb6a290998ca3daccc9da3b10204468ea82"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.0.8_linux_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.8/terraform-provider-vmp_0.0.8_linux_386.zip",
+          "shasum": "549a34ff62351044e4424400e57a27c464d5d99d14958373784a53369184698c"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.8_linux_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.8/terraform-provider-vmp_0.0.8_linux_amd64.zip",
+          "shasum": "194c361e81eb5bb2a11f20011fb760c2fc4f4e51606d80147418ef1da7be34c6"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-vmp_0.0.8_linux_arm.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.8/terraform-provider-vmp_0.0.8_linux_arm.zip",
+          "shasum": "51ab896ba246564c55122b22b8359bc1d8b9eb67d46ff029eaa2ba19c4306f59"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-vmp_0.0.8_linux_arm64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.8/terraform-provider-vmp_0.0.8_linux_arm64.zip",
+          "shasum": "b648c6beab5fe9b217d648b9ed38bd25910c937a6da456448da47c18efbc2f87"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.0.8_windows_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.8/terraform-provider-vmp_0.0.8_windows_386.zip",
+          "shasum": "43636c76bc4ef490054d1ad97dfe900c936c826d3a67521eea57c8fc0f3f8989"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.8_windows_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.8/terraform-provider-vmp_0.0.8_windows_amd64.zip",
+          "shasum": "4258b430bdaea1e4173b1d6fab0eb7925eb2acc587e75331fd365af0751a0be6"
+        }
+      ]
+    },
+    {
+      "version": "0.0.7",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.7/terraform-provider-vmp_0.0.7_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.7/terraform-provider-vmp_0.0.7_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.7_darwin_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.7/terraform-provider-vmp_0.0.7_darwin_amd64.zip",
+          "shasum": "187fa891cdf72450b2b846220dd4aeadb2710ae9b64a5159ee6b15e2bf927628"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.0.7_freebsd_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.7/terraform-provider-vmp_0.0.7_freebsd_386.zip",
+          "shasum": "3623e27445854139c85e7739bf51b028e67a2e5b2f5d1ce3599fffa5704894f2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.7_freebsd_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.7/terraform-provider-vmp_0.0.7_freebsd_amd64.zip",
+          "shasum": "4ce924b03dd072ea437806ea151eca187545d438ec2a1017960581a0ec766f40"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-vmp_0.0.7_freebsd_arm.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.7/terraform-provider-vmp_0.0.7_freebsd_arm.zip",
+          "shasum": "0523fd1bc78ba493460495602d3508976a1a296b5045cd899b00a09774e07bdf"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-vmp_0.0.7_freebsd_arm64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.7/terraform-provider-vmp_0.0.7_freebsd_arm64.zip",
+          "shasum": "bc5247fb1bbfebf9451b4a22b29cf11196ddd6a6baaa70402c830fa1917ff76c"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.0.7_linux_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.7/terraform-provider-vmp_0.0.7_linux_386.zip",
+          "shasum": "885a5349a4f76049cbe8107d8a2f065c7541dfb26f37c2a15b148ba9831e04c0"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.7_linux_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.7/terraform-provider-vmp_0.0.7_linux_amd64.zip",
+          "shasum": "e9a8c6239f2c971de03ee478ee97e0b01a577d8484e901840be3ced49a862745"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-vmp_0.0.7_linux_arm.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.7/terraform-provider-vmp_0.0.7_linux_arm.zip",
+          "shasum": "fcab00d0ca6616947b4a25776aa9961fefb65f28a78f012552ec589c08c81049"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-vmp_0.0.7_linux_arm64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.7/terraform-provider-vmp_0.0.7_linux_arm64.zip",
+          "shasum": "fec7810e4ae5beae9c4bf60fd684875216916e143ae452c80531a5c36d4b238d"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.0.7_windows_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.7/terraform-provider-vmp_0.0.7_windows_386.zip",
+          "shasum": "f39589fa6f7b42d701f465abfecd16412ec5386c723426369277700a75a56145"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.7_windows_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.7/terraform-provider-vmp_0.0.7_windows_amd64.zip",
+          "shasum": "a244bd88794a824bce593938aabcd66dcf2790857422123caa9183c91e39543d"
+        }
+      ]
+    },
+    {
+      "version": "0.0.6",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.6/terraform-provider-vmp_0.0.6_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.6/terraform-provider-vmp_0.0.6_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.6_darwin_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.6/terraform-provider-vmp_0.0.6_darwin_amd64.zip",
+          "shasum": "d134f50efa640db5deb526df659fd53712fa180beb68d382683b6b2da438388a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.0.6_freebsd_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.6/terraform-provider-vmp_0.0.6_freebsd_386.zip",
+          "shasum": "fdc4f63a929dba1dc7aae68ebb64cd841135f2900d2e75c3c5b0ebb69354118e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.6_freebsd_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.6/terraform-provider-vmp_0.0.6_freebsd_amd64.zip",
+          "shasum": "3ba76193fcca513c43a7c0483eb6fa4b595154b43073b77f632c03ff6189b204"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-vmp_0.0.6_freebsd_arm.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.6/terraform-provider-vmp_0.0.6_freebsd_arm.zip",
+          "shasum": "29b9eee22e24959be7ebbb2cee7a202d2a023d3b223af3f117fc34d36dca825d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-vmp_0.0.6_freebsd_arm64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.6/terraform-provider-vmp_0.0.6_freebsd_arm64.zip",
+          "shasum": "080179acd20d6c336ffd5e7687929e5a33e192d30123a9448e31d8fc07035e70"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.0.6_linux_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.6/terraform-provider-vmp_0.0.6_linux_386.zip",
+          "shasum": "bf24927f393e74dbc1929d9bdd7f8433e8858805960ad13085b72460347f047c"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.6_linux_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.6/terraform-provider-vmp_0.0.6_linux_amd64.zip",
+          "shasum": "44336227bb5b8c2acb819784c23dc6b0275261d8b3ff66af08b054588f06602b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-vmp_0.0.6_linux_arm.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.6/terraform-provider-vmp_0.0.6_linux_arm.zip",
+          "shasum": "887fc7200b53d5eb10c6751620211bc3111246f11a3fb265ba216155e3747b0e"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-vmp_0.0.6_linux_arm64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.6/terraform-provider-vmp_0.0.6_linux_arm64.zip",
+          "shasum": "cc5d7d0f36679a808d5e37e0304e59cfb3b95e48c94e3182c839084fe6986969"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.0.6_windows_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.6/terraform-provider-vmp_0.0.6_windows_386.zip",
+          "shasum": "034bacf2efba7ec5e17f3f89b817a6f8635ef33601afa39e90660448ba4c818e"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.6_windows_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.6/terraform-provider-vmp_0.0.6_windows_amd64.zip",
+          "shasum": "8518c8ae09b07bb327cde3d8eeb97d8cdc5faaabf4ae6da4b40c5ce94b2b43eb"
+        }
+      ]
+    },
+    {
+      "version": "0.0.5",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.5/terraform-provider-vmp_0.0.5_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.5/terraform-provider-vmp_0.0.5_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.5_darwin_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.5/terraform-provider-vmp_0.0.5_darwin_amd64.zip",
+          "shasum": "6452d9fc9b3a1af9162a19219ff49322addd49833b2327f9e4041be9e7a2bda8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.0.5_freebsd_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.5/terraform-provider-vmp_0.0.5_freebsd_386.zip",
+          "shasum": "7da40a28f0e95d747ff59d169ed7c846b880f2d35cc79d52f5e5e96a5c1e7656"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.5_freebsd_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.5/terraform-provider-vmp_0.0.5_freebsd_amd64.zip",
+          "shasum": "747766bbad3a761a405b4b766a1e2c3adef681f67799354cfe5e09088301defc"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-vmp_0.0.5_freebsd_arm.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.5/terraform-provider-vmp_0.0.5_freebsd_arm.zip",
+          "shasum": "6e56ee1481ae4e5e52e25aa526bfb00a7ea9215cb754ccf6f96ce0bf1235b273"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-vmp_0.0.5_freebsd_arm64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.5/terraform-provider-vmp_0.0.5_freebsd_arm64.zip",
+          "shasum": "c138b71bac273dbea741b8a16591a10939674926f89a85d84ec2ded536385da0"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.0.5_linux_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.5/terraform-provider-vmp_0.0.5_linux_386.zip",
+          "shasum": "cc6c08aadbfe535a56bbe4fc3ae1b47b49e2665edd32c136ecbef9ac49af13cb"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.5_linux_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.5/terraform-provider-vmp_0.0.5_linux_amd64.zip",
+          "shasum": "5af7895fb5781859c69ee19a838512b77ababa154e1aa65be6701c02a39a30d4"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-vmp_0.0.5_linux_arm.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.5/terraform-provider-vmp_0.0.5_linux_arm.zip",
+          "shasum": "33ed789264ae8c0fddeb939e36c608dfe9cac0b9d242315aaba649f3d7b959bb"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-vmp_0.0.5_linux_arm64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.5/terraform-provider-vmp_0.0.5_linux_arm64.zip",
+          "shasum": "7cd4c75271f65358b93b09355ef94362812d9e0d4628f8f1f9d91cd8be7bd957"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.0.5_windows_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.5/terraform-provider-vmp_0.0.5_windows_386.zip",
+          "shasum": "64e2c5fe1215a19bfd70f5b21e72c2111dbb503f110a8c620bf10e2c21d6cf23"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.5_windows_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.5/terraform-provider-vmp_0.0.5_windows_amd64.zip",
+          "shasum": "37b1864d79cab0417be885e3feaefe686c772d2ec7f4f79a49e74afca24a0327"
+        }
+      ]
+    },
+    {
+      "version": "0.0.4",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.4/terraform-provider-vmp_0.0.4_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.4/terraform-provider-vmp_0.0.4_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.4_darwin_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.4/terraform-provider-vmp_0.0.4_darwin_amd64.zip",
+          "shasum": "1117f06ec96c1169e20fa778a8f59281d6f1fd2d69ad9b9542ccf7a315370fb3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.0.4_freebsd_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.4/terraform-provider-vmp_0.0.4_freebsd_386.zip",
+          "shasum": "5e46ddd891a7fd92646c0b14156461e408a72b36982558cb352cf180732deede"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.4_freebsd_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.4/terraform-provider-vmp_0.0.4_freebsd_amd64.zip",
+          "shasum": "a5044bbb0d2280fb8827168a069b228d77228eaf0c805d696edd4b57965f6d67"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-vmp_0.0.4_freebsd_arm.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.4/terraform-provider-vmp_0.0.4_freebsd_arm.zip",
+          "shasum": "ba032db67fe43a30a21939f1217e7808b12e9f26e01b49441ae6c2e20c7621aa"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-vmp_0.0.4_freebsd_arm64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.4/terraform-provider-vmp_0.0.4_freebsd_arm64.zip",
+          "shasum": "b6602e1a0e4eaa8652a1c12495c7663a18858bec5f32a65835d6316415614fb9"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.0.4_linux_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.4/terraform-provider-vmp_0.0.4_linux_386.zip",
+          "shasum": "eb32259f8dae4b81dd501582fd51e2a8568d0ea3bf7dc70d73375ac4243c013b"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.4_linux_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.4/terraform-provider-vmp_0.0.4_linux_amd64.zip",
+          "shasum": "49f881c6e275c8d609835b2547515ccf397d8732a11466939ff1f241ee5f8d51"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-vmp_0.0.4_linux_arm.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.4/terraform-provider-vmp_0.0.4_linux_arm.zip",
+          "shasum": "0bfc32175f7fd9700b4fb98e0e8b1d9c5d4efcc999e20312e286cd3ca4120274"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-vmp_0.0.4_linux_arm64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.4/terraform-provider-vmp_0.0.4_linux_arm64.zip",
+          "shasum": "1a94fea0c0ecdeecd1d58c2b41c1e9f635a365b8ef0882c3612c56d3418d57d7"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-vmp_0.0.4_windows_386.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.4/terraform-provider-vmp_0.0.4_windows_386.zip",
+          "shasum": "bec1a872fbd634fc7a5c8710efcd78e30de271a7198d3e1de103d8ce76785879"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-vmp_0.0.4_windows_amd64.zip",
+          "download_url": "https://github.com/VerizonDigital/terraform-provider-vmp/releases/download/v0.0.4/terraform-provider-vmp_0.0.4_windows_amd64.zip",
+          "shasum": "c1762bf2152dd5e60dac4b183dd73a14a893a269012807ae9be4fd25bb062f10"
+        }
+      ]
+    }
+  ]
+}
