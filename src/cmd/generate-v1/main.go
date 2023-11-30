@@ -16,7 +16,9 @@ func main() {
 	logger.Info("Generating v1 API responses")
 
 	moduleDataDir := flag.String("module-data", "../modules", "Directory containing the module data")
+	moduleNamespace := flag.String("module-namespace", "", "Which module namespace to limit the command to")
 	providerDataDir := flag.String("provider-data", "../providers", "Directory containing the provider data")
+	providerNamespace := flag.String("provider-namespace", "", "Which provider namespace to limit the command to")
 	keyDataDir := flag.String("key-data", "../keys", "Directory containing the gpg keys")
 
 	destinationDir := flag.String("destination", "../generated", "Directory to write the generated responses to")
@@ -33,7 +35,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	modules, err := module.ListModules(*moduleDataDir, logger, ghClient)
+	modules, err := module.ListModules(*moduleDataDir, *moduleNamespace, logger, ghClient)
 	if err != nil {
 		logger.Error("Failed to list modules", slog.Any("err", err))
 		os.Exit(1)
@@ -50,7 +52,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	providers, err := provider.ListProviders(*providerDataDir, logger, ghClient)
+	providers, err := provider.ListProviders(*providerDataDir, *providerNamespace, logger, ghClient)
 	if err != nil {
 		logger.Error("Failed to list providers", slog.Any("err", err))
 		os.Exit(1)
