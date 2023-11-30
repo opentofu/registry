@@ -1,12 +1,12 @@
 # Contributing to OpenTofu Registry
 
-This repository contains OpenTofu Registry, which includes the the metadata and managing applications used to drive the opentofu registry at registry.opentofu.org
+This repository contains OpenTofu Registry, which includes the metadata and managing applications used to drive the OpenTofu Registry at registry.opentofu.org
 
 This document provides guidance on OpenTofu contribution recommended practices. It covers how to submit issues, how to get involved in the discussion, how to work on the code, and how to contribute code changes.
 
 The easiest way to contribute is by [opening an issue](https://github.com/opentofu/opentofu/issues/new/choose)! Bug reports, broken compatibility reports, feature requests, old issue reposts, and well-prepared RFCs are all very welcome.
 
-All major changes to OpenTofu Registry go through the public RFC process, including those proposed by the core team. Thus, if you'd like to propose such a change, please prepare an RFC, so that the community can discuss the change and everybody has a chance to voice their opinion. You're also welcome to voice your own opinion on existing RFCs! You can find them by [going to the issues view and filtering by the rfc label](https://github.com/opentofu/registry/issues?q=is%3Aopen+is%3Aissue+label%3Arfc).
+All major changes to the OpenTofu Registry go through the public RFC process, including those proposed by the core team. Thus, if you'd like to propose such a change, please prepare an RFC, so that the community can discuss the change and everybody has a chance to voice their opinion. You're also welcome to voice your own opinion on existing RFCs! You can find them by [going to the issues view and filtering by the rfc label](https://github.com/opentofu/registry/issues?q=is%3Aopen+is%3Aissue+label%3Arfc).
 
 Generally, we appreciate external contributions very much and would love to work with you on them. **However, please make sure to read the [Contributing a Code Change](#contributing-a-code-change) section prior to making a contribution.**
 

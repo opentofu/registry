@@ -10,14 +10,11 @@ It also contains the applications used to manage version bumping, validation and
 > [!IMPORTANT]
 > Please note this registry is a work in progress, and we are not currently accepting any new providers or modules from external contributors at this time until a full validation process has been put in place.
 
-## Reporting security vulnerabilities
-If you've found a vulnerability or a potential vulnerability in OpenTofu please follow [Security Policy](https://github.com/opentofu/opentofu/security/policy). We'll send a confirmation email to acknowledge your report, and we'll send an additional email when we've identified the issue positively or negatively.
-
 ## Contributing
 
 Contributions are always welcome!
 
-**Please see `CONTRIBUTING.md` for before making any contributions.**
+**Please see [`CONTRIBUTING.md`](CONTRIBUTING.md) for before making any contributions.**
 
 ## Reporting security vulnerabilities
 If you've found a vulnerability or a potential vulnerability in OpenTofu please follow [Security Policy](https://github.com/opentofu/opentofu/security/policy). We'll send a confirmation email to acknowledge your report, and we'll send an additional email when we've identified the issue positively or negatively.
