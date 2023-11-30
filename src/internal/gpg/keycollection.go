@@ -1,6 +1,7 @@
 package gpg
 
 import (
+	"fmt"
 	"os"
 	"path/filepath"
 	"strings"
@@ -28,14 +29,15 @@ func (k KeyCollection) ListKeys() ([]Key, error) {
 	// if it does exist, iterate across the files
 	files, err := os.ReadDir(location)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("error reading directory %s: %w", location, err)
 	}
 
 	keys := make([]Key, len(files))
 	for i, file := range files {
-		key, err := buildKey(filepath.Join(location, file.Name()))
+		keyPath := filepath.Join(location, file.Name())
+		key, err := buildKey(keyPath)
 		if err != nil {
-			return nil, err
+			return nil, fmt.Errorf("error building key at %s: %w", keyPath, err)
 		}
 		keys[i] = *key
 	}
