@@ -36,13 +36,18 @@ func extractProviderDetailsFromPath(path string) *Provider {
 }
 
 // ListProviders returns a slice of Provider structs for each provider found in the providerDataDir.
-func ListProviders(providerDataDir string, logger *slog.Logger, ghClient github.Client) (List, error) {
+func ListProviders(providerDataDir string, providerNamespace string, logger *slog.Logger, ghClient github.Client) (List, error) {
 	var results []Provider
 	err := filepath.Walk(providerDataDir, func(path string, info os.FileInfo, err error) error {
 		p := extractProviderDetailsFromPath(path)
 
 		if p == nil {
 			logger.Debug("Failed to extract provider details from path, skipping", slog.String("path", path))
+			return nil
+		}
+
+		if providerNamespace != "" && p.Namespace != providerNamespace {
+			logger.Debug("Filtered out provider", slog.String("path", path))
 			return nil
 		}
 
