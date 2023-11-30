@@ -71,7 +71,7 @@ func (p ProviderGenerator) VersionListing() ProviderVersionListingResponse {
 }
 
 // VersionDetails will take the provider metadata and generate the responses for the provider version download API endpoints.
-func (p ProviderGenerator) VersionDetails() map[string]ProviderVersionDetails {
+func (p ProviderGenerator) VersionDetails() (map[string]ProviderVersionDetails, error) {
 	versionDetails := make(map[string]ProviderVersionDetails)
 
 	keyCollection := gpg.KeyCollection{
@@ -82,6 +82,7 @@ func (p ProviderGenerator) VersionDetails() map[string]ProviderVersionDetails {
 	keys, err := keyCollection.ListKeys()
 	if err != nil {
 		p.log.Error("Failed to list keys", slog.Any("err", err))
+		return nil, err
 	}
 
 	for _, ver := range p.Metadata.Versions {
@@ -102,21 +103,26 @@ func (p ProviderGenerator) VersionDetails() map[string]ProviderVersionDetails {
 			versionDetails[p.VersionDownloadPath(ver, details)] = details
 		}
 	}
-	return versionDetails
+	return versionDetails, nil
 }
 
 // Generate generates the responses for the provider version listing API endpoints.
 func (p ProviderGenerator) Generate() error {
 	p.log.Info("Generating")
 
-	for location, details := range p.VersionDetails() {
+	details, err := p.VersionDetails()
+	if err != nil {
+		return err
+	}
+
+	for location, details := range details {
 		err := files.SafeWriteObjectToJSONFile(location, details)
 		if err != nil {
 			return fmt.Errorf("failed to write metadata version download file: %w", err)
 		}
 	}
 
-	err := files.SafeWriteObjectToJSONFile(p.VersionListingPath(), p.VersionListing())
+	err = files.SafeWriteObjectToJSONFile(p.VersionListingPath(), p.VersionListing())
 	if err != nil {
 		return err
 	}
