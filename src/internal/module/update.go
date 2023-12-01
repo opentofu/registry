@@ -57,15 +57,15 @@ func (p Module) getSemVerTagsFromRSS() ([]string, error) {
 func (p Module) getLastSemVerTag() (string, error) {
 	semverTags, err := p.getSemVerTagsFromRSS()
 	if err != nil {
+		// TODO This is a stopgap, the logs will need to be checked regularly for this.
 		p.Logger.Error("Unable to fetch tags, skipping", slog.Any("err", err))
 		return "", nil
-		//return "", err
 	}
 
 	if len(semverTags) < 1 {
+		// TODO This is a stopgap, the logs will need to be checked regularly for this.
 		p.Logger.Error("no semver tags found in repository, skipping", slog.String("url", p.RepositoryURL()))
 		return "", nil
-		//return "", fmt.Errorf("no semver tags found in repository %s", p.RepositoryURL())
 	}
 
 	// Tags should be sorted by descending creation date. So, return the first tag
