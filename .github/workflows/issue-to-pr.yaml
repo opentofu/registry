@@ -5,8 +5,8 @@ on:
       [opened, edited]
 
 jobs:
-  issue_to_pr:
-    if: contains(github.event.issue.labels.*.name, 'provider')
+  provider_issue_to_pr:
+    if: contains(github.event.issue.labels.*.name, 'provider') && contains(github.event.issue.labels.*.name, 'submission') 
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -81,6 +81,102 @@ jobs:
           git push -u origin $branch
 
           pr=$(gh pr create --title "$TITLE" --body "Created $jsonfile for provider $namespace/$name.  See issue #$NUMBER for details.") #--assignee opentofu/core-engineers)
+
+          gh issue comment $NUMBER -b "Your submission has been accepted and has moved on to the pull request phase ($pr)"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          NUMBER: ${{ github.event.issue.number }}
+          URL: ${{ github.event.issue.url }}
+          TITLE: ${{ github.event.issue.title }}
+          BODY: ${{ github.event.issue.body }}
+
+  module_issue_to_pr:
+    if: contains(github.event.issue.labels.*.name, 'module') && contains(github.event.issue.labels.*.name, 'submission') 
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version-file: './src/go.mod'
+      - name: Module Issue to Pull Request
+        run: |
+          # Pull module out of issue body
+          module=$(echo "$BODY" | grep "### Repository" -A2 | tail -n1 | sed -e 's/[\r\n]//g')
+          echo "Detected Module '$module'"
+
+          # Check that it's not a provider
+          if [[ "$module" =~ [a-zA-Z0-9\-]+/terraform-module-[a-zA-Z0-9\-]+ ]]; then
+            gh issue comment $NUMBER -b "Failed validation: Likely a provider '$module'"
+            exit 1
+          fi
+
+          # Check that module matches expected pattern
+          if ! [[ "$module" =~ [a-zA-Z0-9\-]+/terraform-[a-zA-Z0-9]+-[a-zA-Z0-9\-]+ ]]; then
+            gh issue comment $NUMBER -b "Failed validation: Invalid module '$module'"
+            exit 1
+          fi
+
+          # Split module into namespace/terraform-module-name
+          namespace=${module/\/*/}
+          full=${module/*\/terraform-/}
+          target=${full/-[^-]*/}
+          name=${full/$target-/}
+          echo "Detected Namespace '$namespace'"
+          echo "Detected Target '$target'"
+          echo "Detected Name '$name'"
+
+          jsonfile=$(echo "${namespace}/${name}/${target}.json" | sed -e 's,\(.\).*,./modules/\L\1\E/\0,')
+
+          if [[ -f $jsonfile ]]; then
+            gh issue comment $NUMBER -b "Failed validation: This module already exists within the registry. $jsonfile"
+            exit 1
+          fi
+
+          mkdir -p $(dirname $jsonfile)
+          echo '{}' > $jsonfile
+
+          echo "Bumping $namespace"
+          cd src
+          # This might "bump" a few extra modules, but it will only commit the specific module below
+          go run ./cmd/bump-versions -module-namespace $namespace -provider-namespace this-really-should-not-exist-please-ignore-me
+          cd -
+
+
+          # Validate json file
+          set +e
+          grep -c '"version":' $jsonfile
+          if [[ "$?" != 0 ]]; then
+            gh issue comment $NUMBER -b "Failed validation: No versions detected in $jsonfile"
+            exit 1
+          fi
+          set -e
+
+          
+          git config --global user.email "no-reply@opentofu.org"
+          git config --global user.name "OpenTOFU Automation"
+
+          branch="module-submission_${namespace}_${name}"
+          set +e
+          git checkout -b $branch
+          if [[ "$?" != 0 ]]; then
+            gh issue comment $NUMBER -b "Failed validation: A branch already exists for this module '$branch'"
+            exit 1
+          fi
+          set -e
+
+          git add $jsonfile
+          git commit -s -m "Create module $namespace/$name"
+          git push -u origin $branch
+
+          pr=$(gh pr create --title "$TITLE" --body "Created $jsonfile for module $namespace/$name.  See issue #$NUMBER for details.") #--assignee opentofu/core-engineers)
 
           gh issue comment $NUMBER -b "Your submission has been accepted and has moved on to the pull request phase ($pr)"
         env:

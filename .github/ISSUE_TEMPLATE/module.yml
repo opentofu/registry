@@ -1,0 +1,18 @@
+name: Submit new Module
+description: Submit a new OpenTofu Module
+title: "Module: "
+labels: ["module", "submission"]
+body:
+  - type: input
+    id: repository
+    attributes:
+      label: Repository
+      description: Path to a public GitHub repository following the pattern {owner}/terraform-{target}-{name}, ex. GoogleCloudPlatform/terraform-google-secured-data-warehouse
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: DCO
+      options:
+        - label: I sign this project's [DCO](https://developercertificate.org/)
+          required: true
