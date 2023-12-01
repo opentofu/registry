@@ -1,0 +1,93 @@
+name: Issue Submission to Pull Request
+on:
+  issues:
+    types:
+      [opened, edited]
+
+jobs:
+  issue_to_pr:
+    if: contains(github.event.issue.labels.*.name, 'provider')
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version-file: './src/go.mod'
+      - name: Provider Issue to Pull Request
+        run: |
+          # Pull provider out of issue body
+          provider=$(echo "$BODY" | grep "### Repository" -A2 | tail -n1 | sed -e 's/[\r\n]//g')
+          echo "Detected Provider '$provider'"
+
+          # Check that provider matches expected pattern
+          if ! [[ "$provider" =~ [a-zA-Z0-9\-]+/terraform-provider-[a-zA-Z0-9\-]+ ]]; then
+            gh issue comment $NUMBER -b "Failed validation: Invalid provider '$provider'"
+            exit 1
+          fi
+
+          # Split provider into namespace/terraform-provider-name
+          namespace=${provider/\/*/}
+          name=${provider/*\/terraform-provider-/}
+          echo "Detected Namespace '$namespace'"
+          echo "Detected Name '$name'"
+
+          jsonfile=$(echo "$namespace/$name" | sed -e 's,\(.\)\(.*\)/\(.*\),./providers/\L\1\E/\1\2/\3.json,')
+
+          if [[ -f $jsonfile ]]; then
+            gh issue comment $NUMBER -b "Failed validation: This provider already exists within the registry. $jsonfile"
+            exit 1
+          fi
+
+          mkdir -p $(dirname $jsonfile)
+          echo '{}' > $jsonfile
+
+          echo "Bumping $namespace"
+          cd src
+          # This might "bump" a few extra providers, but it will only commit the specific provider below
+          go run ./cmd/bump-versions -provider-namespace $namespace -module-namespace this-really-should-not-exist-please-ignore-me
+          cd -
+
+
+          # Validate json file
+          set +e
+          grep -c '"version":' $jsonfile
+          if [[ "$?" != 0 ]]; then
+            gh issue comment $NUMBER -b "Failed validation: No versions detected in $jsonfile"
+            exit 1
+          fi
+          set -e
+
+          
+          git config --global user.email "no-reply@opentofu.org"
+          git config --global user.name "OpenTOFU Automation"
+
+          branch="provider-submission_${namespace}_${name}"
+          set +e
+          git checkout -b $branch
+          if [[ "$?" != 0 ]]; then
+            gh issue comment $NUMBER -b "Failed validation: A branch already exists for this provider '$branch'"
+            exit 1
+          fi
+          set -e
+
+          git add $jsonfile
+          git commit -s -m "Create provider $namespace/$name"
+          git push -u origin $branch
+
+          pr=$(gh pr create --title "$TITLE" --body "Created $jsonfile for provider $namespace/$name.  See issue #$NUMBER for details.") #--assignee opentofu/core-engineers)
+
+          gh issue comment $NUMBER -b "Your submission has been accepted and has moved on to the pull request phase ($pr)"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          NUMBER: ${{ github.event.issue.number }}
+          URL: ${{ github.event.issue.url }}
+          TITLE: ${{ github.event.issue.title }}
+          BODY: ${{ github.event.issue.body }}
