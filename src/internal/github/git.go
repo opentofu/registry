@@ -1,64 +1,34 @@
 package github
 
 import (
-	"bytes"
 	"fmt"
-	"log/slog"
-	"os/exec"
-	"strings"
+
+	"github.com/go-git/go-git/v5"
+	"github.com/go-git/go-git/v5/config"
+	"github.com/go-git/go-git/v5/storage/memory"
 )
 
-func parseTagsFromStdout(lines []string) ([]string, error) {
-	tags := make([]string, 0, len(lines))
+func (c Client) GetTags(url string) ([]string, error) {
+	remote := git.NewRemote(memory.NewStorage(), &config.RemoteConfig{
+		Name: "origin",
+		URLs: []string{url},
+	})
 
-	for _, line := range lines {
-		if !strings.Contains(line, "refs/tags/") {
-			continue
-		}
-
-		fields := strings.Fields(line)
-		if len(fields) != 2 {
-			return nil, fmt.Errorf("invalid format for tag '%s', expected two fields", line)
-		}
-
-		ref := fields[1]
-		if !strings.HasPrefix(ref, "refs/tags/") {
-			return nil, fmt.Errorf("invalid format for tag '%s', expected 'refs/tags/' prefix", line)
-		}
-
-		tag := strings.TrimPrefix(ref, "refs/tags/")
-		if tag == "" {
-			return nil, fmt.Errorf("invalid format for tag '%s', no version provided", line)
-		}
-
-		tags = append(tags, tag)
-	}
-
-	return tags, nil
-}
-
-// GetTags lists the tags of the remote repository and returns the refs/tags/ found
-func (c Client) GetTags(repositoryUrl string) ([]string, error) {
-	done := c.cliThrottle()
-	defer done()
-
-	c.log.Info("Getting tags for repository", slog.String("repository", repositoryUrl))
-
-	var buf bytes.Buffer
-	var bufErr bytes.Buffer
-	cmd := exec.Command("git", "ls-remote", "--tags", "--refs", repositoryUrl)
-	cmd.Stdout = &buf
-	cmd.Stderr = &bufErr
-
-	if err := cmd.Run(); err != nil {
-		return nil, fmt.Errorf("could not get tags for %s, %w: %s", repositoryUrl, err, bufErr.String())
-	}
-
-	tags, err := parseTagsFromStdout(strings.Split(buf.String(), "\n"))
+	refs, err := remote.List(&git.ListOptions{
+		// TODO: Ensure that annotated tags are peeled correctly here.
+		// right now: I'm ignoring peeled tags because they don't seem to be what we need.
+		PeelingOption: git.IgnorePeeled,
+	})
 	if err != nil {
-		return nil, fmt.Errorf("could not parse tags for %s: %w", repositoryUrl, err)
+		return nil, fmt.Errorf("failed to list tags: %w", err)
 	}
 
-	c.log.Info("Found tags for repository", slog.String("repository", repositoryUrl), slog.Int("count", len(tags)))
+	var tags []string
+	for _, ref := range refs {
+		if ref.Name().IsTag() {
+			tags = append(tags, ref.Name().Short())
+		}
+	}
+
 	return tags, nil
 }
