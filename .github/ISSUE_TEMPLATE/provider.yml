@@ -1,0 +1,32 @@
+name: Submit new Provider
+description: Submit a new OpenTofu Provider
+title: "[Provider]: "
+labels: ["provider"]
+body:
+  - type: input
+    id: namespace
+    attributes:
+      label: Namespace
+      description: The Provider namespace - must correlate with a valid GitHub organization
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: The Provider name - must correlate with a valid GitHub repository under the provided GitHub organization matching that of provided Namespace
+    validations:
+      required: true
+  - type: textarea
+    id: gpg
+    attributes:
+      label: Public GPG Key
+      description: The public GPG key for releases of said provider
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: DCO
+      options:
+        - label: I sign this project's [DCO](link/to/coc)
+          required: true
