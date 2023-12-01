@@ -36,6 +36,11 @@ func (p Provider) shouldUpdateMetadataFile() (bool, error) {
 		return false, err
 	}
 
+	if semVerTag == "" {
+		// Repo unavailable or tags deleted
+		return false, nil
+	}
+
 	fileContent, err := p.ReadMetadata()
 	if err != nil {
 		return false, err
@@ -77,11 +82,15 @@ func (p Provider) getSemVerTagsFromRSS() ([]string, error) {
 func (p Provider) getLastSemVerTag() (string, error) {
 	semverTags, err := p.getSemVerTagsFromRSS()
 	if err != nil {
-		return "", err
+		p.Logger.Error("Unable to fetch tags, skipping", slog.Any("err", err))
+		return "", nil
+		//return "", err
 	}
 
 	if len(semverTags) < 1 {
-		return "", fmt.Errorf("no semver tags found in repository %s", p.RepositoryURL())
+		p.Logger.Error("no semver tags found in repository, skipping", slog.String("url", p.RepositoryURL()))
+		return "", nil
+		//return "", fmt.Errorf("no semver tags found in repository %s", p.RepositoryURL())
 	}
 
 	// Tags should be sorted by descending creation date. So, return the first tag
