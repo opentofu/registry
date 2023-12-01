@@ -1,7 +1,6 @@
 package module
 
 import (
-	"fmt"
 	"log/slog"
 
 	"golang.org/x/mod/semver"
@@ -11,6 +10,11 @@ func (p Module) shouldUpdateMetadataFile() (bool, error) {
 	semVerTag, err := p.getLastSemVerTag()
 	if err != nil {
 		return false, err
+	}
+
+	if semVerTag == "" {
+		// Repo unavailable or tags deleted
+		return false, nil
 	}
 
 	fileContent, err := p.ReadMetadata()
@@ -53,11 +57,15 @@ func (p Module) getSemVerTagsFromRSS() ([]string, error) {
 func (p Module) getLastSemVerTag() (string, error) {
 	semverTags, err := p.getSemVerTagsFromRSS()
 	if err != nil {
-		return "", err
+		// TODO This is a stopgap, the logs will need to be checked regularly for this.
+		p.Logger.Error("Unable to fetch tags, skipping", slog.Any("err", err))
+		return "", nil
 	}
 
 	if len(semverTags) < 1 {
-		return "", fmt.Errorf("no semver tags found in repository %s", p.RepositoryURL())
+		// TODO This is a stopgap, the logs will need to be checked regularly for this.
+		p.Logger.Error("no semver tags found in repository, skipping", slog.String("url", p.RepositoryURL()))
+		return "", nil
 	}
 
 	// Tags should be sorted by descending creation date. So, return the first tag
