@@ -5,55 +5,111 @@ on:
       [opened, edited]
 
 jobs:
-  provider_issue_to_pr:
-    if: contains(github.event.issue.labels.*.name, 'provider') && contains(github.event.issue.labels.*.name, 'submission') 
+  parse-and-validate:
+    if: (contains(github.event.issue.labels.*.name, 'provider') || contains(github.event.issue.labels.*.name, 'module')) && contains(github.event.issue.labels.*.name, 'submission')
     runs-on: ubuntu-latest
+    steps:
+      # Classify as provider submission or module submission
+      - name: Issue Template Selector
+        id: template-selector
+        run: |
+          is_provider=$(echo '${{ github.event.issue.labels.*.name }}' | jq 'any(. == "provider")')
+
+          if [[ "$is_provider" == "true" ]]
+          then
+            echo "TEMPLATE=provider.yml" >> "$GITHUB_OUTPUT"
+          else
+            echo "TEMPLATE=module.yml" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Parse Issue Body
+        id: parse
+        uses: issue-ops/parser@v0.2.2
+        with:
+          body: ${{ github.event.issue.body }}
+          issue-form-template: ${{ steps.template-selector.outputs.TEMPLATE }}
+          workspace: ${{ github.workspace }}
+
+      # install node/dependencies for validation scripts requiring libs
+      - name: Setup Node.js
+        id: setup-node
+        uses: actions/setup-node@vX.X.X
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install Dependencies
+        id: install
+        run: npm install
+
+      # Validate the parsed issue body against the issue form template and custom validators - see validator/config.yml
+      - name: Validate Issue
+        id: validate
+        uses: issue-ops/validator@v0.2.1
+        with:
+          issue-form-template: ${{ steps.template-selector.outputs.TEMPLATE }}
+          parsed-issue-body: ${{ steps.parse.outputs.json }}
+          workspace: ${{ github.workspace }}
+
+      - name: Print Validation Results
+        id: print
+        run: |
+          echo "Result: ${{ steps.validate.outputs.result }}"
+          echo "Errors: ${{ steps.validate.outputs.errors }}"
+
+    outputs:
+      type: ${{ steps.template-selector.outputs.TEMPLATE }}
+      form: ${{ steps.parse.outputs.json }}
+
+  submit-provider:
+    if: github.event.action == 'opened' && contains(github.event.issue.labels.*.name, 'provider') && contains(github.event.issue.labels.*.name, 'submission')
+    runs-on: ubuntu-latest
+    needs: parse-and-validate
     permissions:
       issues: write
       contents: write
       pull-requests: write
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-      - name: Set up Go
-        uses: actions/setup-go@v4
-        with:
-          go-version-file: './src/go.mod'
-      - name: Provider Issue to Pull Request
+      - name: Split Provider Parts
+        id: provider-split
         run: |
-          # Pull provider out of issue body
-          provider=$(echo "$BODY" | grep "### Repository" -A2 | tail -n1 | sed -e 's/[\r\n]//g')
-          echo "Detected Provider '$provider'"
-
-          # Check that provider matches expected pattern
-          if ! [[ "$provider" =~ [a-zA-Z0-9\-]+/terraform-provider-[a-zA-Z0-9\-]+ ]]; then
-            gh issue comment $NUMBER -b "Failed validation: Invalid provider '$provider'"
-            exit 1
-          fi
-
           # Split provider into namespace/terraform-provider-name
+          provider=${{ fromJSON(steps.parse.outputs.json).provider_repository }}
           namespace=${provider/\/*/}
           name=${provider/*\/terraform-provider-/}
           echo "Detected Namespace '$namespace'"
           echo "Detected Name '$name'"
 
-          jsonfile=$(echo "$namespace/$name" | sed -e 's,\(.\)\(.*\)/\(.*\),./providers/\L\1\E/\1\2/\3.json,')
+          echo "::set-output name=provider::$provider"
+          echo "::set-output name=namespace::$namespace"
+          echo "::set-output name=name::$name"
 
+      - name: Create Provider file and PR
+        id: provider-split
+        env:
+          provider: ${{ steps.provider-split.outputs.provider }}
+          namespace: ${{ steps.provider-split.outputs.namespace }}
+          name: ${{ steps.provider-split.outputs.name }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          NUMBER: ${{ github.event.issue.number }}
+          URL: ${{ github.event.issue.url }}
+          TITLE: ${{ github.event.issue.title }}
+          BODY: ${{ github.event.issue.body }}
+        run: |
+          jsonfile=$(echo "$namespace/$name" | sed -e 's,\(.\)\(.*\)/\(.*\),./providers/\L\1\E/\1\2/\3.json,')
           if [[ -f $jsonfile ]]; then
             gh issue comment $NUMBER -b "Failed validation: This provider already exists within the registry. $jsonfile"
             exit 1
           fi
-
           mkdir -p $(dirname $jsonfile)
           echo '{}' > $jsonfile
-
           echo "Bumping $namespace"
           cd src
           # This might "bump" a few extra providers, but it will only commit the specific provider below
           go run ./cmd/bump-versions -provider-namespace $namespace -module-namespace this-really-should-not-exist-please-ignore-me
           cd -
-
-
           # Validate json file
           set +e
           grep -c '"version":' $jsonfile
@@ -62,11 +118,9 @@ jobs:
             exit 1
           fi
           set -e
-
           
           git config --global user.email "no-reply@opentofu.org"
           git config --global user.name "OpenTOFU Automation"
-
           branch="provider-submission_${namespace}_${name}"
           set +e
           git checkout -b $branch
@@ -75,115 +129,20 @@ jobs:
             exit 1
           fi
           set -e
-
           git add $jsonfile
           git commit -s -m "Create provider $namespace/$name"
           git push -u origin $branch
-
           pr=$(gh pr create --title "$TITLE" --body "Created $jsonfile for provider $namespace/$name.  See issue #$NUMBER for details.") #--assignee opentofu/core-engineers)
-
           gh issue comment $NUMBER -b "Your submission has been accepted and has moved on to the pull request phase ($pr)"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_REPO: ${{ github.repository }}
-          NUMBER: ${{ github.event.issue.number }}
-          URL: ${{ github.event.issue.url }}
-          TITLE: ${{ github.event.issue.title }}
-          BODY: ${{ github.event.issue.body }}
 
-  module_issue_to_pr:
-    if: contains(github.event.issue.labels.*.name, 'module') && contains(github.event.issue.labels.*.name, 'submission') 
-    runs-on: ubuntu-latest
-    permissions:
-      issues: write
-      contents: write
-      pull-requests: write
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-      - name: Set up Go
-        uses: actions/setup-go@v4
-        with:
-          go-version-file: './src/go.mod'
-      - name: Module Issue to Pull Request
-        run: |
-          # Pull module out of issue body
-          module=$(echo "$BODY" | grep "### Repository" -A2 | tail -n1 | sed -e 's/[\r\n]//g')
-          echo "Detected Module '$module'"
+#
+#  submit-module:
+#    if: github.event.action == 'opened' && contains(github.event.issue.labels.*.name, 'module') && contains(github.event.issue.labels.*.name, 'submission')
+#    runs-on: ubuntu-latest
+#    permissions:
+#      issues: write
+#      contents: write
+#      pull-requests: write
+#    steps:
 
-          # Check that it's not a provider
-          if [[ "$module" =~ [a-zA-Z0-9\-]+/terraform-module-[a-zA-Z0-9\-]+ ]]; then
-            gh issue comment $NUMBER -b "Failed validation: Likely a provider '$module'"
-            exit 1
-          fi
-
-          # Check that module matches expected pattern
-          if ! [[ "$module" =~ [a-zA-Z0-9\-]+/terraform-[a-zA-Z0-9]+-[a-zA-Z0-9\-]+ ]]; then
-            gh issue comment $NUMBER -b "Failed validation: Invalid module '$module'"
-            exit 1
-          fi
-
-          # Split module into namespace/terraform-module-name
-          namespace=${module/\/*/}
-          full=${module/*\/terraform-/}
-          target=${full/-[^-]*/}
-          name=${full/$target-/}
-          echo "Detected Namespace '$namespace'"
-          echo "Detected Target '$target'"
-          echo "Detected Name '$name'"
-
-          jsonfile=$(echo "${namespace}/${name}/${target}.json" | sed -e 's,\(.\).*,./modules/\L\1\E/\0,')
-
-          if [[ -f $jsonfile ]]; then
-            gh issue comment $NUMBER -b "Failed validation: This module already exists within the registry. $jsonfile"
-            exit 1
-          fi
-
-          mkdir -p $(dirname $jsonfile)
-          echo '{}' > $jsonfile
-
-          echo "Bumping $namespace"
-          cd src
-          # This might "bump" a few extra modules, but it will only commit the specific module below
-          go run ./cmd/bump-versions -module-namespace $namespace -provider-namespace this-really-should-not-exist-please-ignore-me
-          cd -
-
-
-          # Validate json file
-          set +e
-          grep -c '"version":' $jsonfile
-          if [[ "$?" != 0 ]]; then
-            gh issue comment $NUMBER -b "Failed validation: No versions detected in $jsonfile"
-            exit 1
-          fi
-          set -e
-
-          
-          git config --global user.email "no-reply@opentofu.org"
-          git config --global user.name "OpenTOFU Automation"
-
-          branch="module-submission_${namespace}_${name}"
-          set +e
-          git checkout -b $branch
-          if [[ "$?" != 0 ]]; then
-            gh issue comment $NUMBER -b "Failed validation: A branch already exists for this module '$branch'"
-            exit 1
-          fi
-          set -e
-
-          git add $jsonfile
-          git commit -s -m "Create module $namespace/$name"
-          git push -u origin $branch
-
-          pr=$(gh pr create --title "$TITLE" --body "Created $jsonfile for module $namespace/$name.  See issue #$NUMBER for details.") #--assignee opentofu/core-engineers)
-
-          gh issue comment $NUMBER -b "Your submission has been accepted and has moved on to the pull request phase ($pr)"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_REPO: ${{ github.repository }}
-          NUMBER: ${{ github.event.issue.number }}
-          URL: ${{ github.event.issue.url }}
-          TITLE: ${{ github.event.issue.title }}
-          BODY: ${{ github.event.issue.body }}
+  # TODO: account for what to do with issue/pr on module/provider *edits* next
