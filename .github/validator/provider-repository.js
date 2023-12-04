@@ -1,16 +1,7 @@
 /**
- * Provider validator script
+ * Provider validator script used for further custom validation consumed by https://github.comissue-ops/validator
  *
  * @param {string | string[] | {label: string; required: boolean }} field The input field.
- *
- * This can be one of several types:
- *  - `string` -> The value of the field (e.g. `'my-team'`)
- *  - `string[]` -> The value(s) of the field (e.g. `['team-1', 'team-2']`)
- *  - A checkboxes object with a `label` and `required` property (e.g.
- *    `{ label: 'my-team', required: true }`)
- *
- *  You do not need to handle them all! It is up to the individual validation
- *  script to define which type(s) to expect and how to handle them.
  *
  * @returns {Promise<string>} An error message or `'success'`
  */
