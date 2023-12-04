@@ -5,6 +5,7 @@ go 1.21
 require (
 	github.com/ProtonMail/gopenpgp/v2 v2.7.4
 	github.com/mmcdole/gofeed v1.2.1
+	github.com/opentofu/registry-address v0.0.0-20230922120653-901b9ae4061a
 	github.com/otiai10/copy v1.14.0
 	github.com/shurcooL/githubv4 v0.0.0-20230704064427-599ae7bbf278
 	github.com/stretchr/testify v1.8.4
@@ -19,6 +20,7 @@ require (
 	github.com/andybalholm/cascadia v1.3.1 // indirect
 	github.com/cloudflare/circl v1.3.3 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/hashicorp/terraform-svchost v0.1.1 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/mmcdole/goxpp v1.1.0 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect

@@ -5,86 +5,24 @@ on:
       [opened, edited]
 
 jobs:
-  parse-and-validate:
-    if: (contains(github.event.issue.labels.*.name, 'provider') || contains(github.event.issue.labels.*.name, 'module')) && contains(github.event.issue.labels.*.name, 'submission')
-    runs-on: ubuntu-latest
-    steps:
-      # Classify as provider submission or module submission
-      - name: Issue Template Selector
-        id: template-selector
-        run: |
-          is_provider=$(echo '${{ github.event.issue.labels.*.name }}' | jq 'any(. == "provider")')
-
-          if [[ "$is_provider" == "true" ]]
-          then
-            echo "TEMPLATE=provider.yml" >> "$GITHUB_OUTPUT"
-          else
-            echo "TEMPLATE=module.yml" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Parse Issue Body
-        id: parse
-        uses: issue-ops/parser@v0.2.2
-        with:
-          body: ${{ github.event.issue.body }}
-          issue-form-template: ${{ steps.template-selector.outputs.TEMPLATE }}
-          workspace: ${{ github.workspace }}
-
-      - name: Setup Node.js
-        id: setup-node
-        uses: actions/setup-node@vX.X.X
-        with:
-          node-version: 20
-          cache: npm
-
-      # Validate the parsed issue body against the issue form template and custom validators - see validator/config.yml
-      - name: Validate Issue
-        id: validate
-        uses: issue-ops/validator@v0.2.1
-        with:
-          issue-form-template: ${{ steps.template-selector.outputs.TEMPLATE }}
-          parsed-issue-body: ${{ steps.parse.outputs.json }}
-          workspace: ${{ github.workspace }}
-
-      - name: Print Validation Results
-        id: print
-        run: |
-          echo "Result: ${{ steps.validate.outputs.result }}"
-          echo "Errors: ${{ steps.validate.outputs.errors }}"
-
-    outputs:
-      type: ${{ steps.template-selector.outputs.TEMPLATE }}
-      form: ${{ steps.parse.outputs.json }}
-
   submit-provider:
-    if: github.event.action == 'opened' && contains(github.event.issue.labels.*.name, 'provider') && contains(github.event.issue.labels.*.name, 'submission')
+    if: contains(github.event.issue.labels.*.name, 'provider') && contains(github.event.issue.labels.*.name, 'submission')
     runs-on: ubuntu-latest
-    needs: parse-and-validate
     permissions:
       issues: write
       contents: write
       pull-requests: write
     steps:
-      - name: Split Provider Parts
-        id: provider-split
-        run: |
-          # Split provider into namespace/terraform-provider-name
-          provider=${{ fromJSON(steps.parse.outputs.json).provider_repository }}
-          namespace=${provider/\/*/}
-          name=${provider/*\/terraform-provider-/}
-          echo "Detected Namespace '$namespace'"
-          echo "Detected Name '$name'"
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-          echo "::set-output name=provider::$provider"
-          echo "::set-output name=namespace::$namespace"
-          echo "::set-output name=name::$name"
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version-file: './src/go.mod'
 
-      - name: Create Provider file and PR
-        id: provider-split
+      - name: Validate Provider and Create PR
         env:
-          provider: ${{ steps.provider-split.outputs.provider }}
-          namespace: ${{ steps.provider-split.outputs.namespace }}
-          name: ${{ steps.provider-split.outputs.name }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
@@ -92,31 +30,32 @@ jobs:
           URL: ${{ github.event.issue.url }}
           TITLE: ${{ github.event.issue.title }}
           BODY: ${{ github.event.issue.body }}
+        working-directory: ./src
         run: |
-          jsonfile=$(echo "$namespace/$name" | sed -e 's,\(.\)\(.*\)/\(.*\),./providers/\L\1\E/\1\2/\3.json,')
-          if [[ -f $jsonfile ]]; then
-            gh issue comment $NUMBER -b "Failed validation: This provider already exists within the registry. $jsonfile"
-            exit 1
-          fi
-          mkdir -p $(dirname $jsonfile)
-          echo '{}' > $jsonfile
-          echo "Bumping $namespace"
-          cd src
-          # This might "bump" a few extra providers, but it will only commit the specific provider below
-          go run ./cmd/bump-versions -provider-namespace $namespace -module-namespace this-really-should-not-exist-please-ignore-me
-          cd -
-          # Validate json file
           set +e
-          grep -c '"version":' $jsonfile
+          echo "$BODY" | grep "\- \[[xX]\] I sign this project's \[DCO\](https://developercertificate.org/)"
           if [[ "$?" != 0 ]]; then
-            gh issue comment $NUMBER -b "Failed validation: No versions detected in $jsonfile"
+            gh issue comment $NUMBER -b "DCO must be signed to submit this repository"
             exit 1
           fi
           set -e
+
+          repository=$(echo "$BODY" | grep "### Provider Repository" -A2 | tail -n1 | sed -e 's/[\r\n]//g')
+
+          set +e
+          go run ./cmd/add-provider -repository="$repository" -output=./output.json
+          if [[ "$?" != 0 ]]; then
+            gh issue comment $NUMBER -b "$(cat ./output.json | jq -r '.validation')"
+            exit 1
+          fi
+          set -e
+          namespace=$(cat ./output.json | jq -r '.namespace')
+          name=$(cat ./output.json | jq -r '.name')
+          jsonfile=$(cat ./output.json | jq -r '.file')
           
-          git config --global user.email "no-reply@opentofu.org"
-          git config --global user.name "OpenTOFU Automation"
-          branch="provider-submission_${namespace}_${name}"
+
+          # Create Branch
+          branch=provider-submission_${namespace}_${name}
           set +e
           git checkout -b $branch
           if [[ "$?" != 0 ]]; then
@@ -124,20 +63,90 @@ jobs:
             exit 1
           fi
           set -e
+
+          # Add result
           git add $jsonfile
+
+          # Commit and push result
+          git config --global user.email "no-reply@opentofu.org"
+          git config --global user.name "OpenTofu Automation"
           git commit -s -m "Create provider $namespace/$name"
           git push -u origin $branch
-          pr=$(gh pr create --title "$TITLE" --body "Created $jsonfile for provider $namespace/$name.  See issue #$NUMBER for details.") #--assignee opentofu/core-engineers)
-          gh issue comment $NUMBER -b "Your submission has been accepted and has moved on to the pull request phase ($pr)"
 
-#
-#  submit-module:
-#    if: github.event.action == 'opened' && contains(github.event.issue.labels.*.name, 'module') && contains(github.event.issue.labels.*.name, 'submission')
-#    runs-on: ubuntu-latest
-#    permissions:
-#      issues: write
-#      contents: write
-#      pull-requests: write
-#    steps:
+          # Create pull request and update issue
+          pr=$(gh pr create --title "$TITLE" --body "Created $(echo $jsonfile | sed -e 's/../src/') for provider $namespace/$name.  See issue #$NUMBER for details.") #--assignee opentofu/core-engineers)
+          gh issue comment $NUMBER -b "Your submission has been validated and has moved on to the pull request phase ($pr).  This issue has been locked."
+          gh issue lock $NUMBER -r resolved
+  submit-module:
+    if: contains(github.event.issue.labels.*.name, 'module') && contains(github.event.issue.labels.*.name, 'submission')
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-  # TODO: account for what to do with issue/pr on module/provider *edits* next
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version-file: './src/go.mod'
+
+      - name: Validate Module and Create PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          NUMBER: ${{ github.event.issue.number }}
+          URL: ${{ github.event.issue.url }}
+          TITLE: ${{ github.event.issue.title }}
+          BODY: ${{ github.event.issue.body }}
+        working-directory: ./src
+        run: |
+          set +e
+          echo "$BODY" | grep "\- \[[xX]\] I sign this project's \[DCO\](https://developercertificate.org/)"
+          if [[ "$?" != 0 ]]; then
+            gh issue comment $NUMBER -b "DCO must be signed to submit this repository"
+            exit 1
+          fi
+          set -e
+
+          repository=$(echo "$BODY" | grep "### Module Repository" -A2 | tail -n1 | sed -e 's/[\r\n]//g')
+
+          set +e
+          go run ./cmd/add-module -repository="$repository" -output=./output.json
+          if [[ "$?" != 0 ]]; then
+            gh issue comment $NUMBER -b "$(cat ./output.json | jq -r '.validation')"
+            exit 1
+          fi
+          set -e
+          namespace=$(cat ./output.json | jq -r '.namespace')
+          name=$(cat ./output.json | jq -r '.name')
+          target=$(cat ./output.json | jq -r '.target')
+          jsonfile=$(cat ./output.json | jq -r '.file')
+          
+
+          # Create Branch
+          branch=module-submission_${namespace}_${name}_${target}
+          set +e
+          git checkout -b $branch
+          if [[ "$?" != 0 ]]; then
+            gh issue comment $NUMBER -b "Failed validation: A branch already exists for this module '$branch'"
+            exit 1
+          fi
+          set -e
+
+          # Add result
+          git add $jsonfile
+
+          # Commit and push result
+          git config --global user.email "no-reply@opentofu.org"
+          git config --global user.name "OpenTofu Automation"
+          git commit -s -m "Create module $namespace/$name/$target"
+          git push -u origin $branch
+
+          # Create pull request and update issue
+          pr=$(gh pr create --title "$TITLE" --body "Created $(echo $jsonfile | sed -e 's/../src/') for module $namespace/$name/$target.  See issue #$NUMBER for details.") #--assignee opentofu/core-engineers)
+          gh issue comment $NUMBER -b "Your submission has been validated and has moved on to the pull request phase ($pr).  This issue has been locked."
+          gh issue lock $NUMBER -r resolved
