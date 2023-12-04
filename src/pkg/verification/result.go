@@ -59,6 +59,28 @@ func (r *Result) AddStep(name string, status Status, errors ...string) *Step {
 	return &step
 }
 
+func (s *Step) DidFail() bool {
+	if s.Status == StatusFailure {
+		return true
+	}
+
+	for _, step := range s.SubSteps {
+		if step.DidFail() {
+			return true
+		}
+	}
+	return false
+}
+
+func (r *Result) DidFail() bool {
+	for _, step := range r.Steps {
+		if step.DidFail() {
+			return true
+		}
+	}
+	return false
+}
+
 func (r *Result) RenderMarkdown() string {
 	var output string
 	for _, step := range r.Steps {
