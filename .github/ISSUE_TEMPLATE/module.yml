@@ -4,13 +4,14 @@ title: "Module: "
 labels: ["module", "submission"]
 body:
   - type: input
-    id: repository
+    id: module_repository
     attributes:
-      label: Repository
+      label: Module Repository
       description: Path to a public GitHub repository following the pattern {owner}/terraform-{target}-{name}, ex. GoogleCloudPlatform/terraform-google-secured-data-warehouse
     validations:
       required: true
   - type: checkboxes
+    id: dco
     attributes:
       label: DCO
       options:
