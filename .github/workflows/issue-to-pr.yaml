@@ -40,7 +40,9 @@ jobs:
 
       - name: Install Dependencies
         id: install
-        run: npm install
+        working-directory: .github/validator
+        run: | 
+          npm install @octokit/core@5.0.2 @octokit/rest@20.0.2
 
       # Validate the parsed issue body against the issue form template and custom validators - see validator/config.yml
       - name: Validate Issue
