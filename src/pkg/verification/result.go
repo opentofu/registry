@@ -29,6 +29,22 @@ func (s *Step) AddStep(name string, status Status, errors ...string) *Step {
 	return &step
 }
 
+func (s *Step) RunStep(name string, fn func() error) *Step {
+	step := s.AddStep(name, StatusNotRun)
+	err := fn()
+	if err != nil {
+		step.AddError(err)
+		step.Status = StatusFailure
+	} else {
+		step.Status = StatusSuccess
+	}
+	return step
+}
+
+func (s *Step) AddError(err error) {
+	s.Errors = append(s.Errors, err.Error())
+}
+
 type Result struct {
 	Steps []*Step `json:"steps"`
 }
@@ -43,10 +59,32 @@ func (r *Result) AddStep(name string, status Status, errors ...string) *Step {
 	return &step
 }
 
+func (s *Step) DidFail() bool {
+	if s.Status == StatusFailure {
+		return true
+	}
+
+	for _, step := range s.SubSteps {
+		if step.DidFail() {
+			return true
+		}
+	}
+	return false
+}
+
+func (r *Result) DidFail() bool {
+	for _, step := range r.Steps {
+		if step.DidFail() {
+			return true
+		}
+	}
+	return false
+}
+
 func (r *Result) RenderMarkdown() string {
 	var output string
 	for _, step := range r.Steps {
-		output += fmt.Sprintf("### %s\n", step.Name)
+		output += fmt.Sprintf("## %s\n", step.Name)
 		if step.Status == StatusSuccess {
 			output += "✅ **Success**\n"
 		} else if step.Status == StatusFailure {
@@ -60,7 +98,7 @@ func (r *Result) RenderMarkdown() string {
 			output += fmt.Sprintf("- %s\n", err)
 		}
 		for _, subStep := range step.SubSteps {
-			output += fmt.Sprintf("#### %s\n", subStep.Name)
+			output += fmt.Sprintf("### %s\n", subStep.Name)
 			if subStep.Status == StatusSuccess {
 				output += "✅ **Success**\n"
 			} else if subStep.Status == StatusFailure {
