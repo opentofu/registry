@@ -30,19 +30,12 @@ jobs:
           issue-form-template: ${{ steps.template-selector.outputs.TEMPLATE }}
           workspace: ${{ github.workspace }}
 
-      # install node/dependencies for validation scripts requiring libs
       - name: Setup Node.js
         id: setup-node
         uses: actions/setup-node@vX.X.X
         with:
           node-version: 20
           cache: npm
-
-      - name: Install Dependencies
-        id: install
-        working-directory: .github/validator
-        run: | 
-          npm install @octokit/core@5.0.2 @octokit/rest@20.0.2
 
       # Validate the parsed issue body against the issue form template and custom validators - see validator/config.yml
       - name: Validate Issue
