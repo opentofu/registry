@@ -3,12 +3,16 @@ package v1api
 import (
 	"fmt"
 	"log/slog"
+	"os"
 	"path/filepath"
+	"regexp"
 	"strings"
 
 	"github.com/opentofu/registry-stable/internal/files"
 	"github.com/opentofu/registry-stable/internal/gpg"
 	"github.com/opentofu/registry-stable/internal/provider"
+
+	cp "github.com/otiai10/copy"
 )
 
 // ProviderGenerator is responsible for generating the response for the provider version listing API endpoints.
@@ -134,5 +138,36 @@ func (p ProviderGenerator) Generate() error {
 
 	p.log.Info("Generated")
 
+	return nil
+}
+
+func ArchivedOverrides(destDir string, log *slog.Logger) error {
+	re := regexp.MustCompile("(?P<Namespace>.*)/terraform-provider-(?P<Name>.*)")
+	for hashicorp, replacement := range provider.ArchivedOverrides {
+		hMatch := re.FindStringSubmatch(strings.ToLower(hashicorp))
+		rMatch := re.FindStringSubmatch(strings.ToLower(replacement))
+		if hMatch == nil {
+			return fmt.Errorf("invalid hashicorp override: %s!", hMatch)
+		}
+		if rMatch == nil {
+			return fmt.Errorf("invalid hashicorp override: %s!", rMatch)
+		}
+
+		hPath := filepath.Join(destDir, "v1", "providers", hMatch[re.SubexpIndex("Namespace")], hMatch[re.SubexpIndex("Name")])
+		rPath := filepath.Join(destDir, "v1", "providers", rMatch[re.SubexpIndex("Namespace")], rMatch[re.SubexpIndex("Name")])
+
+		log.Info(fmt.Sprintf("Adding hashicorp override from %s -> %s", rPath, hPath))
+
+		if _, err := os.Stat(hPath); err == nil {
+			return fmt.Errorf("invalid hashicorp override: %s already exists", hPath)
+		}
+		if _, err := os.Stat(rPath); err != nil {
+			return fmt.Errorf("invalid hashicorp override: %s does not exist", rPath)
+		}
+		err := cp.Copy(rPath, hPath)
+		if err != nil {
+			return err
+		}
+	}
 	return nil
 }

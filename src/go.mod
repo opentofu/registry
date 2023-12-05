@@ -5,6 +5,7 @@ go 1.21
 require (
 	github.com/ProtonMail/gopenpgp/v2 v2.7.4
 	github.com/mmcdole/gofeed v1.2.1
+	github.com/otiai10/copy v1.14.0
 	github.com/shurcooL/githubv4 v0.0.0-20230704064427-599ae7bbf278
 	github.com/stretchr/testify v1.8.4
 	golang.org/x/mod v0.14.0
@@ -28,6 +29,7 @@ require (
 	golang.org/x/crypto v0.15.0 // indirect
 	golang.org/x/net v0.18.0 // indirect
 	golang.org/x/oauth2 v0.14.0 // indirect
+	golang.org/x/sync v0.3.0 // indirect
 	golang.org/x/sys v0.14.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
