@@ -28,7 +28,7 @@ jobs:
            GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Sync Data to R2
-        run: rclone sync --checkers=512 --transfers=512 --checksum --fast-list ./generated R2:${{ secrets.R2_BUCKET_NAME }}
+        run: rclone sync --checkers=512 --transfers=512 --checksum --fast-list --max-delete 0 ./generated R2:${{ secrets.R2_BUCKET_NAME }}
         env:
           # R2 credentials should be stored as GitHub secrets
           RCLONE_CONFIG_R2_TYPE: s3
