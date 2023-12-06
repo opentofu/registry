@@ -100,6 +100,7 @@ func main() {
 	if err != nil {
 		logger.Error("Unable to add provider", slog.Any("err", err))
 		output.Validation = err.Error()
+		// Don't exit yet, still need to write the json.
 	}
 
 	jsonErr := files.SafeWriteObjectToJSONFile(*outputFile, output)
