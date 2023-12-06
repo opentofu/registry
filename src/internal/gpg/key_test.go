@@ -21,7 +21,7 @@ func TestParseKey(t *testing.T) {
 		{
 			name:        "private key should fail",
 			data:        privateKey,
-			expectedErr: stringPtr("bleh"),
+			expectedErr: stringPtr("could not build public key from ascii armor"),
 		},
 	}
 
@@ -30,7 +30,7 @@ func TestParseKey(t *testing.T) {
 			_, err := ParseKey(test.data)
 
 			if test.expectedErr != nil {
-				assert.ErrorContains(t, err, "could not build public key from ascii armor")
+				assert.ErrorContains(t, err, *test.expectedErr)
 			} else {
 				assert.NoError(t, err)
 			}
