@@ -18,7 +18,7 @@ type GHUser struct {
 				EndCursor   githubv4.String
 				HasNextPage githubv4.Boolean
 			}
-		} `graphql:"organizations(first: 99)"` // Adjust the 'first' parameter as needed
+		} `graphql:"organizations(first: 99)"`
 	} `graphql:"user(login: $login)"`
 }
 
@@ -26,7 +26,7 @@ func (c Client) GetUser(username string) (*GHUser, error) {
 	logger := c.log.With("username", username)
 	logger.Debug("GetUser")
 	variables := map[string]interface{}{
-		"login": githubv4.String(username), // Replace with the username you're interested in
+		"login": githubv4.String(username),
 	}
 
 	var user GHUser
