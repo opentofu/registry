@@ -86,3 +86,12 @@ func (m ModuleGenerator) Generate() error {
 
 	return nil
 }
+
+func GenerateModuleListing(destDir string, modules module.List) error {
+	result := make([]string, len(modules))
+	for i, p := range modules {
+		result[i] = fmt.Sprintf("%s/%s", p.Namespace, p.Name)
+	}
+	path := filepath.Join(destDir, "v1", "modules.json")
+	return files.SafeWriteObjectToJSONFile(path, result)
+}

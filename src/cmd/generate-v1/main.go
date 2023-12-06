@@ -51,6 +51,11 @@ func main() {
 		logger.Error(err.Error())
 		os.Exit(1)
 	}
+	err = v1api.GenerateModuleListing(*destinationDir, modules)
+	if err != nil {
+		logger.Error(err.Error())
+		os.Exit(1)
+	}
 
 	providers, err := provider.ListProviders(*providerDataDir, *providerNamespace, logger, ghClient)
 	if err != nil {
@@ -64,6 +69,12 @@ func main() {
 		}
 		return g.Generate()
 	})
+	if err != nil {
+		logger.Error(err.Error())
+		os.Exit(1)
+	}
+
+	err = v1api.GenerateProviderListing(*destinationDir, providers)
 	if err != nil {
 		logger.Error(err.Error())
 		os.Exit(1)

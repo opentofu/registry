@@ -141,6 +141,26 @@ func (p ProviderGenerator) Generate() error {
 	return nil
 }
 
+func GenerateProviderListing(destDir string, providers provider.List) error {
+	result := make([]string, len(provider.ArchivedOverrides)*2+len(providers))
+
+	i := 0
+	namespaces := []string{"hashicorp", "opentofu"}
+	for _, namespace := range namespaces {
+		for override := range provider.ArchivedOverrides {
+			result[i] = strings.Replace(override, "default", namespace, 1)
+			i++
+		}
+	}
+
+	for _, p := range providers {
+		result[i] = fmt.Sprintf("%s/%s", p.Namespace, p.ProviderName)
+		i++
+	}
+	path := filepath.Join(destDir, "v1", "providers.json")
+	return files.SafeWriteObjectToJSONFile(path, result)
+}
+
 func ArchivedOverrides(destDir string, log *slog.Logger) error {
 	re := regexp.MustCompile("(?P<Namespace>.*)/terraform-provider-(?P<Name>.*)")
 	namespaces := []string{"hashicorp", "opentofu"}
