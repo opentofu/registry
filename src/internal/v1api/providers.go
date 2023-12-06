@@ -143,30 +143,34 @@ func (p ProviderGenerator) Generate() error {
 
 func ArchivedOverrides(destDir string, log *slog.Logger) error {
 	re := regexp.MustCompile("(?P<Namespace>.*)/terraform-provider-(?P<Name>.*)")
-	for hashicorp, replacement := range provider.ArchivedOverrides {
-		hMatch := re.FindStringSubmatch(strings.ToLower(hashicorp))
+	namespaces := []string{"hashicorp", "opentofu"}
+
+	for original, replacement := range provider.ArchivedOverrides {
+		oMatch := re.FindStringSubmatch(strings.ToLower(original))
 		rMatch := re.FindStringSubmatch(strings.ToLower(replacement))
-		if hMatch == nil {
-			return fmt.Errorf("invalid hashicorp override: %s!", hMatch)
+		if oMatch == nil {
+			return fmt.Errorf("invalid hashicorp override: %s!", oMatch)
 		}
 		if rMatch == nil {
 			return fmt.Errorf("invalid hashicorp override: %s!", rMatch)
 		}
 
-		hPath := filepath.Join(destDir, "v1", "providers", hMatch[re.SubexpIndex("Namespace")], hMatch[re.SubexpIndex("Name")])
-		rPath := filepath.Join(destDir, "v1", "providers", rMatch[re.SubexpIndex("Namespace")], rMatch[re.SubexpIndex("Name")])
+		for _, namespace := range namespaces {
+			oPath := filepath.Join(destDir, "v1", "providers", namespace, oMatch[re.SubexpIndex("Name")])
+			rPath := filepath.Join(destDir, "v1", "providers", rMatch[re.SubexpIndex("Namespace")], rMatch[re.SubexpIndex("Name")])
 
-		log.Info(fmt.Sprintf("Adding hashicorp override from %s -> %s", rPath, hPath))
+			log.Info(fmt.Sprintf("Adding hashicorp override from %s -> %s", rPath, oPath))
 
-		if _, err := os.Stat(hPath); err == nil {
-			return fmt.Errorf("invalid hashicorp override: %s already exists", hPath)
-		}
-		if _, err := os.Stat(rPath); err != nil {
-			return fmt.Errorf("invalid hashicorp override: %s does not exist", rPath)
-		}
-		err := cp.Copy(rPath, hPath)
-		if err != nil {
-			return err
+			if _, err := os.Stat(oPath); err == nil {
+				return fmt.Errorf("invalid hashicorp override: %s already exists", oPath)
+			}
+			if _, err := os.Stat(rPath); err != nil {
+				return fmt.Errorf("invalid hashicorp override: %s does not exist", rPath)
+			}
+			err := cp.Copy(rPath, oPath)
+			if err != nil {
+				return err
+			}
 		}
 	}
 	return nil
