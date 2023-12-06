@@ -74,7 +74,7 @@ func VerifyGithubUser(client github.Client, username string, orgName string) *ve
 		return verifyStep
 	}
 
-	verifyStep.RunStep(fmt.Sprintf("User is a member of the organization %s", orgName), func() error {
+	s := verifyStep.RunStep(fmt.Sprintf("User is a member of the organization %s", orgName), func() error {
 		// Todo: maybe handle pagination, but in theory I doubt people are in 99+ organizations
 		for _, org := range user.User.Organizations.Nodes {
 			if org.Name == githubv4.String(orgName) {
@@ -85,6 +85,7 @@ func VerifyGithubUser(client github.Client, username string, orgName string) *ve
 		// and how they can publicly display their organization membership
 		return fmt.Errorf("user is not a member of the organization")
 	})
+	s.Remarks = []string{"If this is incorrect, please ensure that your organization membership is public. For more information, see [Github Docs - Publicizing or hiding organization membership](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-your-membership-in-organizations/publicizing-or-hiding-organization-membership)"}
 
 	return verifyStep
 }

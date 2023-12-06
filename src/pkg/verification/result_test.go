@@ -16,7 +16,16 @@ func TestRender(t *testing.T) {
 	s.AddStep("Sub Step 1", StatusSuccess)
 
 	rendered := result.RenderMarkdown()
-	assert.Equal(t, rendered, "## Step 1\n✅ **Success**\n\n## Step 2\n❌ **Failure**\n- Error 1\n- Error 2\n\n## Step 3\n⚠️ **Not Run**\n\n## Step 4\n⚠️ **Skipped**\n### Sub Step 1\n✅ **Success**\n\n")
+	assert.Equal(t, "## Step 1\n✅ **Success**\n\n## Step 2\n❌ **Failure**\n- Error 1\n- Error 2\n\n## Step 3\n⚠️ **Not Run**\n\n## Step 4\n⚠️ **Skipped**\n### Sub Step 1\n✅ **Success**\n\n", rendered)
+}
+
+func TestRender_Remarks(t *testing.T) {
+	result := Result{}
+	s := result.AddStep("Step 1", StatusSuccess)
+	s.Remarks = append(s.Remarks, "Remark 1", "Remark 2")
+
+	rendered := result.RenderMarkdown()
+	assert.Equal(t, "## Step 1\n> [!NOTE]> Remark\n> Remark 1\n> [!NOTE]> Remark\n> Remark 2\n✅ **Success**\n\n", rendered)
 }
 
 func TestDidFail_MainStepFailed(t *testing.T) {
