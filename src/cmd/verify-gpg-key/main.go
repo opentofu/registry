@@ -114,6 +114,11 @@ func VerifyKey(location string) *verification.Step {
 		return nil
 	})
 
+	if key == nil {
+		// The previous step failed.
+		return verifyStep
+	}
+
 	verifyStep.RunStep("Key is not expired", func() error {
 		if key.IsExpired() {
 			return fmt.Errorf("key is expired")
