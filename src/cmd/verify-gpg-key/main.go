@@ -25,7 +25,6 @@ func main() {
 	flag.Parse()
 
 	logger = logger.With(slog.String("github", *username), slog.String("org", *orgName))
-	// TODO: Pass the logger around properly
 	slog.SetDefault(logger)
 	logger.Debug("Verifying GPG key from location", slog.String("location", *keyFile))
 
@@ -70,7 +69,7 @@ func VerifyGithubUser(client github.Client, username string, orgName string) *ve
 
 	if user == nil {
 		// quickly skip the rest of the steps because the first failed
-		verifyStep.AddStep(fmt.Sprintf("User is a member of the organization %s", orgName), "skipped", "User does not exist")
+		verifyStep.AddStep(fmt.Sprintf("User is a member of the organization %s", orgName), verification.StatusSkipped, "User does not exist")
 		return verifyStep
 	}
 
