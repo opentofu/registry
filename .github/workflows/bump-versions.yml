@@ -1,15 +1,21 @@
 name: Bump Provider and Module Versions
 
 on:
-  schedule:
-    - cron: '5 * * * *'
   workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: The environment of the Registry
+        options:
+          - Development
+          - Production
 
 jobs:
   bump-versions:
     runs-on: ubuntu-latest
 
-    environment: Development
+    environment:
+      name: ${{ inputs.environment }}
     permissions:
       contents: write
       actions: write
@@ -32,8 +38,3 @@ jobs:
         with:
           file_pattern: 'modules/**/* providers/**/*'
           commit_user_name: Auto Version Bumper
-
-      - name: Invoke publish workflow
-        uses: benc-uk/workflow-dispatch@v1
-        with:
-          workflow: generate-and-deploy.yml
