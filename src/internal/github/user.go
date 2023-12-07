@@ -2,6 +2,7 @@ package github
 
 import (
 	"fmt"
+	"log/slog"
 
 	"github.com/shurcooL/githubv4"
 )
@@ -32,7 +33,7 @@ func (c Client) GetUser(username string) (*GHUser, error) {
 	var user GHUser
 	err := c.ghClient.Query(c.ctx, &user, variables)
 	if err != nil {
-		logger.Error("unable to fetch user", "error", err)
+		logger.Error("unable to fetch user", slog.Any("err", err))
 		return nil, fmt.Errorf("unable to fetch user: %w", err)
 	}
 
