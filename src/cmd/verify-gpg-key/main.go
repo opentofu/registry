@@ -10,6 +10,7 @@ import (
 	"regexp"
 
 	"github.com/ProtonMail/gopenpgp/v2/crypto"
+	"github.com/opentofu/registry-stable/internal/files"
 	"github.com/opentofu/registry-stable/internal/github"
 	"github.com/opentofu/registry-stable/internal/gpg"
 	"github.com/opentofu/registry-stable/pkg/verification"
@@ -22,6 +23,7 @@ func main() {
 	keyFile := flag.String("key-file", "", "Location of the GPG key to verify")
 	username := flag.String("username", "", "Github username to verify the GPG key against")
 	orgName := flag.String("org", "", "Github organization name to verify the GPG key against")
+	outputFile := flag.String("output", "", "Path to write JSON result to")
 	flag.Parse()
 
 	logger = logger.With(slog.String("github", *username), slog.String("org", *orgName))
@@ -48,6 +50,18 @@ func main() {
 	// TODO: Add verification to ensure that the key has been used to sign providers in this github organization
 
 	fmt.Println(result.RenderMarkdown())
+
+	if *outputFile != "" {
+		jsonErr := files.SafeWriteObjectToJSONFile(*outputFile, result.RenderMarkdown())
+		if jsonErr != nil {
+			// This really should not happen
+			panic(jsonErr)
+		}
+	}
+
+	if result.DidFail() {
+		os.Exit(-1)
+	}
 }
 
 func VerifyGithubUser(client github.Client, username string, orgName string) *verification.Step {
@@ -74,6 +88,10 @@ func VerifyGithubUser(client github.Client, username string, orgName string) *ve
 	}
 
 	s := verifyStep.RunStep(fmt.Sprintf("User is a member of the organization %s", orgName), func() error {
+		if username == orgName {
+			// Adding to user namespace not org namespace
+			return nil
+		}
 		// Todo: maybe handle pagination, but in theory I doubt people are in 99+ organizations
 		for _, org := range user.User.Organizations.Nodes {
 			if org.Name == githubv4.String(orgName) {

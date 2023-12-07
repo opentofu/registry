@@ -1,0 +1,24 @@
+name: Submit new Provider Key
+description: Submit a new OpenTofu Provider Key
+title: "Provider Key: "
+labels: ["provider-key", "submission"]
+body:
+  - type: input
+    id: namespace
+    attributes:
+      label: Provider Namespace
+      description: Path to a public GitHub repository following the pattern {owner}/terraform-provider-{name}, ex. opentofu/terraform-provider-aws
+    validations:
+      required: true
+  - type: textarea
+    id: gpgkey
+    attributes:
+      label: Provider GPG Key
+      description: Armoured public PGP key
+  - type: checkboxes
+    id: dco
+    attributes:
+      label: DCO
+      options:
+        - label: I sign this project's [DCO](https://developercertificate.org/)
+          required: true
