@@ -28,13 +28,23 @@ func buildKey(path string) (*Key, error) {
 
 	asciiArmor := string(data)
 
-	key, err := crypto.NewKeyFromArmored(asciiArmor)
+	key, err := ParseKey(asciiArmor)
 	if err != nil {
-		return nil, fmt.Errorf("could not build public key from ascii armor: %w", err)
+		return nil, fmt.Errorf("could not parse key: %w", err)
 	}
 
 	return &Key{
 		ASCIIArmor: asciiArmor,
 		KeyID:      strings.ToUpper(key.GetHexKeyID()),
 	}, nil
+}
+
+// ParseKey parses a GPG key from ascii armor.
+func ParseKey(data string) (*crypto.Key, error) {
+	key, err := crypto.NewKeyFromArmored(data)
+	if err != nil {
+		return nil, fmt.Errorf("could not build public key from ascii armor: %w", err)
+	}
+
+	return key, nil
 }
