@@ -34,7 +34,19 @@ jobs:
         working-directory: ./src
         run: go run ./cmd/bump-versions
 
+      - name: Get branch
+        run: |
+          if [ "${{ inputs.environment }}" = "Production" ]; then
+            export BRANCH="${{ github.ref }}"
+          elif [ "${{ inputs.environment }}" = "Development" ]; then
+            TIMESTAMP=$(date +%s)
+            export BRANCH="${{ github.ref }}-bump-versions-$TIMESTAMP"
+          fi
+          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           file_pattern: 'modules/**/* providers/**/*'
           commit_user_name: Auto Version Bumper
+          branch: ${{ env.BRANCH }}
+          create_branch: true
