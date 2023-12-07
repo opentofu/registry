@@ -89,7 +89,7 @@ func VerifyGithubUser(client github.Client, username string, orgName string) *ve
 	return verifyStep
 }
 
-var gpgNameEmailRegex = regexp.MustCompile(`\<(.*)\>`)
+var gpgNameEmailRegex = regexp.MustCompile(`.*\<(.*)\>`)
 
 func VerifyKey(location string) *verification.Step {
 	verifyStep := &verification.Step{
@@ -135,7 +135,7 @@ func VerifyKey(location string) *verification.Step {
 		return nil
 	})
 
-	verifyStep.RunStep("Key has a valid identity and email", func() error {
+	verifyStep.RunStep("Key has a valid identity and email. (Email is preferable but optional)", func() error {
 		if key.GetFingerprint() == "" {
 			return fmt.Errorf("key has no fingerprint")
 		}
