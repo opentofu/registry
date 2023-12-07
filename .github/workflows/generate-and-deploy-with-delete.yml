@@ -2,13 +2,20 @@
 name: Generate and Sync Files with Delete
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: The environment of the Registry
+        options:
+          - Development-with-delete
+          - Production-with-delete
 
 jobs:
   generate-and-sync:
     runs-on: ubuntu-latest
-
-    environment: Production-with-delete
+    environment:
+      name: ${{ inputs.environment }}
 
     steps:
       - name: Checkout Repository
