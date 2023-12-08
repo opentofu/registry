@@ -1,5 +1,5 @@
-name: Submit new Provider Key
-description: Submit a new OpenTofu Provider Key
+name: Submit new Provider Signing Key
+description: Submit a new OpenTofu Provider Signing Key
 title: "Provider Key: "
 labels: ["provider-key", "submission"]
 body:
@@ -7,7 +7,7 @@ body:
     id: namespace
     attributes:
       label: Provider Namespace
-      description: Path to a public GitHub repository following the pattern {owner}/terraform-provider-{name}, ex. opentofu/terraform-provider-aws
+      description: Github Username or Organization that contains Providers
     validations:
       required: true
   - type: textarea
