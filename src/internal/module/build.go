@@ -17,6 +17,9 @@ func (m Module) UpdateMetadataFile() error {
 	if err != nil {
 		return err
 	}
+	if meta == nil {
+		return nil
+	}
 
 	return m.WriteMetadata(*meta)
 }
@@ -26,7 +29,8 @@ func (m Module) UpdateMetadataFile() error {
 func (m Module) BuildMetadata() (*Metadata, error) {
 	tags, err := m.getSemverTags()
 	if err != nil {
-		return nil, err
+		m.Logger.Error("Unable to fetch semver tags, skipping", slog.Any("err", err))
+		return nil, nil
 	}
 
 	versions := make([]Version, len(tags))
