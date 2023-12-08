@@ -2,6 +2,7 @@ package provider
 
 import (
 	"fmt"
+	"log/slog"
 	"slices"
 
 	"github.com/opentofu/registry-stable/internal"
@@ -62,6 +63,19 @@ func (p Provider) buildMetadata() (*Metadata, error) {
 
 	// filter the releases to only include those that do not already exist in the metadata
 	newReleases := meta.filterNewReleases(releases)
+
+	if len(newReleases) == 0 {
+		p.Logger.Info("No version bump required, all versions exist")
+		return &meta, nil
+	}
+
+	shouldUpdate, err := p.shouldUpdateMetadataFile()
+	if err != nil {
+		p.Logger.Error("Failed to determine update status, forcing update", slog.Any("err", err))
+	} else if !shouldUpdate {
+		p.Logger.Info("No version bump required, latest versions exist")
+		return &meta, nil
+	}
 
 	type versionResult struct {
 		v   *Version

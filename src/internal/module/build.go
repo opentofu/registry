@@ -13,16 +13,6 @@ import (
 func (m Module) UpdateMetadataFile() error {
 	m.Logger.Info("Beginning version bump process for module", slog.String("module", m.Namespace+"/"+m.Name+"/"+m.TargetSystem))
 
-	shouldUpdate, err := m.shouldUpdateMetadataFile()
-	if err != nil {
-		m.Logger.Error("Failed to determine update status", slog.Any("err", err))
-		return err
-	}
-	if !shouldUpdate {
-		m.Logger.Info("No version bump required")
-		return nil
-	}
-
 	meta, err := m.BuildMetadata()
 	if err != nil {
 		return err
