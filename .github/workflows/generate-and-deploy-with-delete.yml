@@ -8,8 +8,12 @@ on:
         type: choice
         description: The environment of the Registry
         options:
-          - Development-with-delete
-          - Production-with-delete
+          - Development
+          - Production
+      bump-versions-branch:
+        type: string
+        description: The branch with the modules and providers to publish (if not specified will use the workflow's ref)
+        required: false
 
 jobs:
   generate-and-sync:
@@ -20,20 +24,38 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          path: main
+
+      - name: Checkout branch with modules and providers
+        if: inputs.bump-versions-branch != ''
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.bump-versions-branch }}
+          path: providers-and-modules
 
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version-file: './src/go.mod'
+          go-version-file: './main/src/go.mod'
 
       - name: Setup dependencies
         run: sudo apt-get install rclone
 
       - name: Run Generation script
-        working-directory: ./src
-        run: go run ./cmd/generate-v1 --destination ../generated
+        working-directory: ./main/src
+        run: |
+          PATH_PREFIX="../../providers-and-modules"
+          
+          if [ -z "${{ inputs.bump-versions-branch }}" ]; then
+            DATA_DIR_FLAGS=""
+          else
+            DATA_DIR_FLAGS="--module-data $PATH_PREFIX/modules --provider-data $PATH_PREFIX/providers --key-data $PATH_PREFIX/keys"
+          fi
+          
+          go run ./cmd/generate-v1 --destination ../../generated $DATA_DIR_FLAGS
         env:
-           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Sync Data to R2
         run: rclone sync --checkers=512 --transfers=512 --checksum --fast-list ./generated R2:${{ secrets.R2_BUCKET_NAME }}
