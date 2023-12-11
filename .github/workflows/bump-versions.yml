@@ -9,6 +9,11 @@ on:
         options:
           - Development
           - Production
+  workflow_call:
+    inputs:
+      environment:
+        type: string
+        description: The environment of the Registry
 
 jobs:
   bump-versions:
