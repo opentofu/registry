@@ -40,6 +40,7 @@ jobs:
         run: go run ./cmd/bump-versions
 
       - name: Get branch
+        id: get-branch
         run: |
           if [ "${{ inputs.environment }}" = "Production" ]; then
             export BRANCH="${{ github.ref }}"
@@ -55,3 +56,7 @@ jobs:
           commit_user_name: Auto Version Bumper
           branch: ${{ env.BRANCH }}
           create_branch: true
+
+      - name: Print Branch name
+        run: |
+          echo "Providers and modules changes were pushed to branch: ${{ env.BRANCH }}"
