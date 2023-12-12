@@ -30,7 +30,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          path: main
+          path: repo
 
       - name: Checkout branch with modules and providers
         if: inputs.bump-versions-branch != ''
@@ -42,13 +42,13 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version-file: './main/src/go.mod'
+          go-version-file: './repo/src/go.mod'
 
       - name: Setup dependencies
         run: sudo apt-get install rclone
 
       - name: Run Generation script
-        working-directory: ./main/src
+        working-directory: ./repo/src
         run: |
           PATH_PREFIX="../../providers-and-modules"
           
