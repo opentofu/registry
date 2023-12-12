@@ -39,12 +39,26 @@ func (m Module) BuildMetadata() (*Metadata, error) {
 		return nil, err
 	}
 
-	versions := make([]Version, len(tags))
-	for i, t := range tags {
-		versions[i] = Version{Version: t}
+	meta, err := m.ReadMetadata()
+	if err != nil {
+		return nil, err
 	}
 
-	return &Metadata{Versions: versions}, nil
+	// Merge current versions with new versions
+	for _, t := range tags {
+		found := false
+		for _, v := range meta.Versions {
+			if v.Version == t {
+				found = true
+				break
+			}
+		}
+		if !found {
+			meta.Versions = append(meta.Versions, Version{Version: t})
+		}
+	}
+
+	return &meta, nil
 }
 
 func (m Module) getSemverTags() ([]string, error) {
