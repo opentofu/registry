@@ -36,7 +36,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	err = modules.Parallel(20, func(m module.Module) error {
+	err = modules.Parallel(200, func(m module.Module) error {
 		return m.UpdateMetadataFile()
 	})
 	if err != nil {
@@ -49,7 +49,7 @@ func main() {
 		logger.Error("Failed to list providers", slog.Any("err", err))
 		os.Exit(1)
 	}
-	err = providers.Parallel(20, func(p provider.Provider) error {
+	err = providers.Parallel(200, func(p provider.Provider) error {
 		return p.UpdateMetadataFile()
 	})
 	if err != nil {
