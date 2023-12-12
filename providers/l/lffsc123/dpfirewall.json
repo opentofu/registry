@@ -1,6 +1,222 @@
 {
   "versions": [
     {
+      "version": "1.0.90",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.90/terraform-provider-dpfirewall_1.0.90_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.90/terraform-provider-dpfirewall_1.0.90_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-dpfirewall_1.0.90_darwin_amd64.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.90/terraform-provider-dpfirewall_1.0.90_darwin_amd64.zip",
+          "shasum": "edebd17501ae01b2f187e60dc0c1a8aca08a6549e2ee01236de6ee48fceb79d7"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-dpfirewall_1.0.90_darwin_arm64.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.90/terraform-provider-dpfirewall_1.0.90_darwin_arm64.zip",
+          "shasum": "2ce2d1d7d4957b5b0770f34158e2d093cf4753d56218ce634ae2afd8a355eaf7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-dpfirewall_1.0.90_freebsd_386.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.90/terraform-provider-dpfirewall_1.0.90_freebsd_386.zip",
+          "shasum": "a7a91c131223421262f40829dec90088cec7b688d02d7642c9f223c86bb17813"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-dpfirewall_1.0.90_freebsd_amd64.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.90/terraform-provider-dpfirewall_1.0.90_freebsd_amd64.zip",
+          "shasum": "0f87e4bc8292751077d55f49935837a86aee3d223dc373897caf1423f2120944"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-dpfirewall_1.0.90_freebsd_arm.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.90/terraform-provider-dpfirewall_1.0.90_freebsd_arm.zip",
+          "shasum": "0fa0b50554b745b2cc96954bccf48f626c5a2fe95fe8433e4f61f711a823dc06"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-dpfirewall_1.0.90_freebsd_arm64.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.90/terraform-provider-dpfirewall_1.0.90_freebsd_arm64.zip",
+          "shasum": "fc33a8d41208dee92fa0914123b94fec2c650867d5e2e6920ccd0870b0fa3dd8"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-dpfirewall_1.0.90_linux_386.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.90/terraform-provider-dpfirewall_1.0.90_linux_386.zip",
+          "shasum": "d1627684682baeb52a7c8d6e3073a01ce6a4176b1e4408f3691e3265025bf59b"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-dpfirewall_1.0.90_linux_amd64.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.90/terraform-provider-dpfirewall_1.0.90_linux_amd64.zip",
+          "shasum": "12dd172bfc7a9a15750456891f0e751bfe976ce55b58cd674df1e7842e9a7b80"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-dpfirewall_1.0.90_linux_arm.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.90/terraform-provider-dpfirewall_1.0.90_linux_arm.zip",
+          "shasum": "41ce686086fa809a0cdf33d74cb33c40844d1d1ff651d18494f94e2cbf31a5f2"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-dpfirewall_1.0.90_linux_arm64.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.90/terraform-provider-dpfirewall_1.0.90_linux_arm64.zip",
+          "shasum": "0ccd2e7fa98b0d54712b3461bc112c8921b2082c79542920422edb8920869658"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-dpfirewall_1.0.90_windows_386.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.90/terraform-provider-dpfirewall_1.0.90_windows_386.zip",
+          "shasum": "a72072f2ea59505be0cc7ddf4410b52541b3f0d74d5b69a69f3466e4c8bd9f16"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-dpfirewall_1.0.90_windows_amd64.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.90/terraform-provider-dpfirewall_1.0.90_windows_amd64.zip",
+          "shasum": "7cb03884bf4cc561f376ca9f57b3d5be83c574226e4f828d46ee3e329c8d0b2c"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-dpfirewall_1.0.90_windows_arm.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.90/terraform-provider-dpfirewall_1.0.90_windows_arm.zip",
+          "shasum": "859871decc61c83cd1b6c94bce200d530f78b2deddc47bf4fc46c3ebc585c7c1"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-dpfirewall_1.0.90_windows_arm64.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.90/terraform-provider-dpfirewall_1.0.90_windows_arm64.zip",
+          "shasum": "1f6cc155c8be7e7f4a0404d9efbffc446ddbc75b50898d53197cadf3445d3442"
+        }
+      ]
+    },
+    {
+      "version": "1.0.89",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.89/terraform-provider-dpfirewall_1.0.89_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.89/terraform-provider-dpfirewall_1.0.89_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-dpfirewall_1.0.89_darwin_amd64.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.89/terraform-provider-dpfirewall_1.0.89_darwin_amd64.zip",
+          "shasum": "5c19c1fad51a4cd4801dd96d4cf652c215a0a9bf51edb9cc0d4e1330b09d7b47"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-dpfirewall_1.0.89_darwin_arm64.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.89/terraform-provider-dpfirewall_1.0.89_darwin_arm64.zip",
+          "shasum": "15b1b485462c085ca94f396621e48b781c084cac03f14801d097e4d68cd7bd0f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-dpfirewall_1.0.89_freebsd_386.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.89/terraform-provider-dpfirewall_1.0.89_freebsd_386.zip",
+          "shasum": "a28e8ded1750644ab1ba2319185ee428d4ceadfc768d1c85999f4c8280600ade"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-dpfirewall_1.0.89_freebsd_amd64.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.89/terraform-provider-dpfirewall_1.0.89_freebsd_amd64.zip",
+          "shasum": "1844e13756d2a8f2d828d9791b159557a2bb5e8d1292f312bbf94d1d77a0b650"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-dpfirewall_1.0.89_freebsd_arm.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.89/terraform-provider-dpfirewall_1.0.89_freebsd_arm.zip",
+          "shasum": "4d94ce740a1a829001d6474586ca6fb2a3431b9251b189eb3aecbd237c7b830a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-dpfirewall_1.0.89_freebsd_arm64.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.89/terraform-provider-dpfirewall_1.0.89_freebsd_arm64.zip",
+          "shasum": "299ed5881f8c01ca364791c2c467eae3582fd7deb370599fc2b1f27309b728de"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-dpfirewall_1.0.89_linux_386.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.89/terraform-provider-dpfirewall_1.0.89_linux_386.zip",
+          "shasum": "b1e450382592b73e6b3e7bae86d1d8a2b149df83cfd4c2b4079d951538bdb2b4"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-dpfirewall_1.0.89_linux_amd64.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.89/terraform-provider-dpfirewall_1.0.89_linux_amd64.zip",
+          "shasum": "99e45aa3006219fc18c8d3a0db0fa891cad3e01f7b722fdafb45ad5c2195db1a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-dpfirewall_1.0.89_linux_arm.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.89/terraform-provider-dpfirewall_1.0.89_linux_arm.zip",
+          "shasum": "562468a054e51fe7f1b479b8cedbd52a0bc9b12d779995ae68954051e426545c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-dpfirewall_1.0.89_linux_arm64.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.89/terraform-provider-dpfirewall_1.0.89_linux_arm64.zip",
+          "shasum": "5ec687ab42884446b4eb1fe6615d05cc63eaa492328bf32022a56403cbaf3072"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-dpfirewall_1.0.89_windows_386.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.89/terraform-provider-dpfirewall_1.0.89_windows_386.zip",
+          "shasum": "683b12584577ec3879349bded7fd89c50bb0d4cb1d2c310788b24a900c7b9359"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-dpfirewall_1.0.89_windows_amd64.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.89/terraform-provider-dpfirewall_1.0.89_windows_amd64.zip",
+          "shasum": "fd70891e5dd715c02ec1f82ee85b98185947281cfd128e2444eb3425b795ab1e"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-dpfirewall_1.0.89_windows_arm.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.89/terraform-provider-dpfirewall_1.0.89_windows_arm.zip",
+          "shasum": "11d2b2f4bcbb547397708759cdb20a722d08a11bd9474724dcf8e8db88d4bbe4"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-dpfirewall_1.0.89_windows_arm64.zip",
+          "download_url": "https://github.com/lffsc123/terraform-provider-dpfirewall/releases/download/v1.0.89/terraform-provider-dpfirewall_1.0.89_windows_arm64.zip",
+          "shasum": "3ad3ecd076698f057c5d557d2cd9fc669fa46fbd20ffe92233bbb9d3f999e1d9"
+        }
+      ]
+    },
+    {
       "version": "1.0.83",
       "protocols": [
         "6.0"
