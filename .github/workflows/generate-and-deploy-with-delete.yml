@@ -8,12 +8,8 @@ on:
         type: choice
         description: The environment of the Registry
         options:
-          - Development
-          - Production
-      bump-versions-branch:
-        type: string
-        description: The branch with the modules and providers to publish (if not specified will use the workflow's ref)
-        required: false
+          - Development-with-delete
+          - Production-with-delete
 
 jobs:
   generate-and-sync:
@@ -24,36 +20,18 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          path: repo
-
-      - name: Checkout branch with modules and providers
-        if: inputs.bump-versions-branch != ''
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ inputs.bump-versions-branch }}
-          path: providers-and-modules
 
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version-file: './repo/src/go.mod'
+          go-version-file: './src/go.mod'
 
       - name: Setup dependencies
         run: sudo apt-get install rclone
 
       - name: Run Generation script
-        working-directory: ./repo/src
-        run: |
-          PATH_PREFIX="../../providers-and-modules"
-          
-          if [ -z "${{ inputs.bump-versions-branch }}" ]; then
-            DATA_DIR_FLAGS=""
-          else
-            DATA_DIR_FLAGS="--module-data $PATH_PREFIX/modules --provider-data $PATH_PREFIX/providers --key-data $PATH_PREFIX/keys"
-          fi
-          
-          go run ./cmd/generate-v1 --destination ../../generated $DATA_DIR_FLAGS
+        working-directory: ./src
+        run: go run ./cmd/generate-v1 --destination ../generated
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
