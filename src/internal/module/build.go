@@ -58,6 +58,11 @@ func (m Module) BuildMetadata() (*Metadata, error) {
 		}
 	}
 
+	semverSortFunc := func(a, b Version) int {
+		return -semver.Compare(fmt.Sprintf("v%s", internal.TrimTagPrefix(a.Version)), fmt.Sprintf("v%s", internal.TrimTagPrefix(b.Version)))
+	}
+	slices.SortFunc(meta.Versions, semverSortFunc)
+
 	return &meta, nil
 }
 
