@@ -13,19 +13,12 @@ import (
 func (m Module) UpdateMetadataFile() error {
 	m.Logger.Info("Beginning version bump process for module", slog.String("module", m.Namespace+"/"+m.Name+"/"+m.TargetSystem))
 
-	shouldUpdate, err := m.shouldUpdateMetadataFile()
-	if err != nil {
-		m.Logger.Error("Failed to determine update status", slog.Any("err", err))
-		return err
-	}
-	if !shouldUpdate {
-		m.Logger.Info("No version bump required")
-		return nil
-	}
-
 	meta, err := m.BuildMetadata()
 	if err != nil {
 		return err
+	}
+	if meta == nil {
+		return nil
 	}
 
 	return m.WriteMetadata(*meta)
@@ -36,7 +29,8 @@ func (m Module) UpdateMetadataFile() error {
 func (m Module) BuildMetadata() (*Metadata, error) {
 	tags, err := m.getSemverTags()
 	if err != nil {
-		return nil, err
+		m.Logger.Error("Unable to fetch semver tags, skipping", slog.Any("err", err))
+		return nil, nil
 	}
 
 	meta, err := m.ReadMetadata()
