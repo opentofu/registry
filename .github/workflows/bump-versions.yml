@@ -1,15 +1,26 @@
 name: Bump Provider and Module Versions
 
 on:
-  schedule:
-    - cron: '5 * * * *'
   workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: The environment of the Registry
+        options:
+          - Development
+          - Production
+  workflow_call:
+    inputs:
+      environment:
+        type: string
+        description: The environment of the Registry
 
 jobs:
   bump-versions:
     runs-on: ubuntu-latest
 
-    environment: Development
+    environment:
+      name: ${{ inputs.environment }}
     permissions:
       contents: write
       actions: write
@@ -28,12 +39,24 @@ jobs:
         working-directory: ./src
         run: go run ./cmd/bump-versions
 
+      - name: Get branch
+        id: get-branch
+        run: |
+          if [ "${{ inputs.environment }}" = "Production" ]; then
+            export BRANCH="${{ github.ref }}"
+          elif [ "${{ inputs.environment }}" = "Development" ]; then
+            TIMESTAMP=$(date +%s)
+            export BRANCH="${{ github.ref }}-bump-versions-$TIMESTAMP"
+          fi
+          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           file_pattern: 'modules/**/* providers/**/*'
           commit_user_name: Auto Version Bumper
+          branch: ${{ env.BRANCH }}
+          create_branch: true
 
-      - name: Invoke publish workflow
-        uses: benc-uk/workflow-dispatch@v1
-        with:
-          workflow: generate-and-deploy.yml
+      - name: Print Branch name
+        run: |
+          echo "Providers and modules changes were pushed to branch: ${{ env.BRANCH }}"

@@ -1,0 +1,20 @@
+name: Bump Versions and Publish - Prod
+
+on:
+  schedule:
+    - cron: '5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  bump-versions:
+    uses: opentofu/registry/.github/workflows/bump-versions.yml@main
+    secrets: inherit
+    with:
+      environment: "Production"
+
+  publish-versions:
+    needs: bump-versions
+    uses: opentofu/registry/.github/workflows/generate-and-deploy.yml@main
+    secrets: inherit
+    with:
+      environment: "Production"
