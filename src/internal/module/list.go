@@ -1,16 +1,5 @@
 package module
 
-import (
-	"fmt"
-	"log/slog"
-	"os"
-	"path/filepath"
-	"regexp"
-
-	"github.com/opentofu/registry-stable/internal/github"
-	"github.com/opentofu/registry-stable/internal/parallel"
-)
-
 /*
 moduleDirectoryRegex is a regular expression that matches the directory structure of a module file.
   - (?i) makes the match case-insensitive.
@@ -21,6 +10,7 @@ moduleDirectoryRegex is a regular expression that matches the directory structur
   - (?P<TargetSystem>[^/]+) captures the third sequence of non-slash characters. This corresponds to "aws".
   - \.json matches the literal string ".json".
 */
+/*
 var moduleDirectoryRegex = regexp.MustCompile(`(?i)modules/\w/(?P<Namespace>[^/]+?)/(?P<Name>[^/]+?)/(?P<TargetSystem>[^/]+?)\.json`)
 
 func extractModuleDetailsFromPath(path string) *Module {
@@ -98,3 +88,4 @@ func (l List) Parallel(maxConcurrency int, action Action) error {
 	}
 	return nil
 }
+*/

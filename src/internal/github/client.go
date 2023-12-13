@@ -73,6 +73,24 @@ func (c Client) WithLogger(log *slog.Logger) Client {
 	}
 }
 
+func (c Client) Repository(owner, name string) Repository {
+	return Repository{
+		client: Client{
+			ctx:        c.ctx,
+			log:        c.log.With(slog.String("owner", owner), slog.String("name", name)),
+			httpClient: c.httpClient,
+			ghClient:   c.ghClient,
+
+			cliThrottle:   c.cliThrottle,
+			apiThrottle:   c.apiThrottle,
+			assetThrottle: c.assetThrottle,
+			rssThrottle:   c.rssThrottle,
+		},
+		Owner: owner,
+		Name:  name,
+	}
+}
+
 // transport is a http.RoundTripper that makes sure all requests have the
 // correct User-Agent and Authorization headers set.
 type transport struct {

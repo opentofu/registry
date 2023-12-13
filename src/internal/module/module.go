@@ -1,14 +1,9 @@
 package module
 
 import (
-	"encoding/json"
-	"fmt"
 	"log/slog"
-	"os"
-	"path/filepath"
-	"strings"
+	"slices"
 
-	"github.com/opentofu/registry-stable/internal/files"
 	"github.com/opentofu/registry-stable/internal/github"
 )
 
@@ -23,60 +18,47 @@ type Metadata struct {
 	Versions []Version `json:"versions"`
 }
 
+type Identifier struct {
+	Namespace    string // The module namespace
+	Name         string // The module name
+	TargetSystem string // The module target system
+}
+
 // Module represents a single module.
 type Module struct {
-	Namespace    string        // The module namespace
-	Name         string        // The module name
-	TargetSystem string        // The module target system
-	Directory    string        // The root directory that the module lives in
-	Logger       *slog.Logger  // A logger for the module
-	Github       github.Client // A GitHub client for the module
+	Identifier
+	Metadata
+	Repository github.Repository // A GitHub client for the module
+	Log        *slog.Logger      // A logger for the module
 }
 
-// RepositoryURL constructs the URL to the module repository on github.com.
-func (m Module) RepositoryURL() string {
-	return fmt.Sprintf("https://github.com/%s/terraform-%s-%s", m.Namespace, m.TargetSystem, m.Name)
-}
-
-// RSSURL returns the URL of the RSS feed for the repository's tags.
-func (m Module) RSSURL() string {
-	repositoryUrl := m.RepositoryURL()
-	return fmt.Sprintf("%s/tags.atom", repositoryUrl)
-}
-
-// VersionDownloadURL returns the location to download the module from.
-// the file should just contain a link to GitHub to download the tarball, ie:
-// git::https://github.com/terraform-aws-modules/terraform-aws-iam?ref=v5.30.0
-func (m Module) VersionDownloadURL(version Version) string {
-	return fmt.Sprintf("git::%s?ref=%s", m.RepositoryURL(), version.Version)
-}
-
-// MetadataPath returns the path to the metadata file for the module.
-func (m Module) MetadataPath() string {
-	return filepath.Join(m.Directory, strings.ToLower(m.Namespace[0:1]), m.Namespace, m.Name, m.TargetSystem+".json")
-}
-
-// ReadMetadata reads the metadata file for the module.
-func (m Module) ReadMetadata() (Metadata, error) {
-	var metadata Metadata
-
-	path := m.MetadataPath()
-
-	metadataFile, err := os.ReadFile(path)
+func (m *Module) UpdateMetadata() error {
+	tags, err := m.Repository.ListTags()
 	if err != nil {
-		return metadata, fmt.Errorf("failed to open metadata file: %w", err)
+		// TODO make this a custom error that the caller can handle
+		m.Log.Error("Unable to fetch semver tags, skipping", slog.Any("err", err))
+		return nil
 	}
 
-	err = json.Unmarshal(metadataFile, &metadata)
-	if err != nil {
-		return metadata, fmt.Errorf("failed to unmarshal metadata file: %w", err)
+	tags = tags.FilterSemver()
+
+	// Merge current versions with new versions
+	for _, t := range tags {
+		found := false
+		for _, v := range m.Metadata.Versions {
+			if v.Version == t {
+				found = true
+				break
+			}
+		}
+		if !found {
+			m.Metadata.Versions = append(m.Metadata.Versions, Version{Version: t})
+		}
 	}
 
-	return metadata, nil
-}
+	slices.SortFunc(m.Metadata.Versions, func(a, b Version) int {
+		return github.SemverTagSort(a.Version, b.Version)
+	})
 
-// WriteMetadata writes the metadata to a file.
-func (m Module) WriteMetadata(meta Metadata) error {
-	path := m.MetadataPath()
-	return files.SafeWriteObjectToJSONFile(path, meta)
+	return nil
 }

@@ -8,8 +8,8 @@ import (
 	"strings"
 )
 
-func parseTagsFromStdout(lines []string) ([]string, error) {
-	tags := make([]string, 0, len(lines))
+func parseTagsFromStdout(lines []string) (Tags, error) {
+	tags := make(Tags, 0, len(lines))
 
 	for _, line := range lines {
 		if !strings.Contains(line, "refs/tags/") {
@@ -38,7 +38,7 @@ func parseTagsFromStdout(lines []string) ([]string, error) {
 }
 
 // GetTags lists the tags of the remote repository and returns the refs/tags/ found
-func (c Client) GetTags(repositoryUrl string) ([]string, error) {
+func (c Client) GetTags(repositoryUrl string) (Tags, error) {
 	done := c.cliThrottle()
 	defer done()
 

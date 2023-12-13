@@ -1,14 +1,6 @@
 package module
 
-import (
-	"fmt"
-	"log/slog"
-	"slices"
-
-	"github.com/opentofu/registry-stable/internal"
-
-	"golang.org/x/mod/semver"
-)
+/*
 
 func (m Module) UpdateMetadataFile() error {
 	m.Logger.Info("Beginning version bump process for module", slog.String("module", m.Namespace+"/"+m.Name+"/"+m.TargetSystem))
@@ -81,3 +73,4 @@ func (m Module) getSemverTags() ([]string, error) {
 
 	return semverTags, nil
 }
+*/
