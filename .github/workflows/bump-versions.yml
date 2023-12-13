@@ -53,9 +53,13 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           file_pattern: 'modules/**/* providers/**/*'
-          commit_user_name: Auto Version Bumper
-          branch: ${{ env.BRANCH }}
+
+          commit_author: OpenTofu Core Development Team <core@opentofu.org>
+          commit_user_name: OpenTofu Core Development Team
+          commit_message: "Automated bump of versions for providers and modules"
+
           create_branch: true
+          branch: ${{ env.BRANCH }}
 
       - name: Print Branch name
         run: |
