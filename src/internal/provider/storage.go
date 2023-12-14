@@ -42,12 +42,14 @@ func NewStorage(directory string, log *slog.Logger, client github.Client) Storag
 }
 
 func (s Storage) Create(id Identifier) Provider {
+	log := s.Log.With(slog.Group("provider",
+		slog.String("namespace", id.Namespace),
+		slog.String("name", id.ProviderName),
+	))
 	return Provider{
 		Identifier: id,
-		Log: s.Log.With(
-			slog.Group("provider", slog.String("namespace", id.Namespace), slog.String("name", id.ProviderName)),
-		),
-		Repository: s.Github.Repository(id.Namespace, fmt.Sprintf("terraform-provider-%s", id.ProviderName)),
+		Log:        log,
+		Repository: s.Github.Repository(id.Namespace, fmt.Sprintf("terraform-provider-%s", id.ProviderName), log),
 	}
 }
 

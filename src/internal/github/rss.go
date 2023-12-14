@@ -8,17 +8,21 @@ import (
 	"github.com/mmcdole/gofeed"
 )
 
-// GetTagsFromRSS gets all tags found in the RSS feed of a GitHub releases page
+func (r Repository) GetLatestReleases() (Tags, error) {
+	return r.GetTagsFromRSS("/releases.atom")
+}
+
+// GetTagsFromRSS gets all tags found in the RSS feed of a GitHub  page
 // Tags are sorted by descending creation date
-func (c Client) GetTagsFromRSS(releasesRSSURL string) (Tags, error) {
-	feed, err := c.getReleaseRSSFeed(releasesRSSURL)
+func (r Repository) GetTagsFromRSS(path string) (Tags, error) {
+	feed, err := r.getRSSFeed(r.URL() + path)
 	if err != nil {
 		return nil, err
 	}
 
 	var tags = make(Tags, 0)
 	for _, item := range feed.Items {
-		tag := c.extractTag(item)
+		tag := r.extractTag(item)
 		if tag != nil {
 			tags = append(tags, *tag)
 		}
@@ -30,34 +34,34 @@ func (c Client) GetTagsFromRSS(releasesRSSURL string) (Tags, error) {
 // tagPattern is used in extractTag to extract the tag from the RSS item
 var tagPattern = regexp.MustCompile(`.*/(?P<Version>[a-zA-Z0-9.\-_+]+)$`)
 
-func (c Client) extractTag(item *gofeed.Item) *string {
+func (r Repository) extractTag(item *gofeed.Item) *string {
 	matches := tagPattern.FindStringSubmatch(item.GUID)
 
 	if matches == nil {
-		c.log.Warn(fmt.Sprintf("Could not parse RSS item %s", item.Link))
+		r.log.Warn(fmt.Sprintf("Could not parse RSS item %s", item.Link))
 		return nil
 	}
 
 	return &matches[tagPattern.SubexpIndex("Version")]
 }
 
-func (c Client) getReleaseRSSFeed(releasesRSSURL string) (*gofeed.Feed, error) {
-	done := c.rssThrottle()
+func (r Repository) getRSSFeed(RSSURL string) (*gofeed.Feed, error) {
+	done := r.client.rssThrottle()
 	defer done()
 
-	resp, err := c.httpClient.Get(releasesRSSURL)
+	resp, err := r.client.httpClient.Get(RSSURL)
 	if err != nil {
-		return nil, fmt.Errorf("%s: %w", releasesRSSURL, err)
+		return nil, fmt.Errorf("%s: %w", RSSURL, err)
 	}
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("%s got error %d", releasesRSSURL, resp.StatusCode)
+		return nil, fmt.Errorf("%s got error %d", RSSURL, resp.StatusCode)
 	}
 
 	feed, err := gofeed.NewParser().Parse(resp.Body)
 	if err != nil {
-		return nil, fmt.Errorf("unable to parse rss feed, %s: %w", releasesRSSURL, err)
+		return nil, fmt.Errorf("unable to parse rss feed, %s: %w", RSSURL, err)
 	}
 
 	return feed, nil

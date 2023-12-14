@@ -31,7 +31,6 @@ type Client struct {
 	ghClient   *githubv4.Client
 
 	cliThrottle   Throttle
-	apiThrottle   Throttle
 	assetThrottle Throttle
 	rssThrottle   Throttle
 }
@@ -46,43 +45,20 @@ func NewClient(ctx context.Context, log *slog.Logger, token string) Client {
 		ghClient:   githubv4.NewClient(httpClient),
 
 		cliThrottle:   NewThrottle(ctx, time.Second/60, 60),
-		apiThrottle:   NewThrottle(ctx, time.Second, 3),
 		assetThrottle: NewThrottle(ctx, time.Second/60, 30),
 		rssThrottle:   NewThrottle(ctx, time.Second/30, 30),
 	}
-	/* TODO
-	retryClient := retryablehttp.NewClient()
-	retryClient.RetryMax = 10
-	retryClient.Logger = nil
-	retryClient.HTTPClient = getGithubOauth2Client(token)
-	*/
 }
 
-// WithLogger returns a new Client with the given logger.
-func (c Client) WithLogger(log *slog.Logger) Client {
-	return Client{
-		ctx:        c.ctx,
-		log:        log.WithGroup("github"),
-		httpClient: c.httpClient,
-		ghClient:   c.ghClient,
-
-		cliThrottle:   c.cliThrottle,
-		apiThrottle:   c.apiThrottle,
-		assetThrottle: c.assetThrottle,
-		rssThrottle:   c.rssThrottle,
-	}
-}
-
-func (c Client) Repository(owner, name string) Repository {
+func (c Client) Repository(owner, name string, log *slog.Logger) Repository {
 	return Repository{
 		client: Client{
 			ctx:        c.ctx,
-			log:        c.log.With(slog.String("owner", owner), slog.String("name", name)),
+			log:        c.log.With(slog.Group("github", slog.String("owner", owner), slog.String("name", name))),
 			httpClient: c.httpClient,
 			ghClient:   c.ghClient,
 
 			cliThrottle:   c.cliThrottle,
-			apiThrottle:   c.apiThrottle,
 			assetThrottle: c.assetThrottle,
 			rssThrottle:   c.rssThrottle,
 		},

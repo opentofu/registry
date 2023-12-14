@@ -37,12 +37,13 @@ func parseTagsFromStdout(lines []string) (Tags, error) {
 	return tags, nil
 }
 
-// GetTags lists the tags of the remote repository and returns the refs/tags/ found
-func (c Client) GetTags(repositoryUrl string) (Tags, error) {
-	done := c.cliThrottle()
+// ListTags lists the tags of the remote repository and returns the refs/tags/ found
+func (r Repository) ListTags() (Tags, error) {
+	done := r.client.cliThrottle()
 	defer done()
 
-	c.log.Info("Getting tags for repository", slog.String("repository", repositoryUrl))
+	repositoryUrl := r.URL()
+	r.log.Info("Getting tags for repository", slog.String("repository", repositoryUrl))
 
 	var buf bytes.Buffer
 	var bufErr bytes.Buffer
@@ -59,6 +60,6 @@ func (c Client) GetTags(repositoryUrl string) (Tags, error) {
 		return nil, fmt.Errorf("could not parse tags for %s: %w", repositoryUrl, err)
 	}
 
-	c.log.Info("Found tags for repository", slog.String("repository", repositoryUrl), slog.Int("count", len(tags)))
+	r.log.Info("Found tags for repository", slog.String("repository", repositoryUrl), slog.Int("count", len(tags)))
 	return tags, nil
 }
