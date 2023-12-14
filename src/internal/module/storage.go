@@ -8,6 +8,7 @@ import (
 
 	"github.com/opentofu/registry-stable/internal/base"
 	"github.com/opentofu/registry-stable/internal/github"
+	"github.com/opentofu/registry-stable/internal/parallel"
 	"github.com/opentofu/registry-stable/internal/re"
 )
 
@@ -60,12 +61,14 @@ func (s Storage) Save(mod Module) error {
 	return s.FS.WriteJSONInto(relative_path(mod.Identifier), mod.Metadata)
 }
 
-func (s Storage) List() ([]Identifier, error) {
+type Identifiers []Identifier
+
+func (s Storage) List() (Identifiers, error) {
 	paths, err := s.FS.List()
 	if err != nil {
 		return nil, err
 	}
-	ids := make([]Identifier, 0, len(paths))
+	ids := make(Identifiers, 0, len(paths))
 	for _, path := range paths {
 		match := moduleDirectoryMatcher.Match(path)
 		if match == nil {
@@ -80,4 +83,15 @@ func (s Storage) List() ([]Identifier, error) {
 	}
 
 	return ids, nil
+}
+
+func (l Identifiers) ParallelForEach(action func(Identifier) error) []error {
+	eg := make(parallel.ErrorGroup, 0)
+	for _, t := range l {
+		t := t
+		eg = append(eg, func() error {
+			return action(t)
+		})
+	}
+	return eg.Errors()
 }

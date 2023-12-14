@@ -33,7 +33,7 @@ func (fs FileSystem) List() ([]string, error) {
 	paths := make([]string, 0)
 	err := filepath.Walk(fs.Directory, func(path string, info os.FileInfo, err error) error {
 		paths = append(paths, path)
-		return nil
+		return err
 	})
 	return paths, err
 }

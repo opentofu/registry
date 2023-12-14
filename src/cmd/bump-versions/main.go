@@ -31,13 +31,13 @@ func main() {
 	ghClient := github.NewClient(ctx, logger, token)
 
 	modStorage := module.NewStorage(*moduleDataDir, logger, ghClient)
-	modIds, err := modStorage.List()
+	modules, err := modStorage.List()
 	if err != nil {
 		logger.Error("Failed to list modules", slog.Any("err", err))
 		os.Exit(1)
 	}
 
-	errs := ForEachModuleInParallel(modIds, func(id module.Identifier) error {
+	errs := modules.ParallelForEach(func(id module.Identifier) error {
 		if *moduleNamespace != "" && *moduleNamespace != id.Namespace {
 			return nil
 		}
@@ -62,8 +62,8 @@ func main() {
 	}
 
 	provStorage := provider.NewStorage(*providerDataDir, logger, ghClient)
-	provIds, err := provStorage.List()
-	errs = ForEachProviderInParallel(provIds, func(id provider.Identifier) error {
+	providers, err := provStorage.List()
+	errs = providers.ParallelForEach(func(id provider.Identifier) error {
 		if *providerNamespace != "" && *providerNamespace != id.Namespace {
 			return nil
 		}
@@ -87,42 +87,4 @@ func main() {
 	}
 
 	logger.Info("Completed version bump process for modules and providers")
-}
-
-func ForEachModuleInParallel(modIds []module.Identifier, fn func(module.Identifier) error) []error {
-	errChan := make(chan error, len(modIds))
-	for _, id := range modIds {
-		id := id
-		go func() {
-			errChan <- fn(id)
-		}()
-	}
-
-	errs := make([]error, 0)
-	for range modIds {
-		err := <-errChan
-		if err != nil {
-			errs = append(errs, err)
-		}
-	}
-	return errs
-}
-
-func ForEachProviderInParallel(provIds []provider.Identifier, fn func(provider.Identifier) error) []error {
-	errChan := make(chan error, len(provIds))
-	for _, id := range provIds {
-		id := id
-		go func() {
-			errChan <- fn(id)
-		}()
-	}
-
-	errs := make([]error, 0)
-	for range provIds {
-		err := <-errChan
-		if err != nil {
-			errs = append(errs, err)
-		}
-	}
-	return errs
 }
