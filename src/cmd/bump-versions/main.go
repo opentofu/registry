@@ -16,7 +16,7 @@ func main() {
 	logger.Info("Starting version bump process for modules and providers")
 
 	moduleDataDir := flag.String("module-data", "../modules", "Directory containing the module data")
-	//moduleNamespace := flag.String("module-namespace", "", "Which module namespace to limit the command to")
+	moduleNamespace := flag.String("module-namespace", "", "Which module namespace to limit the command to")
 	providerDataDir := flag.String("provider-data", "../providers", "Directory containing the provider data")
 	providerNamespace := flag.String("provider-namespace", "", "Which provider namespace to limit the command to")
 
@@ -38,6 +38,10 @@ func main() {
 	}
 
 	errs := ForEachModuleInParallel(modIds, func(id module.Identifier) error {
+		if *moduleNamespace != "" && *moduleNamespace != id.Namespace {
+			return nil
+		}
+
 		m, err := modStorage.Load(id)
 		if err != nil {
 			return err
@@ -57,16 +61,28 @@ func main() {
 		os.Exit(1)
 	}
 
-	providers, err := provider.ListProviders(*providerDataDir, *providerNamespace, logger, ghClient)
-	if err != nil {
-		logger.Error("Failed to list providers", slog.Any("err", err))
-		os.Exit(1)
-	}
-	err = providers.Parallel(200, func(p provider.Provider) error {
-		return p.UpdateMetadataFile()
+	provStorage := provider.NewStorage(*providerDataDir, logger, ghClient)
+	provIds, err := provStorage.List()
+	errs = ForEachProviderInParallel(provIds, func(id provider.Identifier) error {
+		if *providerNamespace != "" && *providerNamespace != id.Namespace {
+			return nil
+		}
+
+		p, err := provStorage.Load(id)
+		if err != nil {
+			return err
+		}
+		err = p.UpdateMetadata()
+		if err != nil {
+			return err
+		}
+		return provStorage.Save(p)
 	})
-	if err != nil {
-		logger.Error(err.Error())
+	if len(errs) != 0 {
+		logger.Error("Errors occured while processing providers")
+		for _, err := range errs {
+			logger.Error(err.Error())
+		}
 		os.Exit(1)
 	}
 
@@ -84,6 +100,25 @@ func ForEachModuleInParallel(modIds []module.Identifier, fn func(module.Identifi
 
 	errs := make([]error, 0)
 	for range modIds {
+		err := <-errChan
+		if err != nil {
+			errs = append(errs, err)
+		}
+	}
+	return errs
+}
+
+func ForEachProviderInParallel(provIds []provider.Identifier, fn func(provider.Identifier) error) []error {
+	errChan := make(chan error, len(provIds))
+	for _, id := range provIds {
+		id := id
+		go func() {
+			errChan <- fn(id)
+		}()
+	}
+
+	errs := make([]error, 0)
+	for range provIds {
 		err := <-errChan
 		if err != nil {
 			errs = append(errs, err)

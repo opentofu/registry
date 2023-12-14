@@ -45,18 +45,18 @@ func (m *Module) UpdateMetadata() error {
 	// Merge current versions with new versions
 	for _, t := range tags {
 		found := false
-		for _, v := range m.Metadata.Versions {
+		for _, v := range m.Versions {
 			if v.Version == t {
 				found = true
 				break
 			}
 		}
 		if !found {
-			m.Metadata.Versions = append(m.Metadata.Versions, Version{Version: t})
+			m.Versions = append(m.Versions, Version{Version: t})
 		}
 	}
 
-	slices.SortFunc(m.Metadata.Versions, func(a, b Version) int {
+	slices.SortFunc(m.Versions, func(a, b Version) int {
 		return github.SemverTagSort(a.Version, b.Version)
 	})
 

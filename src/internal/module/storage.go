@@ -11,6 +11,16 @@ import (
 	"github.com/opentofu/registry-stable/internal/re"
 )
 
+/*
+moduleDirectoryRegex is a regular expression that matches the directory structure of a module file.
+  - (?i) makes the match case-insensitive.
+  - modules/ matches the literal string "modules/".
+  - \w matches a single word character. This corresponds to the first letter of the namespace.
+  - (?P<Namespace>[^/]+) captures a sequence of one or more characters that are not a slash. This corresponds to "terraform-aws-modules".
+  - (?P<Name>[^/]+) captures another sequence of non-slash characters. This corresponds to "lambda".
+  - (?P<TargetSystem>[^/]+) captures the third sequence of non-slash characters. This corresponds to "aws".
+  - \.json matches the literal string ".json".
+*/
 var moduleDirectoryMatcher = re.MustCompile(`(?i)modules/\w/(?P<Namespace>[^/]+?)/(?P<Name>[^/]+?)/(?P<TargetSystem>[^/]+?)\.json`)
 
 func relative_path(id Identifier) string {
@@ -34,7 +44,9 @@ func NewStorage(directory string, log *slog.Logger, client github.Client) Storag
 func (s Storage) Create(id Identifier) Module {
 	return Module{
 		Identifier: id,
-		Log:        s.Log,
+		Log: s.Log.With(
+			slog.Group("module", slog.String("namespace", id.Namespace), slog.String("name", id.Name), slog.String("targetsystem", id.TargetSystem)),
+		),
 		Repository: s.Github.Repository(id.Namespace, fmt.Sprintf("terraform-%s-%s", id.TargetSystem, id.Name)),
 	}
 }

@@ -1,16 +1,5 @@
 package provider
 
-import (
-	"fmt"
-	"log/slog"
-	"os"
-	"path/filepath"
-	"regexp"
-
-	"github.com/opentofu/registry-stable/internal/github"
-	"github.com/opentofu/registry-stable/internal/parallel"
-)
-
 /*
 providerDirectoryRegex is a regular expression that matches the directory structure of a provider file.
   - (?i) makes the match case-insensitive.
@@ -20,6 +9,7 @@ providerDirectoryRegex is a regular expression that matches the directory struct
   - (?P<ProviderName>[^/]+) captures another sequence of non-slash characters. This corresponds to "oci".
   - \.json matches the literal string ".json".
 */
+/*
 var providerDirectoryRegex = regexp.MustCompile(`(?i)providers/\w/(?P<Namespace>[^/]+?)/(?P<ProviderName>[^/]+?)\.json`)
 
 func extractProviderDetailsFromPath(path string) *Provider {
@@ -95,4 +85,4 @@ func (providers List) Parallel(maxConcurrency int, action Action) error {
 		return fmt.Errorf("encountered %d errors processing %d providers", len(errs), len(providers))
 	}
 	return nil
-}
+}*/

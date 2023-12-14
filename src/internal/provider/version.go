@@ -5,74 +5,52 @@ import (
 	"log/slog"
 
 	"github.com/opentofu/registry-stable/internal"
-)
-
-var (
-	// From OpenTOFU go-releaser
-
-	goos = []string{
-		"darwin",
-		"freebsd",
-		"linux",
-		"windows",
-		"openbsd",
-		"solaris",
-	}
-
-	goarch = []string{
-		"386",
-		"amd64",
-		"arm",
-		"arm64",
-	}
+	"github.com/opentofu/registry-stable/internal/re"
 )
 
 // VersionFromTag fetches information about an individual release based on the GitHub release name
 func (p Provider) VersionFromTag(release string) (*Version, error) {
 	version := internal.TrimTagPrefix(release)
-	artifactPrefix := fmt.Sprintf("%s_%s_", p.RepositoryName(), version)
 
-	logger := p.Logger.With(slog.String("release", release))
+	logger := p.Log.With(slog.String("release", release))
 
-	urlPrefix := fmt.Sprintf(p.RepositoryURL()+"/releases/download/%s/%s", release, artifactPrefix)
+	versionAssetPrefix := fmt.Sprintf("%s_%s_", p.Repository.Name, version)
+	shasumName := versionAssetPrefix + "SHA256SUMS"
+	shasumSig := versionAssetPrefix + "SHA256SUMS.sig"
 
 	v := Version{
 		Version:             version,
-		SHASumsURL:          urlPrefix + "SHA256SUMS",
-		SHASumsSignatureURL: urlPrefix + "SHA256SUMS.sig",
+		SHASumsURL:          p.Repository.ReleaseAssetURL(release, shasumName),
+		SHASumsSignatureURL: p.Repository.ReleaseAssetURL(release, shasumSig),
 	}
 
-	checksums, err := p.GetSHASums(v.SHASumsURL)
+	checkdata, err := p.Repository.GetReleaseAsset(release, shasumName)
 	if err != nil {
 		return nil, err
 	}
-	if checksums == nil {
+	if checkdata == nil {
 		logger.Warn("checksums not found in release, skipping...")
 		return nil, nil
 	}
 
-	var ok bool
-	for _, os := range goos {
-		for _, arch := range goarch {
-			target := Target{
-				OS:          os,
-				Arch:        arch,
-				Filename:    fmt.Sprintf("%s%s_%s.zip", artifactPrefix, os, arch),
-				DownloadURL: fmt.Sprintf("%s%s_%s.zip", urlPrefix, os, arch),
-			}
-			target.SHASum, ok = checksums[target.Filename]
-			if ok {
-				v.Targets = append(v.Targets, target)
-				continue
-			}
-			// now try and pull it with the v in the version
-			target.Filename = fmt.Sprintf("%s_v%s_%s_%s.zip", p.RepositoryName(), version, os, arch)
-			target.DownloadURL = fmt.Sprintf("%s/releases/download/v%s/%s", p.RepositoryURL(), version, target.Filename)
-			target.SHASum, ok = checksums[target.Filename]
-			if ok {
-				v.Targets = append(v.Targets, target)
-			}
+	checksums := shaFileToMap(checkdata)
+
+	// repo_v?version_(os)_(arch).zip
+	releaseAssetMatcher := re.MustCompile(fmt.Sprintf("%s_v*%s_(?P<OS>\\w+)_(?P<ARCH>\\w+).zip", p.Repository.Name, version))
+
+	for filename, sum := range checksums {
+		match := releaseAssetMatcher.Match(filename)
+		if match == nil {
+			logger.Warn("Invalid file in release", slog.String("asset", filename))
+			continue
 		}
+		v.Targets = append(v.Targets, Target{
+			OS:          match["OS"],
+			Arch:        match["ARCH"],
+			Filename:    filename,
+			SHASum:      sum,
+			DownloadURL: p.Repository.ReleaseAssetURL(release, filename),
+		})
 	}
 
 	if len(v.Targets) == 0 {
@@ -80,12 +58,22 @@ func (p Provider) VersionFromTag(release string) (*Version, error) {
 		return nil, nil
 	}
 
-	v.Protocols, err = p.GetProtocols(urlPrefix + "manifest.json")
+	manifestData, err := p.Repository.GetReleaseAsset(release, versionAssetPrefix+"manifest.json")
 	if err != nil {
 		return nil, err
 	}
-	if v.Protocols == nil {
-		logger.Warn("Could not find manifest file, using default protocols")
+	if manifestData != nil {
+		manifest, err := parseManifestContents(manifestData)
+		if err != nil {
+			logger.Warn("Manifest file invalid, ignoring...", slog.Any("err", err))
+		} else {
+			v.Protocols = manifest.Metadata.ProtocolVersions
+		}
+	}
+
+	if len(v.Protocols) == 0 {
+		logger.Warn("Could not find protocols in manifest file, using default protocols")
+		// TODO move this to the generator
 		v.Protocols = []string{"5.0"}
 	}
 

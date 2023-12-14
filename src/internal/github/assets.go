@@ -22,6 +22,7 @@ func (c Client) DownloadAssetContents(downloadURL string) ([]byte, error) {
 	defer resp.Body.Close()
 
 	if resp.StatusCode == http.StatusNotFound {
+		// TODO specific error instead of nil
 		logger.Warn("asset not found")
 		return nil, nil
 	}

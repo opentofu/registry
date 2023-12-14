@@ -10,13 +10,13 @@ import (
 
 // GetTagsFromRSS gets all tags found in the RSS feed of a GitHub releases page
 // Tags are sorted by descending creation date
-func (c Client) GetTagsFromRSS(releasesRSSURL string) ([]string, error) {
+func (c Client) GetTagsFromRSS(releasesRSSURL string) (Tags, error) {
 	feed, err := c.getReleaseRSSFeed(releasesRSSURL)
 	if err != nil {
 		return nil, err
 	}
 
-	var tags = make([]string, 0)
+	var tags = make(Tags, 0)
 	for _, item := range feed.Items {
 		tag := c.extractTag(item)
 		if tag != nil {
