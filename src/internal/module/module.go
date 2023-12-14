@@ -1,6 +1,7 @@
 package module
 
 import (
+	"fmt"
 	"log/slog"
 	"slices"
 
@@ -22,6 +23,10 @@ type Identifier struct {
 	Namespace    string // The module namespace
 	Name         string // The module name
 	TargetSystem string // The module target system
+}
+
+func (id Identifier) String() string {
+	return fmt.Sprintf("%s/%s/%s", id.Namespace, id.Name, id.TargetSystem)
 }
 
 // Module represents a single module.

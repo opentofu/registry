@@ -55,6 +55,10 @@ func (s Storage) Create(id Identifier) Module {
 	}
 }
 
+func (s Storage) Path(id Identifier) string {
+	return filepath.Join(s.FS.Directory, relative_path(id))
+}
+
 func (s Storage) Load(id Identifier) (Module, error) {
 	mod := s.Create(id)
 	err := s.FS.ReadJSONFrom(relative_path(id), &mod.Metadata)

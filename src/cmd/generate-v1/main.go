@@ -35,37 +35,53 @@ func main() {
 		os.Exit(1)
 	}
 
-	modules, err := module.ListModules(*moduleDataDir, *moduleNamespace, logger, ghClient)
+	modStorage := module.NewStorage(*moduleDataDir, logger, ghClient)
+	modules, err := modStorage.List()
 	if err != nil {
 		logger.Error("Failed to list modules", slog.Any("err", err))
 		os.Exit(1)
 	}
-	err = modules.Parallel(20, func(m module.Module) error {
-		g, err := v1api.NewModuleGenerator(m, *destinationDir)
+	errs := modules.ParallelForEach(func(id module.Identifier) error {
+		if *moduleNamespace != "" && *moduleNamespace != id.Namespace {
+			return nil
+		}
+
+		m, err := modStorage.Load(id)
 		if err != nil {
 			return err
 		}
-		return g.Generate()
+
+		return v1api.NewModuleGenerator(m, *destinationDir).Generate()
 	})
 	if err != nil {
-		logger.Error(err.Error())
+		logger.Error("Errors occured while processing modules")
+		for _, err := range errs {
+			logger.Error(err.Error())
+		}
 		os.Exit(1)
 	}
 
-	providers, err := provider.ListProviders(*providerDataDir, *providerNamespace, logger, ghClient)
+	provStorage := provider.NewStorage(*providerDataDir, logger, ghClient)
+	providers, err := provStorage.List()
 	if err != nil {
 		logger.Error("Failed to list providers", slog.Any("err", err))
 		os.Exit(1)
 	}
-	err = providers.Parallel(20, func(p provider.Provider) error {
-		g, err := v1api.NewProviderGenerator(p, *destinationDir, *keyDataDir)
+	errs = providers.ParallelForEach(func(id provider.Identifier) error {
+		if *providerNamespace != "" && *providerNamespace != id.Namespace {
+			return nil
+		}
+		p, err := provStorage.Load(id)
 		if err != nil {
 			return err
 		}
-		return g.Generate()
+		return v1api.NewProviderGenerator(p, *destinationDir, *keyDataDir).Generate()
 	})
-	if err != nil {
-		logger.Error(err.Error())
+	if len(errs) != 0 {
+		logger.Error("Errors occured while processing providers")
+		for _, err := range errs {
+			logger.Error(err.Error())
+		}
 		os.Exit(1)
 	}
 

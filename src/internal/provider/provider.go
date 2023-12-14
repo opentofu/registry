@@ -1,6 +1,7 @@
 package provider
 
 import (
+	"fmt"
 	"log/slog"
 
 	"github.com/opentofu/registry-stable/internal/github"
@@ -33,6 +34,10 @@ type Target struct {
 type Identifier struct {
 	ProviderName string // The provider name
 	Namespace    string // The provider namespace
+}
+
+func (id Identifier) String() string {
+	return fmt.Sprintf("%s/%s", id.Namespace, id.ProviderName)
 }
 
 // Provider contains information about a provider.

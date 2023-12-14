@@ -40,6 +40,8 @@ func main() {
 	}
 	ghClient := github.NewClient(ctx, logger, token)
 
+	storage := provider.NewStorage(*providerDataDir, logger, ghClient)
+
 	output := Output{}
 
 	err = func() error {
@@ -50,50 +52,43 @@ func main() {
 			return fmt.Errorf("Invalid repository name: %s", *repository)
 		}
 
-		submitted := provider.Provider{
+		submitted := storage.Create(provider.Identifier{
 			Namespace:    match[re.SubexpIndex("Namespace")],
 			ProviderName: match[re.SubexpIndex("Name")],
-			Directory:    *providerDataDir,
-			Logger:       logger,
-			Github:       ghClient,
-		}
+		})
 
-		_, err = regaddr.ParseProviderSource(fmt.Sprintf("%s/%s", submitted.Namespace, submitted.ProviderName))
+		_, err = regaddr.ParseProviderSource(submitted.String())
 		if err != nil {
 			return err
 		}
 
-		providers, err := provider.ListProviders(*providerDataDir, "", logger, ghClient)
+		providers, err := storage.List()
 		if err != nil {
 			return err
 		}
 		for _, p := range providers {
-			if strings.ToLower(p.RepositoryURL()) == strings.ToLower(submitted.RepositoryURL()) {
-				return fmt.Errorf("Repository already exists in the registry, %s", p.RepositoryURL())
+			if strings.ToLower(p.String()) == strings.ToLower(submitted.String()) {
+				return fmt.Errorf("Repository already exists in the registry, %s", p.String())
 			}
 		}
 
-		err = submitted.WriteMetadata(provider.Metadata{})
+		err = submitted.UpdateMetadata()
 		if err != nil {
 			return fmt.Errorf("An unexpected error occured: %w", err)
 		}
 
-		err = submitted.UpdateMetadataFile()
-		if err != nil {
-			return fmt.Errorf("An unexpected error occured: %w", err)
+		if len(submitted.Versions) == 0 {
+			return fmt.Errorf("No versions detected for repository %s", submitted.Repository.URL())
 		}
 
-		meta, err := submitted.ReadMetadata()
+		err = storage.Save(submitted)
 		if err != nil {
 			return fmt.Errorf("An unexpected error occured: %w", err)
-		}
-		if len(meta.Versions) == 0 {
-			return fmt.Errorf("No versions detected for repository %s", submitted.RepositoryURL())
 		}
 
 		output.Namespace = submitted.Namespace
 		output.Name = submitted.ProviderName
-		output.File = submitted.MetadataPath()
+		output.File = storage.Path(submitted.Identifier)
 		return nil
 	}()
 

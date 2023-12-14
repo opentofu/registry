@@ -41,6 +41,8 @@ func main() {
 	}
 	ghClient := github.NewClient(ctx, logger, token)
 
+	storage := module.NewStorage(*moduleDataDir, logger, ghClient)
+
 	output := Output{}
 
 	err = func() error {
@@ -51,52 +53,44 @@ func main() {
 			return fmt.Errorf("Invalid repository name: %s", *repository)
 		}
 
-		submitted := module.Module{
+		submitted := storage.Create(module.Identifier{
 			Namespace:    match[re.SubexpIndex("Namespace")],
 			Name:         match[re.SubexpIndex("Name")],
 			TargetSystem: match[re.SubexpIndex("Target")],
-			Directory:    *moduleDataDir,
-			Logger:       logger,
-			Github:       ghClient,
-		}
+		})
 
-		_, err = regaddr.ParseModuleSource(fmt.Sprintf("%s/%s/%s", submitted.Namespace, submitted.Name, submitted.TargetSystem))
+		_, err = regaddr.ParseModuleSource(submitted.String())
 		if err != nil {
 			return err
 		}
 
-		modules, err := module.ListModules(*moduleDataDir, "", logger, ghClient)
+		modules, err := storage.List()
 		if err != nil {
 			return err
 		}
 		for _, p := range modules {
-			if strings.ToLower(p.RepositoryURL()) == strings.ToLower(submitted.RepositoryURL()) {
-				return fmt.Errorf("Repository already exists in the registry, %s", p.RepositoryURL())
+			if strings.ToLower(p.String()) == strings.ToLower(submitted.String()) {
+				return fmt.Errorf("Repository already exists in the registry, %s", p.String())
 			}
 		}
 
-		err = submitted.WriteMetadata(module.Metadata{})
+		err = submitted.UpdateMetadata()
 		if err != nil {
 			return fmt.Errorf("An unexpected error occured: %w", err)
+		}
+		if len(submitted.Versions) == 0 {
+			return fmt.Errorf("No versions detected for repository %s", submitted.Repository.URL())
 		}
 
-		err = submitted.UpdateMetadataFile()
+		err = storage.Save(submitted)
 		if err != nil {
-			return fmt.Errorf("An unexpected error occured: %w", err)
-		}
-
-		meta, err := submitted.ReadMetadata()
-		if err != nil {
-			return fmt.Errorf("An unexpected error occured: %w", err)
-		}
-		if len(meta.Versions) == 0 {
-			return fmt.Errorf("No versions detected for repository %s", submitted.RepositoryURL())
+			return err
 		}
 
 		output.Namespace = submitted.Namespace
 		output.Name = submitted.Name
 		output.Target = submitted.TargetSystem
-		output.File = submitted.MetadataPath()
+		output.File = storage.Path(submitted.Identifier)
 		return nil
 	}()
 

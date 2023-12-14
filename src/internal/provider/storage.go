@@ -41,6 +41,10 @@ func NewStorage(directory string, log *slog.Logger, client github.Client) Storag
 	}
 }
 
+func (s Storage) Path(id Identifier) string {
+	return filepath.Join(s.FS.Directory, relative_path(id))
+}
+
 func (s Storage) Create(id Identifier) Provider {
 	log := s.Log.With(slog.Group("provider",
 		slog.String("namespace", id.Namespace),

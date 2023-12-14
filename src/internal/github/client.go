@@ -54,7 +54,7 @@ func (c Client) Repository(owner, name string, log *slog.Logger) Repository {
 	return Repository{
 		client: Client{
 			ctx:        c.ctx,
-			log:        c.log.With(slog.Group("github", slog.String("owner", owner), slog.String("name", name))),
+			log:        log.With(slog.Group("github", slog.String("owner", owner), slog.String("name", name))),
 			httpClient: c.httpClient,
 			ghClient:   c.ghClient,
 
