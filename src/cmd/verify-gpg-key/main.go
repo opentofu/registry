@@ -14,7 +14,6 @@ import (
 	"github.com/opentofu/registry-stable/internal/github"
 	"github.com/opentofu/registry-stable/internal/gpg"
 	"github.com/opentofu/registry-stable/pkg/verification"
-	"github.com/shurcooL/githubv4"
 )
 
 func main() {
@@ -69,38 +68,16 @@ func VerifyGithubUser(client github.Client, username string, orgName string) *ve
 		Name: "Validate Github user",
 	}
 
-	var user *github.GHUser
-
-	verifyStep.RunStep("User exists", func() error {
-		u, err := client.GetUser(username)
+	s := verifyStep.RunStep(fmt.Sprintf("User is a member of the organization %s", orgName), func() error {
+		member, err := client.IsUserInOrganization(username, orgName)
 		if err != nil {
 			return fmt.Errorf("failed to get user: %w", err)
 		}
-
-		user = u
-		return nil
-	})
-
-	if user == nil {
-		// quickly skip the rest of the steps because the first failed
-		verifyStep.AddStep(fmt.Sprintf("User is a member of the organization %s", orgName), verification.StatusSkipped, "User does not exist")
-		return verifyStep
-	}
-
-	s := verifyStep.RunStep(fmt.Sprintf("User is a member of the organization %s", orgName), func() error {
-		if username == orgName {
-			// Adding to user namespace not org namespace
+		if member {
 			return nil
+		} else {
+			return fmt.Errorf("user is not a member of the organization")
 		}
-		// Todo: maybe handle pagination, but in theory I doubt people are in 99+ organizations
-		for _, org := range user.User.Organizations.Nodes {
-			if org.Name == githubv4.String(orgName) {
-				return nil
-			}
-		}
-		// TODO: Output a helpful error message here that includes the list of organizations the user is a member of
-		// and how they can publicly display their organization membership
-		return fmt.Errorf("user is not a member of the organization")
 	})
 	s.Remarks = []string{"If this is incorrect, please ensure that your organization membership is public. For more information, see [Github Docs - Publicizing or hiding organization membership](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-your-membership-in-organizations/publicizing-or-hiding-organization-membership)"}
 

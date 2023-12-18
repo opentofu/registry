@@ -2,40 +2,25 @@ package github
 
 import (
 	"fmt"
-	"log/slog"
-
-	"github.com/shurcooL/githubv4"
+	"net/http"
 )
 
-type GHUser struct {
-	User struct {
-		Login         githubv4.String
-		Name          githubv4.String
-		Organizations struct {
-			Nodes []struct {
-				Name githubv4.String
-			}
-			PageInfo struct {
-				EndCursor   githubv4.String
-				HasNextPage githubv4.Boolean
-			}
-		} `graphql:"organizations(first: 99)"`
-	} `graphql:"user(login: $login)"`
-}
+func (c Client) IsUserInOrganization(username string, org string) (bool, error) {
+	// user/org is not case sensitive here
+	check_url := fmt.Sprintf("https://api.github.com/orgs/%s/public_members/%s", org, username)
 
-func (c Client) GetUser(username string) (*GHUser, error) {
-	logger := c.log.With("username", username)
-	logger.Debug("GetUser")
-	variables := map[string]interface{}{
-		"login": githubv4.String(username),
-	}
-
-	var user GHUser
-	err := c.ghClient.Query(c.ctx, &user, variables)
+	resp, err := c.httpClient.Get(check_url)
 	if err != nil {
-		logger.Error("unable to fetch user", slog.Any("err", err))
-		return nil, fmt.Errorf("unable to fetch user: %w", err)
+		return false, err
 	}
+	resp.Body.Close()
 
-	return &user, nil
+	switch resp.StatusCode {
+	case http.StatusNotFound:
+		return false, nil
+	case http.StatusNoContent:
+		return true, nil
+	default:
+		return false, fmt.Errorf("unexpected status code %v when checking if %q is a member of %q", resp.StatusCode, username, org)
+	}
 }
