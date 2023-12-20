@@ -6,6 +6,12 @@ import (
 )
 
 func (c Client) IsUserInOrganization(username string, org string) (bool, error) {
+	// First of all, check if the organization is the user's personal GitHub organization
+	// Here, we can simply check if the username is identical to the organization name
+	if username == org {
+		return true, nil
+	}
+
 	// user/org is not case sensitive here
 	check_url := fmt.Sprintf("https://api.github.com/orgs/%s/public_members/%s", org, username)
 
