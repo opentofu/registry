@@ -44,7 +44,7 @@ func main() {
 
 	err = func() error {
 		// Lower case input
-		re := regexp.MustCompile("(?P<Namespace>[a-zA-Z0-9]+)/terraform-provider-(?P<Name>[a-zA-Z0-9-]*)")
+		re := regexp.MustCompile("(?P<Namespace>[a-zA-Z0-9-]+)/terraform-provider-(?P<Name>[a-zA-Z0-9-]*)")
 		match := re.FindStringSubmatch(strings.ToLower(*repository))
 		if match == nil {
 			return fmt.Errorf("Invalid repository name: %s", *repository)
