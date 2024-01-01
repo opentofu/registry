@@ -1,49 +1,68 @@
 package verification
 
-import "fmt"
+import (
+	"bytes"
+	"fmt"
+	"io"
+	"text/template"
+)
+
+var templates *template.Template
+
+func initTemplates() {
+	templates = template.New("").Funcs(template.FuncMap{
+		"status": func(s Status) string {
+			switch s {
+			case StatusSuccess:
+				return "Success"
+			case StatusFailure:
+				return "Failure"
+			case StatusNotRun:
+				return "Not Run"
+			case StatusSkipped:
+				return "Skipped"
+			default:
+				return ""
+			}
+		},
+		"call": func(tmpl string, args ...interface{}) string {
+			t, err := templates.New(tmpl).Parse("{{template \"" + tmpl + "\" .}}")
+			if err != nil {
+				fmt.Printf("Error parsing template %s: %s", tmpl, err)
+				return ""
+			}
+			var output bytes.Buffer
+			err = t.Execute(&output, args[0])
+			if err != nil {
+				fmt.Printf("Error executing template %s: %s", tmpl, err)
+				return ""
+			}
+			return output.String()
+		},
+	})
+
+	_, err := templates.Parse(markdownTemplate)
+	if err != nil {
+		fmt.Printf("Error parsing templates: %s", err)
+	}
+}
 
 func (r *Result) RenderMarkdown() string {
-	var output string
+	initTemplates() // Initialize templates
+	var output bytes.Buffer
 	for _, step := range r.Steps {
-		output += fmt.Sprintf("## %s\n", step.Name)
-		for _, remark := range step.Remarks {
-			output += fmt.Sprintf("> [!NOTE]\n")
-			output += fmt.Sprintf("> %s\n\n", remark)
-		}
-		if step.Status == StatusSuccess {
-			output += "✅ **Success**\n"
-		} else if step.Status == StatusFailure {
-			output += "❌ **Failure**\n"
-		} else if step.Status == StatusNotRun {
-			output += "⚠️ **Not Run**\n"
-		} else if step.Status == StatusSkipped {
-			output += "⚠️ **Skipped**\n"
-		}
-
-		for _, err := range step.Errors {
-			output += fmt.Sprintf("- %s\n", err)
-		}
+		renderTemplate(&output, "step", step)
 		for _, subStep := range step.SubSteps {
-			output += fmt.Sprintf("### %s\n", subStep.Name)
-			for _, remark := range subStep.Remarks {
-				output += fmt.Sprintf("> [!NOTE]\n")
-				output += fmt.Sprintf("> %s\n\n", remark)
-			}
-			if subStep.Status == StatusSuccess {
-				output += "✅ **Success**\n"
-			} else if subStep.Status == StatusFailure {
-				output += "❌ **Failure**\n"
-			} else if subStep.Status == StatusNotRun {
-				output += "⚠️ **Not Run**\n"
-			} else if subStep.Status == StatusSkipped {
-				output += "⚠️ **Skipped**\n"
-			}
-
-			for _, err := range subStep.Errors {
-				output += fmt.Sprintf("- %s\n", err)
-			}
+			renderTemplate(&output, "subStep", subStep)
 		}
-		output += "\n"
+		output.WriteString("\n")
 	}
-	return output
+	return output.String()
+}
+
+func renderTemplate(wr io.Writer, tmplName string, data interface{}) {
+	err := templates.ExecuteTemplate(wr, tmplName, data)
+	if err != nil {
+		fmt.Printf("Error executing template: %s", err)
+	}
 }
