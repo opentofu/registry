@@ -45,8 +45,13 @@ jobs:
           set +e
           go run ./cmd/add-provider -repository="$repository" -output=./output.json
           if [[ "$?" != 0 ]]; then
-            gh issue comment $NUMBER -b "$(cat ./output.json | jq -r '.validation')"
-            exit 1
+            if [ "$(cat ./output.json | jq -r '.exists')" == "true" ]; then
+              gh issue close $NUMBER -c "$(cat ./output.json | jq -r '.validation')"
+              exit 0
+            else
+              gh issue comment $NUMBER -b "$(cat ./output.json | jq -r '.validation')"
+              exit 1
+            fi
           fi
           set -e
           namespace=$(cat ./output.json | jq -r '.namespace')
@@ -117,8 +122,13 @@ jobs:
           set +e
           go run ./cmd/add-module -repository="$repository" -output=./output.json
           if [[ "$?" != 0 ]]; then
-            gh issue comment $NUMBER -b "$(cat ./output.json | jq -r '.validation')"
-            exit 1
+            if [ "$(cat ./output.json | jq -r '.exists')" == "true" ]; then
+              gh issue close $NUMBER -c "$(cat ./output.json | jq -r '.validation')"
+              exit 0
+            else
+              gh issue comment $NUMBER -b "$(cat ./output.json | jq -r '.validation')"
+              exit 1
+            fi
           fi
           set -e
           namespace=$(cat ./output.json | jq -r '.namespace')
