@@ -22,6 +22,7 @@ type Output struct {
 	Name       string `json:"name"`
 	Target     string `json:"target"`
 	Validation string `json:"validation"`
+	Exists     bool   `json:"exists"`
 }
 
 func main() {
@@ -41,7 +42,7 @@ func main() {
 	}
 	ghClient := github.NewClient(ctx, logger, token)
 
-	output := Output{}
+	output := Output{Exists: false}
 
 	err = func() error {
 		// Lower case input
@@ -71,6 +72,7 @@ func main() {
 		}
 		for _, p := range modules {
 			if strings.ToLower(p.RepositoryURL()) == strings.ToLower(submitted.RepositoryURL()) {
+				output.Exists = true
 				return fmt.Errorf("Repository already exists in the registry, %s", p.RepositoryURL())
 			}
 		}
