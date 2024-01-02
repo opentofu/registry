@@ -56,6 +56,7 @@ var (
 		"default/terraform-provider-ns1":              "ns1-terraform/terraform-provider-ns1",
 		"default/terraform-provider-nsxt":             "vmware/terraform-provider-nsxt",
 		"default/terraform-provider-nutanix":          "nutanix/terraform-provider-nutanix",
+		"default/terraform-provider-oci":              "oracle/terraform-provider-oci",
 		"default/terraform-provider-oktaasa":          "oktadeveloper/terraform-provider-oktaasa",
 		"default/terraform-provider-okta":             "oktadeveloper/terraform-provider-okta",
 		"default/terraform-provider-opennebula":       "OpenNebula/terraform-provider-opennebula",
