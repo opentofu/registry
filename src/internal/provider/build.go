@@ -6,15 +6,14 @@ import (
 	"slices"
 
 	"github.com/opentofu/registry-stable/internal"
-
-	"golang.org/x/mod/semver"
+	"github.com/opentofu/registry-stable/internal/github"
 )
 
 // filterNewReleases filters the list of releases to only include those that do
 // not already exist in the metadata.
-func (meta Metadata) filterNewReleases(releases []string) []string {
+func (p Provider) filterNewReleases(releases []string) []string {
 	var existingVersions = make(map[string]bool)
-	for _, v := range meta.Versions {
+	for _, v := range p.Versions {
 		existingVersions[v.Version] = true
 	}
 
@@ -26,56 +25,36 @@ func (meta Metadata) filterNewReleases(releases []string) []string {
 		}
 	}
 
-	meta.Logger.Info(fmt.Sprintf("Found %d releases that do not already exist in the metadata file", len(newReleases)))
+	p.Log.Info(fmt.Sprintf("Found %d releases that do not already exist in the metadata file", len(newReleases)))
 
 	return newReleases
 }
 
-// getSemverTags returns a list of semver tags for the module fetched from GitHub.
-func (p Provider) getSemverTags() ([]string, error) {
-	tags, err := p.Github.GetTags(p.RepositoryURL())
-	if err != nil {
-		return nil, err
-	}
-
-	var semverTags = make([]string, 0)
-	for _, tag := range tags {
-		tagWithPrefix := fmt.Sprintf("v%s", internal.TrimTagPrefix(tag))
-		if semver.IsValid(tagWithPrefix) {
-			semverTags = append(semverTags, tag)
-		}
-	}
-
-	return semverTags, nil
-}
-
-func (p Provider) buildMetadata() (*Metadata, error) {
-	meta, err := p.ReadMetadata()
-	if err != nil {
-		return nil, err
-	}
-
+func (p *Provider) UpdateMetadata() error {
 	// fetch ALL the releases
-	releases, err := p.getSemverTags()
+	tags, err := p.Repository.ListTags()
 	if err != nil {
-		p.Logger.Error("Unable to fetch semver tags, skipping", slog.Any("err", err))
-		return nil, nil
+		p.Log.Error("Unable to fetch semver tags, skipping", slog.Any("err", err))
+		return nil
 	}
+
+	// Filter to semver onlu
+	tags = tags.FilterSemver()
 
 	// filter the releases to only include those that do not already exist in the metadata
-	newReleases := meta.filterNewReleases(releases)
+	newReleases := p.filterNewReleases(tags)
 
 	if len(newReleases) == 0 {
-		p.Logger.Info("No version bump required, all versions exist")
-		return nil, nil
+		p.Log.Info("No version bump required, all versions exist")
+		return nil
 	}
 
 	shouldUpdate, err := p.shouldUpdateMetadataFile()
 	if err != nil {
-		p.Logger.Error("Failed to determine update status, forcing update", slog.Any("err", err))
+		p.Log.Error("Failed to determine update status, forcing update", slog.Any("err", err))
 	} else if !shouldUpdate {
-		p.Logger.Info("No version bump required, latest versions exist")
-		return nil, nil
+		p.Log.Info("No version bump required, latest versions exist")
+		return nil
 	}
 
 	type versionResult struct {
@@ -94,23 +73,23 @@ func (p Provider) buildMetadata() (*Metadata, error) {
 		}()
 	}
 
+	// TODO agg errors
 	for range newReleases {
 		result := <-verChan
 		if result.err != nil {
-			return nil, result.err
+			return result.err
 		}
 		if result.v == nil {
 			// Not a valid release, skipping
 			continue
 		}
 		// append the new release to the metadata
-		meta.Versions = append(meta.Versions, *result.v)
+		p.Versions = append(p.Versions, *result.v)
 	}
 
-	semverSortFunc := func(a, b Version) int {
-		return -semver.Compare(fmt.Sprintf("v%s", a.Version), fmt.Sprintf("v%s", b.Version))
-	}
-	slices.SortFunc(meta.Versions, semverSortFunc)
+	slices.SortFunc(p.Versions, func(a, b Version) int {
+		return github.SemverTagSort(a.Version, b.Version)
+	})
 
-	return &meta, nil
+	return nil
 }

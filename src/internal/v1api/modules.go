@@ -13,41 +13,32 @@ import (
 // ModuleGenerator is responsible for generating the response for the module version listing API endpoints.
 type ModuleGenerator struct {
 	module.Module
-	module.Metadata
 	Destination string
-	log         *slog.Logger
 }
 
 // NewModuleGenerator creates a new ModuleGenerator which will generate the response for the module version listing API endpoints
 // and store the generated files in the given destination directory
-func NewModuleGenerator(m module.Module, destination string) (ModuleGenerator, error) {
-	metadata, err := m.ReadMetadata()
-	if err != nil {
-		return ModuleGenerator{}, err
-	}
-
+func NewModuleGenerator(m module.Module, destination string) ModuleGenerator {
 	return ModuleGenerator{
 		Module:      m,
-		Metadata:    metadata,
 		Destination: destination,
-		log:         m.Logger,
-	}, nil
+	}
 }
 
 // VersionListingPath returns the path to the module version listing file
 func (m ModuleGenerator) VersionListingPath() string {
-	return filepath.Join(m.Destination, "v1", "modules", m.Module.Namespace, m.Module.Name, m.Module.TargetSystem, "versions")
+	return filepath.Join(m.Destination, "v1", "modules", m.Namespace, m.Name, m.TargetSystem, "versions")
 }
 
 // VersionDownloadPath returns the path to the module version download file for the given version
 func (m ModuleGenerator) VersionDownloadPath(v module.Version) string {
-	return filepath.Join(m.Destination, "v1", "modules", m.Module.Namespace, m.Module.Name, m.Module.TargetSystem, internal.TrimTagPrefix(v.Version), "download")
+	return filepath.Join(m.Destination, "v1", "modules", m.Namespace, m.Name, m.TargetSystem, internal.TrimTagPrefix(v.Version), "download")
 }
 
 // VersionListing converts the module metadata into a ModuleVersionListingResponse, ready to be serialized to a file
 func (m ModuleGenerator) VersionListing() ModuleVersionListingResponse {
-	versions := make([]ModuleVersionResponseItem, len(m.Metadata.Versions))
-	for i, v := range m.Metadata.Versions {
+	versions := make([]ModuleVersionResponseItem, len(m.Versions))
+	for i, v := range m.Versions {
 		versions[i] = ModuleVersionResponseItem{Version: internal.TrimTagPrefix(v.Version)}
 	}
 	return ModuleVersionListingResponse{[]ModuleVersionListingResponseItem{{versions}}}
@@ -56,8 +47,8 @@ func (m ModuleGenerator) VersionListing() ModuleVersionListingResponse {
 // VersionDownloads converts the module metadata into a map of module version download paths to ModuleVersionDownloadResponse,
 func (m ModuleGenerator) VersionDownloads() map[string]ModuleVersionDownloadResponse {
 	downloads := make(map[string]ModuleVersionDownloadResponse)
-	for _, v := range m.Metadata.Versions {
-		downloads[m.VersionDownloadPath(v)] = ModuleVersionDownloadResponse{Location: m.Module.VersionDownloadURL(v)}
+	for _, v := range m.Versions {
+		downloads[m.VersionDownloadPath(v)] = ModuleVersionDownloadResponse{Location: m.Repository.DownloadURL(v.Version)}
 	}
 	return downloads
 }
@@ -67,14 +58,14 @@ func (m ModuleGenerator) VersionDownloads() map[string]ModuleVersionDownloadResp
 // https://opentofu.org/docs/internals/module-registry-protocol/#list-available-versions-for-a-specific-module
 // https://opentofu.org/docs/internals/module-registry-protocol/#download-source-code-for-a-specific-module-version
 func (m ModuleGenerator) Generate() error {
-	m.log.Info("Generating")
+	m.Log.Info("Generating")
 
 	for location, download := range m.VersionDownloads() {
 		err := files.SafeWriteObjectToJSONFile(location, download)
 		if err != nil {
 			return fmt.Errorf("failed to write metadata version download file: %w", err)
 		}
-		m.log.Debug("Wrote metadata version download file", slog.String("path", location))
+		m.Log.Debug("Wrote metadata version download file", slog.String("path", location))
 	}
 
 	err := files.SafeWriteObjectToJSONFile(m.VersionListingPath(), m.VersionListing())
@@ -82,7 +73,7 @@ func (m ModuleGenerator) Generate() error {
 		return err
 	}
 
-	m.log.Info("Generated")
+	m.Log.Info("Generated")
 
 	return nil
 }

@@ -18,49 +18,39 @@ import (
 // ProviderGenerator is responsible for generating the response for the provider version listing API endpoints.
 type ProviderGenerator struct {
 	provider.Provider
-	provider.Metadata
 
 	KeyLocation string
 	Destination string
-	log         *slog.Logger
 }
 
 // NewProviderGenerator creates a new ProviderGenerator which will generate the response for the provider version listing API endpoints and write it to the given destination.
-func NewProviderGenerator(p provider.Provider, destination string, gpgKeyLocation string) (ProviderGenerator, error) {
-	metadata, err := p.ReadMetadata()
-	if err != nil {
-		return ProviderGenerator{}, err
-	}
-
+func NewProviderGenerator(p provider.Provider, destination string, gpgKeyLocation string) ProviderGenerator {
 	return ProviderGenerator{
-		Provider: p,
-		Metadata: metadata,
-
+		Provider:    p,
 		KeyLocation: gpgKeyLocation,
 		Destination: destination,
-		log:         p.Logger,
-	}, err
+	}
 }
 
 // VersionListingPath returns the path to the provider version listing file.
 func (p ProviderGenerator) VersionListingPath() string {
-	namespacePath := strings.ToLower(p.Provider.Namespace)
-	providerNamePath := strings.ToLower(p.Provider.ProviderName)
+	namespacePath := strings.ToLower(p.Namespace)
+	providerNamePath := strings.ToLower(p.ProviderName)
 	return filepath.Join(p.Destination, "v1", "providers", namespacePath, providerNamePath, "versions")
 }
 
 // VersionDownloadPath returns the path to the provider version download file.
 func (p ProviderGenerator) VersionDownloadPath(ver provider.Version, details ProviderVersionDetails) string {
-	namespacePath := strings.ToLower(p.Provider.Namespace)
-	providerNamePath := strings.ToLower(p.Provider.ProviderName)
+	namespacePath := strings.ToLower(p.Namespace)
+	providerNamePath := strings.ToLower(p.ProviderName)
 	return filepath.Join(p.Destination, "v1", "providers", namespacePath, providerNamePath, ver.Version, "download", details.OS, details.Arch)
 }
 
 // VersionListing will take the provider metadata and generate the responses for the provider version listing API endpoints.
 func (p ProviderGenerator) VersionListing() ProviderVersionListingResponse {
-	versions := make([]ProviderVersionResponseItem, len(p.Metadata.Versions))
+	versions := make([]ProviderVersionResponseItem, len(p.Versions))
 
-	for versionIdx, ver := range p.Metadata.Versions {
+	for versionIdx, ver := range p.Versions {
 		verResp := ProviderVersionResponseItem{
 			Version:   ver.Version,
 			Protocols: ver.Protocols,
@@ -84,17 +74,17 @@ func (p ProviderGenerator) VersionDetails() (map[string]ProviderVersionDetails, 
 	versionDetails := make(map[string]ProviderVersionDetails)
 
 	keyCollection := gpg.KeyCollection{
-		Namespace: p.Provider.EffectiveNamespace(),
+		Namespace: p.Namespace, // TODO EffectiveNamespace
 		Directory: p.KeyLocation,
 	}
 
 	keys, err := keyCollection.ListKeys()
 	if err != nil {
-		p.log.Error("Failed to list keys", slog.Any("err", err))
+		p.Log.Error("Failed to list keys", slog.Any("err", err))
 		return nil, err
 	}
 
-	for _, ver := range p.Metadata.Versions {
+	for _, ver := range p.Versions {
 		for _, target := range ver.Targets {
 			details := ProviderVersionDetails{
 				Protocols:           ver.Protocols,
@@ -117,7 +107,7 @@ func (p ProviderGenerator) VersionDetails() (map[string]ProviderVersionDetails, 
 
 // Generate generates the responses for the provider version listing API endpoints.
 func (p ProviderGenerator) Generate() error {
-	p.log.Info("Generating")
+	p.Log.Info("Generating")
 
 	details, err := p.VersionDetails()
 	if err != nil {
@@ -136,7 +126,7 @@ func (p ProviderGenerator) Generate() error {
 		return err
 	}
 
-	p.log.Info("Generated")
+	p.Log.Info("Generated")
 
 	return nil
 }

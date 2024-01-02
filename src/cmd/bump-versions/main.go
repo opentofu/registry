@@ -30,30 +30,59 @@ func main() {
 	}
 	ghClient := github.NewClient(ctx, logger, token)
 
-	modules, err := module.ListModules(*moduleDataDir, *moduleNamespace, logger, ghClient)
+	modStorage := module.NewStorage(*moduleDataDir, logger, ghClient)
+	modules, err := modStorage.List()
 	if err != nil {
 		logger.Error("Failed to list modules", slog.Any("err", err))
 		os.Exit(1)
 	}
 
-	err = modules.Parallel(200, func(m module.Module) error {
-		return m.UpdateMetadataFile()
+	errs := modules.ParallelForEach(func(id module.Identifier) error {
+		if *moduleNamespace != "" && *moduleNamespace != id.Namespace {
+			return nil
+		}
+
+		m, err := modStorage.Load(id)
+		if err != nil {
+			return err
+		}
+		err = m.UpdateMetadata()
+		if err != nil {
+			return err
+		}
+		return modStorage.Save(m)
 	})
-	if err != nil {
-		logger.Error(err.Error())
+
+	if len(errs) != 0 {
+		logger.Error("Errors occured while processing modules")
+		for _, err := range errs {
+			logger.Error(err.Error())
+		}
 		os.Exit(1)
 	}
 
-	providers, err := provider.ListProviders(*providerDataDir, *providerNamespace, logger, ghClient)
-	if err != nil {
-		logger.Error("Failed to list providers", slog.Any("err", err))
-		os.Exit(1)
-	}
-	err = providers.Parallel(200, func(p provider.Provider) error {
-		return p.UpdateMetadataFile()
+	provStorage := provider.NewStorage(*providerDataDir, logger, ghClient)
+	providers, err := provStorage.List()
+	errs = providers.ParallelForEach(func(id provider.Identifier) error {
+		if *providerNamespace != "" && *providerNamespace != id.Namespace {
+			return nil
+		}
+
+		p, err := provStorage.Load(id)
+		if err != nil {
+			return err
+		}
+		err = p.UpdateMetadata()
+		if err != nil {
+			return err
+		}
+		return provStorage.Save(p)
 	})
-	if err != nil {
-		logger.Error(err.Error())
+	if len(errs) != 0 {
+		logger.Error("Errors occured while processing providers")
+		for _, err := range errs {
+			logger.Error(err.Error())
+		}
 		os.Exit(1)
 	}
 

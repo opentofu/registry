@@ -4,28 +4,21 @@ package parallel
 // and should not be retried
 type Action func() error
 
-// ForEach runs the given actions in parallel
-// If an error is returned from an action, it is added to the slice of errors and the action is not retried
-// any actions that are still running will be allowed to complete
-func ForEach(actions []Action, maxConcurrency int) []error {
-	// Populate tokens
-	tokens := make(chan int, maxConcurrency)
-	for i := 0; i < maxConcurrency; i++ {
-		tokens <- i
-	}
+// This is similar to sync.ErrorGroup, but returns all errors and does not cancel.
+type ErrorGroup []Action
 
-	errChan := make(chan error, len(actions))
-	for _, a := range actions {
+func (eg ErrorGroup) Errors() []error {
+	errChan := make(chan error, len(eg))
+
+	for _, a := range eg {
 		a := a
-		token := <-tokens
 		go func() {
-			defer func() { tokens <- token }()
 			errChan <- a()
 		}()
 	}
 
-	var errs []error
-	for range actions {
+	errs := make([]error, 0)
+	for range eg {
 		err := <-errChan
 		if err != nil {
 			errs = append(errs, err)
