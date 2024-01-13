@@ -1,4 +1,4 @@
-# Opentofu Registry (registry.opentofu.org)
+# OpenTofu Registry (registry.opentofu.org)
 
 ![](https://raw.githubusercontent.com/opentofu/brand-artifacts/main/full/transparent/SVG/on-dark.svg#gh-dark-mode-only)
 ![](https://raw.githubusercontent.com/opentofu/brand-artifacts/main/full/transparent/SVG/on-light.svg#gh-light-mode-only)
