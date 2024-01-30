@@ -11,6 +11,7 @@ import (
 // Validate validates provider's metadata.
 func Validate(v Metadata) error {
 	var errs = make([]error, 0)
+
 	if len(v.Versions) < 1 {
 		errs = append(errs, validate.ErrorEmptyList)
 	}
