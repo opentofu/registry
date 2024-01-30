@@ -1,7 +1,6 @@
 package provider
 
 import (
-	"errors"
 	"fmt"
 	"slices"
 	"strings"
@@ -11,18 +10,22 @@ import (
 
 // Validate validates provider's metadata.
 func Validate(v Metadata) error {
+	var errs = make([]error, 0)
 	if len(v.Versions) < 1 {
-		return validate.ErrorEmptyList
+		errs = append(errs, validate.ErrorEmptyList)
 	}
 
-	var errs = make([]error, 0, len(v.Versions))
 	for _, ver := range v.Versions {
 		for _, err := range validateProviderVersion(ver) {
 			errs = append(errs, fmt.Errorf("v%s: %w", ver.Version, err))
 		}
 	}
 
-	return errors.Join(errs...)
+	if len(errs) == 0 {
+		return nil
+	}
+
+	return validate.Errors(errs)
 }
 
 func validateProviderVersion(ver Version) []error {

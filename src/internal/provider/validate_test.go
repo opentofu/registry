@@ -51,7 +51,7 @@ func TestValidate(t *testing.T) {
 		{
 			name:       "no versions data",
 			input:      Metadata{},
-			wantErrStr: "found empty list of versions",
+			wantErrStr: "found empty list of versions\n",
 		},
 		{
 			name: "invalid version",
@@ -103,7 +103,7 @@ func TestValidate(t *testing.T) {
 					},
 				},
 			},
-			wantErrStr: "vfoo: found semver-incompatible version: foo",
+			wantErrStr: "vfoo: found semver-incompatible version: foo\n",
 		},
 		{
 			name: "no protocols",
@@ -139,7 +139,7 @@ func TestValidate(t *testing.T) {
 					},
 				},
 			},
-			wantErrStr: "v0.0.2: empty protocols list",
+			wantErrStr: "v0.0.2: empty protocols list\n",
 		},
 		{
 			name: "invalid protocol",
@@ -176,7 +176,7 @@ func TestValidate(t *testing.T) {
 					},
 				},
 			},
-			wantErrStr: "v0.0.2: unsupported protocol found: foo",
+			wantErrStr: "v0.0.2: unsupported protocol found: foo\n",
 		},
 		{
 			name: "no targets data",
@@ -190,7 +190,7 @@ func TestValidate(t *testing.T) {
 					},
 				},
 			},
-			wantErrStr: "v0.0.2: empty targets list",
+			wantErrStr: "v0.0.2: empty targets list\n",
 		},
 		{
 			name: "invalid target os",
@@ -227,7 +227,7 @@ func TestValidate(t *testing.T) {
 					},
 				},
 			},
-			wantErrStr: "v0.0.2: target foo-amd64: unsupported OS: foo",
+			wantErrStr: "v0.0.2: target foo-amd64: unsupported OS: foo\n",
 		},
 		{
 			name: "invalid target arch",
@@ -264,7 +264,7 @@ func TestValidate(t *testing.T) {
 					},
 				},
 			},
-			wantErrStr: "v0.0.2: target darwin-foo: unsupported ARCH: foo",
+			wantErrStr: "v0.0.2: target darwin-foo: unsupported ARCH: foo\n",
 		},
 		{
 			name: "filename does not match url",
@@ -301,7 +301,7 @@ func TestValidate(t *testing.T) {
 					},
 				},
 			},
-			wantErrStr: "v0.0.2: target darwin-amd64: 'filename' is not consistent with 'download_url'",
+			wantErrStr: "v0.0.2: target darwin-amd64: 'filename' is not consistent with 'download_url'\n",
 		},
 		{
 			name: "target shasum length is wrong",
@@ -338,7 +338,7 @@ func TestValidate(t *testing.T) {
 					},
 				},
 			},
-			wantErrStr: "v0.0.2: target linux-arm64: SHASum length is wrong",
+			wantErrStr: "v0.0.2: target linux-arm64: SHASum length is wrong\n",
 		},
 		{
 			name: "multiple errors",
@@ -384,7 +384,8 @@ func TestValidate(t *testing.T) {
 			wantErrStr: `v0.0.1: unsupported protocol found: xxx
 v0.0.1: empty targets list
 v0.0.2: target foo-amd64: unsupported OS: foo
-v0.0.2: target linux-arm64: SHASum length is wrong`,
+v0.0.2: target linux-arm64: SHASum length is wrong
+`,
 		},
 	}
 

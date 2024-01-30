@@ -1,7 +1,6 @@
 package module
 
 import (
-	"errors"
 	"fmt"
 
 	"github.com/opentofu/registry-stable/internal/validate"
@@ -9,17 +8,20 @@ import (
 
 // Validate validates module's metadata.
 func Validate(v Metadata) error {
+	var errs = make([]error, 0)
 	if len(v.Versions) < 1 {
-		return validate.ErrorEmptyList
+		errs = append(errs, validate.ErrorEmptyList)
 	}
 
-	var errs = make([]error, 0, len(v.Versions))
 	for _, ver := range v.Versions {
 		if !validate.IsValidVersion(ver.Version) {
-			err := fmt.Errorf("found semver-incompatible version: %s", ver.Version)
-			errs = append(errs, err)
+			errs = append(errs, fmt.Errorf("found semver-incompatible version: %s", ver.Version))
 		}
 	}
 
-	return errors.Join(errs...)
+	if len(errs) == 0 {
+		return nil
+	}
+
+	return validate.Errors(errs)
 }

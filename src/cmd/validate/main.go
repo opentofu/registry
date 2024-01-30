@@ -8,6 +8,7 @@ import (
 
 	"github.com/opentofu/registry-stable/internal/module"
 	"github.com/opentofu/registry-stable/internal/provider"
+	"github.com/opentofu/registry-stable/internal/validate"
 )
 
 func main() {
@@ -26,7 +27,7 @@ CMD:
 	args := os.Args[1:]
 
 	if len(args) < 1 {
-		logger.Error(errorCLI, slog.String("error", cliError))
+		logger.Error(cliError, slog.String("type", errorCLI))
 		os.Exit(1)
 	}
 
@@ -37,7 +38,7 @@ CMD:
 
 	if len(args) != 2 {
 		fmt.Print(helpStr)
-		logger.Error(errorCLI, slog.String("error", cliError))
+		logger.Error(cliError, slog.String("type", errorCLI))
 		os.Exit(1)
 	}
 
@@ -66,13 +67,24 @@ CMD:
 
 	default:
 		fmt.Print(helpStr)
-		logger.Error(errorCLI, slog.String("error", fmt.Sprintf("%s command is not supported", cmd)))
+		logger.Error(fmt.Sprintf("%s command is not supported", cmd), slog.String("type", errorCLI))
 		os.Exit(1)
 	}
 
 	if err != nil {
-		logger.Error(errType)
-		fmt.Println(err)
+		args := []any{
+			slog.String("type", errType),
+			slog.String("path", path),
+		}
+		switch err.(type) {
+		case validate.Errors:
+			for _, e := range err.(validate.Errors) {
+				logger.Error(e.Error(), args...)
+			}
+		default:
+			logger.Error(err.Error(), args...)
+		}
+
 		os.Exit(1)
 	}
 }
@@ -88,7 +100,7 @@ func readJSONFile(p string, v any) error {
 }
 
 const (
-	errorValidation  = "validation error"
-	errorCLI         = "CLI error"
-	errorJSONParsing = "JSON parsing error"
+	errorValidation  = "validation"
+	errorJSONParsing = "parsing"
+	errorCLI         = "CLI"
 )

@@ -6,9 +6,9 @@ import (
 
 func TestValidate(t *testing.T) {
 	type TestCase struct {
-		name    string
-		input   Metadata
-		wantErr bool
+		name       string
+		input      Metadata
+		wantErrStr string
 	}
 
 	tests := []TestCase{
@@ -23,19 +23,27 @@ func TestValidate(t *testing.T) {
 			input: Metadata{
 				Versions: []Version{{"0.0.2"}, {"foo"}},
 			},
-			wantErr: true,
+			wantErrStr: "found semver-incompatible version: foo\n",
 		},
 		{
-			name:    "empty-versions-list",
-			input:   Metadata{},
-			wantErr: true,
+			name:       "empty-versions-list",
+			input:      Metadata{},
+			wantErrStr: "found empty list of versions\n",
 		},
 	}
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if err := Validate(tt.input); (err != nil) != tt.wantErr {
-				t.Fatalf("Validate(%v) unexpected error = %v", tt.input, err)
+			err := Validate(tt.input)
+			switch tt.wantErrStr != "" {
+			case true:
+				if err == nil || tt.wantErrStr != err.Error() {
+					t.Fatalf("unexpected error message, want = %s, got = %v", tt.wantErrStr, err)
+				}
+			default:
+				if err != nil {
+					t.Fatalf("unexpected error message: %v", err)
+				}
 			}
 		})
 	}
