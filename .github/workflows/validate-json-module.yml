@@ -1,0 +1,28 @@
+name: Validate Module JSON
+
+on:
+  push:
+    paths:
+      - 'modules/**/*.json'
+    branches:
+      - 'module-**'
+
+jobs:
+  validate-metadata-module:
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ inputs.environment }}
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v4
+        with:
+          go-version-file: './src/go.mod'
+
+      - name: Validate JSON
+        working-directory: ./src
+        run: |
+          for path in $(git diff HEAD~1 HEAD --name-only) 
+          do
+            go run ./cmd/validate/main.go module $path
+          done
