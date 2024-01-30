@@ -15,14 +15,31 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
       - uses: actions/setup-go@v4
         with:
           go-version-file: './src/go.mod'
 
-      - name: Validate JSON
+      - name: Build validator
         working-directory: ./src
         run: |
-          for path in $(git diff HEAD~1 HEAD --name-only)
+          mkdir -p /tmp/validate
+          go build -o /tmp/validate/run ./cmd/validate/main.go
+          chmod +x /tmp/validate/run
+
+      - name: List updated filed
+        id: updated
+        uses: tj-actions/changed-files@v42
+        with:
+          files: providers/**/*.json
+
+      - name: Validate JSON
+        env:
+          CHANGED_FILES: ${{ steps.updated.outputs.all_changed_files }}
+        run: |
+          for path in "$CHANGED_FILES"
           do
-            go run ./cmd/validate/main.go provider $path
+            /tmp/validate/run provider "$path"
           done
