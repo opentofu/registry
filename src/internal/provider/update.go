@@ -52,8 +52,8 @@ func (p Provider) shouldUpdateMetadataFile() (bool, error) {
 	return true, nil
 }
 
-// getSemVerTagsFromRSS returns a list of semver tags from the RSS feed
-// ignoring all non-valid semver tags
+// getSemVerTagsFromRSS returns a list of validate.go tags from the RSS feed
+// ignoring all non-valid validate.go tags
 func (p Provider) getSemVerTagsFromRSS() ([]string, error) {
 	releasesRssUrl := p.RSSURL()
 	tags, err := p.Github.GetTagsFromRSS(releasesRssUrl)
@@ -71,7 +71,7 @@ func (p Provider) getSemVerTagsFromRSS() ([]string, error) {
 	return semverTags, nil
 }
 
-// getLastSemVerTag returns the most recently created semver tag from the RSS feed
+// getLastSemVerTag returns the most recently created validate.go tag from the RSS feed
 // by sorting the tags by descending creation date
 func (p Provider) getLastSemVerTag() (string, error) {
 	semverTags, err := p.getSemVerTagsFromRSS()

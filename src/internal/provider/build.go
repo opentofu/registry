@@ -31,7 +31,7 @@ func (meta Metadata) filterNewReleases(releases []string) []string {
 	return newReleases
 }
 
-// getSemverTags returns a list of semver tags for the module fetched from GitHub.
+// getSemverTags returns a list of validate.go tags for the module fetched from GitHub.
 func (p Provider) getSemverTags() ([]string, error) {
 	tags, err := p.Github.GetTags(p.RepositoryURL())
 	if err != nil {
