@@ -22,6 +22,13 @@ jobs:
         with:
           go-version-file: './src/go.mod'
 
+      - name: Build validator
+        working-directory: ./src
+        run: |
+          mkdir -p /tmp/validate
+          go build -o /tmp/validate/run ./cmd/validate/main.go
+          chmod +x /tmp/validate/run
+
       - name: List updated filed
         id: updated
         uses: tj-actions/changed-files@v42
@@ -29,11 +36,10 @@ jobs:
           files: modules/**/*.json
 
       - name: Validate JSON
-        working-directory: ./src
         env:
           CHANGED_FILES: ${{ steps.updated.outputs.all_changed_files }}
         run: |
           for path in "$CHANGED_FILES"
           do
-            go run ./cmd/validate/main.go module "$path"
+            /tmp/validate/run module "$path"
           done
