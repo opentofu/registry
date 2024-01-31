@@ -29,7 +29,7 @@ jobs:
           go build -o /tmp/validate/run ./cmd/validate/main.go
           chmod +x /tmp/validate/run
 
-      - name: List updated filed
+      - name: List updated files
         id: updated
         uses: tj-actions/changed-files@v42
         with:
