@@ -1,6 +1,114 @@
 {
   "versions": [
     {
+      "version": "0.0.0-canary.19",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/ForsakenHarmony/terraform-provider-proxmox/releases/download/v0.0.0-canary.19/terraform-provider-proxmox_0.0.0-canary.19_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/ForsakenHarmony/terraform-provider-proxmox/releases/download/v0.0.0-canary.19/terraform-provider-proxmox_0.0.0-canary.19_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-proxmox_0.0.0-canary.19_darwin_amd64.zip",
+          "download_url": "https://github.com/ForsakenHarmony/terraform-provider-proxmox/releases/download/v0.0.0-canary.19/terraform-provider-proxmox_0.0.0-canary.19_darwin_amd64.zip",
+          "shasum": "c4384b26d2a97a776d0c5803e2688a226871f1648423084472d92f86f2728a9c"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-proxmox_0.0.0-canary.19_darwin_arm64.zip",
+          "download_url": "https://github.com/ForsakenHarmony/terraform-provider-proxmox/releases/download/v0.0.0-canary.19/terraform-provider-proxmox_0.0.0-canary.19_darwin_arm64.zip",
+          "shasum": "4fd6fe7b27408b5bab15df9cc6ae3411915c7f4d583453ff5f46c4cbf40fff13"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-proxmox_0.0.0-canary.19_freebsd_386.zip",
+          "download_url": "https://github.com/ForsakenHarmony/terraform-provider-proxmox/releases/download/v0.0.0-canary.19/terraform-provider-proxmox_0.0.0-canary.19_freebsd_386.zip",
+          "shasum": "85211ff47f1deb42e777f9ff831d5536df63b6b5c30edf07377fd92e0de831c4"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-proxmox_0.0.0-canary.19_freebsd_amd64.zip",
+          "download_url": "https://github.com/ForsakenHarmony/terraform-provider-proxmox/releases/download/v0.0.0-canary.19/terraform-provider-proxmox_0.0.0-canary.19_freebsd_amd64.zip",
+          "shasum": "b84fd86246e0093f798b2072a8cabdf28e52c7ebc4f27078c48d3354565e283d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-proxmox_0.0.0-canary.19_freebsd_arm.zip",
+          "download_url": "https://github.com/ForsakenHarmony/terraform-provider-proxmox/releases/download/v0.0.0-canary.19/terraform-provider-proxmox_0.0.0-canary.19_freebsd_arm.zip",
+          "shasum": "6802eb8d09419967701666db9fb225d0eb604f6208f1de484478a1a59cf8457b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-proxmox_0.0.0-canary.19_freebsd_arm64.zip",
+          "download_url": "https://github.com/ForsakenHarmony/terraform-provider-proxmox/releases/download/v0.0.0-canary.19/terraform-provider-proxmox_0.0.0-canary.19_freebsd_arm64.zip",
+          "shasum": "7d661454ee1a204a9dcaacdc1bdb35e69d614d36d16419cff817cb8c7fa58bd2"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-proxmox_0.0.0-canary.19_linux_386.zip",
+          "download_url": "https://github.com/ForsakenHarmony/terraform-provider-proxmox/releases/download/v0.0.0-canary.19/terraform-provider-proxmox_0.0.0-canary.19_linux_386.zip",
+          "shasum": "c42c8b0def8ea783ca47777892e9ab63c2659ea13ebf81decec2927399e9fa4d"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-proxmox_0.0.0-canary.19_linux_amd64.zip",
+          "download_url": "https://github.com/ForsakenHarmony/terraform-provider-proxmox/releases/download/v0.0.0-canary.19/terraform-provider-proxmox_0.0.0-canary.19_linux_amd64.zip",
+          "shasum": "34b1e46082f25aeb1118986b0fef2d3cfdfc2a6b6035dde3edc61659edec0fcf"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-proxmox_0.0.0-canary.19_linux_arm.zip",
+          "download_url": "https://github.com/ForsakenHarmony/terraform-provider-proxmox/releases/download/v0.0.0-canary.19/terraform-provider-proxmox_0.0.0-canary.19_linux_arm.zip",
+          "shasum": "16a03120298feef16727b4bfb4095af10c83eecd7867b33b5b605399c7cb95b1"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-proxmox_0.0.0-canary.19_linux_arm64.zip",
+          "download_url": "https://github.com/ForsakenHarmony/terraform-provider-proxmox/releases/download/v0.0.0-canary.19/terraform-provider-proxmox_0.0.0-canary.19_linux_arm64.zip",
+          "shasum": "0f1bd7b2bd809076a87e82106f3fc6ea5b2248f35810e50bb3fb61ff13eb6617"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-proxmox_0.0.0-canary.19_windows_386.zip",
+          "download_url": "https://github.com/ForsakenHarmony/terraform-provider-proxmox/releases/download/v0.0.0-canary.19/terraform-provider-proxmox_0.0.0-canary.19_windows_386.zip",
+          "shasum": "f32d17a72567480af5c3af45fb692b25044aee0113827de3991546744d019663"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-proxmox_0.0.0-canary.19_windows_amd64.zip",
+          "download_url": "https://github.com/ForsakenHarmony/terraform-provider-proxmox/releases/download/v0.0.0-canary.19/terraform-provider-proxmox_0.0.0-canary.19_windows_amd64.zip",
+          "shasum": "fd3146b7660f3ce5acf91f5cc5401147756b728aad436af2e6fdcd84e224060d"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-proxmox_0.0.0-canary.19_windows_arm.zip",
+          "download_url": "https://github.com/ForsakenHarmony/terraform-provider-proxmox/releases/download/v0.0.0-canary.19/terraform-provider-proxmox_0.0.0-canary.19_windows_arm.zip",
+          "shasum": "4608e202e1bc86580bc7c3bb546a6abd24e461110d7d27d46be302fd05cf2ba8"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-proxmox_0.0.0-canary.19_windows_arm64.zip",
+          "download_url": "https://github.com/ForsakenHarmony/terraform-provider-proxmox/releases/download/v0.0.0-canary.19/terraform-provider-proxmox_0.0.0-canary.19_windows_arm64.zip",
+          "shasum": "b6b2eba7c1e7bf1d9898022739b5b5daef65f55d200321c78cfb54af787967f7"
+        }
+      ]
+    },
+    {
       "version": "0.0.0-canary.18",
       "protocols": [
         "5.0"
