@@ -5,8 +5,11 @@ on:
     - cron: '5 * * * *'
   workflow_dispatch:
 
+# Use global lock
+#
+# https://github.com/opentofu/registry/pull/272#discussion_r1511031778
 concurrency:
-  group: ${{ github.head_ref }}
+  group: main
 
 jobs:
   bump-versions:
