@@ -1,6 +1,114 @@
 {
   "versions": [
     {
+      "version": "1.52.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/dynatrace-oss/terraform-provider-dynatrace/releases/download/v1.52.0/terraform-provider-dynatrace_1.52.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/dynatrace-oss/terraform-provider-dynatrace/releases/download/v1.52.0/terraform-provider-dynatrace_1.52.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-dynatrace_1.52.0_darwin_amd64.zip",
+          "download_url": "https://github.com/dynatrace-oss/terraform-provider-dynatrace/releases/download/v1.52.0/terraform-provider-dynatrace_1.52.0_darwin_amd64.zip",
+          "shasum": "e89e1ed24aa0cb97eeb020c341fc3743cf010fbb707172f61439f33fdbc421e1"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-dynatrace_1.52.0_darwin_arm64.zip",
+          "download_url": "https://github.com/dynatrace-oss/terraform-provider-dynatrace/releases/download/v1.52.0/terraform-provider-dynatrace_1.52.0_darwin_arm64.zip",
+          "shasum": "a7cde09691ec3ac0b9cd47a9a962be420039f033912b01c8948a69684aa07f00"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-dynatrace_1.52.0_freebsd_386.zip",
+          "download_url": "https://github.com/dynatrace-oss/terraform-provider-dynatrace/releases/download/v1.52.0/terraform-provider-dynatrace_1.52.0_freebsd_386.zip",
+          "shasum": "7305449b649af420945d1880b4dd267cf8ed66aabe0ebb2859ef4841b34d3f54"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-dynatrace_1.52.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/dynatrace-oss/terraform-provider-dynatrace/releases/download/v1.52.0/terraform-provider-dynatrace_1.52.0_freebsd_amd64.zip",
+          "shasum": "1ca73db238d20e09e7ced9e65ea11ed57f0bd26e85e45cb4ce14d1216b573a7b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-dynatrace_1.52.0_freebsd_arm.zip",
+          "download_url": "https://github.com/dynatrace-oss/terraform-provider-dynatrace/releases/download/v1.52.0/terraform-provider-dynatrace_1.52.0_freebsd_arm.zip",
+          "shasum": "56aa5f2d1405699d6a39f8fe436ce46deabe93591a315c87f45bd11f19d6ec74"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-dynatrace_1.52.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/dynatrace-oss/terraform-provider-dynatrace/releases/download/v1.52.0/terraform-provider-dynatrace_1.52.0_freebsd_arm64.zip",
+          "shasum": "37d453941f014da5a775bbe14e24657d1640d7df8d9b9b85e6c7b798c35047f8"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-dynatrace_1.52.0_linux_386.zip",
+          "download_url": "https://github.com/dynatrace-oss/terraform-provider-dynatrace/releases/download/v1.52.0/terraform-provider-dynatrace_1.52.0_linux_386.zip",
+          "shasum": "623f4d9ed95af584272fc2b2e68374f7a31b34aa795badbefe66929189a3612d"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-dynatrace_1.52.0_linux_amd64.zip",
+          "download_url": "https://github.com/dynatrace-oss/terraform-provider-dynatrace/releases/download/v1.52.0/terraform-provider-dynatrace_1.52.0_linux_amd64.zip",
+          "shasum": "3c22d34a5664982b0482ca92a8c941047829eceff8f2abc5eb1a9ee341240179"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-dynatrace_1.52.0_linux_arm.zip",
+          "download_url": "https://github.com/dynatrace-oss/terraform-provider-dynatrace/releases/download/v1.52.0/terraform-provider-dynatrace_1.52.0_linux_arm.zip",
+          "shasum": "7f34f80bef40a7f200eaca0c810cf12867d1358f0d155b2b79a63f624b8ff04c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-dynatrace_1.52.0_linux_arm64.zip",
+          "download_url": "https://github.com/dynatrace-oss/terraform-provider-dynatrace/releases/download/v1.52.0/terraform-provider-dynatrace_1.52.0_linux_arm64.zip",
+          "shasum": "0b1fb76abf8da86826d35d39a3a414b7bbfc11b6d13e29e2264d9675444f98fc"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-dynatrace_1.52.0_windows_386.zip",
+          "download_url": "https://github.com/dynatrace-oss/terraform-provider-dynatrace/releases/download/v1.52.0/terraform-provider-dynatrace_1.52.0_windows_386.zip",
+          "shasum": "5e4a427953a0ab3a05f6cddb7492b02c8f5b3367e9d911ce138634e2d425dc0d"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-dynatrace_1.52.0_windows_amd64.zip",
+          "download_url": "https://github.com/dynatrace-oss/terraform-provider-dynatrace/releases/download/v1.52.0/terraform-provider-dynatrace_1.52.0_windows_amd64.zip",
+          "shasum": "dd070a3e0d1b6623bc4cd98d0cbe1736c5b812ca0c924af5fa8b1f7c43214644"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-dynatrace_1.52.0_windows_arm.zip",
+          "download_url": "https://github.com/dynatrace-oss/terraform-provider-dynatrace/releases/download/v1.52.0/terraform-provider-dynatrace_1.52.0_windows_arm.zip",
+          "shasum": "06e252cc8082c8d213a837ee09bd96706486041a5885c983ac3bc17f4bd1376c"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-dynatrace_1.52.0_windows_arm64.zip",
+          "download_url": "https://github.com/dynatrace-oss/terraform-provider-dynatrace/releases/download/v1.52.0/terraform-provider-dynatrace_1.52.0_windows_arm64.zip",
+          "shasum": "fc845d75ec26e6596967a9ab673e068179d734f2b33a7d412a9f0f67510df492"
+        }
+      ]
+    },
+    {
       "version": "1.51.0",
       "protocols": [
         "5.0"
