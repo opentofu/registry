@@ -14,7 +14,7 @@ We use `mkcert` to create a locally-trusted SSL certificate.
 
 ```sh
 # Create and install CA in system trust store.
-mkcert -install # Create and install CA in system trust store.
+mkcert -install
 # Create a new certificate valid for localhost
 mkcert -cert-file cmd/run-server/localhost.pem -key-file cmd/run-server/localhost-key.pem localhost
 ```
@@ -72,5 +72,4 @@ module "consul" {
   source = "localhost.:8443/hashicorp/consul/aws" # Keep the dot after localhost, it is not a typo
   version = "0.11.0"
 }
-
 ```
