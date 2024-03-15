@@ -1,6 +1,115 @@
 {
   "versions": [
     {
+      "version": "0.4.0",
+      "protocols": [
+        "5.0",
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/ibm-hyper-protect/terraform-provider-hpcr/releases/download/v0.4.0/terraform-provider-hpcr_0.4.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/ibm-hyper-protect/terraform-provider-hpcr/releases/download/v0.4.0/terraform-provider-hpcr_0.4.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-hpcr_0.4.0_darwin_amd64.zip",
+          "download_url": "https://github.com/ibm-hyper-protect/terraform-provider-hpcr/releases/download/v0.4.0/terraform-provider-hpcr_0.4.0_darwin_amd64.zip",
+          "shasum": "ccf4dc80ea829bd35d1d38df6775d4b177630912f52ccb1e311339a7911b4c37"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-hpcr_0.4.0_darwin_arm64.zip",
+          "download_url": "https://github.com/ibm-hyper-protect/terraform-provider-hpcr/releases/download/v0.4.0/terraform-provider-hpcr_0.4.0_darwin_arm64.zip",
+          "shasum": "d9e54f9fae58a604639bf7c6ac3bb6e643770f6430b6fed919c3ca50b2e7ae8a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-hpcr_0.4.0_freebsd_386.zip",
+          "download_url": "https://github.com/ibm-hyper-protect/terraform-provider-hpcr/releases/download/v0.4.0/terraform-provider-hpcr_0.4.0_freebsd_386.zip",
+          "shasum": "0afbea1058812b6e24eaca41cf34d99d21332082d4b733aec22d941281cbe358"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-hpcr_0.4.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/ibm-hyper-protect/terraform-provider-hpcr/releases/download/v0.4.0/terraform-provider-hpcr_0.4.0_freebsd_amd64.zip",
+          "shasum": "5db46f6a9815eed4f5e25e2a52b330d52d08d507f41416e700c5f15da2fe2640"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-hpcr_0.4.0_freebsd_arm.zip",
+          "download_url": "https://github.com/ibm-hyper-protect/terraform-provider-hpcr/releases/download/v0.4.0/terraform-provider-hpcr_0.4.0_freebsd_arm.zip",
+          "shasum": "dddcdbc141102eb16fb323d12939d3cc340903de60bbe6de6e9bb87cff995402"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-hpcr_0.4.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/ibm-hyper-protect/terraform-provider-hpcr/releases/download/v0.4.0/terraform-provider-hpcr_0.4.0_freebsd_arm64.zip",
+          "shasum": "2315488d796d688c1eeae432d27320b224fa0964c5462adb19f7be2d06c2f134"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-hpcr_0.4.0_linux_386.zip",
+          "download_url": "https://github.com/ibm-hyper-protect/terraform-provider-hpcr/releases/download/v0.4.0/terraform-provider-hpcr_0.4.0_linux_386.zip",
+          "shasum": "fa5be08d93acd4ca03db94eca5d549e0e38308dbc7b6540ccac1d29a8182128e"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-hpcr_0.4.0_linux_amd64.zip",
+          "download_url": "https://github.com/ibm-hyper-protect/terraform-provider-hpcr/releases/download/v0.4.0/terraform-provider-hpcr_0.4.0_linux_amd64.zip",
+          "shasum": "4044bddab697fb23c7214af37540ada592cb09120cd546dbb2eb2fe58aa18412"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-hpcr_0.4.0_linux_arm.zip",
+          "download_url": "https://github.com/ibm-hyper-protect/terraform-provider-hpcr/releases/download/v0.4.0/terraform-provider-hpcr_0.4.0_linux_arm.zip",
+          "shasum": "9b41531c74c3e20d82d77659749c681f1e5feadcc0a0e10802733ba6d4fca1bb"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-hpcr_0.4.0_linux_arm64.zip",
+          "download_url": "https://github.com/ibm-hyper-protect/terraform-provider-hpcr/releases/download/v0.4.0/terraform-provider-hpcr_0.4.0_linux_arm64.zip",
+          "shasum": "8f0a8fbe6628b810af50460619cff3255ba1ea11638d3b54334fd24965f4af9a"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-hpcr_0.4.0_windows_386.zip",
+          "download_url": "https://github.com/ibm-hyper-protect/terraform-provider-hpcr/releases/download/v0.4.0/terraform-provider-hpcr_0.4.0_windows_386.zip",
+          "shasum": "6e66df0d708808e2d53f3029b089c593caebe7e8f1d22976260e5da847d24482"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-hpcr_0.4.0_windows_amd64.zip",
+          "download_url": "https://github.com/ibm-hyper-protect/terraform-provider-hpcr/releases/download/v0.4.0/terraform-provider-hpcr_0.4.0_windows_amd64.zip",
+          "shasum": "ec6c53e1df18db28c2aeda8931948530d1dee22b887dc667e90535e0f4416065"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-hpcr_0.4.0_windows_arm.zip",
+          "download_url": "https://github.com/ibm-hyper-protect/terraform-provider-hpcr/releases/download/v0.4.0/terraform-provider-hpcr_0.4.0_windows_arm.zip",
+          "shasum": "91331b444bdd07ca686798eb6b37f3d00e46d1e49dd098b1e9e52296955474ef"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-hpcr_0.4.0_windows_arm64.zip",
+          "download_url": "https://github.com/ibm-hyper-protect/terraform-provider-hpcr/releases/download/v0.4.0/terraform-provider-hpcr_0.4.0_windows_arm64.zip",
+          "shasum": "d601b41b3e06080ed26475ae69ee63ff83df8c537d59b9c45f488d4344da914b"
+        }
+      ]
+    },
+    {
       "version": "0.3.24",
       "protocols": [
         "5.0",
