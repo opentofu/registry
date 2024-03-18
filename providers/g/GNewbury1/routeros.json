@@ -1,6 +1,222 @@
 {
   "versions": [
     {
+      "version": "1.37.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.1/terraform-provider-routeros_1.37.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.1/terraform-provider-routeros_1.37.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-routeros_1.37.1_darwin_amd64.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.1/terraform-provider-routeros_1.37.1_darwin_amd64.zip",
+          "shasum": "9913fa11df9067823242449c1c584311430c66374e84772a790025c0559256f1"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-routeros_1.37.1_darwin_arm64.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.1/terraform-provider-routeros_1.37.1_darwin_arm64.zip",
+          "shasum": "7bff1b16dea7904a2aab9041dae5caf2ff0ad10dc8c39c1749de37f6314ca0f4"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-routeros_1.37.1_freebsd_386.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.1/terraform-provider-routeros_1.37.1_freebsd_386.zip",
+          "shasum": "90b42da26a3d172a69e784308198e98669ab32d29c0b86bc8bb04f9fa1480501"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-routeros_1.37.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.1/terraform-provider-routeros_1.37.1_freebsd_amd64.zip",
+          "shasum": "962c188ac24d13fc4f91973a2128312c93fd6d45f7c6e578bd7696a7c73a7fdb"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-routeros_1.37.1_freebsd_arm.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.1/terraform-provider-routeros_1.37.1_freebsd_arm.zip",
+          "shasum": "bab64e931373af26a62ca2e7da05a704fe8dcf218116d7c91d73bf19f80ae27e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-routeros_1.37.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.1/terraform-provider-routeros_1.37.1_freebsd_arm64.zip",
+          "shasum": "7dcc1babbba963ae870a12e1a1002bd16b52326e53de83e0a639dd39aeca3ae3"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-routeros_1.37.1_linux_386.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.1/terraform-provider-routeros_1.37.1_linux_386.zip",
+          "shasum": "20f6d4211ec3fba373e1bafe8db20fb84551d01dd4cd53306aecaf85f02b33b4"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-routeros_1.37.1_linux_amd64.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.1/terraform-provider-routeros_1.37.1_linux_amd64.zip",
+          "shasum": "1de2cf9fc58a8aaeb2722463804e1ca0652c1733ff2262e7efea0bcf3a3c6a04"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-routeros_1.37.1_linux_arm.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.1/terraform-provider-routeros_1.37.1_linux_arm.zip",
+          "shasum": "13cbe9ff72a0bb2b5dd74f8b132d0ff3eb0bb92f7b54350238007097e64981c7"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-routeros_1.37.1_linux_arm64.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.1/terraform-provider-routeros_1.37.1_linux_arm64.zip",
+          "shasum": "15535f02851aeb412ce94bfb01e56a5f3ce4f41dc7320307e7ed1c7df7163119"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-routeros_1.37.1_windows_386.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.1/terraform-provider-routeros_1.37.1_windows_386.zip",
+          "shasum": "373773ab34beedb036fed8074d09af83062869b74694f0e13041091a27856222"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-routeros_1.37.1_windows_amd64.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.1/terraform-provider-routeros_1.37.1_windows_amd64.zip",
+          "shasum": "c9c49da9a8821ab0c92afba8406173a482f25126f6ddc7afd5db20342f9791aa"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-routeros_1.37.1_windows_arm.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.1/terraform-provider-routeros_1.37.1_windows_arm.zip",
+          "shasum": "61114a1ba27baff774cdb139fa1b1494f1a0303c134479cda883fffdf7425e3c"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-routeros_1.37.1_windows_arm64.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.1/terraform-provider-routeros_1.37.1_windows_arm64.zip",
+          "shasum": "a7baff580f13d83ac1ffa9d464170f965f608ca8dbd1ccc0f0fc9fefd3a1349c"
+        }
+      ]
+    },
+    {
+      "version": "1.37.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.0/terraform-provider-routeros_1.37.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.0/terraform-provider-routeros_1.37.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-routeros_1.37.0_darwin_amd64.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.0/terraform-provider-routeros_1.37.0_darwin_amd64.zip",
+          "shasum": "bd366b054a08cfc793b58187d54fa8e195c6da671f66b390b80f1838b1165581"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-routeros_1.37.0_darwin_arm64.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.0/terraform-provider-routeros_1.37.0_darwin_arm64.zip",
+          "shasum": "94ab51e5fcc8e8151cbf16828b6c37e94425099d9b42c08a70270449874450b7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-routeros_1.37.0_freebsd_386.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.0/terraform-provider-routeros_1.37.0_freebsd_386.zip",
+          "shasum": "e3576caf2a1bbe7d6c42e2f2ccdcaea1f09eb48743c03a5e519b4b9dbda51c3e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-routeros_1.37.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.0/terraform-provider-routeros_1.37.0_freebsd_amd64.zip",
+          "shasum": "e66ae1b6de67769df7b2b83697ba4bd1a32122fb61f1c721e445c35ef63ea7e9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-routeros_1.37.0_freebsd_arm.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.0/terraform-provider-routeros_1.37.0_freebsd_arm.zip",
+          "shasum": "eaec599bfba78bc957770f845596d5893ec6b4e000ad3d1b7bcb4d381b70f38e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-routeros_1.37.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.0/terraform-provider-routeros_1.37.0_freebsd_arm64.zip",
+          "shasum": "577dc00b3c78c428a740168847c7803c1b730b6a2aa8ae6c4a88d4e92d66cad6"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-routeros_1.37.0_linux_386.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.0/terraform-provider-routeros_1.37.0_linux_386.zip",
+          "shasum": "d1ffd4bf06241551ae4f0c31b09e750df1dfbd2e12041b58667b88240a1773ed"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-routeros_1.37.0_linux_amd64.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.0/terraform-provider-routeros_1.37.0_linux_amd64.zip",
+          "shasum": "092da6e585fa8de27c36d8bcb83d090d162a09fc8195251fd76f67c48896ea79"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-routeros_1.37.0_linux_arm.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.0/terraform-provider-routeros_1.37.0_linux_arm.zip",
+          "shasum": "29cf176c7483cfb745c63eab80fd9d60c88c2a61d99d80d99edca80dffb3560f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-routeros_1.37.0_linux_arm64.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.0/terraform-provider-routeros_1.37.0_linux_arm64.zip",
+          "shasum": "c755f20fe9a5edcfa06f00dc07921b30e12d823f21696b7d853d9de7279ac49a"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-routeros_1.37.0_windows_386.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.0/terraform-provider-routeros_1.37.0_windows_386.zip",
+          "shasum": "63f8667aff65ca277f65ea6212974077ed73e11120c2d4baaffb3342d0b04c5d"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-routeros_1.37.0_windows_amd64.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.0/terraform-provider-routeros_1.37.0_windows_amd64.zip",
+          "shasum": "8345c7bd1049856be82cf9050172ad54942f02b9842f53dbc1c348740760b119"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-routeros_1.37.0_windows_arm.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.0/terraform-provider-routeros_1.37.0_windows_arm.zip",
+          "shasum": "b0eb90af539a40fad19be03636a4dc3cca6d6f23db41e7c28c2615d1e0a18073"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-routeros_1.37.0_windows_arm64.zip",
+          "download_url": "https://github.com/GNewbury1/terraform-provider-routeros/releases/download/v1.37.0/terraform-provider-routeros_1.37.0_windows_arm64.zip",
+          "shasum": "806be42724bb1a9ef954ed910ed5c31921747cef820bcb301f71c1831fbb087e"
+        }
+      ]
+    },
+    {
       "version": "1.36.1",
       "protocols": [
         "5.0"
