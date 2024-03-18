@@ -1,6 +1,114 @@
 {
   "versions": [
     {
+      "version": "2.1.8-rc.1",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/keyfactor-pub/terraform-provider-keyfactor/releases/download/v2.1.8-rc.1/terraform-provider-keyfactor_2.1.8-rc.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/keyfactor-pub/terraform-provider-keyfactor/releases/download/v2.1.8-rc.1/terraform-provider-keyfactor_2.1.8-rc.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-keyfactor_2.1.8-rc.1_darwin_amd64.zip",
+          "download_url": "https://github.com/keyfactor-pub/terraform-provider-keyfactor/releases/download/v2.1.8-rc.1/terraform-provider-keyfactor_2.1.8-rc.1_darwin_amd64.zip",
+          "shasum": "7b80dfbe399005912f6f9dded80655c84aff402ea9a4884595e12600473579cd"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-keyfactor_2.1.8-rc.1_darwin_arm64.zip",
+          "download_url": "https://github.com/keyfactor-pub/terraform-provider-keyfactor/releases/download/v2.1.8-rc.1/terraform-provider-keyfactor_2.1.8-rc.1_darwin_arm64.zip",
+          "shasum": "ae0044aeac4bfe36cdb5e0fca6077d6d8d713c225b3bce1d86a04ff0abdf6d67"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-keyfactor_2.1.8-rc.1_freebsd_386.zip",
+          "download_url": "https://github.com/keyfactor-pub/terraform-provider-keyfactor/releases/download/v2.1.8-rc.1/terraform-provider-keyfactor_2.1.8-rc.1_freebsd_386.zip",
+          "shasum": "534976686522dde04987276afbcf410a021730b7e25d2d7e86627538a031c57b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-keyfactor_2.1.8-rc.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/keyfactor-pub/terraform-provider-keyfactor/releases/download/v2.1.8-rc.1/terraform-provider-keyfactor_2.1.8-rc.1_freebsd_amd64.zip",
+          "shasum": "d91cc3d8a5b9e327134394f7ee062a9a1c56e73dd46557a7590991e83144dab7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-keyfactor_2.1.8-rc.1_freebsd_arm.zip",
+          "download_url": "https://github.com/keyfactor-pub/terraform-provider-keyfactor/releases/download/v2.1.8-rc.1/terraform-provider-keyfactor_2.1.8-rc.1_freebsd_arm.zip",
+          "shasum": "203db4c4cd08bce8010bb7a81ae7476b00e6e57deca188d2f6baf62e1b8cc60a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-keyfactor_2.1.8-rc.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/keyfactor-pub/terraform-provider-keyfactor/releases/download/v2.1.8-rc.1/terraform-provider-keyfactor_2.1.8-rc.1_freebsd_arm64.zip",
+          "shasum": "62abe8f56d61f264abaf87e12f94eda31d7871e3d56f6cc349cd6365a983c5e0"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-keyfactor_2.1.8-rc.1_linux_386.zip",
+          "download_url": "https://github.com/keyfactor-pub/terraform-provider-keyfactor/releases/download/v2.1.8-rc.1/terraform-provider-keyfactor_2.1.8-rc.1_linux_386.zip",
+          "shasum": "81438303409bb13ff49bed3fa0f4926e12f367d287598ae9488afc1cb27bf6e1"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-keyfactor_2.1.8-rc.1_linux_amd64.zip",
+          "download_url": "https://github.com/keyfactor-pub/terraform-provider-keyfactor/releases/download/v2.1.8-rc.1/terraform-provider-keyfactor_2.1.8-rc.1_linux_amd64.zip",
+          "shasum": "28fc654e5f376b0a0a1f7fa0853f596c3ef8f7f043b747035a5281bb2c960cbd"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-keyfactor_2.1.8-rc.1_linux_arm.zip",
+          "download_url": "https://github.com/keyfactor-pub/terraform-provider-keyfactor/releases/download/v2.1.8-rc.1/terraform-provider-keyfactor_2.1.8-rc.1_linux_arm.zip",
+          "shasum": "83b0715497f96ba5f069b91a46e52b0c55e29bbe69fec9c4755e7c58b93f22ae"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-keyfactor_2.1.8-rc.1_linux_arm64.zip",
+          "download_url": "https://github.com/keyfactor-pub/terraform-provider-keyfactor/releases/download/v2.1.8-rc.1/terraform-provider-keyfactor_2.1.8-rc.1_linux_arm64.zip",
+          "shasum": "5623aa637b671fdc49324bb919b0b91655445806a4d971eb1d579a1411ef4c1b"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-keyfactor_2.1.8-rc.1_windows_386.zip",
+          "download_url": "https://github.com/keyfactor-pub/terraform-provider-keyfactor/releases/download/v2.1.8-rc.1/terraform-provider-keyfactor_2.1.8-rc.1_windows_386.zip",
+          "shasum": "1dff1a43a17bfe8304cba971a378ad6df7e60bcc078d54112a49379198e08c24"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-keyfactor_2.1.8-rc.1_windows_amd64.zip",
+          "download_url": "https://github.com/keyfactor-pub/terraform-provider-keyfactor/releases/download/v2.1.8-rc.1/terraform-provider-keyfactor_2.1.8-rc.1_windows_amd64.zip",
+          "shasum": "87635bcf7ab1679a5aea96d0c32201ac42ebcc22657c731b75172194d0cce46a"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-keyfactor_2.1.8-rc.1_windows_arm.zip",
+          "download_url": "https://github.com/keyfactor-pub/terraform-provider-keyfactor/releases/download/v2.1.8-rc.1/terraform-provider-keyfactor_2.1.8-rc.1_windows_arm.zip",
+          "shasum": "dcf3cc31bbe8051720c8d1bf9249e5d042101cc450d9ae39729f12bfecd97fd0"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-keyfactor_2.1.8-rc.1_windows_arm64.zip",
+          "download_url": "https://github.com/keyfactor-pub/terraform-provider-keyfactor/releases/download/v2.1.8-rc.1/terraform-provider-keyfactor_2.1.8-rc.1_windows_arm64.zip",
+          "shasum": "c954041a866653ec7d6db64cf6e34b48465b98ac2f9119d9d0edb7500ff47d04"
+        }
+      ]
+    },
+    {
       "version": "2.1.7",
       "protocols": [
         "6.0"
