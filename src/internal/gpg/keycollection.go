@@ -19,7 +19,7 @@ func (k KeyCollection) MetadataPath() string {
 }
 
 func (k KeyCollection) ListKeys() ([]Key, error) {
-	location := k.MetadataPath()
+	location := strings.ToLower(k.MetadataPath())
 
 	// check if the directory exists
 	if _, err := os.Stat(location); os.IsNotExist(err) {
