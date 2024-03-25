@@ -1,4 +1,4 @@
-# Be aware: This workflow should be kept in sync with generate-and-deploy.yml
+# Be aware: This workflow should be kept in sync with generate-and-deploy.yml and generate-and-deploy-recent.yml
 name: Generate and Sync Files with Delete
 
 on:
@@ -25,6 +25,7 @@ jobs:
         uses: actions/setup-go@v4
         with:
           go-version-file: './src/go.mod'
+          cache-dependency-path: './src/go.sum'
 
       - name: Setup dependencies
         run: sudo apt-get install rclone
