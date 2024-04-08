@@ -1,6 +1,14 @@
 name: Bump Provider and Module Versions
 
+# Use global lock
+#
+# https://github.com/opentofu/registry/pull/272#discussion_r1511031778
+concurrency:
+  group: main
+
 on:
+  schedule:
+    - cron: '0,15,30,45 * * * *'
   workflow_dispatch:
     inputs:
       environment:
@@ -9,23 +17,21 @@ on:
         options:
           - Development
           - Production
-  workflow_call:
-    inputs:
-      environment:
-        type: string
-        description: The environment of the Registry
 
 jobs:
   bump-versions:
     runs-on: ubuntu-latest
 
     environment:
-      name: ${{ inputs.environment }}
+      name: ${{ inputs.environment || 'Production' }}
     permissions:
       contents: write
       actions: write
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    strategy:
+      matrix:
+        prefix: ["0", "1", "2", "3", "4", "5", "6", "7", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -34,33 +40,9 @@ jobs:
         uses: actions/setup-go@v4
         with:
           go-version-file: './src/go.mod'
-
-      - name: Run version bump script
-        working-directory: ./src
-        run: go run ./cmd/bump-versions
-
-      - name: Get branch
-        id: get-branch
-        run: |
-          if [ "${{ inputs.environment }}" = "Production" ]; then
-            export BRANCH="${{ github.ref }}"
-          elif [ "${{ inputs.environment }}" = "Development" ]; then
-            TIMESTAMP=$(date +%s)
-            export BRANCH="${{ github.ref }}-bump-versions-$TIMESTAMP"
-          fi
-          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
-
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          file_pattern: 'modules/**/* providers/**/*'
-
-          commit_author: OpenTofu Core Development Team <core@opentofu.org>
-          commit_user_name: OpenTofu Core Development Team
-          commit_message: "Automated bump of versions for providers and modules"
-
-          create_branch: true
-          branch: ${{ env.BRANCH }}
-
-      - name: Print Branch name
-        run: |
-          echo "Providers and modules changes were pushed to branch: ${{ env.BRANCH }}"
+          cache-dependency-path: './src/go.sum'
+      - name: Bump Versions
+        run: ./.github/workflows/bump-versions.sh
+        env:
+          PREFIX: ${{ matrix.prefix }}
+          ENVIRONMENT: ${{ inputs.environment || 'Production' }}

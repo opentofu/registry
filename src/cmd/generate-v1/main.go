@@ -69,10 +69,12 @@ func main() {
 		os.Exit(1)
 	}
 
-	err = v1api.ArchivedOverrides(*destinationDir, logger)
-	if err != nil {
-		logger.Error(err.Error())
-		os.Exit(1)
+	if providerNamespace == nil || *providerNamespace == "hashicorp" {
+		err = v1api.ArchivedOverrides(*destinationDir, logger)
+		if err != nil {
+			logger.Error(err.Error())
+			os.Exit(1)
+		}
 	}
 
 	logger.Info("Completed generating v1 API responses")

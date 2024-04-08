@@ -6,6 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
+	"strings"
 
 	"github.com/opentofu/registry-stable/internal/github"
 	"github.com/opentofu/registry-stable/internal/parallel"
@@ -48,7 +49,7 @@ func ListModules(moduleDataDir string, moduleNamespace string, logger *slog.Logg
 			return nil
 		}
 
-		if moduleNamespace != "" && m.Namespace != moduleNamespace {
+		if moduleNamespace != "" && !strings.HasPrefix(m.Namespace, moduleNamespace) {
 			logger.Debug("Filtered out module", slog.String("path", path))
 			return nil
 		}

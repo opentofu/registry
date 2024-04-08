@@ -6,6 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
+	"strings"
 
 	"github.com/opentofu/registry-stable/internal/github"
 	"github.com/opentofu/registry-stable/internal/parallel"
@@ -46,7 +47,7 @@ func ListProviders(providerDataDir string, providerNamespace string, logger *slo
 			return nil
 		}
 
-		if providerNamespace != "" && p.Namespace != providerNamespace {
+		if providerNamespace != "" && !strings.HasPrefix(p.Namespace, providerNamespace) {
 			logger.Debug("Filtered out provider", slog.String("path", path))
 			return nil
 		}
