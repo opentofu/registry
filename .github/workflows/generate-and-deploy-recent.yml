@@ -15,6 +15,7 @@ on:
 
 jobs:
   generate-and-sync:
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     environment:
       name: ${{ inputs.environment || 'Production' }}
