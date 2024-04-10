@@ -42,6 +42,7 @@ func extractModuleDetailsFromPath(path string) *Module {
 // ListModules walks the module metadata directory provided and returns a list of modules.
 func ListModules(moduleDataDir string, moduleNamespace string, logger *slog.Logger, ghClient github.Client) (List, error) {
 	var results []Module
+	moduleNamespace = strings.ToLower(moduleNamespace)
 	err := filepath.Walk(moduleDataDir, func(path string, info os.FileInfo, err error) error {
 		m := extractModuleDetailsFromPath(path)
 		if m == nil {
@@ -49,7 +50,7 @@ func ListModules(moduleDataDir string, moduleNamespace string, logger *slog.Logg
 			return nil
 		}
 
-		if moduleNamespace != "" && !strings.HasPrefix(m.Namespace, moduleNamespace) {
+		if moduleNamespace != "" && !strings.HasPrefix(strings.ToLower(m.Namespace), moduleNamespace) {
 			logger.Debug("Filtered out module", slog.String("path", path))
 			return nil
 		}
