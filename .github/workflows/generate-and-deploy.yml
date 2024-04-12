@@ -2,6 +2,8 @@
 name: Generate and Sync Files
 
 on:
+  schedule:
+    - cron: '0 0 * * *'
   workflow_dispatch:
     inputs:
       environment:
@@ -15,7 +17,7 @@ jobs:
   generate-and-sync:
     runs-on: ubuntu-latest
     environment:
-      name: ${{ inputs.environment }}
+      name: ${{ inputs.environment || 'Production' }}
 
     steps:
       - name: Checkout Repository
