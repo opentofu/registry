@@ -3,7 +3,7 @@ name: Generate and Sync Files
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '5,20,35,50 * * * *'
   workflow_dispatch:
     inputs:
       environment:
