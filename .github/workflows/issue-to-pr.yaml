@@ -210,7 +210,7 @@ jobs:
             exit 1
           fi
 
-          keyfile="../keys/${namespace:0:1}/$namespace/provider.asc"
+          keyfile="../keys/${namespace:0:1}/$namespace/provider-$(date +%s).asc"
           if [ -d $(dirname $keyfile) ]; then
             msg=Updated
             git rm $(dirname $keyfile)/*
