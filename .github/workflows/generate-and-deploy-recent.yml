@@ -3,7 +3,7 @@ name: Generate and Sync Files
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '5,20,35,50 * * * *'
   workflow_dispatch:
     inputs:
       environment:
@@ -41,7 +41,7 @@ jobs:
           git fetch origin
           git checkout origin/main
           mkdir -p ./pruned/providers ./pruned/modules
-          git diff --name-only `git rev-list -1 --before="$(date -d '-24 hours' '+%Y-%m-%d %H:%M:%S')" HEAD` | xargs -I foo echo "mkdir -p ./pruned/\$(dirname foo); cp foo ./pruned/foo" | bash
+          git diff --name-only `git rev-list -1 --before="$(date -d '-1 hours' '+%Y-%m-%d %H:%M:%S')" HEAD` | xargs -I foo echo "mkdir -p ./pruned/\$(dirname foo); cp foo ./pruned/foo" | bash
           echo "Swapping dirs"
 
       - name: Run Generation script
