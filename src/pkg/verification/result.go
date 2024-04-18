@@ -7,6 +7,7 @@ const (
 	StatusFailure Status = "failure"
 	StatusNotRun  Status = "not_run"
 	StatusSkipped Status = "skipped"
+	StatusWarning Status = "warning"
 )
 
 type Result struct {

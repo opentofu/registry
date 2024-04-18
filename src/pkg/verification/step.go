@@ -19,6 +19,12 @@ func (s *Step) AddStep(name string, status Status, errors ...string) *Step {
 	return &step
 }
 
+func (s *Step) FailureToWarning() {
+	if s.Status == StatusFailure {
+		s.Status = StatusWarning
+	}
+}
+
 func (s *Step) RunStep(name string, fn func() error) *Step {
 	step := s.AddStep(name, StatusNotRun)
 	err := fn()
