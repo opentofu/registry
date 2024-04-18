@@ -18,6 +18,8 @@ func (r *Result) RenderMarkdown() string {
 			output += "⚠️ **Not Run**\n"
 		} else if step.Status == StatusSkipped {
 			output += "⚠️ **Skipped**\n"
+		} else if step.Status == StatusWarning {
+			output += "⚠️ **Warning**\n"
 		}
 
 		for _, err := range step.Errors {
@@ -37,6 +39,8 @@ func (r *Result) RenderMarkdown() string {
 				output += "⚠️ **Not Run**\n"
 			} else if subStep.Status == StatusSkipped {
 				output += "⚠️ **Skipped**\n"
+			} else if subStep.Status == StatusWarning {
+				output += "⚠️ **Warning**\n"
 			}
 
 			for _, err := range subStep.Errors {

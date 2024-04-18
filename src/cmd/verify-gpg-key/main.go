@@ -10,6 +10,7 @@ import (
 	"regexp"
 
 	"github.com/ProtonMail/gopenpgp/v2/crypto"
+
 	"github.com/opentofu/registry-stable/internal/files"
 	"github.com/opentofu/registry-stable/internal/github"
 	"github.com/opentofu/registry-stable/internal/gpg"
@@ -135,7 +136,7 @@ func VerifyKey(location string) *verification.Step {
 		return nil
 	})
 
-	verifyStep.RunStep("Key has a valid identity and email. (Email is preferable but optional)", func() error {
+	emailStep := verifyStep.RunStep("Key has a valid identity and email. (Email is preferable but optional)", func() error {
 		if key.GetFingerprint() == "" {
 			return fmt.Errorf("key has no fingerprint")
 		}
@@ -152,22 +153,24 @@ func VerifyKey(location string) *verification.Step {
 
 		for idName, identity := range identities {
 			if identity.Name == "" {
-				return fmt.Errorf("Key identity %s has no name", idName)
+				return fmt.Errorf("key identity %s has no name", idName)
 			}
 
 			email := gpgNameEmailRegex.FindStringSubmatch(identity.Name)
 			if len(email) != 2 {
-				return fmt.Errorf("Key identity %s has no email", idName)
+				return fmt.Errorf("key identity %s has no email", idName)
 			}
 
 			_, err := mail.ParseAddress(email[1])
 			if err != nil {
-				return fmt.Errorf("Key identity %s has an invalid email: %w", idName, err)
+				return fmt.Errorf("key identity %s has an invalid email: %w", idName, err)
 			}
 		}
 
 		return nil
 	})
+
+	emailStep.FailureToWarning()
 
 	return verifyStep
 }
