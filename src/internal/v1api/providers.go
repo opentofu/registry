@@ -46,14 +46,14 @@ func NewProviderGenerator(p provider.Provider, destination string, gpgKeyLocatio
 func (p ProviderGenerator) VersionListingPath() string {
 	namespacePath := strings.ToLower(p.Provider.Namespace)
 	providerNamePath := strings.ToLower(p.Provider.ProviderName)
-	return filepath.Join(p.Destination, "v1", "providers", namespacePath, providerNamePath, "versions")
+	return strings.ToLower(filepath.Join(p.Destination, "v1", "providers", namespacePath, providerNamePath, "versions"))
 }
 
 // VersionDownloadPath returns the path to the provider version download file.
 func (p ProviderGenerator) VersionDownloadPath(ver provider.Version, details ProviderVersionDetails) string {
 	namespacePath := strings.ToLower(p.Provider.Namespace)
 	providerNamePath := strings.ToLower(p.Provider.ProviderName)
-	return filepath.Join(p.Destination, "v1", "providers", namespacePath, providerNamePath, ver.Version, "download", details.OS, details.Arch)
+	return strings.ToLower(filepath.Join(p.Destination, "v1", "providers", namespacePath, providerNamePath, ver.Version, "download", details.OS, details.Arch))
 }
 
 // VersionListing will take the provider metadata and generate the responses for the provider version listing API endpoints.

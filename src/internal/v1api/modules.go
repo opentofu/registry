@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log/slog"
 	"path/filepath"
+	"strings"
 
 	"github.com/opentofu/registry-stable/internal"
 	"github.com/opentofu/registry-stable/internal/files"
@@ -36,12 +37,12 @@ func NewModuleGenerator(m module.Module, destination string) (ModuleGenerator, e
 
 // VersionListingPath returns the path to the module version listing file
 func (m ModuleGenerator) VersionListingPath() string {
-	return filepath.Join(m.Destination, "v1", "modules", m.Module.Namespace, m.Module.Name, m.Module.TargetSystem, "versions")
+	return strings.ToLower(filepath.Join(m.Destination, "v1", "modules", m.Module.Namespace, m.Module.Name, m.Module.TargetSystem, "versions"))
 }
 
 // VersionDownloadPath returns the path to the module version download file for the given version
 func (m ModuleGenerator) VersionDownloadPath(v module.Version) string {
-	return filepath.Join(m.Destination, "v1", "modules", m.Module.Namespace, m.Module.Name, m.Module.TargetSystem, internal.TrimTagPrefix(v.Version), "download")
+	return strings.ToLower(filepath.Join(m.Destination, "v1", "modules", m.Module.Namespace, m.Module.Name, m.Module.TargetSystem, internal.TrimTagPrefix(v.Version), "download"))
 }
 
 // VersionListing converts the module metadata into a ModuleVersionListingResponse, ready to be serialized to a file
