@@ -37,12 +37,19 @@ func NewModuleGenerator(m module.Module, destination string) (ModuleGenerator, e
 
 // VersionListingPath returns the path to the module version listing file
 func (m ModuleGenerator) VersionListingPath() string {
-	return strings.ToLower(filepath.Join(m.Destination, "v1", "modules", m.Module.Namespace, m.Module.Name, m.Module.TargetSystem, "versions"))
+	namespace := strings.ToLower(m.Module.Namespace)
+	name := strings.ToLower(m.Module.Name)
+	target := strings.ToLower(m.Module.TargetSystem)
+	return filepath.Join(m.Destination, "v1", "modules", namespace, name, target, "versions")
+
 }
 
 // VersionDownloadPath returns the path to the module version download file for the given version
 func (m ModuleGenerator) VersionDownloadPath(v module.Version) string {
-	return strings.ToLower(filepath.Join(m.Destination, "v1", "modules", m.Module.Namespace, m.Module.Name, m.Module.TargetSystem, internal.TrimTagPrefix(v.Version), "download"))
+	namespace := strings.ToLower(m.Module.Namespace)
+	name := strings.ToLower(m.Module.Name)
+	target := strings.ToLower(m.Module.TargetSystem)
+	return filepath.Join(m.Destination, "v1", "modules", namespace, name, target, internal.TrimTagPrefix(v.Version), "download")
 }
 
 // VersionListing converts the module metadata into a ModuleVersionListingResponse, ready to be serialized to a file
