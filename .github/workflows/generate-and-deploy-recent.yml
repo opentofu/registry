@@ -1,5 +1,5 @@
 # Be aware: This workflow should be kept in sync with generate-and-deploy-with-delete.yml and generate-and-deploy.yml
-name: Generate and Sync Files
+name: Generate and Sync Recent Changes
 
 on:
   schedule:
@@ -40,9 +40,15 @@ jobs:
           # Copy files changed into pruned directory
           git fetch origin
           git checkout origin/main
-          mkdir -p ./pruned/providers ./pruned/modules
-          git diff --name-only `git rev-list -1 --before="$(date -d '-1 hours' '+%Y-%m-%d %H:%M:%S')" HEAD` | xargs -I foo echo "mkdir -p ./pruned/\$(dirname foo); cp foo ./pruned/foo" | bash
-          echo "Swapping dirs"
+
+          rm -rf ./pruned/
+          mkdir ./pruned/
+          echo "Copy Changed Providers"
+          git diff --name-only "$(git rev-list -1 --before="$(date -d '-1 hours' '+%Y-%m-%d %H:%M:%S')" HEAD)" | grep ^providers | xargs -I foo echo "mkdir -p ./pruned/\$(dirname foo); cp foo ./pruned/foo; echo foo" | bash
+          echo "Copy Changed Providers by Keys"
+          git diff --name-only "$(git rev-list -1 --before="$(date -d '-1 hours' '+%Y-%m-%d %H:%M:%S')" HEAD)" | grep ^keys | xargs dirname | sort | uniq | sed -e 's/^keys/providers/' | xargs -I foo echo "mkdir -p ./pruned/\$(dirname foo); cp -r foo ./pruned/foo; echo foo" | bash
+          echo "Copy Changed Modules"
+          git diff --name-only "$(git rev-list -1 --before="$(date -d '-1 hours' '+%Y-%m-%d %H:%M:%S')" HEAD)" | grep ^modules | xargs -I foo echo "mkdir -p ./pruned/\$(dirname foo); cp foo ./pruned/foo; echo foo" | bash
 
       - name: Run Generation script
         working-directory: ./src
