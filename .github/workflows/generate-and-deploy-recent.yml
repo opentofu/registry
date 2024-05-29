@@ -41,7 +41,6 @@ jobs:
           git fetch origin
           git checkout origin/main
 
-          rm -rf ./pruned/
           mkdir ./pruned/
           echo "Copy Changed Providers"
           git diff --name-only "$(git rev-list -1 --before="$(date -d '-1 hours' '+%Y-%m-%d %H:%M:%S')" HEAD)" | grep ^providers | xargs -I foo echo "mkdir -p ./pruned/\$(dirname foo); cp foo ./pruned/foo; echo foo" | bash
