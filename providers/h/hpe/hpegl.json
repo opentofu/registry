@@ -1,6 +1,222 @@
 {
   "versions": [
     {
+      "version": "0.4.3",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.3/terraform-provider-hpegl_0.4.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.3/terraform-provider-hpegl_0.4.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-hpegl_0.4.3_darwin_amd64.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.3/terraform-provider-hpegl_0.4.3_darwin_amd64.zip",
+          "shasum": "476437121b53b2e422adeaa20256e64e144a9a0630e538c5e95326816d890ee8"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-hpegl_0.4.3_darwin_arm64.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.3/terraform-provider-hpegl_0.4.3_darwin_arm64.zip",
+          "shasum": "9fa605a3eb4b1b26fc91ed9b543a745d6411b89fd3296b46ab1120b9d3f2befc"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-hpegl_0.4.3_freebsd_386.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.3/terraform-provider-hpegl_0.4.3_freebsd_386.zip",
+          "shasum": "f539275ece7f514cf9ec5cbda2ed53dfcada687073bab9408a0baeffd65e771e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-hpegl_0.4.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.3/terraform-provider-hpegl_0.4.3_freebsd_amd64.zip",
+          "shasum": "4f57afde499b12c20d0438925165196cffb6d0c47b57c52758eebe58981d4331"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-hpegl_0.4.3_freebsd_arm.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.3/terraform-provider-hpegl_0.4.3_freebsd_arm.zip",
+          "shasum": "5955fbd1498ed838037c6e68ddb9925fa963ee02b5b3a135ca9151177f04598b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-hpegl_0.4.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.3/terraform-provider-hpegl_0.4.3_freebsd_arm64.zip",
+          "shasum": "54717a7bcf819a57ca8a8b423c419da76c8f0f6e3a377d8fd84493b5c5792fc6"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-hpegl_0.4.3_linux_386.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.3/terraform-provider-hpegl_0.4.3_linux_386.zip",
+          "shasum": "c29a406e8c05a474d9bb45c1acdfe7481e0f4d098df5cf78072e5d040cf409c1"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-hpegl_0.4.3_linux_amd64.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.3/terraform-provider-hpegl_0.4.3_linux_amd64.zip",
+          "shasum": "51c808182d03c5900ac647958c55444cc8f8c6591c6834d0b0730cc30b2d0aa1"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-hpegl_0.4.3_linux_arm.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.3/terraform-provider-hpegl_0.4.3_linux_arm.zip",
+          "shasum": "c2ed37418f5d9bfc1620d1ba7217fac4e626a01657c4994ec0758d74600d65d4"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-hpegl_0.4.3_linux_arm64.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.3/terraform-provider-hpegl_0.4.3_linux_arm64.zip",
+          "shasum": "604098f192c5b3143400ebd9e146a00a7c6f8ae132385a8d5b94ba23e162801b"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-hpegl_0.4.3_windows_386.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.3/terraform-provider-hpegl_0.4.3_windows_386.zip",
+          "shasum": "73983a6feba729ceb184348dc5b30ae2c437c88a195114ec71b660896961dafa"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-hpegl_0.4.3_windows_amd64.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.3/terraform-provider-hpegl_0.4.3_windows_amd64.zip",
+          "shasum": "7fc8c12b4d63a768229f80b93715d6e35f6a2bf9cf16047d38c5a8f8c56f23d8"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-hpegl_0.4.3_windows_arm.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.3/terraform-provider-hpegl_0.4.3_windows_arm.zip",
+          "shasum": "38b4c6b8eebaf0de1e1d1235dcbf01f347ba6523af654445657868f500825a49"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-hpegl_0.4.3_windows_arm64.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.3/terraform-provider-hpegl_0.4.3_windows_arm64.zip",
+          "shasum": "8ca76cb496ec700b7a1bcc15380e4d65c232e7070dadc6a63608f557852e36ca"
+        }
+      ]
+    },
+    {
+      "version": "0.4.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.2/terraform-provider-hpegl_0.4.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.2/terraform-provider-hpegl_0.4.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-hpegl_0.4.2_darwin_amd64.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.2/terraform-provider-hpegl_0.4.2_darwin_amd64.zip",
+          "shasum": "6d573467a75b067beabfd8fa8664c10683b83cb6de6eb646d4a4dfc998b552ee"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-hpegl_0.4.2_darwin_arm64.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.2/terraform-provider-hpegl_0.4.2_darwin_arm64.zip",
+          "shasum": "7735268af2ad6cd9e4ff5755695a568bfc2d5f8c74e2c9c89c89ca25318d4268"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-hpegl_0.4.2_freebsd_386.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.2/terraform-provider-hpegl_0.4.2_freebsd_386.zip",
+          "shasum": "6492c17e687aea527907258659a2536618e437097f836561d6368672afd3ecb8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-hpegl_0.4.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.2/terraform-provider-hpegl_0.4.2_freebsd_amd64.zip",
+          "shasum": "bbb95d5e2db2ef1baf4643f50d450bd6b40e83679634943a846f2bef8d823205"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-hpegl_0.4.2_freebsd_arm.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.2/terraform-provider-hpegl_0.4.2_freebsd_arm.zip",
+          "shasum": "b78fc2abc6e33567426c3d6aee252ac2449112e39d64e5306eadcbbffcb7913b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-hpegl_0.4.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.2/terraform-provider-hpegl_0.4.2_freebsd_arm64.zip",
+          "shasum": "7b21f0a947cbcc4378539043ad219e39ad6e61e28a8d2dca03de0994fb304c15"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-hpegl_0.4.2_linux_386.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.2/terraform-provider-hpegl_0.4.2_linux_386.zip",
+          "shasum": "b4450fbbe7f2a1afe76a5b15fef914dc723d5e4ff2fb84a6ff542852b6e85b21"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-hpegl_0.4.2_linux_amd64.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.2/terraform-provider-hpegl_0.4.2_linux_amd64.zip",
+          "shasum": "9806ef28bacc9245c61e969d61349f5c6d93cecc12b3fa9d0e04c6641ddb5aba"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-hpegl_0.4.2_linux_arm.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.2/terraform-provider-hpegl_0.4.2_linux_arm.zip",
+          "shasum": "670bfdf7525cabd50058d20b67c4346644655e55c85f5bca905a341c01489852"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-hpegl_0.4.2_linux_arm64.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.2/terraform-provider-hpegl_0.4.2_linux_arm64.zip",
+          "shasum": "1504cd24dbd250b28be1eeb1aec672ee694502c9ad60990f28d49e9a721c912a"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-hpegl_0.4.2_windows_386.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.2/terraform-provider-hpegl_0.4.2_windows_386.zip",
+          "shasum": "8e77beb1d73c965d4832911900c2d14fb4bee691ed1664d905e9894edafabb4e"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-hpegl_0.4.2_windows_amd64.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.2/terraform-provider-hpegl_0.4.2_windows_amd64.zip",
+          "shasum": "822f88315ab07fb1fd82ef5503b29871fd3a85d7d0b7b1cdfbf5688b1d34efc6"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-hpegl_0.4.2_windows_arm.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.2/terraform-provider-hpegl_0.4.2_windows_arm.zip",
+          "shasum": "141465b0815a4db223f1f6b11e915336702c60a728e7454037f8d677c57a3e1e"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-hpegl_0.4.2_windows_arm64.zip",
+          "download_url": "https://github.com/hpe/terraform-provider-hpegl/releases/download/v0.4.2/terraform-provider-hpegl_0.4.2_windows_arm64.zip",
+          "shasum": "51fec4d1bf52d4d0b8d7abef8a91ee8defa27d3f1313ba35eb53acca071436bf"
+        }
+      ]
+    },
+    {
       "version": "0.4.1",
       "protocols": [
         "5.0"
