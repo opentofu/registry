@@ -40,7 +40,7 @@ jobs:
           fi
           set -e
 
-          repository=$(echo "$BODY" | grep "### Provider Repository" -A2 | tail -n1 | sed -e 's/[\r\n]//g')
+          repository=$(echo "$BODY" | grep "### Provider Repository" -A2 | tail -n1 | tr "[:upper:]" "[:lower:]" | sed -e 's/[\r\n]//g')
 
           set +e
           go run ./cmd/add-provider -repository="$repository" -output=./output.json
@@ -57,7 +57,7 @@ jobs:
           namespace=$(cat ./output.json | jq -r '.namespace')
           name=$(cat ./output.json | jq -r '.name')
           jsonfile=$(cat ./output.json | jq -r '.file')
-          
+
 
           # Create Branch
           branch=provider-submission_${namespace}_${name}
@@ -117,7 +117,7 @@ jobs:
           fi
           set -e
 
-          repository=$(echo "$BODY" | grep "### Module Repository" -A2 | tail -n1 | sed -e 's/[\r\n]//g')
+          repository=$(echo "$BODY" | grep "### Module Repository" -A2 | tail -n1 | tr "[:upper:]" "[:lower:]" | sed -e 's/[\r\n]//g')
 
           set +e
           go run ./cmd/add-module -repository="$repository" -output=./output.json
@@ -135,7 +135,7 @@ jobs:
           name=$(cat ./output.json | jq -r '.name')
           target=$(cat ./output.json | jq -r '.target')
           jsonfile=$(cat ./output.json | jq -r '.file')
-          
+
 
           # Create Branch
           branch=module-submission_${namespace}_${name}_${target}
