@@ -1,6 +1,114 @@
 {
   "versions": [
     {
+      "version": "3.0.1-spindle1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/wearespindle/terraform-provider-proxmox/releases/download/v3.0.1-spindle1/terraform-provider-proxmox_3.0.1-spindle1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/wearespindle/terraform-provider-proxmox/releases/download/v3.0.1-spindle1/terraform-provider-proxmox_3.0.1-spindle1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-proxmox_3.0.1-spindle1_darwin_amd64.zip",
+          "download_url": "https://github.com/wearespindle/terraform-provider-proxmox/releases/download/v3.0.1-spindle1/terraform-provider-proxmox_3.0.1-spindle1_darwin_amd64.zip",
+          "shasum": "3e5a0504293fe55da192300999761e0e2411c0ce6dd8005773e8c766d914f2af"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-proxmox_3.0.1-spindle1_darwin_arm64.zip",
+          "download_url": "https://github.com/wearespindle/terraform-provider-proxmox/releases/download/v3.0.1-spindle1/terraform-provider-proxmox_3.0.1-spindle1_darwin_arm64.zip",
+          "shasum": "8fb7f29996b1fe5d99b7a74736ed8771444701b27b833ade09481724ead0ef24"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-proxmox_3.0.1-spindle1_freebsd_386.zip",
+          "download_url": "https://github.com/wearespindle/terraform-provider-proxmox/releases/download/v3.0.1-spindle1/terraform-provider-proxmox_3.0.1-spindle1_freebsd_386.zip",
+          "shasum": "7643bc5d246aec7054dd0c53ba02f2084900f04c441baa761fd2e4ae8984304e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-proxmox_3.0.1-spindle1_freebsd_amd64.zip",
+          "download_url": "https://github.com/wearespindle/terraform-provider-proxmox/releases/download/v3.0.1-spindle1/terraform-provider-proxmox_3.0.1-spindle1_freebsd_amd64.zip",
+          "shasum": "bd29e642c2d9bbdd15048edf5dbd261d08bb1fbecf9da9cf55a40c86bd2cdf41"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-proxmox_3.0.1-spindle1_freebsd_arm.zip",
+          "download_url": "https://github.com/wearespindle/terraform-provider-proxmox/releases/download/v3.0.1-spindle1/terraform-provider-proxmox_3.0.1-spindle1_freebsd_arm.zip",
+          "shasum": "72c430b3d49396feae7c5601590b567fc8dee12f7f7d680d59650ecc474928a2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-proxmox_3.0.1-spindle1_freebsd_arm64.zip",
+          "download_url": "https://github.com/wearespindle/terraform-provider-proxmox/releases/download/v3.0.1-spindle1/terraform-provider-proxmox_3.0.1-spindle1_freebsd_arm64.zip",
+          "shasum": "50c909b1737b5c7b9efc1b01d4433869ef04f8228cb93dc60883e3db3222fc11"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-proxmox_3.0.1-spindle1_linux_386.zip",
+          "download_url": "https://github.com/wearespindle/terraform-provider-proxmox/releases/download/v3.0.1-spindle1/terraform-provider-proxmox_3.0.1-spindle1_linux_386.zip",
+          "shasum": "8ae47032cf6a54185cd68a405f5fef5f6feddc7b0e0e537d3d9e5e2a0d8d476b"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-proxmox_3.0.1-spindle1_linux_amd64.zip",
+          "download_url": "https://github.com/wearespindle/terraform-provider-proxmox/releases/download/v3.0.1-spindle1/terraform-provider-proxmox_3.0.1-spindle1_linux_amd64.zip",
+          "shasum": "ef3ad7f6a50f9386661d576ab2920ed6e75b8f06a100d60fbd55947c34624da8"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-proxmox_3.0.1-spindle1_linux_arm.zip",
+          "download_url": "https://github.com/wearespindle/terraform-provider-proxmox/releases/download/v3.0.1-spindle1/terraform-provider-proxmox_3.0.1-spindle1_linux_arm.zip",
+          "shasum": "b7dc84362568cc22dee45f80ec439f1bb52f2c08cf30ba8616ae5dcdb747f193"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-proxmox_3.0.1-spindle1_linux_arm64.zip",
+          "download_url": "https://github.com/wearespindle/terraform-provider-proxmox/releases/download/v3.0.1-spindle1/terraform-provider-proxmox_3.0.1-spindle1_linux_arm64.zip",
+          "shasum": "b459e87ac04865a74e6a166b99e27567dca252fd1ee9b5d3d59f0f9f347f8144"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-proxmox_3.0.1-spindle1_windows_386.zip",
+          "download_url": "https://github.com/wearespindle/terraform-provider-proxmox/releases/download/v3.0.1-spindle1/terraform-provider-proxmox_3.0.1-spindle1_windows_386.zip",
+          "shasum": "6c7f9ee9b303d7a44f8df1ff107961f681cb713c3db8ba0c9fcb9afe35b859f7"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-proxmox_3.0.1-spindle1_windows_amd64.zip",
+          "download_url": "https://github.com/wearespindle/terraform-provider-proxmox/releases/download/v3.0.1-spindle1/terraform-provider-proxmox_3.0.1-spindle1_windows_amd64.zip",
+          "shasum": "37becf0c47dcfcf594d7f3ce25aea9ad5c6e207f8b95020a9f239295b4635ef6"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-proxmox_3.0.1-spindle1_windows_arm.zip",
+          "download_url": "https://github.com/wearespindle/terraform-provider-proxmox/releases/download/v3.0.1-spindle1/terraform-provider-proxmox_3.0.1-spindle1_windows_arm.zip",
+          "shasum": "d33d2b9568e2b54086833fd304eab5d84d41f44d5b0b80ff27821a147091b3c8"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-proxmox_3.0.1-spindle1_windows_arm64.zip",
+          "download_url": "https://github.com/wearespindle/terraform-provider-proxmox/releases/download/v3.0.1-spindle1/terraform-provider-proxmox_3.0.1-spindle1_windows_arm64.zip",
+          "shasum": "a0795a9fef33cd3fc7cb1a54d73923764dd1561898bbb3168ea31be0fb7b4121"
+        }
+      ]
+    },
+    {
       "version": "0.1.9",
       "protocols": [
         "5.0"
