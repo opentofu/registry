@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Go
-        uses: actions/setup-go@v4
+        uses: actions/setup-go@v5
         with:
           go-version-file: './src/go.mod'
 
@@ -45,18 +45,18 @@ jobs:
           set +e
           go run ./cmd/add-provider -repository="$repository" -output=./output.json
           if [[ "$?" != 0 ]]; then
-            if [ "$(cat ./output.json | jq -r '.exists')" == "true" ]; then
-              gh issue close $NUMBER -c "$(cat ./output.json | jq -r '.validation')"
+            if [ "$(jq -r '.exists' < ./output.json)" == "true" ]; then
+              gh issue close $NUMBER -c "$(jq -r '.validation' < ./output.json)"
               exit 0
             else
-              gh issue comment $NUMBER -b "$(cat ./output.json | jq -r '.validation')"
+              gh issue comment $NUMBER -b "$(jq -r '.validation' < ./output.json)"
               exit 1
             fi
           fi
           set -e
-          namespace=$(cat ./output.json | jq -r '.namespace')
-          name=$(cat ./output.json | jq -r '.name')
-          jsonfile=$(cat ./output.json | jq -r '.file')
+          namespace=$(jq -r '.namespace' < ./output.json)
+          name=$(jq -r '.name' < ./output.json) 
+          jsonfile=$(jq -r '.file' < ./output.json)
 
 
           # Create Branch
@@ -94,7 +94,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Go
-        uses: actions/setup-go@v4
+        uses: actions/setup-go@v5
         with:
           go-version-file: './src/go.mod'
 
@@ -122,19 +122,19 @@ jobs:
           set +e
           go run ./cmd/add-module -repository="$repository" -output=./output.json
           if [[ "$?" != 0 ]]; then
-            if [ "$(cat ./output.json | jq -r '.exists')" == "true" ]; then
-              gh issue close $NUMBER -c "$(cat ./output.json | jq -r '.validation')"
+            if [ "$(jq -r '.exists' < ./output.json)" == "true" ]; then
+              gh issue close $NUMBER -c "$(jq -r '.validation' < ./output.json)"
               exit 0
             else
-              gh issue comment $NUMBER -b "$(cat ./output.json | jq -r '.validation')"
+              gh issue comment $NUMBER -b "$(jq -r '.validation' < ./output.json)"
               exit 1
             fi
           fi
           set -e
-          namespace=$(cat ./output.json | jq -r '.namespace')
-          name=$(cat ./output.json | jq -r '.name')
-          target=$(cat ./output.json | jq -r '.target')
-          jsonfile=$(cat ./output.json | jq -r '.file')
+          namespace=$(jq -r '.namespace' < ./output.json)
+          name=$(jq -r '.name' < ./output.json)
+          target=$(jq -r '.target' < ./output.json)
+          jsonfile=$(jq -r '.file' < ./output.json)
 
 
           # Create Branch
@@ -172,7 +172,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Go
-        uses: actions/setup-go@v4
+        uses: actions/setup-go@v5
         with:
           go-version-file: './src/go.mod'
 
@@ -205,7 +205,7 @@ jobs:
           verification=$?
           set -e
 
-          gh issue comment $NUMBER -b "$(cat ./output.json | jq -r '.')"
+          gh issue comment $NUMBER -b "$(jq -r '.' < ./output.json)"
           if [[ "$verification" != 0 ]]; then
             exit 1
           fi
