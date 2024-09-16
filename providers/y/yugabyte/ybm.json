@@ -1,6 +1,114 @@
 {
   "versions": [
     {
+      "version": "1.0.22-pre.3",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/yugabyte/terraform-provider-ybm/releases/download/v1.0.22-pre.3/terraform-provider-ybm_1.0.22-pre.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/yugabyte/terraform-provider-ybm/releases/download/v1.0.22-pre.3/terraform-provider-ybm_1.0.22-pre.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-ybm_1.0.22-pre.3_darwin_amd64.zip",
+          "download_url": "https://github.com/yugabyte/terraform-provider-ybm/releases/download/v1.0.22-pre.3/terraform-provider-ybm_1.0.22-pre.3_darwin_amd64.zip",
+          "shasum": "f9684f5e0cb8722972ba48e7c7e02d8b9e52b652bd3f5b4f4648eb7f1a121cc3"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-ybm_1.0.22-pre.3_darwin_arm64.zip",
+          "download_url": "https://github.com/yugabyte/terraform-provider-ybm/releases/download/v1.0.22-pre.3/terraform-provider-ybm_1.0.22-pre.3_darwin_arm64.zip",
+          "shasum": "4addf98b93c466cbd86d9b6efbb9d51dbfa8d6ccc34f6b9c2f90412e14e7642e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-ybm_1.0.22-pre.3_freebsd_386.zip",
+          "download_url": "https://github.com/yugabyte/terraform-provider-ybm/releases/download/v1.0.22-pre.3/terraform-provider-ybm_1.0.22-pre.3_freebsd_386.zip",
+          "shasum": "497bcacac3d39e677961a4fbd1e3c97500ea0b85f411284c5f98f7f061da59bf"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-ybm_1.0.22-pre.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/yugabyte/terraform-provider-ybm/releases/download/v1.0.22-pre.3/terraform-provider-ybm_1.0.22-pre.3_freebsd_amd64.zip",
+          "shasum": "cd4e5c994016cac0e3a00ac054f695c316d42a486a02b4ed32ff1cfc4ae660e0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-ybm_1.0.22-pre.3_freebsd_arm.zip",
+          "download_url": "https://github.com/yugabyte/terraform-provider-ybm/releases/download/v1.0.22-pre.3/terraform-provider-ybm_1.0.22-pre.3_freebsd_arm.zip",
+          "shasum": "37f600d22822c7c51c1503d98a021caa68fd2fb24dba8361d5fcf49ee4d44bcb"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-ybm_1.0.22-pre.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/yugabyte/terraform-provider-ybm/releases/download/v1.0.22-pre.3/terraform-provider-ybm_1.0.22-pre.3_freebsd_arm64.zip",
+          "shasum": "919fe9ae7b5cf60df55c6b2b4ab35289a8f8e5325ac26faeab0fcc38caa226fb"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-ybm_1.0.22-pre.3_linux_386.zip",
+          "download_url": "https://github.com/yugabyte/terraform-provider-ybm/releases/download/v1.0.22-pre.3/terraform-provider-ybm_1.0.22-pre.3_linux_386.zip",
+          "shasum": "8f07aa165164be7f0db55c12858f33096b28ec97f710e7f82e5c1c43e4acb2f9"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-ybm_1.0.22-pre.3_linux_amd64.zip",
+          "download_url": "https://github.com/yugabyte/terraform-provider-ybm/releases/download/v1.0.22-pre.3/terraform-provider-ybm_1.0.22-pre.3_linux_amd64.zip",
+          "shasum": "8caa8f543fed3efebda6fb0e0dddb9fbd75f616554ee510e22fd141011b8c625"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-ybm_1.0.22-pre.3_linux_arm.zip",
+          "download_url": "https://github.com/yugabyte/terraform-provider-ybm/releases/download/v1.0.22-pre.3/terraform-provider-ybm_1.0.22-pre.3_linux_arm.zip",
+          "shasum": "0b6b614e11d0739c927ac0995259f88ecd5b545aa9c4bde4a9d40cba25f78662"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-ybm_1.0.22-pre.3_linux_arm64.zip",
+          "download_url": "https://github.com/yugabyte/terraform-provider-ybm/releases/download/v1.0.22-pre.3/terraform-provider-ybm_1.0.22-pre.3_linux_arm64.zip",
+          "shasum": "6cc7e10d2ef99790d7783d72aad02f62f2f7e805ebdcab499ec354a0dfaf82e9"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-ybm_1.0.22-pre.3_windows_386.zip",
+          "download_url": "https://github.com/yugabyte/terraform-provider-ybm/releases/download/v1.0.22-pre.3/terraform-provider-ybm_1.0.22-pre.3_windows_386.zip",
+          "shasum": "b9434402efa06916cdc8c2f0676d3840c9ee47a9ac28800c2b065fcf79ca8391"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-ybm_1.0.22-pre.3_windows_amd64.zip",
+          "download_url": "https://github.com/yugabyte/terraform-provider-ybm/releases/download/v1.0.22-pre.3/terraform-provider-ybm_1.0.22-pre.3_windows_amd64.zip",
+          "shasum": "611e69eee5c43f8d1b682545f7afd73e1319ea1caa903e1b009eba6ce9f5ee06"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-ybm_1.0.22-pre.3_windows_arm.zip",
+          "download_url": "https://github.com/yugabyte/terraform-provider-ybm/releases/download/v1.0.22-pre.3/terraform-provider-ybm_1.0.22-pre.3_windows_arm.zip",
+          "shasum": "0a07da27ba8ddf71abc3941f6466293cfdc028f134e810c843b5285389186e0c"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-ybm_1.0.22-pre.3_windows_arm64.zip",
+          "download_url": "https://github.com/yugabyte/terraform-provider-ybm/releases/download/v1.0.22-pre.3/terraform-provider-ybm_1.0.22-pre.3_windows_arm64.zip",
+          "shasum": "7975033d8d8ca5161ed1ccb05a1e9514f5fa0b418b52b90e0c783859334a06c2"
+        }
+      ]
+    },
+    {
       "version": "1.0.21",
       "protocols": [
         "6.0"
