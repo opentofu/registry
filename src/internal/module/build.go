@@ -6,6 +6,7 @@ import (
 	"slices"
 
 	"github.com/opentofu/registry-stable/internal"
+	"github.com/opentofu/registry-stable/internal/github"
 
 	"golang.org/x/mod/semver"
 )
@@ -42,13 +43,13 @@ func (m Module) BuildMetadata() (*Metadata, error) {
 	for _, t := range tags {
 		found := false
 		for _, v := range meta.Versions {
-			if v.Version == t {
+			if v.Version == t.Name {
 				found = true
 				break
 			}
 		}
 		if !found {
-			meta.Versions = append(meta.Versions, Version{Version: t})
+			meta.Versions = append(meta.Versions, Version{Version: t.Name, Ref: t.Commit})
 		}
 	}
 
@@ -60,22 +61,22 @@ func (m Module) BuildMetadata() (*Metadata, error) {
 	return &meta, nil
 }
 
-func (m Module) getSemverTags() ([]string, error) {
+func (m Module) getSemverTags() ([]github.Tag, error) {
 	tags, err := m.Github.GetTags(m.RepositoryURL())
 	if err != nil {
 		return nil, err
 	}
 
-	var semverTags = make([]string, 0)
+	var semverTags = make([]github.Tag, 0)
 	for _, tag := range tags {
-		tagWithPrefix := fmt.Sprintf("v%s", internal.TrimTagPrefix(tag))
+		tagWithPrefix := fmt.Sprintf("v%s", internal.TrimTagPrefix(tag.Name))
 		if semver.IsValid(tagWithPrefix) {
 			semverTags = append(semverTags, tag)
 		}
 	}
 
-	semverSortFunc := func(a, b string) int {
-		return -semver.Compare(fmt.Sprintf(a), fmt.Sprintf(b))
+	semverSortFunc := func(a, b github.Tag) int {
+		return -semver.Compare(a.Name, b.Name)
 	}
 	slices.SortFunc(semverTags, semverSortFunc)
 
