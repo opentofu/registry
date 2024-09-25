@@ -69,7 +69,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	if providerNamespace == nil || *providerNamespace == "hashicorp" {
+	if *providerNamespace == "" || *providerNamespace == "hashicorp" {
 		err = v1api.ArchivedOverrides(*destinationDir, logger)
 		if err != nil {
 			logger.Error(err.Error())
