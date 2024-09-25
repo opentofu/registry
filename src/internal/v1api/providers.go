@@ -149,23 +149,24 @@ func ArchivedOverrides(destDir string, log *slog.Logger) error {
 		oMatch := re.FindStringSubmatch(strings.ToLower(original))
 		rMatch := re.FindStringSubmatch(strings.ToLower(replacement))
 		if oMatch == nil {
-			return fmt.Errorf("invalid hashicorp override: %s!", oMatch)
+			return fmt.Errorf("invalid archived override: %s!", oMatch)
 		}
 		if rMatch == nil {
-			return fmt.Errorf("invalid hashicorp override: %s!", rMatch)
+			return fmt.Errorf("invalid archived override: %s!", rMatch)
 		}
 
 		for _, namespace := range namespaces {
 			oPath := filepath.Join(destDir, "v1", "providers", namespace, oMatch[re.SubexpIndex("Name")])
 			rPath := filepath.Join(destDir, "v1", "providers", rMatch[re.SubexpIndex("Namespace")], rMatch[re.SubexpIndex("Name")])
 
-			log.Info(fmt.Sprintf("Adding hashicorp override from %s -> %s", rPath, oPath))
+			log.Info(fmt.Sprintf("Adding %s override from %s -> %s", namespace, rPath, oPath))
 
 			if _, err := os.Stat(oPath); err == nil {
-				return fmt.Errorf("invalid hashicorp override: %s already exists", oPath)
+				return fmt.Errorf("invalid %s override: %s already exists", namespace, oPath)
 			}
 			if _, err := os.Stat(rPath); err != nil {
-				return fmt.Errorf("invalid hashicorp override: %s does not exist", rPath)
+				log.Warn(fmt.Sprintf("Skipping %s override: %s does not exist", namespace, rPath))
+				continue
 			}
 			err := cp.Copy(rPath, oPath)
 			if err != nil {

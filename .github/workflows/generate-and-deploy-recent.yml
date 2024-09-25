@@ -49,6 +49,84 @@ jobs:
           echo "Copy Changed Modules"
           git diff --name-only "$(git rev-list -1 --before="$(date -d '-1 hours' '+%Y-%m-%d %H:%M:%S')" HEAD)" | grep ^modules | xargs -I foo echo "mkdir -p ./pruned/\$(dirname foo); cp foo ./pruned/foo; echo foo" | bash
 
+          # TEMPORARY OVERRIDE DUE TO LONGSTANDING BUG
+          mkdir -p ./pruned/providers/c/ciscodevnet/; cp ./providers/c/ciscodevnet/aci.json ./pruned/providers/c/ciscodevnet/aci.json
+          mkdir -p ./pruned/providers/v/vancluever/; cp ./providers/v/vancluever/acme.json ./pruned/providers/v/vancluever/acme.json
+          mkdir -p ./pruned/providers/a/akamai/; cp ./providers/a/akamai/akamai.json ./pruned/providers/a/akamai/akamai.json
+          mkdir -p ./pruned/providers/a/aliyun/; cp ./providers/a/aliyun/alicloud.json ./pruned/providers/a/aliyun/alicloud.json
+          mkdir -p ./pruned/providers/a/aviatrixsystems/; cp ./providers/a/aviatrixsystems/aviatrix.json ./pruned/providers/a/aviatrixsystems/aviatrix.json
+          mkdir -p ./pruned/providers/v/vmware/; cp ./providers/v/vmware/avi.json ./pruned/providers/v/vmware/avi.json
+          mkdir -p ./pruned/providers/m/microsoft/; cp ./providers/m/microsoft/azuredevops.json ./pruned/providers/m/microsoft/azuredevops.json
+          mkdir -p ./pruned/providers/b/baidubce/; cp ./providers/b/baidubce/baiducloud.json ./pruned/providers/b/baidubce/baiducloud.json
+          mkdir -p ./pruned/providers/f/f5networks/; cp ./providers/f/f5networks/bigip.json ./pruned/providers/f/f5networks/bigip.json
+          mkdir -p ./pruned/providers/b/brightbox/; cp ./providers/b/brightbox/brightbox.json ./pruned/providers/b/brightbox/brightbox.json
+          mkdir -p ./pruned/providers/c/checkpointsw/; cp ./providers/c/checkpointsw/checkpoint.json ./pruned/providers/c/checkpointsw/checkpoint.json
+          mkdir -p ./pruned/providers/c/circonus-labs/; cp ./providers/c/circonus-labs/circonus.json ./pruned/providers/c/circonus-labs/circonus.json
+          mkdir -p ./pruned/providers/c/cloudflare/; cp ./providers/c/cloudflare/cloudflare.json ./pruned/providers/c/cloudflare/cloudflare.json
+          mkdir -p ./pruned/providers/c/cloudscale-ch/; cp ./providers/c/cloudscale-ch/cloudscale.json ./pruned/providers/c/cloudscale-ch/cloudscale.json
+          mkdir -p ./pruned/providers/c/constellix/; cp ./providers/c/constellix/constellix.json ./pruned/providers/c/constellix/constellix.json
+          mkdir -p ./pruned/providers/d/datadog/; cp ./providers/d/datadog/datadog.json ./pruned/providers/d/datadog/datadog.json
+          mkdir -p ./pruned/providers/d/digitalocean/; cp ./providers/d/digitalocean/digitalocean.json ./pruned/providers/d/digitalocean/digitalocean.json
+          mkdir -p ./pruned/providers/d/dnsmadeeasy/; cp ./providers/d/dnsmadeeasy/dme.json ./pruned/providers/d/dnsmadeeasy/dme.json
+          mkdir -p ./pruned/providers/d/dnsimple/; cp ./providers/d/dnsimple/dnsimple.json ./pruned/providers/d/dnsimple/dnsimple.json
+          mkdir -p ./pruned/providers/d/dome9/; cp ./providers/d/dome9/dome9.json ./pruned/providers/d/dome9/dome9.json
+          mkdir -p ./pruned/providers/e/exoscale/; cp ./providers/e/exoscale/exoscale.json ./pruned/providers/e/exoscale/exoscale.json
+          mkdir -p ./pruned/providers/f/fastly/; cp ./providers/f/fastly/fastly.json ./pruned/providers/f/fastly/fastly.json
+          mkdir -p ./pruned/providers/f/flexibleenginecloud/; cp ./providers/f/flexibleenginecloud/flexibleengine.json ./pruned/providers/f/flexibleenginecloud/flexibleengine.json
+          mkdir -p ./pruned/providers/f/fortinetdev/; cp ./providers/f/fortinetdev/fortios.json ./pruned/providers/f/fortinetdev/fortios.json
+          mkdir -p ./pruned/providers/i/integrations/; cp ./providers/i/integrations/github.json ./pruned/providers/i/integrations/github.json
+          mkdir -p ./pruned/providers/g/gitlabhq/; cp ./providers/g/gitlabhq/gitlab.json ./pruned/providers/g/gitlabhq/gitlab.json
+          mkdir -p ./pruned/providers/g/grafana/; cp ./providers/g/grafana/grafana.json ./pruned/providers/g/grafana/grafana.json
+          mkdir -p ./pruned/providers/g/gridscale/; cp ./providers/g/gridscale/gridscale.json ./pruned/providers/g/gridscale/gridscale.json
+          mkdir -p ./pruned/providers/h/hetznercloud/; cp ./providers/h/hetznercloud/hcloud.json ./pruned/providers/h/hetznercloud/hcloud.json
+          mkdir -p ./pruned/providers/h/heroku/; cp ./providers/h/heroku/heroku.json ./pruned/providers/h/heroku/heroku.json
+          mkdir -p ./pruned/providers/h/huaweicloud/; cp ./providers/h/huaweicloud/huaweicloud.json ./pruned/providers/h/huaweicloud/huaweicloud.json
+          mkdir -p ./pruned/providers/h/huaweicloud/; cp ./providers/h/huaweicloud/huaweicloudstack.json ./pruned/providers/h/huaweicloud/huaweicloudstack.json
+          mkdir -p ./pruned/providers/i/icinga/; cp ./providers/i/icinga/icinga2.json ./pruned/providers/i/icinga/icinga2.json
+          mkdir -p ./pruned/providers/l/launchdarkly/; cp ./providers/l/launchdarkly/launchdarkly.json ./pruned/providers/l/launchdarkly/launchdarkly.json
+          mkdir -p ./pruned/providers/l/linode/; cp ./providers/l/linode/linode.json ./pruned/providers/l/linode/linode.json
+          mkdir -p ./pruned/providers/l/logicmonitor/; cp ./providers/l/logicmonitor/logicmonitor.json ./pruned/providers/l/logicmonitor/logicmonitor.json
+          mkdir -p ./pruned/providers/m/mongodb/; cp ./providers/m/mongodb/mongodbatlas.json ./pruned/providers/m/mongodb/mongodbatlas.json
+          mkdir -p ./pruned/providers/n/navercloudplatform/; cp ./providers/n/navercloudplatform/ncloud.json ./pruned/providers/n/navercloudplatform/ncloud.json
+          mkdir -p ./pruned/providers/n/newrelic/; cp ./providers/n/newrelic/newrelic.json ./pruned/providers/n/newrelic/newrelic.json
+          mkdir -p ./pruned/providers/n/ns1-terraform/; cp ./providers/n/ns1-terraform/ns1.json ./pruned/providers/n/ns1-terraform/ns1.json
+          mkdir -p ./pruned/providers/v/vmware/; cp ./providers/v/vmware/nsxt.json ./pruned/providers/v/vmware/nsxt.json
+          mkdir -p ./pruned/providers/n/nutanix/; cp ./providers/n/nutanix/nutanix.json ./pruned/providers/n/nutanix/nutanix.json
+          mkdir -p ./pruned/providers/o/oracle/; cp ./providers/o/oracle/oci.json ./pruned/providers/o/oracle/oci.json
+          mkdir -p ./pruned/providers/o/oktadeveloper/; cp ./providers/o/oktadeveloper/oktaasa.json ./pruned/providers/o/oktadeveloper/oktaasa.json
+          mkdir -p ./pruned/providers/o/oktadeveloper/; cp ./providers/o/oktadeveloper/okta.json ./pruned/providers/o/oktadeveloper/okta.json
+          mkdir -p ./pruned/providers/o/opennebula/; cp ./providers/o/opennebula/opennebula.json ./pruned/providers/o/opennebula/opennebula.json
+          mkdir -p ./pruned/providers/t/terraform-provider-openstack/; cp ./providers/t/terraform-provider-openstack/openstack.json ./pruned/providers/t/terraform-provider-openstack/openstack.json
+          mkdir -p ./pruned/providers/o/opentelekomcloud/; cp ./providers/o/opentelekomcloud/opentelekomcloud.json ./pruned/providers/o/opentelekomcloud/opentelekomcloud.json
+          mkdir -p ./pruned/providers/o/opsgenie/; cp ./providers/o/opsgenie/opsgenie.json ./pruned/providers/o/opsgenie/opsgenie.json
+          mkdir -p ./pruned/providers/o/ovh/; cp ./providers/o/ovh/ovh.json ./pruned/providers/o/ovh/ovh.json
+          mkdir -p ./pruned/providers/p/packethost/; cp ./providers/p/packethost/packet.json ./pruned/providers/p/packethost/packet.json
+          mkdir -p ./pruned/providers/p/pagerduty/; cp ./providers/p/pagerduty/pagerduty.json ./pruned/providers/p/pagerduty/pagerduty.json
+          mkdir -p ./pruned/providers/p/paloaltonetworks/; cp ./providers/p/paloaltonetworks/panos.json ./pruned/providers/p/paloaltonetworks/panos.json
+          mkdir -p ./pruned/providers/p/pan-net/; cp ./providers/p/pan-net/powerdns.json ./pruned/providers/p/pan-net/powerdns.json
+          mkdir -p ./pruned/providers/p/paloaltonetworks/; cp ./providers/p/paloaltonetworks/prismacloud.json ./pruned/providers/p/paloaltonetworks/prismacloud.json
+          mkdir -p ./pruned/providers/i/ionos-cloud/; cp ./providers/i/ionos-cloud/profitbricks.json ./pruned/providers/i/ionos-cloud/profitbricks.json
+          mkdir -p ./pruned/providers/r/rancher/; cp ./providers/r/rancher/rancher2.json ./pruned/providers/r/rancher/rancher2.json
+          mkdir -p ./pruned/providers/r/rundeck/; cp ./providers/r/rundeck/rundeck.json ./pruned/providers/r/rundeck/rundeck.json
+          mkdir -p ./pruned/providers/s/scaleway/; cp ./providers/s/scaleway/scaleway.json ./pruned/providers/s/scaleway/scaleway.json
+          mkdir -p ./pruned/providers/s/selectel/; cp ./providers/s/selectel/selectel.json ./pruned/providers/s/selectel/selectel.json
+          #mkdir -p ./pruned/providers/s/signalfx/; cp ./providers/s/signalfx/signalfx.json ./pruned/providers/s/signalfx/signalfx.json
+          mkdir -p ./pruned/providers/s/skytap/; cp ./providers/s/skytap/skytap.json ./pruned/providers/s/skytap/skytap.json
+          mkdir -p ./pruned/providers/s/spotinst/; cp ./providers/s/spotinst/spotinst.json ./pruned/providers/s/spotinst/spotinst.json
+          mkdir -p ./pruned/providers/s/stackpath/; cp ./providers/s/stackpath/stackpath.json ./pruned/providers/s/stackpath/stackpath.json
+          mkdir -p ./pruned/providers/s/statuscakedev/; cp ./providers/s/statuscakedev/statuscake.json ./pruned/providers/s/statuscakedev/statuscake.json
+          mkdir -p ./pruned/providers/s/sumologic/; cp ./providers/s/sumologic/sumologic.json ./pruned/providers/s/sumologic/sumologic.json
+          mkdir -p ./pruned/providers/t/tencentcloudstack/; cp ./providers/t/tencentcloudstack/tencentcloud.json ./pruned/providers/t/tencentcloudstack/tencentcloud.json
+          mkdir -p ./pruned/providers/j/joyent/; cp ./providers/j/joyent/triton.json ./pruned/providers/j/joyent/triton.json
+          mkdir -p ./pruned/providers/t/turbot/; cp ./providers/t/turbot/turbot.json ./pruned/providers/t/turbot/turbot.json
+          mkdir -p ./pruned/providers/u/ucloud/; cp ./providers/u/ucloud/ucloud.json ./pruned/providers/u/ucloud/ucloud.json
+          mkdir -p ./pruned/providers/v/vmware/; cp ./providers/v/vmware/vcd.json ./pruned/providers/v/vmware/vcd.json
+          mkdir -p ./pruned/providers/v/venafi/; cp ./providers/v/venafi/venafi.json ./pruned/providers/v/venafi/venafi.json
+          mkdir -p ./pruned/providers/v/vmware/; cp ./providers/v/vmware/vmc.json ./pruned/providers/v/vmware/vmc.json
+          mkdir -p ./pruned/providers/v/vmware/; cp ./providers/v/vmware/vra7.json ./pruned/providers/v/vmware/vra7.json
+          mkdir -p ./pruned/providers/v/vultr/; cp ./providers/v/vultr/vultr.json ./pruned/providers/v/vultr/vultr.json
+          mkdir -p ./pruned/providers/v/vmware/; cp ./providers/v/vmware/wavefront.json ./pruned/providers/v/vmware/wavefront.json
+
       - name: Run Generation script
         working-directory: ./src
         run: go run ./cmd/generate-v1 --destination ../generated -module-data ../pruned/modules/ -provider-data ../pruned/providers/
