@@ -32,14 +32,6 @@ jobs:
           BODY: ${{ github.event.issue.body }}
         working-directory: ./src
         run: |
-          set +e
-          echo "$BODY" | grep "\- \[[xX]\] I sign this project's \[DCO\](https://developercertificate.org/)"
-          if [[ "$?" != 0 ]]; then
-            gh issue comment $NUMBER -b "DCO must be signed to submit this repository"
-            exit 1
-          fi
-          set -e
-
           repository=$(echo "$BODY" | grep "### Provider Repository" -A2 | tail -n1 | tr "[:upper:]" "[:lower:]" | sed -e 's/[\r\n]//g')
 
           set +e
@@ -109,14 +101,6 @@ jobs:
           BODY: ${{ github.event.issue.body }}
         working-directory: ./src
         run: |
-          set +e
-          echo "$BODY" | grep "\- \[[xX]\] I sign this project's \[DCO\](https://developercertificate.org/)"
-          if [[ "$?" != 0 ]]; then
-            gh issue comment $NUMBER -b "DCO must be signed to submit this repository"
-            exit 1
-          fi
-          set -e
-
           repository=$(echo "$BODY" | grep "### Module Repository" -A2 | tail -n1 | tr "[:upper:]" "[:lower:]" | sed -e 's/[\r\n]//g')
 
           set +e
@@ -188,14 +172,6 @@ jobs:
           BODY: ${{ github.event.issue.body }}
         working-directory: ./src
         run: |
-          set +e
-          echo "$BODY" | grep "\- \[[xX]\] I sign this project's \[DCO\](https://developercertificate.org/)"
-          if [[ "$?" != 0 ]]; then
-            gh issue comment $NUMBER -b "DCO must be signed to submit this repository"
-            exit 1
-          fi
-          set -e
-
           namespace=$(echo "$BODY" | grep "### Provider Namespace" -A2 | tail -n1 | tr "[:upper:]" "[:lower:]" | sed -e 's/[\r\n]//g')
           keydata=$(echo "$BODY" | grep -A 1000 "BEGIN PGP PUBLIC KEY BLOCK"  | grep -B 1000 "END PGP PUBLIC KEY BLOCK")
           echo "$keydata" > tmp.key
