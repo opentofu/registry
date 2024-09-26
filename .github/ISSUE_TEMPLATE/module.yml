@@ -10,10 +10,3 @@ body:
       description: Path to a public GitHub repository following the pattern {owner}/terraform-{target}-{name}, ex. GoogleCloudPlatform/terraform-google-secured-data-warehouse
     validations:
       required: true
-  - type: checkboxes
-    id: dco
-    attributes:
-      label: DCO
-      options:
-        - label: I sign this project's [DCO](https://developercertificate.org/)
-          required: true
