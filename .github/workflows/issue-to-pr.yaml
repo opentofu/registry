@@ -173,6 +173,7 @@ jobs:
         working-directory: ./src
         run: |
           namespace=$(echo "$BODY" | grep "### Provider Namespace" -A2 | tail -n1 | tr "[:upper:]" "[:lower:]" | sed -e 's/[\r\n]//g')
+          providername=$(echo "$BODY" | grep "### Provider Name" -A2 | tail -n1 | tr "[:upper:]" "[:lower:]" | sed -e 's/[\r\n]//g')
           keydata=$(echo "$BODY" | grep -A 1000 "BEGIN PGP PUBLIC KEY BLOCK"  | grep -B 1000 "END PGP PUBLIC KEY BLOCK")
           echo "$keydata" > tmp.key
 
@@ -186,7 +187,11 @@ jobs:
             exit 1
           fi
 
-          keyfile="../keys/${namespace:0:1}/$namespace/provider-$(date +%s).asc"
+          if [[ -z "$providername" ]]; then
+            keyfile="../keys/${namespace:0:1}/$namespace/provider-$(date +%s).asc"
+          else
+            keyfile="../keys/${namespace:0:1}/$namespace/$providername/provider-$(date +%s).asc"
+          fi
           if [ -d $(dirname $keyfile) ]; then
             msg=Updated
             #git rm $(dirname $keyfile)/*

@@ -10,6 +10,13 @@ body:
       description: GitHub Username or Organization that contains Providers
     validations:
       required: true
+  - type: input
+    id: providername
+    attributes:
+      label: Provider Name
+      description: Name of the provider this key is used for (without the terraform-provider- prefix). If omitted, this key will be added at the namespace/organization level.
+    validations:
+      required: false
   - type: checkboxes
     id: public_membership
     attributes:
