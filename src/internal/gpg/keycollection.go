@@ -7,23 +7,39 @@ import (
 	"strings"
 )
 
-// KeyCollection represents the GPG keys stored in the registry for a specific namespace.
+// KeyCollection represents the GPG keys stored in the registry for a specific namespace and provider.
 type KeyCollection struct {
-	Namespace string // The key namespace
-	Directory string // The root directory that the key lives in
+	Namespace    string // The key namespace
+	ProviderName string // The key provider name
+	Directory    string // The root directory that the key lives in
 }
 
-func (k KeyCollection) MetadataPath() string {
+func (k KeyCollection) NamespacePath() string {
 	firstChar := strings.ToLower(k.Namespace[0:1])
 	return filepath.Join(k.Directory, firstChar, k.Namespace)
 }
 
-func (k KeyCollection) ListKeys() ([]Key, error) {
-	location := strings.ToLower(k.MetadataPath())
+func (k KeyCollection) ProviderPath() string {
+	return filepath.Join(k.NamespacePath(), k.ProviderName)
+}
 
+func (k KeyCollection) ListKeys() ([]Key, error) {
+	namespaceKeys, namespaceErr := k.listKeysIn(k.NamespacePath())
+	if namespaceErr != nil {
+		return nil, namespaceErr
+	}
+	providerKeys, providerErr := k.listKeysIn(k.ProviderPath())
+	if providerErr != nil {
+		return nil, providerErr
+	}
+	return append(namespaceKeys, providerKeys...), nil
+}
+func (k KeyCollection) listKeysIn(location string) ([]Key, error) {
 	// check if the directory exists
 	if _, err := os.Stat(location); os.IsNotExist(err) {
 		return nil, nil
+	} else if err != nil {
+		return nil, err
 	}
 
 	// if it does exist, iterate across the files
@@ -34,6 +50,9 @@ func (k KeyCollection) ListKeys() ([]Key, error) {
 
 	keys := make([]Key, len(files))
 	for i, file := range files {
+		if file.IsDir() {
+			continue
+		}
 		keyPath := filepath.Join(location, file.Name())
 		key, err := buildKey(keyPath)
 		if err != nil {
