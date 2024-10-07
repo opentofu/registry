@@ -48,8 +48,8 @@ func (k KeyCollection) listKeysIn(location string) ([]Key, error) {
 		return nil, fmt.Errorf("error reading directory %s: %w", location, err)
 	}
 
-	keys := make([]Key, len(files))
-	for i, file := range files {
+	keys := make([]Key, 0, len(files))
+	for _, file := range files {
 		if file.IsDir() {
 			continue
 		}
@@ -58,7 +58,7 @@ func (k KeyCollection) listKeysIn(location string) ([]Key, error) {
 		if err != nil {
 			return nil, fmt.Errorf("error building key at %s: %w", keyPath, err)
 		}
-		keys[i] = *key
+		keys = append(keys, *key)
 	}
 
 	return keys, nil
