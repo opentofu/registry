@@ -11,6 +11,7 @@ import (
 
 	"github.com/opentofu/registry-stable/internal/github"
 	"github.com/opentofu/registry-stable/internal/gpg"
+	"github.com/opentofu/registry-stable/internal/parallel"
 	"github.com/opentofu/registry-stable/internal/provider"
 )
 
@@ -71,30 +72,39 @@ func main() {
 
 		pke := ProviderKeyCheckError{p: p, errs: make(map[string]error)}
 
-		for _, ver := range metadata.Versions {
+		actions := make([]parallel.Action, len(metadata.Versions))
+		for i, ver := range metadata.Versions {
+			ver := ver
+			actions[i] = func() error {
+				dir, err := os.MkdirTemp("", "provider-keys")
+				if err != nil {
+					return err
+				}
+				defer os.RemoveAll(dir)
 
-			dir, err := os.MkdirTemp("", "provider-keys")
-			if err != nil {
-				return err
-			}
-			defer os.RemoveAll(dir)
+				contents := fmt.Sprintf(templateString, p.ProviderName, p.Namespace, p.ProviderName, ver.Version)
+				err = os.WriteFile(dir+"/main.tf", []byte(contents), 0644)
+				if err != nil {
+					return err
+				}
 
-			contents := fmt.Sprintf(templateString, p.ProviderName, p.Namespace, p.ProviderName, ver.Version)
-			err = os.WriteFile(dir+"/main.tf", []byte(contents), 0644)
-			if err != nil {
-				return err
+				p.Logger.Info(fmt.Sprintf("Checking version %s", ver.Version))
+				cmd := exec.Command("/home/cmesh/go/bin/tofu", "init", "-no-color")
+				cmd.Dir = dir
+				out := new(strings.Builder)
+				cmd.Stdout = out
+				cmd.Stderr = out
+				if err := cmd.Run(); err != nil {
+					p.Logger.Info(fmt.Sprintf("Version %s failed!", ver.Version), "out", out.String())
+					pke.errs[ver.Version] = fmt.Errorf("%w: %s", err, out.String())
+				}
+				return nil
 			}
+		}
 
-			p.Logger.Info(fmt.Sprintf("Checking version %s", ver.Version))
-			cmd := exec.Command("/home/cmesh/go/bin/tofu", "init", "-no-color")
-			cmd.Dir = dir
-			out := new(strings.Builder)
-			cmd.Stdout = out
-			cmd.Stderr = out
-			if err := cmd.Run(); err != nil {
-				p.Logger.Info(fmt.Sprintf("Version %s failed!", ver.Version), "out", out.String())
-				pke.errs[ver.Version] = fmt.Errorf("%w: %s", err, out.String())
-			}
+		errs := parallel.ForEach(actions, 10)
+		if len(errs) != 0 {
+			return fmt.Errorf("encountered %d errors processing %d provider keys", len(errs), len(metadata.Versions))
 		}
 
 		if len(pke.errs) != 0 {
