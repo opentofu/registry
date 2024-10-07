@@ -84,8 +84,9 @@ func (p ProviderGenerator) VersionDetails() (map[string]ProviderVersionDetails, 
 	versionDetails := make(map[string]ProviderVersionDetails)
 
 	keyCollection := gpg.KeyCollection{
-		Namespace: p.Provider.EffectiveNamespace(),
-		Directory: p.KeyLocation,
+		Namespace:    p.Provider.EffectiveNamespace(),
+		ProviderName: p.Provider.ProviderName,
+		Directory:    p.KeyLocation,
 	}
 
 	keys, err := keyCollection.ListKeys()
