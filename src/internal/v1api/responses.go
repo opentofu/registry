@@ -50,7 +50,8 @@ type ModuleDependency struct {
 
 // ProviderVersionListingResponse is the item returned by the provider version listing API.
 type ProviderVersionListingResponse struct {
-	Versions []ProviderVersionResponseItem `json:"versions"` // A list of provider versions.
+	Versions []ProviderVersionResponseItem `json:"versions"`           // A list of provider versions.
+	Warnings []string                      `json:"warnings,omitempty"` // Warnings associated with the provider
 }
 
 type ProviderVersionResponseItem struct {

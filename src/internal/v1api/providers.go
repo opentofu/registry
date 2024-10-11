@@ -76,7 +76,10 @@ func (p ProviderGenerator) VersionListing() ProviderVersionListingResponse {
 		versions[versionIdx] = verResp
 	}
 
-	return ProviderVersionListingResponse{versions}
+	return ProviderVersionListingResponse{
+		versions,
+		p.Metadata.Warnings,
+	}
 }
 
 // VersionDetails will take the provider metadata and generate the responses for the provider version download API endpoints.
