@@ -16,6 +16,7 @@ import (
 type Metadata struct {
 	Repository string       `json:"repository,omitempty"` // Optional. Custom repository from which to fetch the provider's metadata.
 	Versions   []Version    `json:"versions"`             // A list of version data, for each supported provider version.
+	Warnings   []string     `json:"warnings,omitempty"`   // Warnings associated with this provider.
 	Logger     *slog.Logger `json:"-"`
 }
 
