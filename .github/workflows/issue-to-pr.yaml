@@ -30,7 +30,6 @@ jobs:
           URL: ${{ github.event.issue.url }}
           TITLE: ${{ github.event.issue.title }}
           BODY: ${{ github.event.issue.body }}
-        working-directory: ./src
         run: |
           ./.github/scripts/submit-provider.sh
   submit-module:
@@ -58,7 +57,6 @@ jobs:
           URL: ${{ github.event.issue.url }}
           TITLE: ${{ github.event.issue.title }}
           BODY: ${{ github.event.issue.body }}
-        working-directory: ./src
         run: |
           ./.github/scripts/submit-module.sh
   submit-provider-key:
@@ -87,6 +85,5 @@ jobs:
           URL: ${{ github.event.issue.url }}
           TITLE: ${{ github.event.issue.title }}
           BODY: ${{ github.event.issue.body }}
-        working-directory: ./src
         run: |
           ./.github/scripts/submit-provider-key.sh
