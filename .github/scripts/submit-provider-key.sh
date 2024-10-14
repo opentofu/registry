@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -x
 set -euo pipefail
 
 if [[ -z "${BODY}" ]]; then
@@ -29,7 +30,7 @@ if [[ ! "${namespace}" =~ ^[a-zA-Z0-9-]+$ ]]; then
   exit 1
 fi
 
-if [[ "${providername}" = "_No response_" ]]; then
+if [[ "${providername}" = "_no response_" ]]; then
   providername=""
 fi
 if [[ -n "${providername}" ]]; then
