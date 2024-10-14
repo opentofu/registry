@@ -1,0 +1,19 @@
+name: Issue Submission to Pull Request
+on:
+  issues:
+    types:
+      [opened, edited]
+
+jobs:
+  shellcheck:
+    name: Shellcheck
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install shellcheck
+        run: sudo apt-get install -y shellcheck
+      - name: Run shellcheck
+        run: shellcheck -o all ./.github/scripts/*.sh
