@@ -39,7 +39,4 @@ jobs:
         env:
           CHANGED_FILES: ${{ steps.updated.outputs.all_changed_files }}
         run: |
-          for path in "$CHANGED_FILES"
-          do
-            /tmp/validate/run provider "$path"
-          done
+          /tmp/validate/run provider "$CHANGED_FILES"
