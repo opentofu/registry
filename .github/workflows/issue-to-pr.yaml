@@ -30,8 +30,9 @@ jobs:
           URL: ${{ github.event.issue.url }}
           TITLE: ${{ github.event.issue.title }}
           BODY: ${{ github.event.issue.body }}
+        working-directory: ./src
         run: |
-          ./.github/scripts/submit-provider.sh
+          ../.github/scripts/submit-provider.sh
   submit-module:
     if: contains(github.event.issue.labels.*.name, 'module') && contains(github.event.issue.labels.*.name, 'submission')
     runs-on: ubuntu-latest
@@ -57,8 +58,9 @@ jobs:
           URL: ${{ github.event.issue.url }}
           TITLE: ${{ github.event.issue.title }}
           BODY: ${{ github.event.issue.body }}
+        working-directory: ./src
         run: |
-          ./.github/scripts/submit-module.sh
+          ../.github/scripts/submit-module.sh
   submit-provider-key:
     if: contains(github.event.issue.labels.*.name, 'provider-key') && contains(github.event.issue.labels.*.name, 'submission')
     runs-on: ubuntu-latest
@@ -85,5 +87,6 @@ jobs:
           URL: ${{ github.event.issue.url }}
           TITLE: ${{ github.event.issue.title }}
           BODY: ${{ github.event.issue.body }}
+        working-directory: ./src
         run: |
-          ./.github/scripts/submit-provider-key.sh
+          ../.github/scripts/submit-provider-key.sh
