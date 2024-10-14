@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log/slog"
 	"os"
+	"strings"
 
 	"github.com/opentofu/registry-stable/internal/module"
 	"github.com/opentofu/registry-stable/internal/provider"
@@ -50,19 +51,33 @@ CMD:
 	)
 	switch cmd := args[0]; cmd {
 	case "module":
-		var v module.Metadata
-		err = readJSONFile(path, &v)
-		if err == nil {
+		for _, path := range splitPath(path) {
+			var v module.Metadata
+			err = readJSONFile(path, &v)
+			if err != nil {
+				break
+			}
+
 			errType = errorValidation
 			err = module.Validate(v)
+			if err != nil {
+				break
+			}
 		}
 
 	case "provider":
-		var v provider.Metadata
-		err = readJSONFile(path, &v)
-		if err == nil {
+		for _, path := range splitPath(path) {
+			var v provider.Metadata
+			err = readJSONFile(path, &v)
+			if err != nil {
+				break
+			}
+
 			errType = errorValidation
 			err = provider.Validate(v)
+			if err != nil {
+				break
+			}
 		}
 
 	default:
@@ -87,6 +102,10 @@ CMD:
 
 		os.Exit(1)
 	}
+}
+
+func splitPath(p string) []string {
+	return strings.Split(p, " ")
 }
 
 func readJSONFile(p string, v any) error {
