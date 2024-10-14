@@ -29,12 +29,12 @@ if [[ ! "${namespace}" =~ ^[a-zA-Z0-9-]+$ ]]; then
   exit 1
 fi
 
-if [[ "${providername}" = "*No response*" ]]; then
+if [[ "${providername}" = "*no response*" ]]; then
   providername=""
 fi
 if [[ -n "${providername}" ]]; then
   if [[ ! "${providername}" =~ ^[a-zA-Z0-9-]+$ ]]; then
-    gh issue comment "${NUMBER}" -b "Failed validation: Invalid provider name: '${providername}}'"
+    gh issue comment "${NUMBER}" -b "Failed validation: Invalid provider name: '${providername}'"
     exit 1
   fi
 fi
