@@ -1,8 +1,6 @@
-name: Issue Submission to Pull Request
+name: Shellcheck
 on:
-  issues:
-    types:
-      [opened, edited]
+  push:
 
 jobs:
   shellcheck:
