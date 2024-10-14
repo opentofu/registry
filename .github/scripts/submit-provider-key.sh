@@ -29,7 +29,7 @@ if [[ ! "${namespace}" =~ ^[a-zA-Z0-9-]+$ ]]; then
   exit 1
 fi
 
-if [[ "${providername}" = "*no response*" ]]; then
+if [[ "${providername}" = "_No response_" ]]; then
   providername=""
 fi
 if [[ -n "${providername}" ]]; then
