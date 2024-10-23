@@ -24,5 +24,9 @@ Contributions are always welcome!
 
 **Please see [`CONTRIBUTING.md`](CONTRIBUTING.md) for before making any contributions.**
 
+## Registry Inclusion Policy
+
+You can find information on the OpenTofu Registry Inclusion Policy in [POLICY.md](POLICY.md)
+
 ## Reporting security vulnerabilities
 If you've found a vulnerability or a potential vulnerability in OpenTofu please follow [Security Policy](https://github.com/opentofu/opentofu/security/policy). We'll send a confirmation email to acknowledge your report, and we'll send an additional email when we've identified the issue positively or negatively.
