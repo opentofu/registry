@@ -8,8 +8,13 @@ import (
 	"strings"
 )
 
-func parseTagsFromStdout(lines []string) ([]string, error) {
-	tags := make([]string, 0, len(lines))
+type Tag struct {
+	Name   string
+	Commit string
+}
+
+func parseTagsFromStdout(lines []string) ([]Tag, error) {
+	tags := make([]Tag, 0, len(lines))
 
 	for _, line := range lines {
 		if !strings.Contains(line, "refs/tags/") {
@@ -20,6 +25,7 @@ func parseTagsFromStdout(lines []string) ([]string, error) {
 		if len(fields) != 2 {
 			return nil, fmt.Errorf("invalid format for tag '%s', expected two fields", line)
 		}
+		commit := fields[0]
 
 		ref := fields[1]
 		if !strings.HasPrefix(ref, "refs/tags/") {
@@ -31,14 +37,15 @@ func parseTagsFromStdout(lines []string) ([]string, error) {
 			return nil, fmt.Errorf("invalid format for tag '%s', no version provided", line)
 		}
 
-		tags = append(tags, tag)
+		tags = append(tags, Tag{Name: tag, Commit: commit})
 	}
 
 	return tags, nil
 }
 
 // GetTags lists the tags of the remote repository and returns the refs/tags/ found
-func (c Client) GetTags(repositoryUrl string) ([]string, error) {
+// Order is not guaranteed
+func (c Client) GetTags(repositoryUrl string) ([]Tag, error) {
 	done := c.cliThrottle()
 	defer done()
 
