@@ -17,6 +17,7 @@ if [[ -z "${NUMBER}" ]]; then
 fi
 
 repository=$(echo "${BODY}" | grep "### Module Repository" -A2 | tail -n1 | tr "[:upper:]" "[:lower:]" | sed -e 's/[\r\n]//g')
+repository=$(echo -n "${repository}" | sed -e 's|https://github.com/||' -e 's|github.com/||')
 
 if [[ ! "${repository}" =~ ^[a-zA-Z0-9-]+/terraform-[a-zA-Z0-9-]+$ ]]; then
   gh issue comment "${NUMBER}" -b "Failed validation: Invalid repository name: '${repository}'. Please edit your issue to state the name of the repository in the format of ORGANIZATION/terraform-NAME-TARGETSYSTEM."
