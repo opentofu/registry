@@ -28,7 +28,7 @@ jobs:
           cache-dependency-path: './src/go.sum'
 
       - name: Setup dependencies
-        run: sudo apt-get install rclone
+        run: sudo apt-get update && sudo apt-get install rclone
 
       - name: Run Generation script
         working-directory: ./src
