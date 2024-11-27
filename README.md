@@ -7,7 +7,7 @@ This repository is home to the metadata that drives the provider and module regi
 
 It also contains the applications used to manage version bumping, validation and API generation of the registry that is hosted at [registry.opentofu.org](https://registry.opentofu.org).
 
-**Thanks to Cloudflare for sponsoring a Pro plan to host the registry on!**
+**Thanks to Cloudflare for sponsoring a Business plan to host the registry on!**
 
 ## Adding Providers, Modules or GPG Keys to the OpenTofu Registry
 To add your provider, module or GPG key to the OpenTofu Registry you can submit an issue using one of the issue templates we provide in this repository.
