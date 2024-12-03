@@ -1,8 +1,85 @@
 {
-  "warnings": [
-    "You are using opentofu/aws instead of hashicorp/aws. This provider is maintained by HashiCorp and the OpenTofu project only builds the provider binaries from the source code. Both the opentofu/ and hashicorp/ namespaces in the OpenTofu Registry contain the OpenTofu-built provider binaries based on the HashiCorp source code. To avoid configuration errors, we recommend using the hashicorp/ namespaced providers."
-  ],
   "versions": [
+    {
+      "version": "5.79.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v5.79.0/terraform-provider-aws_5.79.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v5.79.0/terraform-provider-aws_5.79.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-aws_5.79.0_darwin_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v5.79.0/terraform-provider-aws_5.79.0_darwin_amd64.zip",
+          "shasum": "bb57638c997e51e44884b82158da4b818b72a70676f2bbe0010f33fa29de920a"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-aws_5.79.0_darwin_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v5.79.0/terraform-provider-aws_5.79.0_darwin_arm64.zip",
+          "shasum": "eeccf3fcc78bbae0e5b79a4a54d374e7a319a75742ad4b5054f720b6c8fa36f0"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-aws_5.79.0_linux_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v5.79.0/terraform-provider-aws_5.79.0_linux_386.zip",
+          "shasum": "cae9d179c0a694d0b42b2ca0317175d3806d8407cdf4e9dee6836e38c17067b0"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-aws_5.79.0_linux_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v5.79.0/terraform-provider-aws_5.79.0_linux_amd64.zip",
+          "shasum": "0506a20e604fbeebb0cbc6c0414250c697f510b49656d036b34556ce54318476"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-aws_5.79.0_linux_arm.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v5.79.0/terraform-provider-aws_5.79.0_linux_arm.zip",
+          "shasum": "e21fd135b382e692dfb4ef6088914167fdb7971e701ef2fb1cfcb475123d1e95"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-aws_5.79.0_linux_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v5.79.0/terraform-provider-aws_5.79.0_linux_arm64.zip",
+          "shasum": "7bf2c8fc2cefb6a2d11d22eb60271d4d1ac82aa82791169f456ff391ada752eb"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-aws_5.79.0_windows_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v5.79.0/terraform-provider-aws_5.79.0_windows_386.zip",
+          "shasum": "f994a36a33e88f9a349ed629acdc08d846b4df05d73418cb3e271c9bc57a7dcc"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-aws_5.79.0_windows_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v5.79.0/terraform-provider-aws_5.79.0_windows_amd64.zip",
+          "shasum": "683c5831e4b481495fb46ab26f22d7709d07609c1ba08cb9cc6f11849705d99f"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-aws_5.79.0_windows_arm.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v5.79.0/terraform-provider-aws_5.79.0_windows_arm.zip",
+          "shasum": "942e7c92028b6066f1338f57769ee8771a35dc4dab8adccf84e98e600f119417"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-aws_5.79.0_windows_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v5.79.0/terraform-provider-aws_5.79.0_windows_arm64.zip",
+          "shasum": "2abc78b3459e44b6d9a0d31ec43fd53f51c1fbf7b527705e674f94a2295f8be0"
+        }
+      ]
+    },
     {
       "version": "5.78.0",
       "protocols": [
@@ -26395,5 +26472,8 @@
         }
       ]
     }
+  ],
+  "warnings": [
+    "You are using opentofu/aws instead of hashicorp/aws. This provider is maintained by HashiCorp and the OpenTofu project only builds the provider binaries from the source code. Both the opentofu/ and hashicorp/ namespaces in the OpenTofu Registry contain the OpenTofu-built provider binaries based on the HashiCorp source code. To avoid configuration errors, we recommend using the hashicorp/ namespaced providers."
   ]
 }
