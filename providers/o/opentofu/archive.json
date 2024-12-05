@@ -1,8 +1,85 @@
 {
-  "warnings": [
-    "You are using opentofu/archive instead of hashicorp/archive. This provider is maintained by HashiCorp and the OpenTofu project only builds the provider binaries from the source code. Both the opentofu/ and hashicorp/ namespaces in the OpenTofu Registry contain the OpenTofu-built provider binaries based on the HashiCorp source code. To avoid configuration errors, we recommend using the hashicorp/ namespaced providers."
-  ],
   "versions": [
+    {
+      "version": "2.7.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/opentofu/terraform-provider-archive/releases/download/v2.7.0/terraform-provider-archive_2.7.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/opentofu/terraform-provider-archive/releases/download/v2.7.0/terraform-provider-archive_2.7.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-archive_2.7.0_darwin_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-archive/releases/download/v2.7.0/terraform-provider-archive_2.7.0_darwin_amd64.zip",
+          "shasum": "7aabcaccacfcaa2fb84fdea93453552617e0efecc9869e88b63607c459fb99aa"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-archive_2.7.0_darwin_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-archive/releases/download/v2.7.0/terraform-provider-archive_2.7.0_darwin_arm64.zip",
+          "shasum": "351318d6caad0b03c28b30362e9d8b801f94b0bfd11b08566ad2b37f63671f8a"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-archive_2.7.0_linux_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-archive/releases/download/v2.7.0/terraform-provider-archive_2.7.0_linux_386.zip",
+          "shasum": "c8af7913de581bf2ca2dbf0906e604123a2a8f86a087c3b40a79cdacd5e867f5"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-archive_2.7.0_linux_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-archive/releases/download/v2.7.0/terraform-provider-archive_2.7.0_linux_amd64.zip",
+          "shasum": "f5c2311af4ee6ad8f1bd7eb4a1d38e371d1cbe90abf812797f6863e420f1c463"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-archive_2.7.0_linux_arm.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-archive/releases/download/v2.7.0/terraform-provider-archive_2.7.0_linux_arm.zip",
+          "shasum": "fb3c41fa9fe5181db85c58d4893474082a2c7f14ba5a69e38c609b1fda9ba741"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-archive_2.7.0_linux_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-archive/releases/download/v2.7.0/terraform-provider-archive_2.7.0_linux_arm64.zip",
+          "shasum": "a423791fae7a51f1235f47ba13baa61d50714b10d84bbf391a6c0b55fe2e1a9a"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-archive_2.7.0_windows_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-archive/releases/download/v2.7.0/terraform-provider-archive_2.7.0_windows_386.zip",
+          "shasum": "7bcd07d40cf33f64c19f033d3ee64a243f09e039a2516ab3707aceb51669a532"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-archive_2.7.0_windows_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-archive/releases/download/v2.7.0/terraform-provider-archive_2.7.0_windows_amd64.zip",
+          "shasum": "56b70c49a2b60cb6a4f42bed921c30863481eb0422bb180e50dde271104731d9"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-archive_2.7.0_windows_arm.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-archive/releases/download/v2.7.0/terraform-provider-archive_2.7.0_windows_arm.zip",
+          "shasum": "7781aac1366a5ac0226f83331f152921c58b155fb91f506b0854b8267b870432"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-archive_2.7.0_windows_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-archive/releases/download/v2.7.0/terraform-provider-archive_2.7.0_windows_arm64.zip",
+          "shasum": "ee6c2995e7d462a0e769d62e5345e04acddff8af38422e7dd3925d1769408e7b"
+        }
+      ]
+    },
     {
       "version": "2.6.0",
       "protocols": [
@@ -1197,5 +1274,8 @@
         }
       ]
     }
+  ],
+  "warnings": [
+    "You are using opentofu/archive instead of hashicorp/archive. This provider is maintained by HashiCorp and the OpenTofu project only builds the provider binaries from the source code. Both the opentofu/ and hashicorp/ namespaces in the OpenTofu Registry contain the OpenTofu-built provider binaries based on the HashiCorp source code. To avoid configuration errors, we recommend using the hashicorp/ namespaced providers."
   ]
 }
