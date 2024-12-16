@@ -1,8 +1,85 @@
 {
-  "warnings": [
-    "You are using opentofu/hcp instead of hashicorp/hcp. This provider is maintained by HashiCorp and the OpenTofu project only builds the provider binaries from the source code. Both the opentofu/ and hashicorp/ namespaces in the OpenTofu Registry contain the OpenTofu-built provider binaries based on the HashiCorp source code. To avoid configuration errors, we recommend using the hashicorp/ namespaced providers."
-  ],
   "versions": [
+    {
+      "version": "0.101.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/opentofu/terraform-provider-hcp/releases/download/v0.101.0/terraform-provider-hcp_0.101.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/opentofu/terraform-provider-hcp/releases/download/v0.101.0/terraform-provider-hcp_0.101.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-hcp_0.101.0_darwin_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-hcp/releases/download/v0.101.0/terraform-provider-hcp_0.101.0_darwin_amd64.zip",
+          "shasum": "6aed3d886868181b45b565371cd3d1ac2cb7cee3a44934ec940879b8ec043056"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-hcp_0.101.0_darwin_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-hcp/releases/download/v0.101.0/terraform-provider-hcp_0.101.0_darwin_arm64.zip",
+          "shasum": "cb9e0e5683c2038d856505650d3c4e9634ef12f41e6f9d65db098fe4963bba38"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-hcp_0.101.0_linux_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-hcp/releases/download/v0.101.0/terraform-provider-hcp_0.101.0_linux_386.zip",
+          "shasum": "30ca8ebe9803655ff49ec59a16096ccf09f61382ef0ad5ab538af26d96b036a2"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-hcp_0.101.0_linux_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-hcp/releases/download/v0.101.0/terraform-provider-hcp_0.101.0_linux_amd64.zip",
+          "shasum": "0dcab8ea760a5a8e4fe658733fb04d0a1e9b5935ca641b0ee44325af0aa8918f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-hcp_0.101.0_linux_arm.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-hcp/releases/download/v0.101.0/terraform-provider-hcp_0.101.0_linux_arm.zip",
+          "shasum": "af724408e8324e48b572d51f2630b78dff11dccabcfbd7df330c328c1f922703"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-hcp_0.101.0_linux_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-hcp/releases/download/v0.101.0/terraform-provider-hcp_0.101.0_linux_arm64.zip",
+          "shasum": "c003362ba9827af14bef76e6f444550e44d25523b5f3f55a2bf1ca5e5f4bd2e8"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-hcp_0.101.0_windows_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-hcp/releases/download/v0.101.0/terraform-provider-hcp_0.101.0_windows_386.zip",
+          "shasum": "cef0df33cfead6a118d69c4fd0cf92e52633e078e14536246e6233af3db207ad"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-hcp_0.101.0_windows_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-hcp/releases/download/v0.101.0/terraform-provider-hcp_0.101.0_windows_amd64.zip",
+          "shasum": "03fb120122fb07c05ae0b74b034476a115b7964effe29d231a884bec1ddbf74c"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-hcp_0.101.0_windows_arm.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-hcp/releases/download/v0.101.0/terraform-provider-hcp_0.101.0_windows_arm.zip",
+          "shasum": "d99a4ee532d5e6fd96ad1f9189b416335446938005d75b76b0b5451227e80a8c"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-hcp_0.101.0_windows_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-hcp/releases/download/v0.101.0/terraform-provider-hcp_0.101.0_windows_arm64.zip",
+          "shasum": "bcb39b75c29c19379b6d5ceafd93d9dda85847473d02b19f958e142b560de84a"
+        }
+      ]
+    },
     {
       "version": "0.100.0",
       "protocols": [
@@ -8769,5 +8846,8 @@
         }
       ]
     }
+  ],
+  "warnings": [
+    "You are using opentofu/hcp instead of hashicorp/hcp. This provider is maintained by HashiCorp and the OpenTofu project only builds the provider binaries from the source code. Both the opentofu/ and hashicorp/ namespaces in the OpenTofu Registry contain the OpenTofu-built provider binaries based on the HashiCorp source code. To avoid configuration errors, we recommend using the hashicorp/ namespaced providers."
   ]
 }
