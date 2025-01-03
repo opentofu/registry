@@ -38,6 +38,11 @@ if [[ -n "${providername}" ]]; then
     gh issue comment "${NUMBER}" -b "Failed validation: Invalid provider name: '${providername}'"
     exit 1
   fi
+
+  if [[ "${providername}" =~ ^terraform-provider-.*$ ]]; then
+    gh issue comment "${NUMBER}" -b "Failed validation: Provider name must not contain 'terraform-provider-' prefix: '${providername}'"
+    exit 1
+  fi
 fi
 
 set +e
