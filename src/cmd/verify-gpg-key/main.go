@@ -47,7 +47,8 @@ func main() {
 	s = VerifyGithubUser(ghClient, *username, *orgName)
 	result.Steps = append(result.Steps, s)
 
-	// TODO: Add verification to ensure that the key has been used to sign providers in this github organization
+	s = VerifyKeyInProviders(logger, ghClient, *keyFile, *orgName)
+	result.Steps = append(result.Steps, s)
 
 	fmt.Println(result.RenderMarkdown())
 
