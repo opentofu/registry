@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"log/slog"
+	"net/http"
 	"os"
-	"os/exec"
-	"strings"
 
 	"github.com/ProtonMail/gopenpgp/v2/crypto"
 	"github.com/opentofu/registry-stable/internal/github"
@@ -15,25 +15,14 @@ import (
 	"github.com/opentofu/registry-stable/pkg/verification"
 )
 
-const templateString = `
-terraform {
-	required_providers {
-		%s = {
-			source = "%s/%s"
-			version = "%s"
-		}
-	}
-}
-`
-
 func VerifyKeyInProviders(logger *slog.Logger, ghClient github.Client, location string, orgName string) *verification.Step {
 
 	verifyStep := &verification.Step{
 		Name: "Verify GPG key in providers",
 	}
 
-	providerDataDir := "../providers"
-	providerNamespace := ""
+	providerDataDir := "/Users/diogenesaherminio/workspace/opentofu/opentofu-registry/providers"
+	providerNamespace := "wombelix"
 
 	// read the key from the filesystem
 	data, err := os.ReadFile(location)
@@ -53,15 +42,28 @@ func VerifyKeyInProviders(logger *slog.Logger, ghClient github.Client, location 
 		return nil
 	})
 
-	if key == nil {
-		logger.Error("Failed to parse key", slog.Any("err", err))
-	}
+	logger.Info(key.GetArmoredPublicKey())
 
 	providers, err := provider.ListProviders(providerDataDir, providerNamespace, logger, ghClient)
-	if err != nil {
-		logger.Error("Failed to list providers", slog.Any("err", err))
-		os.Exit(1)
-	}
+	verifyStep.RunStep("Provider list is valid", func() error {
+		if err != nil {
+			return fmt.Errorf("could not read providers: %w", err)
+		}
+		return nil
+	})
+
+	signingKeyRing, err := gpg.BuildSigningKeyRing(key)
+	verifyStep.RunStep("Can build a valid keyring", func() error {
+		if err != nil {
+			return fmt.Errorf("could not read build a keyring: %w", err)
+		}
+		return nil
+	})
+
+	logger.Info("Keyring", slog.String("keyring", signingKeyRing.FirstKeyID))
+	logger.Info("Providers", slog.String("providers", providers[0].ProviderName))
+	logger.Info("Providers", slog.String("providers", providers[0].Namespace))
+
 	err = providers.Parallel(10, func(p provider.Provider) error {
 		if p.Namespace == "opentofu" || p.Namespace == "hashicorp" {
 			// Skip!
@@ -77,7 +79,6 @@ func VerifyKeyInProviders(logger *slog.Logger, ghClient github.Client, location 
 
 		actions := make([]parallel.Action, len(metadata.Versions))
 		for i, ver := range metadata.Versions {
-			ver := ver
 			actions[i] = func() error {
 				dir, err := os.MkdirTemp("", "provider-keys")
 				if err != nil {
@@ -85,22 +86,59 @@ func VerifyKeyInProviders(logger *slog.Logger, ghClient github.Client, location 
 				}
 				defer os.RemoveAll(dir)
 
-				contents := fmt.Sprintf(templateString, p.ProviderName, p.Namespace, p.ProviderName, ver.Version)
-				err = os.WriteFile(dir+"/main.tf", []byte(contents), 0644)
+				// Check ShaSum signature
+				resp, err := http.Get(ver.SHASumsURL)
+				if err != nil {
+					return err
+				}
+				defer resp.Body.Close()
+
+				respSig, err := http.Get(ver.SHASumsSignatureURL)
+				if err != nil {
+					return err
+				}
+				defer respSig.Body.Close()
+
+				fileBytes, err := io.ReadAll(resp.Body)
 				if err != nil {
 					return err
 				}
 
-				p.Logger.Info(fmt.Sprintf("Checking version %s", ver.Version))
-				cmd := exec.Command("/opt/homebrew/bin/tofu", "init", "-no-color")
-				cmd.Dir = dir
-				out := new(strings.Builder)
-				cmd.Stdout = out
-				cmd.Stderr = out
-				if err := cmd.Run(); err != nil {
-					p.Logger.Info(fmt.Sprintf("Version %s failed!", ver.Version), "out", out.String())
-					pke.errs[ver.Version] = fmt.Errorf("%w: %s", err, out.String())
+				providerData := crypto.NewPlainMessage(fileBytes)
+
+				fileSigBytes, err := io.ReadAll(respSig.Body)
+				if err != nil {
+					return err
 				}
+
+				pgpSignature := crypto.NewPGPSignature(fileSigBytes)
+
+				err = signingKeyRing.VerifyDetached(providerData, pgpSignature, crypto.GetUnixTime())
+				if err != nil {
+					return err
+				}
+
+				logger.Info("Verified", slog.String("provider", ver.SHASumsURL))
+
+				// Option 2: Download versions and check in another way - need to talk to core devs
+				// for _, target := range ver.Targets {
+				// 	resp, err := http.Get(target.DownloadURL)
+				// 	if err != nil {
+				// 		return err
+				// 	}
+				// 	defer resp.Body.Close()
+
+				// 	bodyBytes, err := io.ReadAll(resp.Body)
+				// 	providerData := crypto.NewPlainMessage(bodyBytes)
+
+				// 	verifyResult, err := signingKeyRing.VerifyDetached(providerData, crypto.GetUnixTime())
+				// 	if err != nil {
+				// 		return err
+				// 	}
+
+				// 	logger.Info("Verified", slog.String("provider", target.DownloadURL))
+				// 	return nil
+				// }
 				return nil
 			}
 		}
@@ -116,10 +154,6 @@ func VerifyKeyInProviders(logger *slog.Logger, ghClient github.Client, location 
 
 		return nil
 	})
-	if err != nil {
-		logger.Error(err.Error())
-		os.Exit(1)
-	}
 
 	logger.Info("Completed ")
 	return verifyStep
