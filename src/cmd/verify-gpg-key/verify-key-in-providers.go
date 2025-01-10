@@ -10,8 +10,7 @@ import (
 	"github.com/opentofu/libregistry/metadata/storage/filesystem"
 )
 
-func verifyKeyInProviders(ctx context.Context, key *crypto.Key, providerNamespace string) error {
-	providerDataDir := "/Users/diogenesaherminio/workspace/opentofu/opentofu-registry/providers"
+func verifyKeyInProviders(ctx context.Context, providerDataDir string, key *crypto.Key, providerNamespace string) error {
 	storage := filesystem.New(providerDataDir)
 
 	httpClient := http.Client{

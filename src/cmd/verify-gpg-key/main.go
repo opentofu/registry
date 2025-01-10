@@ -25,6 +25,7 @@ func main() {
 	username := flag.String("username", "", "Github username to verify the GPG key against")
 	orgName := flag.String("org", "", "Github organization name to verify the GPG key against")
 	outputFile := flag.String("output", "", "Path to write JSON result to")
+	providerDataDir := flag.String("provider-data", "../providers", "Directory containing the provider data")
 	flag.Parse()
 
 	logger = logger.With(slog.String("github", *username), slog.String("org", *orgName))
@@ -42,7 +43,7 @@ func main() {
 
 	result := &verification.Result{}
 
-	s := VerifyKey(ctx, *keyFile, *orgName)
+	s := VerifyKey(ctx, *providerDataDir, *keyFile, *orgName)
 	result.Steps = append(result.Steps, s)
 
 	s = VerifyGithubUser(ghClient, *username, *orgName)
@@ -86,7 +87,7 @@ func VerifyGithubUser(client github.Client, username string, orgName string) *ve
 
 var gpgNameEmailRegex = regexp.MustCompile(`.*\<(.*)\>`)
 
-func VerifyKey(ctx context.Context, location string, orgName string) *verification.Step {
+func VerifyKey(ctx context.Context, providerDataDir string, location string, orgName string) *verification.Step {
 	verifyStep := &verification.Step{
 		Name: "Validate GPG key",
 	}
@@ -170,7 +171,7 @@ func VerifyKey(ctx context.Context, location string, orgName string) *verificati
 	})
 
 	verifyStep.RunStep("Key is used to sign the provider", func() error {
-		if err := verifyKeyInProviders(ctx, key, orgName); err != nil {
+		if err := verifyKeyInProviders(ctx, providerDataDir, key, orgName); err != nil {
 			return fmt.Errorf("key is not used to sign the provider: %w", err)
 		}
 		return nil
