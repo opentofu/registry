@@ -44,11 +44,6 @@ func main() {
 
 	result := &verification.Result{}
 
-	if err != nil {
-		logger.Error("Error getting absolute path", slog.Any("err", err))
-		os.Exit(1)
-	}
-
 	s := VerifyKey(ctx, *providerDataDir, *keyFile, *orgName)
 	result.Steps = append(result.Steps, s)
 
