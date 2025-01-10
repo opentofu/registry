@@ -12,6 +12,7 @@ import (
 
 	"github.com/ProtonMail/gopenpgp/v2/crypto"
 
+	"github.com/opentofu/libregistry/metadata"
 	"github.com/opentofu/libregistry/metadata/storage/filesystem"
 	"github.com/opentofu/registry-stable/internal/files"
 	"github.com/opentofu/registry-stable/internal/github"
@@ -171,8 +172,14 @@ func VerifyKey(ctx context.Context, providerDataDir string, location string, org
 		return nil
 	})
 
-	storageAPI := filesystem.New(providerDataDir)
-	providers, err := listProviders(ctx, storageAPI, orgName)
+	dataAPI, err := metadata.New(filesystem.New(providerDataDir))
+	if err != nil {
+		verifyStep.AddError(fmt.Errorf("failed to create a metadata API: %w", err))
+		verifyStep.Status = verification.StatusFailure
+		return verifyStep
+	}
+
+	providers, err := listProviders(ctx, dataAPI, orgName)
 
 	if err != nil {
 		verifyStep.AddError(fmt.Errorf("failed to list provider %s: %w", orgName, err))
@@ -180,7 +187,7 @@ func VerifyKey(ctx context.Context, providerDataDir string, location string, org
 		return verifyStep
 	}
 
-	keyVerification, err := buildKeyVerifier(storageAPI)
+	keyVerification, err := buildKeyVerifier(dataAPI)
 	if err != nil {
 		verifyStep.AddError(fmt.Errorf("failed to build key verifier: %w", err))
 		verifyStep.Status = verification.StatusFailure

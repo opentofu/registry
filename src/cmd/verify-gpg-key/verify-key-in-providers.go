@@ -7,29 +7,23 @@ import (
 	"time"
 
 	"github.com/opentofu/libregistry/metadata"
-	"github.com/opentofu/libregistry/metadata/storage"
 	"github.com/opentofu/libregistry/provider_verifier"
 	"github.com/opentofu/libregistry/types/provider"
 )
 
-func buildKeyVerifier(storageAPI storage.API) (provider_verifier.KeyVerification, error) {
+func buildKeyVerifier(dataAPI metadata.API) (provider_verifier.KeyVerification, error) {
 	httpClient := http.Client{
 		Timeout: time.Second * 10,
 	}
 
-	keyVerification, err := provider_verifier.New(httpClient, storageAPI)
+	keyVerification, err := provider_verifier.New(httpClient, dataAPI)
 	if err != nil {
 		return nil, err
 	}
 	return keyVerification, nil
 }
 
-func listProviders(ctx context.Context, storageAPI storage.API, namespace string) ([]provider.Addr, error) {
-	dataAPI, err := metadata.New(storageAPI)
-	if err != nil {
-		return nil, err
-	}
-
+func listProviders(ctx context.Context, dataAPI metadata.API, namespace string) ([]provider.Addr, error) {
 	providers, err := dataAPI.ListProvidersByNamespace(ctx, namespace, false)
 	if err != nil {
 		return nil, err
