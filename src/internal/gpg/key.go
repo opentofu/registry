@@ -49,11 +49,25 @@ func ParseKey(data string) (*crypto.Key, error) {
 	return key, nil
 }
 
-func BuildSigningKeyRing(pubKeyObj *crypto.Key) (*crypto.KeyRing, error) {
+func parseKeyRing(pubKeyObj *crypto.Key) (*crypto.KeyRing, error) {
 	signingKeyRing, err := crypto.NewKeyRing(pubKeyObj)
 	if err != nil {
 		return nil, fmt.Errorf("could not build keyring: %w", err)
 	}
 
 	return signingKeyRing, nil
+}
+
+func ParseSigningKeyRing(data string) (*crypto.KeyRing, error) {
+	key, err := ParseKey(data)
+	if err != nil {
+		return nil, fmt.Errorf("could not parse key: %w", err)
+	}
+
+	keyring, err := parseKeyRing(key)
+	if err != nil {
+		return nil, fmt.Errorf("could not build keyring: %w", err)
+	}
+
+	return keyring, nil
 }

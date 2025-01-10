@@ -8,6 +8,7 @@ import (
 	"net/mail"
 	"os"
 	"regexp"
+	"time"
 
 	"github.com/ProtonMail/gopenpgp/v2/crypto"
 
@@ -36,18 +37,15 @@ func main() {
 		os.Exit(1)
 	}
 
-	ctx := context.Background()
+	ctx, _ := context.WithTimeout(context.Background(), 10*time.Second)
 	ghClient := github.NewClient(ctx, logger, token)
 
 	result := &verification.Result{}
 
-	s := VerifyKey(*keyFile)
+	s := VerifyKey(ctx, *keyFile, *orgName)
 	result.Steps = append(result.Steps, s)
 
 	s = VerifyGithubUser(ghClient, *username, *orgName)
-	result.Steps = append(result.Steps, s)
-
-	s = VerifyKeyInProviders(logger, ghClient, *keyFile, *orgName)
 	result.Steps = append(result.Steps, s)
 
 	fmt.Println(result.RenderMarkdown())
@@ -88,7 +86,7 @@ func VerifyGithubUser(client github.Client, username string, orgName string) *ve
 
 var gpgNameEmailRegex = regexp.MustCompile(`.*\<(.*)\>`)
 
-func VerifyKey(location string) *verification.Step {
+func VerifyKey(ctx context.Context, location string, orgName string) *verification.Step {
 	verifyStep := &verification.Step{
 		Name: "Validate GPG key",
 	}
@@ -168,6 +166,13 @@ func VerifyKey(location string) *verification.Step {
 			}
 		}
 
+		return nil
+	})
+
+	verifyStep.RunStep("Key is used to sign the provider", func() error {
+		if err := verifyKeyInProviders(ctx, key, orgName); err != nil {
+			return fmt.Errorf("key is not used to sign the provider: %w", err)
+		}
 		return nil
 	})
 
