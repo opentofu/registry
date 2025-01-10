@@ -12,6 +12,7 @@ import (
 
 	"github.com/ProtonMail/gopenpgp/v2/crypto"
 
+	"github.com/opentofu/libregistry/metadata/storage/filesystem"
 	"github.com/opentofu/registry-stable/internal/files"
 	"github.com/opentofu/registry-stable/internal/github"
 	"github.com/opentofu/registry-stable/internal/gpg"
@@ -25,7 +26,7 @@ func main() {
 	username := flag.String("username", "", "Github username to verify the GPG key against")
 	orgName := flag.String("org", "", "Github organization name to verify the GPG key against")
 	outputFile := flag.String("output", "", "Path to write JSON result to")
-	providerDataDir := flag.String("provider-data", "../providers", "Directory containing the provider data")
+	providerDataDir := flag.String("provider-data", "..", "Directory containing the provider data")
 	flag.Parse()
 
 	logger = logger.With(slog.String("github", *username), slog.String("org", *orgName))
@@ -42,6 +43,11 @@ func main() {
 	ghClient := github.NewClient(ctx, logger, token)
 
 	result := &verification.Result{}
+
+	if err != nil {
+		logger.Error("Error getting absolute path", slog.Any("err", err))
+		os.Exit(1)
+	}
 
 	s := VerifyKey(ctx, *providerDataDir, *keyFile, *orgName)
 	result.Steps = append(result.Steps, s)
@@ -170,12 +176,31 @@ func VerifyKey(ctx context.Context, providerDataDir string, location string, org
 		return nil
 	})
 
-	verifyStep.RunStep("Key is used to sign the provider", func() error {
-		if err := verifyKeyInProviders(ctx, providerDataDir, key, orgName); err != nil {
-			return fmt.Errorf("key is not used to sign the provider: %w", err)
-		}
-		return nil
-	})
+	storageAPI := filesystem.New(providerDataDir)
+	providers, err := listProviders(ctx, storageAPI, orgName)
+
+	if err != nil {
+		verifyStep.AddError(fmt.Errorf("failed to list provider %s: %w", orgName, err))
+		verifyStep.Status = verification.StatusFailure
+		return verifyStep
+	}
+
+	keyVerification, err := buildKeyVerifier(storageAPI)
+	if err != nil {
+		verifyStep.AddError(fmt.Errorf("failed to build key verifier: %w", err))
+		verifyStep.Status = verification.StatusFailure
+		return verifyStep
+	}
+
+	for _, provider := range providers {
+		stepName := fmt.Sprintf("Key is used to sign the provider %s", provider)
+		verifyStep.RunStep(stepName, func() error {
+			if err := keyVerification.VerifyKey(ctx, key, provider); err != nil {
+				return err
+			}
+			return nil
+		})
+	}
 
 	emailStep.FailureToWarning()
 

@@ -2,29 +2,42 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"net/http"
 	"time"
 
-	"github.com/ProtonMail/gopenpgp/v2/crypto"
-	"github.com/opentofu/libregistry/key_verification"
-	"github.com/opentofu/libregistry/metadata/storage/filesystem"
+	"github.com/opentofu/libregistry/metadata"
+	"github.com/opentofu/libregistry/metadata/storage"
+	"github.com/opentofu/libregistry/provider_verification"
+	"github.com/opentofu/libregistry/types/provider"
 )
 
-func verifyKeyInProviders(ctx context.Context, providerDataDir string, key *crypto.Key, providerNamespace string) error {
-	storage := filesystem.New(providerDataDir)
-
+func buildKeyVerifier(storageAPI storage.API) (provider_verification.KeyVerification, error) {
 	httpClient := http.Client{
 		Timeout: time.Second * 10,
 	}
 
-	keyVerification, err := key_verification.New(httpClient, storage)
+	keyVerification, err := provider_verification.New(httpClient, storageAPI)
 	if err != nil {
-		return err
+		return nil, err
+	}
+	return keyVerification, nil
+}
+
+func listProviders(ctx context.Context, storageAPI storage.API, namespace string) ([]provider.Addr, error) {
+	dataAPI, err := metadata.New(storageAPI)
+	if err != nil {
+		return nil, err
 	}
 
-	if err := keyVerification.VerifyKey(ctx, key, providerNamespace); err != nil {
-		return err
+	providers, err := dataAPI.ListProvidersByNamespace(ctx, namespace, false)
+	if err != nil {
+		return nil, err
 	}
 
-	return nil
+	if len(providers) == 0 {
+		return nil, fmt.Errorf("no providers found for namespace %s", namespace)
+	}
+
+	return providers, nil
 }
