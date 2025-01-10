@@ -8,16 +8,16 @@ import (
 
 	"github.com/opentofu/libregistry/metadata"
 	"github.com/opentofu/libregistry/metadata/storage"
-	"github.com/opentofu/libregistry/provider_verification"
+	"github.com/opentofu/libregistry/provider_verifier"
 	"github.com/opentofu/libregistry/types/provider"
 )
 
-func buildKeyVerifier(storageAPI storage.API) (provider_verification.KeyVerification, error) {
+func buildKeyVerifier(storageAPI storage.API) (provider_verifier.KeyVerification, error) {
 	httpClient := http.Client{
 		Timeout: time.Second * 10,
 	}
 
-	keyVerification, err := provider_verification.New(httpClient, storageAPI)
+	keyVerification, err := provider_verifier.New(httpClient, storageAPI)
 	if err != nil {
 		return nil, err
 	}
