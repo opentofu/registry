@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"log/slog"
 	"net/http"
-	"time"
 
 	"github.com/opentofu/libregistry/metadata"
 	"github.com/opentofu/libregistry/provider_verifier"
@@ -13,9 +12,7 @@ import (
 )
 
 func buildKeyVerifier(dataAPI metadata.API) (provider_verifier.KeyVerification, error) {
-	httpClient := http.Client{
-		Timeout: 60 * time.Second,
-	}
+	httpClient := http.Client{}
 
 	keyVerification, err := provider_verifier.New(httpClient, dataAPI)
 	if err != nil {
