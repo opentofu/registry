@@ -21,11 +21,16 @@ import (
 )
 
 func main() {
-	logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
+	opts := &slog.HandlerOptions{
+		Level: slog.LevelError,
+	}
+	logger := slog.New(slog.NewJSONHandler(os.Stdout, opts))
 
 	keyFile := flag.String("key-file", "", "Location of the GPG key to verify")
 	username := flag.String("username", "", "Github username to verify the GPG key against")
 	orgName := flag.String("org", "", "Github organization name to verify the GPG key against")
+	providerName := flag.String("provider-name", "", "Key used to sign provider-scoped name")
+
 	outputFile := flag.String("output", "", "Path to write JSON result to")
 	providerDataDir := flag.String("provider-data", "..", "Directory containing the provider data")
 	flag.Parse()
@@ -47,7 +52,7 @@ func main() {
 
 	result := &verification.Result{}
 
-	s := VerifyKey(ctx, *providerDataDir, *keyFile, *orgName)
+	s := VerifyKey(ctx, *logger, *providerDataDir, *keyFile, *orgName, *providerName)
 	result.Steps = append(result.Steps, s)
 
 	s = VerifyGithubUser(ghClient, *username, *orgName)
@@ -91,7 +96,7 @@ func VerifyGithubUser(client github.Client, username string, orgName string) *ve
 
 var gpgNameEmailRegex = regexp.MustCompile(`.*\<(.*)\>`)
 
-func VerifyKey(ctx context.Context, providerDataDir string, location string, orgName string) *verification.Step {
+func VerifyKey(ctx context.Context, logger slog.Logger, providerDataDir string, location string, orgName string, providerName string) *verification.Step {
 	verifyStep := &verification.Step{
 		Name: "Validate GPG key",
 	}
@@ -181,7 +186,7 @@ func VerifyKey(ctx context.Context, providerDataDir string, location string, org
 		return verifyStep
 	}
 
-	providers, err := listProviders(ctx, dataAPI, orgName)
+	providers, err := getProviders(ctx, logger, dataAPI, orgName, providerName)
 
 	if err != nil {
 		verifyStep.AddError(fmt.Errorf("failed to list provider %s: %w", orgName, err))
