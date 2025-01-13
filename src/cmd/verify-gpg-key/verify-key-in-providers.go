@@ -13,7 +13,7 @@ import (
 
 func buildKeyVerifier(dataAPI metadata.API) (provider_verifier.KeyVerification, error) {
 	httpClient := http.Client{
-		Timeout: time.Second * 10,
+		Timeout: 60 * time.Second,
 	}
 
 	keyVerification, err := provider_verifier.New(httpClient, dataAPI)
@@ -30,7 +30,7 @@ func listProviders(ctx context.Context, dataAPI metadata.API, namespace string) 
 	}
 
 	if len(providers) == 0 {
-		return nil, fmt.Errorf("no providers found for namespace %s", namespace)
+		return nil, fmt.Errorf("there are no providers in namespace %s; please submit at least one provider before submitting a GPG key", namespace)
 	}
 
 	return providers, nil

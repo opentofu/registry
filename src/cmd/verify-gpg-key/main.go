@@ -40,7 +40,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	ctx, _ := context.WithTimeout(context.Background(), 10*time.Second)
+	ctx, _ := context.WithTimeout(context.Background(), 60*time.Second)
 	ghClient := github.NewClient(ctx, logger, token)
 
 	result := &verification.Result{}
@@ -95,7 +95,7 @@ func VerifyKey(ctx context.Context, providerDataDir string, location string, org
 	}
 
 	// read the key from the filesystem
-	data, err := os.ReadFile(location)
+	keyData, err := os.ReadFile(location)
 	if err != nil {
 		verifyStep.AddError(fmt.Errorf("failed to read key file: %w", err))
 		verifyStep.Status = verification.StatusFailure
@@ -104,7 +104,7 @@ func VerifyKey(ctx context.Context, providerDataDir string, location string, org
 
 	var key *crypto.Key
 	verifyStep.RunStep("Key is a valid PGP key", func() error {
-		k, err := gpg.ParseKey(string(data))
+		k, err := gpg.ParseKey(string(keyData))
 		if err != nil {
 			return fmt.Errorf("could not parse key: %w", err)
 		}
@@ -197,7 +197,7 @@ func VerifyKey(ctx context.Context, providerDataDir string, location string, org
 	for _, provider := range providers {
 		stepName := fmt.Sprintf("Key is used to sign the provider %s", provider)
 		verifyStep.RunStep(stepName, func() error {
-			if err := keyVerification.VerifyKey(ctx, key, provider); err != nil {
+			if err := keyVerification.VerifyKey(ctx, keyData, provider); err != nil {
 				return err
 			}
 			return nil
