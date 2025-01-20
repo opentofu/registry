@@ -1,6 +1,114 @@
 {
   "versions": [
     {
+      "version": "1.0.0-beta",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/cisco-open/terraform-provider-meraki/releases/download/v1.0.0-beta/terraform-provider-meraki_1.0.0-beta_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/cisco-open/terraform-provider-meraki/releases/download/v1.0.0-beta/terraform-provider-meraki_1.0.0-beta_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-meraki_1.0.0-beta_darwin_amd64.zip",
+          "download_url": "https://github.com/cisco-open/terraform-provider-meraki/releases/download/v1.0.0-beta/terraform-provider-meraki_1.0.0-beta_darwin_amd64.zip",
+          "shasum": "05bddead82b734d4033987778d78553b3ab68b78bb45080a4c84960262dc0ba8"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-meraki_1.0.0-beta_darwin_arm64.zip",
+          "download_url": "https://github.com/cisco-open/terraform-provider-meraki/releases/download/v1.0.0-beta/terraform-provider-meraki_1.0.0-beta_darwin_arm64.zip",
+          "shasum": "7f2074ab3878c679863f33fd04480e807ae33aaf16263cd29f64cc9f67628ea3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-meraki_1.0.0-beta_freebsd_386.zip",
+          "download_url": "https://github.com/cisco-open/terraform-provider-meraki/releases/download/v1.0.0-beta/terraform-provider-meraki_1.0.0-beta_freebsd_386.zip",
+          "shasum": "efa2bec0b841dc82d83a444bc0715f68510d0a836a69df931e7926ddaeee8bc7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-meraki_1.0.0-beta_freebsd_amd64.zip",
+          "download_url": "https://github.com/cisco-open/terraform-provider-meraki/releases/download/v1.0.0-beta/terraform-provider-meraki_1.0.0-beta_freebsd_amd64.zip",
+          "shasum": "79606ceb793e44203a6e44ee35af83a4a95e1f198c082568beb431c093884cfc"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-meraki_1.0.0-beta_freebsd_arm.zip",
+          "download_url": "https://github.com/cisco-open/terraform-provider-meraki/releases/download/v1.0.0-beta/terraform-provider-meraki_1.0.0-beta_freebsd_arm.zip",
+          "shasum": "4f12ca50eeef5b4c8d8369114c6eb26d4e3db7af72dfe173d2de38ac117b918a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-meraki_1.0.0-beta_freebsd_arm64.zip",
+          "download_url": "https://github.com/cisco-open/terraform-provider-meraki/releases/download/v1.0.0-beta/terraform-provider-meraki_1.0.0-beta_freebsd_arm64.zip",
+          "shasum": "2529467037e97429733a8218d1db2fc8741371b8da3bdec819839feb1aa8f29b"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-meraki_1.0.0-beta_linux_386.zip",
+          "download_url": "https://github.com/cisco-open/terraform-provider-meraki/releases/download/v1.0.0-beta/terraform-provider-meraki_1.0.0-beta_linux_386.zip",
+          "shasum": "0dbc8e54eddeb0ebcb4812e4591ecec1459ce5eb87a2c357a731551ddc55210f"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-meraki_1.0.0-beta_linux_amd64.zip",
+          "download_url": "https://github.com/cisco-open/terraform-provider-meraki/releases/download/v1.0.0-beta/terraform-provider-meraki_1.0.0-beta_linux_amd64.zip",
+          "shasum": "1798a0e6b25ce9b4feeea07c2069da5f5b06f2cc8642f572b991932e092bb572"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-meraki_1.0.0-beta_linux_arm.zip",
+          "download_url": "https://github.com/cisco-open/terraform-provider-meraki/releases/download/v1.0.0-beta/terraform-provider-meraki_1.0.0-beta_linux_arm.zip",
+          "shasum": "0ac49285ad09e052a7c52ce74d3507f647af4a5fb5b79b6006f71088f174f0e7"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-meraki_1.0.0-beta_linux_arm64.zip",
+          "download_url": "https://github.com/cisco-open/terraform-provider-meraki/releases/download/v1.0.0-beta/terraform-provider-meraki_1.0.0-beta_linux_arm64.zip",
+          "shasum": "bcf89412c2229ed48a7792cf4cfa0875550e5652a1e8ce77fdbc41aca88b374b"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-meraki_1.0.0-beta_windows_386.zip",
+          "download_url": "https://github.com/cisco-open/terraform-provider-meraki/releases/download/v1.0.0-beta/terraform-provider-meraki_1.0.0-beta_windows_386.zip",
+          "shasum": "2f81ac5a2ee6ffee5d2462b432f353dadedc17183ac604d2e0989c59dcc8ebb0"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-meraki_1.0.0-beta_windows_amd64.zip",
+          "download_url": "https://github.com/cisco-open/terraform-provider-meraki/releases/download/v1.0.0-beta/terraform-provider-meraki_1.0.0-beta_windows_amd64.zip",
+          "shasum": "c4bbd7ab0b87dea9050582464330cb2e508021a0ec25356692027f03716e9948"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-meraki_1.0.0-beta_windows_arm.zip",
+          "download_url": "https://github.com/cisco-open/terraform-provider-meraki/releases/download/v1.0.0-beta/terraform-provider-meraki_1.0.0-beta_windows_arm.zip",
+          "shasum": "379bffeb28fde0d18e89752b87a596c01af599be6eaac60e5c2bff6705ce4224"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-meraki_1.0.0-beta_windows_arm64.zip",
+          "download_url": "https://github.com/cisco-open/terraform-provider-meraki/releases/download/v1.0.0-beta/terraform-provider-meraki_1.0.0-beta_windows_arm64.zip",
+          "shasum": "89846670834d5f869834f0e55f5c55b9d1c305cd78d5262effc6b87a7ff0d757"
+        }
+      ]
+    },
+    {
       "version": "0.2.13-alpha",
       "protocols": [
         "6.0"
