@@ -201,7 +201,7 @@ func VerifyKey(ctx context.Context, logger slog.Logger, providerDataDir string, 
 	for _, provider := range providers {
 		stepName := fmt.Sprintf("Key is used to sign the provider %s", provider)
 		verifyStep.RunStep(stepName, func() error {
-			if err := keyVerification.VerifyKey(ctx, keyData, provider, 10); err != nil {
+			if err := keyVerification.VerifyKey(ctx, keyData, provider); err != nil {
 				return err
 			}
 			return nil

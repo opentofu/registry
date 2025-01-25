@@ -7,14 +7,14 @@ import (
 	"net/http"
 
 	"github.com/opentofu/libregistry/metadata"
-	"github.com/opentofu/libregistry/provider_verifier"
+	"github.com/opentofu/libregistry/provider_key_verifier"
 	"github.com/opentofu/libregistry/types/provider"
 )
 
-func buildKeyVerifier(dataAPI metadata.API) (provider_verifier.KeyVerification, error) {
-	httpClient := http.Client{}
+func buildKeyVerifier(dataAPI metadata.API) (provider_key_verifier.ProviderKeyVerifier, error) {
+	httpClient := &http.Client{}
 
-	keyVerification, err := provider_verifier.New(httpClient, dataAPI)
+	keyVerification, err := provider_key_verifier.New(httpClient, dataAPI)
 	if err != nil {
 		return nil, err
 	}
