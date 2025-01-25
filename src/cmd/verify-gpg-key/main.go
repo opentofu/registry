@@ -21,10 +21,7 @@ import (
 )
 
 func main() {
-	opts := &slog.HandlerOptions{
-		Level: slog.LevelError,
-	}
-	logger := slog.New(slog.NewJSONHandler(os.Stdout, opts))
+	logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
 
 	keyFile := flag.String("key-file", "", "Location of the GPG key to verify")
 	username := flag.String("username", "", "Github username to verify the GPG key against")
