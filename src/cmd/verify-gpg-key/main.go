@@ -207,7 +207,7 @@ func VerifyKey(ctx context.Context, logger slog.Logger, providerDataDir string, 
 		}
 
 		for _, version := range versions {
-			subName := fmt.Sprintf("Key is used to sign the provider %s v%s", provider, version)
+			subName := fmt.Sprintf("Key is used to sign the provider %s v%s", provider, version.Version)
 			verifyStep.AddStep(subName, verification.StatusSuccess)
 		}
 	}
