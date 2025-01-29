@@ -10,8 +10,8 @@ import (
 	"github.com/opentofu/libregistry/types/provider"
 )
 
-func buildKeyVerifier(dataAPI metadata.API) (provider_key_verifier.ProviderKeyVerifier, error) {
-	keyVerification, err := provider_key_verifier.New(dataAPI)
+func buildKeyVerifier(keyData []byte, dataAPI metadata.API) (provider_key_verifier.ProviderKeyVerifier, error) {
+	keyVerification, err := provider_key_verifier.New(keyData, dataAPI)
 	if err != nil {
 		return nil, err
 	}

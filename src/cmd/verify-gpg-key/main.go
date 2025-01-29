@@ -191,7 +191,7 @@ func VerifyKey(ctx context.Context, logger slog.Logger, providerDataDir string, 
 		return verifyStep
 	}
 
-	keyVerification, err := buildKeyVerifier(dataAPI)
+	keyVerification, err := buildKeyVerifier(keyData, dataAPI)
 	if err != nil {
 		verifyStep.AddError(fmt.Errorf("failed to build key verifier: %w", err))
 		verifyStep.Status = verification.StatusFailure
@@ -199,7 +199,7 @@ func VerifyKey(ctx context.Context, logger slog.Logger, providerDataDir string, 
 	}
 
 	for _, provider := range providers {
-		versions, err := keyVerification.VerifyKey(ctx, keyData, provider)
+		versions, err := keyVerification.VerifyProvider(ctx, provider)
 		if err != nil {
 			verifyStep.AddError(fmt.Errorf("failed to verify key: %w", err))
 			verifyStep.Status = verification.StatusFailure
