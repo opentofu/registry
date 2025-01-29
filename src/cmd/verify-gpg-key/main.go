@@ -199,13 +199,17 @@ func VerifyKey(ctx context.Context, logger slog.Logger, providerDataDir string, 
 	}
 
 	for _, provider := range providers {
-		stepName := fmt.Sprintf("Key is used to sign the provider %s", provider)
-		verifyStep.RunStep(stepName, func() error {
-			if err := keyVerification.VerifyKey(ctx, keyData, provider); err != nil {
-				return err
-			}
-			return nil
-		})
+		versions, err := keyVerification.VerifyKey(ctx, keyData, provider)
+		if err != nil {
+			verifyStep.AddError(fmt.Errorf("failed to verify key: %w", err))
+			verifyStep.Status = verification.StatusFailure
+			return verifyStep
+		}
+
+		for _, version := range versions {
+			subName := fmt.Sprintf("Key is used to sign the provider %s v%s", provider, version)
+			verifyStep.AddStep(subName, verification.StatusSuccess)
+		}
 	}
 
 	emailStep.FailureToWarning()

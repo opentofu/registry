@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 	"log/slog"
-	"net/http"
 
 	"github.com/opentofu/libregistry/metadata"
 	"github.com/opentofu/libregistry/provider_key_verifier"
@@ -12,9 +11,7 @@ import (
 )
 
 func buildKeyVerifier(dataAPI metadata.API) (provider_key_verifier.ProviderKeyVerifier, error) {
-	httpClient := &http.Client{}
-
-	keyVerification, err := provider_key_verifier.New(httpClient, dataAPI)
+	keyVerification, err := provider_key_verifier.New(dataAPI)
 	if err != nil {
 		return nil, err
 	}
