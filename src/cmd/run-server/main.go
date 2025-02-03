@@ -18,7 +18,7 @@ func main() {
 
 	_, err := os.Stat(*destinationDir)
 	if err != nil {
-		logger.Error("Could not open folder", err)
+		logger.Error("Could not open folder", slog.Any("error", err))
 		os.Exit(1)
 	}
 
@@ -29,7 +29,7 @@ func main() {
 
 	err = http.ListenAndServeTLS(":8443", *certFile, *keyFile, nil)
 	if err != nil {
-		logger.Error("Failed to start server", err)
+		logger.Error("Failed to start server", slog.Any("error", err))
 		os.Exit(1)
 	}
 }
