@@ -1,0 +1,2380 @@
+{
+  "versions": [
+    {
+      "version": "0.4.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.4.0/terraform-provider-synology_0.4.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.4.0/terraform-provider-synology_0.4.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.4.0_darwin_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.4.0/terraform-provider-synology_0.4.0_darwin_amd64.zip",
+          "shasum": "0e9bb3a5f9ef4a6409c6a9141bb21bbce426d2c873140f05453ea350502c71be"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.4.0_darwin_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.4.0/terraform-provider-synology_0.4.0_darwin_arm64.zip",
+          "shasum": "676157d91379a0a0a450f03f0ebafc3025fd91edd9ad66f27aae3062cf248e71"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.4.0_freebsd_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.4.0/terraform-provider-synology_0.4.0_freebsd_386.zip",
+          "shasum": "4e929d559fc38d2308297cf16f0c3b29664aa51ce92deab7c40a7feff46d1a92"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.4.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.4.0/terraform-provider-synology_0.4.0_freebsd_amd64.zip",
+          "shasum": "03539df34d3632d832363bcf5c8bd240e3de9d86b8f78a59e3a531b9b122393b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.4.0_freebsd_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.4.0/terraform-provider-synology_0.4.0_freebsd_arm.zip",
+          "shasum": "891cf55a905dab9f0dba8b999c2a515a69fef4799079ef91deed4de3728e4936"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.4.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.4.0/terraform-provider-synology_0.4.0_freebsd_arm64.zip",
+          "shasum": "9a9654e1ac2c87dc03b067259a4390f8f0226f3fe2b79f1b51a60590d49b5ba1"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.4.0_linux_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.4.0/terraform-provider-synology_0.4.0_linux_386.zip",
+          "shasum": "4eaeae3d56aa01252e6b43a7edfa81ab061f7966f461572f72ef68e9f415cc89"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.4.0_linux_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.4.0/terraform-provider-synology_0.4.0_linux_amd64.zip",
+          "shasum": "7b0455a3e62d2903fc7452ab0deb3981f13b5c2e47e6e0868195a26bd65df4a3"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.4.0_linux_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.4.0/terraform-provider-synology_0.4.0_linux_arm.zip",
+          "shasum": "3e68323f0954ee4ec7868cb57be34304247a08ad4dc57af0e2f2737a59ab401d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.4.0_linux_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.4.0/terraform-provider-synology_0.4.0_linux_arm64.zip",
+          "shasum": "0a6bdc551e4018343e402ed0ba8465628b209d3de6c83aa0bb814976b8548b5f"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.4.0_windows_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.4.0/terraform-provider-synology_0.4.0_windows_386.zip",
+          "shasum": "109049e37b5ec300496c1705c779e2b2413e7a525727451dc95bf7c58c5af77c"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.4.0_windows_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.4.0/terraform-provider-synology_0.4.0_windows_amd64.zip",
+          "shasum": "9029c8668a6022befcc4973c433f93db88c0c24d1f395bbede3fe855f53e5cb8"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.4.0_windows_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.4.0/terraform-provider-synology_0.4.0_windows_arm.zip",
+          "shasum": "5b0f13ed368ea4fcd20a8210569d7a183b5e0e83723c60b3420b334853cd4b56"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.4.0_windows_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.4.0/terraform-provider-synology_0.4.0_windows_arm64.zip",
+          "shasum": "040f4e9e5f227b8b2074a7a816639935d631bd9276cabf6e31745d9710e758cb"
+        }
+      ]
+    },
+    {
+      "version": "0.3.3",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.3/terraform-provider-synology_0.3.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.3/terraform-provider-synology_0.3.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.3.3_darwin_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.3/terraform-provider-synology_0.3.3_darwin_amd64.zip",
+          "shasum": "92874913f541ac4c7bcf757005f8977e18f7b31eaf5bd814b4c01686ee0c0461"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.3.3_darwin_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.3/terraform-provider-synology_0.3.3_darwin_arm64.zip",
+          "shasum": "3e18a8bb8b2e7cbac73b1c930c03833bb01083203f8524321e25398ee34b284a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.3.3_freebsd_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.3/terraform-provider-synology_0.3.3_freebsd_386.zip",
+          "shasum": "20a8e219bee588a555f739830307be4de0cc69983197505a2c688d19f67ef563"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.3.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.3/terraform-provider-synology_0.3.3_freebsd_amd64.zip",
+          "shasum": "eb762fd47fd54823c891bb18ffe3dae85123d6ac6f216b554da23696be996bd1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.3.3_freebsd_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.3/terraform-provider-synology_0.3.3_freebsd_arm.zip",
+          "shasum": "912c8c3b963f3f5dd1064ff4606b808b92f026e5bcb4f86d8fbcbbc8d412c245"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.3.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.3/terraform-provider-synology_0.3.3_freebsd_arm64.zip",
+          "shasum": "e40f84ea2addbc054d705b8d9fd05929bc1db599d90219707b300d2bd931405c"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.3.3_linux_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.3/terraform-provider-synology_0.3.3_linux_386.zip",
+          "shasum": "864a8f20a84c0e4863d64d4010cbdf6eff936022dd3cd276c008fb6c066f65b9"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.3.3_linux_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.3/terraform-provider-synology_0.3.3_linux_amd64.zip",
+          "shasum": "7fa8c11ace07d46dfecfa62ee23741decad8e7eea9aa121f70daf591096846f5"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.3.3_linux_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.3/terraform-provider-synology_0.3.3_linux_arm.zip",
+          "shasum": "eda0e920ae128ca19416ed9c493484fca08e01f43a38c78658014546eadf5c9b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.3.3_linux_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.3/terraform-provider-synology_0.3.3_linux_arm64.zip",
+          "shasum": "b12a7b655e769c61a69e76d11e1ccb452fe896e997aaa0cf2950d840f4dab333"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.3.3_windows_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.3/terraform-provider-synology_0.3.3_windows_386.zip",
+          "shasum": "de680880c8701fe8c7bab9f54b48026cfc7e640335b64fbf8bb1cc24085f2a43"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.3.3_windows_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.3/terraform-provider-synology_0.3.3_windows_amd64.zip",
+          "shasum": "5d5ec609ef51311c875d6448f49da9a3cf85b6e437227aec463f47dff1f7b348"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.3.3_windows_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.3/terraform-provider-synology_0.3.3_windows_arm.zip",
+          "shasum": "6f0e1e9df118ceb5a8dbeb9f956e98fa994d520ef953e13ec6547ca57d4f9ac6"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.3.3_windows_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.3/terraform-provider-synology_0.3.3_windows_arm64.zip",
+          "shasum": "b454e7847d20b3e2d22001b16479e004dc79e90e28f82fadcb9f7558ba5ae8ff"
+        }
+      ]
+    },
+    {
+      "version": "0.3.2",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.2/terraform-provider-synology_0.3.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.2/terraform-provider-synology_0.3.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.3.2_darwin_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.2/terraform-provider-synology_0.3.2_darwin_amd64.zip",
+          "shasum": "4260df0d9d2ce5d4fa71a90707908008b0e16bb5c8f8dbe6f4c529e6caab932b"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.3.2_darwin_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.2/terraform-provider-synology_0.3.2_darwin_arm64.zip",
+          "shasum": "05e818d36b0ce3a51ce8d5c787fa2c6a4d51e4104692318548a70e1ec20315fa"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.3.2_freebsd_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.2/terraform-provider-synology_0.3.2_freebsd_386.zip",
+          "shasum": "8fe7ad314552946775c556d36d2aaea1d1a7f166f072a3f1bfe135d1bcdb25ba"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.3.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.2/terraform-provider-synology_0.3.2_freebsd_amd64.zip",
+          "shasum": "551b7a7aea40826ec5c7b518c100719d72c15381b7f8d5b9c8249d8ef69503a2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.3.2_freebsd_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.2/terraform-provider-synology_0.3.2_freebsd_arm.zip",
+          "shasum": "fd93f98b5fbb6769a4fb06ef96df8013ef9a53e5ca9a0c817c9719fb7666c97a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.3.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.2/terraform-provider-synology_0.3.2_freebsd_arm64.zip",
+          "shasum": "a1b108d80768384af12bc7cb9ccb6febb47ce8f3fb93cf4454c37b95ee537da9"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.3.2_linux_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.2/terraform-provider-synology_0.3.2_linux_386.zip",
+          "shasum": "09d15222cbeded16f6a1b4b3b9172faa4b78ab77578237e770863312ad0fb12a"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.3.2_linux_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.2/terraform-provider-synology_0.3.2_linux_amd64.zip",
+          "shasum": "565ac12f173d886ed91910f8fcc433e7cc988d42b1b91b1c6253654eddd19ff4"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.3.2_linux_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.2/terraform-provider-synology_0.3.2_linux_arm.zip",
+          "shasum": "b0ddef2b4db0184420cee0dc27d9251f83273f4afbaaacb09340b058b83ddd5d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.3.2_linux_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.2/terraform-provider-synology_0.3.2_linux_arm64.zip",
+          "shasum": "975563947b0d604a23d4efacbc6efd5c49156c55e998e0e308c3e9ffc1a0dcc6"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.3.2_windows_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.2/terraform-provider-synology_0.3.2_windows_386.zip",
+          "shasum": "1841351d3493c80de84ff8b8291e8ab38f92ee6864163db1333728636b1601fa"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.3.2_windows_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.2/terraform-provider-synology_0.3.2_windows_amd64.zip",
+          "shasum": "6c6ed609bc9d7f45daeac13e5fc9a9ac7071c0bab08d1ecf0d9ba0698aea0c04"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.3.2_windows_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.2/terraform-provider-synology_0.3.2_windows_arm.zip",
+          "shasum": "7fe6311aec4371317e0859b7c3c8a24636baf0a8f552e052255460841f38a0b9"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.3.2_windows_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.2/terraform-provider-synology_0.3.2_windows_arm64.zip",
+          "shasum": "ac1524aa00918b562bf5aca9869fd47cc452f71b1134502fba82092e350c0a94"
+        }
+      ]
+    },
+    {
+      "version": "0.3.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.0/terraform-provider-synology_0.3.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.0/terraform-provider-synology_0.3.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.3.0_darwin_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.0/terraform-provider-synology_0.3.0_darwin_amd64.zip",
+          "shasum": "a25c24c220326150d8e536a888430b60834e3a4c87b10d0b166c6896916c62c8"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.3.0_darwin_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.0/terraform-provider-synology_0.3.0_darwin_arm64.zip",
+          "shasum": "10c0b2db8ed48e95840ec18beef88a4c920407e527e98fc39d20623321c439e5"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.3.0_freebsd_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.0/terraform-provider-synology_0.3.0_freebsd_386.zip",
+          "shasum": "9cd65b867f538c355d9a506d17fdc8a33995ff5ee2ac6d365d18986f51c2fa94"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.3.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.0/terraform-provider-synology_0.3.0_freebsd_amd64.zip",
+          "shasum": "5306b80e2537b2f75ea7b0ec35d5e2ce269c2f1e576fad430b73042c044cc345"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.3.0_freebsd_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.0/terraform-provider-synology_0.3.0_freebsd_arm.zip",
+          "shasum": "3835ab167369f39a68a372ec64f296ff4b25f99ff877065a6206f77afc85d2cb"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.3.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.0/terraform-provider-synology_0.3.0_freebsd_arm64.zip",
+          "shasum": "4926dfb9eba9ae7c847d081889a3b71ce38d24b420e9d9c46bec0f1689704a7c"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.3.0_linux_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.0/terraform-provider-synology_0.3.0_linux_386.zip",
+          "shasum": "f59a8419117c4638d18c865bb42d7238c63a84d64aca065ab8e26e7e8ad6b3f1"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.3.0_linux_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.0/terraform-provider-synology_0.3.0_linux_amd64.zip",
+          "shasum": "5ee193b7945586ea38114e7c75136f7873e5f55d3facba1a4bdc89992f3f854d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.3.0_linux_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.0/terraform-provider-synology_0.3.0_linux_arm.zip",
+          "shasum": "570f7ef882b2e79adb9beedb394e2a63c95079058d5db78d6393f73251050164"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.3.0_linux_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.0/terraform-provider-synology_0.3.0_linux_arm64.zip",
+          "shasum": "7ac13fec51c29441ff479974cdcd4b176755928d3fa4c9fa75e06f27347b7ec4"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.3.0_windows_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.0/terraform-provider-synology_0.3.0_windows_386.zip",
+          "shasum": "d816b9aa6d650b254783a45b816e0016de8f71561e18979fc52044461cb157bb"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.3.0_windows_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.0/terraform-provider-synology_0.3.0_windows_amd64.zip",
+          "shasum": "4d454d5b0c797079f8f4e1c5c49b09816045b03f2906531d2abb9dcad6654c31"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.3.0_windows_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.0/terraform-provider-synology_0.3.0_windows_arm.zip",
+          "shasum": "4eb28bceff137db694f20b1a77564e5a7a28b6bfd4bb5e91b5dd98ea70f98d17"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.3.0_windows_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.3.0/terraform-provider-synology_0.3.0_windows_arm64.zip",
+          "shasum": "f49e4df8ce798649125a3a6ca43bda074001dd35db5f03bfc9f6f0eeb546990a"
+        }
+      ]
+    },
+    {
+      "version": "0.1.14",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.14/terraform-provider-synology_0.1.14_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.14/terraform-provider-synology_0.1.14_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.14_darwin_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.14/terraform-provider-synology_0.1.14_darwin_amd64.zip",
+          "shasum": "cc95490654d8032cf7cadc366c0a320b22aeb3e8351e34c8bfb2dd2648563e5c"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.14_darwin_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.14/terraform-provider-synology_0.1.14_darwin_arm64.zip",
+          "shasum": "043223d5405dcaeaf19dba0b621d1e52cf786e6288819bcfdde51a603bd6788f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.14_freebsd_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.14/terraform-provider-synology_0.1.14_freebsd_386.zip",
+          "shasum": "1417813d8a39281250e434c10434b6e71eb9c668601833fefb388d795365b0aa"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.14_freebsd_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.14/terraform-provider-synology_0.1.14_freebsd_amd64.zip",
+          "shasum": "5c811aa4e5c18ebc54940f5c9a4bb78a75139fc73f1b0060cdd2d9ecbfb9ab21"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.14_freebsd_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.14/terraform-provider-synology_0.1.14_freebsd_arm.zip",
+          "shasum": "7c2ccf524629ea6ada45966928dde554fd93dfe1b45336ade6bf52eb349e6d85"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.14_freebsd_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.14/terraform-provider-synology_0.1.14_freebsd_arm64.zip",
+          "shasum": "2a65fc0aa0e338ea89547814e7c34cd6616a73b5287e834e469ba52a5c11507b"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.14_linux_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.14/terraform-provider-synology_0.1.14_linux_386.zip",
+          "shasum": "8c2eb74c8ab9d1cde213b783a2a42e76a66eef38114577ccb9cfc529ae7a7063"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.14_linux_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.14/terraform-provider-synology_0.1.14_linux_amd64.zip",
+          "shasum": "463b209f7c5e0a1e526648451c9c1841ff81cda7c0d8e85355c6fb3663fe01e5"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.14_linux_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.14/terraform-provider-synology_0.1.14_linux_arm.zip",
+          "shasum": "e8d85d389e45b43a34e35c00d3a7fe41bdd9ce90b551f90639702e0a04e63514"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.14_linux_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.14/terraform-provider-synology_0.1.14_linux_arm64.zip",
+          "shasum": "6b8803b98c3602f32e6125ca41d3a80f8b3fbd365252dea0604f3dd1553312a7"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.14_windows_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.14/terraform-provider-synology_0.1.14_windows_386.zip",
+          "shasum": "b0ad5f3bbb6d1f77a11e42d9298baabf60aaaaff3653079d68ea5bd737c39134"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.14_windows_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.14/terraform-provider-synology_0.1.14_windows_amd64.zip",
+          "shasum": "536e4818d1fbc46dd07d5ebb7a0a3cdfecb6f1c4710cf44f2730380f6a93f179"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.14_windows_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.14/terraform-provider-synology_0.1.14_windows_arm.zip",
+          "shasum": "b40c07190909cb169f93dc7afa4f9b3f41e3f5a2b2f6e586f150e02ae23c911c"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.14_windows_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.14/terraform-provider-synology_0.1.14_windows_arm64.zip",
+          "shasum": "c8e7853cd11701d4477b2c217197bd28f0abd462774018afe7bdf1a490a5a040"
+        }
+      ]
+    },
+    {
+      "version": "0.1.13",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.13/terraform-provider-synology_0.1.13_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.13/terraform-provider-synology_0.1.13_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.13_darwin_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.13/terraform-provider-synology_0.1.13_darwin_amd64.zip",
+          "shasum": "1e2a98df8f7667fa3d7393a123d599804206ab310e42ae78ef4a3e03eae327d1"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.13_darwin_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.13/terraform-provider-synology_0.1.13_darwin_arm64.zip",
+          "shasum": "90aedbb01315791f4b709d15d7f2aa761e5867b60a4d9b2c71e94c5a3e444f5b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.13_freebsd_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.13/terraform-provider-synology_0.1.13_freebsd_386.zip",
+          "shasum": "5c55cb23696e3e868178de936fd9f689a6d8550d67874ba4caf4783ced0e87bc"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.13_freebsd_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.13/terraform-provider-synology_0.1.13_freebsd_amd64.zip",
+          "shasum": "1e2b172580153481310b989e4c5a096d7c66faa91f9468757bed82a0fe2c8a90"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.13_freebsd_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.13/terraform-provider-synology_0.1.13_freebsd_arm.zip",
+          "shasum": "0dcd02a156ad1ef9b7c7048233edfd875aff1f94d69c5cd94b9b6f1a975ef033"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.13_freebsd_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.13/terraform-provider-synology_0.1.13_freebsd_arm64.zip",
+          "shasum": "4e60d3b6e2cd50801505fe6e3c6bdb0c51fa05314f5ce1f4b53029aa571b8f62"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.13_linux_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.13/terraform-provider-synology_0.1.13_linux_386.zip",
+          "shasum": "7f002d2f86547273f50e34ff8529cdf44a1c8cb36369dad43e7326c37f50ccc9"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.13_linux_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.13/terraform-provider-synology_0.1.13_linux_amd64.zip",
+          "shasum": "b11b326f5186641611dd40a932df16328c1228b14c86a4ac3bd44e7f3125212f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.13_linux_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.13/terraform-provider-synology_0.1.13_linux_arm.zip",
+          "shasum": "92baa8bd091a96d206cbab195e57f6c1cf34c81e63aa24c3528a5abe2ed9f874"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.13_linux_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.13/terraform-provider-synology_0.1.13_linux_arm64.zip",
+          "shasum": "53ba753af9204410ff2b192b29c2d02b2683aa0aae14ce01d23f77ca534933fb"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.13_windows_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.13/terraform-provider-synology_0.1.13_windows_386.zip",
+          "shasum": "e47873af0a76826a1481740e6f3cc4fe2a29d83636483afa6a18e8d5688eeafd"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.13_windows_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.13/terraform-provider-synology_0.1.13_windows_amd64.zip",
+          "shasum": "8b87886b32d5519151ce80e320d2c92b19045a448ca85ef162505b3ce8d872e2"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.13_windows_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.13/terraform-provider-synology_0.1.13_windows_arm.zip",
+          "shasum": "c5c160a19a4408385b0e8dd5e071fef317aab2f325dbab4fe34a2040e5993e7b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.13_windows_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.13/terraform-provider-synology_0.1.13_windows_arm64.zip",
+          "shasum": "797009ba74a9db7fe7a686bcfea5574c31ee0ca2af63ba1849dea6509b995e32"
+        }
+      ]
+    },
+    {
+      "version": "0.1.12",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.12/terraform-provider-synology_0.1.12_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.12/terraform-provider-synology_0.1.12_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.12_darwin_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.12/terraform-provider-synology_0.1.12_darwin_amd64.zip",
+          "shasum": "5a6c74af4d671f6d1eb5ce30240942b8211eaadfab02242e5750c3ed4b58a0c5"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.12_darwin_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.12/terraform-provider-synology_0.1.12_darwin_arm64.zip",
+          "shasum": "9ef328139605b56b49dbdf3f2b72e4b590c1e70a7ff623acdd92ccc296d5834b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.12_freebsd_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.12/terraform-provider-synology_0.1.12_freebsd_386.zip",
+          "shasum": "12011d7ef85f4f1a7ac255a32047056b04081d3cd0ca2a8aed18c30e0749f23f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.12_freebsd_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.12/terraform-provider-synology_0.1.12_freebsd_amd64.zip",
+          "shasum": "23a77118bfa0e3574fd45a187c12a0397219bcd7d5cc32919dc71d04befa2bf9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.12_freebsd_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.12/terraform-provider-synology_0.1.12_freebsd_arm.zip",
+          "shasum": "9da56ac5bb9fdcf0f95c4d1aa85fd560ce78b0c6260a55ec1c7a0c52dbae45f8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.12_freebsd_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.12/terraform-provider-synology_0.1.12_freebsd_arm64.zip",
+          "shasum": "4d718bf42e27109e5c61318ce5645d3813b770391fdb3263b687249d377102da"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.12_linux_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.12/terraform-provider-synology_0.1.12_linux_386.zip",
+          "shasum": "b297556cfb54bfc3d242ff96313e16a9be4f8a6f7da5aa2f0980f41077e4cba9"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.12_linux_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.12/terraform-provider-synology_0.1.12_linux_amd64.zip",
+          "shasum": "ae44a636c2c06378394f7b114a55737c179262ded139b1b4af890059eab69e80"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.12_linux_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.12/terraform-provider-synology_0.1.12_linux_arm.zip",
+          "shasum": "ca8cb561d6ac16508c08549c011bc0d2f487c6e8e64ba8a1f07604a7d29b1e69"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.12_linux_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.12/terraform-provider-synology_0.1.12_linux_arm64.zip",
+          "shasum": "3b1ce6d757896445f14aec710005e0236a2901ba2e05fdf968b5f66a3f7619ae"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.12_windows_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.12/terraform-provider-synology_0.1.12_windows_386.zip",
+          "shasum": "7b8f823123a03b0f7989129e8a0f699b7f93597dc868137a762ea80b69406418"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.12_windows_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.12/terraform-provider-synology_0.1.12_windows_amd64.zip",
+          "shasum": "4acf3fc766842e2a3371c0caebf792afe50f42d31389b28521310c32f117b80f"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.12_windows_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.12/terraform-provider-synology_0.1.12_windows_arm.zip",
+          "shasum": "1c0bb2ad4c051b66e096dfaaffa2d1a043a35c0fd88f0e0b9d5a546d1f18fc1a"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.12_windows_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.12/terraform-provider-synology_0.1.12_windows_arm64.zip",
+          "shasum": "441c48edc9a62a61b6e868f87a7c54ff413eff61d15df8fe208d49db1e592cba"
+        }
+      ]
+    },
+    {
+      "version": "0.1.11",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.11/terraform-provider-synology_0.1.11_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.11/terraform-provider-synology_0.1.11_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.11_darwin_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.11/terraform-provider-synology_0.1.11_darwin_amd64.zip",
+          "shasum": "59edf00f350ec0e61411454c6c296cf8ecd1e401f9291d74a9b190afe2d54569"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.11_darwin_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.11/terraform-provider-synology_0.1.11_darwin_arm64.zip",
+          "shasum": "63e78bd5560063b29eff8a8535fe8978e1d18d6afa03980a8f07491f77212b4e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.11_freebsd_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.11/terraform-provider-synology_0.1.11_freebsd_386.zip",
+          "shasum": "451ed6085464bf0d5f1c1c478f47bc5b38841f15f99508a86275a298aab19db5"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.11_freebsd_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.11/terraform-provider-synology_0.1.11_freebsd_amd64.zip",
+          "shasum": "6f7e83f16a8670992d0a764da477fc6a75de77b1d16e2d39395548cd026d4729"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.11_freebsd_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.11/terraform-provider-synology_0.1.11_freebsd_arm.zip",
+          "shasum": "89bfb8d4e52d6ac5c8ffa5ec2d4d5eeedce10e293c50de43f00610ed648a55b4"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.11_freebsd_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.11/terraform-provider-synology_0.1.11_freebsd_arm64.zip",
+          "shasum": "dca3173baab2ed97b66325ec30f79200893512ead587db03a723c86772d61cce"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.11_linux_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.11/terraform-provider-synology_0.1.11_linux_386.zip",
+          "shasum": "a545d2d84fce19e01e45b865e6ad71a7ac0857e1f15176536af266067b936006"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.11_linux_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.11/terraform-provider-synology_0.1.11_linux_amd64.zip",
+          "shasum": "6ddbea9dddc7f74f972224e26e3e138d2c695190981ff089697c0822e15dbfec"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.11_linux_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.11/terraform-provider-synology_0.1.11_linux_arm.zip",
+          "shasum": "cd19495853a1860931e78b81be10b469894723decbb8b37fa3762850cbfb0be1"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.11_linux_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.11/terraform-provider-synology_0.1.11_linux_arm64.zip",
+          "shasum": "e3f0bdccee3dbf43186c4d4bfcc311a288174a44549e0a13381b48ef405b2c47"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.11_windows_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.11/terraform-provider-synology_0.1.11_windows_386.zip",
+          "shasum": "1070c9c2f9c9a3a1ef17fed4383fe7fa502f08d8694ef5d1897acd8340053dfe"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.11_windows_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.11/terraform-provider-synology_0.1.11_windows_amd64.zip",
+          "shasum": "9572ef2574543216a69df224aa1dddf453dda376856c87ea51b36563b98e0f51"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.11_windows_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.11/terraform-provider-synology_0.1.11_windows_arm.zip",
+          "shasum": "119be620297fefd7156aa6296234c4d35c56e1411d90a7b90ce44841bdf90dda"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.11_windows_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.11/terraform-provider-synology_0.1.11_windows_arm64.zip",
+          "shasum": "dcdeadd13337729ff15f6ff4c422064ae975d09df32823cae7b5c8a20be85b91"
+        }
+      ]
+    },
+    {
+      "version": "0.1.10",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.10/terraform-provider-synology_0.1.10_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.10/terraform-provider-synology_0.1.10_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.10_darwin_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.10/terraform-provider-synology_0.1.10_darwin_amd64.zip",
+          "shasum": "454008f609ce1899bb4dfb219ac70686cb311b27a4f7e34e1e8d5529d725c6a9"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.10_darwin_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.10/terraform-provider-synology_0.1.10_darwin_arm64.zip",
+          "shasum": "ff43324071d9436907a3148a5eae1fdccec4c6efbb918c7f9a44d68820a021e3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.10_freebsd_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.10/terraform-provider-synology_0.1.10_freebsd_386.zip",
+          "shasum": "6afffc80ec77ed01375114d9458bd87bafae9ac5ce5b8973211fe588c2e2a828"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.10_freebsd_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.10/terraform-provider-synology_0.1.10_freebsd_amd64.zip",
+          "shasum": "a5b99453cd6c0b63fee69cd0ff5208e426f177991e27698cb6983e3c0235bdd8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.10_freebsd_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.10/terraform-provider-synology_0.1.10_freebsd_arm.zip",
+          "shasum": "2eac6f4b6603452c60777d190fb0ea65a8f44b8c199b5b470fb3036794e0c980"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.10_freebsd_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.10/terraform-provider-synology_0.1.10_freebsd_arm64.zip",
+          "shasum": "29d0744c84ce1d04b067e50a22dd1ea32195c34ff2509542fa315832a0d8400e"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.10_linux_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.10/terraform-provider-synology_0.1.10_linux_386.zip",
+          "shasum": "b7663ffd2166b89641ac721f3d7425ddad7e3a1ecab799946bf0087aa59f4b5e"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.10_linux_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.10/terraform-provider-synology_0.1.10_linux_amd64.zip",
+          "shasum": "8b7fa5c9e777c8fff9879240f8cff6d5a442fc9b802757858f6bae836739b5b3"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.10_linux_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.10/terraform-provider-synology_0.1.10_linux_arm.zip",
+          "shasum": "467fb76154b568452dcb2abd1fbe388255c69751871df8af236c786198c4bba1"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.10_linux_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.10/terraform-provider-synology_0.1.10_linux_arm64.zip",
+          "shasum": "10978e6326bbdc6e8bfe792544a585d595587c8492c65a19fcaac2ae40ea040b"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.10_windows_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.10/terraform-provider-synology_0.1.10_windows_386.zip",
+          "shasum": "b6537a136681cc1dfbd44b497a58c1fab82ec5a9dfdd70d58dda2ceeddeca341"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.10_windows_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.10/terraform-provider-synology_0.1.10_windows_amd64.zip",
+          "shasum": "54e47c84703522760d4c172e3fda2e472e3ef1b6444416002d5e3121dad91dee"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.10_windows_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.10/terraform-provider-synology_0.1.10_windows_arm.zip",
+          "shasum": "5aeca312e6bb914272736328184aa164bb9a27b2cad8cdf5680512e691fea4bf"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.10_windows_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.10/terraform-provider-synology_0.1.10_windows_arm64.zip",
+          "shasum": "8d2cb7ca362113bd1365452d306e98c55a7b0f5bd31776732d0689ecc01e5dea"
+        }
+      ]
+    },
+    {
+      "version": "0.1.9",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.9/terraform-provider-synology_0.1.9_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.9/terraform-provider-synology_0.1.9_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.9_darwin_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.9/terraform-provider-synology_0.1.9_darwin_amd64.zip",
+          "shasum": "b3465cf6d2ffd026341321e36421214d26e93bc9a86e461ab7f703da00a00b5e"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.9_darwin_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.9/terraform-provider-synology_0.1.9_darwin_arm64.zip",
+          "shasum": "0ad7f81226bded4540cf6496c3109690fe2af12a12ecbd28ef604384bf9b7c12"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.9_freebsd_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.9/terraform-provider-synology_0.1.9_freebsd_386.zip",
+          "shasum": "c51b91311b4abb9945eea9d1c78823a42fef802f93997e571b1e4cec69e52344"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.9_freebsd_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.9/terraform-provider-synology_0.1.9_freebsd_amd64.zip",
+          "shasum": "a3472b62a8784a4d6b0f98b82be2d558475875b0865005780df6094c2cb24f3f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.9_freebsd_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.9/terraform-provider-synology_0.1.9_freebsd_arm.zip",
+          "shasum": "709f852b0d0834af39d0ab003698c786ae234b7c8d82d2f9b4629f25c6181a93"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.9_freebsd_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.9/terraform-provider-synology_0.1.9_freebsd_arm64.zip",
+          "shasum": "39bd9508018462facd4cdaaf409541c3ecde82f4be47cdb60ce6aaa99817b3a2"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.9_linux_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.9/terraform-provider-synology_0.1.9_linux_386.zip",
+          "shasum": "0a850b04664a56debe470ed9f49e07b9b463ae67a73081353599c18a4a28fdad"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.9_linux_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.9/terraform-provider-synology_0.1.9_linux_amd64.zip",
+          "shasum": "6285165e282053a3429dbac70e094cb11ffcf0764485fdf44a399c81ba585b5e"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.9_linux_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.9/terraform-provider-synology_0.1.9_linux_arm.zip",
+          "shasum": "32fa08831db7219aeb70724d58589d6f000b50b10a3ea8e68c7c568ac98d8359"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.9_linux_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.9/terraform-provider-synology_0.1.9_linux_arm64.zip",
+          "shasum": "e9dc66d4a1ad85e1ce1c446250e739c14b4930d46b319b383aaa296973574fdb"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.9_windows_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.9/terraform-provider-synology_0.1.9_windows_386.zip",
+          "shasum": "26430da2717737a390502aa32262686345a0fccd54647900b573a746fe9eb639"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.9_windows_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.9/terraform-provider-synology_0.1.9_windows_amd64.zip",
+          "shasum": "566978aee9296e059c5311d103f325393dce6039bf9e6e32eed36f7b8c5f83e4"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.9_windows_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.9/terraform-provider-synology_0.1.9_windows_arm.zip",
+          "shasum": "fc553fa349e9a260087d7d717adb084e65d19e98b6c77493eb9afaae405f02df"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.9_windows_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.9/terraform-provider-synology_0.1.9_windows_arm64.zip",
+          "shasum": "b7457a11b501dd3400c7246b414ef2595ddef820f42239c634bf06b7a407a0f6"
+        }
+      ]
+    },
+    {
+      "version": "0.1.8",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.8/terraform-provider-synology_0.1.8_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.8/terraform-provider-synology_0.1.8_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.8_darwin_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.8/terraform-provider-synology_0.1.8_darwin_amd64.zip",
+          "shasum": "106c235b5f4d89b0e2578809f4932642935ec1cfbce4ea19409883ef692d7026"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.8_darwin_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.8/terraform-provider-synology_0.1.8_darwin_arm64.zip",
+          "shasum": "a10238c71f9718d45a478a5894dbd1ff9f32b432e0b9fd07883b05dfbc1ff5e4"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.8_freebsd_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.8/terraform-provider-synology_0.1.8_freebsd_386.zip",
+          "shasum": "07bf49dc70c166f53fc05062b799bc36b8ce345a21f4ed7d59d9502b4a626696"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.8_freebsd_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.8/terraform-provider-synology_0.1.8_freebsd_amd64.zip",
+          "shasum": "4097f9d33355927b146aded0f7ccf996da886595f422150ba1673593fb75381b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.8_freebsd_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.8/terraform-provider-synology_0.1.8_freebsd_arm.zip",
+          "shasum": "4cbd3a7d3c47b017ce2fe231eed976f988c548e64d776bd55a2712ef5f82511d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.8_freebsd_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.8/terraform-provider-synology_0.1.8_freebsd_arm64.zip",
+          "shasum": "e1d0da2c4fc6f72760485eb5c315e438e85339739e07f560bcb421e80ea35730"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.8_linux_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.8/terraform-provider-synology_0.1.8_linux_386.zip",
+          "shasum": "26932d9ec3f632ecb531e47a63d0133634c9a1b66672d5ee6ea7c36db1aac70e"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.8_linux_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.8/terraform-provider-synology_0.1.8_linux_amd64.zip",
+          "shasum": "33b63ac62c022a0280fa05876f442904e282903aa4fc2f88ebe11d3773d4fcc8"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.8_linux_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.8/terraform-provider-synology_0.1.8_linux_arm.zip",
+          "shasum": "de61ff08067b7d35bb0b86cad4352f56f285e68fab7cb0516b48018a201a02ac"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.8_linux_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.8/terraform-provider-synology_0.1.8_linux_arm64.zip",
+          "shasum": "b764b32b8807ccfcc18f2c987d9bbb56905cdeb0a0d1bb278183e598ca986570"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.8_windows_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.8/terraform-provider-synology_0.1.8_windows_386.zip",
+          "shasum": "4f9750d8aa5031bff4cf5f302a6838d4a1371bf99330d573909c9ccb8c212186"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.8_windows_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.8/terraform-provider-synology_0.1.8_windows_amd64.zip",
+          "shasum": "f06b8acdee60b12eb6ef81e617182c30fc7715313227674293449b2018030afb"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.8_windows_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.8/terraform-provider-synology_0.1.8_windows_arm.zip",
+          "shasum": "38a994dd161c254bdd0820ce11e26815a5ee98fcd96a172cdcaee4af5eee4bc5"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.8_windows_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.8/terraform-provider-synology_0.1.8_windows_arm64.zip",
+          "shasum": "802a8a1470ba03aa180f5a1116ddddc010734d016f706c21064d2319d4926a62"
+        }
+      ]
+    },
+    {
+      "version": "0.1.7",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.7/terraform-provider-synology_0.1.7_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.7/terraform-provider-synology_0.1.7_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.7_darwin_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.7/terraform-provider-synology_0.1.7_darwin_amd64.zip",
+          "shasum": "0fe31b43d0f3e12da90908772163a59de0eb2f0fd18f65ceca4ed7140f9c3a82"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.7_darwin_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.7/terraform-provider-synology_0.1.7_darwin_arm64.zip",
+          "shasum": "56da265f9a4959607990699b5f98a86cd207855c47d17c4243fedc0e8c8001c8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.7_freebsd_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.7/terraform-provider-synology_0.1.7_freebsd_386.zip",
+          "shasum": "07f1c0cbfd3bb928da1f00d6cc539a909f0f30bc89d0ad8bb53e1c7bde8257d5"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.7_freebsd_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.7/terraform-provider-synology_0.1.7_freebsd_amd64.zip",
+          "shasum": "91bf699cbb1e26b4a25f5926875ab72a4743c496dec20dbc931f329702ae5f1d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.7_freebsd_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.7/terraform-provider-synology_0.1.7_freebsd_arm.zip",
+          "shasum": "1cc838ec5b2ba61839325f87b35eca29ac2d3a9061e2efd39cd3602239c6217b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.7_freebsd_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.7/terraform-provider-synology_0.1.7_freebsd_arm64.zip",
+          "shasum": "d35ae25af89d9b2c56cce12ebbdcd710e56e62670ba9500f778ccd0ada55e342"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.7_linux_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.7/terraform-provider-synology_0.1.7_linux_386.zip",
+          "shasum": "cb9b34223cd2da4fbeb8c1be7beb832272efa1fcbf552698cd7864c0420ba824"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.7_linux_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.7/terraform-provider-synology_0.1.7_linux_amd64.zip",
+          "shasum": "ff3d1a1fa6a7bb0b7560c8bb54a60003e7164c7a2f2a65a3d4c91644d35a0f4d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.7_linux_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.7/terraform-provider-synology_0.1.7_linux_arm.zip",
+          "shasum": "7414497f784f062d1d96ee852f4a65d9ba8509c47c825263796d70fa1723a586"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.7_linux_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.7/terraform-provider-synology_0.1.7_linux_arm64.zip",
+          "shasum": "0fc1ea623d29fa0b736f5f9c7c08f13aac7b188bbb0494fc4806e0bf5648ffb0"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.7_windows_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.7/terraform-provider-synology_0.1.7_windows_386.zip",
+          "shasum": "2866eb3b746981dd141897d37f28034a37f9de0307174351553a636492bb4c51"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.7_windows_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.7/terraform-provider-synology_0.1.7_windows_amd64.zip",
+          "shasum": "b4716d01920318df40348e409f071b4e2dbf9435215b0f604c332bc3211bd884"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.7_windows_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.7/terraform-provider-synology_0.1.7_windows_arm.zip",
+          "shasum": "644ff6cb090610514bc4c1c8ff94ec5b94b2d8fb0e28960cd8a7bd46dcf1713f"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.7_windows_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.7/terraform-provider-synology_0.1.7_windows_arm64.zip",
+          "shasum": "572181d330c586246214ca62f5f6662805485f0a72e98dbf302e802d2a8309d1"
+        }
+      ]
+    },
+    {
+      "version": "0.1.6",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.6/terraform-provider-synology_0.1.6_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.6/terraform-provider-synology_0.1.6_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.6_darwin_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.6/terraform-provider-synology_0.1.6_darwin_amd64.zip",
+          "shasum": "ff4ed2e9f2d94fbe6a21c13dfdae3a7b0a44a8ae740fc2f4849073461e215353"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.6_darwin_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.6/terraform-provider-synology_0.1.6_darwin_arm64.zip",
+          "shasum": "d54d622421ec217c7e30d2a736d28aa6482974235a859c2bf46baa39bd32985a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.6_freebsd_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.6/terraform-provider-synology_0.1.6_freebsd_386.zip",
+          "shasum": "f3ef12ddda10caaca75d5aa70f975d57f523d4c5034720b21062b04cca55d4f0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.6_freebsd_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.6/terraform-provider-synology_0.1.6_freebsd_amd64.zip",
+          "shasum": "2c3fe66982bcdd217e49e748826488850a1b7be96536b5796b00ea52d27b0509"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.6_freebsd_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.6/terraform-provider-synology_0.1.6_freebsd_arm.zip",
+          "shasum": "05b6f70aa83c03039fca2e84997e11e47ff8e0278082627b2b12470cd6a411c3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.6_freebsd_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.6/terraform-provider-synology_0.1.6_freebsd_arm64.zip",
+          "shasum": "0bec34f92df45c1a814d838abfbf7bb23c7f91b2fa34c32182cd7e180cd725e7"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.6_linux_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.6/terraform-provider-synology_0.1.6_linux_386.zip",
+          "shasum": "38209a248db905bca1407c617c5b142c3092ab865b0e913095161c46166b8f50"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.6_linux_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.6/terraform-provider-synology_0.1.6_linux_amd64.zip",
+          "shasum": "db11583535fb6c46c5b1a9d058ddc145738dcced6d6c2c00c90a69ea8ecb36d6"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.6_linux_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.6/terraform-provider-synology_0.1.6_linux_arm.zip",
+          "shasum": "93c3827647d7af54243fd1f22429555a8703133df865e1c6f342f87aea1e762f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.6_linux_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.6/terraform-provider-synology_0.1.6_linux_arm64.zip",
+          "shasum": "0dcc30ff4d57a6afd104039c704fa1194dbae093cfe1cf0b4a13a73bc7a22d14"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.6_windows_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.6/terraform-provider-synology_0.1.6_windows_386.zip",
+          "shasum": "6e1206302fb4673ed377c9b532451376548dc837c83079bcee4cad81d53f1bfa"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.6_windows_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.6/terraform-provider-synology_0.1.6_windows_amd64.zip",
+          "shasum": "e2ee87aad499e424bd02f0e878e6b93f11c8ffcf71c6d0ff57a122753da9039b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.6_windows_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.6/terraform-provider-synology_0.1.6_windows_arm.zip",
+          "shasum": "093a2880911dd07c95dbb7caa4ddb6017fe349a959fcd2ff23721066695f75af"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.6_windows_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.6/terraform-provider-synology_0.1.6_windows_arm64.zip",
+          "shasum": "a7998c6a16987f45c52aecb2e0373995885a1409b6ebe2d1822c36473ef328a7"
+        }
+      ]
+    },
+    {
+      "version": "0.1.5",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.5/terraform-provider-synology_0.1.5_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.5/terraform-provider-synology_0.1.5_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.5_darwin_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.5/terraform-provider-synology_0.1.5_darwin_amd64.zip",
+          "shasum": "85df2e571832e06c9091c5f691f6d2dfe7d92cb4a9bafb8230e661c8fe1d7ef7"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.5_darwin_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.5/terraform-provider-synology_0.1.5_darwin_arm64.zip",
+          "shasum": "d7efe15a10712d28f960b4e656e110219aba2e1aea4bc6af0b840cb71a300612"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.5_freebsd_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.5/terraform-provider-synology_0.1.5_freebsd_386.zip",
+          "shasum": "b464844d6aef5944fb1bf7b31c67b3ad4307768cc6764029d5e93259e4a32a97"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.5_freebsd_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.5/terraform-provider-synology_0.1.5_freebsd_amd64.zip",
+          "shasum": "3056ff5bf29b7beeac303324904bd885095f1ecc709f1a39815808ddb7226d63"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.5_freebsd_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.5/terraform-provider-synology_0.1.5_freebsd_arm.zip",
+          "shasum": "111cbb557706997465cc72949f92dd3d1e4074c54a38bf26938303736dedb7e9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.5_freebsd_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.5/terraform-provider-synology_0.1.5_freebsd_arm64.zip",
+          "shasum": "9507120eba07d076704d230083d36471e9c72e6d2e811f75f0e3a0296ef0456c"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.5_linux_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.5/terraform-provider-synology_0.1.5_linux_386.zip",
+          "shasum": "7cbe55c5884c6ccb51beb0b3730e9ecf829ac1ebb25e0efb641ef09852d8b639"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.5_linux_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.5/terraform-provider-synology_0.1.5_linux_amd64.zip",
+          "shasum": "3b5a5c9063811ba5b33b5e53d99080052134389b0f599fa9122987b5e0518b2c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.5_linux_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.5/terraform-provider-synology_0.1.5_linux_arm.zip",
+          "shasum": "761fe07136753ed1c9ede4230cb10c59a7d12e2aed6b77aa7653ddea4c37237d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.5_linux_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.5/terraform-provider-synology_0.1.5_linux_arm64.zip",
+          "shasum": "808a4c1a0856f72db102cea3c9d8987c305572f209844da87da16fc8e3a11411"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.5_windows_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.5/terraform-provider-synology_0.1.5_windows_386.zip",
+          "shasum": "1516bcb967ed1d8e2f84bae2e5ec5de81b2a9dfb4d128226357905766ac3b555"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.5_windows_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.5/terraform-provider-synology_0.1.5_windows_amd64.zip",
+          "shasum": "36a9ab4260ef6c23ff4fc9e3e91111770d1ca9ab978b7718978e25d018a27026"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.5_windows_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.5/terraform-provider-synology_0.1.5_windows_arm.zip",
+          "shasum": "7a9f3fdb62998c620115bdb18d6411889bd4806372a9bec959aafcdf8f9122ef"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.5_windows_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.5/terraform-provider-synology_0.1.5_windows_arm64.zip",
+          "shasum": "4521a807884fddb8c09603e2a0d326c7b441a27af25fbbc408dda99fc71d8f0f"
+        }
+      ]
+    },
+    {
+      "version": "0.1.4",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.4/terraform-provider-synology_0.1.4_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.4/terraform-provider-synology_0.1.4_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.4_darwin_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.4/terraform-provider-synology_0.1.4_darwin_amd64.zip",
+          "shasum": "7175d1afb83fb524350e72c0de217d9db48979157ecd594b9dfde74b955a0939"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.4_darwin_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.4/terraform-provider-synology_0.1.4_darwin_arm64.zip",
+          "shasum": "225bb5c9da567d93b4681743aedce7212b312f0031c439b59b07e0c03f2d530b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.4_freebsd_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.4/terraform-provider-synology_0.1.4_freebsd_386.zip",
+          "shasum": "9ed2a07bd2f85fc2c611f019e98019ae58b67f33f3743bd66c4b290fca4de75e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.4_freebsd_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.4/terraform-provider-synology_0.1.4_freebsd_amd64.zip",
+          "shasum": "3fdea621e4580640b13baa74f65d041c5b3b0cf2a5c3234c6d1ff68fbcdf61dd"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.4_freebsd_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.4/terraform-provider-synology_0.1.4_freebsd_arm.zip",
+          "shasum": "5156c679fdb63ee9ad79dc9ac42663cb9f312bf755c4fe716d17bd26424425d1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.4_freebsd_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.4/terraform-provider-synology_0.1.4_freebsd_arm64.zip",
+          "shasum": "cb6ed4708284f58d207013ee503db0d8244f0cd7bb74f21c89fb88082b9a4f07"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.4_linux_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.4/terraform-provider-synology_0.1.4_linux_386.zip",
+          "shasum": "4a36943ffd81e7fd2c5fae021e670d8bffada44f27cd49e02df3e526454afe34"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.4_linux_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.4/terraform-provider-synology_0.1.4_linux_amd64.zip",
+          "shasum": "280b129832af753e85c827cb6958805a9cf905a40abbb1b2e7466e24cdfc3b8e"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.4_linux_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.4/terraform-provider-synology_0.1.4_linux_arm.zip",
+          "shasum": "7104c7cedf9e40aadf1661def9aab2cfa0e0ed53bece21d5887122944754ee06"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.4_linux_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.4/terraform-provider-synology_0.1.4_linux_arm64.zip",
+          "shasum": "28e92a4777ecd0ba23c9278a06aa7609b4ee3fff47bae5c1453373a6b365732f"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.4_windows_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.4/terraform-provider-synology_0.1.4_windows_386.zip",
+          "shasum": "5bd9d49c4c9985c70528048805a241e8cbcf40f9508d4f0ae6f20abeb4f7af87"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.4_windows_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.4/terraform-provider-synology_0.1.4_windows_amd64.zip",
+          "shasum": "592a1fb8a25c271ecfc6ecd1c290c94fa8cb07cbf16457c3af840381f4197026"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.4_windows_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.4/terraform-provider-synology_0.1.4_windows_arm.zip",
+          "shasum": "4c51551ab7231a10a102f60aeb3cdb44f28394b409072b7bb80858a154272e61"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.4_windows_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.4/terraform-provider-synology_0.1.4_windows_arm64.zip",
+          "shasum": "f7d521f4a989fd76a8730cae6bef8d732cee57dbdad133125b14cffaa4761ee6"
+        }
+      ]
+    },
+    {
+      "version": "0.1.3",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.3/terraform-provider-synology_0.1.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.3/terraform-provider-synology_0.1.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.3_darwin_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.3/terraform-provider-synology_0.1.3_darwin_amd64.zip",
+          "shasum": "b94092d728d63bddbc8d8c5909f737668f623dafb6af757418e9ace2ca372162"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.3_darwin_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.3/terraform-provider-synology_0.1.3_darwin_arm64.zip",
+          "shasum": "b8fa8b8438c0c20cfdbb43a0d28872db26308c5eaaf7aff1fb179144cec0900e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.3_freebsd_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.3/terraform-provider-synology_0.1.3_freebsd_386.zip",
+          "shasum": "9675f2707f5cf6a0c520d2591d5b209379de954f8843e65444ffb39aaa07fc36"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.3/terraform-provider-synology_0.1.3_freebsd_amd64.zip",
+          "shasum": "898d63e50e215ba98ef9ea70bcb99d295fbb333693cd80de4c965a3fa19ee1ac"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.3_freebsd_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.3/terraform-provider-synology_0.1.3_freebsd_arm.zip",
+          "shasum": "f84faffcd33ce8ef9b95e4443947c38951841a9175aa9b61dd4f61fa208b8e43"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.3/terraform-provider-synology_0.1.3_freebsd_arm64.zip",
+          "shasum": "153c5d18bb47a92011dd1857f2ad35b5e91a620d7a7cde7229ae4e65a3df73e6"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.3_linux_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.3/terraform-provider-synology_0.1.3_linux_386.zip",
+          "shasum": "64e7f190e2dd9608c319d7e5d6b47787bcc1a016a612751e99c0cd762bee456c"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.3_linux_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.3/terraform-provider-synology_0.1.3_linux_amd64.zip",
+          "shasum": "7ca75aa531b139d52150c0321d0c968e1b18c4d3aebe00b60bfede0569c41e91"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.3_linux_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.3/terraform-provider-synology_0.1.3_linux_arm.zip",
+          "shasum": "ff7ec2696155430a7f462e5f1f87a09b877aa4f9bef99ec93b5ced4222ecde79"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.3_linux_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.3/terraform-provider-synology_0.1.3_linux_arm64.zip",
+          "shasum": "df58881d601d3a9602085740d8571f8e41f9d89cad238ec308283594fe5c0a04"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.3_windows_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.3/terraform-provider-synology_0.1.3_windows_386.zip",
+          "shasum": "a22958f29abe7900836bf4bcf5bf311d24f8fa5c85e411027dc62a760586192e"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.3_windows_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.3/terraform-provider-synology_0.1.3_windows_amd64.zip",
+          "shasum": "022b3b28733bbc33412777d671037ef738c58eda16185d9108739d8b2a2bf401"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.3_windows_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.3/terraform-provider-synology_0.1.3_windows_arm.zip",
+          "shasum": "d5549a4b44c728e57d0f5e8f1eed02abaa5e99ea1ca5a246e5a161e9ede61744"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.3_windows_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.3/terraform-provider-synology_0.1.3_windows_arm64.zip",
+          "shasum": "e539ee8ab10c233ab4c11f0f6ecbe2184a4864b59284ee029ede15eab4e01e98"
+        }
+      ]
+    },
+    {
+      "version": "0.1.2",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.2/terraform-provider-synology_0.1.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.2/terraform-provider-synology_0.1.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.2_darwin_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.2/terraform-provider-synology_0.1.2_darwin_amd64.zip",
+          "shasum": "7ba7d7969f1364fcd97f04e53e83a4bc3f984728ab76389d10150d86ad768f6d"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.2_darwin_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.2/terraform-provider-synology_0.1.2_darwin_arm64.zip",
+          "shasum": "629a9ea08334298ebdb331494a3c36b6ba46da47ad981efd23046c0fb7a9ad40"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.2_freebsd_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.2/terraform-provider-synology_0.1.2_freebsd_386.zip",
+          "shasum": "c2ed3e60245e420dc0188fe20b44944fb55ec71c94054d308b707fc12c36f252"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.2/terraform-provider-synology_0.1.2_freebsd_amd64.zip",
+          "shasum": "cda6b0e31a46321b5a052852ce6cfcfd99a6d2eac7d8e68fbfbbc5fb75c935fc"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.2_freebsd_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.2/terraform-provider-synology_0.1.2_freebsd_arm.zip",
+          "shasum": "c755007a8918965cbfd6c7b39708b57c42597338985fd7d639d2a65ec7f60a08"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.2/terraform-provider-synology_0.1.2_freebsd_arm64.zip",
+          "shasum": "fceae0d6cfa9285a6871ea399b35a3be9aa416a0d2ef0fd319c2939a5ac4070c"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.2_linux_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.2/terraform-provider-synology_0.1.2_linux_386.zip",
+          "shasum": "f9584b8a2d306492fdc4ac72323fba8d8c17a9399e08f8aa0ebbe8b9263425dc"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.2_linux_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.2/terraform-provider-synology_0.1.2_linux_amd64.zip",
+          "shasum": "969eb43a8bef47bea8e3f3fba985d3746cb9d7212c811105523931f2e2ed6571"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.2_linux_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.2/terraform-provider-synology_0.1.2_linux_arm.zip",
+          "shasum": "2e9e06bd5f11abf254935b3e63f3d136e5716ee2e641c9dc4e928f1aaf043c46"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.2_linux_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.2/terraform-provider-synology_0.1.2_linux_arm64.zip",
+          "shasum": "2b1387de46b2866038985861c4394c3fdb05b5ae887425e3db7944cac75881ef"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.2_windows_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.2/terraform-provider-synology_0.1.2_windows_386.zip",
+          "shasum": "5814faaffabbdf18f0619dd30d5cdd32d5111cdc4099bbbf03b2a521c01d578c"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.2_windows_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.2/terraform-provider-synology_0.1.2_windows_amd64.zip",
+          "shasum": "c2a42286b4db4fe14d85f17afb7614f9bf3770901c17367c28a75d5667a4ebd3"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.2_windows_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.2/terraform-provider-synology_0.1.2_windows_arm.zip",
+          "shasum": "7cf5817a8eaea172756642cdc0cf7fd1a5960a233d32e81ad01f545859fb3cef"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.2_windows_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.2/terraform-provider-synology_0.1.2_windows_arm64.zip",
+          "shasum": "9deea116f1baf45d71619d9fbeb850647917600d32b232e987f82e283afc9a73"
+        }
+      ]
+    },
+    {
+      "version": "0.1.1",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.1/terraform-provider-synology_0.1.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.1/terraform-provider-synology_0.1.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.1_darwin_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.1/terraform-provider-synology_0.1.1_darwin_amd64.zip",
+          "shasum": "30348c2b473914d1715959d7c724d73e1fb862af50ee24cebcf68ce11d818df8"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.1_darwin_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.1/terraform-provider-synology_0.1.1_darwin_arm64.zip",
+          "shasum": "3ae6932eda410197011e1951e4b24bd91b473c145343f5dd13b1d03c4d2d684c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.1_freebsd_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.1/terraform-provider-synology_0.1.1_freebsd_386.zip",
+          "shasum": "c12370aba024d63d7e5abaef7bb16316fe84b8de4ca899679d9c3589abdecb79"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.1/terraform-provider-synology_0.1.1_freebsd_amd64.zip",
+          "shasum": "dfc38071f49a016b4971590ec58e45c6f1f34ef6f3bfb26a4e084b55891e1bc7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.1_freebsd_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.1/terraform-provider-synology_0.1.1_freebsd_arm.zip",
+          "shasum": "fabdf390274602cb8b9d19a875ca1cfd72d216632a4dc65bdb60f84b483e718f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.1/terraform-provider-synology_0.1.1_freebsd_arm64.zip",
+          "shasum": "38340dcb5c00e2cf0f1d6a97e3561757f74be786757c70b32479f6e9b33d2e4f"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.1_linux_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.1/terraform-provider-synology_0.1.1_linux_386.zip",
+          "shasum": "6c2a8fc446b0a6e54f10cc7294ef5658e55c2214edbf05258241970cb443e1bd"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.1_linux_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.1/terraform-provider-synology_0.1.1_linux_amd64.zip",
+          "shasum": "a6bea78f8a110dff58d6624bbc79a9e50cd94a7449b46644ee26cf6583ec1a72"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.1_linux_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.1/terraform-provider-synology_0.1.1_linux_arm.zip",
+          "shasum": "584cb94062b21769b924ae291a4ceed0999fa34771ff13726c0af3039c7a0026"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.1_linux_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.1/terraform-provider-synology_0.1.1_linux_arm64.zip",
+          "shasum": "2c8a45f9f4747e1fa09f5d552a0f3a54ecebbaf7df9f3fe26e4f88257e267ca8"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.1.1_windows_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.1/terraform-provider-synology_0.1.1_windows_386.zip",
+          "shasum": "0e5b1489b0bc954259e1bb40d04daedc267a6e001cecfc5f247f27a4198d59e2"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.1.1_windows_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.1/terraform-provider-synology_0.1.1_windows_amd64.zip",
+          "shasum": "f71b3eb01cb90d9f941767c308ca7a81c61736e1445140d091780a52d9ad226e"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.1.1_windows_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.1/terraform-provider-synology_0.1.1_windows_arm.zip",
+          "shasum": "8358dd1e88dcef86be6de9de438d4be0145b7010c3f859cc72a10997774e9553"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.1.1_windows_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.1.1/terraform-provider-synology_0.1.1_windows_arm64.zip",
+          "shasum": "df21fc3be361cf5ec87cae03e4ab3c0f07570eff0d9bed3501a2057da8fc8d7c"
+        }
+      ]
+    },
+    {
+      "version": "0.0.5",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.5/terraform-provider-synology_0.0.5_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.5/terraform-provider-synology_0.0.5_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.0.5_darwin_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.5/terraform-provider-synology_0.0.5_darwin_amd64.zip",
+          "shasum": "adcfd6c19fb21477d9b2c67d24ff19ccad49a324a8578565fffca2954e5a31bb"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.0.5_darwin_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.5/terraform-provider-synology_0.0.5_darwin_arm64.zip",
+          "shasum": "6820b7a5bc7ae1b1546bfe3d42db774b61d1339ea9af8c872ef89d3e123dccc1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.0.5_freebsd_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.5/terraform-provider-synology_0.0.5_freebsd_386.zip",
+          "shasum": "879875b3ce24f494bfcdf4ee6680f3bc9829219e198e030938edfdf5956f11f0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.0.5_freebsd_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.5/terraform-provider-synology_0.0.5_freebsd_amd64.zip",
+          "shasum": "00f15e93d6d32510fbb57b9b2390528607a0a9a724f2262521d9a803f944950e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.0.5_freebsd_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.5/terraform-provider-synology_0.0.5_freebsd_arm.zip",
+          "shasum": "c9a2c66d3e9ac1645aabdaf9293d5e7290187244db3150c1d72fc08db6a68584"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.0.5_freebsd_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.5/terraform-provider-synology_0.0.5_freebsd_arm64.zip",
+          "shasum": "ea791d4e4ea5ae30e5b120691b1554c1a9c00a68377bfcdfdd3f00640e7b3507"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.0.5_linux_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.5/terraform-provider-synology_0.0.5_linux_386.zip",
+          "shasum": "8c9706ea9abea16d488e0c155de56809eb24937ecefe767d141038333b5f0b16"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.0.5_linux_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.5/terraform-provider-synology_0.0.5_linux_amd64.zip",
+          "shasum": "5b563767f2bfc970f058b3c4f1e4006a63c049c53c02f9e1a6a562c8ebeacb67"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.0.5_linux_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.5/terraform-provider-synology_0.0.5_linux_arm.zip",
+          "shasum": "444f0c43857a3a9569d4a416c011ce977f956d85a5cd84e80e6f703c6ac26849"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.0.5_linux_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.5/terraform-provider-synology_0.0.5_linux_arm64.zip",
+          "shasum": "3d78b5da5679306e8eab8cbb218405f0f2f57961a1b8066bc8f91e36ed0ca3b9"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.0.5_windows_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.5/terraform-provider-synology_0.0.5_windows_386.zip",
+          "shasum": "bfa8305ad0bc8e9a5321d864574213e19f09478256de1670913e6b345fdff624"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.0.5_windows_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.5/terraform-provider-synology_0.0.5_windows_amd64.zip",
+          "shasum": "1c1f5414aff0735f5b7ce438bacc6f9d820603bf8d9a21d624bc273b50fb8456"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.0.5_windows_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.5/terraform-provider-synology_0.0.5_windows_arm.zip",
+          "shasum": "d263e88ec3aeeb54c6979225860754fe5296e73a07d274615df2f15056bdd896"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.0.5_windows_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.5/terraform-provider-synology_0.0.5_windows_arm64.zip",
+          "shasum": "507f52ba3df0d1ad9150c3b6c366f656b07afda813414a9572003dec0526de35"
+        }
+      ]
+    },
+    {
+      "version": "0.0.4",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.4/terraform-provider-synology_0.0.4_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.4/terraform-provider-synology_0.0.4_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.0.4_darwin_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.4/terraform-provider-synology_0.0.4_darwin_amd64.zip",
+          "shasum": "e9d9dd4224df07ee1502d77f1e1a579ca5b8cdfdbca38f511fb34c9212f07da6"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.0.4_darwin_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.4/terraform-provider-synology_0.0.4_darwin_arm64.zip",
+          "shasum": "23698323f093cda4bd9254cf482cc5142e26b6097e59957a1174d102c702f131"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.0.4_freebsd_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.4/terraform-provider-synology_0.0.4_freebsd_386.zip",
+          "shasum": "a9942495cb137f4c01258cb69e2448e048a0c36f3b4227c6e201313ed1ccea4f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.0.4_freebsd_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.4/terraform-provider-synology_0.0.4_freebsd_amd64.zip",
+          "shasum": "927e3bc7a6610a1b1836d9dfa03c4ca4eefd85ffcc6e51763dab341b6ab18802"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.0.4_freebsd_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.4/terraform-provider-synology_0.0.4_freebsd_arm.zip",
+          "shasum": "a40ff9cc5c48a730e2fb5f7d100e0d28c8e74900cf72eec4a5f8180984dbf97a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.0.4_freebsd_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.4/terraform-provider-synology_0.0.4_freebsd_arm64.zip",
+          "shasum": "0d2db09973743aab9b31faaecd28f1d38508336163a8e0253c6c6800d8336975"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.0.4_linux_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.4/terraform-provider-synology_0.0.4_linux_386.zip",
+          "shasum": "021ecc58fdcc2f1f1fe2b33fda0c31b9cda797015942bd2a23fc011b1d45b416"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.0.4_linux_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.4/terraform-provider-synology_0.0.4_linux_amd64.zip",
+          "shasum": "cc75161b3cad6c984a22fd7b953440c1f2e34798967cf8184281c066de28f2ca"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.0.4_linux_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.4/terraform-provider-synology_0.0.4_linux_arm.zip",
+          "shasum": "ac54701af769412eb0708c6a78c4d33ddbe135e8f72348c2003fe759a9fb7f42"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.0.4_linux_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.4/terraform-provider-synology_0.0.4_linux_arm64.zip",
+          "shasum": "1a6eaae51eb6925f12d214530dfe8f769fb6ffceadce6010c9a61b2f43631e21"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.0.4_windows_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.4/terraform-provider-synology_0.0.4_windows_386.zip",
+          "shasum": "7013e5a10d48239e6aaac5acce98e69c21a2edc1b6ee06b534346fa34ac1ae04"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.0.4_windows_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.4/terraform-provider-synology_0.0.4_windows_amd64.zip",
+          "shasum": "3e14910d124f1118fddd7a2d4603f1bc4e391dac7e59a0ff87bc3f6a8f172a04"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.0.4_windows_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.4/terraform-provider-synology_0.0.4_windows_arm.zip",
+          "shasum": "3e961a50a001359a7dd32b898f924944fe8681440c50255e675948b5e53449ed"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.0.4_windows_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.4/terraform-provider-synology_0.0.4_windows_arm64.zip",
+          "shasum": "c67adaa6bb859178c8497c8969ff975b578f562043a4166d82edde14b3f452ec"
+        }
+      ]
+    },
+    {
+      "version": "0.0.3",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.3/terraform-provider-synology_0.0.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.3/terraform-provider-synology_0.0.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.0.3_darwin_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.3/terraform-provider-synology_0.0.3_darwin_amd64.zip",
+          "shasum": "99fce007923c4414aad46ac4c1460180391664201a37f2a12c93ddde0292f03b"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.0.3_darwin_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.3/terraform-provider-synology_0.0.3_darwin_arm64.zip",
+          "shasum": "9ca5dd0ce3b8087cd8da498e92b6a93837184fcbbf7af575600bfcfeec4f6c6d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.0.3_freebsd_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.3/terraform-provider-synology_0.0.3_freebsd_386.zip",
+          "shasum": "cdbbafd9692aec7780b1e6da765f69009d1b90cb30fedcf9f938b4457935169c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.0.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.3/terraform-provider-synology_0.0.3_freebsd_amd64.zip",
+          "shasum": "8aedc9393ab1613af68edda4dbf1061caf2d95e10af4384c609a5b9bf271849b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.0.3_freebsd_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.3/terraform-provider-synology_0.0.3_freebsd_arm.zip",
+          "shasum": "7c4cffdf8d4892803b4c502b391574116bf11f4812e254501d3c552645cfa5a8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.0.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.3/terraform-provider-synology_0.0.3_freebsd_arm64.zip",
+          "shasum": "f91570bfbd296170692713b213fde6ddbf4e49a7cd3fe0630af9eb7a3999de59"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.0.3_linux_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.3/terraform-provider-synology_0.0.3_linux_386.zip",
+          "shasum": "44ce9a6b6fee9e60c6998146b0701dad2d1cb046d9f4acd902ff9b34d31db847"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.0.3_linux_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.3/terraform-provider-synology_0.0.3_linux_amd64.zip",
+          "shasum": "322c06406fec7508aafad800e49461e3d12c5f629fb06c9ea8275fdf0da8a174"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.0.3_linux_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.3/terraform-provider-synology_0.0.3_linux_arm.zip",
+          "shasum": "f646d2c1aa77cdd1c73dace693545c14b093d0e7f8747c5943d808549df8509d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.0.3_linux_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.3/terraform-provider-synology_0.0.3_linux_arm64.zip",
+          "shasum": "698c17f3c410e03a52eef901323ee310b200825dd37172b3699fecf74f1f0281"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.0.3_windows_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.3/terraform-provider-synology_0.0.3_windows_386.zip",
+          "shasum": "5ed9d02837a04342d52566e7fa5551096a1659075e007fd0516cc273b07bb649"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.0.3_windows_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.3/terraform-provider-synology_0.0.3_windows_amd64.zip",
+          "shasum": "9332b08a1a4face64e0de42fbb733babe97b2e55dfb01519a3f16bae197b76a0"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.0.3_windows_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.3/terraform-provider-synology_0.0.3_windows_arm.zip",
+          "shasum": "518ac8692c4a7c4abc3a28e3c1075c600fc3ff4e3a13617f00441b05e6c5e9a9"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.0.3_windows_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.3/terraform-provider-synology_0.0.3_windows_arm64.zip",
+          "shasum": "49ee345a2c68509e247b4b6f9d5da2d650fb3fd35c1aa3aa4d6d242c2ba6e829"
+        }
+      ]
+    },
+    {
+      "version": "0.0.2",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.2/terraform-provider-synology_0.0.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.2/terraform-provider-synology_0.0.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.0.2_darwin_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.2/terraform-provider-synology_0.0.2_darwin_amd64.zip",
+          "shasum": "a89181fa7ee0962dedb69e6ac7b205ed8709905b748588c9567b4a0178b241dd"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.0.2_darwin_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.2/terraform-provider-synology_0.0.2_darwin_arm64.zip",
+          "shasum": "16b8a3244122dbbd2d6ae1fe4f2226a78a81fc83a39d6b64c048dc84fab9e1ab"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.0.2_freebsd_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.2/terraform-provider-synology_0.0.2_freebsd_386.zip",
+          "shasum": "456415ca3cad010813302381df3cca2c6fa783093a52f3bef30240060d46496a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.0.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.2/terraform-provider-synology_0.0.2_freebsd_amd64.zip",
+          "shasum": "1be1a111c5d910afd3cc56ffb3f5b627ac26fa8689e43f6b08f984115ad72f9c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.0.2_freebsd_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.2/terraform-provider-synology_0.0.2_freebsd_arm.zip",
+          "shasum": "2d5bc0222f071d8c6dc8cadef5a40c2e71daee215465761a78dd160558028722"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.0.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.2/terraform-provider-synology_0.0.2_freebsd_arm64.zip",
+          "shasum": "32ea06eca76e81a36222749c30c8b0cb8c65cff9efe76ccdd3e2dc8c69db86ec"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.0.2_linux_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.2/terraform-provider-synology_0.0.2_linux_386.zip",
+          "shasum": "6aa55e1022f76f72055a16b8340358b947df7b740fdeebf0026f132a753fb80d"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.0.2_linux_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.2/terraform-provider-synology_0.0.2_linux_amd64.zip",
+          "shasum": "dfe75bb55c5586f22834d5571b653fb46433173b8232770257d36a9353fda8bc"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.0.2_linux_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.2/terraform-provider-synology_0.0.2_linux_arm.zip",
+          "shasum": "cf822f3584bc1364b9ae496fdc9d9ec36505bb2f451212eb8c46f9aad91cc9a8"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.0.2_linux_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.2/terraform-provider-synology_0.0.2_linux_arm64.zip",
+          "shasum": "0f00ee2abdcd7e0ca02f349ba31595793b3cbbe72f33a3676f2162e0c005074b"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-synology_0.0.2_windows_386.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.2/terraform-provider-synology_0.0.2_windows_386.zip",
+          "shasum": "0d6bd9ffa5f58f0728a0c9ed72e7d75c018a9fa415aff765a7305f76f8682d2f"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-synology_0.0.2_windows_amd64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.2/terraform-provider-synology_0.0.2_windows_amd64.zip",
+          "shasum": "6a5c6c7cac3a299d41721aa341c39f6a3e8bd68b7dd7437a002a351965d8b6b5"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-synology_0.0.2_windows_arm.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.2/terraform-provider-synology_0.0.2_windows_arm.zip",
+          "shasum": "1614b7fcd008f2c338f85cc3e789b63768ccfb9e2a8b27aedb559f7adba7a879"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-synology_0.0.2_windows_arm64.zip",
+          "download_url": "https://github.com/synology-community/terraform-provider-synology/releases/download/v0.0.2/terraform-provider-synology_0.0.2_windows_arm64.zip",
+          "shasum": "30a1a463f0ccbe422842a7784ea04fba68b3dc614563b65c7dee6afb24078ccd"
+        }
+      ]
+    }
+  ]
+}
