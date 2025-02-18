@@ -3,7 +3,6 @@ package provider
 import (
 	"fmt"
 	"log/slog"
-	"strings"
 
 	"github.com/opentofu/registry-stable/internal"
 )
@@ -47,7 +46,6 @@ func (p Provider) VersionFromTag(args VersionFromTagArgs) (*Version, error) {
 
 	release := args.Release
 	version := internal.TrimTagPrefix(release)
-	lowercaseVersion := strings.ToLower(version)
 	artifactPrefix := fmt.Sprintf("%s_%s_", p.RepositoryName(), version)
 
 	logger := p.Logger.With(slog.String("release", release))
@@ -55,7 +53,7 @@ func (p Provider) VersionFromTag(args VersionFromTagArgs) (*Version, error) {
 	releasePrefix := fmt.Sprintf("%s/%s/%s", urlPrefix, release, artifactPrefix)
 
 	v := Version{
-		Version:             lowercaseVersion,
+		Version:             version,
 		SHASumsURL:          releasePrefix + "SHA256SUMS",
 		SHASumsSignatureURL: releasePrefix + "SHA256SUMS.sig",
 	}

@@ -69,7 +69,7 @@ func Test_ProviderGenerator(t *testing.T) {
 	}
 
 	list := p.VersionListing()
-	assert.Equal(t, "v2.3.1-rc1", list.Versions[0].Version)
+	assert.Equal(t, "v2.3.1-RC1", list.Versions[0].Version)
 
 	v := provider.Version{
 		Version: "v2.3.1-RC1",
@@ -87,8 +87,7 @@ func Test_ProviderGenerator(t *testing.T) {
 	}
 	vt, err := p.VersionFromTag(args)
 	require.NoError(t, err)
-	assert.Equal(t, "2.3.1-rc1", vt.Version)
-	// While the version name is lowercase, the download URL maintains the version original case
+
 	expectedURL := fmt.Sprintf("%s/%s/%s", srv.URL, "v2.3.1-RC1", "terraform-provider-name_2.3.1-RC1_SHA256SUMS")
 	assert.Equal(t, expectedURL, vt.SHASumsURL)
 

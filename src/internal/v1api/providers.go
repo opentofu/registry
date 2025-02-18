@@ -63,7 +63,7 @@ func (p ProviderGenerator) VersionListing() ProviderVersionListingResponse {
 
 	for versionIdx, ver := range p.Metadata.Versions {
 		verResp := ProviderVersionResponseItem{
-			Version:   strings.ToLower(ver.Version),
+			Version:   ver.Version,
 			Protocols: ver.Protocols,
 			Platforms: make([]Platform, len(ver.Targets)),
 		}
