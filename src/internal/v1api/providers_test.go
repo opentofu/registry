@@ -81,7 +81,11 @@ func Test_ProviderGenerator(t *testing.T) {
 	}
 	assert.Equal(t, "gen/v1/providers/spacename/name/v2.3.1-rc1/download/mac/arm", p.VersionDownloadPath(v, d))
 
-	vt, err := p.VersionFromTag("v2.3.1-RC1", srv.URL)
+	args := provider.VersionFromTagArgs{
+		URLPrefix: srv.URL,
+		Release:   "v2.3.1-RC1",
+	}
+	vt, err := p.VersionFromTag(args)
 	require.NoError(t, err)
 	assert.Equal(t, "2.3.1-rc1", vt.Version)
 	// While the version name is lowercase, the download URL maintains the version original case

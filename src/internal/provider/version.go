@@ -28,18 +28,29 @@ var (
 	}
 )
 
+type VersionFromTagArgs struct {
+	Release   string
+	URLPrefix string
+}
+
 // VersionFromTag fetches information about an individual release based on the GitHub release name
-func (p Provider) VersionFromTag(release string, opts ...string) (*Version, error) {
-	urlPrefix := opts[0]
+func (p Provider) VersionFromTag(args VersionFromTagArgs) (*Version, error) {
+	urlPrefix := args.URLPrefix
+
+	if urlPrefix == "" {
+		urlPrefix = p.RepositoryURL() + "/releases/download"
+	}
+
+	if args.Release == "" {
+		return nil, fmt.Errorf("argument 'release' must be specified")
+	}
+
+	release := args.Release
 	version := internal.TrimTagPrefix(release)
 	lowercaseVersion := strings.ToLower(version)
 	artifactPrefix := fmt.Sprintf("%s_%s_", p.RepositoryName(), version)
 
 	logger := p.Logger.With(slog.String("release", release))
-
-	if urlPrefix == "" {
-		urlPrefix = p.RepositoryURL() + "/releases/download"
-	}
 
 	releasePrefix := fmt.Sprintf("%s/%s/%s", urlPrefix, release, artifactPrefix)
 
@@ -54,7 +65,7 @@ func (p Provider) VersionFromTag(release string, opts ...string) (*Version, erro
 		return nil, err
 	}
 
-	logger.Info("checksums:", slog.Any("v.SHASumsURL", v.SHASumsURL))
+	logger.Info("checksums:", slog.Any("v.SHASumsURL", checksums))
 	if checksums == nil {
 		logger.Warn("checksums not found in release, skipping...")
 		return nil, nil
