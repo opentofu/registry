@@ -91,4 +91,7 @@ func Test_ProviderGenerator(t *testing.T) {
 	// While the version name is lowercase, the download URL maintains the version original case
 	expectedURL := fmt.Sprintf("%s/%s/%s", srv.URL, "v2.3.1-RC1", "terraform-provider-name_2.3.1-RC1_SHA256SUMS")
 	assert.Equal(t, expectedURL, vt.SHASumsURL)
+
+	expectedSigURL := fmt.Sprintf("%s/%s/%s", srv.URL, "v2.3.1-RC1", "terraform-provider-name_2.3.1-RC1_SHA256SUMS.sig")
+	assert.Equal(t, expectedSigURL, vt.SHASumsSignatureURL)
 }
