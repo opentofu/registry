@@ -30,9 +30,6 @@ var (
 
 // VersionFromTag fetches information about an individual release based on the GitHub release name
 func (p Provider) VersionFromTag(release string) (*Version, error) {
-	// Since R2 objects are normalized to lower case before being saved, path should be lower case
-	// when uppercase is used at some points of the path, like in the version.
-	// Related to: https://github.com/opentofu/registry/issues/1528
 	version := internal.TrimTagPrefix(release)
 	lowercaseVersion := strings.ToLower(version)
 	artifactPrefix := fmt.Sprintf("%s_%s_", p.RepositoryName(), version)
