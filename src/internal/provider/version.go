@@ -65,7 +65,6 @@ func (p Provider) VersionFromTag(args VersionFromTagArgs) (*Version, error) {
 		return nil, err
 	}
 
-	logger.Info("checksums:", slog.Any("v.SHASumsURL", checksums))
 	if checksums == nil {
 		logger.Warn("checksums not found in release, skipping...")
 		return nil, nil
@@ -87,7 +86,7 @@ func (p Provider) VersionFromTag(args VersionFromTagArgs) (*Version, error) {
 			}
 			// now try and pull it with the v in the version
 			target.Filename = fmt.Sprintf("%s_v%s_%s_%s.zip", p.RepositoryName(), version, os, arch)
-			target.DownloadURL = fmt.Sprintf("%s/releases/download/v%s/%s", urlPrefix, version, target.Filename)
+			target.DownloadURL = fmt.Sprintf("%s/v%s/%s", urlPrefix, version, target.Filename)
 			target.SHASum, ok = checksums[target.Filename]
 			logger.Info("target:", slog.String("target Filename", target.Filename))
 			if ok {
