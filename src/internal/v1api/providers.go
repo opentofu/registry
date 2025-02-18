@@ -154,10 +154,10 @@ func ArchivedOverrides(destDir string, log *slog.Logger) error {
 		oMatch := re.FindStringSubmatch(strings.ToLower(original))
 		rMatch := re.FindStringSubmatch(strings.ToLower(replacement))
 		if oMatch == nil {
-			return fmt.Errorf("invalid archived override: %s!", oMatch)
+			return fmt.Errorf("invalid archived override: %s", oMatch)
 		}
 		if rMatch == nil {
-			return fmt.Errorf("invalid archived override: %s!", rMatch)
+			return fmt.Errorf("invalid archived override: %s", rMatch)
 		}
 
 		for _, namespace := range namespaces {
