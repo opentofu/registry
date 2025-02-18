@@ -46,7 +46,7 @@ func Test_ProviderGenerator(t *testing.T) {
 		Arch: "arm",
 		OS:   "mac",
 	}
-	// Testing if the generated file is lower case
+	// Testing if the generated file has version with lower case
 	assert.Equal(t, "gen/v1/providers/zededa/zedcloud/v2.3.1-rc1/download/mac/arm", p.VersionDownloadPath(v, d))
 
 	vt, err := p.VersionFromTag("v2.3.1-RC1")
@@ -54,9 +54,9 @@ func Test_ProviderGenerator(t *testing.T) {
 
 	// URLs still should have an uppercase version, since we point directly to Github URLs
 	baseURL := "https://github.com/zededa/terraform-provider-zedcloud/releases/download/v2.3.1-RC1/terraform-provider-zedcloud_"
-	expectedURL := fmt.Sprintf("%s%s", baseURL, "2.3.1-RC1_SHA256SUMS")
-	assert.Equal(t, expectedURL, vt.SHASumsURL)
+	shaSumsURL := fmt.Sprintf("%s%s", baseURL, "2.3.1-RC1_SHA256SUMS")
+	assert.Equal(t, shaSumsURL, vt.SHASumsURL)
 
-	expectedSigURL := fmt.Sprintf("%s%s", baseURL, "2.3.1-RC1_SHA256SUMS.sig")
-	assert.Equal(t, expectedSigURL, vt.SHASumsSignatureURL)
+	shaSumsSigURL := fmt.Sprintf("%s%s", baseURL, "2.3.1-RC1_SHA256SUMS.sig")
+	assert.Equal(t, shaSumsSigURL, vt.SHASumsSignatureURL)
 }
