@@ -88,7 +88,6 @@ func (p Provider) VersionFromTag(args VersionFromTagArgs) (*Version, error) {
 			target.Filename = fmt.Sprintf("%s_v%s_%s_%s.zip", p.RepositoryName(), version, os, arch)
 			target.DownloadURL = fmt.Sprintf("%s/v%s/%s", urlPrefix, version, target.Filename)
 			target.SHASum, ok = checksums[target.Filename]
-			logger.Info("target:", slog.String("target Filename", target.Filename))
 			if ok {
 				v.Targets = append(v.Targets, target)
 			}
