@@ -3,6 +3,7 @@ package provider
 import (
 	"fmt"
 	"log/slog"
+	"strings"
 
 	"github.com/opentofu/registry-stable/internal"
 )
@@ -29,7 +30,11 @@ var (
 
 // VersionFromTag fetches information about an individual release based on the GitHub release name
 func (p Provider) VersionFromTag(release string) (*Version, error) {
+	// Since R2 objects are normalized to lower case before being saved, path should be lower case
+	// when uppercase is used at some points of the path, like in the version.
+	// Related to: https://github.com/opentofu/registry/issues/1528
 	version := internal.TrimTagPrefix(release)
+	lowercaseVersion := strings.ToLower(version)
 	artifactPrefix := fmt.Sprintf("%s_%s_", p.RepositoryName(), version)
 
 	logger := p.Logger.With(slog.String("release", release))
@@ -37,7 +42,7 @@ func (p Provider) VersionFromTag(release string) (*Version, error) {
 	urlPrefix := fmt.Sprintf(p.RepositoryURL()+"/releases/download/%s/%s", release, artifactPrefix)
 
 	v := Version{
-		Version:             version,
+		Version:             lowercaseVersion,
 		SHASumsURL:          urlPrefix + "SHA256SUMS",
 		SHASumsSignatureURL: urlPrefix + "SHA256SUMS.sig",
 	}

@@ -49,14 +49,15 @@ func (m ModuleGenerator) VersionDownloadPath(v module.Version) string {
 	namespace := strings.ToLower(m.Module.Namespace)
 	name := strings.ToLower(m.Module.Name)
 	target := strings.ToLower(m.Module.TargetSystem)
-	return filepath.Join(m.Destination, "v1", "modules", namespace, name, target, internal.TrimTagPrefix(v.Version), "download")
+	version := strings.ToLower(internal.TrimTagPrefix(v.Version))
+	return filepath.Join(m.Destination, "v1", "modules", namespace, name, target, version, "download")
 }
 
 // VersionListing converts the module metadata into a ModuleVersionListingResponse, ready to be serialized to a file
 func (m ModuleGenerator) VersionListing() ModuleVersionListingResponse {
 	versions := make([]ModuleVersionResponseItem, len(m.Metadata.Versions))
 	for i, v := range m.Metadata.Versions {
-		versions[i] = ModuleVersionResponseItem{Version: internal.TrimTagPrefix(v.Version)}
+		versions[i] = ModuleVersionResponseItem{Version: strings.ToLower(internal.TrimTagPrefix(v.Version))}
 	}
 	return ModuleVersionListingResponse{[]ModuleVersionListingResponseItem{{versions}}}
 }

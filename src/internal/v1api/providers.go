@@ -53,7 +53,8 @@ func (p ProviderGenerator) VersionListingPath() string {
 func (p ProviderGenerator) VersionDownloadPath(ver provider.Version, details ProviderVersionDetails) string {
 	namespacePath := strings.ToLower(p.Provider.Namespace)
 	providerNamePath := strings.ToLower(p.Provider.ProviderName)
-	return filepath.Join(p.Destination, "v1", "providers", namespacePath, providerNamePath, ver.Version, "download", details.OS, details.Arch)
+	version := strings.ToLower(ver.Version)
+	return filepath.Join(p.Destination, "v1", "providers", namespacePath, providerNamePath, version, "download", details.OS, details.Arch)
 }
 
 // VersionListing will take the provider metadata and generate the responses for the provider version listing API endpoints.
@@ -62,7 +63,7 @@ func (p ProviderGenerator) VersionListing() ProviderVersionListingResponse {
 
 	for versionIdx, ver := range p.Metadata.Versions {
 		verResp := ProviderVersionResponseItem{
-			Version:   ver.Version,
+			Version:   strings.ToLower(ver.Version),
 			Protocols: ver.Protocols,
 			Platforms: make([]Platform, len(ver.Targets)),
 		}

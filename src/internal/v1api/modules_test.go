@@ -25,6 +25,11 @@ func Test_ModuleGenerator(t *testing.T) {
 	v := module.Version{
 		Version: "v1.0.1",
 	}
+
+	vl := module.Version{
+		Version: "v2.3.1-RC1",
+	}
 	assert.Equal(t, "gen/v1/modules/spacename/name/target/versions", m.VersionListingPath())
 	assert.Equal(t, "gen/v1/modules/spacename/name/target/1.0.1/download", m.VersionDownloadPath(v))
+	assert.Equal(t, "gen/v1/modules/spacename/name/target/2.3.1-rc1/download", m.VersionDownloadPath(vl))
 }
