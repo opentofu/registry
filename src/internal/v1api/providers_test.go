@@ -4,8 +4,6 @@ import (
 	"context"
 	"fmt"
 	"log/slog"
-	"net/http"
-	"net/http/httptest"
 	"testing"
 
 	"github.com/opentofu/registry-stable/internal/github"
@@ -15,45 +13,14 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func newTestServer(t *testing.T) *httptest.Server {
-	t.Helper()
-	mux := http.NewServeMux()
-
-	mux.HandleFunc("/v2.3.1-RC1/terraform-provider-name_2.3.1-RC1_SHA256SUMS", func(w http.ResponseWriter, r *http.Request) {
-		checksums := []byte(`
-123 asd.zip
-121 terraform-provider-name_v2.3.1-RC1_darwin_386.zip
-`)
-		_, err := w.Write(checksums)
-		if err != nil {
-			t.Fatalf("Couldn't write to testing response of /: %v", err)
-		}
-	})
-
-	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		_, err := w.Write([]byte("/"))
-		if err != nil {
-			t.Fatalf("Couldn't write to testing response of /: %v", err)
-		}
-	})
-
-	srv := httptest.NewServer(mux)
-
-	t.Cleanup(func() {
-		srv.Close()
-	})
-	return srv
-}
-
 func Test_ProviderGenerator(t *testing.T) {
 	logger := slog.Default()
-	srv := newTestServer(t)
 	ctx := context.Background()
 
 	p := ProviderGenerator{
 		Provider: provider.Provider{
-			Namespace:    "spacename",
-			ProviderName: "name",
+			Namespace:    "zededa",
+			ProviderName: "zedcloud",
 			Github:       github.NewClient(ctx, logger, ""),
 			Logger:       logger,
 		},
@@ -79,18 +46,17 @@ func Test_ProviderGenerator(t *testing.T) {
 		Arch: "arm",
 		OS:   "mac",
 	}
-	assert.Equal(t, "gen/v1/providers/spacename/name/v2.3.1-rc1/download/mac/arm", p.VersionDownloadPath(v, d))
+	// Testing if the generated file is lower case
+	assert.Equal(t, "gen/v1/providers/zededa/zedcloud/v2.3.1-rc1/download/mac/arm", p.VersionDownloadPath(v, d))
 
-	args := provider.VersionFromTagArgs{
-		URLPrefix: srv.URL,
-		Release:   "v2.3.1-RC1",
-	}
-	vt, err := p.VersionFromTag(args)
+	vt, err := p.VersionFromTag("v2.3.1-RC1")
 	require.NoError(t, err)
 
-	expectedURL := fmt.Sprintf("%s/%s/%s", srv.URL, "v2.3.1-RC1", "terraform-provider-name_2.3.1-RC1_SHA256SUMS")
+	// URLs still should have an uppercase version, since we point directly to Github URLs
+	baseURL := "https://github.com/zededa/terraform-provider-zedcloud/releases/download/v2.3.1-RC1/terraform-provider-zedcloud_"
+	expectedURL := fmt.Sprintf("%s%s", baseURL, "2.3.1-RC1_SHA256SUMS")
 	assert.Equal(t, expectedURL, vt.SHASumsURL)
 
-	expectedSigURL := fmt.Sprintf("%s/%s/%s", srv.URL, "v2.3.1-RC1", "terraform-provider-name_2.3.1-RC1_SHA256SUMS.sig")
+	expectedSigURL := fmt.Sprintf("%s%s", baseURL, "2.3.1-RC1_SHA256SUMS.sig")
 	assert.Equal(t, expectedSigURL, vt.SHASumsSignatureURL)
 }

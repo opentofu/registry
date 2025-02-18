@@ -89,10 +89,7 @@ func (p Provider) buildMetadata() (*Metadata, error) {
 	for _, r := range newReleases {
 		r := r
 		go func() {
-			pr := VersionFromTagArgs{
-				Release: r,
-			}
-			version, err := p.VersionFromTag(pr)
+			version, err := p.VersionFromTag(r)
 			verChan <- versionResult{version, err}
 		}()
 	}

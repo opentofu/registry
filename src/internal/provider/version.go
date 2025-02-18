@@ -27,42 +27,25 @@ var (
 	}
 )
 
-type VersionFromTagArgs struct {
-	Release   string
-	URLPrefix string
-}
-
 // VersionFromTag fetches information about an individual release based on the GitHub release name
-func (p Provider) VersionFromTag(args VersionFromTagArgs) (*Version, error) {
-	urlPrefix := args.URLPrefix
-
-	if urlPrefix == "" {
-		urlPrefix = p.RepositoryURL() + "/releases/download"
-	}
-
-	if args.Release == "" {
-		return nil, fmt.Errorf("argument 'release' must be specified")
-	}
-
-	release := args.Release
+func (p Provider) VersionFromTag(release string) (*Version, error) {
 	version := internal.TrimTagPrefix(release)
 	artifactPrefix := fmt.Sprintf("%s_%s_", p.RepositoryName(), version)
 
 	logger := p.Logger.With(slog.String("release", release))
 
-	releasePrefix := fmt.Sprintf("%s/%s/%s", urlPrefix, release, artifactPrefix)
+	urlPrefix := fmt.Sprintf(p.RepositoryURL()+"/releases/download/%s/%s", release, artifactPrefix)
 
 	v := Version{
 		Version:             version,
-		SHASumsURL:          releasePrefix + "SHA256SUMS",
-		SHASumsSignatureURL: releasePrefix + "SHA256SUMS.sig",
+		SHASumsURL:          urlPrefix + "SHA256SUMS",
+		SHASumsSignatureURL: urlPrefix + "SHA256SUMS.sig",
 	}
 
 	checksums, err := p.GetSHASums(v.SHASumsURL)
 	if err != nil {
 		return nil, err
 	}
-
 	if checksums == nil {
 		logger.Warn("checksums not found in release, skipping...")
 		return nil, nil
@@ -84,7 +67,7 @@ func (p Provider) VersionFromTag(args VersionFromTagArgs) (*Version, error) {
 			}
 			// now try and pull it with the v in the version
 			target.Filename = fmt.Sprintf("%s_v%s_%s_%s.zip", p.RepositoryName(), version, os, arch)
-			target.DownloadURL = fmt.Sprintf("%s/v%s/%s", urlPrefix, version, target.Filename)
+			target.DownloadURL = fmt.Sprintf("%s/releases/download/v%s/%s", p.RepositoryURL(), version, target.Filename)
 			target.SHASum, ok = checksums[target.Filename]
 			if ok {
 				v.Targets = append(v.Targets, target)
@@ -97,7 +80,7 @@ func (p Provider) VersionFromTag(args VersionFromTagArgs) (*Version, error) {
 		return nil, nil
 	}
 
-	v.Protocols, err = p.GetProtocols(releasePrefix + "manifest.json")
+	v.Protocols, err = p.GetProtocols(urlPrefix + "manifest.json")
 	if err != nil {
 		return nil, err
 	}
