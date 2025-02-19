@@ -53,7 +53,8 @@ func (p ProviderGenerator) VersionListingPath() string {
 func (p ProviderGenerator) VersionDownloadPath(ver provider.Version, details ProviderVersionDetails) string {
 	namespacePath := strings.ToLower(p.Provider.Namespace)
 	providerNamePath := strings.ToLower(p.Provider.ProviderName)
-	return filepath.Join(p.Destination, "v1", "providers", namespacePath, providerNamePath, ver.Version, "download", details.OS, details.Arch)
+	version := strings.ToLower(ver.Version)
+	return filepath.Join(p.Destination, "v1", "providers", namespacePath, providerNamePath, version, "download", details.OS, details.Arch)
 }
 
 // VersionListing will take the provider metadata and generate the responses for the provider version listing API endpoints.
@@ -153,10 +154,10 @@ func ArchivedOverrides(destDir string, log *slog.Logger) error {
 		oMatch := re.FindStringSubmatch(strings.ToLower(original))
 		rMatch := re.FindStringSubmatch(strings.ToLower(replacement))
 		if oMatch == nil {
-			return fmt.Errorf("invalid archived override: %s!", oMatch)
+			return fmt.Errorf("invalid archived override: %s", oMatch)
 		}
 		if rMatch == nil {
-			return fmt.Errorf("invalid archived override: %s!", rMatch)
+			return fmt.Errorf("invalid archived override: %s", rMatch)
 		}
 
 		for _, namespace := range namespaces {
