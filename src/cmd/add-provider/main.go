@@ -28,7 +28,7 @@ func main() {
 	logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
 
 	repository := flag.String("repository", "", "The provider repository to add")
-	outputFile := flag.String("output", "", "Path to write JSON result to")
+	outputFile := flag.String("output", "output.json", "Path to write JSON result to")
 	providerDataDir := flag.String("provider-data", "../providers", "Directory containing the provider data")
 
 	flag.Parse()
