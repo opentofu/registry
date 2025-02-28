@@ -1,8 +1,85 @@
 {
-  "warnings": [
-    "You are using opentofu/tfcoremock instead of hashicorp/tfcoremock. This provider is maintained by HashiCorp and the OpenTofu project only builds the provider binaries from the source code. Both the opentofu/ and hashicorp/ namespaces in the OpenTofu Registry contain the OpenTofu-built provider binaries based on the HashiCorp source code. To avoid configuration errors, we recommend using the hashicorp/ namespaced providers."
-  ],
   "versions": [
+    {
+      "version": "0.4.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/opentofu/terraform-provider-tfcoremock/releases/download/v0.4.0/terraform-provider-tfcoremock_0.4.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/opentofu/terraform-provider-tfcoremock/releases/download/v0.4.0/terraform-provider-tfcoremock_0.4.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-tfcoremock_0.4.0_darwin_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-tfcoremock/releases/download/v0.4.0/terraform-provider-tfcoremock_0.4.0_darwin_amd64.zip",
+          "shasum": "d9a64382222fb2c4bf7d441cf63343e271244c63e1d675a9946f77e1fcebd44b"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-tfcoremock_0.4.0_darwin_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-tfcoremock/releases/download/v0.4.0/terraform-provider-tfcoremock_0.4.0_darwin_arm64.zip",
+          "shasum": "7ef566318dd464c46d610365bdd006e3867168f51a458b3c1581183f2fb96d48"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-tfcoremock_0.4.0_linux_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-tfcoremock/releases/download/v0.4.0/terraform-provider-tfcoremock_0.4.0_linux_386.zip",
+          "shasum": "2b9f5a0c19bcc7fc30dc05f1ada2a517e8f33c01cd62176c061ef36ab31e280f"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-tfcoremock_0.4.0_linux_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-tfcoremock/releases/download/v0.4.0/terraform-provider-tfcoremock_0.4.0_linux_amd64.zip",
+          "shasum": "cd3984a902789f748e98fe33347162c17a6fc8329b4f62880f3d18a4418cf8eb"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-tfcoremock_0.4.0_linux_arm.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-tfcoremock/releases/download/v0.4.0/terraform-provider-tfcoremock_0.4.0_linux_arm.zip",
+          "shasum": "eff5e6eaca6ce19de9bda37ba0d74ce225a0be24d20d3396be7e610c3314c4d1"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-tfcoremock_0.4.0_linux_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-tfcoremock/releases/download/v0.4.0/terraform-provider-tfcoremock_0.4.0_linux_arm64.zip",
+          "shasum": "8f28a17ada29eb2d9d974a2b120049a7974ff0650fd2d7f0962264e5a38b2b74"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-tfcoremock_0.4.0_windows_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-tfcoremock/releases/download/v0.4.0/terraform-provider-tfcoremock_0.4.0_windows_386.zip",
+          "shasum": "213128c9af93573ca079fbc157ac31557a0dd6d97dbfc03496d8d7a434a1fce9"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-tfcoremock_0.4.0_windows_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-tfcoremock/releases/download/v0.4.0/terraform-provider-tfcoremock_0.4.0_windows_amd64.zip",
+          "shasum": "c2232e800d855411c66debcc46f72527188075851e2e37517f0715a7bdd348ac"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-tfcoremock_0.4.0_windows_arm.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-tfcoremock/releases/download/v0.4.0/terraform-provider-tfcoremock_0.4.0_windows_arm.zip",
+          "shasum": "9444078a9ac2618a6b552519b6a5b48e3818ab24c690ca3995626e27589102d7"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-tfcoremock_0.4.0_windows_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-tfcoremock/releases/download/v0.4.0/terraform-provider-tfcoremock_0.4.0_windows_arm64.zip",
+          "shasum": "b3e00c9e1c4a676a9ce894498d21c47f1745e5db833dbe2baa88371802192313"
+        }
+      ]
+    },
     {
       "version": "0.3.0",
       "protocols": [
@@ -483,5 +560,8 @@
         }
       ]
     }
+  ],
+  "warnings": [
+    "You are using opentofu/tfcoremock instead of hashicorp/tfcoremock. This provider is maintained by HashiCorp and the OpenTofu project only builds the provider binaries from the source code. Both the opentofu/ and hashicorp/ namespaces in the OpenTofu Registry contain the OpenTofu-built provider binaries based on the HashiCorp source code. To avoid configuration errors, we recommend using the hashicorp/ namespaced providers."
   ]
 }
