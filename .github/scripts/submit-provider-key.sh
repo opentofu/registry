@@ -113,7 +113,7 @@ if [[ -n "${repo}" ]]; then
   shafile=$(find . -name "*SHA256SUMS" -print | head -1)
   if ! gpg --verify "${sigfile}" "${shafile}"
   then
-    gh issue comment "${NUMBER}" -b "Failed to validate the submitted key against ${repo}@${latest_release}"
+    gh issue comment "${NUMBER}" -b "Failed to validate the submitted key against ${repo}@${latest_release}. Could this key be for an older version of the provider?"
   fi
   # cleanup
   rm "${shafile}" "${sigfile}"
