@@ -28,7 +28,9 @@ function check_repo_release() {
   # download the GPG signature from the given provider release
   gh release download --repo "${owner}/${repo}" "${release}" -p "*SHA256*"
   # verify the signatures
+  # shellcheck disable=SC2312
   sigfile=$(find . -name "*SHA256SUMS.sig" -print | head -1)
+  # shellcheck disable=SC2312
   shafile=$(find . -name "*SHA256SUMS" -print | head -1)
   if gpg --verify "${sigfile}" "${shafile}" > /dev/null 2>&1
   then
@@ -44,6 +46,8 @@ function check_repo_release() {
 function check_repo_versions() {
   local owner="${1}"
   local repo="${2}"
+  local releases
+  releases="$(gh release list --exclude-drafts --exclude-pre-releases --repo "${owner}/${repo}" -L 3 -O desc --json name -q '.[].name')"
   # check recent releases of the owner's repo (3 releases checked)
   while IFS= read -r release; do
     if check_repo_release "${owner}" "${repo}" "${release}"
@@ -52,7 +56,7 @@ function check_repo_versions() {
       return 0
     fi
   # list the latest 100 releases of the repository and get only the release names
-  done <<< "$(gh release list --exclude-drafts --exclude-pre-releases --repo "${owner}/${repo}" -L 3 -O desc --json name -q '.[].name')"
+  done <<< "${releases}"
   # if no release is matching the signature, return error
   return 1
 }
@@ -60,6 +64,7 @@ function check_repo_versions() {
 function check_owner_repos() {
   local owner="${1}"
   # list first 100 repos of the owner and get all the terraform-provider-* repos to check their releases
+  local repos
   repos="$(gh repo list "${owner}" --no-archived --source -L 100 --json name -q '.[].name | select(. | contains("terraform-provider-"))')"
   while IFS= read -r repo; do
     if check_repo_versions "${owner}" "${repo}" "${release}"
@@ -75,6 +80,7 @@ apt update && apt install -y gpg
 # import the submitted key
 gpg --import "${keyfile}" 2>/dev/null
 # trust the newly imported key
+# shellcheck disable=SC2312
 for fpr in $(gpg --list-keys --with-colons | grep "pub:" | awk -F: '{print $5}' | sort -u); do  echo -e "5\ny\n" | gpg -q --command-fd 0 --expert --edit-key "${fpr}" trust; done
 
 if [[ -n "${provider_name}" ]]; then
@@ -83,7 +89,6 @@ if [[ -n "${provider_name}" ]]; then
   if ! check_repo_versions "${owner}" "${repo}"
   then
     gh issue comment "${NUMBER}" -b "Key is matching no recent release of ${owner}/${repo}"
-    echo "Key is matching no recent release of ${owner}/${repo}"
     exit 0
   fi
 else
@@ -91,12 +96,12 @@ else
   if ! check_owner_repos "${owner}"
   then
     gh issue comment "${NUMBER}" -b "Key is matching no recent release from any 'terraform-provider-*' of ${owner}"
-    echo "Key is matching no recent release from any 'terraform-provider-*' of ${owner}"
     exit 0
   fi
 fi
 gh issue comment "${NUMBER}" -b "Key provider signatures validation succeeded!"
 
 # cleanup keys
+# shellcheck disable=SC2312
 for fpr in $(gpg --list-keys --with-colons -q | grep "pub:" | awk -F: '{print $5}' | sort -u); do  echo -e "y\n" | gpg --command-fd 0 --expert --delete-keys "${fpr}"; done
 

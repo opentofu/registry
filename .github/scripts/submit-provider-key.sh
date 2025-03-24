@@ -60,12 +60,6 @@ if [[ -z "${providername}" ]]; then
 else
   keyfile="../keys/${namespace:0:1}/${namespace}/${providername}/provider-$(date +%s).asc"
 fi
-if [[ -d "$(dirname "${keyfile}")" ]]; then
-  msg="Updated"
-  #git rm $(dirname $keyfile)/*
-else
-  msg="Created"
-fi
 mkdir -p "$(dirname "${keyfile}")"
 mv tmp.key "${keyfile}"
 
