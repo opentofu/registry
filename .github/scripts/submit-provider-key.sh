@@ -55,12 +55,10 @@ if [[ "${verification}" != 0 ]]; then
   exit 1
 fi
 
-repo=""
 if [[ -z "${providername}" ]]; then
   keyfile="../keys/${namespace:0:1}/${namespace}/provider-$(date +%s).asc"
 else
   keyfile="../keys/${namespace:0:1}/${namespace}/${providername}/provider-$(date +%s).asc"
-  repo="${namespace}/terraform-provider-${providername}"
 fi
 if [[ -d "$(dirname "${keyfile}")" ]]; then
   msg="Updated"
@@ -93,29 +91,5 @@ else
 fi
 git push -u origin "${branch}"
 
-# Create pull request and update issue
-pr=$(gh pr create --title "${TITLE}" --body "${msg} ${keyfile/.././} for provider ${namespace}. Closes #${NUMBER}.") #--assignee opentofu/core-engineers)
-gh issue comment "${NUMBER}" -b "Your submission has been validated and has moved on to the pull request phase (${pr}).  This issue has been locked."
-gh issue lock "${NUMBER}" -r resolved
-
-if [[ -n "${repo}" ]]; then
-  apt update && apt install -y gpg
-  # get the latest release of the provider
-  latest_release=$(gh release list --exclude-drafts --exclude-pre-releases --repo "${repo}" -L 1 -O desc --json name -q '.[].name')
-  # download the GPG signature from the last provider release
-  gh release download --repo "${repo}" "${latest_release}" -p "*SHA256*"
-  # import the submitted key
-  gpg --import "${keyfile}"
-  # trust the newly imported key
-  for fpr in $(gpg --list-keys --with-colons | grep "pub:" | awk -F: '{print $5}' | sort -u); do  echo -e "5\ny\n" | gpg --command-fd 0 --expert --edit-key "${fpr}" trust; done
-  # verify the signatures
-  sigfile=$(find . -name "*SHA256SUMS.sig" -print | head -1)
-  shafile=$(find . -name "*SHA256SUMS" -print | head -1)
-  if ! gpg --verify "${sigfile}" "${shafile}"
-  then
-    gh issue comment "${NUMBER}" -b "Failed to validate the submitted key against ${repo}@${latest_release}. Could this key be for an older version of the provider?"
-  fi
-  # cleanup
-  rm "${shafile}" "${sigfile}"
-  for fpr in $(gpg --list-keys --with-colons | grep "pub:" | awk -F: '{print $5}' | sort -u); do  echo -e "y\n" |  gpg --command-fd 0 --expert --delete-keys "${fpr}"; done
-fi
+curr_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+"${curr_dir}/submit-provider-key-check.sh" "${keyfile}" "${namespace}" "${providername}"
