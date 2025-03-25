@@ -1,0 +1,976 @@
+{
+  "versions": [
+    {
+      "version": "0.3.0-alpha.5",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.5/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.5/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_darwin_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.5/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_darwin_amd64.zip",
+          "shasum": "f0121fc500471f161a9b569291df7acf6e08d31cb88232c6a3b8feab8cd73d10"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_darwin_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.5/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_darwin_arm64.zip",
+          "shasum": "cd4a7b5d351a2b02325631df9f35abf4f03574e77b5b9acfb877deacd220738c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_freebsd_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.5/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_freebsd_386.zip",
+          "shasum": "d991c4b8111f16c572a10cb954f98b4fd06ca8e01181ae45a0751b242adf4e37"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_freebsd_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.5/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_freebsd_amd64.zip",
+          "shasum": "de5bd64477d885708a4b6bd06bc667d05694528f05a198d59b479cd8c18d1711"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_freebsd_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.5/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_freebsd_arm.zip",
+          "shasum": "b28b07d8ae0355a0922752bd2efe2759124166cffd2e1f52058f93f66c6b063c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_freebsd_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.5/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_freebsd_arm64.zip",
+          "shasum": "0b4988e0da5b491b0a2da1262bf0f7068dee079990c15a77a492eb78f5c876db"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_linux_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.5/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_linux_386.zip",
+          "shasum": "944e51b0645e230b66f32d90ad44b17627bbf9cab0f20e951b6fe9933e53e63c"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_linux_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.5/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_linux_amd64.zip",
+          "shasum": "e8c606a514315a782b8a2031218faf2c2c192bb9897ec92ef9329d423c8eba5b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_linux_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.5/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_linux_arm.zip",
+          "shasum": "1fd89647f203fd6b954dc6d454e90ae5cb63bf7728ddde0729021eab569e1fd6"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_linux_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.5/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_linux_arm64.zip",
+          "shasum": "9f1ca49bffee54d9d4a3eb547f424e8516bd839cb440974ef0f8b20e3c5392a4"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_windows_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.5/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_windows_386.zip",
+          "shasum": "272c5fbec7712a2381fe79c976f5863ad86ff0f14727530dcbc79da8faad9f74"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_windows_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.5/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_windows_amd64.zip",
+          "shasum": "9467ce55f477730cce8f262f213ebe6fe1638959240506c2f7c07d0fe5b085fb"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_windows_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.5/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_windows_arm.zip",
+          "shasum": "fb09dc6118427c59052c12af0be5835960e15a2763ecab2e56a2a3ac71a575b7"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_windows_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.5/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.5_windows_arm64.zip",
+          "shasum": "911df930edafdb31feed29e6db239f190d321e73f089ed3cb90e278640f68c3e"
+        }
+      ]
+    },
+    {
+      "version": "0.3.0-alpha.4",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.4/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.4/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_darwin_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.4/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_darwin_amd64.zip",
+          "shasum": "88d071afb811e834981de3670bf1902b0de430d1c6066b351484eb56469e783f"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_darwin_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.4/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_darwin_arm64.zip",
+          "shasum": "6b8e9115ddd84fa439f4a330fd4dfe35a8f98ea289e8c5ff9b85d6acfa237d7d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_freebsd_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.4/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_freebsd_386.zip",
+          "shasum": "1e4bd1216380618cb71cc1dc9ddda96f6444b27329729fceff32874efe7d118a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_freebsd_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.4/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_freebsd_amd64.zip",
+          "shasum": "f25e518fb75a6dcc0b10e6378d9a60a526c026eb8e99dec0b8a32bae5033cedd"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_freebsd_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.4/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_freebsd_arm.zip",
+          "shasum": "140a25d44939077ca3e7744ca4817c12dc2d2098975190eed074dd95d6dbd6db"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_freebsd_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.4/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_freebsd_arm64.zip",
+          "shasum": "f3484abdb9bcc37655aec247ab36473f7855fc1cdeed5c27faa298cc2165965e"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_linux_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.4/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_linux_386.zip",
+          "shasum": "3170873fc321f7609231602dd0768c09515d8182da1605e2272e76cffdca49a2"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_linux_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.4/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_linux_amd64.zip",
+          "shasum": "9c973f4b018b8706230def91b77e2cdd64b1a3f6c3d7d04c0af6fe54455fe7e4"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_linux_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.4/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_linux_arm.zip",
+          "shasum": "203b40c1ed4b1bf59e57b8f5f8dcb26c633dfd9f02bf18cb05d079048aad1fe0"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_linux_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.4/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_linux_arm64.zip",
+          "shasum": "c6cb32f616191a5e10eb569dfddd1fe1c2be006d31a0c7be093177a77b103da1"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_windows_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.4/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_windows_386.zip",
+          "shasum": "fea9e3fcc1991d459eeb8dc7004f14ba5a9d374ed2d17e2e79b70c1e8b1a6e8e"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_windows_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.4/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_windows_amd64.zip",
+          "shasum": "3c12a91ef12bcb62d3f97a98979c38f883e13135caa6ee3e77a4dc2640f34886"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_windows_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.4/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_windows_arm.zip",
+          "shasum": "6073f3b043460c652fcbab2502ff7b4ae422b757ed1cb9b2bcb67659a22c51f2"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_windows_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.4/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.4_windows_arm64.zip",
+          "shasum": "148f73cb20a3352756755336ddb86d7845da6a4f613992d43b1b5c80a6f9a3c0"
+        }
+      ]
+    },
+    {
+      "version": "0.3.0-alpha.3",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.3/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.3/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_darwin_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.3/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_darwin_amd64.zip",
+          "shasum": "b3b73d07d898d457117bfca134d68087ba5cb4cbd9effbcbfdd09124003df348"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_darwin_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.3/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_darwin_arm64.zip",
+          "shasum": "fdb879c6b5aedf202f7058fb6cdbfe08055841da2ca95cca0ee274f503019270"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_freebsd_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.3/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_freebsd_386.zip",
+          "shasum": "2ef85634505fdaac7729082fa381a59808755506fe54f146cff790b41a2ee690"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.3/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_freebsd_amd64.zip",
+          "shasum": "d15f7894e5770e59ba790e50f9f74bed72ad91a4f33a1c67cddceacb237ab279"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_freebsd_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.3/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_freebsd_arm.zip",
+          "shasum": "3f263a9abc4a6279768878e4e868e184e55bfea6bf8ad3f7c1863d8d33bb0712"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.3/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_freebsd_arm64.zip",
+          "shasum": "595f9386f38e3b26e7c5091412f0838a9e3d9869048f3ecabe2b6fdf8e46da46"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_linux_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.3/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_linux_386.zip",
+          "shasum": "62f8af2090c00ed54b2bde87e37c1a0dc6bee4e3667d721bbe46d90e3266a7b1"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_linux_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.3/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_linux_amd64.zip",
+          "shasum": "7c54d9089e5c640aa2086c30ed256a63a6fa9a4716ca472845c3b131f28265c5"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_linux_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.3/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_linux_arm.zip",
+          "shasum": "8487c8da785cb5bb1711ff4855e2353512dab80ce4ee185589f78583cd90e269"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_linux_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.3/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_linux_arm64.zip",
+          "shasum": "697239e10cba0235fcb1d94d6367fcef38f7ef7a2939d9164baa9e925465bf1d"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_windows_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.3/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_windows_386.zip",
+          "shasum": "8ef2d16cc8fc414c302e78274dd940e581ed11ef80013620cbc40042188f4e9b"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_windows_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.3/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_windows_amd64.zip",
+          "shasum": "cd50663b22c527f130e71e4cd5a8b29b773ef7cee057f74f8661ea620b0426a3"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_windows_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.3/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_windows_arm.zip",
+          "shasum": "aed10d299dc21619678be01a108a02ca8aef7682c0e810c89ec74c5ffb5b83a3"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_windows_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.3/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.3_windows_arm64.zip",
+          "shasum": "2ebe3453b2406c39fb7dcc58364b52aba174de49b5540410241c831c884ac74f"
+        }
+      ]
+    },
+    {
+      "version": "0.3.0-alpha.2",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.2/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.2/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_darwin_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.2/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_darwin_amd64.zip",
+          "shasum": "14a5bfbe377ba8bbd1c6ed9c10305db118eba89236b9c86ec717c8c2aa7c4ab2"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_darwin_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.2/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_darwin_arm64.zip",
+          "shasum": "0d47344e6ef7313b42c293a249f7c64110034f4ef90c8de2a6acbcb0b5005438"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_freebsd_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.2/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_freebsd_386.zip",
+          "shasum": "c869231c1dbdcc37a32ed7a01fdf283c54b448a3c0fb8a87b8e6f35a4a52c1c8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.2/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_freebsd_amd64.zip",
+          "shasum": "4af3849e79d807b481c9bc48cb09ed0c6a56697d84b42a31ee5fcebd9e41afa8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_freebsd_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.2/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_freebsd_arm.zip",
+          "shasum": "0894d819ae57e7af7e5ae8122e0452079f440453a01427801a975664b92b3328"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.2/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_freebsd_arm64.zip",
+          "shasum": "b45a7fcc551242d8948ea30420ea1ea8c4f0255bc6134df114c2302b9bb47b26"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_linux_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.2/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_linux_386.zip",
+          "shasum": "f5f5d00e4c6bf3a508b159a8fe0357facaa4e78700dea363679b1aca3269ec42"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_linux_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.2/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_linux_amd64.zip",
+          "shasum": "83286ab2f89223598ebda20dca113eeeb9c2f306e5bb20a003ea6eab0f13113f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_linux_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.2/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_linux_arm.zip",
+          "shasum": "43e78804ec64f6e9c6df1ee5b85dd40145de8b81e467fd7647056f7dddcb3bb5"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_linux_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.2/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_linux_arm64.zip",
+          "shasum": "ec454d93fe539d59c2c2bcf30276f448625c2e6ad5d0ea4c2ab58bb4b4399fda"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_windows_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.2/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_windows_386.zip",
+          "shasum": "41f2fd64e8575d34d56b08c4767e4ccbfa994fcc60929fc0182ef43631000352"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_windows_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.2/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_windows_amd64.zip",
+          "shasum": "33f99457fad41d02a6faf325224523f9ffef369292caa40043cd49c82baf23e9"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_windows_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.2/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_windows_arm.zip",
+          "shasum": "f51438bf2c208fd177e97cd53f777c84b43ba4ab2c5da488327ef88de1a7fe0b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_windows_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.2/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.2_windows_arm64.zip",
+          "shasum": "c3f94ce55a288258fd9eb2cd18c01c90ac6dd2f954c88bfa79b81b2c2ba593d5"
+        }
+      ]
+    },
+    {
+      "version": "0.3.0-alpha.1",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.1/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.1/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_darwin_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.1/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_darwin_amd64.zip",
+          "shasum": "2d8c7f9308895daaad27e09816ece323983d06861b3a4111b8a8f893dce57b90"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_darwin_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.1/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_darwin_arm64.zip",
+          "shasum": "428bc7ef565bdb741bdb6e2bd588aa351ee63a83784e3795bf91c0b88a7136b9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_freebsd_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.1/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_freebsd_386.zip",
+          "shasum": "c1d0066391fd50949d43545b4e26b08eb5135b94e35a1ce599f2f47516ff6b08"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.1/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_freebsd_amd64.zip",
+          "shasum": "8c392a33cfe990ae850361ce95477392159d665a701dad8e717b1e3f3b06bd0f"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_freebsd_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.1/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_freebsd_arm.zip",
+          "shasum": "92d12e92e1d6b5ac819fea1baa31864704fd96e9f64a4642984a79c4e859a630"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.1/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_freebsd_arm64.zip",
+          "shasum": "ff21c59e077e610889a85e67883f18b8f1b7d8f9d501335bad27d48729eae49f"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_linux_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.1/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_linux_386.zip",
+          "shasum": "317337664fbb3bc7e122ad600c0c7aca5fec4daa2300706ca57be79c444f72a5"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_linux_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.1/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_linux_amd64.zip",
+          "shasum": "977aae12ccf55c13093c1a00e8576734e43db005f07e1001b53ffc82f80ccf45"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_linux_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.1/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_linux_arm.zip",
+          "shasum": "aff0f839fbf8e56227ebbef65b62080f67d67abf00f034e14255ba55139a195d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_linux_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.1/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_linux_arm64.zip",
+          "shasum": "8281e2041173ee23596783af8b8eb9bec2e089d75d50e19e116ea0d10c53a88b"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_windows_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.1/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_windows_386.zip",
+          "shasum": "a119b8608ba2662424c0dc83447c53254040de339ab2c572be00a1f8628f522f"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_windows_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.1/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_windows_amd64.zip",
+          "shasum": "c2edc65bae228a185f536f9858053d4e9d097771fba019bc7e6be98566f706fc"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_windows_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.1/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_windows_arm.zip",
+          "shasum": "dd065d8e6283b764521e7aa2e1e0dfddf96627c4366a9a64de6937f4661f72ac"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_windows_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.3.0-alpha.1/terraform-provider-grafana-adaptive-metrics_0.3.0-alpha.1_windows_arm64.zip",
+          "shasum": "2462d3251492ac52ebdd2023cdd8f5884b204bd6ad46389efc99853cb9bc0d54"
+        }
+      ]
+    },
+    {
+      "version": "0.2.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.2.0/terraform-provider-grafana-adaptive-metrics_0.2.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.2.0/terraform-provider-grafana-adaptive-metrics_0.2.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.2.0_darwin_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.2.0/terraform-provider-grafana-adaptive-metrics_0.2.0_darwin_amd64.zip",
+          "shasum": "c48ee092ea265ad48566a648a43d58a565995f62e3c26b5a2f97553c0442eeab"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.2.0_darwin_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.2.0/terraform-provider-grafana-adaptive-metrics_0.2.0_darwin_arm64.zip",
+          "shasum": "8939b8f75f5ba3e16b58e28afb25a7631a1d4807b744e4079d02946f387449c2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.2.0_freebsd_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.2.0/terraform-provider-grafana-adaptive-metrics_0.2.0_freebsd_386.zip",
+          "shasum": "116b632545b278c704d0e78cfef024e59335f4a8c857e3f02bdc944ed3f29dac"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.2.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.2.0/terraform-provider-grafana-adaptive-metrics_0.2.0_freebsd_amd64.zip",
+          "shasum": "ef4a8bddb72659ed344afa5c6af179da75d45fd4e19c459846555f5542207896"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.2.0_freebsd_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.2.0/terraform-provider-grafana-adaptive-metrics_0.2.0_freebsd_arm.zip",
+          "shasum": "31130cefc2e9e9eec8cb21c951dfb2863e77cde77ca49e3f0fe02a17807b4b63"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.2.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.2.0/terraform-provider-grafana-adaptive-metrics_0.2.0_freebsd_arm64.zip",
+          "shasum": "714ef06c72ee606907c575d54c8648cada8ef5f280ba93a959921d9e520fc7d2"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.2.0_linux_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.2.0/terraform-provider-grafana-adaptive-metrics_0.2.0_linux_386.zip",
+          "shasum": "59458980c1e0619f53ae342bbea7b2f49af21c920ccc253a68770bb3fbcc94d3"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.2.0_linux_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.2.0/terraform-provider-grafana-adaptive-metrics_0.2.0_linux_amd64.zip",
+          "shasum": "c1ab870e212bd00ccc473367a83238698a73498d53a98b303780359d3b49e90a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.2.0_linux_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.2.0/terraform-provider-grafana-adaptive-metrics_0.2.0_linux_arm.zip",
+          "shasum": "9068ef9ec8e25855b7e8e012207ff17b147dd375c3de0ac4373f0aa2a6deb60f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.2.0_linux_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.2.0/terraform-provider-grafana-adaptive-metrics_0.2.0_linux_arm64.zip",
+          "shasum": "4323235dad117efb59f3911d502bbb65c56bb284a3b50a9920e9a96d912bdf38"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.2.0_windows_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.2.0/terraform-provider-grafana-adaptive-metrics_0.2.0_windows_386.zip",
+          "shasum": "79d0f0c488d13bc78febb97fc8b42a1b7c01ef686d8812a9a395a2ed3d362c6d"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.2.0_windows_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.2.0/terraform-provider-grafana-adaptive-metrics_0.2.0_windows_amd64.zip",
+          "shasum": "0613061429590fa0f1ca0f570abe1d2736578d988ec38eb14b01bdea43f65daf"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.2.0_windows_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.2.0/terraform-provider-grafana-adaptive-metrics_0.2.0_windows_arm.zip",
+          "shasum": "27627ba2b5021c72c70c797d5f449ccefa7f98766cdeaf0c9a464ebcc835dfac"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.2.0_windows_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.2.0/terraform-provider-grafana-adaptive-metrics_0.2.0_windows_arm64.zip",
+          "shasum": "48b529d362d2870cdd48e8f30fe39f3036d4ff4cd887990680d522ef817e9106"
+        }
+      ]
+    },
+    {
+      "version": "0.1.2",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.2/terraform-provider-grafana-adaptive-metrics_0.1.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.2/terraform-provider-grafana-adaptive-metrics_0.1.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.2_darwin_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.2/terraform-provider-grafana-adaptive-metrics_0.1.2_darwin_amd64.zip",
+          "shasum": "9784ed957c1a84f4ed415b893396147ea19ae80148398ba179eb5d2e45675699"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.2_darwin_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.2/terraform-provider-grafana-adaptive-metrics_0.1.2_darwin_arm64.zip",
+          "shasum": "b1a9d275bdb503dfd78c392bfe6439985151e43d3313cb81284ff3fa0c426207"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.2_freebsd_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.2/terraform-provider-grafana-adaptive-metrics_0.1.2_freebsd_386.zip",
+          "shasum": "e804cb8215f9f9914a56453d16f74bd20fdf4eebfce355986a2e7a2b09b7b7b9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.2/terraform-provider-grafana-adaptive-metrics_0.1.2_freebsd_amd64.zip",
+          "shasum": "e1774f777e1da183fc7b2206d0e59ce336a1b2b32822cf048656dd77f7a9c38d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.2_freebsd_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.2/terraform-provider-grafana-adaptive-metrics_0.1.2_freebsd_arm.zip",
+          "shasum": "ee365f1720b0316fc3b0b66ed3467b7cf5794aae87bbd5a80208f944bb004883"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.2/terraform-provider-grafana-adaptive-metrics_0.1.2_freebsd_arm64.zip",
+          "shasum": "b12e3e94ad629f495add39c297ac1e9bc6a9f68e810592e0910f6b141c2272eb"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.2_linux_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.2/terraform-provider-grafana-adaptive-metrics_0.1.2_linux_386.zip",
+          "shasum": "0b63fa6096ddd9271cdf64bf6eb0d84e39718c8d8875403b668a82c868e6fba3"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.2_linux_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.2/terraform-provider-grafana-adaptive-metrics_0.1.2_linux_amd64.zip",
+          "shasum": "c66dde823b90c0043a985d465499f233c3a2e374f8cac6a7cd3fb2b07a4f90e6"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.2_linux_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.2/terraform-provider-grafana-adaptive-metrics_0.1.2_linux_arm.zip",
+          "shasum": "ae3866c6a1da94aa83627a7ebcaad3dde53fc3a17e0414490face26f54ee8cc7"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.2_linux_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.2/terraform-provider-grafana-adaptive-metrics_0.1.2_linux_arm64.zip",
+          "shasum": "4d8ecaaa835f921d1833ca7b15d38799155ac3c94eb800a2845efd85cbe475b8"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.2_windows_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.2/terraform-provider-grafana-adaptive-metrics_0.1.2_windows_386.zip",
+          "shasum": "b1ceff3d5de9d1ef3913aea24c48f02d24be20b1aebb29c2a79166fbf3dc17f9"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.2_windows_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.2/terraform-provider-grafana-adaptive-metrics_0.1.2_windows_amd64.zip",
+          "shasum": "a5cc224a84738baca34337014461267368473972fef04db1bf78148977a4f523"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.2_windows_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.2/terraform-provider-grafana-adaptive-metrics_0.1.2_windows_arm.zip",
+          "shasum": "eea96fea854ff464223201108dfc1969f13a70966470773b53aed671cf6f192a"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.2_windows_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.2/terraform-provider-grafana-adaptive-metrics_0.1.2_windows_arm64.zip",
+          "shasum": "b384924a9a73302910b791888a3cd941a28ee53cb81d36eafdbc25b802a073f4"
+        }
+      ]
+    },
+    {
+      "version": "0.1.1",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.1/terraform-provider-grafana-adaptive-metrics_0.1.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.1/terraform-provider-grafana-adaptive-metrics_0.1.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.1_darwin_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.1/terraform-provider-grafana-adaptive-metrics_0.1.1_darwin_amd64.zip",
+          "shasum": "799345131f4679b6a94524f9dc75f381ef58244a318d45cdc1e0657c020d08af"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.1_darwin_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.1/terraform-provider-grafana-adaptive-metrics_0.1.1_darwin_arm64.zip",
+          "shasum": "caa2af0225a742b50f43a84a67ca13053bef2f6aaa36f23c6cbabc23650e2c54"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.1_freebsd_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.1/terraform-provider-grafana-adaptive-metrics_0.1.1_freebsd_386.zip",
+          "shasum": "78d216c4742dc6e65df6e08326b9459f0e85f34a1088c9f0c7a9ac7e1b5a44b8"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.1/terraform-provider-grafana-adaptive-metrics_0.1.1_freebsd_amd64.zip",
+          "shasum": "43c8d986f9b767357e62be9210287a715670a2a0e256821627bdd450935d17d5"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.1_freebsd_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.1/terraform-provider-grafana-adaptive-metrics_0.1.1_freebsd_arm.zip",
+          "shasum": "c384ebf3d11da9b8c4b7d4a3a7f0afd8a28031cb7334041ec01bd99082f06186"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.1/terraform-provider-grafana-adaptive-metrics_0.1.1_freebsd_arm64.zip",
+          "shasum": "3dcf48d6a4d729fd33362e3d85578796ed42d88f513bc105c0fb8f23a12f24b5"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.1_linux_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.1/terraform-provider-grafana-adaptive-metrics_0.1.1_linux_386.zip",
+          "shasum": "735be2d9868dfb5710d49f4f0c6359c23df2f7c0ccc140b60a1c818fab2b8d63"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.1_linux_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.1/terraform-provider-grafana-adaptive-metrics_0.1.1_linux_amd64.zip",
+          "shasum": "1ea8560fad1f6d5f47052b0199a73f6333b63fc7a91b5639e7b008a8aa2d1de8"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.1_linux_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.1/terraform-provider-grafana-adaptive-metrics_0.1.1_linux_arm.zip",
+          "shasum": "0956b7de2607d62dc353a17220302889267a25fd37b21a3c996fc001fd383f25"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.1_linux_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.1/terraform-provider-grafana-adaptive-metrics_0.1.1_linux_arm64.zip",
+          "shasum": "d41991b556dabb8d6d4e5c895befa182acc4a90a64daa8ea5d2485cc50a0d573"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.1_windows_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.1/terraform-provider-grafana-adaptive-metrics_0.1.1_windows_386.zip",
+          "shasum": "5ccadab99cb0b89ebaed74832fa7eca0d386393371ff4c5580134123aaa930cb"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.1_windows_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.1/terraform-provider-grafana-adaptive-metrics_0.1.1_windows_amd64.zip",
+          "shasum": "d05ff9b2ad78846abdfa1ce071b0bd66db95ca939cb25d1988ad08b1ad850e87"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.1_windows_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.1/terraform-provider-grafana-adaptive-metrics_0.1.1_windows_arm.zip",
+          "shasum": "4fc3c25947e999191d3ffbd17749d0c3ffc7902cf0dec31a7ff3bde37923e400"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.1_windows_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.1/terraform-provider-grafana-adaptive-metrics_0.1.1_windows_arm64.zip",
+          "shasum": "a745253b7109cc2bf6277a0ae62c56d3453347720caca0d97a0dea214952f0ea"
+        }
+      ]
+    },
+    {
+      "version": "0.1.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.0/terraform-provider-grafana-adaptive-metrics_0.1.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.0/terraform-provider-grafana-adaptive-metrics_0.1.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.0_darwin_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.0/terraform-provider-grafana-adaptive-metrics_0.1.0_darwin_amd64.zip",
+          "shasum": "072a522146556f6871b6e80dfddd6a8043770886630acf74a0e599ae8f456d6a"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.0_darwin_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.0/terraform-provider-grafana-adaptive-metrics_0.1.0_darwin_arm64.zip",
+          "shasum": "6df64d1f1e9c853f6b3992c6087e948f297e4d976eb67e7f95a58e85cd8a05bb"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.0_freebsd_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.0/terraform-provider-grafana-adaptive-metrics_0.1.0_freebsd_386.zip",
+          "shasum": "bc70e146f4b86fb2daa46feda10b9bca91e5778339a15a7ca8b9021876a08bce"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.0/terraform-provider-grafana-adaptive-metrics_0.1.0_freebsd_amd64.zip",
+          "shasum": "cb1f1d68c4c9772f48f4d16e78f3cb68d59ca4a38a935a1a3190ccdd1af57249"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.0_freebsd_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.0/terraform-provider-grafana-adaptive-metrics_0.1.0_freebsd_arm.zip",
+          "shasum": "296391a31a90094e2b8b9713ff005f10f9f49bfa2bff586321414714f8db8903"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.0/terraform-provider-grafana-adaptive-metrics_0.1.0_freebsd_arm64.zip",
+          "shasum": "1ccd988a6615e3f28c7d34f406ea7e13d14bfee77c8845ba94871f4401691260"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.0_linux_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.0/terraform-provider-grafana-adaptive-metrics_0.1.0_linux_386.zip",
+          "shasum": "a0ca84248bf63c61fe3beffb2d6e2a2cf0b6fb471b5e55a6ae6a1a0e36d70e62"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.0_linux_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.0/terraform-provider-grafana-adaptive-metrics_0.1.0_linux_amd64.zip",
+          "shasum": "0d1f9dd3fe0ada23b800147f2446f4c957e469f644d67c009aa308effdee605f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.0_linux_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.0/terraform-provider-grafana-adaptive-metrics_0.1.0_linux_arm.zip",
+          "shasum": "df24eb80b08cbd82cf97603f540aa5764fed32141d6484fcbd6a2e8656913a53"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.0_linux_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.0/terraform-provider-grafana-adaptive-metrics_0.1.0_linux_arm64.zip",
+          "shasum": "fdef5b8e8a8a4e329dc14295cda9e783b6902dde303d685dba88e8a7063971eb"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.0_windows_386.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.0/terraform-provider-grafana-adaptive-metrics_0.1.0_windows_386.zip",
+          "shasum": "143234cc1d329dad5a28a3098dd2da070d71b83811f3d77206d3536682e93d8e"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.0_windows_amd64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.0/terraform-provider-grafana-adaptive-metrics_0.1.0_windows_amd64.zip",
+          "shasum": "fd753f2b990bcfbed84e977dc9d5cf3bdbb6c77fc6ad32cd5cbfb825ffcf1dd8"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.0_windows_arm.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.0/terraform-provider-grafana-adaptive-metrics_0.1.0_windows_arm.zip",
+          "shasum": "6f4a3d005dd68d3629384b26949b13e879cea3e088a42ef3e5cdddeaeffba299"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-grafana-adaptive-metrics_0.1.0_windows_arm64.zip",
+          "download_url": "https://github.com/grafana/terraform-provider-grafana-adaptive-metrics/releases/download/v0.1.0/terraform-provider-grafana-adaptive-metrics_0.1.0_windows_arm64.zip",
+          "shasum": "9468a7d25126af27f9992a891ae29f75d3467b9f3b3ca0ffc6efc93a3735b68e"
+        }
+      ]
+    }
+  ]
+}
