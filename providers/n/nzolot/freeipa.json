@@ -1,6 +1,114 @@
 {
   "versions": [
     {
+      "version": "1.0.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/nzolot/terraform-provider-freeipa/releases/download/v1.0.0/terraform-provider-freeipa_1.0.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/nzolot/terraform-provider-freeipa/releases/download/v1.0.0/terraform-provider-freeipa_1.0.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-freeipa_1.0.0_darwin_amd64.zip",
+          "download_url": "https://github.com/nzolot/terraform-provider-freeipa/releases/download/v1.0.0/terraform-provider-freeipa_1.0.0_darwin_amd64.zip",
+          "shasum": "31fa0c63a81432da96d4ee3069e27f5edd0d7353b048bea045194fba9be854d4"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-freeipa_1.0.0_darwin_arm64.zip",
+          "download_url": "https://github.com/nzolot/terraform-provider-freeipa/releases/download/v1.0.0/terraform-provider-freeipa_1.0.0_darwin_arm64.zip",
+          "shasum": "ec7257eb5b5ac547da40bdf6c5fc51e5fcb5cdca147fb8a4d818fb71dbf57322"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-freeipa_1.0.0_freebsd_386.zip",
+          "download_url": "https://github.com/nzolot/terraform-provider-freeipa/releases/download/v1.0.0/terraform-provider-freeipa_1.0.0_freebsd_386.zip",
+          "shasum": "a8c4b765ea931f631627ddad1b20e816e718163f2b5faf65d7f9d09b6e0ebe98"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-freeipa_1.0.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/nzolot/terraform-provider-freeipa/releases/download/v1.0.0/terraform-provider-freeipa_1.0.0_freebsd_amd64.zip",
+          "shasum": "3c76d4a7ea248b5c1b1d756a437b2efa845e518ac057449b91dc16bd4c9c462e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-freeipa_1.0.0_freebsd_arm.zip",
+          "download_url": "https://github.com/nzolot/terraform-provider-freeipa/releases/download/v1.0.0/terraform-provider-freeipa_1.0.0_freebsd_arm.zip",
+          "shasum": "b9c5810d167dc7b0eef148c889fa0c3b6404608f40bf2e0e77ed0ed5f99a8e4b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-freeipa_1.0.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/nzolot/terraform-provider-freeipa/releases/download/v1.0.0/terraform-provider-freeipa_1.0.0_freebsd_arm64.zip",
+          "shasum": "f4efa7a749c16e055c46c9a817ebce9a19f18265e9757cf05334c949bf554f6b"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-freeipa_1.0.0_linux_386.zip",
+          "download_url": "https://github.com/nzolot/terraform-provider-freeipa/releases/download/v1.0.0/terraform-provider-freeipa_1.0.0_linux_386.zip",
+          "shasum": "436391d014350c5c4721499ed4b2bb8586a3a05b03f2257f82ba5ccd0f460a0d"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-freeipa_1.0.0_linux_amd64.zip",
+          "download_url": "https://github.com/nzolot/terraform-provider-freeipa/releases/download/v1.0.0/terraform-provider-freeipa_1.0.0_linux_amd64.zip",
+          "shasum": "33e6f25971ee494c11ab2e4769f1f2b87c245b047adacde3da8c74d1c0af5b70"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-freeipa_1.0.0_linux_arm.zip",
+          "download_url": "https://github.com/nzolot/terraform-provider-freeipa/releases/download/v1.0.0/terraform-provider-freeipa_1.0.0_linux_arm.zip",
+          "shasum": "be72e9558ca765101ac2f71d39b44a9aabece2faf823dd77df06a82e2d3e2da6"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-freeipa_1.0.0_linux_arm64.zip",
+          "download_url": "https://github.com/nzolot/terraform-provider-freeipa/releases/download/v1.0.0/terraform-provider-freeipa_1.0.0_linux_arm64.zip",
+          "shasum": "595086823f87227f3181b3df429147616b1e446130df14a2dd682838bb5b19ce"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-freeipa_1.0.0_windows_386.zip",
+          "download_url": "https://github.com/nzolot/terraform-provider-freeipa/releases/download/v1.0.0/terraform-provider-freeipa_1.0.0_windows_386.zip",
+          "shasum": "4a9a74efc554f987d90cddf30acb1b7696a06d2edf6dfca0a9e9513b288e85bc"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-freeipa_1.0.0_windows_amd64.zip",
+          "download_url": "https://github.com/nzolot/terraform-provider-freeipa/releases/download/v1.0.0/terraform-provider-freeipa_1.0.0_windows_amd64.zip",
+          "shasum": "d5c98a0f50d5cbfe24ff37649712648395f1ee3b2846774420d02e4b01539cda"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-freeipa_1.0.0_windows_arm.zip",
+          "download_url": "https://github.com/nzolot/terraform-provider-freeipa/releases/download/v1.0.0/terraform-provider-freeipa_1.0.0_windows_arm.zip",
+          "shasum": "d192ca881be68517b00f70324dad27d2903ff38b2e4a5d8e309eef7e70df745c"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-freeipa_1.0.0_windows_arm64.zip",
+          "download_url": "https://github.com/nzolot/terraform-provider-freeipa/releases/download/v1.0.0/terraform-provider-freeipa_1.0.0_windows_arm64.zip",
+          "shasum": "edf28c698434ef606fe4348a47fdf188cc580a0d8298bc6b6a31c6f778392d7c"
+        }
+      ]
+    },
+    {
       "version": "0.7.0",
       "protocols": [
         "5.0"
