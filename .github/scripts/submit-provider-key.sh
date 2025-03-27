@@ -46,7 +46,7 @@ if [[ -n "${providername}" ]]; then
 fi
 
 set +e
-go run ./cmd/verify-gpg-key -org "${namespace}" -username "${GH_USER}" -key-file=tmp.key -output=./output.json
+go run ./cmd/verify-gpg-key -org "${namespace}" -provider-data ".." -provider-name "${providername}" -username "${GH_USER}" -key-file=tmp.key -output=./output.json
 verification=$?
 set -euo pipefail
 
