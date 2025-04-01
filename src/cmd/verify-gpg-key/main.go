@@ -8,9 +8,12 @@ import (
 	"net/mail"
 	"os"
 	"regexp"
+	"time"
 
 	"github.com/ProtonMail/gopenpgp/v2/crypto"
 
+	"github.com/opentofu/libregistry/metadata"
+	"github.com/opentofu/libregistry/metadata/storage/filesystem"
 	"github.com/opentofu/registry-stable/internal/files"
 	"github.com/opentofu/registry-stable/internal/github"
 	"github.com/opentofu/registry-stable/internal/gpg"
@@ -23,7 +26,10 @@ func main() {
 	keyFile := flag.String("key-file", "", "Location of the GPG key to verify")
 	username := flag.String("username", "", "Github username to verify the GPG key against")
 	orgName := flag.String("org", "", "Github organization name to verify the GPG key against")
+	providerName := flag.String("provider-name", "", "Key used to sign provider-scoped name")
+
 	outputFile := flag.String("output", "", "Path to write JSON result to")
+	providerDataDir := flag.String("provider-data", "..", "Directory containing the provider data")
 	flag.Parse()
 
 	logger = logger.With(slog.String("github", *username), slog.String("org", *orgName))
@@ -36,18 +42,18 @@ func main() {
 		os.Exit(1)
 	}
 
-	ctx := context.Background()
+	ctx, cancel := context.WithTimeout(context.Background(), 60*time.Second)
+	defer cancel()
+
 	ghClient := github.NewClient(ctx, logger, token)
 
 	result := &verification.Result{}
 
-	s := VerifyKey(*keyFile)
+	s := VerifyKey(ctx, *logger, *providerDataDir, *keyFile, *orgName, *providerName)
 	result.Steps = append(result.Steps, s)
 
 	s = VerifyGithubUser(ghClient, *username, *orgName)
 	result.Steps = append(result.Steps, s)
-
-	// TODO: Add verification to ensure that the key has been used to sign providers in this github organization
 
 	fmt.Println(result.RenderMarkdown())
 
@@ -87,13 +93,13 @@ func VerifyGithubUser(client github.Client, username string, orgName string) *ve
 
 var gpgNameEmailRegex = regexp.MustCompile(`.*\<(.*)\>`)
 
-func VerifyKey(location string) *verification.Step {
+func VerifyKey(ctx context.Context, logger slog.Logger, providerDataDir string, location string, orgName string, providerName string) *verification.Step {
 	verifyStep := &verification.Step{
 		Name: "Validate GPG key",
 	}
 
 	// read the key from the filesystem
-	data, err := os.ReadFile(location)
+	keyData, err := os.ReadFile(location)
 	if err != nil {
 		verifyStep.AddError(fmt.Errorf("failed to read key file: %w", err))
 		verifyStep.Status = verification.StatusFailure
@@ -102,7 +108,7 @@ func VerifyKey(location string) *verification.Step {
 
 	var key *crypto.Key
 	verifyStep.RunStep("Key is a valid PGP key", func() error {
-		k, err := gpg.ParseKey(string(data))
+		k, err := gpg.ParseKey(string(keyData))
 		if err != nil {
 			return fmt.Errorf("could not parse key: %w", err)
 		}
@@ -169,6 +175,42 @@ func VerifyKey(location string) *verification.Step {
 
 		return nil
 	})
+
+	dataAPI, err := metadata.New(filesystem.New(providerDataDir))
+	if err != nil {
+		verifyStep.AddError(fmt.Errorf("failed to create a metadata API: %w", err))
+		verifyStep.Status = verification.StatusFailure
+		return verifyStep
+	}
+
+	providers, err := getProviders(ctx, logger, dataAPI, orgName, providerName)
+
+	if err != nil {
+		verifyStep.AddError(fmt.Errorf("failed to list provider %s: %w", orgName, err))
+		verifyStep.Status = verification.StatusFailure
+		return verifyStep
+	}
+
+	keyVerification, err := buildKeyVerifier(keyData, dataAPI)
+	if err != nil {
+		verifyStep.AddError(fmt.Errorf("failed to build key verifier: %w", err))
+		verifyStep.Status = verification.StatusFailure
+		return verifyStep
+	}
+
+	for _, provider := range providers {
+		versions, err := keyVerification.VerifyProvider(ctx, provider)
+		if err != nil {
+			verifyStep.AddError(fmt.Errorf("failed to verify key: %w", err))
+			verifyStep.Status = verification.StatusFailure
+			return verifyStep
+		}
+
+		for _, version := range versions {
+			subName := fmt.Sprintf("Key is used to sign the provider %s v%s", provider, version.Version)
+			verifyStep.AddStep(subName, verification.StatusSuccess)
+		}
+	}
 
 	emailStep.FailureToWarning()
 
