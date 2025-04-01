@@ -99,7 +99,7 @@ else
     exit 0
   fi
 fi
-gh issue comment "${NUMBER}" -b "Key provider signatures validation succeeded!"
+gh issue comment "${NUMBER}" -b "Key validation against provider's signatures succeeded!"
 
 # cleanup keys
 # shellcheck disable=SC2312
