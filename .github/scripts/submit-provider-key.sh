@@ -60,6 +60,12 @@ if [[ -z "${providername}" ]]; then
 else
   keyfile="../keys/${namespace:0:1}/${namespace}/${providername}/provider-$(date +%s).asc"
 fi
+if [[ -d "$(dirname "${keyfile}")" ]]; then
+  msg="Updated"
+  #git rm $(dirname $keyfile)/*
+else
+  msg="Created"
+fi
 mkdir -p "$(dirname "${keyfile}")"
 mv tmp.key "${keyfile}"
 
@@ -84,6 +90,11 @@ else
   git commit -s -m "Create provider key ${namespace}"
 fi
 git push -u origin "${branch}"
+
+# Create pull request and update issue
+pr=$(gh pr create --title "${TITLE}" --body "${msg} ${keyfile/.././} for provider ${namespace}. Closes #${NUMBER}.") #--assignee opentofu/core-engineers)
+gh issue comment "${NUMBER}" -b "Your submission has been validated and has moved on to the pull request phase (${pr}).  This issue has been locked."
+gh issue lock "${NUMBER}" -r resolved
 
 curr_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 "${curr_dir}/submit-provider-key-check.sh" "${keyfile}" "${namespace}" "${providername}"
