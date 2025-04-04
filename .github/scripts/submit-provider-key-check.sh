@@ -65,7 +65,7 @@ function check_owner_repos() {
   local owner="${1}"
   # list first 100 repos of the owner and get all the terraform-provider-* repos to check their releases
   local repos
-  repos="$(gh repo list "${owner}" --no-archived --source -L 100 --json name -q '.[].name | select(. | contains("terraform-provider-"))')"
+  repos="$(gh repo list "${owner}" --no-archived -L 100 --json name -q '.[].name | select(. | contains("terraform-provider-"))')"
   while IFS= read -r repo; do
     if check_repo_versions "${owner}" "${repo}" "${release}"
     then
