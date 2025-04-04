@@ -81,7 +81,7 @@ apt update && apt install -y gpg
 gpg --import "${keyfile}" 2>/dev/null
 # trust the newly imported key
 # shellcheck disable=SC2312
-for fpr in $(gpg --list-keys --with-colons | grep "pub:" | awk -F: '{print $5}' | sort -u); do  echo -e "5\ny\n" | gpg -q --command-fd 0 --expert --edit-key "${fpr}" trust; done
+for fpr in $(gpg --list-keys --with-colons | grep "pub:" | awk -F: '{print $5}' | sort -u); do  echo -e "5\ny\n" | gpg -q --command-fd 0 --no-tty --expert --edit-key "${fpr}" trust; done
 
 if [[ -n "${provider_name}" ]]; then
   # if the submission contains also the provider name, we will check the signatures only of that particular provider
@@ -103,5 +103,5 @@ gh issue comment "${NUMBER}" -b "Key validation against provider's signatures su
 
 # cleanup keys
 # shellcheck disable=SC2312
-for fpr in $(gpg --list-keys --with-colons -q | grep "pub:" | awk -F: '{print $5}' | sort -u); do  echo -e "y\n" | gpg --command-fd 0 --expert --delete-keys "${fpr}"; done
+for fpr in $(gpg --list-keys --with-colons -q | grep "pub:" | awk -F: '{print $5}' | sort -u); do  echo -e "y\n" | gpg --command-fd 0 --no-tty --expert --delete-keys "${fpr}"; done
 
