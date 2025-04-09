@@ -94,9 +94,4 @@ git push -u origin "${branch}"
 # Create pull request and update issue
 pr=$(gh pr create --title "${TITLE}" --body "${msg} ${keyfile/.././} for provider ${namespace}. Closes #${NUMBER}.") #--assignee opentofu/core-engineers)
 gh issue comment "${NUMBER}" -b "Your submission has been validated and has moved on to the pull request phase (${pr}).  This issue has been locked."
-
-curr_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
-"${curr_dir}/submit-provider-key-check.sh" "${keyfile}" "${namespace}" "${providername}"
-
-# lock the issue after checking the key against provider's signatures to allow additional comments to be added
 gh issue lock "${NUMBER}" -r resolved
