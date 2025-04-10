@@ -13,7 +13,7 @@ func (p Provider) GetSHASums(shaFileDownloadUrl string) (map[string]string, erro
 		return nil, fmt.Errorf("failed to download asset contents: %w", assetErr)
 	}
 	if contents == nil {
-		return nil, nil
+		return nil, fmt.Errorf("SHASUM file is empty or missing: %s", shaFileDownloadUrl)
 	}
 
 	return shaFileToMap(contents), nil
