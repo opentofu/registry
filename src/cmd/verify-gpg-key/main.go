@@ -1,19 +1,25 @@
 package main
 
 import (
+	"bytes"
 	"context"
+	"errors"
 	"flag"
 	"fmt"
 	"log/slog"
 	"net/mail"
 	"os"
 	"regexp"
+	"strings"
 
+	"github.com/ProtonMail/go-crypto/openpgp"
+	openpgpErrors "github.com/ProtonMail/go-crypto/openpgp/errors"
 	"github.com/ProtonMail/gopenpgp/v2/crypto"
 
 	"github.com/opentofu/registry-stable/internal/files"
 	"github.com/opentofu/registry-stable/internal/github"
-	"github.com/opentofu/registry-stable/internal/gpg"
+	"github.com/opentofu/registry-stable/internal/parallel"
+	"github.com/opentofu/registry-stable/internal/provider"
 	"github.com/opentofu/registry-stable/pkg/verification"
 )
 
@@ -23,7 +29,10 @@ func main() {
 	keyFile := flag.String("key-file", "", "Location of the GPG key to verify")
 	username := flag.String("username", "", "Github username to verify the GPG key against")
 	orgName := flag.String("org", "", "Github organization name to verify the GPG key against")
+	providerName := flag.String("provider-name", "", "Key used to sign provider-scoped name")
+
 	outputFile := flag.String("output", "", "Path to write JSON result to")
+	providerDataDir := flag.String("provider-data", "../providers", "Directory containing the provider data")
 	flag.Parse()
 
 	logger = logger.With(slog.String("github", *username), slog.String("org", *orgName))
@@ -37,17 +46,32 @@ func main() {
 	}
 
 	ctx := context.Background()
+
 	ghClient := github.NewClient(ctx, logger, token)
+
+	providers, err := provider.ListProviders(*providerDataDir, *orgName, logger, ghClient)
+	if err != nil {
+		logger.Error("Failed to list providers", slog.Any("err", err))
+		os.Exit(1)
+	}
+	var filteredProviders provider.List
+	if *providerName == "" {
+		filteredProviders = providers
+	} else {
+		for _, provider := range providers {
+			if strings.ToLower(provider.ProviderName) == strings.ToLower(*providerName) {
+				filteredProviders = append(filteredProviders, provider)
+			}
+		}
+	}
 
 	result := &verification.Result{}
 
-	s := VerifyKey(*keyFile)
+	s := VerifyKey(*keyFile, filteredProviders)
 	result.Steps = append(result.Steps, s)
 
 	s = VerifyGithubUser(ghClient, *username, *orgName)
 	result.Steps = append(result.Steps, s)
-
-	// TODO: Add verification to ensure that the key has been used to sign providers in this github organization
 
 	fmt.Println(result.RenderMarkdown())
 
@@ -87,13 +111,13 @@ func VerifyGithubUser(client github.Client, username string, orgName string) *ve
 
 var gpgNameEmailRegex = regexp.MustCompile(`.*\<(.*)\>`)
 
-func VerifyKey(location string) *verification.Step {
+func VerifyKey(location string, providers provider.List) *verification.Step {
 	verifyStep := &verification.Step{
 		Name: "Validate GPG key",
 	}
 
 	// read the key from the filesystem
-	data, err := os.ReadFile(location)
+	keyData, err := os.ReadFile(location)
 	if err != nil {
 		verifyStep.AddError(fmt.Errorf("failed to read key file: %w", err))
 		verifyStep.Status = verification.StatusFailure
@@ -102,7 +126,8 @@ func VerifyKey(location string) *verification.Step {
 
 	var key *crypto.Key
 	verifyStep.RunStep("Key is a valid PGP key", func() error {
-		k, err := gpg.ParseKey(string(data))
+		// From internal/gpg/key.go
+		k, err := crypto.NewKeyFromArmored(string(keyData))
 		if err != nil {
 			return fmt.Errorf("could not parse key: %w", err)
 		}
@@ -169,6 +194,86 @@ func VerifyKey(location string) *verification.Step {
 
 		return nil
 	})
+
+	if !verifyStep.DidFail() {
+		verifyStep.RunStep("Key is used to sign at least one provider", func() error {
+			// Inspired by OpenTofu's getproviders
+
+			keyring, err := openpgp.ReadArmoredKeyRing(strings.NewReader(string(keyData)))
+			if err != nil {
+				return fmt.Errorf("error decoding signing key: %w", err)
+			}
+
+			foundProviderForKey := false
+
+			err = providers.Parallel(20, func(p provider.Provider) error {
+				meta, err := p.ReadMetadata()
+				if err != nil {
+					return err
+				}
+				meta.Logger.Info("Starting key signature checks")
+
+				var versionChecks []parallel.Action
+				for _, version := range meta.Versions {
+					version := version
+					versionChecks = append(versionChecks, func() error {
+						// Yes the early returns for foundProviderKey are a bit messy, but IMO it's good enough for now
+						if foundProviderForKey {
+							return nil
+						}
+						logger := meta.Logger.With(slog.String("version", version.Version))
+						logger.Info("Begin version check")
+
+						// Inspired by OpenTofu's getproviders
+
+						shasumResp, err := p.Github.DownloadAssetContents(version.SHASumsURL)
+						if err != nil {
+							return nil
+						}
+						if foundProviderForKey {
+							return nil
+						}
+						sigResp, err := p.Github.DownloadAssetContents(version.SHASumsSignatureURL)
+						if err != nil {
+							return err
+						}
+						if foundProviderForKey {
+							return nil
+						}
+
+						_, err = openpgp.CheckDetachedSignature(keyring, bytes.NewReader(shasumResp), bytes.NewReader(sigResp), nil)
+						if errors.Is(err, openpgpErrors.ErrUnknownIssuer) {
+							return nil
+						}
+
+						if err != nil {
+							// If in enforcing mode (or if the error isn’t related to expiry) return immediately.
+							if !errors.Is(err, openpgpErrors.ErrKeyExpired) && !errors.Is(err, openpgpErrors.ErrSignatureExpired) {
+								return fmt.Errorf("error checking signature: %w", err)
+							}
+						}
+
+						// Key might be expired, but that's allowed
+						foundProviderForKey = true
+						logger.Info("Key is valid for provider version")
+						return nil
+					})
+				}
+				err = errors.Join(parallel.ForEach(versionChecks, 10)...)
+				if err != nil {
+					meta.Logger.Error(err.Error())
+				}
+				return nil
+			})
+			if err != nil {
+				return err
+			}
+			if !foundProviderForKey {
+				return fmt.Errorf("Key is not used to sign any known provider")
+			}
+			return nil
+		})
+	}
 
 	emailStep.FailureToWarning()
 
