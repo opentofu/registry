@@ -206,6 +206,8 @@ func VerifyKey(location string, providers provider.List) *verification.Step {
 
 			foundProviderForKey := false
 
+			ctx, cancel := context.WithCancel(context.TODO())
+
 			err = providers.Parallel(20, func(p provider.Provider) error {
 				meta, err := p.ReadMetadata()
 				if err != nil {
@@ -217,28 +219,18 @@ func VerifyKey(location string, providers provider.List) *verification.Step {
 				for _, version := range meta.Versions {
 					version := version
 					versionChecks = append(versionChecks, func() error {
-						// Yes the early returns for foundProviderKey are a bit messy, but IMO it's good enough for now
-						if foundProviderForKey {
-							return nil
-						}
 						logger := meta.Logger.With(slog.String("version", version.Version))
 						logger.Info("Begin version check")
 
 						// Inspired by OpenTofu's getproviders
-
-						shasumResp, err := p.Github.DownloadAssetContents(version.SHASumsURL)
-						if err != nil {
-							return nil
-						}
-						if foundProviderForKey {
-							return nil
-						}
-						sigResp, err := p.Github.DownloadAssetContents(version.SHASumsSignatureURL)
+						shasumResp, err := p.Github.DownloadAssetContents(ctx, version.SHASumsURL)
 						if err != nil {
 							return err
 						}
-						if foundProviderForKey {
-							return nil
+
+						sigResp, err := p.Github.DownloadAssetContents(ctx, version.SHASumsSignatureURL)
+						if err != nil {
+							return err
 						}
 
 						_, err = openpgp.CheckDetachedSignature(keyring, bytes.NewReader(shasumResp), bytes.NewReader(sigResp), nil)
@@ -254,8 +246,9 @@ func VerifyKey(location string, providers provider.List) *verification.Step {
 						}
 
 						// Key might be expired, but that's allowed
-						foundProviderForKey = true
 						logger.Info("Key is valid for provider version")
+						// Cancel in order to cancel all parallelized requests
+						cancel()
 						return nil
 					})
 				}

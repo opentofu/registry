@@ -1,6 +1,7 @@
 package provider
 
 import (
+	"context"
 	"fmt"
 	"strings"
 )
@@ -8,7 +9,8 @@ import (
 // GetSHASums will attempt to download the SHA checksums file from the given URL and return a
 // map of file names to SHA checksums.
 func (p Provider) GetSHASums(shaFileDownloadUrl string) (map[string]string, error) {
-	contents, assetErr := p.Github.DownloadAssetContents(shaFileDownloadUrl)
+	ctx := context.Background()
+	contents, assetErr := p.Github.DownloadAssetContents(ctx, shaFileDownloadUrl)
 	if assetErr != nil {
 		return nil, fmt.Errorf("failed to download asset contents: %w", assetErr)
 	}

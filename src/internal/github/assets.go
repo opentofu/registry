@@ -1,6 +1,7 @@
 package github
 
 import (
+	"context"
 	"fmt"
 	"io"
 	"log/slog"
@@ -8,14 +9,20 @@ import (
 )
 
 // DownloadAssetContents downloads the contents of the asset at the given URL and returns it directly
-func (c Client) DownloadAssetContents(downloadURL string) ([]byte, error) {
+func (c Client) DownloadAssetContents(ctx context.Context, downloadURL string) ([]byte, error) {
 	done := c.assetThrottle()
 	defer done()
 
 	logger := c.log.With(slog.String("url", downloadURL))
 	logger.Info("Downloading asset")
 
-	resp, err := c.httpClient.Get(downloadURL)
+	req, err := http.NewRequestWithContext(ctx, "GET", downloadURL, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	resp, err := c.httpClient.Do(req)
+
 	if err != nil {
 		return nil, fmt.Errorf("error downloading asset %s: %w", downloadURL, err)
 	}
