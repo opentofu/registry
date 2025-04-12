@@ -206,7 +206,7 @@ func VerifyKey(location string, providers provider.List) *verification.Step {
 
 			foundProviderForKey := false
 
-			ctx, cancel := context.WithCancel(context.TODO())
+			ctx, cancel := context.WithCancel(context.Background())
 
 			err = providers.Parallel(20, func(p provider.Provider) error {
 				meta, err := p.ReadMetadata()
@@ -247,7 +247,7 @@ func VerifyKey(location string, providers provider.List) *verification.Step {
 
 						// Key might be expired, but that's allowed
 						logger.Info("Key is valid for provider version")
-						// Cancel in order to cancel all parallelized requests
+						// Key was verified successfully, we can cancel all the parallelized requests
 						cancel()
 						return nil
 					})
