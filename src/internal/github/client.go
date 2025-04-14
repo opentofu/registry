@@ -83,7 +83,10 @@ type transport struct {
 
 // RoundTrip is needed to implement the http.RoundTripper interface.
 func (t *transport) RoundTrip(req *http.Request) (*http.Response, error) {
-	req = req.WithContext(t.ctx)
+	// context.Background() is the default context. When the request is NOT setting something different from that, use what was defined on the transport, if not, the context used is the on the request.
+	if req.Context() == context.Background() {
+		req = req.WithContext(t.ctx)
+	}
 	req.Header.Set("User-Agent", UserAgent)
 	req.Header.Set("Authorization", "Bearer "+t.token)
 

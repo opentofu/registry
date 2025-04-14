@@ -45,10 +45,10 @@ func main() {
 		os.Exit(1)
 	}
 
-	ctx, cancelFunc := context.WithCancel(context.Background())
+	ctx := context.Background()
 	ghClient := github.NewClient(ctx, logger, token)
 
-	providers, err := provider.ListProviders(*providerDataDir, *orgName, logger, ghClient, cancel)
+	providers, err := provider.ListProviders(*providerDataDir, *orgName, logger, ghClient)
 	if err != nil {
 		logger.Error("Failed to list providers", slog.Any("err", err))
 		os.Exit(1)
@@ -66,7 +66,7 @@ func main() {
 
 	result := &verification.Result{}
 
-	s := VerifyKey(*keyFile, filteredProviders, cancelFunc)
+	s := VerifyKey(*keyFile, filteredProviders)
 	result.Steps = append(result.Steps, s)
 
 	s = VerifyGithubUser(ghClient, *username, *orgName)
@@ -110,7 +110,7 @@ func VerifyGithubUser(client github.Client, username string, orgName string) *ve
 
 var gpgNameEmailRegex = regexp.MustCompile(`.*\<(.*)\>`)
 
-func VerifyKey(location string, providers provider.List, cancelFunc context.CancelFunc) *verification.Step {
+func VerifyKey(location string, providers provider.List) *verification.Step {
 	verifyStep := &verification.Step{
 		Name: "Validate GPG key",
 	}
@@ -204,6 +204,7 @@ func VerifyKey(location string, providers provider.List, cancelFunc context.Canc
 			}
 
 			foundProviderForKey := false
+			ctx, cancelFunc := context.WithCancel(context.Background())
 
 			err = providers.Parallel(20, func(p provider.Provider) error {
 				meta, err := p.ReadMetadata()
@@ -220,12 +221,12 @@ func VerifyKey(location string, providers provider.List, cancelFunc context.Canc
 						logger.Info("Begin version check")
 
 						// Inspired by OpenTofu's getproviders
-						shasumResp, err := p.Github.DownloadAssetContents(version.SHASumsURL)
+						shasumResp, err := p.Github.DownloadAssetContents(ctx, version.SHASumsURL)
 						if err != nil {
 							return err
 						}
 
-						sigResp, err := p.Github.DownloadAssetContents(version.SHASumsSignatureURL)
+						sigResp, err := p.Github.DownloadAssetContents(ctx, version.SHASumsSignatureURL)
 						if err != nil {
 							return err
 						}
@@ -244,13 +245,20 @@ func VerifyKey(location string, providers provider.List, cancelFunc context.Canc
 
 						// Key might be expired, but that's allowed
 						logger.Info("Key is valid for provider version")
+						foundProviderForKey = true
 						// Key was verified successfully, we can cancel all the parallelized requests
 						cancelFunc()
 						return nil
 					})
 				}
 				err = errors.Join(parallel.ForEach(versionChecks, 10)...)
-				if err != nil {
+
+				// TODO: Remove this check, I just used to test if we were skipping the errors correctly
+				if errors.Is(err, context.Canceled) {
+					meta.Logger.Info("Context cancel")
+				}
+
+				if err != nil && !errors.Is(err, context.Canceled) {
 					meta.Logger.Error(err.Error())
 				}
 				return nil
