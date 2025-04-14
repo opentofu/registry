@@ -47,8 +47,10 @@ func main() {
 
 	ctx := context.Background()
 	ghClient := github.NewClient(ctx, logger, token)
+	ctxForVerifier, cancelFunc := context.WithCancel(context.Background())
+	ghListClient := github.NewClient(ctxForVerifier, logger, token)
 
-	providers, err := provider.ListProviders(*providerDataDir, *orgName, logger, ghClient)
+	providers, err := provider.ListProviders(*providerDataDir, *orgName, logger, ghListClient)
 	if err != nil {
 		logger.Error("Failed to list providers", slog.Any("err", err))
 		os.Exit(1)
@@ -66,7 +68,7 @@ func main() {
 
 	result := &verification.Result{}
 
-	s := VerifyKey(*keyFile, filteredProviders)
+	s := VerifyKey(*keyFile, filteredProviders, cancelFunc)
 	result.Steps = append(result.Steps, s)
 
 	s = VerifyGithubUser(ghClient, *username, *orgName)
@@ -110,7 +112,7 @@ func VerifyGithubUser(client github.Client, username string, orgName string) *ve
 
 var gpgNameEmailRegex = regexp.MustCompile(`.*\<(.*)\>`)
 
-func VerifyKey(location string, providers provider.List) *verification.Step {
+func VerifyKey(location string, providers provider.List, cancelFunc context.CancelFunc) *verification.Step {
 	verifyStep := &verification.Step{
 		Name: "Validate GPG key",
 	}
@@ -204,7 +206,6 @@ func VerifyKey(location string, providers provider.List) *verification.Step {
 			}
 
 			foundProviderForKey := false
-			ctx, cancelFunc := context.WithCancel(context.Background())
 
 			err = providers.Parallel(20, func(p provider.Provider) error {
 				meta, err := p.ReadMetadata()
@@ -221,12 +222,12 @@ func VerifyKey(location string, providers provider.List) *verification.Step {
 						logger.Info("Begin version check")
 
 						// Inspired by OpenTofu's getproviders
-						shasumResp, err := p.Github.DownloadAssetContents(ctx, version.SHASumsURL)
+						shasumResp, err := p.Github.DownloadAssetContents(version.SHASumsURL)
 						if err != nil {
 							return err
 						}
 
-						sigResp, err := p.Github.DownloadAssetContents(ctx, version.SHASumsSignatureURL)
+						sigResp, err := p.Github.DownloadAssetContents(version.SHASumsSignatureURL)
 						if err != nil {
 							return err
 						}

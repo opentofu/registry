@@ -1,7 +1,6 @@
 package provider
 
 import (
-	"context"
 	"encoding/json"
 	"fmt"
 	"log/slog"
@@ -20,8 +19,7 @@ type ManifestMetadata struct {
 // GetProtocols will attempt to download the manifest from the given URL and return the
 // list of protocols that the provider supports.
 func (p Provider) GetProtocols(manifestDownloadUrl string) ([]string, error) {
-	ctx := context.Background()
-	contents, err := p.Github.DownloadAssetContents(ctx, manifestDownloadUrl)
+	contents, err := p.Github.DownloadAssetContents(manifestDownloadUrl)
 	if err != nil {
 		return nil, err
 	}
