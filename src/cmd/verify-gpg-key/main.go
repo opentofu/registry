@@ -45,11 +45,10 @@ func main() {
 		os.Exit(1)
 	}
 
-	ctx := context.Background()
-
+	ctx, cancelFunc := context.WithCancel(context.Background())
 	ghClient := github.NewClient(ctx, logger, token)
 
-	providers, err := provider.ListProviders(*providerDataDir, *orgName, logger, ghClient)
+	providers, err := provider.ListProviders(*providerDataDir, *orgName, logger, ghClient, cancel)
 	if err != nil {
 		logger.Error("Failed to list providers", slog.Any("err", err))
 		os.Exit(1)
@@ -59,7 +58,7 @@ func main() {
 		filteredProviders = providers
 	} else {
 		for _, provider := range providers {
-			if strings.ToLower(provider.ProviderName) == strings.ToLower(*providerName) {
+			if strings.EqualFold(provider.ProviderName, *providerName) {
 				filteredProviders = append(filteredProviders, provider)
 			}
 		}
@@ -67,7 +66,7 @@ func main() {
 
 	result := &verification.Result{}
 
-	s := VerifyKey(*keyFile, filteredProviders)
+	s := VerifyKey(*keyFile, filteredProviders, cancelFunc)
 	result.Steps = append(result.Steps, s)
 
 	s = VerifyGithubUser(ghClient, *username, *orgName)
@@ -111,7 +110,7 @@ func VerifyGithubUser(client github.Client, username string, orgName string) *ve
 
 var gpgNameEmailRegex = regexp.MustCompile(`.*\<(.*)\>`)
 
-func VerifyKey(location string, providers provider.List) *verification.Step {
+func VerifyKey(location string, providers provider.List, cancelFunc context.CancelFunc) *verification.Step {
 	verifyStep := &verification.Step{
 		Name: "Validate GPG key",
 	}
@@ -206,8 +205,6 @@ func VerifyKey(location string, providers provider.List) *verification.Step {
 
 			foundProviderForKey := false
 
-			ctx, cancel := context.WithCancel(context.Background())
-
 			err = providers.Parallel(20, func(p provider.Provider) error {
 				meta, err := p.ReadMetadata()
 				if err != nil {
@@ -223,12 +220,12 @@ func VerifyKey(location string, providers provider.List) *verification.Step {
 						logger.Info("Begin version check")
 
 						// Inspired by OpenTofu's getproviders
-						shasumResp, err := p.Github.DownloadAssetContents(ctx, version.SHASumsURL)
+						shasumResp, err := p.Github.DownloadAssetContents(version.SHASumsURL)
 						if err != nil {
 							return err
 						}
 
-						sigResp, err := p.Github.DownloadAssetContents(ctx, version.SHASumsSignatureURL)
+						sigResp, err := p.Github.DownloadAssetContents(version.SHASumsSignatureURL)
 						if err != nil {
 							return err
 						}
@@ -248,7 +245,7 @@ func VerifyKey(location string, providers provider.List) *verification.Step {
 						// Key might be expired, but that's allowed
 						logger.Info("Key is valid for provider version")
 						// Key was verified successfully, we can cancel all the parallelized requests
-						cancel()
+						cancelFunc()
 						return nil
 					})
 				}
@@ -262,7 +259,7 @@ func VerifyKey(location string, providers provider.List) *verification.Step {
 				return err
 			}
 			if !foundProviderForKey {
-				return fmt.Errorf("Key is not used to sign any known provider")
+				return fmt.Errorf("key is not used to sign any known provider")
 			}
 			return nil
 		})
