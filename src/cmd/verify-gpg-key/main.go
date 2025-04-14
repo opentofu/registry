@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"context"
+	"database/sql"
 	"errors"
 	"flag"
 	"fmt"
@@ -11,6 +12,7 @@ import (
 	"os"
 	"regexp"
 	"strings"
+	"sync"
 
 	"github.com/ProtonMail/go-crypto/openpgp"
 	openpgpErrors "github.com/ProtonMail/go-crypto/openpgp/errors"
@@ -21,6 +23,8 @@ import (
 	"github.com/opentofu/registry-stable/internal/parallel"
 	"github.com/opentofu/registry-stable/internal/provider"
 	"github.com/opentofu/registry-stable/pkg/verification"
+
+	_ "modernc.org/sqlite"
 )
 
 func main() {
@@ -204,9 +208,66 @@ func VerifyKey(location string, providers provider.List) *verification.Step {
 				return fmt.Errorf("error decoding signing key: %w", err)
 			}
 
-			foundProviderForKey := false
+			db, err := sql.Open("sqlite", "cdn.sqlite")
+			if err != nil {
+				return err
+			}
+			defer db.Close()
+			_, err = db.Exec(`
+			create table if not exists cache (
+				url string,
+				data string
+			)
+			`)
+			if err != nil {
+				return err
+			}
+			var dbl sync.Mutex
+
+			getWithCache := func(p provider.Provider, url string) ([]byte, error) {
+				var data []byte
+				hasData := false
+
+				err := func() error {
+					dbl.Lock()
+					defer dbl.Unlock()
+
+					rows, err := db.Query("select data from cache where url = $1", url)
+					if err != nil {
+						return err
+					}
+
+					if rows.Next() {
+						hasData = true
+						return rows.Scan(&data)
+					}
+					return nil
+				}()
+				if err != nil {
+					return nil, err
+				}
+				if hasData {
+					return data, nil
+				}
+
+				data, err = p.Github.DownloadAssetContents(url)
+				if err != nil {
+					return nil, err
+				}
+
+				dbl.Lock()
+				defer dbl.Unlock()
+				_, err = db.Exec("insert into cache (url, data) values ($1, $2)", url, data)
+				if err != nil {
+					return nil, err
+				}
+
+				return data, nil
+			}
 
 			err = providers.Parallel(20, func(p provider.Provider) error {
+				foundProviderForKey := false
+
 				meta, err := p.ReadMetadata()
 				if err != nil {
 					return err
@@ -216,6 +277,7 @@ func VerifyKey(location string, providers provider.List) *verification.Step {
 				var versionChecks []parallel.Action
 				for _, version := range meta.Versions {
 					version := version
+
 					versionChecks = append(versionChecks, func() error {
 						// Yes the early returns for foundProviderKey are a bit messy, but IMO it's good enough for now
 						if foundProviderForKey {
@@ -226,15 +288,17 @@ func VerifyKey(location string, providers provider.List) *verification.Step {
 
 						// Inspired by OpenTofu's getproviders
 
-						shasumResp, err := p.Github.DownloadAssetContents(version.SHASumsURL)
+						shasumResp, err := getWithCache(p, version.SHASumsURL)
 						if err != nil {
+							logger.Error(err.Error())
 							return nil
 						}
 						if foundProviderForKey {
 							return nil
 						}
-						sigResp, err := p.Github.DownloadAssetContents(version.SHASumsSignatureURL)
+						sigResp, err := getWithCache(p, version.SHASumsSignatureURL)
 						if err != nil {
+							logger.Error(err.Error())
 							return err
 						}
 						if foundProviderForKey {
@@ -252,6 +316,9 @@ func VerifyKey(location string, providers provider.List) *verification.Step {
 								return fmt.Errorf("error checking signature: %w", err)
 							}
 						}
+						if foundProviderForKey {
+							return nil
+						}
 
 						// Key might be expired, but that's allowed
 						foundProviderForKey = true
@@ -263,13 +330,14 @@ func VerifyKey(location string, providers provider.List) *verification.Step {
 				if err != nil {
 					meta.Logger.Error(err.Error())
 				}
+				if !foundProviderForKey {
+					return fmt.Errorf("Key is not used to sign provider %s", p.ProviderName)
+				}
 				return nil
 			})
+
 			if err != nil {
 				return err
-			}
-			if !foundProviderForKey {
-				return fmt.Errorf("Key is not used to sign any known provider")
 			}
 			return nil
 		})
