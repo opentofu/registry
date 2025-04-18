@@ -47,10 +47,10 @@ func main() {
 
 	ctx := context.Background()
 	ghClient := github.NewClient(ctx, logger, token)
-	ctxForVerifier, cancelFunc := context.WithCancel(context.Background())
-	ghListClient := github.NewClient(ctxForVerifier, logger, token)
+	ctxVerifier, cancelVerifierFn := context.WithCancel(context.Background())
+	ghVerifierClient := github.NewClient(ctxVerifier, logger, token)
 
-	providers, err := provider.ListProviders(*providerDataDir, *orgName, logger, ghListClient)
+	providers, err := provider.ListProviders(*providerDataDir, *orgName, logger, ghVerifierClient)
 	if err != nil {
 		logger.Error("Failed to list providers", slog.Any("err", err))
 		os.Exit(1)
@@ -68,7 +68,7 @@ func main() {
 
 	result := &verification.Result{}
 
-	s := VerifyKey(*keyFile, filteredProviders, cancelFunc)
+	s := VerifyKey(*keyFile, filteredProviders, cancelVerifierFn)
 	result.Steps = append(result.Steps, s)
 
 	s = VerifyGithubUser(ghClient, *username, *orgName)
@@ -112,7 +112,7 @@ func VerifyGithubUser(client github.Client, username string, orgName string) *ve
 
 var gpgNameEmailRegex = regexp.MustCompile(`.*\<(.*)\>`)
 
-func VerifyKey(location string, providers provider.List, cancelFunc context.CancelFunc) *verification.Step {
+func VerifyKey(location string, providers provider.List, cancelVerifierFn context.CancelFunc) *verification.Step {
 	verifyStep := &verification.Step{
 		Name: "Validate GPG key",
 	}
@@ -248,7 +248,7 @@ func VerifyKey(location string, providers provider.List, cancelFunc context.Canc
 						logger.Info("Key is valid for provider version")
 						foundProviderForKey = true
 						// Key was verified successfully, we can cancel all the parallelized requests
-						cancelFunc()
+						cancelVerifierFn()
 						return nil
 					})
 				}

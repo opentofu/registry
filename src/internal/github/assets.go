@@ -16,7 +16,6 @@ func (c Client) DownloadAssetContents(downloadURL string) ([]byte, error) {
 	logger.Info("Downloading asset")
 
 	resp, err := c.httpClient.Get(downloadURL)
-
 	if err != nil {
 		return nil, fmt.Errorf("error downloading asset %s: %w", downloadURL, err)
 	}
