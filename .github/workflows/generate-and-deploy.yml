@@ -43,8 +43,21 @@ jobs:
       ## bucket is not in sync with the local files. This is expected behavior and is a signal that we should
       ## manually run the generate-and-deploy-with-delete.yml workflow to ensure the bucket is in sync.
       ## The sync will have happened and new files will be updated in the bucket, but old files will not have been deleted.
-      - name: Sync Data to R2
-        run: rclone sync --checkers=512 --transfers=512 --checksum --fast-list --max-delete 0 --delete-after ./generated R2:${{ secrets.R2_BUCKET_NAME }}
+    
+      
+      - name: File-based lock Sync Data to R2
+        run:
+          #!/bin/bash
+          set -e
+
+          if mkdir /tmp/rclone_sync_lock; then
+             echo "Lock acquired, running rclone sync..."
+             rclone sync --checkers=512 --transfers=512 --checksum --fast-list --max-delete 0 --delete-after ./generated R2:${{ secrets.R2_BUCKET_NAME }}
+             rm -rf /tmp/rclone_sync_lock
+          else
+             echo "Another instance is already running. Exiting."
+             exit 1
+          fi
         env:
           # R2 credentials should be stored as GitHub secrets
           RCLONE_CONFIG_R2_TYPE: s3
