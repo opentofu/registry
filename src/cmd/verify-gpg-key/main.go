@@ -46,10 +46,11 @@ func main() {
 	}
 
 	ctx := context.Background()
-
 	ghClient := github.NewClient(ctx, logger, token)
+	ctxVerifier, cancelVerifierFn := context.WithCancel(context.Background())
+	ghVerifierClient := github.NewClient(ctxVerifier, logger, token)
 
-	providers, err := provider.ListProviders(*providerDataDir, *orgName, logger, ghClient)
+	providers, err := provider.ListProviders(*providerDataDir, *orgName, logger, ghVerifierClient)
 	if err != nil {
 		logger.Error("Failed to list providers", slog.Any("err", err))
 		os.Exit(1)
@@ -59,7 +60,7 @@ func main() {
 		filteredProviders = providers
 	} else {
 		for _, provider := range providers {
-			if strings.ToLower(provider.ProviderName) == strings.ToLower(*providerName) {
+			if strings.EqualFold(provider.ProviderName, *providerName) {
 				filteredProviders = append(filteredProviders, provider)
 			}
 		}
@@ -67,7 +68,7 @@ func main() {
 
 	result := &verification.Result{}
 
-	s := VerifyKey(*keyFile, filteredProviders)
+	s := VerifyKey(*keyFile, filteredProviders, cancelVerifierFn)
 	result.Steps = append(result.Steps, s)
 
 	s = VerifyGithubUser(ghClient, *username, *orgName)
@@ -111,7 +112,7 @@ func VerifyGithubUser(client github.Client, username string, orgName string) *ve
 
 var gpgNameEmailRegex = regexp.MustCompile(`.*\<(.*)\>`)
 
-func VerifyKey(location string, providers provider.List) *verification.Step {
+func VerifyKey(location string, providers provider.List, cancelVerifierFn context.CancelFunc) *verification.Step {
 	verifyStep := &verification.Step{
 		Name: "Validate GPG key",
 	}
@@ -217,28 +218,18 @@ func VerifyKey(location string, providers provider.List) *verification.Step {
 				for _, version := range meta.Versions {
 					version := version
 					versionChecks = append(versionChecks, func() error {
-						// Yes the early returns for foundProviderKey are a bit messy, but IMO it's good enough for now
-						if foundProviderForKey {
-							return nil
-						}
 						logger := meta.Logger.With(slog.String("version", version.Version))
 						logger.Info("Begin version check")
 
 						// Inspired by OpenTofu's getproviders
-
 						shasumResp, err := p.Github.DownloadAssetContents(version.SHASumsURL)
-						if err != nil {
-							return nil
-						}
-						if foundProviderForKey {
-							return nil
-						}
-						sigResp, err := p.Github.DownloadAssetContents(version.SHASumsSignatureURL)
 						if err != nil {
 							return err
 						}
-						if foundProviderForKey {
-							return nil
+
+						sigResp, err := p.Github.DownloadAssetContents(version.SHASumsSignatureURL)
+						if err != nil {
+							return err
 						}
 
 						_, err = openpgp.CheckDetachedSignature(keyring, bytes.NewReader(shasumResp), bytes.NewReader(sigResp), nil)
@@ -254,13 +245,21 @@ func VerifyKey(location string, providers provider.List) *verification.Step {
 						}
 
 						// Key might be expired, but that's allowed
-						foundProviderForKey = true
 						logger.Info("Key is valid for provider version")
+						foundProviderForKey = true
+						// Key was verified successfully, we can cancel all the parallelized requests
+						cancelVerifierFn()
 						return nil
 					})
 				}
 				err = errors.Join(parallel.ForEach(versionChecks, 10)...)
-				if err != nil {
+
+				// TODO: Remove this check, I just used to test if we were skipping the errors correctly
+				if errors.Is(err, context.Canceled) {
+					meta.Logger.Info("Context cancel")
+				}
+
+				if err != nil && !errors.Is(err, context.Canceled) {
 					meta.Logger.Error(err.Error())
 				}
 				return nil
@@ -269,7 +268,7 @@ func VerifyKey(location string, providers provider.List) *verification.Step {
 				return err
 			}
 			if !foundProviderForKey {
-				return fmt.Errorf("Key is not used to sign any known provider")
+				return fmt.Errorf("key is not used to sign any known provider")
 			}
 			return nil
 		})
