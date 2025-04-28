@@ -1,8 +1,85 @@
 {
-  "warnings": [
-    "You are using opentofu/external instead of hashicorp/external. This provider is maintained by HashiCorp and the OpenTofu project only builds the provider binaries from the source code. Both the opentofu/ and hashicorp/ namespaces in the OpenTofu Registry contain the OpenTofu-built provider binaries based on the HashiCorp source code. To avoid configuration errors, we recommend using the hashicorp/ namespaced providers."
-  ],
   "versions": [
+    {
+      "version": "2.3.5-alpha1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.3.5-alpha1/terraform-provider-external_2.3.5-alpha1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.3.5-alpha1/terraform-provider-external_2.3.5-alpha1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-external_2.3.5-alpha1_darwin_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.3.5-alpha1/terraform-provider-external_2.3.5-alpha1_darwin_amd64.zip",
+          "shasum": "8aafcdf6694e401b0bd66f288ca1179522d141f90b34ca26586b9e7edad8a176"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-external_2.3.5-alpha1_darwin_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.3.5-alpha1/terraform-provider-external_2.3.5-alpha1_darwin_arm64.zip",
+          "shasum": "17bd33fca503794db2b322677875b4725adb9e3d4113c96302b858b2ac5db7c6"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-external_2.3.5-alpha1_linux_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.3.5-alpha1/terraform-provider-external_2.3.5-alpha1_linux_386.zip",
+          "shasum": "d2bbcaf965b933d39d9cebafde420405c55714a492099fe59af74ec29c854bca"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-external_2.3.5-alpha1_linux_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.3.5-alpha1/terraform-provider-external_2.3.5-alpha1_linux_amd64.zip",
+          "shasum": "c46cefd20a6c03c45da3ac688aee822aeb84cc92ce3f758a20ad7bcabc28d9db"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-external_2.3.5-alpha1_linux_arm.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.3.5-alpha1/terraform-provider-external_2.3.5-alpha1_linux_arm.zip",
+          "shasum": "32ed561684dc965a27ecebd07af510dac31df6c04522957a14fad9cc1fe4d669"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-external_2.3.5-alpha1_linux_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.3.5-alpha1/terraform-provider-external_2.3.5-alpha1_linux_arm64.zip",
+          "shasum": "81655ef4677bf4141df38bca0307754b4e2d1ec623f31270c3aab3732dd8c579"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-external_2.3.5-alpha1_windows_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.3.5-alpha1/terraform-provider-external_2.3.5-alpha1_windows_386.zip",
+          "shasum": "0c664dff6055f04bf26af9a279c412c1f6e3de690cf8d91abb8c32d8aa7fc809"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-external_2.3.5-alpha1_windows_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.3.5-alpha1/terraform-provider-external_2.3.5-alpha1_windows_amd64.zip",
+          "shasum": "1c6de47c32858afd11efabe2428b98301d2e8b0ce4799b8538685dd0f3b0fe0b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-external_2.3.5-alpha1_windows_arm.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.3.5-alpha1/terraform-provider-external_2.3.5-alpha1_windows_arm.zip",
+          "shasum": "bc549dc8b6c9a015088fbf952d0fe457c49fbc22d79e7692c34cfc3204140c9b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-external_2.3.5-alpha1_windows_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.3.5-alpha1/terraform-provider-external_2.3.5-alpha1_windows_arm64.zip",
+          "shasum": "4df54041ab0b5aa46e5140540cf1d0a3eafee6de6294b1beda38f5b8c72d359e"
+        }
+      ]
+    },
     {
       "version": "2.3.4",
       "protocols": [
@@ -1163,5 +1240,8 @@
         }
       ]
     }
+  ],
+  "warnings": [
+    "You are using opentofu/external instead of hashicorp/external. This provider is maintained by HashiCorp and the OpenTofu project only builds the provider binaries from the source code. Both the opentofu/ and hashicorp/ namespaces in the OpenTofu Registry contain the OpenTofu-built provider binaries based on the HashiCorp source code. To avoid configuration errors, we recommend using the hashicorp/ namespaced providers."
   ]
 }
