@@ -1,6 +1,114 @@
 {
   "versions": [
     {
+      "version": "2.2.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/netapp/terraform-provider-netapp-ontap/releases/download/v2.2.0/terraform-provider-netapp-ontap_2.2.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/netapp/terraform-provider-netapp-ontap/releases/download/v2.2.0/terraform-provider-netapp-ontap_2.2.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-ontap_2.2.0_darwin_amd64.zip",
+          "download_url": "https://github.com/netapp/terraform-provider-netapp-ontap/releases/download/v2.2.0/terraform-provider-netapp-ontap_2.2.0_darwin_amd64.zip",
+          "shasum": "3b0660c065ff0bb82fd01fb95bc2272c179933149e86ba910bc068938a031649"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-ontap_2.2.0_darwin_arm64.zip",
+          "download_url": "https://github.com/netapp/terraform-provider-netapp-ontap/releases/download/v2.2.0/terraform-provider-netapp-ontap_2.2.0_darwin_arm64.zip",
+          "shasum": "d2a5b9c8ab3622be85764c6a59d218f6ca3ef951e7312dec5c8707d5124c4505"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-ontap_2.2.0_freebsd_386.zip",
+          "download_url": "https://github.com/netapp/terraform-provider-netapp-ontap/releases/download/v2.2.0/terraform-provider-netapp-ontap_2.2.0_freebsd_386.zip",
+          "shasum": "f44c1f4b2beb4fb832344c36844f528e2308f47c4c20d3bc0defb5ecfb284492"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-ontap_2.2.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/netapp/terraform-provider-netapp-ontap/releases/download/v2.2.0/terraform-provider-netapp-ontap_2.2.0_freebsd_amd64.zip",
+          "shasum": "4f3612623357713787a1cec75e369fe2c165da42183fdde0ce44a7785d68d0ca"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-ontap_2.2.0_freebsd_arm.zip",
+          "download_url": "https://github.com/netapp/terraform-provider-netapp-ontap/releases/download/v2.2.0/terraform-provider-netapp-ontap_2.2.0_freebsd_arm.zip",
+          "shasum": "fb07b43288c21abc13f27aa8009e4a95550bb81bf212cabf6193e29db197ea8b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-ontap_2.2.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/netapp/terraform-provider-netapp-ontap/releases/download/v2.2.0/terraform-provider-netapp-ontap_2.2.0_freebsd_arm64.zip",
+          "shasum": "81eaf533934dad85f4203746defa8068d545012077071a573fddc22ce6236cdf"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-ontap_2.2.0_linux_386.zip",
+          "download_url": "https://github.com/netapp/terraform-provider-netapp-ontap/releases/download/v2.2.0/terraform-provider-netapp-ontap_2.2.0_linux_386.zip",
+          "shasum": "c2caa67cf0372aa9bc568548b55f9c83daebc18389960457d538233419bf45a7"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-ontap_2.2.0_linux_amd64.zip",
+          "download_url": "https://github.com/netapp/terraform-provider-netapp-ontap/releases/download/v2.2.0/terraform-provider-netapp-ontap_2.2.0_linux_amd64.zip",
+          "shasum": "3ddc9f16b6940cb11f112f13a26037f7e22882e917c1493c30b68912b85f4766"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-ontap_2.2.0_linux_arm.zip",
+          "download_url": "https://github.com/netapp/terraform-provider-netapp-ontap/releases/download/v2.2.0/terraform-provider-netapp-ontap_2.2.0_linux_arm.zip",
+          "shasum": "ebdd975bf356de297a411194fdf1890a312599f6ee417c29f4490146141d3517"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-ontap_2.2.0_linux_arm64.zip",
+          "download_url": "https://github.com/netapp/terraform-provider-netapp-ontap/releases/download/v2.2.0/terraform-provider-netapp-ontap_2.2.0_linux_arm64.zip",
+          "shasum": "d99bc9ec54b89e4ef44e2433a921b437022941097e9e4e595136d65a00a4d738"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-netapp-ontap_2.2.0_windows_386.zip",
+          "download_url": "https://github.com/netapp/terraform-provider-netapp-ontap/releases/download/v2.2.0/terraform-provider-netapp-ontap_2.2.0_windows_386.zip",
+          "shasum": "9436578c78b56e2d35b15e42fb6cdbdb2033f553613c7b05e1cec2f09dc6911c"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-netapp-ontap_2.2.0_windows_amd64.zip",
+          "download_url": "https://github.com/netapp/terraform-provider-netapp-ontap/releases/download/v2.2.0/terraform-provider-netapp-ontap_2.2.0_windows_amd64.zip",
+          "shasum": "35f3e811ae5813387ec1f1bf86c80b0ee185a9a1fdc3e9d7ea8fb638252ce91d"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-netapp-ontap_2.2.0_windows_arm.zip",
+          "download_url": "https://github.com/netapp/terraform-provider-netapp-ontap/releases/download/v2.2.0/terraform-provider-netapp-ontap_2.2.0_windows_arm.zip",
+          "shasum": "ba179f8d3655e67e9aad0de1c275082053e1d6fc21e178ec5c35b802cc4e4371"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-netapp-ontap_2.2.0_windows_arm64.zip",
+          "download_url": "https://github.com/netapp/terraform-provider-netapp-ontap/releases/download/v2.2.0/terraform-provider-netapp-ontap_2.2.0_windows_arm64.zip",
+          "shasum": "dd1cd81d2596c6b1519de735c5198dc057a353594a216bd926468ff90314dfdb"
+        }
+      ]
+    },
+    {
       "version": "2.1.1",
       "protocols": [
         "6.0"
