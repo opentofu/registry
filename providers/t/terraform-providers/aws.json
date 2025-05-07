@@ -1,6 +1,114 @@
 {
   "versions": [
     {
+      "version": "6.0.0-beta1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/terraform-providers/terraform-provider-aws/releases/download/v6.0.0-beta1/terraform-provider-aws_6.0.0-beta1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/terraform-providers/terraform-provider-aws/releases/download/v6.0.0-beta1/terraform-provider-aws_6.0.0-beta1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-aws_6.0.0-beta1_darwin_amd64.zip",
+          "download_url": "https://github.com/terraform-providers/terraform-provider-aws/releases/download/v6.0.0-beta1/terraform-provider-aws_6.0.0-beta1_darwin_amd64.zip",
+          "shasum": "01ac0f3fbb1dae0179b5d8c32786b909eaa5fa88fe65080b9327dbb461bfe11f"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-aws_6.0.0-beta1_darwin_arm64.zip",
+          "download_url": "https://github.com/terraform-providers/terraform-provider-aws/releases/download/v6.0.0-beta1/terraform-provider-aws_6.0.0-beta1_darwin_arm64.zip",
+          "shasum": "7b42fb2af9d29fb50dae66b45ad40bd2cab8ebf3f9f32b05cb167c4101e7003b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-aws_6.0.0-beta1_freebsd_386.zip",
+          "download_url": "https://github.com/terraform-providers/terraform-provider-aws/releases/download/v6.0.0-beta1/terraform-provider-aws_6.0.0-beta1_freebsd_386.zip",
+          "shasum": "efa5efe80553bead84a1df64e323fb6a14efb48b4f446f608f6c6e164b589636"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-aws_6.0.0-beta1_freebsd_amd64.zip",
+          "download_url": "https://github.com/terraform-providers/terraform-provider-aws/releases/download/v6.0.0-beta1/terraform-provider-aws_6.0.0-beta1_freebsd_amd64.zip",
+          "shasum": "571115062cb57e249b0b8e8e4314ee56b7e47843e597157714156e56dae9922a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-aws_6.0.0-beta1_freebsd_arm.zip",
+          "download_url": "https://github.com/terraform-providers/terraform-provider-aws/releases/download/v6.0.0-beta1/terraform-provider-aws_6.0.0-beta1_freebsd_arm.zip",
+          "shasum": "2b3500e24b2831dd68152b090ba6119f66e216ff5eb3fe831725375183a25c93"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-aws_6.0.0-beta1_linux_386.zip",
+          "download_url": "https://github.com/terraform-providers/terraform-provider-aws/releases/download/v6.0.0-beta1/terraform-provider-aws_6.0.0-beta1_linux_386.zip",
+          "shasum": "c66ac3ce53f2fe0d269e2f0cdac9bf811ebb965c344d38c5c0fb187bae1ee5bb"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-aws_6.0.0-beta1_linux_amd64.zip",
+          "download_url": "https://github.com/terraform-providers/terraform-provider-aws/releases/download/v6.0.0-beta1/terraform-provider-aws_6.0.0-beta1_linux_amd64.zip",
+          "shasum": "7bca83ba024657b4ea3b1b501c3eb8229ee5e11d47ea2daeb47468f019be3d99"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-aws_6.0.0-beta1_linux_arm.zip",
+          "download_url": "https://github.com/terraform-providers/terraform-provider-aws/releases/download/v6.0.0-beta1/terraform-provider-aws_6.0.0-beta1_linux_arm.zip",
+          "shasum": "f2a4881f97cb05cf44f517329340398ec264be23bc7c9c062eff7285c2a4065d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-aws_6.0.0-beta1_linux_arm64.zip",
+          "download_url": "https://github.com/terraform-providers/terraform-provider-aws/releases/download/v6.0.0-beta1/terraform-provider-aws_6.0.0-beta1_linux_arm64.zip",
+          "shasum": "0dfa753a0d8f185b39df5471d540f949541ef41cfa05556e7ead2de3c67b1d48"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-aws_6.0.0-beta1_windows_386.zip",
+          "download_url": "https://github.com/terraform-providers/terraform-provider-aws/releases/download/v6.0.0-beta1/terraform-provider-aws_6.0.0-beta1_windows_386.zip",
+          "shasum": "d630fe12f7b0f7bccf96bb217d8a7ef2d74cacbe195da6d5b70ec706ac607e61"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-aws_6.0.0-beta1_windows_amd64.zip",
+          "download_url": "https://github.com/terraform-providers/terraform-provider-aws/releases/download/v6.0.0-beta1/terraform-provider-aws_6.0.0-beta1_windows_amd64.zip",
+          "shasum": "87a10e8a345f64546db8efdac115d32dd3e8f53dad9b204c28fb07540d992ade"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-aws_6.0.0-beta1_openbsd_386.zip",
+          "download_url": "https://github.com/terraform-providers/terraform-provider-aws/releases/download/v6.0.0-beta1/terraform-provider-aws_6.0.0-beta1_openbsd_386.zip",
+          "shasum": "f16d3ddbf5d07e37a6900a000be011741ce82002160376cd253c81af87c38044"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-aws_6.0.0-beta1_openbsd_amd64.zip",
+          "download_url": "https://github.com/terraform-providers/terraform-provider-aws/releases/download/v6.0.0-beta1/terraform-provider-aws_6.0.0-beta1_openbsd_amd64.zip",
+          "shasum": "25d309b9d6fe3cc7529ae40e65c921f2fb0e5e0e2f5c9f56aa278bf8c75071d6"
+        },
+        {
+          "os": "openbsd",
+          "arch": "arm",
+          "filename": "terraform-provider-aws_6.0.0-beta1_openbsd_arm.zip",
+          "download_url": "https://github.com/terraform-providers/terraform-provider-aws/releases/download/v6.0.0-beta1/terraform-provider-aws_6.0.0-beta1_openbsd_arm.zip",
+          "shasum": "16355a5ea0d1c168ac22c512861c06fd1dc90f44a9c27c452f04329c8ab84594"
+        }
+      ]
+    },
+    {
       "version": "5.97.0",
       "protocols": [
         "5.0"
