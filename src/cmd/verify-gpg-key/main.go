@@ -196,8 +196,10 @@ func VerifyKey(location string, providers provider.List, cancelVerifierFn contex
 		return nil
 	})
 
+	emailStep.FailureToWarning()
+
 	if !verifyStep.DidFail() {
-		verifyStep.RunStep("Key is used to sign at least one provider", func() error {
+		gpgStep := verifyStep.RunStep("Key is used to sign at least one provider", func() error {
 			// Inspired by OpenTofu's getproviders
 
 			keyring, err := openpgp.ReadArmoredKeyRing(strings.NewReader(string(keyData)))
@@ -272,9 +274,9 @@ func VerifyKey(location string, providers provider.List, cancelVerifierFn contex
 			}
 			return nil
 		})
-	}
 
-	emailStep.FailureToWarning()
+		gpgStep.FailureToWarning()
+	}
 
 	return verifyStep
 }
