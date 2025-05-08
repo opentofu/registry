@@ -1,6 +1,438 @@
 {
   "versions": [
     {
+      "version": "1.22.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.22.0/terraform-provider-appgatesdp_1.22.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.22.0/terraform-provider-appgatesdp_1.22.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-appgatesdp_1.22.0_darwin_amd64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.22.0/terraform-provider-appgatesdp_1.22.0_darwin_amd64.zip",
+          "shasum": "e84ea0128bd1e9e1ce71f64fb7331c5fd762f75ddc67e29bcca795f464b0027b"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-appgatesdp_1.22.0_darwin_arm64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.22.0/terraform-provider-appgatesdp_1.22.0_darwin_arm64.zip",
+          "shasum": "a3ff981fd44516df9315e17851a88fb9594ee16affe29bcf92f8e6fae3fdfc27"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-appgatesdp_1.22.0_freebsd_386.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.22.0/terraform-provider-appgatesdp_1.22.0_freebsd_386.zip",
+          "shasum": "d4c14d97a6efcfbfb2bccb765bbcaa6132f27715e561117580e9ed2df79fc79b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-appgatesdp_1.22.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.22.0/terraform-provider-appgatesdp_1.22.0_freebsd_amd64.zip",
+          "shasum": "66f7b985f3159499f929cbaa49f875f9639638e98c16af1cff6a8f57812e41f1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-appgatesdp_1.22.0_freebsd_arm.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.22.0/terraform-provider-appgatesdp_1.22.0_freebsd_arm.zip",
+          "shasum": "b3c3a7913e2d368476759e7e0f50c35ba8627d498c4ee59c66c7b2ef67e71f75"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-appgatesdp_1.22.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.22.0/terraform-provider-appgatesdp_1.22.0_freebsd_arm64.zip",
+          "shasum": "9fd0f934cb4a102070839a7723144c2cd362559aa0028f4382b03deb305fda92"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-appgatesdp_1.22.0_linux_386.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.22.0/terraform-provider-appgatesdp_1.22.0_linux_386.zip",
+          "shasum": "ec799ee7ed8163df7e1e87ef287c0f85d4474b2f69fb7e66b7c9bf59a2d414aa"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-appgatesdp_1.22.0_linux_amd64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.22.0/terraform-provider-appgatesdp_1.22.0_linux_amd64.zip",
+          "shasum": "749b6f4ba38c34d975e485740e6d25e78c97ec038d77d837bee42b3dd3fcef7c"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-appgatesdp_1.22.0_linux_arm.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.22.0/terraform-provider-appgatesdp_1.22.0_linux_arm.zip",
+          "shasum": "77bcf0b98b333a5a8a4ae8b9e7851301252bf8f930268b745a341a30ae596be1"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-appgatesdp_1.22.0_linux_arm64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.22.0/terraform-provider-appgatesdp_1.22.0_linux_arm64.zip",
+          "shasum": "a299128fc0b5a53abaa2f04cbf46606e3b15fab43ff4ec7c2326bdbf07ea0a21"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-appgatesdp_1.22.0_windows_386.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.22.0/terraform-provider-appgatesdp_1.22.0_windows_386.zip",
+          "shasum": "1d54174846161e9ec91d10fa450acf6577b4ddca1670ba98fe3a20d92c831b56"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-appgatesdp_1.22.0_windows_amd64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.22.0/terraform-provider-appgatesdp_1.22.0_windows_amd64.zip",
+          "shasum": "12cfd2ac767e62dee5b0a27fffdda2afd7bc8ec6f2024441f93c4e04a6489805"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-appgatesdp_1.22.0_windows_arm.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.22.0/terraform-provider-appgatesdp_1.22.0_windows_arm.zip",
+          "shasum": "61d539cd027e25538dbcbef00c6113921c5162c280b58075b0d23b86dd32efc6"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-appgatesdp_1.22.0_windows_arm64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.22.0/terraform-provider-appgatesdp_1.22.0_windows_arm64.zip",
+          "shasum": "5b854f94ff6b52607d0227377442e8cc70fee1043d66bf52864c23d3b0ce097a"
+        }
+      ]
+    },
+    {
+      "version": "1.21.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.1/terraform-provider-appgatesdp_1.21.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.1/terraform-provider-appgatesdp_1.21.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-appgatesdp_1.21.1_darwin_amd64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.1/terraform-provider-appgatesdp_1.21.1_darwin_amd64.zip",
+          "shasum": "68234d531636924be3c03c04b37c7668cc601b1b8a3ebedbbe6e57646ecc11ef"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-appgatesdp_1.21.1_darwin_arm64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.1/terraform-provider-appgatesdp_1.21.1_darwin_arm64.zip",
+          "shasum": "646da74f9e76fad7bc77404ea78ff151eaea15d0772ee514bcc39da42545df27"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-appgatesdp_1.21.1_freebsd_386.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.1/terraform-provider-appgatesdp_1.21.1_freebsd_386.zip",
+          "shasum": "490835a210902275d326fe3098265a26579c57cf81c883671231d7b88000b849"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-appgatesdp_1.21.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.1/terraform-provider-appgatesdp_1.21.1_freebsd_amd64.zip",
+          "shasum": "cb1d4f2180cc16d5f75f7bf44f3dcf02cd48f65126e99f56c9a55dc5ac1c1c11"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-appgatesdp_1.21.1_freebsd_arm.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.1/terraform-provider-appgatesdp_1.21.1_freebsd_arm.zip",
+          "shasum": "a6aaa82e44f9b8cb0ed4f941dd404c20cd1fd02701a5bf380dd5238998265a6e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-appgatesdp_1.21.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.1/terraform-provider-appgatesdp_1.21.1_freebsd_arm64.zip",
+          "shasum": "1cb4570c37d410cd002e32855db52a1cd95598965dc62067b17343948943a469"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-appgatesdp_1.21.1_linux_386.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.1/terraform-provider-appgatesdp_1.21.1_linux_386.zip",
+          "shasum": "aea8a157ba89df580b1a7734b65aeea29ff00bdd4d374ca8a08ba06acf5879f9"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-appgatesdp_1.21.1_linux_amd64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.1/terraform-provider-appgatesdp_1.21.1_linux_amd64.zip",
+          "shasum": "9d54d49b775ec1ef1f43e2b4e6d3a378a176dd9c47f732aa8872a0bab16c50bf"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-appgatesdp_1.21.1_linux_arm.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.1/terraform-provider-appgatesdp_1.21.1_linux_arm.zip",
+          "shasum": "bebef3a9dc3df9b80370e8186200446d953c86ad4fdf18aea9fdd08d1509e2a7"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-appgatesdp_1.21.1_linux_arm64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.1/terraform-provider-appgatesdp_1.21.1_linux_arm64.zip",
+          "shasum": "ee70dc6dc96f65b45c1b0698e60f7c65c429ae9df0adc7bd591825d57ed011e1"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-appgatesdp_1.21.1_windows_386.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.1/terraform-provider-appgatesdp_1.21.1_windows_386.zip",
+          "shasum": "21d0fa5a0595330aad463bd027ee221ac5a49e4d951ae2b789f6679fea0f3faa"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-appgatesdp_1.21.1_windows_amd64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.1/terraform-provider-appgatesdp_1.21.1_windows_amd64.zip",
+          "shasum": "f2e7802fd9b6fff66c7e98bcfad198f771ebdd90a789aa4e4bba52afd083a190"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-appgatesdp_1.21.1_windows_arm.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.1/terraform-provider-appgatesdp_1.21.1_windows_arm.zip",
+          "shasum": "5852b85bf799caa4e2acc9a8c48e39de4f573b9842c138da670a675a782cf452"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-appgatesdp_1.21.1_windows_arm64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.1/terraform-provider-appgatesdp_1.21.1_windows_arm64.zip",
+          "shasum": "33822f7f30f936c99c19fb345640a645115d193d8dafaa4f043641f3bb182982"
+        }
+      ]
+    },
+    {
+      "version": "1.21.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.0/terraform-provider-appgatesdp_1.21.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.0/terraform-provider-appgatesdp_1.21.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-appgatesdp_1.21.0_darwin_amd64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.0/terraform-provider-appgatesdp_1.21.0_darwin_amd64.zip",
+          "shasum": "a8c34654b4457ebc82162f8485c66c8757cc093d720dad64190614dcd4560728"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-appgatesdp_1.21.0_darwin_arm64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.0/terraform-provider-appgatesdp_1.21.0_darwin_arm64.zip",
+          "shasum": "0347d56e987b0c64fc9e259b2f28ab9efca2eb0d3556910ad0479d38ea81723d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-appgatesdp_1.21.0_freebsd_386.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.0/terraform-provider-appgatesdp_1.21.0_freebsd_386.zip",
+          "shasum": "0d85ec0b7c5445f4856ffe81048c6058128efcdeba3343d2376386cafc796682"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-appgatesdp_1.21.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.0/terraform-provider-appgatesdp_1.21.0_freebsd_amd64.zip",
+          "shasum": "3ca4173e70638642b5f5d588afa9e1f99518df699aaeb354154ad4765d6d1067"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-appgatesdp_1.21.0_freebsd_arm.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.0/terraform-provider-appgatesdp_1.21.0_freebsd_arm.zip",
+          "shasum": "17289bef1e48698bf13e0c60ed0db40ccb510f4e8ba586b1e09f34136ff22053"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-appgatesdp_1.21.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.0/terraform-provider-appgatesdp_1.21.0_freebsd_arm64.zip",
+          "shasum": "ee9873c269da74df3e38391c7f4743fc7a552a76dff8c6ebdc84159cd249ffc5"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-appgatesdp_1.21.0_linux_386.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.0/terraform-provider-appgatesdp_1.21.0_linux_386.zip",
+          "shasum": "29953a4c5addf4060dab2fb1c0b85eb98188620ecfdce79614c9550daf37247f"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-appgatesdp_1.21.0_linux_amd64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.0/terraform-provider-appgatesdp_1.21.0_linux_amd64.zip",
+          "shasum": "74129802f1ddb9813a80f40cb5c80a5066d1ee113e38ce2b70b2592a945c1d1b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-appgatesdp_1.21.0_linux_arm.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.0/terraform-provider-appgatesdp_1.21.0_linux_arm.zip",
+          "shasum": "84abc259d5956e5dc9ad300a4cce49fb8b2093676a67ae101ec401109453e8f1"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-appgatesdp_1.21.0_linux_arm64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.0/terraform-provider-appgatesdp_1.21.0_linux_arm64.zip",
+          "shasum": "a39339a7bff716fdcd4f02d3a987154bf740de2945baa7b7a0e4f0727ad13a37"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-appgatesdp_1.21.0_windows_386.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.0/terraform-provider-appgatesdp_1.21.0_windows_386.zip",
+          "shasum": "04cbd9bf5301d4b8429414926ae1d1f884dd72a5a0d0ddb1b355cccee049b1b8"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-appgatesdp_1.21.0_windows_amd64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.0/terraform-provider-appgatesdp_1.21.0_windows_amd64.zip",
+          "shasum": "cc48d1cc5bd31dfd3acecd8733ae4c6d9e6695c977259f1393a83f531de36139"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-appgatesdp_1.21.0_windows_arm.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.0/terraform-provider-appgatesdp_1.21.0_windows_arm.zip",
+          "shasum": "3faef19a6440f7ab6e575e67870b0f331bc64faf5ad0c04f32c39f1d9a6e5eea"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-appgatesdp_1.21.0_windows_arm64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.21.0/terraform-provider-appgatesdp_1.21.0_windows_arm64.zip",
+          "shasum": "7eeae5f9998ed127b6f9f98b0fee66e9eaada4b45dead129eb38a1b88db3bd9d"
+        }
+      ]
+    },
+    {
+      "version": "1.20.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.20.0/terraform-provider-appgatesdp_1.20.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.20.0/terraform-provider-appgatesdp_1.20.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-appgatesdp_1.20.0_darwin_amd64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.20.0/terraform-provider-appgatesdp_1.20.0_darwin_amd64.zip",
+          "shasum": "4da01664cdedfd4f16de570a93c65c9caa826f4937af9628287c753e0dd6ec7c"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-appgatesdp_1.20.0_darwin_arm64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.20.0/terraform-provider-appgatesdp_1.20.0_darwin_arm64.zip",
+          "shasum": "3086891b8faf378a1190e0a7a786e0825e390811aa101534595ca71f26476353"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-appgatesdp_1.20.0_freebsd_386.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.20.0/terraform-provider-appgatesdp_1.20.0_freebsd_386.zip",
+          "shasum": "ac0cf5fb6f2f27c0a67761bf52d65c87bb9921c99569ad36686ecf9b5750c9ab"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-appgatesdp_1.20.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.20.0/terraform-provider-appgatesdp_1.20.0_freebsd_amd64.zip",
+          "shasum": "d5edcb3d47a730211a37518453b746cc39edf0bf0e128120de7875dd1cbf09f6"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-appgatesdp_1.20.0_freebsd_arm.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.20.0/terraform-provider-appgatesdp_1.20.0_freebsd_arm.zip",
+          "shasum": "317915133d66e35c5b128484d4c64b2e76087c90fa9add7a16aa95b902d2c40a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-appgatesdp_1.20.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.20.0/terraform-provider-appgatesdp_1.20.0_freebsd_arm64.zip",
+          "shasum": "d9d8681cbf94801986c0d63cc1fa98af23f690945681de637ed8ab157754f18a"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-appgatesdp_1.20.0_linux_386.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.20.0/terraform-provider-appgatesdp_1.20.0_linux_386.zip",
+          "shasum": "ece382e4a018215f31d5c4879ab7ba397a3883d90be0b969884ee70fb2bbfbe3"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-appgatesdp_1.20.0_linux_amd64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.20.0/terraform-provider-appgatesdp_1.20.0_linux_amd64.zip",
+          "shasum": "6c288b033a4afb274e2e26af6c9644b58791fe359a2ad25ead7995d8244d6e79"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-appgatesdp_1.20.0_linux_arm.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.20.0/terraform-provider-appgatesdp_1.20.0_linux_arm.zip",
+          "shasum": "1f88de2c537bbc24deec8c1db0004447a7aa9fc143202947855067b07feacde2"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-appgatesdp_1.20.0_linux_arm64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.20.0/terraform-provider-appgatesdp_1.20.0_linux_arm64.zip",
+          "shasum": "26bf6e4ac4f0f8cad3ce521cb5727e1d83fde5d37a29425cc5d804db78366ede"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-appgatesdp_1.20.0_windows_386.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.20.0/terraform-provider-appgatesdp_1.20.0_windows_386.zip",
+          "shasum": "b739ba7eba91a12400df2a22c9d90414e205d891d667f40099220ca8068c1c5d"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-appgatesdp_1.20.0_windows_amd64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.20.0/terraform-provider-appgatesdp_1.20.0_windows_amd64.zip",
+          "shasum": "832108e25f8973e299bb323332daefdca5151c4d600ac653643be25104b78f5e"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-appgatesdp_1.20.0_windows_arm.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.20.0/terraform-provider-appgatesdp_1.20.0_windows_arm.zip",
+          "shasum": "1e2865c237c33494f297a4484f3eeef9b2f53df953da14aca655638cf29e1473"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-appgatesdp_1.20.0_windows_arm64.zip",
+          "download_url": "https://github.com/appgate/terraform-provider-appgatesdp/releases/download/v1.20.0/terraform-provider-appgatesdp_1.20.0_windows_arm64.zip",
+          "shasum": "4405a49efe5432da4a40694bc6000be8f87d049fae6796eac6f48690f9b3199b"
+        }
+      ]
+    },
+    {
       "version": "1.6.0",
       "protocols": [
         "5.0"
