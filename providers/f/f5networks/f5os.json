@@ -1,6 +1,114 @@
 {
   "versions": [
     {
+      "version": "1.7.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/f5networks/terraform-provider-f5os/releases/download/v1.7.0/terraform-provider-f5os_1.7.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/f5networks/terraform-provider-f5os/releases/download/v1.7.0/terraform-provider-f5os_1.7.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-f5os_1.7.0_darwin_amd64.zip",
+          "download_url": "https://github.com/f5networks/terraform-provider-f5os/releases/download/v1.7.0/terraform-provider-f5os_1.7.0_darwin_amd64.zip",
+          "shasum": "0659e6df82f870f0f844050ff61344728b7c583fdbd7413e29443f08d53812db"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-f5os_1.7.0_darwin_arm64.zip",
+          "download_url": "https://github.com/f5networks/terraform-provider-f5os/releases/download/v1.7.0/terraform-provider-f5os_1.7.0_darwin_arm64.zip",
+          "shasum": "693e69caaaccd9c09796f17a7126c47f06833ab8e6930a7d6976fbd0be5e265c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-f5os_1.7.0_freebsd_386.zip",
+          "download_url": "https://github.com/f5networks/terraform-provider-f5os/releases/download/v1.7.0/terraform-provider-f5os_1.7.0_freebsd_386.zip",
+          "shasum": "4866c6026af9187320bdab60fa62a94d923d9ae30e8827c372e20d9cfe75d3a9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-f5os_1.7.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/f5networks/terraform-provider-f5os/releases/download/v1.7.0/terraform-provider-f5os_1.7.0_freebsd_amd64.zip",
+          "shasum": "19d9367e7f604ca45bf145573429d304cbad1dda1845d3c9552e90af9dcf17b0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-f5os_1.7.0_freebsd_arm.zip",
+          "download_url": "https://github.com/f5networks/terraform-provider-f5os/releases/download/v1.7.0/terraform-provider-f5os_1.7.0_freebsd_arm.zip",
+          "shasum": "4f66cea560a3c7b203b84841aa02181301e917081c57d07c4918d3f30c021037"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-f5os_1.7.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/f5networks/terraform-provider-f5os/releases/download/v1.7.0/terraform-provider-f5os_1.7.0_freebsd_arm64.zip",
+          "shasum": "30167f491540aa4a6935a8262c149ebd11a827edf73a244f7f9344cc36255f0d"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-f5os_1.7.0_linux_386.zip",
+          "download_url": "https://github.com/f5networks/terraform-provider-f5os/releases/download/v1.7.0/terraform-provider-f5os_1.7.0_linux_386.zip",
+          "shasum": "46a9797902d198bf14fa72be557bdf603636e306ed2654762def9d7434f62091"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-f5os_1.7.0_linux_amd64.zip",
+          "download_url": "https://github.com/f5networks/terraform-provider-f5os/releases/download/v1.7.0/terraform-provider-f5os_1.7.0_linux_amd64.zip",
+          "shasum": "f4480fcb0f00dd7757c55fda8068972689aacccec67676acd9b790dc19b921cc"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-f5os_1.7.0_linux_arm.zip",
+          "download_url": "https://github.com/f5networks/terraform-provider-f5os/releases/download/v1.7.0/terraform-provider-f5os_1.7.0_linux_arm.zip",
+          "shasum": "ec49f3de3e0d58f4830c3d3c367403b07e7edfe852c8e2e9ba27b69664f64532"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-f5os_1.7.0_linux_arm64.zip",
+          "download_url": "https://github.com/f5networks/terraform-provider-f5os/releases/download/v1.7.0/terraform-provider-f5os_1.7.0_linux_arm64.zip",
+          "shasum": "bc3b63b70c7d0833c96e208ad016ccbff1ea9394fb3a250cae8b5811b2181796"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-f5os_1.7.0_windows_386.zip",
+          "download_url": "https://github.com/f5networks/terraform-provider-f5os/releases/download/v1.7.0/terraform-provider-f5os_1.7.0_windows_386.zip",
+          "shasum": "114af237b312e48807f123bfbfa72adee237a6e32ebc80631a00edba365cae13"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-f5os_1.7.0_windows_amd64.zip",
+          "download_url": "https://github.com/f5networks/terraform-provider-f5os/releases/download/v1.7.0/terraform-provider-f5os_1.7.0_windows_amd64.zip",
+          "shasum": "8eb790dff46926c636e91efe7d649605692a3b13b33a57c6a48d1a271c942f97"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-f5os_1.7.0_windows_arm.zip",
+          "download_url": "https://github.com/f5networks/terraform-provider-f5os/releases/download/v1.7.0/terraform-provider-f5os_1.7.0_windows_arm.zip",
+          "shasum": "97c9b5e0d228513181ab8c424ea86430ed0573c9b7c5aa3fb78139666d28cf27"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-f5os_1.7.0_windows_arm64.zip",
+          "download_url": "https://github.com/f5networks/terraform-provider-f5os/releases/download/v1.7.0/terraform-provider-f5os_1.7.0_windows_arm64.zip",
+          "shasum": "59ec9c00e739c0553905f93cbf38d7282fc649976e9d51d5851c7b4c24830712"
+        }
+      ]
+    },
+    {
       "version": "1.6.0",
       "protocols": [
         "6.0"
