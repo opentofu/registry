@@ -40,9 +40,9 @@ func (p Provider) getSemverTags() ([]string, error) {
 
 	var semverTags = make([]string, 0)
 	for _, tag := range tags {
-		tagWithPrefix := fmt.Sprintf("v%s", internal.TrimTagPrefix(tag))
+		tagWithPrefix := fmt.Sprintf("v%s", internal.TrimTagPrefix(tag.Name))
 		if semver.IsValid(tagWithPrefix) {
-			semverTags = append(semverTags, tag)
+			semverTags = append(semverTags, tag.Name)
 		}
 	}
 
