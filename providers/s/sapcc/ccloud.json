@@ -1,6 +1,1086 @@
 {
   "versions": [
     {
+      "version": "1.6.7",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.7/terraform-provider-ccloud_1.6.7_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.7/terraform-provider-ccloud_1.6.7_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.7_darwin_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.7/terraform-provider-ccloud_1.6.7_darwin_amd64.zip",
+          "shasum": "83fb57ec4e37577d6a7640d50f46a9750b955b72a21b67fa39831dd0cdbb3f25"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.7_darwin_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.7/terraform-provider-ccloud_1.6.7_darwin_arm64.zip",
+          "shasum": "05835e2c6ac8fcde5b61691960dc5b7f81b792daa81f2259b93bc730e18879ed"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.7_freebsd_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.7/terraform-provider-ccloud_1.6.7_freebsd_386.zip",
+          "shasum": "52e22cfd5226ef767ab10bac217224303eeb518f91f0c3c18b39e983e0ca6f88"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.7_freebsd_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.7/terraform-provider-ccloud_1.6.7_freebsd_amd64.zip",
+          "shasum": "9aa8516c7dfec22f916713fa5113f87fe872b5d99e6159b26e277f72b02461cf"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.7_freebsd_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.7/terraform-provider-ccloud_1.6.7_freebsd_arm.zip",
+          "shasum": "fe47b6b2d9b61872c6b7daf065eebe2132fb50a899d07711b5cd289acdc794f9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.7_freebsd_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.7/terraform-provider-ccloud_1.6.7_freebsd_arm64.zip",
+          "shasum": "22dc5d8dc4d67f7661524aafcc300f4bd9c39e33a0b74334092fd6e75d60474c"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.7_linux_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.7/terraform-provider-ccloud_1.6.7_linux_386.zip",
+          "shasum": "b49afc79a5c2e69f089bac3f3c9813100b6353e00035c2f08ebc8073458ae8b8"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.7_linux_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.7/terraform-provider-ccloud_1.6.7_linux_amd64.zip",
+          "shasum": "f545342620a5c038e6b2cec12e9fb2edfd81689c825b569f9f1f98489514aede"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.7_linux_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.7/terraform-provider-ccloud_1.6.7_linux_arm.zip",
+          "shasum": "a82612f66750a769e3eb422512128f13169b07780773538d53fc8316da7cb91f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.7_linux_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.7/terraform-provider-ccloud_1.6.7_linux_arm64.zip",
+          "shasum": "fdd216da2297a00a2c8f7e8d6f6148c0d44a5dee404958b7f8441cb1784a199e"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.7_windows_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.7/terraform-provider-ccloud_1.6.7_windows_386.zip",
+          "shasum": "9f90f054e0e5831a3fdd835b8923455b105c0e09a96297fbd3a9fd77f7936475"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.7_windows_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.7/terraform-provider-ccloud_1.6.7_windows_amd64.zip",
+          "shasum": "1773b4ec002acf21039e1a9b5caf016b8d0dcfe71c3b2d15fce9eec2089af1d8"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.7_windows_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.7/terraform-provider-ccloud_1.6.7_windows_arm.zip",
+          "shasum": "fcab63857e20430a74eaf36f56e2d364b05a9158776120eb69e126b0c3eed280"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.7_windows_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.7/terraform-provider-ccloud_1.6.7_windows_arm64.zip",
+          "shasum": "422411eb90beb0cedd6e9dd7cff30a1b36963cb54c45f0335f1de7a86893449b"
+        }
+      ]
+    },
+    {
+      "version": "1.6.6",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.6/terraform-provider-ccloud_1.6.6_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.6/terraform-provider-ccloud_1.6.6_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.6_darwin_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.6/terraform-provider-ccloud_1.6.6_darwin_amd64.zip",
+          "shasum": "8e24723afafbeeebe840be2df116a2cfb9268c0404800a2f0e57e29b08bc0e8e"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.6_darwin_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.6/terraform-provider-ccloud_1.6.6_darwin_arm64.zip",
+          "shasum": "ae471b4af5fec068b4c37c8f26fce3ab77164a3b1b42660187cbdca020d7c8ed"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.6_freebsd_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.6/terraform-provider-ccloud_1.6.6_freebsd_386.zip",
+          "shasum": "b75822ca549000a7e59a2e8620b5dbccbfbf8861275b8050f28672e1ef520176"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.6_freebsd_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.6/terraform-provider-ccloud_1.6.6_freebsd_amd64.zip",
+          "shasum": "d6bcaa8e17a3eb4fc8d18de7a22d3c148d75e6173476ea9137acc980fc2aebcf"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.6_freebsd_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.6/terraform-provider-ccloud_1.6.6_freebsd_arm.zip",
+          "shasum": "2b56ce76fcc82013a68af070a6535c07ca754ade7e9b3d281ca81ebdeee83491"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.6_freebsd_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.6/terraform-provider-ccloud_1.6.6_freebsd_arm64.zip",
+          "shasum": "617430a17794db3bb70c222cc6a2151eb802e2bbfdd6e05f4dceb00da35304df"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.6_linux_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.6/terraform-provider-ccloud_1.6.6_linux_386.zip",
+          "shasum": "798e9f188393ab9db1476e9efbd899d3d22678e51664fd30442d7b856e579977"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.6_linux_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.6/terraform-provider-ccloud_1.6.6_linux_amd64.zip",
+          "shasum": "167774141a7a3740efdf20b456a01cb5c89d34d53f9cda3055b5f896d9ee758d"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.6_linux_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.6/terraform-provider-ccloud_1.6.6_linux_arm.zip",
+          "shasum": "460a114d7c2995d31fe5a363fee6ea07e96fbee2d0a5c480f7a8d3f684653654"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.6_linux_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.6/terraform-provider-ccloud_1.6.6_linux_arm64.zip",
+          "shasum": "64bfcfc6c25fe6bd30055787f5e4b9adf791a3ff4d789749e861c0b1c20d8d4f"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.6_windows_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.6/terraform-provider-ccloud_1.6.6_windows_386.zip",
+          "shasum": "7d3e9ac8bd1b50307423e9d055d1be774ef41874d942633e91f11cece90ed839"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.6_windows_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.6/terraform-provider-ccloud_1.6.6_windows_amd64.zip",
+          "shasum": "fc6854122b6942987647ffe5faf00d680d1f226f24677fd4a84ee41e98d49d84"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.6_windows_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.6/terraform-provider-ccloud_1.6.6_windows_arm.zip",
+          "shasum": "a1b74b1b4fb301131fc54fb57872b32221073738002c975b474906081e40ef54"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.6_windows_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.6/terraform-provider-ccloud_1.6.6_windows_arm64.zip",
+          "shasum": "a81dcfc4f73315fb669e64fb68ee8dd6a9cf9ca60410795407c359bb3ca4a997"
+        }
+      ]
+    },
+    {
+      "version": "1.6.5",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.5/terraform-provider-ccloud_1.6.5_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.5/terraform-provider-ccloud_1.6.5_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.5_darwin_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.5/terraform-provider-ccloud_1.6.5_darwin_amd64.zip",
+          "shasum": "31bc10e08b8356fac4c4f14b7fcd6771ad7fdfa5a2c6f7e25255cacb1ce4594f"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.5_darwin_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.5/terraform-provider-ccloud_1.6.5_darwin_arm64.zip",
+          "shasum": "1c69a537d5e6ba66044700b25d68aba5e5c7f71ddabda6f1e3f1537023b63a41"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.5_freebsd_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.5/terraform-provider-ccloud_1.6.5_freebsd_386.zip",
+          "shasum": "6b0b83c7e99e5e81fff936c547f81047d527e9671c16b85083b0789eee4a237d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.5_freebsd_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.5/terraform-provider-ccloud_1.6.5_freebsd_amd64.zip",
+          "shasum": "0db5c9a2f9ef6c243e6ce3348f5bacfeba621c70aeedfc9af6d53484cf790e80"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.5_freebsd_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.5/terraform-provider-ccloud_1.6.5_freebsd_arm.zip",
+          "shasum": "38d9b17097959f5f1e0091b312706b7e0cdacbf830ccaa3469fd9e061c4b7993"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.5_freebsd_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.5/terraform-provider-ccloud_1.6.5_freebsd_arm64.zip",
+          "shasum": "3266fec4133b485782205238296ea56c823be010a12123aa100072f521675ca4"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.5_linux_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.5/terraform-provider-ccloud_1.6.5_linux_386.zip",
+          "shasum": "0dfc31a0d6a30ff60295cf78edb2a632925e3c57a8c5e46bc00d13fce11537b5"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.5_linux_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.5/terraform-provider-ccloud_1.6.5_linux_amd64.zip",
+          "shasum": "0688706b920c24d9dc006fe3c59b2d8d2908caffdc1fc0e2207981f2cb65d244"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.5_linux_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.5/terraform-provider-ccloud_1.6.5_linux_arm.zip",
+          "shasum": "ebe67b4cedef384c437d8343f3cadd253c79fd0bbcd33285fa20972d5f2483e1"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.5_linux_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.5/terraform-provider-ccloud_1.6.5_linux_arm64.zip",
+          "shasum": "6acbe3447eaa964d4107bd4eb38c1700925a052c12d18fe19eecb211cca8e00b"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.5_windows_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.5/terraform-provider-ccloud_1.6.5_windows_386.zip",
+          "shasum": "1bd5445889c3fa9a08bf259b6a79c06a1cf931ad7498c03996f6193e302137ff"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.5_windows_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.5/terraform-provider-ccloud_1.6.5_windows_amd64.zip",
+          "shasum": "12c761850f90ec74ded76ae59cc641ad9d1b0db4c983db18e665251ee946b12e"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.5_windows_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.5/terraform-provider-ccloud_1.6.5_windows_arm.zip",
+          "shasum": "f50418fcfed5d3c51b29f07a357a13d48460cb75bd7210e03bc799eaffdd6150"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.5_windows_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.5/terraform-provider-ccloud_1.6.5_windows_arm64.zip",
+          "shasum": "94904c5e2c96aca997351adf7b70737c5b99575db2a7de3d0fe9011d54e76fbf"
+        }
+      ]
+    },
+    {
+      "version": "1.6.4",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.4/terraform-provider-ccloud_1.6.4_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.4/terraform-provider-ccloud_1.6.4_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.4_darwin_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.4/terraform-provider-ccloud_1.6.4_darwin_amd64.zip",
+          "shasum": "d263de21fdcae8e307c505f981cefe0b7e89a1e23d1ba24056e371b382121bea"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.4_darwin_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.4/terraform-provider-ccloud_1.6.4_darwin_arm64.zip",
+          "shasum": "006a37cd1b944c5af6030db5eb375187ce87bbd0b0f288fea5d0a769ae093438"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.4_freebsd_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.4/terraform-provider-ccloud_1.6.4_freebsd_386.zip",
+          "shasum": "aca36bfd8e66b2c31e0a1da475d921ef4e5e3d0bb87252ce26fa732ff30da87a"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.4_freebsd_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.4/terraform-provider-ccloud_1.6.4_freebsd_amd64.zip",
+          "shasum": "a2de514ac98df483add44ec737c41690eb941e38d2e57b64a30d68cd21bbe6c0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.4_freebsd_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.4/terraform-provider-ccloud_1.6.4_freebsd_arm.zip",
+          "shasum": "d11df71df74b0c27ad241d803fca53f0ed9e72bf230f2663cbe5a776a3879a41"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.4_freebsd_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.4/terraform-provider-ccloud_1.6.4_freebsd_arm64.zip",
+          "shasum": "379e65326f5e6db96225b589dc3875f83c5640ce6762e5692b8a6d05f1d7fc99"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.4_linux_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.4/terraform-provider-ccloud_1.6.4_linux_386.zip",
+          "shasum": "ea27910d34700d00fbe018859f629804b76c2518c6467115a9e1c7bb04c0c26b"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.4_linux_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.4/terraform-provider-ccloud_1.6.4_linux_amd64.zip",
+          "shasum": "317dc3540a422a0652d14315e58dccb257c7dae525dd9b60b6ebb819f4c34f34"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.4_linux_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.4/terraform-provider-ccloud_1.6.4_linux_arm.zip",
+          "shasum": "55d4ed53d3d3c91013bd1ea2bb3da43c3ab249e6f46ece65a1d291b67231a8f1"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.4_linux_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.4/terraform-provider-ccloud_1.6.4_linux_arm64.zip",
+          "shasum": "ea6bd708fd982d3e9dd9563b40ceb3e1b11094411642cc8f93e08dcb124014a6"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.4_windows_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.4/terraform-provider-ccloud_1.6.4_windows_386.zip",
+          "shasum": "9762568f5143b4d586d031af03359a702652b58147381cb4cc8fa55c5a7f79a7"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.4_windows_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.4/terraform-provider-ccloud_1.6.4_windows_amd64.zip",
+          "shasum": "d6bcd429dd359b476c2391123be4712b3166e04efd3b38ad8b1c275a782d534c"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.4_windows_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.4/terraform-provider-ccloud_1.6.4_windows_arm.zip",
+          "shasum": "cb453751a1b05adf638dfa4944593ec730401a9ada7a26a1f285dd808b4e7af8"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.4_windows_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.4/terraform-provider-ccloud_1.6.4_windows_arm64.zip",
+          "shasum": "7b09b4602c6f96e465624fc791eab115c9e6c97e277608cf226624f40ffd43cb"
+        }
+      ]
+    },
+    {
+      "version": "1.6.3",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.3/terraform-provider-ccloud_1.6.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.3/terraform-provider-ccloud_1.6.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.3_darwin_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.3/terraform-provider-ccloud_1.6.3_darwin_amd64.zip",
+          "shasum": "9f24be1208f32541ca2cdd194c5b913a4e84963e6729f1a9dfae67c6f4673c6b"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.3_darwin_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.3/terraform-provider-ccloud_1.6.3_darwin_arm64.zip",
+          "shasum": "ee23eb9ac0536c96d0e6665587718457603aeebadf1a24789e88917a4af43561"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.3_freebsd_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.3/terraform-provider-ccloud_1.6.3_freebsd_386.zip",
+          "shasum": "926abdecca3348083b8a934188c720533e6661e765588e35c4e99c6ea82daf82"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.3/terraform-provider-ccloud_1.6.3_freebsd_amd64.zip",
+          "shasum": "de9a5dd857c81db6fea3f58e77ddbc190a009f24c68df72c1abe973c0a0d1e7e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.3_freebsd_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.3/terraform-provider-ccloud_1.6.3_freebsd_arm.zip",
+          "shasum": "469ac7a5854fbf60ad6d04f5727ab51da8fc68c66fc6ad9f84494b0545a6fd88"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.3/terraform-provider-ccloud_1.6.3_freebsd_arm64.zip",
+          "shasum": "e44877a02802522af9f7af624e5aaba94101795db485f3310d369b6bf02822a3"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.3_linux_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.3/terraform-provider-ccloud_1.6.3_linux_386.zip",
+          "shasum": "cf611891ce2c457efde733de302a95b9c5d721f52ab36209046c9170afdc204b"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.3_linux_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.3/terraform-provider-ccloud_1.6.3_linux_amd64.zip",
+          "shasum": "2c70a6d9f559c65929b5df3751ce57b6951d6a1031f681a0c29adf7f832c56f7"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.3_linux_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.3/terraform-provider-ccloud_1.6.3_linux_arm.zip",
+          "shasum": "e8fae6410269a685073ac6c2dc73e9e4a1737fd0657a917e0fd4935edbcda8ab"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.3_linux_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.3/terraform-provider-ccloud_1.6.3_linux_arm64.zip",
+          "shasum": "dcfb4bc5a548933e09d39de7cee94662163cd73c44588f9a9277704af6bf0cf5"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.3_windows_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.3/terraform-provider-ccloud_1.6.3_windows_386.zip",
+          "shasum": "7b0f484e64b1d794780800b08439d2f8d3ca0c520b096839ea7d94305b637d8c"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.3_windows_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.3/terraform-provider-ccloud_1.6.3_windows_amd64.zip",
+          "shasum": "1854caa8795643ab22f8efc17863f4585eb10442c65e2d407fbdadf276674c01"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.3_windows_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.3/terraform-provider-ccloud_1.6.3_windows_arm.zip",
+          "shasum": "27b725a78a685dd63edf8b40bd4f235463a914c8fd541c17804da5c184eebc53"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.3_windows_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.3/terraform-provider-ccloud_1.6.3_windows_arm64.zip",
+          "shasum": "c52025648b267c5438f0a5c2e06f52050a3e2bbc71a6e2e69781784aa9a672db"
+        }
+      ]
+    },
+    {
+      "version": "1.6.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.2/terraform-provider-ccloud_1.6.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.2/terraform-provider-ccloud_1.6.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.2_darwin_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.2/terraform-provider-ccloud_1.6.2_darwin_amd64.zip",
+          "shasum": "3157b3288e90f4e838cba47aec242767b5b8b3935d10e7426c4f79c51b5b2624"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.2_darwin_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.2/terraform-provider-ccloud_1.6.2_darwin_arm64.zip",
+          "shasum": "00b454bc22bdad45bccb6c3ac81c603e0216f5a53fb8762f75739d57c23bc715"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.2_freebsd_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.2/terraform-provider-ccloud_1.6.2_freebsd_386.zip",
+          "shasum": "9e299ec2622efea8da9fd13c205e1f8434830cea5517e842486f5ddc3c46b6c9"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.2/terraform-provider-ccloud_1.6.2_freebsd_amd64.zip",
+          "shasum": "0b0d5c959692c6ef048ff7cd20ed26331ade45b35d94124e7df11d2f33c0420b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.2_freebsd_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.2/terraform-provider-ccloud_1.6.2_freebsd_arm.zip",
+          "shasum": "79fb1c6859bb9f1be7dcb835ec4aaf8a4cc7539eb0e7483f04a84cc1170ad12d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.2/terraform-provider-ccloud_1.6.2_freebsd_arm64.zip",
+          "shasum": "d51ce374e8ede94feebbba3fb01814e0e65da723e07a37805ff60da5391f66bf"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.2_linux_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.2/terraform-provider-ccloud_1.6.2_linux_386.zip",
+          "shasum": "e6c7dfcf7afdf019d21223d5c79e5dfea304198f2ed1e07e42469784d6e7be79"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.2_linux_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.2/terraform-provider-ccloud_1.6.2_linux_amd64.zip",
+          "shasum": "7793e04004717e9cd7426d51c0e9a90c1bc2a8172ed76eb4bc33ef09b879bfc1"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.2_linux_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.2/terraform-provider-ccloud_1.6.2_linux_arm.zip",
+          "shasum": "316ce98999d1b826d5c5b0fe6c5203b6c367ef4367cc68eca8b9afb062fd5038"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.2_linux_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.2/terraform-provider-ccloud_1.6.2_linux_arm64.zip",
+          "shasum": "1edf36f60870ff0072c988933a1806d05ac1334531568ab2a8bd92bb40e24401"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.2_windows_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.2/terraform-provider-ccloud_1.6.2_windows_386.zip",
+          "shasum": "82fb9b39b8b4f5fe8e9d3e116c35012d69f3798848176f1b8b34174b202eb5ba"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.2_windows_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.2/terraform-provider-ccloud_1.6.2_windows_amd64.zip",
+          "shasum": "ae71e7cb65fae4cc7187dfd827148e225ff6540c90ebb07eb77e7943d9716e0c"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.2_windows_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.2/terraform-provider-ccloud_1.6.2_windows_arm.zip",
+          "shasum": "9247dead4a889a0934ca8ef6bedfe44727ad7e78dd7fca401d0d8cb2988fa486"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.2_windows_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.2/terraform-provider-ccloud_1.6.2_windows_arm64.zip",
+          "shasum": "8a3433392e29a7ae72aa1fef037021079b3e541572c64ac0fd26ee9930a059d6"
+        }
+      ]
+    },
+    {
+      "version": "1.6.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.1/terraform-provider-ccloud_1.6.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.1/terraform-provider-ccloud_1.6.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.1_darwin_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.1/terraform-provider-ccloud_1.6.1_darwin_amd64.zip",
+          "shasum": "c37ff4360623393ec3ec3af6d08cff8da2e2126a8e271e94ec5156bd64a153c7"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.1_darwin_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.1/terraform-provider-ccloud_1.6.1_darwin_arm64.zip",
+          "shasum": "e759140c2bad4c3e644844840d80e7059d304922fe379e35220cb5bf19c1de7e"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.1_freebsd_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.1/terraform-provider-ccloud_1.6.1_freebsd_386.zip",
+          "shasum": "e581e74907e02622d3c7b641efb01a2014c6800f5e3064fb68c830be82a94c43"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.1/terraform-provider-ccloud_1.6.1_freebsd_amd64.zip",
+          "shasum": "e7f00586bf9667fcb6e5b60a73c712ff67c5f04987bee7ebcefd53ab5aa338c4"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.1_freebsd_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.1/terraform-provider-ccloud_1.6.1_freebsd_arm.zip",
+          "shasum": "60e9ab4ceda915d5609417f4c578d63d196407f94d0ebe00ab8868147b58a001"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.1/terraform-provider-ccloud_1.6.1_freebsd_arm64.zip",
+          "shasum": "f39f98ee88bfe937254ce6cd57659983e00c7179b5d61bee31a22a72a3caee95"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.1_linux_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.1/terraform-provider-ccloud_1.6.1_linux_386.zip",
+          "shasum": "885a429edc1c1dc37338e879acc1ee6c652169fddad4816cf921dfaa82623779"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.1_linux_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.1/terraform-provider-ccloud_1.6.1_linux_amd64.zip",
+          "shasum": "22121fbe6da4d4565b1557f76158ee05e550e51153f8e6e7f7996fbd62117891"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.1_linux_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.1/terraform-provider-ccloud_1.6.1_linux_arm.zip",
+          "shasum": "45dd6082c2dc8b76255144a9d36465aff60f6e3d90823c150d373fbcb85de5fa"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.1_linux_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.1/terraform-provider-ccloud_1.6.1_linux_arm64.zip",
+          "shasum": "5244755b0feab3fe77408f02570f3c0917082198c36f9992b60db2f7dec38ba6"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.1_windows_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.1/terraform-provider-ccloud_1.6.1_windows_386.zip",
+          "shasum": "ea1f73e81c8556d96f6eb63f44060f0fd3510888cc620c24c99bdbeb4e021ae9"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.1_windows_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.1/terraform-provider-ccloud_1.6.1_windows_amd64.zip",
+          "shasum": "9ef6b449c3a516d740906c20c402d73b72c17dd893827b6c57019821012e7b4a"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.1_windows_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.1/terraform-provider-ccloud_1.6.1_windows_arm.zip",
+          "shasum": "e7c13a73751dbd1e4bfe2a3e5d13e0806fb792851481a62152a8f447165efa64"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.1_windows_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.1/terraform-provider-ccloud_1.6.1_windows_arm64.zip",
+          "shasum": "01310af41e7b23287d6084762e34e3769bfdfccfe61debbcf356878e14a40a76"
+        }
+      ]
+    },
+    {
+      "version": "1.6.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.0/terraform-provider-ccloud_1.6.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.0/terraform-provider-ccloud_1.6.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.0_darwin_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.0/terraform-provider-ccloud_1.6.0_darwin_amd64.zip",
+          "shasum": "8d47790f0b9ccf3e09c373f09d123e18804c18b036b91f9e51c7ba19d6a53c91"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.0_darwin_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.0/terraform-provider-ccloud_1.6.0_darwin_arm64.zip",
+          "shasum": "041f95e000e101d83c662c87e8fe0aeadae4650a16d5571bd7d8ea0a72522f16"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.0_freebsd_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.0/terraform-provider-ccloud_1.6.0_freebsd_386.zip",
+          "shasum": "f178c5ea82f428e4e379f68bc35ebe8b9d3cdecde67113199b175623184883d7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.0/terraform-provider-ccloud_1.6.0_freebsd_amd64.zip",
+          "shasum": "21a8cd7175fa52a4bdcb311902e29cbc58e73ada9cb7f38ddee2d7f6d78fb284"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.0_freebsd_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.0/terraform-provider-ccloud_1.6.0_freebsd_arm.zip",
+          "shasum": "659c76a4a0a8e002a80572341c09953d87a1c74121cae3878ace890ba789e1e2"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.0/terraform-provider-ccloud_1.6.0_freebsd_arm64.zip",
+          "shasum": "164e8aa05651160b9f2238ebdc1269733abc08a6090d587956a79f54c9cc4b12"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.0_linux_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.0/terraform-provider-ccloud_1.6.0_linux_386.zip",
+          "shasum": "aafe5acbe7147472ba98f2fcfd553648242c771fb4792b9df30b0085e799b6e9"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.0_linux_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.0/terraform-provider-ccloud_1.6.0_linux_amd64.zip",
+          "shasum": "6acf483b39a52aefe6f4894fcc6bc9510abe6948c2aa94d2a278ef451e68d571"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.0_linux_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.0/terraform-provider-ccloud_1.6.0_linux_arm.zip",
+          "shasum": "ae39edc09ff53fd891900c2125a37cd0b9aaa7e0ef3e4d7d6b4f754e51748093"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.0_linux_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.0/terraform-provider-ccloud_1.6.0_linux_arm64.zip",
+          "shasum": "8655be7508adb1d9160bd2d22aea1e4a82c09bfa0a171454e90b91ed4ee9a805"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.6.0_windows_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.0/terraform-provider-ccloud_1.6.0_windows_386.zip",
+          "shasum": "118262890868c881ebcb35e09cdba0636bf3ed048d552129718238b35e994ff5"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.6.0_windows_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.0/terraform-provider-ccloud_1.6.0_windows_amd64.zip",
+          "shasum": "a1a547300cc683c6f1cbb31c970fad1e336848baf40e3533630e5ca5f502af5c"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.6.0_windows_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.0/terraform-provider-ccloud_1.6.0_windows_arm.zip",
+          "shasum": "37b5560ecfa45880545a50a4e8ae88e7ef6db0f9ce934e11188231bc03140c6f"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.6.0_windows_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.6.0/terraform-provider-ccloud_1.6.0_windows_arm64.zip",
+          "shasum": "92fd00f53729983a37c405a4b7ad02383c1c6e691e0c2cb33318bf2a634c8123"
+        }
+      ]
+    },
+    {
+      "version": "1.5.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.1/terraform-provider-ccloud_1.5.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.1/terraform-provider-ccloud_1.5.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.5.1_darwin_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.1/terraform-provider-ccloud_1.5.1_darwin_amd64.zip",
+          "shasum": "c4fd9b8ebc7120fd53f149483202d17ead646915191355acb7008261c1b8810d"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.5.1_darwin_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.1/terraform-provider-ccloud_1.5.1_darwin_arm64.zip",
+          "shasum": "f47fbaa690c96769e19a8a7f2c781ca75cb03ee130675b33d5769409e9a18d7c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.5.1_freebsd_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.1/terraform-provider-ccloud_1.5.1_freebsd_386.zip",
+          "shasum": "b25df3efbfb39a67224b351f2e938b654a32410150a1742142b524e8a5ac4f83"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.5.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.1/terraform-provider-ccloud_1.5.1_freebsd_amd64.zip",
+          "shasum": "374a8e96c8a7384ff6644eb5705b144b335fd08704b71599a03ba900d3a55b6b"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.5.1_freebsd_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.1/terraform-provider-ccloud_1.5.1_freebsd_arm.zip",
+          "shasum": "9ecf4cf7b963873b979b26c7ea587029fc247b2ccbedeb93eec9bc0674fa72e7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.5.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.1/terraform-provider-ccloud_1.5.1_freebsd_arm64.zip",
+          "shasum": "8d85d372ffc3a7930a70cd37b34c3a20782adee643bc7a8889bb10c37a1fa217"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.5.1_linux_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.1/terraform-provider-ccloud_1.5.1_linux_386.zip",
+          "shasum": "0b6188382347abefada83ae00762dd7599b46295411ea0a7902bdf508106f376"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.5.1_linux_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.1/terraform-provider-ccloud_1.5.1_linux_amd64.zip",
+          "shasum": "76e56adf30f404d4cc3064febcd55640bbc69ba016cfb9b10131b7e5a5c5958e"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.5.1_linux_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.1/terraform-provider-ccloud_1.5.1_linux_arm.zip",
+          "shasum": "45f4963093f27a1300fdf47700fea0253fc2943df632c6477698e18db6678543"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.5.1_linux_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.1/terraform-provider-ccloud_1.5.1_linux_arm64.zip",
+          "shasum": "29eedf64dfd892079767ff662c0ba67a5ec0734c8bbc25058a2014e03095438c"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.5.1_windows_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.1/terraform-provider-ccloud_1.5.1_windows_386.zip",
+          "shasum": "efee9d6d0f3f32fbe1ae599a08df7053d1cb16f5e20edc075d5c1ba8ddf08565"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.5.1_windows_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.1/terraform-provider-ccloud_1.5.1_windows_amd64.zip",
+          "shasum": "eff29d2e03bc8fa11ce08b6a92535753b964f3a17489bb369f68e4790891c7b7"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.5.1_windows_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.1/terraform-provider-ccloud_1.5.1_windows_arm.zip",
+          "shasum": "f15d607590c0a455e4836dd08d48ef7f6785200544cfe6b1dd380c17533bd747"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.5.1_windows_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.1/terraform-provider-ccloud_1.5.1_windows_arm64.zip",
+          "shasum": "102c08c912c4418b685f53fc7f186f1d70eecc348b5891d44628000412c5adaa"
+        }
+      ]
+    },
+    {
+      "version": "1.5.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.0/terraform-provider-ccloud_1.5.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.0/terraform-provider-ccloud_1.5.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.5.0_darwin_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.0/terraform-provider-ccloud_1.5.0_darwin_amd64.zip",
+          "shasum": "6c3a2f0255d938d4aa53ae008f55a3ce4f0dfa4bf57902ad14423359181f5f75"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.5.0_darwin_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.0/terraform-provider-ccloud_1.5.0_darwin_arm64.zip",
+          "shasum": "733d234947444527006287e303ba7a0d4fe99c316179650a850b8cbdb4d7e535"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.5.0_freebsd_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.0/terraform-provider-ccloud_1.5.0_freebsd_386.zip",
+          "shasum": "93786cc44225b7a779b5ebdc94a52b74976ad5c0c4810009bcbcf4d5f7630171"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.5.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.0/terraform-provider-ccloud_1.5.0_freebsd_amd64.zip",
+          "shasum": "140453c8b852b97a0344cc6896006b7c1c2d4ccc4e9a81780ea3c23ee535e92c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.5.0_freebsd_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.0/terraform-provider-ccloud_1.5.0_freebsd_arm.zip",
+          "shasum": "f069b08cedc3ac7b2c094ab0aa6c38b8a2a5925a586d06ddf208b9f74d169ee4"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.5.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.0/terraform-provider-ccloud_1.5.0_freebsd_arm64.zip",
+          "shasum": "09eb8ac49bbccd3626c32dbf6d0978c38c9b01ca208c8b527ff251f1df694447"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.5.0_linux_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.0/terraform-provider-ccloud_1.5.0_linux_386.zip",
+          "shasum": "1ac956348172477756238fbdd4dc82034faa62c28fcd67c88ed6ce1c14c55c5b"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.5.0_linux_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.0/terraform-provider-ccloud_1.5.0_linux_amd64.zip",
+          "shasum": "865ef84de99c63789bbb36a27ceb1c50fb8b315e01c4690adb54b045430e1fff"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.5.0_linux_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.0/terraform-provider-ccloud_1.5.0_linux_arm.zip",
+          "shasum": "b15d5cfadd011e7e3b1dac8fcce2f3c5c0130d824673ee3efede53ba12203b72"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.5.0_linux_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.0/terraform-provider-ccloud_1.5.0_linux_arm64.zip",
+          "shasum": "d4b31e333316755635c461ca6009e2298441539b554036de0cb01b68c45aff41"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-ccloud_1.5.0_windows_386.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.0/terraform-provider-ccloud_1.5.0_windows_386.zip",
+          "shasum": "92e33eb458259059def8ec5d47f7e81e5d1e97a995a2b52901489fd4fa72de11"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-ccloud_1.5.0_windows_amd64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.0/terraform-provider-ccloud_1.5.0_windows_amd64.zip",
+          "shasum": "7b28aa473df6a8c0396e905674de898713aa419b1d9c940fcc0ab7ed4979edee"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-ccloud_1.5.0_windows_arm.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.0/terraform-provider-ccloud_1.5.0_windows_arm.zip",
+          "shasum": "0c69298e506f5d1d75863259fa6c261d0e7f461d117d312a584bdd89e545aafb"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-ccloud_1.5.0_windows_arm64.zip",
+          "download_url": "https://github.com/sapcc/terraform-provider-ccloud/releases/download/v1.5.0/terraform-provider-ccloud_1.5.0_windows_arm64.zip",
+          "shasum": "5c9e766ed23a0d9d164a13eebc2fa1d8e783017db2d22f94cb5b3324d2bda4f6"
+        }
+      ]
+    },
+    {
       "version": "1.4.18",
       "protocols": [
         "5.0"
