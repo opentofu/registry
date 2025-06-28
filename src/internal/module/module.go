@@ -15,6 +15,7 @@ import (
 // Version represents a single version of a module.
 type Version struct {
 	Version string `json:"version"` // The version number of the provider. Correlates to a tag in the module repository
+	Ref     string `json:"ref"`     // Identifier that pins the version to a particular point in history
 }
 
 // Metadata represents all the metadata for a module. This includes the list of
@@ -48,7 +49,7 @@ func (m Module) RSSURL() string {
 // the file should just contain a link to GitHub to download the tarball, ie:
 // git::https://github.com/terraform-aws-modules/terraform-aws-iam?ref=v5.30.0
 func (m Module) VersionDownloadURL(version Version) string {
-	return fmt.Sprintf("git::%s?ref=%s", m.RepositoryURL(), version.Version)
+	return fmt.Sprintf("git::%s?ref=%s", m.RepositoryURL(), version.Ref)
 }
 
 // MetadataPath returns the path to the metadata file for the module.
