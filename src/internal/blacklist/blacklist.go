@@ -28,8 +28,8 @@ type Blacklist struct {
 	mu        sync.RWMutex
 }
 
-// LoadFromFile reads the blacklist from a specific file path
-func LoadFromFile(filePath string) (*Blacklist, error) {
+// loadFromFile reads the blacklist from a specific file path
+func loadFromFile(filePath string) (*Blacklist, error) {
 	data, err := os.ReadFile(filePath)
 	if err != nil {
 		if os.IsNotExist(err) {
@@ -55,23 +55,23 @@ func Load() (*Blacklist, error) {
 	// The versions_blacklist.json file is at the repository root
 	// When running bump-versions from GitHub Actions, the working directory is ./src
 	// When running add-provider/add-module, the working directory is the repository root
-	
+
 	// Try both possible locations
 	possiblePaths := []string{
-		"versions_blacklist.json",     // When running from repo root (add-provider/add-module)
-		"../versions_blacklist.json",  // When running from src directory (bump-versions)
+		"versions_blacklist.json",    // When running from repo root (add-provider/add-module)
+		"../versions_blacklist.json", // When running from src directory (bump-versions)
 	}
-	
+
 	for _, path := range possiblePaths {
 		if _, err := os.Stat(path); err == nil {
-			blacklist, err := LoadFromFile(path)
+			blacklist, err := loadFromFile(path)
 			if err != nil {
 				return nil, fmt.Errorf("failed to load blacklist from %s: %w", path, err)
 			}
 			return blacklist, nil
 		}
 	}
-	
+
 	// If file doesn't exist in either location, return empty blacklist
 	return &Blacklist{
 		Providers: []ProviderEntry{},
