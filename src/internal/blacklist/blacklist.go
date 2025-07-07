@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"sync"
 )
 
 type ProviderEntry struct {
@@ -25,7 +24,6 @@ type ModuleEntry struct {
 type Blacklist struct {
 	Providers []ProviderEntry `json:"providers"`
 	Modules   []ModuleEntry   `json:"modules"`
-	mu        sync.RWMutex
 }
 
 // loadFromFile reads the blacklist from a specific file path
@@ -81,9 +79,6 @@ func Load() (*Blacklist, error) {
 
 // IsProviderVersionBlacklisted checks if a specific provider version is blacklisted
 func (b *Blacklist) IsProviderVersionBlacklisted(namespace, name, version string) (bool, string) {
-	b.mu.RLock()
-	defer b.mu.RUnlock()
-
 	for _, entry := range b.Providers {
 		if entry.Namespace == namespace && entry.Name == name && entry.Version == version {
 			return true, entry.Reason
@@ -94,9 +89,6 @@ func (b *Blacklist) IsProviderVersionBlacklisted(namespace, name, version string
 
 // IsModuleVersionBlacklisted checks if a specific module version is blacklisted
 func (b *Blacklist) IsModuleVersionBlacklisted(namespace, name, targetSystem, version string) (bool, string) {
-	b.mu.RLock()
-	defer b.mu.RUnlock()
-
 	for _, entry := range b.Modules {
 		// For modules, we need to match namespace/name/target_system/version
 		if entry.Namespace == namespace && entry.Name == name && entry.TargetSystem == targetSystem && entry.Version == version {

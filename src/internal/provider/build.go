@@ -26,7 +26,7 @@ func (meta Metadata) filterNewReleases(releases []string, namespace, name string
 		if !existingVersions[version] {
 			// Check if this version is blacklisted
 			if isBlacklisted, reason := blacklistInstance.IsProviderVersionBlacklisted(namespace, name, version); isBlacklisted {
-				meta.Logger.Warn("Skipping blacklisted version", 
+				meta.Logger.Warn("Skipping blacklisted version",
 					slog.String("namespace", namespace),
 					slog.String("name", name),
 					slog.String("version", version),
@@ -67,12 +67,7 @@ func (p Provider) buildMetadata() (*Metadata, error) {
 	if err != nil {
 		return nil, err
 	}
-
-	// Use blacklist from Provider struct, fall back to empty if nil
 	blacklistInstance := p.Blacklist
-	if blacklistInstance == nil {
-		blacklistInstance = &blacklist.Blacklist{}
-	}
 
 	// fetch ALL the releases
 	releases, err := p.getSemverTags()

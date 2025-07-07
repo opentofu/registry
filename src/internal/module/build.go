@@ -5,10 +5,9 @@ import (
 	"log/slog"
 	"slices"
 
-	"github.com/opentofu/registry-stable/internal"
-	"github.com/opentofu/registry-stable/internal/blacklist"
-
 	"golang.org/x/mod/semver"
+
+	"github.com/opentofu/registry-stable/internal"
 )
 
 func (m Module) UpdateMetadataFile() error {
@@ -28,11 +27,7 @@ func (m Module) UpdateMetadataFile() error {
 // BuildMetadata builds the Metadata for the module by collating the tags from
 // the module repository.
 func (m Module) BuildMetadata() (*Metadata, error) {
-	// Use blacklist from Module struct, fall back to empty if nil
 	blacklistInstance := m.Blacklist
-	if blacklistInstance == nil {
-		blacklistInstance = &blacklist.Blacklist{}
-	}
 
 	tags, err := m.getSemverTags()
 	if err != nil {
@@ -59,7 +54,7 @@ func (m Module) BuildMetadata() (*Metadata, error) {
 			// Check if this version is blacklisted
 			version := internal.TrimTagPrefix(t)
 			if isBlacklisted, reason := blacklistInstance.IsModuleVersionBlacklisted(m.Namespace, m.Name, m.TargetSystem, version); isBlacklisted {
-				m.Logger.Warn("Skipping blacklisted module version", 
+				m.Logger.Warn("Skipping blacklisted module version",
 					slog.String("namespace", m.Namespace),
 					slog.String("name", m.Name),
 					slog.String("target", m.TargetSystem),
@@ -71,7 +66,7 @@ func (m Module) BuildMetadata() (*Metadata, error) {
 			meta.Versions = append(meta.Versions, Version{Version: t})
 		}
 	}
-	
+
 	if blacklistedCount > 0 {
 		m.Logger.Info(fmt.Sprintf("Skipped %d blacklisted versions", blacklistedCount))
 	}
