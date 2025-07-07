@@ -9,6 +9,7 @@ import (
 	"regexp"
 	"strings"
 
+	"github.com/opentofu/registry-stable/internal/blacklist"
 	"github.com/opentofu/registry-stable/internal/files"
 	"github.com/opentofu/registry-stable/internal/github"
 	"github.com/opentofu/registry-stable/internal/module"
@@ -35,6 +36,15 @@ func main() {
 	flag.Parse()
 
 	ctx := context.Background()
+
+	bl, err := blacklist.Load()
+	if err != nil {
+		logger.Error("Failed to load blacklist, proceeding without it", slog.Any("err", err))
+		os.Exit(1)
+	} else {
+		logger.Info("Loaded blacklist successfully")
+	}
+
 	token, err := github.EnvAuthToken()
 	if err != nil {
 		logger.Error("Initialization Error", slog.Any("err", err))
@@ -59,6 +69,7 @@ func main() {
 			Directory:    *moduleDataDir,
 			Logger:       logger,
 			Github:       ghClient,
+			Blacklist:    bl,
 		}
 
 		_, err = regaddr.ParseModuleSource(fmt.Sprintf("%s/%s/%s", submitted.Namespace, submitted.Name, submitted.TargetSystem))
@@ -66,7 +77,7 @@ func main() {
 			return err
 		}
 
-		modules, err := module.ListModules(*moduleDataDir, "", logger, ghClient)
+		modules, err := module.ListModules(*moduleDataDir, "", logger, ghClient, bl)
 		if err != nil {
 			return err
 		}

@@ -8,6 +8,7 @@ import (
 	"regexp"
 	"strings"
 
+	"github.com/opentofu/registry-stable/internal/blacklist"
 	"github.com/opentofu/registry-stable/internal/github"
 	"github.com/opentofu/registry-stable/internal/parallel"
 )
@@ -40,7 +41,7 @@ func extractModuleDetailsFromPath(path string) *Module {
 }
 
 // ListModules walks the module metadata directory provided and returns a list of modules.
-func ListModules(moduleDataDir string, moduleNamespace string, logger *slog.Logger, ghClient github.Client) (List, error) {
+func ListModules(moduleDataDir string, moduleNamespace string, logger *slog.Logger, ghClient github.Client, blacklistInstance *blacklist.Blacklist) (List, error) {
 	var results []Module
 	moduleNamespace = strings.ToLower(moduleNamespace)
 	err := filepath.Walk(moduleDataDir, func(path string, info os.FileInfo, err error) error {
@@ -62,6 +63,7 @@ func ListModules(moduleDataDir string, moduleNamespace string, logger *slog.Logg
 			slog.Group("module", slog.String("namespace", m.Namespace), slog.String("name", m.Name), slog.String("targetsystem", m.TargetSystem)),
 		)
 		m.Github = ghClient.WithLogger(m.Logger)
+		m.Blacklist = blacklistInstance
 		results = append(results, *m)
 		return nil
 	})

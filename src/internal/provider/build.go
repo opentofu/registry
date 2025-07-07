@@ -13,7 +13,7 @@ import (
 
 // filterNewReleases filters the list of releases to only include those that do
 // not already exist in the metadata and are not blacklisted.
-func (meta Metadata) filterNewReleases(releases []string, namespace, name string) []string {
+func (meta Metadata) filterNewReleases(releases []string, namespace, name string, blacklistInstance *blacklist.Blacklist) []string {
 	var existingVersions = make(map[string]bool)
 	for _, v := range meta.Versions {
 		existingVersions[v.Version] = true
@@ -25,7 +25,7 @@ func (meta Metadata) filterNewReleases(releases []string, namespace, name string
 		version := internal.TrimTagPrefix(r)
 		if !existingVersions[version] {
 			// Check if this version is blacklisted
-			if isBlacklisted, reason := blacklist.IsProviderVersionBlacklisted(namespace, name, version); isBlacklisted {
+			if isBlacklisted, reason := blacklistInstance.IsProviderVersionBlacklisted(namespace, name, version); isBlacklisted {
 				meta.Logger.Warn("Skipping blacklisted version", 
 					slog.String("namespace", namespace),
 					slog.String("name", name),
@@ -68,6 +68,12 @@ func (p Provider) buildMetadata() (*Metadata, error) {
 		return nil, err
 	}
 
+	// Use blacklist from Provider struct, fall back to empty if nil
+	blacklistInstance := p.Blacklist
+	if blacklistInstance == nil {
+		blacklistInstance = &blacklist.Blacklist{}
+	}
+
 	// fetch ALL the releases
 	releases, err := p.getSemverTags()
 	if err != nil {
@@ -76,7 +82,7 @@ func (p Provider) buildMetadata() (*Metadata, error) {
 	}
 
 	// filter the releases to only include those that do not already exist in the metadata
-	newReleases := meta.filterNewReleases(releases, p.Namespace, p.ProviderName)
+	newReleases := meta.filterNewReleases(releases, p.Namespace, p.ProviderName, blacklistInstance)
 
 	if len(newReleases) == 0 {
 		p.Logger.Info("No version bump required, all versions exist")

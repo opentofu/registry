@@ -28,6 +28,12 @@ func (m Module) UpdateMetadataFile() error {
 // BuildMetadata builds the Metadata for the module by collating the tags from
 // the module repository.
 func (m Module) BuildMetadata() (*Metadata, error) {
+	// Use blacklist from Module struct, fall back to empty if nil
+	blacklistInstance := m.Blacklist
+	if blacklistInstance == nil {
+		blacklistInstance = &blacklist.Blacklist{}
+	}
+
 	tags, err := m.getSemverTags()
 	if err != nil {
 		m.Logger.Error("Unable to fetch semver tags, skipping", slog.Any("err", err))
@@ -52,7 +58,7 @@ func (m Module) BuildMetadata() (*Metadata, error) {
 		if !found {
 			// Check if this version is blacklisted
 			version := internal.TrimTagPrefix(t)
-			if isBlacklisted, reason := blacklist.IsModuleVersionBlacklisted(m.Namespace, m.Name, m.TargetSystem, version); isBlacklisted {
+			if isBlacklisted, reason := blacklistInstance.IsModuleVersionBlacklisted(m.Namespace, m.Name, m.TargetSystem, version); isBlacklisted {
 				m.Logger.Warn("Skipping blacklisted module version", 
 					slog.String("namespace", m.Namespace),
 					slog.String("name", m.Name),

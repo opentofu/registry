@@ -25,70 +25,66 @@ type ModuleEntry struct {
 type Blacklist struct {
 	Providers []ProviderEntry `json:"providers"`
 	Modules   []ModuleEntry   `json:"modules"`
+	mu        sync.RWMutex
 }
 
-var (
-	instance *Blacklist
-	once     sync.Once
-	mu       sync.RWMutex
-)
-
-// Load reads the blacklist from the versions_blacklist.json file
-func Load() (*Blacklist, error) {
-	var loadErr error
-	once.Do(func() {
-		// Try to find the blacklist file by up a couple directories
-		// we're not always sure what the current working directory is
-		possiblePaths := []string{
-			"versions_blacklist.json",
-			"../versions_blacklist.json",
-			"../../versions_blacklist.json",
-		}
-
-		var data []byte
-		var err error
-		for _, path := range possiblePaths {
-			data, err = os.ReadFile(path)
-			if err == nil {
-				break
-			}
-		}
-
-		if err != nil {
+// LoadFromFile reads the blacklist from a specific file path
+func LoadFromFile(filePath string) (*Blacklist, error) {
+	data, err := os.ReadFile(filePath)
+	if err != nil {
+		if os.IsNotExist(err) {
 			// If file doesn't exist, return empty blacklist
-			if os.IsNotExist(err) {
-				instance = &Blacklist{
-					Providers: []ProviderEntry{},
-					Modules:   []ModuleEntry{},
-				}
-				return
+			return &Blacklist{
+				Providers: []ProviderEntry{},
+				Modules:   []ModuleEntry{},
+			}, nil
+		}
+		return nil, fmt.Errorf("failed to read blacklist file: %w", err)
+	}
+
+	blacklist := &Blacklist{}
+	if err := json.Unmarshal(data, blacklist); err != nil {
+		return nil, fmt.Errorf("failed to parse blacklist file: %w", err)
+	}
+
+	return blacklist, nil
+}
+
+// Load reads the blacklist from the default location
+func Load() (*Blacklist, error) {
+	// The versions_blacklist.json file is at the repository root
+	// When running bump-versions from GitHub Actions, the working directory is ./src
+	// When running add-provider/add-module, the working directory is the repository root
+	
+	// Try both possible locations
+	possiblePaths := []string{
+		"versions_blacklist.json",     // When running from repo root (add-provider/add-module)
+		"../versions_blacklist.json",  // When running from src directory (bump-versions)
+	}
+	
+	for _, path := range possiblePaths {
+		if _, err := os.Stat(path); err == nil {
+			blacklist, err := LoadFromFile(path)
+			if err != nil {
+				return nil, fmt.Errorf("failed to load blacklist from %s: %w", path, err)
 			}
-			loadErr = fmt.Errorf("failed to read blacklist file: %w", err)
-			return
+			return blacklist, nil
 		}
-
-		instance = &Blacklist{}
-		if err := json.Unmarshal(data, instance); err != nil {
-			loadErr = fmt.Errorf("failed to parse blacklist file: %w", err)
-			return
-		}
-	})
-
-	return instance, loadErr
+	}
+	
+	// If file doesn't exist in either location, return empty blacklist
+	return &Blacklist{
+		Providers: []ProviderEntry{},
+		Modules:   []ModuleEntry{},
+	}, nil
 }
 
 // IsProviderVersionBlacklisted checks if a specific provider version is blacklisted
-func IsProviderVersionBlacklisted(namespace, name, version string) (bool, string) {
-	mu.RLock()
-	defer mu.RUnlock()
+func (b *Blacklist) IsProviderVersionBlacklisted(namespace, name, version string) (bool, string) {
+	b.mu.RLock()
+	defer b.mu.RUnlock()
 
-	blacklist, err := Load()
-	if err != nil {
-		// If there's an error loading blacklist, allow all versions
-		return false, ""
-	}
-
-	for _, entry := range blacklist.Providers {
+	for _, entry := range b.Providers {
 		if entry.Namespace == namespace && entry.Name == name && entry.Version == version {
 			return true, entry.Reason
 		}
@@ -97,17 +93,11 @@ func IsProviderVersionBlacklisted(namespace, name, version string) (bool, string
 }
 
 // IsModuleVersionBlacklisted checks if a specific module version is blacklisted
-func IsModuleVersionBlacklisted(namespace, name, targetSystem, version string) (bool, string) {
-	mu.RLock()
-	defer mu.RUnlock()
+func (b *Blacklist) IsModuleVersionBlacklisted(namespace, name, targetSystem, version string) (bool, string) {
+	b.mu.RLock()
+	defer b.mu.RUnlock()
 
-	blacklist, err := Load()
-	if err != nil {
-		// If there's an error loading blacklist, allow all versions
-		return false, ""
-	}
-
-	for _, entry := range blacklist.Modules {
+	for _, entry := range b.Modules {
 		// For modules, we need to match namespace/name/target_system/version
 		if entry.Namespace == namespace && entry.Name == name && entry.TargetSystem == targetSystem && entry.Version == version {
 			return true, entry.Reason
