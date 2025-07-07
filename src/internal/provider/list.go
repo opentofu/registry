@@ -8,6 +8,7 @@ import (
 	"regexp"
 	"strings"
 
+	"github.com/opentofu/registry-stable/internal/blacklist"
 	"github.com/opentofu/registry-stable/internal/github"
 	"github.com/opentofu/registry-stable/internal/parallel"
 )
@@ -37,7 +38,7 @@ func extractProviderDetailsFromPath(path string) *Provider {
 }
 
 // ListProviders returns a slice of Provider structs for each provider found in the providerDataDir.
-func ListProviders(providerDataDir string, providerNamespace string, logger *slog.Logger, ghClient github.Client) (List, error) {
+func ListProviders(providerDataDir string, providerNamespace string, logger *slog.Logger, ghClient github.Client, blacklistInstance *blacklist.Blacklist) (List, error) {
 	var results []Provider
 	providerNamespace = strings.ToLower(providerNamespace)
 	err := filepath.Walk(providerDataDir, func(path string, info os.FileInfo, err error) error {
@@ -60,6 +61,7 @@ func ListProviders(providerDataDir string, providerNamespace string, logger *slo
 			slog.Group("provider", slog.String("namespace", p.Namespace), slog.String("name", p.ProviderName)),
 		)
 		p.Github = ghClient.WithLogger(p.Logger)
+		p.Blacklist = blacklistInstance
 
 		results = append(results, *p)
 		return nil

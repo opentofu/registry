@@ -8,6 +8,7 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/opentofu/registry-stable/internal/blacklist"
 	"github.com/opentofu/registry-stable/internal/files"
 	"github.com/opentofu/registry-stable/internal/github"
 )
@@ -25,12 +26,13 @@ type Metadata struct {
 
 // Module represents a single module.
 type Module struct {
-	Namespace    string        // The module namespace
-	Name         string        // The module name
-	TargetSystem string        // The module target system
-	Directory    string        // The root directory that the module lives in
-	Logger       *slog.Logger  // A logger for the module
-	Github       github.Client // A GitHub client for the module
+	Namespace    string               // The module namespace
+	Name         string               // The module name
+	TargetSystem string               // The module target system
+	Directory    string               // The root directory that the module lives in
+	Logger       *slog.Logger         // A logger for the module
+	Github       github.Client        // A GitHub client for the module
+	Blacklist    *blacklist.Blacklist // The blacklist instance for filtering versions
 }
 
 // RepositoryURL constructs the URL to the module repository on github.com.

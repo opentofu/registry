@@ -8,6 +8,7 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/opentofu/registry-stable/internal/blacklist"
 	"github.com/opentofu/registry-stable/internal/files"
 	"github.com/opentofu/registry-stable/internal/github"
 )
@@ -45,6 +46,7 @@ type Provider struct {
 	Directory    string // The root directory that the provider lives in
 	Logger       *slog.Logger
 	Github       github.Client
+	Blacklist    *blacklist.Blacklist // The blacklist instance for filtering versions
 }
 
 // RepositoryName returns the name of the repository that the provider is assumed to be living in.
