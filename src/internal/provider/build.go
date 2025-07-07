@@ -6,27 +6,40 @@ import (
 	"slices"
 
 	"github.com/opentofu/registry-stable/internal"
+	"github.com/opentofu/registry-stable/internal/blacklist"
 
 	"golang.org/x/mod/semver"
 )
 
 // filterNewReleases filters the list of releases to only include those that do
-// not already exist in the metadata.
-func (meta Metadata) filterNewReleases(releases []string) []string {
+// not already exist in the metadata and are not blacklisted.
+func (meta Metadata) filterNewReleases(releases []string, namespace, name string) []string {
 	var existingVersions = make(map[string]bool)
 	for _, v := range meta.Versions {
 		existingVersions[v.Version] = true
 	}
 
 	var newReleases = make([]string, 0)
+	var blacklistedCount = 0
 	for _, r := range releases {
-		if !existingVersions[internal.TrimTagPrefix(r)] {
-			// only append the release if it does not already exist in the metadata
+		version := internal.TrimTagPrefix(r)
+		if !existingVersions[version] {
+			// Check if this version is blacklisted
+			if isBlacklisted, reason := blacklist.IsProviderVersionBlacklisted(namespace, name, version); isBlacklisted {
+				meta.Logger.Warn("Skipping blacklisted version", 
+					slog.String("namespace", namespace),
+					slog.String("name", name),
+					slog.String("version", version),
+					slog.String("reason", reason))
+				blacklistedCount++
+				continue
+			}
+			// only append the release if it does not already exist in the metadata and is not blacklisted
 			newReleases = append(newReleases, r)
 		}
 	}
 
-	meta.Logger.Info(fmt.Sprintf("Found %d releases that do not already exist in the metadata file", len(newReleases)))
+	meta.Logger.Info(fmt.Sprintf("Found %d releases that do not already exist in the metadata file (%d blacklisted)", len(newReleases), blacklistedCount))
 
 	return newReleases
 }
@@ -63,7 +76,7 @@ func (p Provider) buildMetadata() (*Metadata, error) {
 	}
 
 	// filter the releases to only include those that do not already exist in the metadata
-	newReleases := meta.filterNewReleases(releases)
+	newReleases := meta.filterNewReleases(releases, p.Namespace, p.ProviderName)
 
 	if len(newReleases) == 0 {
 		p.Logger.Info("No version bump required, all versions exist")
