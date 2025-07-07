@@ -38,7 +38,7 @@ func main() {
 
 	bl, err := blacklist.Load()
 	if err != nil {
-		logger.Error("Failed to load blacklist, proceeding without it", slog.Any("err", err))
+		logger.Error("Failed to load blacklist", slog.Any("err", err))
 		os.Exit(1)
 	} else {
 		logger.Info("Loaded blacklist successfully")
