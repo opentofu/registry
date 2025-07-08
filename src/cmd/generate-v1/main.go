@@ -5,6 +5,7 @@ import (
 	"log/slog"
 	"os"
 
+	"github.com/opentofu/registry-stable/internal/blacklist"
 	"github.com/opentofu/registry-stable/internal/github"
 	"github.com/opentofu/registry-stable/internal/module"
 	"github.com/opentofu/registry-stable/internal/provider"
@@ -34,8 +35,15 @@ func main() {
 		logger.Error("Failed to create well known file", slog.Any("err", err))
 		os.Exit(1)
 	}
+	bl, err := blacklist.Load()
+	if err != nil {
+		logger.Error("Failed to load blacklist", slog.Any("err", err))
+		os.Exit(1)
+	} else {
+		logger.Info("Loaded blacklist successfully")
+	}
 
-	modules, err := module.ListModules(*moduleDataDir, *moduleNamespace, logger, ghClient)
+	modules, err := module.ListModules(*moduleDataDir, *moduleNamespace, logger, ghClient, bl)
 	if err != nil {
 		logger.Error("Failed to list modules", slog.Any("err", err))
 		os.Exit(1)
@@ -52,7 +60,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	providers, err := provider.ListProviders(*providerDataDir, *providerNamespace, logger, ghClient)
+	providers, err := provider.ListProviders(*providerDataDir, *providerNamespace, logger, ghClient, bl)
 	if err != nil {
 		logger.Error("Failed to list providers", slog.Any("err", err))
 		os.Exit(1)

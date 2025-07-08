@@ -16,6 +16,7 @@ import (
 	openpgpErrors "github.com/ProtonMail/go-crypto/openpgp/errors"
 	"github.com/ProtonMail/gopenpgp/v2/crypto"
 
+	"github.com/opentofu/registry-stable/internal/blacklist"
 	"github.com/opentofu/registry-stable/internal/files"
 	"github.com/opentofu/registry-stable/internal/github"
 	"github.com/opentofu/registry-stable/internal/parallel"
@@ -49,8 +50,15 @@ func main() {
 	ghClient := github.NewClient(ctx, logger, token)
 	ctxVerifier, cancelVerifierFn := context.WithCancel(context.Background())
 	ghVerifierClient := github.NewClient(ctxVerifier, logger, token)
+	bl, err := blacklist.Load()
+	if err != nil {
+		logger.Error("Failed to load blacklist", slog.Any("err", err))
+		os.Exit(1)
+	} else {
+		logger.Info("Loaded blacklist successfully")
+	}
 
-	providers, err := provider.ListProviders(*providerDataDir, *orgName, logger, ghVerifierClient)
+	providers, err := provider.ListProviders(*providerDataDir, *orgName, logger, ghVerifierClient, bl)
 	if err != nil {
 		logger.Error("Failed to list providers", slog.Any("err", err))
 		os.Exit(1)
