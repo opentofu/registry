@@ -61,6 +61,6 @@ git commit -s -m "Create provider ${namespace}/${name}"
 git push -u origin "${branch}"
 
 # Create pull request and update issue
-pr=$(gh pr create --title "${TITLE}" --body "Created ${jsonfile/../src/} for provider ${namespace}/${name}.  Closes #${NUMBER}.") #--assignee opentofu/core-engineers)
-gh issue comment "${NUMBER}" -b "Your submission has been validated and has moved on to the pull request phase (${pr}).  This issue has been locked."
+pr=$(gh pr create --title "${TITLE}" --body "Created ${jsonfile/../src/} for provider ${namespace}/${name}. Closes #${NUMBER}.") #--assignee opentofu/core-engineers)
+gh issue comment "${NUMBER}" -b "Your submission has been validated and has moved on to the pull request phase (${pr}). This issue has been locked."
 gh issue lock "${NUMBER}" -r resolved
