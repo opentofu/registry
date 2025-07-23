@@ -1,4 +1,6 @@
 # OpenTofu Registry (registry.opentofu.org)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fopentofu%2Fregistry.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fopentofu%2Fregistry?ref=badge_shield)
+
 
 ![](https://raw.githubusercontent.com/opentofu/brand-artifacts/main/full/transparent/SVG/on-dark.svg#gh-dark-mode-only)
 ![](https://raw.githubusercontent.com/opentofu/brand-artifacts/main/full/transparent/SVG/on-light.svg#gh-light-mode-only)
@@ -30,3 +32,7 @@ You can find information on the OpenTofu Registry Inclusion Policy in [POLICY.md
 
 ## Reporting security vulnerabilities
 If you've found a vulnerability or a potential vulnerability in OpenTofu please follow [Security Policy](https://github.com/opentofu/opentofu/security/policy). We'll send a confirmation email to acknowledge your report, and we'll send an additional email when we've identified the issue positively or negatively.
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fopentofu%2Fregistry.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fopentofu%2Fregistry?ref=badge_large)
