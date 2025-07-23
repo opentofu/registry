@@ -101,7 +101,7 @@ func main() {
 			return fmt.Errorf("An unexpected error occured: %w", err)
 		}
 		if len(meta.Versions) == 0 {
-			return fmt.Errorf("No versions detected for repository %s", submitted.RepositoryURL())
+			return fmt.Errorf("No valid versions are detected for repository %s. Please check the releases and their checksum files.", submitted.RepositoryURL())
 		}
 
 		output.Namespace = submitted.Namespace

@@ -46,8 +46,9 @@ func (p Provider) VersionFromTag(release string) (*Version, error) {
 	if err != nil {
 		return nil, err
 	}
+
 	if checksums == nil {
-		logger.Warn("checksums not found in release, skipping...")
+		logger.Warn(fmt.Sprintf("checksums not found in release %s, skipping...", version))
 		return nil, nil
 	}
 
