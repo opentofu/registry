@@ -27,24 +27,40 @@ var (
 	}
 )
 
+func (p Provider) ArtifactName(version string, suffix string) string {
+	return fmt.Sprintf("%s_%s_%s", p.RepositoryName(), version, suffix)
+}
+
+func (p Provider) ArtifactURL(release string, version string, suffix string) string {
+	return fmt.Sprintf("%s/releases/download/%s/%s", p.RepositoryURL(), release, p.ArtifactName(version, suffix))
+}
+
 // VersionFromTag fetches information about an individual release based on the GitHub release name
 func (p Provider) VersionFromTag(release string) (*Version, error) {
 	version := internal.TrimTagPrefix(release)
-	artifactPrefix := fmt.Sprintf("%s_%s_", p.RepositoryName(), version)
 
 	logger := p.Logger.With(slog.String("release", release))
 
-	urlPrefix := fmt.Sprintf(p.RepositoryURL()+"/releases/download/%s/%s", release, artifactPrefix)
-
 	v := Version{
 		Version:             version,
-		SHASumsURL:          urlPrefix + "SHA256SUMS",
-		SHASumsSignatureURL: urlPrefix + "SHA256SUMS.sig",
+		SHASumsURL:          p.ArtifactURL(release, version, "SHA256SUMS"),
+		SHASumsSignatureURL: p.ArtifactURL(release, version, "SHA256SUMS.sig"),
 	}
 
 	checksums, err := p.GetSHASums(v.SHASumsURL)
 	if err != nil {
 		return nil, err
+	}
+
+	if checksums == nil {
+		// Attempt to use workaround
+		logger.Warn("Attempting shasum workaround for release/version not using the same prefix")
+		v.SHASumsURL = p.ArtifactURL(release, "v"+version, "SHA256SUMS")
+		v.SHASumsSignatureURL = p.ArtifactURL(release, "v"+version, "SHA256SUMS.sig")
+		checksums, err = p.GetSHASums(v.SHASumsURL)
+		if err != nil {
+			return nil, err
+		}
 	}
 
 	if checksums == nil {
@@ -55,11 +71,13 @@ func (p Provider) VersionFromTag(release string) (*Version, error) {
 	var ok bool
 	for _, os := range goos {
 		for _, arch := range goarch {
+			suffix := fmt.Sprintf("%s_%s.zip", os, arch)
+
 			target := Target{
 				OS:          os,
 				Arch:        arch,
-				Filename:    fmt.Sprintf("%s%s_%s.zip", artifactPrefix, os, arch),
-				DownloadURL: fmt.Sprintf("%s%s_%s.zip", urlPrefix, os, arch),
+				Filename:    p.ArtifactName(version, suffix),
+				DownloadURL: p.ArtifactURL(release, version, suffix),
 			}
 			target.SHASum, ok = checksums[target.Filename]
 			if ok {
@@ -67,8 +85,8 @@ func (p Provider) VersionFromTag(release string) (*Version, error) {
 				continue
 			}
 			// now try and pull it with the v in the version
-			target.Filename = fmt.Sprintf("%s_v%s_%s_%s.zip", p.RepositoryName(), version, os, arch)
-			target.DownloadURL = fmt.Sprintf("%s/releases/download/v%s/%s", p.RepositoryURL(), version, target.Filename)
+			target.Filename = p.ArtifactName("v"+version, suffix)
+			target.DownloadURL = p.ArtifactURL(release, "v"+version, suffix)
 			target.SHASum, ok = checksums[target.Filename]
 			if ok {
 				v.Targets = append(v.Targets, target)
@@ -81,10 +99,18 @@ func (p Provider) VersionFromTag(release string) (*Version, error) {
 		return nil, nil
 	}
 
-	v.Protocols, err = p.GetProtocols(urlPrefix + "manifest.json")
+	v.Protocols, err = p.GetProtocols(p.ArtifactURL(release, version, "manifest.json"))
 	if err != nil {
 		return nil, err
 	}
+	if v.Protocols == nil {
+		logger.Warn("Attempting protocol workaround for release/version not using the same prefix")
+		v.Protocols, err = p.GetProtocols(p.ArtifactURL(release, "v"+version, "manifest.json"))
+		if err != nil {
+			return nil, err
+		}
+	}
+
 	if v.Protocols == nil {
 		logger.Warn("Could not find manifest file, using default protocols")
 		v.Protocols = []string{"5.0"}
