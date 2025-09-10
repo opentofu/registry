@@ -70,7 +70,7 @@ mkdir -p "$(dirname "${keyfile}")"
 mv tmp.key "${keyfile}"
 
 # Create Branch
-branch="provider-key-submission_${namespace}"
+branch="provider-key-submission_${namespace}-$(date +%s)"
 set +e
 if ! git checkout -b "${branch}"; then
   gh issue comment "${NUMBER}" -b "Failed validation: A branch already exists for this provider '${branch}'"
