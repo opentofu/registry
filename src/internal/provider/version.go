@@ -80,17 +80,24 @@ func (p Provider) VersionFromTag(release string) (*Version, error) {
 				DownloadURL: p.ArtifactURL(release, version, suffix),
 			}
 			target.SHASum, ok = checksums[target.Filename]
-			if ok {
-				v.Targets = append(v.Targets, target)
-				continue
+			if !ok {
+				// now try and pull it with the v in the version
+				target.Filename = p.ArtifactName("v"+version, suffix)
+				target.DownloadURL = p.ArtifactURL(release, "v"+version, suffix)
+				target.SHASum, ok = checksums[target.Filename]
+				if !ok {
+					// Release target without checksum (invalid)
+					continue
+				}
 			}
-			// now try and pull it with the v in the version
-			target.Filename = p.ArtifactName("v"+version, suffix)
-			target.DownloadURL = p.ArtifactURL(release, "v"+version, suffix)
-			target.SHASum, ok = checksums[target.Filename]
-			if ok {
-				v.Targets = append(v.Targets, target)
+
+			target.Hash1, err = p.CalculateHash1(target.DownloadURL, target.SHASum)
+			if err != nil {
+				// Release is inaccessable, misconfigured, or corrupt
+				return nil, err
 			}
+
+			v.Targets = append(v.Targets, target)
 		}
 	}
 

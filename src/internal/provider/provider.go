@@ -34,9 +34,10 @@ type Version struct {
 type Target struct {
 	OS          string `json:"os"`           // The operating system for which the provider is built.
 	Arch        string `json:"arch"`         // The architecture for which the provider is built.
-	Filename    string `json:"filename"`     // The filename of the provider binary.
-	DownloadURL string `json:"download_url"` // The direct URL to download the provider binary.
-	SHASum      string `json:"shasum"`       // The SHA checksum of the provider binary.
+	Filename    string `json:"filename"`     // The filename of the provider release.
+	DownloadURL string `json:"download_url"` // The direct URL to download the provider release.
+	SHASum      string `json:"shasum"`       // The SHA checksum of the provider release.
+	Hash1       string `json:"h1"`           // The Hash Type 1 of the provider release *contents*
 }
 
 // Provider contains information about a provider.
