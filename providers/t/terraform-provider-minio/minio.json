@@ -1,6 +1,382 @@
 {
   "versions": [
     {
+      "version": "3.9.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.9.0/terraform-provider-minio_3.9.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.9.0/terraform-provider-minio_3.9.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-minio_3.9.0_darwin_amd64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.9.0/terraform-provider-minio_3.9.0_darwin_amd64.zip",
+          "shasum": "8b0a7c50dfb5170d26ca4f29a478fa1122ad6a9bdb4857f2eb3efc6397da7159"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-minio_3.9.0_darwin_arm64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.9.0/terraform-provider-minio_3.9.0_darwin_arm64.zip",
+          "shasum": "eb4310d003c50d44a33f6366cf57decb3a5cdd93fbf818f041861323dee7ff0d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-minio_3.9.0_freebsd_386.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.9.0/terraform-provider-minio_3.9.0_freebsd_386.zip",
+          "shasum": "42747fe38dfc08776a457ecd91484e30a7b0c2fc4ccbf0d24e252e4f85aa09c0"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-minio_3.9.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.9.0/terraform-provider-minio_3.9.0_freebsd_amd64.zip",
+          "shasum": "9ca5207fbd60371376d680f76c9c3bedf65af2787a18b3d46802698ea6278a98"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-minio_3.9.0_freebsd_arm.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.9.0/terraform-provider-minio_3.9.0_freebsd_arm.zip",
+          "shasum": "0e95db999801217e3eead4faf7bca330562ece9ea73d1cf92995abbe9fb0c0f3"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-minio_3.9.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.9.0/terraform-provider-minio_3.9.0_freebsd_arm64.zip",
+          "shasum": "b5bb0e5801200bae4bc841d531e183b033510be82b5ffd6b3a29d66a025817cd"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-minio_3.9.0_linux_386.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.9.0/terraform-provider-minio_3.9.0_linux_386.zip",
+          "shasum": "385595c4efc2a28fe4d37595c391044a4a97966ad1f0813f579effc8d222c01f"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-minio_3.9.0_linux_amd64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.9.0/terraform-provider-minio_3.9.0_linux_amd64.zip",
+          "shasum": "bbacca7811efc92bf9aa27788377c02bbcaf54d509dd410b69d8b1dc591380c8"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-minio_3.9.0_linux_arm.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.9.0/terraform-provider-minio_3.9.0_linux_arm.zip",
+          "shasum": "329f94671fe185cd1fbeecbcb5029902aab53c6c01b64a8673404f61024cf76e"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-minio_3.9.0_linux_arm64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.9.0/terraform-provider-minio_3.9.0_linux_arm64.zip",
+          "shasum": "f0895e059cb5c7318d9a8df9dc0527c6e1aaccdde2efb4ba72f80bde51f826db"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-minio_3.9.0_windows_386.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.9.0/terraform-provider-minio_3.9.0_windows_386.zip",
+          "shasum": "556d364817d5ae2b2199e81e500e31150cc015f800eedd33e21e7e6be636f66f"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-minio_3.9.0_windows_amd64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.9.0/terraform-provider-minio_3.9.0_windows_amd64.zip",
+          "shasum": "b6599e973a0894d0dc659c6225d8cc2ba48add73cf56991a7a8f5bdb171896c9"
+        }
+      ]
+    },
+    {
+      "version": "3.8.3",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.3/terraform-provider-minio_3.8.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.3/terraform-provider-minio_3.8.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-minio_3.8.3_darwin_amd64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.3/terraform-provider-minio_3.8.3_darwin_amd64.zip",
+          "shasum": "8f2d864b4e50cb3acdfe233004d11a95b045fef2088fc262c0d2366322d694ae"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-minio_3.8.3_darwin_arm64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.3/terraform-provider-minio_3.8.3_darwin_arm64.zip",
+          "shasum": "68a7167c13a0550899bc53b794c45ad5c4cb238017b60027108ca9de19cfec86"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-minio_3.8.3_freebsd_386.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.3/terraform-provider-minio_3.8.3_freebsd_386.zip",
+          "shasum": "8b0cead3270d5b0d81a3e08e187d6619d6183e94a9eb5ea38fed37f1a5063b02"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-minio_3.8.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.3/terraform-provider-minio_3.8.3_freebsd_amd64.zip",
+          "shasum": "e0a772bd31289942f635cf61766d751cd8b7c76b97d09e1c521186ac4f55ca10"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-minio_3.8.3_freebsd_arm.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.3/terraform-provider-minio_3.8.3_freebsd_arm.zip",
+          "shasum": "1b34e30f618fa6bc38e439dc873e89f50a06941e7780c90077f6c4a463132bcc"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-minio_3.8.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.3/terraform-provider-minio_3.8.3_freebsd_arm64.zip",
+          "shasum": "9fc338b8b8bd6a5188a9c4bfe3213831e89fc9f5243f067f6aece376ea63ebd9"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-minio_3.8.3_linux_386.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.3/terraform-provider-minio_3.8.3_linux_386.zip",
+          "shasum": "c131a8a6c292f9c24e898368ce1e5181e349f2252c0c7b15254b3964958f3b2c"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-minio_3.8.3_linux_amd64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.3/terraform-provider-minio_3.8.3_linux_amd64.zip",
+          "shasum": "5c5e9e292715f3902b8ea5b31c50eb0f1fb0d887f333cfd099d3a66166d8c78f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-minio_3.8.3_linux_arm.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.3/terraform-provider-minio_3.8.3_linux_arm.zip",
+          "shasum": "aafcf7e26303694ccc929f6a38989dacfbda1381862c5f553e26abdb5323efa0"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-minio_3.8.3_linux_arm64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.3/terraform-provider-minio_3.8.3_linux_arm64.zip",
+          "shasum": "919b8521dae3501a2b03f99a3c7784f7f282ef4bcfa18be7fca63fab76a49386"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-minio_3.8.3_windows_386.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.3/terraform-provider-minio_3.8.3_windows_386.zip",
+          "shasum": "e8600805e904a86e86064fb62956d3dff2b4e01a5dc9e4a8db550330a780b9d5"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-minio_3.8.3_windows_amd64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.3/terraform-provider-minio_3.8.3_windows_amd64.zip",
+          "shasum": "4fc02e3c47e6587faae9a868de3cf18cb13f79cb6ca508e26d357737d32eebaf"
+        }
+      ]
+    },
+    {
+      "version": "3.8.2",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.2/terraform-provider-minio_3.8.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.2/terraform-provider-minio_3.8.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-minio_3.8.2_darwin_amd64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.2/terraform-provider-minio_3.8.2_darwin_amd64.zip",
+          "shasum": "f0fe110a49b8fda4b1882986919cee554cc47264502642b966f8166000309e15"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-minio_3.8.2_darwin_arm64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.2/terraform-provider-minio_3.8.2_darwin_arm64.zip",
+          "shasum": "afc1afe88297ea8501aee259ddeb99237606ea8b07594e958e1b73748b0562a7"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-minio_3.8.2_freebsd_386.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.2/terraform-provider-minio_3.8.2_freebsd_386.zip",
+          "shasum": "40de1721000587a5004428be5f50aaab9e8be321b46802be20816a536b158f95"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-minio_3.8.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.2/terraform-provider-minio_3.8.2_freebsd_amd64.zip",
+          "shasum": "44f185d2eb78a42455d4d514efcf42aab2d6c57f295a965d370cef45f1480558"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-minio_3.8.2_freebsd_arm.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.2/terraform-provider-minio_3.8.2_freebsd_arm.zip",
+          "shasum": "38dfdee92132507b8e5fc5c7f3e527989aa5b9cf82df4e59d3f70441e763b914"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-minio_3.8.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.2/terraform-provider-minio_3.8.2_freebsd_arm64.zip",
+          "shasum": "321b73cb270e1e22694d46c65decf061cb79c125d72d1776a90c811408d63647"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-minio_3.8.2_linux_386.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.2/terraform-provider-minio_3.8.2_linux_386.zip",
+          "shasum": "4802af0dd497ef358cec7791f1018522a7fc39b6b2bd2655eed80ee99814e0bf"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-minio_3.8.2_linux_amd64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.2/terraform-provider-minio_3.8.2_linux_amd64.zip",
+          "shasum": "2c670462a74c8805a62b4f2a8f4ed31bbd3faac3b4f5d33ef9e4f533adba6fb7"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-minio_3.8.2_linux_arm.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.2/terraform-provider-minio_3.8.2_linux_arm.zip",
+          "shasum": "8ffb9d0a348e54107eab10620822be7aa1c65015b211f2204ca491227833546b"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-minio_3.8.2_linux_arm64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.2/terraform-provider-minio_3.8.2_linux_arm64.zip",
+          "shasum": "55cc7ba8f55aba01422917feaee58ae87a79d3e989c63cd660d0e105191aa93e"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-minio_3.8.2_windows_386.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.2/terraform-provider-minio_3.8.2_windows_386.zip",
+          "shasum": "8de047b0e805e2ad313055831ee40d3f05939b7bdbb585622af6e2a31f2d3044"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-minio_3.8.2_windows_amd64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.2/terraform-provider-minio_3.8.2_windows_amd64.zip",
+          "shasum": "16923395ffcf2b1bd116c4b4a51f4bc4d1460be7850f9e6bd587c7bfae46524d"
+        }
+      ]
+    },
+    {
+      "version": "3.8.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.1/terraform-provider-minio_3.8.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.1/terraform-provider-minio_3.8.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-minio_3.8.1_darwin_amd64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.1/terraform-provider-minio_3.8.1_darwin_amd64.zip",
+          "shasum": "c297b9fee51497d4ab99167721414ce6552a3fca54ca384291738228fb6e56ba"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-minio_3.8.1_darwin_arm64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.1/terraform-provider-minio_3.8.1_darwin_arm64.zip",
+          "shasum": "8b8ce8b27bf37d153d2e2c1d0cecd7e00dcecc51cee1736ccef80c47ce46e6fc"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-minio_3.8.1_freebsd_386.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.1/terraform-provider-minio_3.8.1_freebsd_386.zip",
+          "shasum": "91f7d9e8c746759b565628ad3c1b5200bc8613d73bc0da5f1ae48bb3143bd301"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-minio_3.8.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.1/terraform-provider-minio_3.8.1_freebsd_amd64.zip",
+          "shasum": "cae786532ff691fca81aa552a5ed1096e36982b112305a7bacd4e1e6c1b894e1"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-minio_3.8.1_freebsd_arm.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.1/terraform-provider-minio_3.8.1_freebsd_arm.zip",
+          "shasum": "1f58c8d107224f8da8771a37b5d2d0d05fdd0890192f8f2ec76b74694096db74"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-minio_3.8.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.1/terraform-provider-minio_3.8.1_freebsd_arm64.zip",
+          "shasum": "d0551a941c126ba4157f5c442a10070327c260183ed25f774084f742d786db15"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-minio_3.8.1_linux_386.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.1/terraform-provider-minio_3.8.1_linux_386.zip",
+          "shasum": "361ae826f6440fd0a0ca1af3b674b488e46b35822468b07559a895f5f3aa44f7"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-minio_3.8.1_linux_amd64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.1/terraform-provider-minio_3.8.1_linux_amd64.zip",
+          "shasum": "5d600c870212ac1abdaee1ee1bf2697c313f5be17b0753d5a751e7cbe4526d1a"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-minio_3.8.1_linux_arm.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.1/terraform-provider-minio_3.8.1_linux_arm.zip",
+          "shasum": "1603fa9eba44fcd609a2c9992a518ce9df04e12939fc06a48dd4ea1edb4cb7e1"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-minio_3.8.1_linux_arm64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.1/terraform-provider-minio_3.8.1_linux_arm64.zip",
+          "shasum": "b7288ee72bd13a7bada89025cf0f2702dfdc846c9dceadd1cdab34442855dc2d"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-minio_3.8.1_windows_386.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.1/terraform-provider-minio_3.8.1_windows_386.zip",
+          "shasum": "2221a437e0c9216e1a6ef626793b18dbfa89a40f734411618cf4bbd85abb179e"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-minio_3.8.1_windows_amd64.zip",
+          "download_url": "https://github.com/terraform-provider-minio/terraform-provider-minio/releases/download/v3.8.1/terraform-provider-minio_3.8.1_windows_amd64.zip",
+          "shasum": "dfa7ab0cceb0c7dc1e25b7f30194e425d09c9006a59b26d81da2d7fbc3993b4a"
+        }
+      ]
+    },
+    {
       "version": "3.8.0",
       "protocols": [
         "5.0"
