@@ -1,6 +1,149 @@
 {
   "versions": [
     {
+      "version": "1.6.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/ciscodevnet/terraform-provider-mso/releases/download/v1.6.0/terraform-provider-mso_1.6.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/ciscodevnet/terraform-provider-mso/releases/download/v1.6.0/terraform-provider-mso_1.6.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-mso_1.6.0_darwin_amd64.zip",
+          "download_url": "https://github.com/ciscodevnet/terraform-provider-mso/releases/download/v1.6.0/terraform-provider-mso_1.6.0_darwin_amd64.zip",
+          "shasum": "8adb2f9a31acca6d649061c634458e4ec4dc93bd0c9b7a79006ed7338bd13889"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-mso_1.6.0_darwin_arm64.zip",
+          "download_url": "https://github.com/ciscodevnet/terraform-provider-mso/releases/download/v1.6.0/terraform-provider-mso_1.6.0_darwin_arm64.zip",
+          "shasum": "0a2d0bfcd5ecb269db30a134f5c1d9242f992b66c8f7bd176e83a8289e1b2ef5"
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-mso_1.6.0_freebsd_386.zip",
+          "download_url": "https://github.com/ciscodevnet/terraform-provider-mso/releases/download/v1.6.0/terraform-provider-mso_1.6.0_freebsd_386.zip",
+          "shasum": "e3bddb5d9ed86551b445b605fef44f3b89fb0f2a28ded8041bb191dd7841608d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-mso_1.6.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/ciscodevnet/terraform-provider-mso/releases/download/v1.6.0/terraform-provider-mso_1.6.0_freebsd_amd64.zip",
+          "shasum": "647ee32a8cefea9172544f9df75b6177650eab6876883a87648a443a2c187ddb"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-mso_1.6.0_freebsd_arm.zip",
+          "download_url": "https://github.com/ciscodevnet/terraform-provider-mso/releases/download/v1.6.0/terraform-provider-mso_1.6.0_freebsd_arm.zip",
+          "shasum": "e7e392411f754b27360723b6b780c04bf3471bfffb5ee8d91764ab1d9a2a3ec6"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-mso_1.6.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/ciscodevnet/terraform-provider-mso/releases/download/v1.6.0/terraform-provider-mso_1.6.0_freebsd_arm64.zip",
+          "shasum": "bb3a98bdd42530731ac9d3c42dadd01bdef3578cf6ebd4f97e6be9cef51518cb"
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-mso_1.6.0_linux_386.zip",
+          "download_url": "https://github.com/ciscodevnet/terraform-provider-mso/releases/download/v1.6.0/terraform-provider-mso_1.6.0_linux_386.zip",
+          "shasum": "361541fa2396519cf4ca53d85a4432ed997604dc1055f3d0152392a16db6b86d"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-mso_1.6.0_linux_amd64.zip",
+          "download_url": "https://github.com/ciscodevnet/terraform-provider-mso/releases/download/v1.6.0/terraform-provider-mso_1.6.0_linux_amd64.zip",
+          "shasum": "108be3e6a9fa42a3b1fe98341a0c062cbc9b7a168fea29f03bdf1e68eb90bbb6"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-mso_1.6.0_linux_arm.zip",
+          "download_url": "https://github.com/ciscodevnet/terraform-provider-mso/releases/download/v1.6.0/terraform-provider-mso_1.6.0_linux_arm.zip",
+          "shasum": "edcbecd457b36b026378b8f27e2a9e6114b5cb0746eb4c5308e1a13a745c6820"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-mso_1.6.0_linux_arm64.zip",
+          "download_url": "https://github.com/ciscodevnet/terraform-provider-mso/releases/download/v1.6.0/terraform-provider-mso_1.6.0_linux_arm64.zip",
+          "shasum": "2a781a1d77aad51eaf57d7cc0109cc8c53d2199719fd0646f67f551aacca0a80"
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-mso_1.6.0_windows_386.zip",
+          "download_url": "https://github.com/ciscodevnet/terraform-provider-mso/releases/download/v1.6.0/terraform-provider-mso_1.6.0_windows_386.zip",
+          "shasum": "397b965834133a763a9ffc1c1b2f34b09ae923e68f2247f7344d38bbd76acc99"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-mso_1.6.0_windows_amd64.zip",
+          "download_url": "https://github.com/ciscodevnet/terraform-provider-mso/releases/download/v1.6.0/terraform-provider-mso_1.6.0_windows_amd64.zip",
+          "shasum": "cba2b90966594787f573748a62d8540c4605d2f3d7153c2eede0551e02ff9aed"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-mso_1.6.0_windows_arm.zip",
+          "download_url": "https://github.com/ciscodevnet/terraform-provider-mso/releases/download/v1.6.0/terraform-provider-mso_1.6.0_windows_arm.zip",
+          "shasum": "13aa900713d380fef23e254d671314f6f2629827917f64ba2fae3a12f69e481b"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-mso_1.6.0_windows_arm64.zip",
+          "download_url": "https://github.com/ciscodevnet/terraform-provider-mso/releases/download/v1.6.0/terraform-provider-mso_1.6.0_windows_arm64.zip",
+          "shasum": "bffa38b0f29ff310e50718ff906eee2229bd0f21600bfe15ab7a10f96b850a95"
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-mso_1.6.0_openbsd_386.zip",
+          "download_url": "https://github.com/ciscodevnet/terraform-provider-mso/releases/download/v1.6.0/terraform-provider-mso_1.6.0_openbsd_386.zip",
+          "shasum": "bfd2784fa8be8ee8a661aeb86a4072dca0b1317a724e6324d40a8b3df05ecba5"
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-mso_1.6.0_openbsd_amd64.zip",
+          "download_url": "https://github.com/ciscodevnet/terraform-provider-mso/releases/download/v1.6.0/terraform-provider-mso_1.6.0_openbsd_amd64.zip",
+          "shasum": "2d8dcb7879ff9fae713e3f403fefa21b81ce55f77812951136d5b3142e552e69"
+        },
+        {
+          "os": "openbsd",
+          "arch": "arm",
+          "filename": "terraform-provider-mso_1.6.0_openbsd_arm.zip",
+          "download_url": "https://github.com/ciscodevnet/terraform-provider-mso/releases/download/v1.6.0/terraform-provider-mso_1.6.0_openbsd_arm.zip",
+          "shasum": "7ca6813fcde1a714bf4234b18cc31d398180207b369656390e756d11c03d9be8"
+        },
+        {
+          "os": "openbsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-mso_1.6.0_openbsd_arm64.zip",
+          "download_url": "https://github.com/ciscodevnet/terraform-provider-mso/releases/download/v1.6.0/terraform-provider-mso_1.6.0_openbsd_arm64.zip",
+          "shasum": "ad875b761a5a09ca411133e22cc5ec848636c28298b55a59b218a112cadd5333"
+        },
+        {
+          "os": "solaris",
+          "arch": "amd64",
+          "filename": "terraform-provider-mso_1.6.0_solaris_amd64.zip",
+          "download_url": "https://github.com/ciscodevnet/terraform-provider-mso/releases/download/v1.6.0/terraform-provider-mso_1.6.0_solaris_amd64.zip",
+          "shasum": "f4def94ca0d2e1b0eb26c8c60f96abdc19426cebc05e630ef84887a56cac31d7"
+        }
+      ]
+    },
+    {
       "version": "1.5.3",
       "protocols": [
         "5.0"
