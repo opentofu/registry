@@ -1,6 +1,93 @@
 {
   "versions": [
     {
+      "version": "1.0.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/philips-software/terraform-provider-hsdp/releases/download/v1.0.0/terraform-provider-hsdp_1.0.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/philips-software/terraform-provider-hsdp/releases/download/v1.0.0/terraform-provider-hsdp_1.0.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-hsdp_1.0.0_darwin_amd64.zip",
+          "download_url": "https://github.com/philips-software/terraform-provider-hsdp/releases/download/v1.0.0/terraform-provider-hsdp_1.0.0_darwin_amd64.zip",
+          "shasum": "9b4e23795e31a3acf7667288beec6c0821cfcc4b102fc84b8ff82f24a153057c"
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-hsdp_1.0.0_darwin_arm64.zip",
+          "download_url": "https://github.com/philips-software/terraform-provider-hsdp/releases/download/v1.0.0/terraform-provider-hsdp_1.0.0_darwin_arm64.zip",
+          "shasum": "89aabf073babdf94dfc4264bffffdeb9684207bfadbf80f2a41a79070c0a9e9c"
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-hsdp_1.0.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/philips-software/terraform-provider-hsdp/releases/download/v1.0.0/terraform-provider-hsdp_1.0.0_freebsd_amd64.zip",
+          "shasum": "ec335f4e918a9a2f8df21c46ca9acd88d85b38dddfac4cb7bd023a06306618d6"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-hsdp_1.0.0_freebsd_arm.zip",
+          "download_url": "https://github.com/philips-software/terraform-provider-hsdp/releases/download/v1.0.0/terraform-provider-hsdp_1.0.0_freebsd_arm.zip",
+          "shasum": "d7979cb80b4e6f2050f1d8fc650135f70f6feea7fc531f4186a37f038b54f92d"
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-hsdp_1.0.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/philips-software/terraform-provider-hsdp/releases/download/v1.0.0/terraform-provider-hsdp_1.0.0_freebsd_arm64.zip",
+          "shasum": "5a77734a5682a0dc7f3ee396084eca1e21011404a8f5b92a238adde7f9a4c8d1"
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-hsdp_1.0.0_linux_amd64.zip",
+          "download_url": "https://github.com/philips-software/terraform-provider-hsdp/releases/download/v1.0.0/terraform-provider-hsdp_1.0.0_linux_amd64.zip",
+          "shasum": "6abffd793d2102a7825e588e0efa07d541c7b49b45e45b76758038bd5b1ccd7f"
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-hsdp_1.0.0_linux_arm.zip",
+          "download_url": "https://github.com/philips-software/terraform-provider-hsdp/releases/download/v1.0.0/terraform-provider-hsdp_1.0.0_linux_arm.zip",
+          "shasum": "c2a8d2887d276add88aa91bd974026c4bb2480eb7a7507d298e1e434c421a5e2"
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-hsdp_1.0.0_linux_arm64.zip",
+          "download_url": "https://github.com/philips-software/terraform-provider-hsdp/releases/download/v1.0.0/terraform-provider-hsdp_1.0.0_linux_arm64.zip",
+          "shasum": "9831e5282cf7fb70733dc561333b13f5b4cd580109e60e7e0ea2355d661e6510"
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-hsdp_1.0.0_windows_amd64.zip",
+          "download_url": "https://github.com/philips-software/terraform-provider-hsdp/releases/download/v1.0.0/terraform-provider-hsdp_1.0.0_windows_amd64.zip",
+          "shasum": "361731dfcce212f5666a3b2b8b1e59efaa4dc3fb2649e8a4359e80f5d73b1ed5"
+        },
+        {
+          "os": "windows",
+          "arch": "arm",
+          "filename": "terraform-provider-hsdp_1.0.0_windows_arm.zip",
+          "download_url": "https://github.com/philips-software/terraform-provider-hsdp/releases/download/v1.0.0/terraform-provider-hsdp_1.0.0_windows_arm.zip",
+          "shasum": "0e537c528a8b7e7f970307799611dfb177b17e68b1b0c78cc6051f0b65cc8d16"
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-hsdp_1.0.0_windows_arm64.zip",
+          "download_url": "https://github.com/philips-software/terraform-provider-hsdp/releases/download/v1.0.0/terraform-provider-hsdp_1.0.0_windows_arm64.zip",
+          "shasum": "28a276327b8d56b031b2f7323463bac17e576fa57d6d6726bf2a4446e1f2c24b"
+        }
+      ]
+    },
+    {
       "version": "0.71.1",
       "protocols": [
         "5.0"
