@@ -1,0 +1,42 @@
+name: Verify PR JSON
+
+on:
+  pull_request:
+    paths:
+      - 'providers/**/*.json'
+      - 'modules/**/*.json'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6
+
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version-file: './src/go.mod'
+
+      - name: Verify PR JSON
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        working-directory: ./src
+        run: ../.github/scripts/verify-pr-json.sh
+
+      - name: Comment on PR with errors
+        if: failure()
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          if [[ -f /tmp/verify-errors.md ]]; then
+            gh pr comment "${{ github.event.pull_request.number }}" --body-file /tmp/verify-errors.md
+          fi
