@@ -22,7 +22,7 @@ HEADER
 }
 
 # Compare two JSON files semantically (normalized key order and formatting)
-# Returns 0 if equal, 1 if different. Stores diff output in $json_diff_output.
+# Stores diff output in $json_diff_output. Sets return code 0 if equal, 1 if different.
 json_diff() {
   json_diff_output=$(diff -u <(jq --sort-keys '.' "$1") <(jq --sort-keys '.' "$2") || true)
   [[ -z "${json_diff_output}" ]]
@@ -52,7 +52,11 @@ for file in ${changed_providers}; do
   if ! go run ./cmd/add-provider -repository="${repo}" -provider-data="${tmpdir}" -output="${tmpdir}/output.json" 2>&1; then
     echo "::error::Failed to regenerate provider ${repo}"
     write_error_header
-    printf '### Provider `%s`\nFailed to regenerate JSON from source repository.\n\n' "${repo}" >> "${error_file}"
+    cat >> "${error_file}" <<EOF
+### Provider \`${repo}\`
+Failed to regenerate JSON from source repository.
+
+EOF
     failed=1
     rm -rf "${tmpdir}"
     echo "::endgroup::"
@@ -65,20 +69,30 @@ for file in ${changed_providers}; do
   if [[ ! -f "${generated_file}" ]]; then
     echo "::error::Regeneration produced no output file for provider ${repo}"
     write_error_header
-    printf '### Provider `%s`\nRegeneration produced no output file.\n\n' "${repo}" >> "${error_file}"
+    cat >> "${error_file}" <<EOF
+### Provider \`${repo}\`
+Regeneration produced no output file.
+
+EOF
     failed=1
     rm -rf "${tmpdir}"
     echo "::endgroup::"
     continue
   fi
 
-  if ! json_diff "../${file}" "${generated_file}"; then
+  json_diff "../${file}" "${generated_file}" || true
+  if [[ -n "${json_diff_output}" ]]; then
     echo "${json_diff_output}"
     echo "::error::Provider ${repo} JSON does not match regenerated output. PR may contain tampered data."
     write_error_header
-    printf '### Provider `%s`\nJSON does not match regenerated output:\n```diff\n' "${repo}" >> "${error_file}"
-    echo "${json_diff_output}" >> "${error_file}"
-    printf '```\n\n' >> "${error_file}"
+    cat >> "${error_file}" <<EOF
+### Provider \`${repo}\`
+JSON does not match regenerated output:
+\`\`\`diff
+${json_diff_output}
+\`\`\`
+
+EOF
     failed=1
   else
     echo "PASS: Provider ${repo} JSON matches regenerated output."
@@ -104,7 +118,11 @@ for file in ${changed_modules}; do
   if ! go run ./cmd/add-module -repository="${repo}" -module-data="${tmpdir}" -output="${tmpdir}/output.json" 2>&1; then
     echo "::error::Failed to regenerate module ${repo}"
     write_error_header
-    printf '### Module `%s`\nFailed to regenerate JSON from source repository.\n\n' "${repo}" >> "${error_file}"
+    cat >> "${error_file}" <<EOF
+### Module \`${repo}\`
+Failed to regenerate JSON from source repository.
+
+EOF
     failed=1
     rm -rf "${tmpdir}"
     echo "::endgroup::"
@@ -117,20 +135,30 @@ for file in ${changed_modules}; do
   if [[ ! -f "${generated_file}" ]]; then
     echo "::error::Regeneration produced no output file for module ${repo}"
     write_error_header
-    printf '### Module `%s`\nRegeneration produced no output file.\n\n' "${repo}" >> "${error_file}"
+    cat >> "${error_file}" <<EOF
+### Module \`${repo}\`
+Regeneration produced no output file.
+
+EOF
     failed=1
     rm -rf "${tmpdir}"
     echo "::endgroup::"
     continue
   fi
 
-  if ! json_diff "../${file}" "${generated_file}"; then
+  json_diff "../${file}" "${generated_file}" || true
+  if [[ -n "${json_diff_output}" ]]; then
     echo "${json_diff_output}"
     echo "::error::Module ${repo} JSON does not match regenerated output. PR may contain tampered data."
     write_error_header
-    printf '### Module `%s`\nJSON does not match regenerated output:\n```diff\n' "${repo}" >> "${error_file}"
-    echo "${json_diff_output}" >> "${error_file}"
-    printf '```\n\n' >> "${error_file}"
+    cat >> "${error_file}" <<EOF
+### Module \`${repo}\`
+JSON does not match regenerated output:
+\`\`\`diff
+${json_diff_output}
+\`\`\`
+
+EOF
     failed=1
   else
     echo "PASS: Module ${repo} JSON matches regenerated output."

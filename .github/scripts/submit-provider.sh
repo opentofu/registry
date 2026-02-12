@@ -61,6 +61,8 @@ git commit -s -m "Create provider ${namespace}/${name}"
 git push -u origin "${branch}"
 
 # Create pull request and update issue
+# GITHUB_SERVER_URL, GITHUB_REPOSITORY, GITHUB_RUN_ID are default GitHub Actions env vars
+# shellcheck disable=SC2154
 run_url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
 pr_body="Created ${jsonfile/../src/} for provider ${namespace}/${name}.
 
