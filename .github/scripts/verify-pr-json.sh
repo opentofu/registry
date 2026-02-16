@@ -80,6 +80,7 @@ EOF
 		continue
 	fi
 
+	# shellcheck disable=SC2310
 	if ! json_diff "../${file}" "${generated_file}"; then
 		echo "${json_diff_output}"
 		echo "::error::Provider ${repo} JSON does not match regenerated output. PR may contain tampered data."
@@ -144,6 +145,7 @@ EOF
 		continue
 	fi
 
+	# shellcheck disable=SC2310
 	if ! json_diff "../${file}" "${generated_file}"; then
 		echo "${json_diff_output}"
 		echo "::error::Module ${repo} JSON does not match regenerated output. PR may contain tampered data."
