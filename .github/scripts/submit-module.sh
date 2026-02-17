@@ -24,6 +24,14 @@ if [[ ! "${repository}" =~ ^[a-zA-Z0-9-]+/terraform-[a-zA-Z0-9-]+$ ]]; then
   exit 1
 fi
 
+# Detect if the user accidentally submitted a provider repo as a module.
+# Provider repos follow the pattern terraform-provider-NAME, which also matches
+# the module regex above. Catch this early with a helpful redirect message.
+if [[ "${repository}" =~ ^[a-zA-Z0-9-]+/terraform-provider-[a-zA-Z0-9-]+$ ]]; then
+  gh issue comment "${NUMBER}" -b "Failed validation: It looks like \`${repository}\` is a **provider** repository, not a module. Provider repos follow the \`terraform-provider-NAME\` naming convention. If you meant to submit a provider, please open a new issue using the [provider submission form](https://github.com/opentofu/registry/issues/new?template=provider.yml). Module repositories should follow the pattern \`ORGANIZATION/terraform-NAME-TARGETSYSTEM\`."
+  exit 1
+fi
+
 set +e
 if ! go run ./cmd/add-module -repository="${repository}" -output=./output.json ; then
   set -euo pipefail
