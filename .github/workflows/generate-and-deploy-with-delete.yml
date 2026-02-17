@@ -11,6 +11,10 @@ on:
           - Development
           - Production-with-delete
 
+concurrency:
+  group: r2-sync
+  cancel-in-progress: false
+
 jobs:
   generate-and-sync:
     runs-on: ubuntu-latest

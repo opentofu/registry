@@ -13,6 +13,10 @@ on:
           - Development
           - Production
 
+concurrency:
+  group: r2-sync-recent
+  cancel-in-progress: true
+
 jobs:
   generate-and-sync:
     timeout-minutes: 10
