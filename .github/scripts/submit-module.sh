@@ -70,6 +70,15 @@ git commit -s -m "Create module ${namespace}/${name}/${target}"
 git push -u origin "${branch}"
 
 # Create pull request and update issue
-pr=$(gh pr create --title "${TITLE}" --body "Created ${jsonfile/../src/} for module ${namespace}/${name}/${target}.  Closes #${NUMBER}.") #--assignee opentofu/core-engineers)
+# GITHUB_SERVER_URL, GITHUB_REPOSITORY, GITHUB_RUN_ID are default GitHub Actions env vars
+# shellcheck disable=SC2154
+run_url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+pr_body="Created ${jsonfile/../src/} for module ${namespace}/${name}/${target}.
+
+- **Source Issue:** #${NUMBER}
+- **Created by:** [GitHub Actions Run](${run_url})
+
+Closes #${NUMBER}."
+pr=$(gh pr create --title "${TITLE}" --body "${pr_body}")
 gh issue comment "${NUMBER}" -b "Your submission has been validated and has moved on to the pull request phase (${pr}).  This issue has been locked."
 gh issue lock "${NUMBER}" -r resolved
