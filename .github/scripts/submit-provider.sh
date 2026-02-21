@@ -16,6 +16,20 @@ if [[ -z "${NUMBER}" ]]; then
   exit 1
 fi
 
+# Post initial comment with Actions run link and validation summary
+ACTION_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+gh issue comment "${NUMBER}" -b "## Automated Validation Started
+
+**GitHub Actions Run:** ${ACTION_URL}
+
+### Validation Steps
+- ✓ Checking provider repository format
+- ✓ Validating provider metadata
+- ✓ Creating provider JSON file
+- ✓ Opening pull request
+
+Results will be posted here when validation completes."
+
 repository=$(echo "${BODY}" | grep "### Provider Repository" -A2 | tail -n1 | tr "[:upper:]" "[:lower:]" | sed -e 's/[\r\n]//g')
 repository=$(echo -n "${repository}" | sed -e 's|https://github.com/||' -e 's|github.com/||')
 
