@@ -20,6 +20,21 @@ if [[ -z "${GH_USER}" ]]; then
   exit 1
 fi
 
+# Post initial comment with Actions run link and validation summary
+ACTION_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+gh issue comment "${NUMBER}" -b "## Automated Validation Started
+
+**GitHub Actions Run:** ${ACTION_URL}
+
+### Validation Steps
+- ✓ Checking provider namespace and name
+- ✓ Validating GPG public key format
+- ✓ Verifying key ownership
+- ✓ Adding key to registry
+- ✓ Opening pull request
+
+Results will be posted here when validation completes."
+
 namespace=$(echo "${BODY}" | grep "### Provider Namespace" -A2 | tail -n1 | tr "[:upper:]" "[:lower:]" | sed -e 's/[\r\n]//g')
 providername=$(echo "${BODY}" | grep "### Provider Name" -A2 | tail -n1 | tr "[:upper:]" "[:lower:]" | sed -e 's/[\r\n]//g')
 keydata=$(echo "${BODY}" | grep -A 1000 "BEGIN PGP PUBLIC KEY BLOCK"  | grep -B 1000 "END PGP PUBLIC KEY BLOCK")
