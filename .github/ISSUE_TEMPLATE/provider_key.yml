@@ -21,7 +21,11 @@ body:
     id: public_membership
     attributes:
       label: Public Membership
-      description: If this is for a GitHub organization, I have [made my membership in that organization public](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-your-membership-in-organizations/publicizing-or-hiding-organization-membership).
+      description: >-
+        **Required:** If this is for a GitHub organization, your membership in that organization **must** be public.
+        This submission will fail automated validation if your membership is not publicly visible.
+        [How to make your membership public](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-your-membership-in-organizations/publicizing-or-hiding-organization-membership).
+        If you are unable to make your membership public, please [open a different issue](https://github.com/opentofu/registry/issues/new) to contact the OpenTofu team for assistance.
       options:
         - label: I have made my membership public
           required: true
