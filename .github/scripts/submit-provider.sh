@@ -31,7 +31,9 @@ if ! go run ./cmd/add-provider -repository="${repository}" -output=./output.json
     gh issue close "${NUMBER}" -c "$(jq -r '.validation' < ./output.json || true)"
     exit 0
   else
-    gh issue comment "${NUMBER}" -b "$(jq -r '.validation' < ./output.json || true)"
+    error_msg="$(jq -r '.validation' < ./output.json || true)"
+    error_msg="${error_msg}<br\>After the issue is fixed, update the title or the description of the issue to retrigger the submission workflow."
+    gh issue comment "${NUMBER}" -b "${error_msg}"
     exit 1
   fi
 fi

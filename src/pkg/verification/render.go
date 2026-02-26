@@ -49,5 +49,9 @@ func (r *Result) RenderMarkdown() string {
 		}
 		output += "\n"
 	}
+	if r.DidFail() {
+		output += "\nAfter the issue is fixed, update the title or the description of the issue to retrigger the submission workflow."
+		output += "\n"
+	}
 	return output
 }
