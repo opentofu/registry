@@ -40,7 +40,7 @@ if ! go run ./cmd/add-module -repository="${repository}" -output=./output.json ;
     exit 0
   else
     error_msg="$(jq -r '.validation' < ./output.json || true)"
-    error_msg="${error_msg}<br\>After the issue is fixed, update the title or the description of the issue to retrigger the submission workflow."
+    error_msg="${error_msg}<br/>After the issue is fixed, update the title or the description of the issue to retrigger the submission workflow."
     gh issue comment "${NUMBER}" -b "${error_msg}"
     exit 1
   fi
