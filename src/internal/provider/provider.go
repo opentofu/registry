@@ -38,6 +38,7 @@ type Target struct {
 	DownloadURL string `json:"download_url"` // The direct URL to download the provider release.
 	SHASum      string `json:"shasum"`       // The SHA checksum of the provider release.
 	Hash1       string `json:"h1"`           // The Hash Type 1 of the provider release *contents*
+	Size        int    `json:"size"`         // The size of the zipped provider release in bytes
 }
 
 // Provider contains information about a provider.

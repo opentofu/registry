@@ -91,9 +91,10 @@ func (p Provider) VersionFromTag(release string) (*Version, error) {
 				}
 			}
 
-			target.Hash1, err = p.CalculateHash1(target.DownloadURL, target.SHASum)
+			target.Hash1, target.Size, err = p.CalculateHash1AndSize(target.DownloadURL, target.SHASum)
 			if err != nil {
-				// Release is inaccessable, misconfigured, or corrupt
+				// Release is inaccessible, misconfigured, or corrupt
+				// TODO consider of this constitutes a failure, or if we should fall back to pre-h1 logic
 				return nil, err
 			}
 

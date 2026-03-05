@@ -10,32 +10,34 @@ import (
 	"golang.org/x/mod/sumdb/dirhash"
 )
 
-func (p Provider) CalculateHash1(releaseDownloadUrl string, shaExpected string) (string, error) {
+func (p Provider) CalculateHash1AndSize(releaseDownloadUrl string, shaExpected string) (string, int, error) {
 	contents, assetErr := p.Github.DownloadAssetContents(releaseDownloadUrl)
 	if assetErr != nil {
-		return "", fmt.Errorf("failed to download release for calcualting hashes: %w", assetErr)
+		return "", 0, fmt.Errorf("failed to download release for calculating hashes: %w", assetErr)
 	}
+
+	size := len(contents)
 
 	shaHasher := sha256.New()
 	_, err := io.Copy(shaHasher, bytes.NewBuffer(contents))
 	if err != nil {
-		panic(err)
+		return "", 0, fmt.Errorf("failed to calculate sha256 from contents: %w", err)
 	}
 
 	shaCalculated := fmt.Sprintf("%x", shaHasher.Sum(nil))
 	if shaCalculated != shaExpected {
-		return "", fmt.Errorf("expected SHA256 %q, got %q", shaExpected, shaCalculated)
+		return "", 0, fmt.Errorf("expected sha256 %q, got %q", shaExpected, shaCalculated)
 	}
 
 	h1, err := HashZip(contents, dirhash.Hash1)
 	if err != nil {
-		return "", fmt.Errorf("unable to hash provider release: %w", err)
+		return "", 0, fmt.Errorf("unable to hash provider release: %w", err)
 	}
-	return h1, nil
+	return h1, size, nil
 }
 
 // Inspired heavily from golang.org/x/mod/sumdb/dirhash, but re-written to use a in-memory zip stream
-// Ideally this would be contributed upstream
+// Ideally this would be contributed upstream. https://github.com/golang/go/issues/76021
 func HashZip(zipdata []byte, hash dirhash.Hash) (string, error) {
 	z, err := zip.NewReader(bytes.NewReader(zipdata), int64(len(zipdata)))
 	if err != nil {
