@@ -18,6 +18,9 @@ To add your provider, module or GPG key to the OpenTofu Registry you can submit 
 
 Fill in the required fields and submit the issue. Once the issue has been submitted, the OpenTofu team will review this and either approve or deny the submission.
 
+> [!IMPORTANT]
+> **Submissions must be made through the GitHub issue form UI using the links above.** Do not open pull requests to add registry data directly, and do not create issues using the `gh` CLI, the GitHub API, or other tooling. The automated validation and processing pipeline depends on the structured data that only the issue form UI provides. Submissions made outside of the issue form UI will not be processed and will be closed.
+
 ## Contributing To The Codebase
 
 Contributions are always welcome!
