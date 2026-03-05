@@ -18,7 +18,8 @@ jobs:
         with:
           go-version-file: src/go.mod
           cache-dependency-path: src/go.sum
-      - name: Backend Linting
+      - name: Linting
         uses: golangci/golangci-lint-action@v6
         with:
           version: v1.62
+          working-directory: src
