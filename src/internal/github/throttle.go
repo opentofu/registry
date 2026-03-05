@@ -21,7 +21,7 @@ func NewThrottle(ctx context.Context, every time.Duration, concurrent int) Throt
 	return func() ThrottleToken {
 		id := <-checkout
 		// TODO We might want to handle the returned error from Wait here
-		limiter.Wait(ctx)
+		_ = limiter.Wait(ctx)
 		return func() { checkout <- id }
 	}
 }

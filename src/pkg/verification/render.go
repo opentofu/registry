@@ -7,7 +7,7 @@ func (r *Result) RenderMarkdown() string {
 	for _, step := range r.Steps {
 		output += fmt.Sprintf("## %s\n", step.Name)
 		for _, remark := range step.Remarks {
-			output += fmt.Sprintf("> [!NOTE]\n")
+			output += "> [!NOTE]\n"
 			output += fmt.Sprintf("> %s\n\n", remark)
 		}
 		if step.Status == StatusSuccess {
@@ -28,7 +28,7 @@ func (r *Result) RenderMarkdown() string {
 		for _, subStep := range step.SubSteps {
 			output += fmt.Sprintf("### %s\n", subStep.Name)
 			for _, remark := range subStep.Remarks {
-				output += fmt.Sprintf("> [!NOTE]\n")
+				output += "> [!NOTE]\n"
 				output += fmt.Sprintf("> %s\n\n", remark)
 			}
 			if subStep.Status == StatusSuccess {

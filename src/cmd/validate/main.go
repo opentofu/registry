@@ -91,9 +91,9 @@ CMD:
 			slog.String("type", errType),
 			slog.String("path", path),
 		}
-		switch err.(type) {
+		switch typedErr := err.(type) {
 		case validate.Errors:
-			for _, e := range err.(validate.Errors) {
+			for _, e := range typedErr {
 				logger.Error(e.Error(), args...)
 			}
 		default:

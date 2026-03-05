@@ -76,9 +76,8 @@ func (c Client) WithLogger(log *slog.Logger) Client {
 // transport is a http.RoundTripper that makes sure all requests have the
 // correct User-Agent and Authorization headers set.
 type transport struct {
-	token  string
-	ctx    context.Context
-	parent http.Transport
+	token string
+	ctx   context.Context
 }
 
 // RoundTrip is needed to implement the http.RoundTripper interface.
