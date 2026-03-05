@@ -5,6 +5,7 @@ import (
 	"flag"
 	"log/slog"
 	"os"
+	"time"
 
 	"github.com/opentofu/registry-stable/internal/blacklist"
 	"github.com/opentofu/registry-stable/internal/github"
@@ -13,6 +14,8 @@ import (
 )
 
 func main() {
+	started := time.Now()
+
 	logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
 	logger.Info("Starting version bump process for modules and providers")
 
@@ -20,6 +23,7 @@ func main() {
 	moduleNamespace := flag.String("module-namespace", "", "Which module namespace to limit the command to")
 	providerDataDir := flag.String("provider-data", "../providers", "Directory containing the provider data")
 	providerNamespace := flag.String("provider-namespace", "", "Which provider namespace to limit the command to")
+	targetDuration := flag.Duration("target-duration", time.Minute*5, "Used to limit how much of a backfill this command can perform")
 
 	flag.Parse()
 
@@ -67,4 +71,26 @@ func main() {
 	}
 
 	logger.Info("Completed version bump process for modules and providers")
+
+	deadline := started.Add(*targetDuration)
+	remainingTime := deadline.Sub(time.Now())
+
+	ctx, _ = context.WithTimeout(ctx, remainingTime)
+
+	if ctx.Err() != nil {
+		logger.Info("Skipping backfill process, deadline exceeded")
+		return
+	}
+
+	logger.Info("Beginning backfill process for providers", slog.Any("time_allocated", remainingTime))
+
+	err = providers.Parallel(20, func(p provider.Provider) error {
+		if ctx.Err() != nil {
+			// Outta-time
+			return nil
+		}
+		return p.BackfillVersionData(ctx)
+	})
+
+	logger.Info("Completed backfill process for providers")
 }
