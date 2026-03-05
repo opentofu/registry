@@ -55,9 +55,18 @@ type ProviderVersionListingResponse struct {
 }
 
 type ProviderVersionResponseItem struct {
-	Version   string     `json:"version"`   // The version number of the provider.
-	Protocols []string   `json:"protocols"` // The protocol versions the provider supports.
-	Platforms []Platform `json:"platforms"` // A list of platforms for which this provider version is available.
+	Version   string             `json:"version"`   // The version number of the provider.
+	Protocols []string           `json:"protocols"` // The protocol versions the provider supports.
+	Platforms []ProviderPlatform `json:"platforms"` // A list of platforms for which this provider version is available.
+}
+
+// ProviderPlatform represents a platform that a provider supports.
+type ProviderPlatform struct {
+	OS   string `json:"os"`
+	Arch string `json:"arch"`
+	// Extensions
+	Hashes      []string `json:"hashes"`
+	PackageSize int      `json:"package_size,omitempty"`
 }
 
 // ProviderVersionDetails provides comprehensive details about a specific provider version.
@@ -73,9 +82,17 @@ type ProviderVersionDetails struct {
 	SHASumsSignatureURL string      `json:"shasums_signature_url"` // The URL to the GPG signature of the SHA checksums file.
 	SHASum              string      `json:"shasum"`                // The SHA checksum of the provider binary.
 	SigningKeys         SigningKeys `json:"signing_keys"`          // The signing keys used for this provider version.
+	// Extensions
+	Packages map[string]ProviderPackage `json:"packages"` // The package data for all platforms available for this provider version.
 }
 
 // SigningKeys represents the GPG public keys used to sign a provider version.
 type SigningKeys struct {
 	GPGPublicKeys []gpg.Key `json:"gpg_public_keys"` // A list of GPG public keys.
+}
+
+// ProviderPackage represents data we have scraped and computed about a given provider package on a platform.
+type ProviderPackage struct {
+	Hashes      []string `json:"hashes"`
+	PackageSize int      `json:"package_size,omitempty"`
 }

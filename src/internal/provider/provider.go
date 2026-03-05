@@ -41,6 +41,16 @@ type Target struct {
 	Size        int    `json:"size"`         // The size of the zipped provider release in bytes
 }
 
+func (t *Target) Hashes() []string {
+	hashes := []string{
+		"zh:" + t.SHASum,
+	}
+	if t.Hash1 != "" {
+		hashes = append(hashes, t.Hash1)
+	}
+	return hashes
+}
+
 // Provider contains information about a provider.
 type Provider struct {
 	ProviderName string // The provider name

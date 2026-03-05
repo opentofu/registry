@@ -65,13 +65,15 @@ func (p ProviderGenerator) VersionListing() ProviderVersionListingResponse {
 		verResp := ProviderVersionResponseItem{
 			Version:   ver.Version,
 			Protocols: ver.Protocols,
-			Platforms: make([]Platform, len(ver.Targets)),
+			Platforms: make([]ProviderPlatform, len(ver.Targets)),
 		}
 
 		for targetIdx, target := range ver.Targets {
-			verResp.Platforms[targetIdx] = Platform{
-				OS:   target.OS,
-				Arch: target.Arch,
+			verResp.Platforms[targetIdx] = ProviderPlatform{
+				OS:          target.OS,
+				Arch:        target.Arch,
+				PackageSize: target.Size,
+				Hashes:      target.Hashes(),
 			}
 		}
 		versions[versionIdx] = verResp
@@ -100,6 +102,15 @@ func (p ProviderGenerator) VersionDetails() (map[string]ProviderVersionDetails, 
 	}
 
 	for _, ver := range p.Metadata.Versions {
+		packages := map[string]ProviderPackage{}
+		for _, target := range ver.Targets {
+			pkg := ProviderPackage{
+				PackageSize: target.Size,
+				Hashes:      target.Hashes(),
+			}
+			packages[fmt.Sprintf("%s_%s", target.OS, target.Arch)] = pkg
+		}
+
 		for _, target := range ver.Targets {
 			details := ProviderVersionDetails{
 				Protocols:           ver.Protocols,
@@ -113,6 +124,7 @@ func (p ProviderGenerator) VersionDetails() (map[string]ProviderVersionDetails, 
 				SigningKeys: SigningKeys{
 					GPGPublicKeys: keys,
 				},
+				Packages: packages,
 			}
 			versionDetails[p.VersionDownloadPath(ver, details)] = details
 		}
