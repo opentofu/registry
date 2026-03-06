@@ -74,7 +74,7 @@ func main() {
 	logger.Info("Completed version bump process for modules and providers")
 
 	deadline := started.Add(*targetDuration)
-	remainingTime := deadline.Sub(time.Now())
+	remainingTime := time.Until(deadline)
 
 	ctx, cancel := context.WithTimeout(ctx, remainingTime)
 	defer cancel()
@@ -111,6 +111,11 @@ func main() {
 		}
 		return err
 	})
+
+	if err != nil {
+		logger.Error("Failed to backfill providers", slog.Any("err", err))
+		os.Exit(1)
+	}
 
 	logger.Info("Completed backfill process for providers")
 }
