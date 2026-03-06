@@ -14,13 +14,13 @@ func (c Client) IsUserInOrganization(username string, org string) (bool, error) 
 	}
 
 	// user/org is not case sensitive here
-	check_url := fmt.Sprintf("https://api.github.com/orgs/%s/public_members/%s", org, username)
+	checkURL := fmt.Sprintf("https://api.github.com/orgs/%s/public_members/%s", org, username)
 
-	resp, err := c.httpClient.Get(check_url)
+	resp, err := c.httpClient.Get(checkURL)
 	if err != nil {
 		return false, err
 	}
-	resp.Body.Close()
+	_ = resp.Body.Close()
 
 	switch resp.StatusCode {
 	case http.StatusNotFound:

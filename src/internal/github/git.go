@@ -38,27 +38,27 @@ func parseTagsFromStdout(lines []string) ([]string, error) {
 }
 
 // GetTags lists the tags of the remote repository and returns the refs/tags/ found
-func (c Client) GetTags(repositoryUrl string) ([]string, error) {
+func (c Client) GetTags(repositoryURL string) ([]string, error) {
 	done := c.cliThrottle()
 	defer done()
 
-	c.log.Info("Getting tags for repository", slog.String("repository", repositoryUrl))
+	c.log.Info("Getting tags for repository", slog.String("repository", repositoryURL))
 
 	var buf bytes.Buffer
 	var bufErr bytes.Buffer
-	cmd := exec.Command("git", "ls-remote", "--tags", "--refs", repositoryUrl)
+	cmd := exec.Command("git", "ls-remote", "--tags", "--refs", repositoryURL)
 	cmd.Stdout = &buf
 	cmd.Stderr = &bufErr
 
 	if err := cmd.Run(); err != nil {
-		return nil, fmt.Errorf("could not get tags for %s, %w: %s", repositoryUrl, err, bufErr.String())
+		return nil, fmt.Errorf("could not get tags for %s, %w: %s", repositoryURL, err, bufErr.String())
 	}
 
 	tags, err := parseTagsFromStdout(strings.Split(buf.String(), "\n"))
 	if err != nil {
-		return nil, fmt.Errorf("could not parse tags for %s: %w", repositoryUrl, err)
+		return nil, fmt.Errorf("could not parse tags for %s: %w", repositoryURL, err)
 	}
 
-	c.log.Info("Found tags for repository", slog.String("repository", repositoryUrl), slog.Int("count", len(tags)))
+	c.log.Info("Found tags for repository", slog.String("repository", repositoryURL), slog.Int("count", len(tags)))
 	return tags, nil
 }

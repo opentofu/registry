@@ -47,7 +47,7 @@ CMD:
 
 	var (
 		err     error
-		errType string = errorJSONParsing
+		errType = errorJSONParsing
 	)
 	switch cmd := args[0]; cmd {
 	case "module":
@@ -113,7 +113,7 @@ func readJSONFile(p string, v any) error {
 	if err != nil {
 		return err
 	}
-	defer f.Close()
+	defer func() { _ = f.Close() }()
 
 	return json.NewDecoder(f).Decode(v)
 }
