@@ -64,9 +64,6 @@ type ProviderVersionResponseItem struct {
 type ProviderPlatform struct {
 	OS   string `json:"os"`
 	Arch string `json:"arch"`
-	// Extensions
-	Hashes      []string `json:"hashes"`
-	PackageSize int      `json:"package_size,omitempty"`
 }
 
 // ProviderVersionDetails provides comprehensive details about a specific provider version.

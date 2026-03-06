@@ -70,10 +70,8 @@ func (p ProviderGenerator) VersionListing() ProviderVersionListingResponse {
 
 		for targetIdx, target := range ver.Targets {
 			verResp.Platforms[targetIdx] = ProviderPlatform{
-				OS:          target.OS,
-				Arch:        target.Arch,
-				PackageSize: target.Size,
-				Hashes:      target.Hashes(),
+				OS:   target.OS,
+				Arch: target.Arch,
 			}
 		}
 		versions[versionIdx] = verResp
