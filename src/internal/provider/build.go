@@ -118,14 +118,6 @@ func (p Provider) buildMetadata() (*Metadata, error) {
 		return nil, nil
 	}
 
-	shouldUpdate, err := p.shouldUpdateMetadataFile()
-	if err != nil {
-		p.Logger.Warn("Failed to determine update status, forcing update", slog.Any("err", err))
-	} else if !shouldUpdate {
-		p.Logger.Info("No version bump required, latest versions exist")
-		return nil, nil
-	}
-
 	type versionResult struct {
 		r   string
 		v   *Version

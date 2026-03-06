@@ -2,7 +2,6 @@ package provider
 
 import (
 	"errors"
-	"fmt"
 	"log/slog"
 
 	"golang.org/x/mod/semver"
@@ -20,34 +19,6 @@ func (p Provider) UpdateMetadataFile() error {
 	p.Logger.Info("Completed provider version bump")
 
 	return err
-}
-
-func (p Provider) shouldUpdateMetadataFile() (bool, error) {
-	semVerTag, err := p.getLastSemVerTag()
-	if err != nil {
-		return false, err
-	}
-
-	if semVerTag == "" {
-		// Repo unavailable or tags deleted
-		return false, nil
-	}
-
-	fileContent, err := p.ReadMetadata()
-	if err != nil {
-		return false, err
-	}
-
-	for _, v := range fileContent.Versions {
-		versionWithPrefix := fmt.Sprintf("v%s", v.Version)
-		if versionWithPrefix == semVerTag {
-			p.Logger.Info("Found latest tag, nothing to update...", slog.String("tag", semVerTag))
-			return false, nil
-		}
-	}
-
-	p.Logger.Info("Could not find latest tag, updating...", slog.String("tag", semVerTag))
-	return true, nil
 }
 
 // getSemVerTagsFromRSS returns a list of semver tags from the RSS feed
