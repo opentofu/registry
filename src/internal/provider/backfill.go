@@ -1,6 +1,9 @@
 package provider
 
-import "context"
+import (
+	"context"
+	"errors"
+)
 
 func (p *Provider) BackfillVersionData(ctx context.Context) error {
 	p.Logger.Info("Beginning version backfill process")
@@ -12,9 +15,12 @@ func (p *Provider) BackfillVersionData(ctx context.Context) error {
 
 	madeChanges := false
 	for key, version := range meta.Versions {
-		if ctx.Err() != nil {
-			// Outta-time
-			break
+		if err := ctx.Err(); err != nil {
+			if errors.Is(err, context.DeadlineExceeded) {
+				// Outta-time
+				break
+			}
+			return err
 		}
 
 		// Check to see if this version has already

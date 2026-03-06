@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"errors"
 	"flag"
 	"log/slog"
 	"os"
@@ -75,9 +76,10 @@ func main() {
 	deadline := started.Add(*targetDuration)
 	remainingTime := deadline.Sub(time.Now())
 
-	ctx, _ = context.WithTimeout(ctx, remainingTime)
+	ctx, cancel := context.WithTimeout(ctx, remainingTime)
+	defer cancel()
 
-	if ctx.Err() != nil {
+	if ctx.Err() == context.DeadlineExceeded {
 		logger.Info("Skipping backfill process, deadline exceeded")
 		return
 	}
@@ -85,9 +87,12 @@ func main() {
 	logger.Info("Beginning backfill process for providers", slog.Any("time_allocated", remainingTime))
 
 	err = providers.Parallel(20, func(p provider.Provider) error {
-		if ctx.Err() != nil {
-			// Outta-time
-			return nil
+		if err := ctx.Err(); err != nil {
+			if errors.Is(err, context.DeadlineExceeded) {
+				// Outta-time
+				return nil
+			}
+			return err
 		}
 		return p.BackfillVersionData(ctx)
 	})
