@@ -11,7 +11,7 @@ import (
 )
 
 func (p Provider) CalculateHash1AndSize(releaseDownloadUrl string, shaExpected string) (string, int, error) {
-	contents, assetErr := p.Github.DownloadAssetContents(releaseDownloadUrl)
+	contents, assetErr := p.Github.DownloadAssetContentsLimited(releaseDownloadUrl, 256*1024*1024) // 256MB max
 	if assetErr != nil {
 		return "", 0, fmt.Errorf("failed to download release for calculating hashes: %w", assetErr)
 	}
