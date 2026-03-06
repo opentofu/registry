@@ -80,7 +80,7 @@ func main() {
 			return err
 		}
 		for _, p := range providers {
-			if strings.ToLower(p.RepositoryURL()) == strings.ToLower(submitted.RepositoryURL()) {
+			if strings.EqualFold(p.RepositoryURL(), submitted.RepositoryURL()) {
 				output.Exists = true
 				return fmt.Errorf("Repository already exists in the registry, %s", p.RepositoryURL())
 			}

@@ -94,7 +94,7 @@ func (m Module) getSemverTags() ([]string, error) {
 	}
 
 	semverSortFunc := func(a, b string) int {
-		return -semver.Compare(fmt.Sprintf(a), fmt.Sprintf(b))
+		return -semver.Compare(a, b)
 	}
 	slices.SortFunc(semverTags, semverSortFunc)
 

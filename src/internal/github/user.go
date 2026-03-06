@@ -9,7 +9,7 @@ import (
 func (c Client) IsUserInOrganization(username string, org string) (bool, error) {
 	// First of all, check if the organization is the user's personal GitHub organization
 	// Here, we can simply check if the username is identical to the organization name
-	if strings.ToLower(username) == strings.ToLower(org) {
+	if strings.EqualFold(username, org) {
 		return true, nil
 	}
 
