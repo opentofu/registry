@@ -7,6 +7,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"time"
 
 	"github.com/opentofu/registry-stable/internal/blacklist"
 	"github.com/opentofu/registry-stable/internal/files"
@@ -15,10 +16,11 @@ import (
 
 // Metadata contains information about the provider.
 type Metadata struct {
-	Repository string       `json:"repository,omitempty"` // Optional. Custom repository from which to fetch the provider's metadata.
-	Versions   []Version    `json:"versions"`             // A list of version data, for each supported provider version.
-	Warnings   []string     `json:"warnings,omitempty"`   // Warnings associated with this provider.
-	Logger     *slog.Logger `json:"-"`
+	Repository    string         `json:"repository,omitempty"`      // Optional. Custom repository from which to fetch the provider's metadata.
+	Versions      []Version      `json:"versions"`                  // A list of version data, for each supported provider version.
+	VersionErrors []VersionError `json:"versions_errors,omitempty"` // A list of versions which are not valid due to errors encountered during processing.
+	Warnings      []string       `json:"warnings,omitempty"`        // Warnings associated with this provider.
+	Logger        *slog.Logger   `json:"-"`
 }
 
 // Version contains information about a specific provider version.
@@ -28,6 +30,14 @@ type Version struct {
 	SHASumsURL          string   `json:"shasums_url"`           // The URL to the SHA checksums file.
 	SHASumsSignatureURL string   `json:"shasums_signature_url"` // The URL to the GPG signature of the SHA checksums file.
 	Targets             []Target `json:"targets"`               // A list of target platforms for which this provider version is available.
+}
+
+// VersionError track versions that can not be populated due to errors.
+// This should help prevent constantly querying for data that is invalid.
+type VersionError struct {
+	Version string    `json:"version"` // The version number of the provider.
+	Message string    `json:"message"`
+	UTCTime time.Time `json:"utc_time"`
 }
 
 // Target contains information about a specific provider version for a specific target platform.

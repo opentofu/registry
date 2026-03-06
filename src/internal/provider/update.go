@@ -1,6 +1,7 @@
 package provider
 
 import (
+	"errors"
 	"fmt"
 	"log/slog"
 
@@ -12,16 +13,13 @@ func (p Provider) UpdateMetadataFile() error {
 	p.Logger.Info("Beginning version bump process")
 
 	meta, err := p.buildMetadata()
-	if err != nil {
-		p.Logger.Error("Failed to version bump provider", slog.Any("err", err))
-		return err
-	}
-	if meta == nil {
-		return nil
+	if meta != nil {
+		err = errors.Join(err, p.WriteMetadata(*meta))
 	}
 
-	p.Logger.Info("Completed provider version bump successfully")
-	return p.WriteMetadata(*meta)
+	p.Logger.Info("Completed provider version bump")
+
+	return err
 }
 
 func (p Provider) shouldUpdateMetadataFile() (bool, error) {
