@@ -13,14 +13,12 @@ func (p *Provider) BackfillVersionData(ctx context.Context) error {
 		return err
 	}
 
+	var errs []error
 	madeChanges := false
 	for key, version := range meta.Versions {
 		if err := ctx.Err(); err != nil {
-			if errors.Is(err, context.DeadlineExceeded) {
-				// Outta-time
-				break
-			}
-			return err
+			errs = append(errs, err)
+			break
 		}
 
 		// Check to see if this version has already
@@ -38,7 +36,7 @@ func (p *Provider) BackfillVersionData(ctx context.Context) error {
 
 		newVersion, err := p.VersionFromTag("v" + version.Version)
 		if err != nil {
-			// TODO log
+			errs = append(errs, err)
 			continue
 		}
 		if newVersion != nil {
@@ -50,8 +48,8 @@ func (p *Provider) BackfillVersionData(ctx context.Context) error {
 	p.Logger.Info("Completed version backfill process")
 
 	if madeChanges {
-		return p.WriteMetadata(meta)
+		errs = append(errs, p.WriteMetadata(meta))
 	}
 
-	return nil
+	return errors.Join(errs...)
 }

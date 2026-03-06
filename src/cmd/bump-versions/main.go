@@ -86,6 +86,15 @@ func main() {
 
 	logger.Info("Beginning backfill process for providers", slog.Any("time_allocated", remainingTime))
 
+	// Setup a new github client with the limited context
+	ghClient = github.NewClient(ctx, logger, token)
+
+	// Re-list providers with new github client (not ideal)
+	providers, err = provider.ListProviders(*providerDataDir, *providerNamespace, logger, ghClient, bl)
+	if err != nil {
+		logger.Error("Failed to list providers", slog.Any("err", err))
+		os.Exit(1)
+	}
 	err = providers.Parallel(20, func(p provider.Provider) error {
 		if err := ctx.Err(); err != nil {
 			if errors.Is(err, context.DeadlineExceeded) {
@@ -94,7 +103,13 @@ func main() {
 			}
 			return err
 		}
-		return p.BackfillVersionData(ctx)
+		err := p.BackfillVersionData(ctx)
+		if errors.Is(err, context.DeadlineExceeded) {
+			p.Logger.Info("Partial completion of backfill due to time limitation")
+			// Outta-time
+			return nil
+		}
+		return err
 	})
 
 	logger.Info("Completed backfill process for providers")
