@@ -2,11 +2,3 @@ run:
   timeout: 1m
 
 version: "2"
-
-linters:
-  settings:
-    staticcheck:
-      checks:
-        - "all"
-        # QF1008: OpenTofu team preference is to keep explicit embedded field access for clarity.
-        - "-QF1008"
