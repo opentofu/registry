@@ -55,8 +55,8 @@ func (p Provider) shouldUpdateMetadataFile() (bool, error) {
 // getSemVerTagsFromRSS returns a list of semver tags from the RSS feed
 // ignoring all non-valid semver tags
 func (p Provider) getSemVerTagsFromRSS() ([]string, error) {
-	releasesRssUrl := p.RSSURL()
-	tags, err := p.Github.GetTagsFromRSS(releasesRssUrl)
+	releasesRssURL := p.RSSURL()
+	tags, err := p.Github.GetTagsFromRSS(releasesRssURL)
 	if err != nil {
 		return nil, err
 	}
