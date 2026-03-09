@@ -1,3 +1,4 @@
+// Package module provides module metadata and build functionality.
 package module
 
 import (
@@ -42,8 +43,8 @@ func (m Module) RepositoryURL() string {
 
 // RSSURL returns the URL of the RSS feed for the repository's tags.
 func (m Module) RSSURL() string {
-	repositoryUrl := m.RepositoryURL()
-	return fmt.Sprintf("%s/tags.atom", repositoryUrl)
+	repositoryURL := m.RepositoryURL()
+	return fmt.Sprintf("%s/tags.atom", repositoryURL)
 }
 
 // VersionDownloadURL returns the location to download the module from.

@@ -1,3 +1,4 @@
+// Package internal contains shared utilities for the registry.
 package internal
 
 import "strings"

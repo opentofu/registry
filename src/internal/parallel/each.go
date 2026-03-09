@@ -1,3 +1,4 @@
+// Package parallel provides utilities for parallel execution of tasks.
 package parallel
 
 // Action is the function to be consumed by ForEach. It should return an error if the action failed

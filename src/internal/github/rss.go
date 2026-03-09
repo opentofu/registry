@@ -49,7 +49,7 @@ func (c Client) getReleaseRSSFeed(releasesRSSURL string) (*gofeed.Feed, error) {
 	if err != nil {
 		return nil, fmt.Errorf("%s: %w", releasesRSSURL, err)
 	}
-	defer resp.Body.Close()
+	defer func() { _ = resp.Body.Close() }()
 
 	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("%s got error %d", releasesRSSURL, resp.StatusCode)

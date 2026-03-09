@@ -1,3 +1,4 @@
+// Package github provides a client for interacting with the GitHub API.
 package github
 
 import (
@@ -62,9 +63,8 @@ type GHRelease struct {
 	IsDraft      bool     // Indicates if the release is a draft.
 	IsLatest     bool     // Indicates if the release is the latest.
 	IsPrerelease bool     // Indicates if the release is a prerelease.
-	TagCommit    struct { // The commit associated with the release tag.
-		//nolint: revive, stylecheck // This is a struct provided by the GitHub GraphQL API.
-		TarballUrl string // The URL to download the release tarball.
+	TagCommit struct { // The commit associated with the release tag.
+		TarballUrl string //nolint:revive,staticcheck // This is a struct provided by the GitHub GraphQL API.
 	}
 	CreatedAt time.Time // The time the release was created.
 }
