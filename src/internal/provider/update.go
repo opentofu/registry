@@ -76,14 +76,12 @@ func (p Provider) getSemVerTagsFromRSS() ([]string, error) {
 func (p Provider) getLastSemVerTag() (string, error) {
 	semverTags, err := p.getSemVerTagsFromRSS()
 	if err != nil {
-		// TODO This is a stopgap, the logs will need to be checked regularly for this.
-		p.Logger.Error("Unable to fetch tags, skipping", slog.Any("err", err))
+		p.Logger.Warn("Unable to fetch tags, skipping", slog.Any("err", err))
 		return "", nil
 	}
 
 	if len(semverTags) < 1 {
-		// TODO This is a stopgap, the logs will need to be checked regularly for this.
-		p.Logger.Error("no semver tags found in repository, skipping", slog.String("url", p.RepositoryURL()))
+		p.Logger.Warn("no semver tags found in repository, skipping", slog.String("url", p.RepositoryURL()))
 		return "", nil
 	}
 

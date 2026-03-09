@@ -31,7 +31,7 @@ func (m Module) BuildMetadata() (*Metadata, error) {
 
 	tags, err := m.getSemverTags()
 	if err != nil {
-		m.Logger.Error("Unable to fetch semver tags, skipping", slog.Any("err", err))
+		m.Logger.Warn("Unable to fetch semver tags, skipping", slog.Any("err", err))
 		return nil, nil
 	}
 

@@ -72,7 +72,7 @@ func (p Provider) buildMetadata() (*Metadata, error) {
 	// fetch ALL the releases
 	releases, err := p.getSemverTags()
 	if err != nil {
-		p.Logger.Error("Unable to fetch semver tags, skipping", slog.Any("err", err))
+		p.Logger.Warn("Unable to fetch semver tags, skipping", slog.Any("err", err))
 		return nil, nil
 	}
 
@@ -86,7 +86,7 @@ func (p Provider) buildMetadata() (*Metadata, error) {
 
 	shouldUpdate, err := p.shouldUpdateMetadataFile()
 	if err != nil {
-		p.Logger.Error("Failed to determine update status, forcing update", slog.Any("err", err))
+		p.Logger.Warn("Failed to determine update status, forcing update", slog.Any("err", err))
 	} else if !shouldUpdate {
 		p.Logger.Info("No version bump required, latest versions exist")
 		return nil, nil
