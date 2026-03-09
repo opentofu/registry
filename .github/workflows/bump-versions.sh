@@ -47,7 +47,7 @@ for i in {0..30}; do
 		exit 0
 	fi
 	sleep 1
-	git fetch origin
+	git fetch origin $BRANCH
 	git rebase origin/$BRANCH
 done
 
