@@ -108,6 +108,7 @@ func (p Provider) buildMetadata() (*Metadata, error) {
 		}()
 	}
 
+	addedReleases := false
 	for range newReleases {
 		result := <-verChan
 		if result.err != nil {
@@ -119,6 +120,12 @@ func (p Provider) buildMetadata() (*Metadata, error) {
 		}
 		// append the new release to the metadata
 		meta.Versions = append(meta.Versions, *result.v)
+
+		addedReleases = true
+	}
+	if !addedReleases {
+		// Prevent file modification if not changed
+		return nil, nil
 	}
 
 	semverSortFunc := func(a, b Version) int {
