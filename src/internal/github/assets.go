@@ -7,8 +7,14 @@ import (
 	"net/http"
 )
 
-// DownloadAssetContents downloads the contents of the asset at the given URL and returns it directly
+// DownloadAssetContents downloads the contents of the asset at the given URL and returns it directly (32kb limit)
 func (c Client) DownloadAssetContents(downloadURL string) ([]byte, error) {
+	return c.DownloadAssetContentsLimited(downloadURL, 32*1024) // 32kb is a reasonable limit for most metadata files
+}
+
+// DownloadAssetContentsLimited downloads the contents of the asset at the given URL and returns it directly, as long as it
+// is within the given limit.
+func (c Client) DownloadAssetContentsLimited(downloadURL string, limit int64) ([]byte, error) {
 	done := c.assetThrottle()
 	defer done()
 
@@ -30,9 +36,21 @@ func (c Client) DownloadAssetContents(downloadURL string) ([]byte, error) {
 		return nil, fmt.Errorf("unexpected status code when downloading asset %s: %d", downloadURL, resp.StatusCode)
 	}
 
-	contents, err := io.ReadAll(resp.Body)
+	if resp.ContentLength > limit {
+		return nil, fmt.Errorf("exceeded download file content length of %vb for %s with a reported content length of %vb", limit, downloadURL, resp.ContentLength)
+	}
+
+	limiter := &io.LimitedReader{
+		R: resp.Body,
+		N: limit,
+	}
+	contents, err := io.ReadAll(limiter)
 	if err != nil {
 		return nil, fmt.Errorf("failed to read asset contents of %s: %w", downloadURL, err)
+	}
+
+	if limiter.N <= 0 {
+		return nil, fmt.Errorf("exceeded download file size of %vb for %s with a reported content length of %vb", limit, downloadURL, resp.ContentLength)
 	}
 
 	logger.Info("asset successfully downloaded", slog.Int("size", len(contents)))
