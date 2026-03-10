@@ -95,7 +95,7 @@ func (p Provider) VersionFromTag(release string) (*Version, error) {
 			if err != nil {
 				// Release is inaccessible, misconfigured, or corrupt
 				// TODO consider if this constitutes a failure, or if we should fall back to pre-h1 logic
-				return nil, err
+				return nil, fmt.Errorf("%s_%s: %w", os, arch, err)
 			}
 
 			v.Targets = append(v.Targets, target)

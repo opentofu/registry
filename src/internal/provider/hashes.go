@@ -15,6 +15,9 @@ func (p Provider) CalculateHash1AndSize(releaseDownloadUrl string, shaExpected s
 	if assetErr != nil {
 		return "", 0, fmt.Errorf("failed to download release for calculating hashes: %w", assetErr)
 	}
+	if contents == nil {
+		return "", 0, fmt.Errorf("asset not found: %s", releaseDownloadUrl)
+	}
 
 	size := len(contents)
 
