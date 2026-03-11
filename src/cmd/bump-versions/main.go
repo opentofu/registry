@@ -24,7 +24,7 @@ func main() {
 	moduleNamespace := flag.String("module-namespace", "", "Which module namespace to limit the command to")
 	providerDataDir := flag.String("provider-data", "../providers", "Directory containing the provider data")
 	providerNamespace := flag.String("provider-namespace", "", "Which provider namespace to limit the command to")
-	targetDuration := flag.Duration("target-duration", time.Minute*5, "Used to limit how much of a backfill this command can perform")
+	targetDuration := flag.Duration("target-duration", time.Minute*0, "Used to limit how much of a backfill this command can perform") // Disabled by default
 
 	flag.Parse()
 
