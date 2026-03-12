@@ -81,12 +81,6 @@ func (p Provider) RepositoryURL() string {
 	return fmt.Sprintf("https://github.com/%s/%s", p.EffectiveNamespace(), p.RepositoryName())
 }
 
-// RSSURL returns the URL of the RSS feed for the repository's releases.
-func (p Provider) RSSURL() string {
-	repositoryUrl := p.RepositoryURL()
-	return fmt.Sprintf("%s/releases.atom", repositoryUrl)
-}
-
 // EffectiveNamespace will map namespaces for providers in situations
 // where the author (owner of the namespace) does not release artifacts as
 // GitHub Releases.
