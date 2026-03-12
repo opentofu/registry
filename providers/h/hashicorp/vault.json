@@ -1,6 +1,151 @@
 {
   "versions": [
     {
+      "version": "5.8.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/opentofu/terraform-provider-vault/releases/download/v5.8.0/terraform-provider-vault_5.8.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/opentofu/terraform-provider-vault/releases/download/v5.8.0/terraform-provider-vault_5.8.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-vault_5.8.0_darwin_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-vault/releases/download/v5.8.0/terraform-provider-vault_5.8.0_darwin_amd64.zip",
+          "shasum": "274ad5bad107a845927773a6a31a45cd0ed7916fa52b86d85c86c535b59fcea4",
+          "h1": "h1:Y3HaoTjTuH4UePPja1vDrRxrSTNhR7wq//qJsJA7/rQ=",
+          "size": 15015747
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-vault_5.8.0_darwin_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-vault/releases/download/v5.8.0/terraform-provider-vault_5.8.0_darwin_arm64.zip",
+          "shasum": "2b2eef2cb6840c3cf41134b1d1b6d3d50d6edbe3b2af2318bf7101843072c83b",
+          "h1": "h1:6MmwOTMo0TpjoMs27LNKfxD+kZypRclB2WrV1OgbWD4=",
+          "size": 13789918
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-vault_5.8.0_freebsd_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-vault/releases/download/v5.8.0/terraform-provider-vault_5.8.0_freebsd_386.zip",
+          "shasum": "a532662249b28e10a065bbab467d4ea9a12719638fe0f7e0add05d8d11142366",
+          "h1": "h1:eSjvykpglWlaCF/77dluIgXQ/SbPlh7RSSuLjAYNZUs=",
+          "size": 13653407
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-vault_5.8.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-vault/releases/download/v5.8.0/terraform-provider-vault_5.8.0_freebsd_amd64.zip",
+          "shasum": "ae5658b04277318c8b91c0a9ed2ec05dd324a7501c1a057d53e79b0e1978a1f6",
+          "h1": "h1:bd5YeFG+ok71bEUWdvksBLPWBWVpeosSl0rbbDJAigE=",
+          "size": 14657496
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-vault_5.8.0_freebsd_arm.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-vault/releases/download/v5.8.0/terraform-provider-vault_5.8.0_freebsd_arm.zip",
+          "shasum": "1c9d0b740520a88a16ccc57c6bcb1a58e47b6ba19676428b2a0f5b9fe4004788",
+          "h1": "h1:/OZCcd0X7F9y846SOlVUMItMtLDBwasYe+Mv3HF2I1Q=",
+          "size": 13944276
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-vault_5.8.0_linux_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-vault/releases/download/v5.8.0/terraform-provider-vault_5.8.0_linux_386.zip",
+          "shasum": "e9ac49b94293cb5c8b31eb6e5afddc6134ffff0481ec195b242e0175e1f6766f",
+          "h1": "h1:lUnHYFRPEO+C+DwumShhX7va0iY9ApkhoSSj/P7vCsk=",
+          "size": 13921304
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-vault_5.8.0_linux_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-vault/releases/download/v5.8.0/terraform-provider-vault_5.8.0_linux_amd64.zip",
+          "shasum": "ab91b32cbcc71cd9e89cca7d88957d9410f54750f7ea60f1416d2d77b478006a",
+          "h1": "h1:EhuYG2XYdV7d3RuOB/r/KKv0k5XXtDoBMgrzPraH8yQ=",
+          "size": 14911290
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-vault_5.8.0_linux_arm.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-vault/releases/download/v5.8.0/terraform-provider-vault_5.8.0_linux_arm.zip",
+          "shasum": "ef60d5715c3b82ae64643dea9b4c1a82c10f72151c77af2749d3ceb060bb2adb",
+          "h1": "h1:68t9TdU3ap9L+Ayewb478BIyv8rpEDIQxYq1xsq99fs=",
+          "size": 14186493
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-vault_5.8.0_linux_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-vault/releases/download/v5.8.0/terraform-provider-vault_5.8.0_linux_arm64.zip",
+          "shasum": "544877ac091e54b2954f5638edf06d76f344eb6833fb68db961c0edb5b0fdc83",
+          "h1": "h1:qFAesj3MEaAzGFL2tvV+uy/biNwGJUculuN5CFtTh1E=",
+          "size": 13354600
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-vault_5.8.0_windows_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-vault/releases/download/v5.8.0/terraform-provider-vault_5.8.0_windows_386.zip",
+          "shasum": "812bd7730efb3781fcfc7442650551d30b015f931a132ae9acdffdd625526908",
+          "h1": "h1:SMqA7BA2Nv/R4O8oVi8arc1E2NXz56dcnp54vFG9sfg=",
+          "size": 14402154
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-vault_5.8.0_windows_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-vault/releases/download/v5.8.0/terraform-provider-vault_5.8.0_windows_amd64.zip",
+          "shasum": "e02581fca392f46738a95999d5fbccca7d82500df3a88e16ae9668633eb16f9b",
+          "h1": "h1:8DpFTiNTio1Yal+kozfxkPabRvN8ucRyjVkRcKuCnCo=",
+          "size": 15051881
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-vault_5.8.0_windows_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-vault/releases/download/v5.8.0/terraform-provider-vault_5.8.0_windows_arm64.zip",
+          "shasum": "42b607a2983e77a47099b5ac8550a25ecd5ba03760be19749a4ad63617ea6085",
+          "h1": "h1:KuT1QZ3kyjqZ/YENs5ABfhSHEBLr/01ZWzWbJrS+vDo=",
+          "size": 13268686
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-vault_5.8.0_openbsd_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-vault/releases/download/v5.8.0/terraform-provider-vault_5.8.0_openbsd_386.zip",
+          "shasum": "8798d164f8e25f3b211be45e79d3bd5272e9237e728942c0026300b25798e5fe",
+          "h1": "h1:B1DuZ215BVQbK/70wahsWR6Wy16LMicdRCuThNgeBOg=",
+          "size": 13652013
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-vault_5.8.0_openbsd_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-vault/releases/download/v5.8.0/terraform-provider-vault_5.8.0_openbsd_amd64.zip",
+          "shasum": "e89f59329ee939b59158c6173484ef4376da44296f6153d2fbafd3e28bd650c5",
+          "h1": "h1:TO99KdU92KULAbT4D0CJSeGFLuEsOgR10d6qFnR3dDk=",
+          "size": 14654986
+        },
+        {
+          "os": "solaris",
+          "arch": "amd64",
+          "filename": "terraform-provider-vault_5.8.0_solaris_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-vault/releases/download/v5.8.0/terraform-provider-vault_5.8.0_solaris_amd64.zip",
+          "shasum": "91201a2e5dbc88013977960f0d1139fb584cdcda1cfd27577980d8cf0a31ead3",
+          "h1": "h1:FIRP0mpZpyDppetTZxzmaH2kd2E0o8As9w2CANYsEhE=",
+          "size": 14660428
+        }
+      ]
+    },
+    {
       "version": "5.7.0",
       "protocols": [
         "5.0"
