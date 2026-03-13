@@ -53,7 +53,7 @@ func (meta Metadata) filterNewReleases(releases []string, namespace, name string
 			isErrored := false
 			if numVersionErrors > 0 {
 				// Simple doubling backoff
-				dur := time.Minute * 15 * time.Duration(math.Pow(float64(numVersionErrors), 2))
+				dur := time.Minute * 15 * time.Duration(math.Pow(2, float64(numVersionErrors)))
 				if latestError.Add(dur).After(time.Now()) {
 					isErrored = true
 				}
