@@ -39,21 +39,21 @@ func (meta Metadata) filterNewReleases(releases []string, namespace, name string
 				continue
 			}
 
-			var errorEntries []VersionError
+			var numVersionErrors int
 			var latestError time.Time
 			for _, errored := range meta.VersionErrors {
 				if errored.Version == version {
 					if errored.UTCTime.After(latestError) {
 						latestError = errored.UTCTime
 					}
-					errorEntries = append(errorEntries, errored)
+					numVersionErrors += 1
 				}
 			}
 
 			isErrored := false
-			if len(errorEntries) > 0 {
+			if numVersionErrors > 0 {
 				// Simple doubling backoff
-				dur := time.Minute * 15 * time.Duration(math.Pow(float64(len(errorEntries)), 2))
+				dur := time.Minute * 15 * time.Duration(math.Pow(float64(numVersionErrors), 2))
 				if latestError.Add(dur).After(time.Now()) {
 					isErrored = true
 				}
@@ -135,7 +135,7 @@ func (p Provider) buildMetadata() (*Metadata, error) {
 		}()
 	}
 
-	addedReleases := false
+	metadataUpdated := false
 	var errs []error
 	for range newReleases {
 		result := <-verChan
@@ -147,6 +147,7 @@ func (p Provider) buildMetadata() (*Metadata, error) {
 					Message: nonFatal.Error(),
 					UTCTime: time.Now().UTC(),
 				})
+				metadataUpdated = true
 				continue
 			}
 			errs = append(errs, result.err)
@@ -164,11 +165,11 @@ func (p Provider) buildMetadata() (*Metadata, error) {
 			return errored.Version == result.r
 		})
 
-		addedReleases = true
+		metadataUpdated = true
 	}
-	if !addedReleases {
+	if !metadataUpdated {
 		// Prevent file modification if not changed
-		return nil, nil
+		return nil, errors.Join(errs...)
 	}
 
 	semverSortFunc := func(a, b Version) int {
