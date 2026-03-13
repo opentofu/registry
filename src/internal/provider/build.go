@@ -162,7 +162,7 @@ func (p Provider) buildMetadata() (*Metadata, error) {
 
 		// remove any error version records now that we have had a successful result
 		meta.VersionErrors = slices.DeleteFunc(meta.VersionErrors, func(errored VersionError) bool {
-			return errored.Version == result.r
+			return errored.Version == result.v.Version
 		})
 
 		metadataUpdated = true
