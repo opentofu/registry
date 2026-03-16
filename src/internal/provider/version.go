@@ -65,7 +65,7 @@ func (p Provider) VersionFromTag(release string) (*Version, error) {
 
 	if checksums == nil {
 		logger.Warn("checksums not found in release, skipping...")
-		return nil, nil
+		return nil, ErrVersionNonFatal{fmt.Errorf("checksums not found in release")}
 	}
 
 	var ok bool
@@ -104,7 +104,7 @@ func (p Provider) VersionFromTag(release string) (*Version, error) {
 
 	if len(v.Targets) == 0 {
 		logger.Info("No artifacts in release, skipping...", slog.String("release", version))
-		return nil, nil
+		return nil, ErrVersionNonFatal{fmt.Errorf("no artifacts in release")}
 	}
 
 	v.Protocols, err = p.GetProtocols(p.ArtifactURL(release, version, "manifest.json"))
@@ -125,4 +125,16 @@ func (p Provider) VersionFromTag(release string) (*Version, error) {
 	}
 
 	return &v, nil
+}
+
+type ErrVersionNonFatal struct {
+	err error
+}
+
+func (e ErrVersionNonFatal) Unwrap() error {
+	return e.err
+}
+
+func (e ErrVersionNonFatal) Error() string {
+	return e.err.Error()
 }

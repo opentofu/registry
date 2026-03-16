@@ -1,9 +1,12 @@
 package provider
 
 import (
+	"errors"
 	"fmt"
 	"log/slog"
+	"math"
 	"slices"
+	"time"
 
 	"github.com/opentofu/registry-stable/internal"
 	"github.com/opentofu/registry-stable/internal/blacklist"
@@ -21,6 +24,7 @@ func (meta Metadata) filterNewReleases(releases []string, namespace, name string
 
 	var newReleases = make([]string, 0)
 	var blacklistedCount = 0
+	var erroredCount = 0
 	for _, r := range releases {
 		version := internal.TrimTagPrefix(r)
 		if !existingVersions[version] {
@@ -34,12 +38,42 @@ func (meta Metadata) filterNewReleases(releases []string, namespace, name string
 				blacklistedCount++
 				continue
 			}
-			// only append the release if it does not already exist in the metadata and is not blacklisted
+
+			var numVersionErrors int
+			var latestError time.Time
+			for _, errored := range meta.VersionErrors {
+				if errored.Version == version {
+					if errored.UTCTime.After(latestError) {
+						latestError = errored.UTCTime
+					}
+					numVersionErrors += 1
+				}
+			}
+
+			isErrored := false
+			if numVersionErrors > 0 {
+				// Simple doubling backoff
+				dur := time.Minute * 15 * time.Duration(math.Pow(2, float64(numVersionErrors)))
+				if latestError.Add(dur).After(time.Now()) {
+					isErrored = true
+				}
+			}
+
+			if isErrored {
+				meta.Logger.Warn("Skipping errored version",
+					slog.String("namespace", namespace),
+					slog.String("name", name),
+					slog.String("version", version))
+				erroredCount++
+				continue
+			}
+
+			// only append the release if it does not already exist in the metadata, is not errored, and is not blacklisted
 			newReleases = append(newReleases, r)
 		}
 	}
 
-	meta.Logger.Info(fmt.Sprintf("Found %d releases that do not already exist in the metadata file (%d blacklisted)", len(newReleases), blacklistedCount))
+	meta.Logger.Info(fmt.Sprintf("Found %d releases that do not already exist in the metadata file (%d blacklisted, %d errored)", len(newReleases), blacklistedCount, erroredCount))
 
 	return newReleases
 }
@@ -84,15 +118,8 @@ func (p Provider) buildMetadata() (*Metadata, error) {
 		return nil, nil
 	}
 
-	shouldUpdate, err := p.shouldUpdateMetadataFile()
-	if err != nil {
-		p.Logger.Warn("Failed to determine update status, forcing update", slog.Any("err", err))
-	} else if !shouldUpdate {
-		p.Logger.Info("No version bump required, latest versions exist")
-		return nil, nil
-	}
-
 	type versionResult struct {
+		r   string
 		v   *Version
 		err error
 	}
@@ -104,15 +131,27 @@ func (p Provider) buildMetadata() (*Metadata, error) {
 		r := r
 		go func() {
 			version, err := p.VersionFromTag(r)
-			verChan <- versionResult{version, err}
+			verChan <- versionResult{r, version, err}
 		}()
 	}
 
-	addedReleases := false
+	metadataUpdated := false
+	var errs []error
 	for range newReleases {
 		result := <-verChan
 		if result.err != nil {
-			return nil, result.err
+			var nonFatal ErrVersionNonFatal
+			if errors.As(result.err, &nonFatal) {
+				meta.VersionErrors = append(meta.VersionErrors, VersionError{
+					Version: internal.TrimTagPrefix(result.r),
+					Message: nonFatal.Error(),
+					UTCTime: time.Now().UTC(),
+				})
+				metadataUpdated = true
+				continue
+			}
+			errs = append(errs, result.err)
+			continue
 		}
 		if result.v == nil {
 			// Not a valid release, skipping
@@ -121,11 +160,16 @@ func (p Provider) buildMetadata() (*Metadata, error) {
 		// append the new release to the metadata
 		meta.Versions = append(meta.Versions, *result.v)
 
-		addedReleases = true
+		// remove any error version records now that we have had a successful result
+		meta.VersionErrors = slices.DeleteFunc(meta.VersionErrors, func(errored VersionError) bool {
+			return errored.Version == result.v.Version
+		})
+
+		metadataUpdated = true
 	}
-	if !addedReleases {
+	if !metadataUpdated {
 		// Prevent file modification if not changed
-		return nil, nil
+		return nil, errors.Join(errs...)
 	}
 
 	semverSortFunc := func(a, b Version) int {
@@ -133,5 +177,13 @@ func (p Provider) buildMetadata() (*Metadata, error) {
 	}
 	slices.SortFunc(meta.Versions, semverSortFunc)
 
-	return &meta, nil
+	slices.SortFunc(meta.VersionErrors, func(a, b VersionError) int {
+		comp := -semver.Compare(fmt.Sprintf("v%s", a.Version), fmt.Sprintf("v%s", b.Version))
+		if comp == 0 {
+			comp = a.UTCTime.Compare(b.UTCTime)
+		}
+		return comp
+	})
+
+	return &meta, errors.Join(errs...)
 }
