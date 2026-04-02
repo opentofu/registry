@@ -44,24 +44,24 @@ func NewProviderGenerator(p provider.Provider, destination string, gpgKeyLocatio
 
 // VersionListingPath returns the path to the provider version listing file.
 func (p ProviderGenerator) VersionListingPath() string {
-	namespacePath := strings.ToLower(p.Provider.Namespace)
-	providerNamePath := strings.ToLower(p.Provider.ProviderName)
+	namespacePath := strings.ToLower(p.Namespace)
+	providerNamePath := strings.ToLower(p.ProviderName)
 	return filepath.Join(p.Destination, "v1", "providers", namespacePath, providerNamePath, "versions")
 }
 
 // VersionDownloadPath returns the path to the provider version download file.
 func (p ProviderGenerator) VersionDownloadPath(ver provider.Version, details ProviderVersionDetails) string {
-	namespacePath := strings.ToLower(p.Provider.Namespace)
-	providerNamePath := strings.ToLower(p.Provider.ProviderName)
+	namespacePath := strings.ToLower(p.Namespace)
+	providerNamePath := strings.ToLower(p.ProviderName)
 	version := strings.ToLower(ver.Version)
 	return filepath.Join(p.Destination, "v1", "providers", namespacePath, providerNamePath, version, "download", details.OS, details.Arch)
 }
 
 // VersionListing will take the provider metadata and generate the responses for the provider version listing API endpoints.
 func (p ProviderGenerator) VersionListing() ProviderVersionListingResponse {
-	versions := make([]ProviderVersionResponseItem, len(p.Metadata.Versions))
+	versions := make([]ProviderVersionResponseItem, len(p.Versions))
 
-	for versionIdx, ver := range p.Metadata.Versions {
+	for versionIdx, ver := range p.Versions {
 		verResp := ProviderVersionResponseItem{
 			Version:   ver.Version,
 			Protocols: ver.Protocols,
@@ -79,7 +79,7 @@ func (p ProviderGenerator) VersionListing() ProviderVersionListingResponse {
 
 	return ProviderVersionListingResponse{
 		versions,
-		p.Metadata.Warnings,
+		p.Warnings,
 	}
 }
 
@@ -88,8 +88,8 @@ func (p ProviderGenerator) VersionDetails() (map[string]ProviderVersionDetails, 
 	versionDetails := make(map[string]ProviderVersionDetails)
 
 	keyCollection := gpg.KeyCollection{
-		Namespace:    p.Provider.EffectiveNamespace(),
-		ProviderName: p.Provider.ProviderName,
+		Namespace:    p.EffectiveNamespace(),
+		ProviderName: p.ProviderName,
 		Directory:    p.KeyLocation,
 	}
 
@@ -99,7 +99,7 @@ func (p ProviderGenerator) VersionDetails() (map[string]ProviderVersionDetails, 
 		return nil, err
 	}
 
-	for _, ver := range p.Metadata.Versions {
+	for _, ver := range p.Versions {
 		packages := map[string]ProviderPackage{}
 		for _, target := range ver.Targets {
 			pkg := ProviderPackage{

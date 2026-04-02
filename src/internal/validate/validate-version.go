@@ -1,3 +1,4 @@
+// Package validate provides validation functions for registry data.
 package validate
 
 import "golang.org/x/mod/semver"

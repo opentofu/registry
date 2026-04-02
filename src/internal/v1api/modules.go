@@ -37,26 +37,26 @@ func NewModuleGenerator(m module.Module, destination string) (ModuleGenerator, e
 
 // VersionListingPath returns the path to the module version listing file
 func (m ModuleGenerator) VersionListingPath() string {
-	namespace := strings.ToLower(m.Module.Namespace)
-	name := strings.ToLower(m.Module.Name)
-	target := strings.ToLower(m.Module.TargetSystem)
+	namespace := strings.ToLower(m.Namespace)
+	name := strings.ToLower(m.Name)
+	target := strings.ToLower(m.TargetSystem)
 	return filepath.Join(m.Destination, "v1", "modules", namespace, name, target, "versions")
 
 }
 
 // VersionDownloadPath returns the path to the module version download file for the given version
 func (m ModuleGenerator) VersionDownloadPath(v module.Version) string {
-	namespace := strings.ToLower(m.Module.Namespace)
-	name := strings.ToLower(m.Module.Name)
-	target := strings.ToLower(m.Module.TargetSystem)
+	namespace := strings.ToLower(m.Namespace)
+	name := strings.ToLower(m.Name)
+	target := strings.ToLower(m.TargetSystem)
 	version := strings.ToLower(internal.TrimTagPrefix(v.Version))
 	return filepath.Join(m.Destination, "v1", "modules", namespace, name, target, version, "download")
 }
 
 // VersionListing converts the module metadata into a ModuleVersionListingResponse, ready to be serialized to a file
 func (m ModuleGenerator) VersionListing() ModuleVersionListingResponse {
-	versions := make([]ModuleVersionResponseItem, len(m.Metadata.Versions))
-	for i, v := range m.Metadata.Versions {
+	versions := make([]ModuleVersionResponseItem, len(m.Versions))
+	for i, v := range m.Versions {
 		versions[i] = ModuleVersionResponseItem{Version: internal.TrimTagPrefix(v.Version)}
 	}
 	return ModuleVersionListingResponse{[]ModuleVersionListingResponseItem{{versions}}}
@@ -65,8 +65,8 @@ func (m ModuleGenerator) VersionListing() ModuleVersionListingResponse {
 // VersionDownloads converts the module metadata into a map of module version download paths to ModuleVersionDownloadResponse,
 func (m ModuleGenerator) VersionDownloads() map[string]ModuleVersionDownloadResponse {
 	downloads := make(map[string]ModuleVersionDownloadResponse)
-	for _, v := range m.Metadata.Versions {
-		downloads[m.VersionDownloadPath(v)] = ModuleVersionDownloadResponse{Location: m.Module.VersionDownloadURL(v)}
+	for _, v := range m.Versions {
+		downloads[m.VersionDownloadPath(v)] = ModuleVersionDownloadResponse{Location: m.VersionDownloadURL(v)}
 	}
 	return downloads
 }
