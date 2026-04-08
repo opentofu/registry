@@ -1,3 +1,4 @@
+// Package verification provides types and rendering for verification results.
 package verification
 
 type Status string

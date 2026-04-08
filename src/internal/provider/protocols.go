@@ -18,8 +18,8 @@ type ManifestMetadata struct {
 
 // GetProtocols will attempt to download the manifest from the given URL and return the
 // list of protocols that the provider supports.
-func (p Provider) GetProtocols(manifestDownloadUrl string) ([]string, error) {
-	contents, err := p.Github.DownloadAssetContents(manifestDownloadUrl)
+func (p Provider) GetProtocols(manifestDownloadURL string) ([]string, error) {
+	contents, err := p.Github.DownloadAssetContents(manifestDownloadURL)
 	if err != nil {
 		return nil, err
 	}
@@ -29,7 +29,7 @@ func (p Provider) GetProtocols(manifestDownloadUrl string) ([]string, error) {
 
 	manifest, err := parseManifestContents(contents)
 	if err != nil {
-		p.Logger.Warn("Manifest file invalid, ignoring...", slog.String("url", manifestDownloadUrl), slog.Any("err", err))
+		p.Logger.Warn("Manifest file invalid, ignoring...", slog.String("url", manifestDownloadURL), slog.Any("err", err))
 		return nil, nil
 	}
 

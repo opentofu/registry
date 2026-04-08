@@ -10,15 +10,16 @@ func (r *Result) RenderMarkdown() string {
 			output += "> [!NOTE]\n"
 			output += fmt.Sprintf("> %s\n\n", remark)
 		}
-		if step.Status == StatusSuccess {
+		switch step.Status {
+		case StatusSuccess:
 			output += "✅ **Success**\n"
-		} else if step.Status == StatusFailure {
+		case StatusFailure:
 			output += "❌ **Failure**\n"
-		} else if step.Status == StatusNotRun {
+		case StatusNotRun:
 			output += "⚠️ **Not Run**\n"
-		} else if step.Status == StatusSkipped {
+		case StatusSkipped:
 			output += "⚠️ **Skipped**\n"
-		} else if step.Status == StatusWarning {
+		case StatusWarning:
 			output += "⚠️ **Warning**\n"
 		}
 
@@ -31,15 +32,16 @@ func (r *Result) RenderMarkdown() string {
 				output += "> [!NOTE]\n"
 				output += fmt.Sprintf("> %s\n\n", remark)
 			}
-			if subStep.Status == StatusSuccess {
+			switch subStep.Status {
+			case StatusSuccess:
 				output += "✅ **Success**\n"
-			} else if subStep.Status == StatusFailure {
+			case StatusFailure:
 				output += "❌ **Failure**\n"
-			} else if subStep.Status == StatusNotRun {
+			case StatusNotRun:
 				output += "⚠️ **Not Run**\n"
-			} else if subStep.Status == StatusSkipped {
+			case StatusSkipped:
 				output += "⚠️ **Skipped**\n"
-			} else if subStep.Status == StatusWarning {
+			case StatusWarning:
 				output += "⚠️ **Warning**\n"
 			}
 

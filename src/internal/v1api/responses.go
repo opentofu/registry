@@ -1,3 +1,4 @@
+// Package v1api provides the v1 registry API response generation.
 package v1api
 
 import "github.com/opentofu/registry-stable/internal/gpg"

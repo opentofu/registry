@@ -1,3 +1,4 @@
+// Package provider provides provider metadata, build, and validation functionality.
 package provider
 
 import (
@@ -79,6 +80,12 @@ func (p Provider) RepositoryName() string {
 // RepositoryURL returns the URL of the repository that the provider is assumed to be living in.
 func (p Provider) RepositoryURL() string {
 	return fmt.Sprintf("https://github.com/%s/%s", p.EffectiveNamespace(), p.RepositoryName())
+}
+
+// RSSURL returns the URL of the RSS feed for the repository's releases.
+func (p Provider) RSSURL() string {
+	repositoryURL := p.RepositoryURL()
+	return fmt.Sprintf("%s/releases.atom", repositoryURL)
 }
 
 // EffectiveNamespace will map namespaces for providers in situations

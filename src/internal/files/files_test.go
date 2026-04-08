@@ -52,7 +52,7 @@ func TestFiles_SafeWriteObjectToJSONFile_InvalidPath(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	file.Close()
+	_ = file.Close()
 
 	path := filepath.Join(file.Name(), "file.json")
 	err = SafeWriteObjectToJSONFile(path, nil)

@@ -7,8 +7,8 @@ import (
 
 // GetSHASums will attempt to download the SHA checksums file from the given URL and return a
 // map of file names to SHA checksums.
-func (p Provider) GetSHASums(shaFileDownloadUrl string) (map[string]string, error) {
-	contents, assetErr := p.Github.DownloadAssetContents(shaFileDownloadUrl)
+func (p Provider) GetSHASums(shaFileDownloadURL string) (map[string]string, error) {
+	contents, assetErr := p.Github.DownloadAssetContents(shaFileDownloadURL)
 	if assetErr != nil {
 		return nil, fmt.Errorf("failed to download asset contents: %w", assetErr)
 	}

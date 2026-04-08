@@ -1,3 +1,4 @@
+// Package blacklist provides functionality for managing blacklisted providers and modules.
 package blacklist
 
 import (

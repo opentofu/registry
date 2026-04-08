@@ -1,3 +1,4 @@
+// Package gpg provides GPG key parsing and verification.
 package gpg
 
 import (
@@ -19,7 +20,7 @@ func buildKey(path string) (*Key, error) {
 	if err != nil {
 		return nil, fmt.Errorf("failed to open key file: %w", err)
 	}
-	defer file.Close()
+	defer func() { _ = file.Close() }()
 
 	data, err := io.ReadAll(file)
 	if err != nil {

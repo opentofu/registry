@@ -58,7 +58,7 @@ func main() {
 		re := regexp.MustCompile("(?P<Namespace>[a-zA-Z0-9-]+)/terraform-provider-(?P<Name>[a-zA-Z0-9-]*)")
 		match := re.FindStringSubmatch(strings.ToLower(*repository))
 		if match == nil {
-			return fmt.Errorf("Invalid repository name: %s", *repository)
+			return fmt.Errorf("Invalid repository name: %s", *repository) //nolint:staticcheck // ST1005: keeping capitalized for user-facing output
 		}
 
 		submitted := provider.Provider{
@@ -82,26 +82,26 @@ func main() {
 		for _, p := range providers {
 			if strings.EqualFold(p.RepositoryURL(), submitted.RepositoryURL()) {
 				output.Exists = true
-				return fmt.Errorf("Repository already exists in the registry, %s", p.RepositoryURL())
+				return fmt.Errorf("Repository already exists in the registry, %s", p.RepositoryURL()) //nolint:staticcheck // ST1005: keeping capitalized for user-facing output
 			}
 		}
 
 		err = submitted.WriteMetadata(provider.Metadata{})
 		if err != nil {
-			return fmt.Errorf("An unexpected error occured: %w", err)
+			return fmt.Errorf("An unexpected error occured: %w", err) //nolint:staticcheck // ST1005: keeping capitalized for user-facing output
 		}
 
 		err = submitted.UpdateMetadataFile()
 		if err != nil {
-			return fmt.Errorf("An unexpected error occured: %w", err)
+			return fmt.Errorf("An unexpected error occured: %w", err) //nolint:staticcheck // ST1005: keeping capitalized for user-facing output
 		}
 
 		meta, err := submitted.ReadMetadata()
 		if err != nil {
-			return fmt.Errorf("An unexpected error occured: %w", err)
+			return fmt.Errorf("An unexpected error occured: %w", err) //nolint:staticcheck // ST1005: keeping capitalized for user-facing output
 		}
 		if len(meta.Versions) == 0 {
-			return fmt.Errorf("No valid versions are detected for repository %s. Please check the releases and their checksum files.", submitted.RepositoryURL())
+			return fmt.Errorf("No valid versions are detected for repository %s. Please check the releases and their checksum files.", submitted.RepositoryURL()) //nolint:staticcheck // ST1005: keeping capitalized for user-facing output
 		}
 
 		output.Namespace = submitted.Namespace
