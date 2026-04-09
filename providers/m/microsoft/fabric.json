@@ -1,6 +1,133 @@
 {
   "versions": [
     {
+      "version": "1.9.1",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/microsoft/terraform-provider-fabric/releases/download/v1.9.1/terraform-provider-fabric_1.9.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/microsoft/terraform-provider-fabric/releases/download/v1.9.1/terraform-provider-fabric_1.9.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-fabric_1.9.1_darwin_amd64.zip",
+          "download_url": "https://github.com/microsoft/terraform-provider-fabric/releases/download/v1.9.1/terraform-provider-fabric_1.9.1_darwin_amd64.zip",
+          "shasum": "a107969e55ca6156a6bd0d95abd33cee89f71ada163a24ce82c1164f5c7cebbd",
+          "h1": "h1:QxLiTgPS9WknA75Cn8Svj35EelEbj9OEaaTMGrLk0dM=",
+          "size": 11884576
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-fabric_1.9.1_darwin_arm64.zip",
+          "download_url": "https://github.com/microsoft/terraform-provider-fabric/releases/download/v1.9.1/terraform-provider-fabric_1.9.1_darwin_arm64.zip",
+          "shasum": "55803f1cc1720e282a7ec76b97f91ed1f7102ff710169f194be9dca3524618d9",
+          "h1": "h1:HMUg/2QhG1OB9/i6NYeYS6A/H6Q6+xGeP8VlkhbEYDI=",
+          "size": 11119494
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-fabric_1.9.1_freebsd_386.zip",
+          "download_url": "https://github.com/microsoft/terraform-provider-fabric/releases/download/v1.9.1/terraform-provider-fabric_1.9.1_freebsd_386.zip",
+          "shasum": "d5f17a497997536b44d64b2b168c4193b65d467f69c0b16f8d10767aa9a9f1c0",
+          "h1": "h1:nLfZKXHM7z3EnTbYLc8Twi2vchswz9Ap7rD23XhKJDA=",
+          "size": 10705523
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-fabric_1.9.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/microsoft/terraform-provider-fabric/releases/download/v1.9.1/terraform-provider-fabric_1.9.1_freebsd_amd64.zip",
+          "shasum": "0c19f8663b331af4fff2c14a9b0ccefe900a47de04c2b28ba4060250a40b748b",
+          "h1": "h1:q5TSFm/25FecBp7zf6epOnn/2rITXCLu3FHJeLsg/YQ=",
+          "size": 11523334
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-fabric_1.9.1_freebsd_arm.zip",
+          "download_url": "https://github.com/microsoft/terraform-provider-fabric/releases/download/v1.9.1/terraform-provider-fabric_1.9.1_freebsd_arm.zip",
+          "shasum": "fb75929cff848bee374670e812881bb6d24e37eb7039e1dcc4d2e8bcd607619e",
+          "h1": "h1:5e45/g0GVFYHZTdGTZ2MVayAV4LCQ3qo7gkxVYYEUBY=",
+          "size": 10748084
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-fabric_1.9.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/microsoft/terraform-provider-fabric/releases/download/v1.9.1/terraform-provider-fabric_1.9.1_freebsd_arm64.zip",
+          "shasum": "1e1adfa8c162ae168a4b7cc5076190f5771b88f176be92d1c98d9236754e8ef7",
+          "h1": "h1:8C7INEmsBc7kxmocKgA6ll122CyJIgz6GsPmrBWM03I=",
+          "size": 10475041
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-fabric_1.9.1_linux_386.zip",
+          "download_url": "https://github.com/microsoft/terraform-provider-fabric/releases/download/v1.9.1/terraform-provider-fabric_1.9.1_linux_386.zip",
+          "shasum": "b1e77acd48570246ad56fdb0079329e393c3de0a4cff364f6a56ce0b07b546bd",
+          "h1": "h1:V4AUD04l3dnw8COg6xvZsx9RTJDct0AUXJfC04ikNQo=",
+          "size": 10749514
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-fabric_1.9.1_linux_amd64.zip",
+          "download_url": "https://github.com/microsoft/terraform-provider-fabric/releases/download/v1.9.1/terraform-provider-fabric_1.9.1_linux_amd64.zip",
+          "shasum": "ff442912169e8e398b4f97bdc7f03e3316ee3c82f348643cbb029a6b6e3635a6",
+          "h1": "h1:nWcUYZ+y4+X/IlJwdIWCGA9jRdbKRPuew2WQ6eINhlM=",
+          "size": 11557372
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-fabric_1.9.1_linux_arm.zip",
+          "download_url": "https://github.com/microsoft/terraform-provider-fabric/releases/download/v1.9.1/terraform-provider-fabric_1.9.1_linux_arm.zip",
+          "shasum": "8cc4adf02317c576c5ae96043969a3d4a3121a76b0b4e830ba953a1a14c6aa23",
+          "h1": "h1:ja0Vfc9k+ZI7Yt655g6TRrzM6qE7+wTSnmM+45W0ZS8=",
+          "size": 10777735
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-fabric_1.9.1_linux_arm64.zip",
+          "download_url": "https://github.com/microsoft/terraform-provider-fabric/releases/download/v1.9.1/terraform-provider-fabric_1.9.1_linux_arm64.zip",
+          "shasum": "7a525ced35073feaab30b06c7aebd6f48670da0da26b825ef6bd2fa0d71fc5c2",
+          "h1": "h1:aX4xymXfIMtt4kakBnE+ZfE3Fc5zEdYnbpLrP812pDg=",
+          "size": 10505837
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-fabric_1.9.1_windows_386.zip",
+          "download_url": "https://github.com/microsoft/terraform-provider-fabric/releases/download/v1.9.1/terraform-provider-fabric_1.9.1_windows_386.zip",
+          "shasum": "e2513856923ad7f95f3a615a42c2d50dd0df733747661837f347f7fc01304d66",
+          "h1": "h1:Z3zZkZ8PW0G0aUfOPD/ECA63hdSQ6G0FoNL/N52Xops=",
+          "size": 11295142
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-fabric_1.9.1_windows_amd64.zip",
+          "download_url": "https://github.com/microsoft/terraform-provider-fabric/releases/download/v1.9.1/terraform-provider-fabric_1.9.1_windows_amd64.zip",
+          "shasum": "623a12f2e9e4cb373feef793ab4eb4b2e8b0f79cc0771c4b19b536463ad4328a",
+          "h1": "h1:K0bJ/bLwcXMdMtuiAgpwZyZ1uvk/zgmm5WFMbxag3KE=",
+          "size": 11926518
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-fabric_1.9.1_windows_arm64.zip",
+          "download_url": "https://github.com/microsoft/terraform-provider-fabric/releases/download/v1.9.1/terraform-provider-fabric_1.9.1_windows_arm64.zip",
+          "shasum": "7f21722a93c3b3a0a6eae8a77ef2e323ed5a773c904e35e24a90f2d580b2a565",
+          "h1": "h1:5mmGenyMrCXqPYjyl0Fga4jqnGFkr41Vq+S0mq5P2d4=",
+          "size": 10624663
+        }
+      ]
+    },
+    {
       "version": "1.9.0",
       "protocols": [
         "6.0"
@@ -2811,13 +2938,6 @@
           "size": 7720560
         }
       ]
-    }
-  ],
-  "versions_errors": [
-    {
-      "version": "1.9.1",
-      "message": "checksums not found in release",
-      "utc_time": "2026-04-09T10:11:01.963119034Z"
     }
   ]
 }
