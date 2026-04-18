@@ -1,7 +1,7 @@
 name: Verify PR JSON
 
 on:
-  pull_request:
+  pull_request_target:
     paths:
       - 'providers/**/*.json'
       - 'modules/**/*.json'
@@ -16,6 +16,14 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+
+      - name: Pull PR JSON files
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          git fetch origin "pull/${PR_NUMBER}/head"
+          git checkout FETCH_HEAD -- providers modules
 
       - name: Set up Go
         uses: actions/setup-go@4b73464bb391d4059bd26b0524d20df3927bd417 # v6
