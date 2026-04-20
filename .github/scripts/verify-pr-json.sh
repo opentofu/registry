@@ -23,8 +23,9 @@ HEADER
 
 # Compare two JSON files semantically (normalized key order and formatting)
 # Stores diff output in $json_diff_output. Sets return code 0 if equal, 1 if different.
+# Do not
 json_diff() {
-	json_diff_output=$(diff -u <(jq --sort-keys '.' "$1") <(jq --sort-keys '.' "$2") || true)
+	json_diff_output=$(diff -u <(jq --sort-keys '. | del(.versions_errors[]?.utc_time)' "$1") <(jq --sort-keys '. | del(.versions_errors[]?.utc_time)' "$2") || true)
 	[[ -z "${json_diff_output}" ]]
 }
 
