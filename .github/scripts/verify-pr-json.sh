@@ -23,7 +23,8 @@ HEADER
 
 # Compare two JSON files semantically (normalized key order and formatting)
 # Stores diff output in $json_diff_output. Sets return code 0 if equal, 1 if different.
-# Do not
+# The comparison is done by ignoring the "utc_time" field from all the "versions_errors" entries (if it exists) since that could have
+# different values between multiple executions.
 json_diff() {
 	json_diff_output=$(diff -u <(jq --sort-keys '. | del(.versions_errors[]?.utc_time)' "$1") <(jq --sort-keys '. | del(.versions_errors[]?.utc_time)' "$2") || true)
 	[[ -z "${json_diff_output}" ]]
