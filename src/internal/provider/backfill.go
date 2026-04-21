@@ -4,18 +4,12 @@ import (
 	"context"
 	"errors"
 	"log/slog"
-	"slices"
 )
 
 func (p *Provider) BackfillVersionData(ctx context.Context) error {
 	p.Logger.Info("Beginning version backfill process")
 
 	meta, err := p.ReadMetadata()
-	if err != nil {
-		return err
-	}
-
-	releases, err := p.getSemverTags()
 	if err != nil {
 		return err
 	}
@@ -29,44 +23,13 @@ func (p *Provider) BackfillVersionData(ctx context.Context) error {
 			break
 		}
 
-		// Check to see if this version has already
-		// been populated
-		hasMeta := false
-		for _, target := range version.Targets {
-			if target.Size != 0 {
-				hasMeta = true
-				break
-			}
-		}
-		if hasMeta {
-			skipped++
-			continue
-		}
-
-		// version.Version *never* starts with "v"
-		// Therefore we need to find the git tag which corresponds
-		// with the recorded provider version.
-		var releaseTag string
-		if slices.Contains(releases, version.Version) {
-			releaseTag = version.Version
-		} else if slices.Contains(releases, "v"+version.Version) {
-			releaseTag = "v" + version.Version
-		} else {
-			p.Logger.Warn("Failed to backfill version, missing release tag", slog.String("version", version.Version))
-			break
-		}
-
-		newVersion, err := p.VersionFromTag(releaseTag)
-		if err != nil {
-			p.Logger.Error("Failed to backfill version", slog.String("version", version.Version), slog.Any("err", err))
-			errs = append(errs, err)
-			errored++
-			continue
-		}
-		if newVersion != nil {
-			meta.Versions[key] = *newVersion
+		if version.Discovered == nil {
+			version.Discovered = new(version.FirstDiscovered())
+			meta.Versions[key] = version
 			madeChanges = true
 			backfilled++
+		} else {
+			skipped++
 		}
 	}
 

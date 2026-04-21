@@ -10,34 +10,43 @@ import (
 func Test_parseTagsFromStdout(t *testing.T) {
 	cases := map[string]struct {
 		input       []string
-		expected    []string
+		expected    []Tag
 		expectedErr error
 	}{
 		"Empty input": {
 			input:    []string{""},
-			expected: []string{},
+			expected: []Tag{},
 		},
 		// Successful
 		"Simple Tag": {
-			input:    []string{"314159265358979     refs/tags/v0.0.1"},
-			expected: []string{"v0.0.1"},
+			input: []string{"314159265358979     refs/tags/v0.0.1"},
+			expected: []Tag{
+				{Commit: "314159265358979", Ref: "v0.0.1"},
+			},
 		},
 		"Multiple Tags": {
-			input:    []string{"314159265358979     refs/tags/v0.0.1", "314159265358979     refs/tags/v0.1.1", "314159265358979     refs/tags/v1.0.1"},
-			expected: []string{"v0.0.1", "v0.1.1", "v1.0.1"},
+			input: []string{"314159265358979     refs/tags/v0.0.1", "314159265358979     refs/tags/v0.1.1", "314159265358979     refs/tags/v1.0.1"},
+			expected: []Tag{
+				{Commit: "314159265358979", Ref: "v0.0.1"},
+				{Commit: "314159265358979", Ref: "v0.1.1"},
+				{Commit: "314159265358979", Ref: "v1.0.1"},
+			},
 		},
 		// Invalid entries (ignored)
 		"No Tags": {
 			input:    []string{},
-			expected: []string{},
+			expected: []Tag{},
 		},
 		"Empty Tags": {
 			input:    []string{""},
-			expected: []string{},
+			expected: []Tag{},
 		},
 		"Multiple Tags w/ Invalid": {
-			input:    []string{"314159265358979     HEAD", "314159265358979     refs/tags/v0.1.1", "314159265358979     refs/tags/v1.0.1"},
-			expected: []string{"v0.1.1", "v1.0.1"},
+			input: []string{"314159265358979     HEAD", "314159265358979     refs/tags/v0.1.1", "314159265358979     refs/tags/v1.0.1"},
+			expected: []Tag{
+				{Commit: "314159265358979", Ref: "v0.1.1"},
+				{Commit: "314159265358979", Ref: "v1.0.1"},
+			},
 		},
 		// Error cases
 		"Missing Field": {

@@ -5,6 +5,7 @@ import (
 	"log/slog"
 
 	"github.com/opentofu/registry-stable/internal"
+	"github.com/opentofu/registry-stable/internal/github"
 )
 
 var (
@@ -31,15 +32,15 @@ func (p Provider) ArtifactName(version string, suffix string) string {
 	return fmt.Sprintf("%s_%s_%s", p.RepositoryName(), version, suffix)
 }
 
-func (p Provider) ArtifactURL(release string, version string, suffix string) string {
-	return fmt.Sprintf("%s/releases/download/%s/%s", p.RepositoryURL(), release, p.ArtifactName(version, suffix))
+func (p Provider) ArtifactURL(release github.Tag, version string, suffix string) string {
+	return fmt.Sprintf("%s/releases/download/%s/%s", p.RepositoryURL(), release.Ref, p.ArtifactName(version, suffix))
 }
 
 // VersionFromTag fetches information about an individual release based on the GitHub release name
-func (p Provider) VersionFromTag(release string) (*Version, error) {
-	version := internal.TrimTagPrefix(release)
+func (p Provider) VersionFromTag(release github.Tag) (*Version, error) {
+	version := internal.TrimTagPrefix(release.Ref)
 
-	logger := p.Logger.With(slog.String("release", release))
+	logger := p.Logger.With(slog.String("release", release.Ref))
 
 	v := Version{
 		Version:             version,

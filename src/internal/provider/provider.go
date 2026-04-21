@@ -26,11 +26,23 @@ type Metadata struct {
 
 // Version contains information about a specific provider version.
 type Version struct {
-	Version             string   `json:"version"`               // The version number of the provider.
-	Protocols           []string `json:"protocols"`             // The protocol versions the provider supports.
-	SHASumsURL          string   `json:"shasums_url"`           // The URL to the SHA checksums file.
-	SHASumsSignatureURL string   `json:"shasums_signature_url"` // The URL to the GPG signature of the SHA checksums file.
-	Targets             []Target `json:"targets"`               // A list of target platforms for which this provider version is available.
+	Version             string     `json:"version"`               // The version number of the provider.
+	Protocols           []string   `json:"protocols"`             // The protocol versions the provider supports.
+	SHASumsURL          string     `json:"shasums_url"`           // The URL to the SHA checksums file.
+	SHASumsSignatureURL string     `json:"shasums_signature_url"` // The URL to the GPG signature of the SHA checksums file.
+	Targets             []Target   `json:"targets"`               // A list of target platforms for which this provider version is available.
+	Discovered          *time.Time `json:"discovered,omitempty"`  // The date the version was first discovered
+}
+
+// Any provider without a discovered date should default to the date we started tracking discovery
+var defaultDiscovery, _ = time.Parse(time.RFC3339, "2026-04-21T00:00:00Z")
+
+func (v *Version) FirstDiscovered() time.Time {
+	if v.Discovered == nil {
+		// This can be removed once the backfill is complete
+		return defaultDiscovery
+	}
+	return *v.Discovered
 }
 
 // VersionError track versions that can not be populated due to errors.

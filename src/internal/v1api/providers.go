@@ -63,9 +63,10 @@ func (p ProviderGenerator) VersionListing() ProviderVersionListingResponse {
 
 	for versionIdx, ver := range p.Versions {
 		verResp := ProviderVersionResponseItem{
-			Version:   ver.Version,
-			Protocols: ver.Protocols,
-			Platforms: make([]ProviderPlatform, len(ver.Targets)),
+			Version:    ver.Version,
+			Protocols:  ver.Protocols,
+			Platforms:  make([]ProviderPlatform, len(ver.Targets)),
+			Discovered: ver.FirstDiscovered(),
 		}
 
 		for targetIdx, target := range ver.Targets {

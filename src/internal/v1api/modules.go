@@ -57,7 +57,10 @@ func (m ModuleGenerator) VersionDownloadPath(v module.Version) string {
 func (m ModuleGenerator) VersionListing() ModuleVersionListingResponse {
 	versions := make([]ModuleVersionResponseItem, len(m.Versions))
 	for i, v := range m.Versions {
-		versions[i] = ModuleVersionResponseItem{Version: internal.TrimTagPrefix(v.Version)}
+		versions[i] = ModuleVersionResponseItem{
+			Version:    internal.TrimTagPrefix(v.Version),
+			Discovered: v.FirstDiscovered(),
+		}
 	}
 	return ModuleVersionListingResponse{[]ModuleVersionListingResponseItem{{versions}}}
 }

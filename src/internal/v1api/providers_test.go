@@ -49,7 +49,7 @@ func Test_ProviderGenerator(t *testing.T) {
 	// Testing if the generated file has version with lower case
 	assert.Equal(t, "gen/v1/providers/zededa/zedcloud/v2.3.1-rc1/download/mac/arm", p.VersionDownloadPath(v, d))
 
-	vt, err := p.VersionFromTag("v2.3.1-RC1")
+	vt, err := p.VersionFromTag(github.Tag{Ref: "v2.3.1-RC1"})
 	require.NoError(t, err)
 
 	// URLs still should have an uppercase version, since we point directly to Github URLs

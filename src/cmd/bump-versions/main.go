@@ -84,7 +84,7 @@ func main() {
 		return
 	}
 
-	logger.Info("Beginning backfill process for providers", slog.Any("time_allocated", remainingTime))
+	logger.Info("Beginning backfill process", slog.Any("time_allocated", remainingTime))
 
 	// Setup a new github client with the limited context
 	ghClient = github.NewClient(ctx, logger, token)
@@ -117,5 +117,33 @@ func main() {
 		os.Exit(1)
 	}
 
-	logger.Info("Completed backfill process for providers")
+	// Re-list modules with new github client (not ideal)
+	modules, err = module.ListModules(*moduleDataDir, *moduleNamespace, logger, ghClient, bl)
+	if err != nil {
+		logger.Error("Failed to list modules", slog.Any("err", err))
+		os.Exit(1)
+	}
+	err = modules.Parallel(20, func(p module.Module) error {
+		if err := ctx.Err(); err != nil {
+			if errors.Is(err, context.DeadlineExceeded) {
+				// Outta-time
+				return nil
+			}
+			return err
+		}
+		err := p.BackfillVersionData(ctx)
+		if errors.Is(err, context.DeadlineExceeded) {
+			p.Logger.Info("Partial completion of backfill due to time limitation")
+			// Outta-time
+			return nil
+		}
+		return err
+	})
+
+	if err != nil {
+		logger.Error("Failed to backfill modules", slog.Any("err", err))
+		os.Exit(1)
+	}
+
+	logger.Info("Completed backfill process")
 }

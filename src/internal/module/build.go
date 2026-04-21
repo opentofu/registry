@@ -4,10 +4,12 @@ import (
 	"fmt"
 	"log/slog"
 	"slices"
+	"time"
 
 	"golang.org/x/mod/semver"
 
 	"github.com/opentofu/registry-stable/internal"
+	"github.com/opentofu/registry-stable/internal/github"
 )
 
 func (m Module) UpdateMetadataFile() error {
@@ -45,14 +47,14 @@ func (m Module) BuildMetadata() (*Metadata, error) {
 	for _, t := range tags {
 		found := false
 		for _, v := range meta.Versions {
-			if v.Version == t {
+			if v.Version == t.Ref {
 				found = true
 				break
 			}
 		}
 		if !found {
 			// Check if this version is blacklisted
-			version := internal.TrimTagPrefix(t)
+			version := internal.TrimTagPrefix(t.Ref)
 			if isBlacklisted, reason := blacklistInstance.IsModuleVersionBlacklisted(m.Namespace, m.Name, m.TargetSystem, version); isBlacklisted {
 				m.Logger.Warn("Skipping blacklisted module version",
 					slog.String("namespace", m.Namespace),
@@ -63,7 +65,11 @@ func (m Module) BuildMetadata() (*Metadata, error) {
 				blacklistedCount++
 				continue
 			}
-			meta.Versions = append(meta.Versions, Version{Version: t})
+			meta.Versions = append(meta.Versions, Version{
+				Version:    t.Ref,
+				Commit:     t.Commit,
+				Discovered: new(time.Now().UTC()),
+			})
 		}
 	}
 
@@ -79,22 +85,22 @@ func (m Module) BuildMetadata() (*Metadata, error) {
 	return &meta, nil
 }
 
-func (m Module) getSemverTags() ([]string, error) {
+func (m Module) getSemverTags() ([]github.Tag, error) {
 	tags, err := m.Github.GetTags(m.RepositoryURL())
 	if err != nil {
 		return nil, err
 	}
 
-	var semverTags = make([]string, 0)
+	var semverTags = make([]github.Tag, 0)
 	for _, tag := range tags {
-		tagWithPrefix := fmt.Sprintf("v%s", internal.TrimTagPrefix(tag))
+		tagWithPrefix := fmt.Sprintf("v%s", internal.TrimTagPrefix(tag.Ref))
 		if semver.IsValid(tagWithPrefix) {
 			semverTags = append(semverTags, tag)
 		}
 	}
 
-	semverSortFunc := func(a, b string) int {
-		return -semver.Compare(a, b)
+	semverSortFunc := func(a, b github.Tag) int {
+		return -semver.Compare(a.Ref, b.Ref)
 	}
 	slices.SortFunc(semverTags, semverSortFunc)
 

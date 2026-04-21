@@ -1,6 +1,6 @@
 module github.com/opentofu/registry-stable
 
-go 1.21
+go 1.26
 
 require (
 	github.com/ProtonMail/gopenpgp/v2 v2.7.4
