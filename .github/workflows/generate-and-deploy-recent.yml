@@ -36,7 +36,7 @@ jobs:
       - name: Setup dependencies
         run: sudo apt-get update && sudo apt-get install rclone
 
-      - name: Prune modules and providers to only modified in the past 100 commits
+      - name: Prune modules and providers to only modified in the past 4 hours
         run: |
           # Copy files changed into pruned directory
           git fetch origin
@@ -44,11 +44,11 @@ jobs:
 
           mkdir ./pruned/
           echo "Copy Changed Providers"
-          git diff --name-only "$(git rev-list -1 --before="$(date -d '-1 hours' '+%Y-%m-%d %H:%M:%S')" HEAD)" | grep ^providers | xargs -I foo echo "mkdir -p ./pruned/\$(dirname foo); cp foo ./pruned/foo; echo foo" | bash
+          git diff --name-only "$(git rev-list -1 --before="$(date -d '-4 hours' '+%Y-%m-%d %H:%M:%S')" HEAD)" | grep ^providers | xargs -I foo echo "mkdir -p ./pruned/\$(dirname foo); cp foo ./pruned/foo; echo foo" | bash
           echo "Copy Changed Providers by Keys"
-          git diff --name-only "$(git rev-list -1 --before="$(date -d '-1 hours' '+%Y-%m-%d %H:%M:%S')" HEAD)" | grep ^keys | sed -e 's,^keys/\([^/]*\)/\([^/]*\).*,providers/\1/\2,' | sort | uniq | xargs -I foo echo "mkdir -p ./pruned/\$(dirname foo); cp -r foo ./pruned/foo; echo foo" | bash
+          git diff --name-only "$(git rev-list -1 --before="$(date -d '-4 hours' '+%Y-%m-%d %H:%M:%S')" HEAD)" | grep ^keys | sed -e 's,^keys/\([^/]*\)/\([^/]*\).*,providers/\1/\2,' | sort | uniq | xargs -I foo echo "mkdir -p ./pruned/\$(dirname foo); cp -r foo ./pruned/foo; echo foo" | bash
           echo "Copy Changed Modules"
-          git diff --name-only "$(git rev-list -1 --before="$(date -d '-1 hours' '+%Y-%m-%d %H:%M:%S')" HEAD)" | grep ^modules | xargs -I foo echo "mkdir -p ./pruned/\$(dirname foo); cp foo ./pruned/foo; echo foo" | bash
+          git diff --name-only "$(git rev-list -1 --before="$(date -d '-4 hours' '+%Y-%m-%d %H:%M:%S')" HEAD)" | grep ^modules | xargs -I foo echo "mkdir -p ./pruned/\$(dirname foo); cp foo ./pruned/foo; echo foo" | bash
 
       - name: Run Generation script
         working-directory: ./src
