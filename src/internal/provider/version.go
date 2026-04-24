@@ -47,7 +47,7 @@ func (p Provider) VersionFromTag(release github.Tag) (*Version, error) {
 		Version:             version,
 		SHASumsURL:          p.ArtifactURL(release, version, "SHA256SUMS"),
 		SHASumsSignatureURL: p.ArtifactURL(release, version, "SHA256SUMS.sig"),
-		Discovered:          new(time.Now()),
+		Discovered:          new(time.Now().UTC()),
 	}
 
 	checksums, err := p.GetSHASums(v.SHASumsURL)

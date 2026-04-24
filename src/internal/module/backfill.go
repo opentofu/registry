@@ -55,6 +55,7 @@ func (m *Module) BackfillVersionData(ctx context.Context) error {
 				m.Logger.Error("Failed to backfill version", slog.String("version", version.Version), slog.Any("err", err))
 				errs = append(errs, err)
 				errored++
+				continue
 			}
 		}
 
