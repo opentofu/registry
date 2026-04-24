@@ -8,6 +8,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"time"
 
 	"github.com/opentofu/registry-stable/internal/blacklist"
 	"github.com/opentofu/registry-stable/internal/files"
@@ -16,7 +17,20 @@ import (
 
 // Version represents a single version of a module.
 type Version struct {
-	Version string `json:"version"` // The version number of the provider. Correlates to a tag in the module repository
+	Version    string     `json:"version"`              // The version number of the provider. Correlates to a tag in the module repository
+	Commit     string     `json:"commit"`               // The commit hash of the version tag when the module version was first discovered
+	Discovered *time.Time `json:"discovered,omitempty"` // The date the module version was first discovered
+}
+
+// Any module without a discovered date should default to the date we started tracking discovery
+var defaultDiscovery, _ = time.Parse(time.RFC3339, "2026-04-21T00:00:00Z")
+
+func (v *Version) FirstDiscovered() time.Time {
+	if v.Discovered == nil {
+		// This can be removed once the backfill is complete
+		return defaultDiscovery
+	}
+	return *v.Discovered
 }
 
 // Metadata represents all the metadata for a module. This includes the list of
@@ -49,9 +63,14 @@ func (m Module) RSSURL() string {
 
 // VersionDownloadURL returns the location to download the module from.
 // the file should just contain a link to GitHub to download the tarball, ie:
-// git::https://github.com/terraform-aws-modules/terraform-aws-iam?ref=v5.30.0
+// git::https://github.com/terraform-aws-modules/terraform-aws-iam?ref=<commit-hash>
 func (m Module) VersionDownloadURL(version Version) string {
-	return fmt.Sprintf("git::%s?ref=%s", m.RepositoryURL(), version.Version)
+	ref := version.Commit
+	if ref == "" {
+		// TODO remove this fallback once backfill is complete
+		ref = version.Version
+	}
+	return fmt.Sprintf("git::%s?ref=%s", m.RepositoryURL(), ref)
 }
 
 // MetadataPath returns the path to the metadata file for the module.

@@ -26,7 +26,7 @@ HEADER
 # The comparison is done by ignoring the "utc_time" field from all the "versions_errors" entries (if it exists) since that could have
 # different values between multiple executions.
 json_diff() {
-	json_diff_output=$(diff -u <(jq --sort-keys '. | del(.versions_errors[]?.utc_time)' "$1") <(jq --sort-keys '. | del(.versions_errors[]?.utc_time)' "$2") || true)
+	json_diff_output=$(diff -u <(jq --sort-keys '. | del(.versions_errors[]?.utc_time) | del(.versions[]?.discovered)' "$1") <(jq --sort-keys '. | del(.versions_errors[]?.utc_time) | del(.versions[]?.discovered)' "$2") || true)
 	[[ -z "${json_diff_output}" ]]
 }
 

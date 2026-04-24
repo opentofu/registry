@@ -1,7 +1,11 @@
 // Package v1api provides the v1 registry API response generation.
 package v1api
 
-import "github.com/opentofu/registry-stable/internal/gpg"
+import (
+	"time"
+
+	"github.com/opentofu/registry-stable/internal/gpg"
+)
 
 // ModuleVersionDownloadResponse is the item returned by the module version download API.
 type ModuleVersionDownloadResponse struct {
@@ -21,7 +25,8 @@ type ModuleVersionListingResponseItem struct {
 
 // ModuleVersionResponseItem is the item returned by the module version listing API
 type ModuleVersionResponseItem struct {
-	Version string `json:"version"` // The version string
+	Version    string    `json:"version"`    // The version string
+	Discovered time.Time `json:"discovered"` // When the version was first discovered
 
 	// TODO: Discuss if we want to keep or not.
 	// Root is not currently populated in the response, but may be in the future.
@@ -56,9 +61,10 @@ type ProviderVersionListingResponse struct {
 }
 
 type ProviderVersionResponseItem struct {
-	Version   string             `json:"version"`   // The version number of the provider.
-	Protocols []string           `json:"protocols"` // The protocol versions the provider supports.
-	Platforms []ProviderPlatform `json:"platforms"` // A list of platforms for which this provider version is available.
+	Version    string             `json:"version"`    // The version number of the provider.
+	Protocols  []string           `json:"protocols"`  // The protocol versions the provider supports.
+	Platforms  []ProviderPlatform `json:"platforms"`  // A list of platforms for which this provider version is available.
+	Discovered time.Time          `json:"discovered"` // When the version was first discovered
 }
 
 // ProviderPlatform represents a platform that a provider supports.

@@ -15,13 +15,13 @@ func TestValidate(t *testing.T) {
 		{
 			name: "valid",
 			input: Metadata{
-				Versions: []Version{{"0.0.2"}, {"0.0.1"}},
+				Versions: []Version{{Version: "0.0.2"}, {Version: "0.0.1"}},
 			},
 		},
 		{
 			name: "invalid-version",
 			input: Metadata{
-				Versions: []Version{{"0.0.2"}, {"foo"}},
+				Versions: []Version{{Version: "0.0.2"}, {Version: "foo"}},
 			},
 			wantErrStr: "found semver-incompatible version: foo\n",
 		},

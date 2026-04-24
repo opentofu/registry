@@ -10,23 +10,24 @@ import (
 
 	"github.com/opentofu/registry-stable/internal"
 	"github.com/opentofu/registry-stable/internal/blacklist"
+	"github.com/opentofu/registry-stable/internal/github"
 
 	"golang.org/x/mod/semver"
 )
 
 // filterNewReleases filters the list of releases to only include those that do
 // not already exist in the metadata and are not blacklisted.
-func (meta Metadata) filterNewReleases(releases []string, namespace, name string, blacklistInstance *blacklist.Blacklist) []string {
+func (meta Metadata) filterNewReleases(releases []github.Tag, namespace, name string, blacklistInstance *blacklist.Blacklist) []github.Tag {
 	var existingVersions = make(map[string]bool)
 	for _, v := range meta.Versions {
 		existingVersions[v.Version] = true
 	}
 
-	var newReleases = make([]string, 0)
+	var newReleases = make([]github.Tag, 0)
 	var blacklistedCount = 0
 	var erroredCount = 0
 	for _, r := range releases {
-		version := internal.TrimTagPrefix(r)
+		version := internal.TrimTagPrefix(r.Ref)
 		if !existingVersions[version] {
 			// Check if this version is blacklisted
 			if isBlacklisted, reason := blacklistInstance.IsProviderVersionBlacklisted(namespace, name, version); isBlacklisted {
@@ -79,15 +80,15 @@ func (meta Metadata) filterNewReleases(releases []string, namespace, name string
 }
 
 // getSemverTags returns a list of semver tags for the module fetched from GitHub.
-func (p Provider) getSemverTags() ([]string, error) {
+func (p Provider) getSemverTags() ([]github.Tag, error) {
 	tags, err := p.Github.GetTags(p.RepositoryURL())
 	if err != nil {
 		return nil, err
 	}
 
-	var semverTags = make([]string, 0)
+	var semverTags = make([]github.Tag, 0)
 	for _, tag := range tags {
-		tagWithPrefix := fmt.Sprintf("v%s", internal.TrimTagPrefix(tag))
+		tagWithPrefix := fmt.Sprintf("v%s", internal.TrimTagPrefix(tag.Ref))
 		if semver.IsValid(tagWithPrefix) {
 			semverTags = append(semverTags, tag)
 		}
@@ -119,7 +120,7 @@ func (p Provider) buildMetadata() (*Metadata, error) {
 	}
 
 	type versionResult struct {
-		r   string
+		r   github.Tag
 		v   *Version
 		err error
 	}
@@ -143,7 +144,7 @@ func (p Provider) buildMetadata() (*Metadata, error) {
 			var nonFatal ErrVersionNonFatal
 			if errors.As(result.err, &nonFatal) {
 				meta.VersionErrors = append(meta.VersionErrors, VersionError{
-					Version: internal.TrimTagPrefix(result.r),
+					Version: internal.TrimTagPrefix(result.r.Ref),
 					Message: nonFatal.Error(),
 					UTCTime: time.Now().UTC(),
 				})
