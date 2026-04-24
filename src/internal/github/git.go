@@ -2,6 +2,7 @@ package github
 
 import (
 	"bytes"
+	"encoding/hex"
 	"fmt"
 	"log/slog"
 	"os/exec"
@@ -17,26 +18,32 @@ func parseTagsFromStdout(lines []string) ([]Tag, error) {
 	tags := make([]Tag, 0, len(lines))
 
 	for _, line := range lines {
-		if !strings.Contains(line, "refs/tags/") {
+		prefix := "refs/tags/"
+		if !strings.Contains(line, prefix) {
 			continue
 		}
 
 		fields := strings.Fields(line)
 		if len(fields) != 2 {
-			return nil, fmt.Errorf("invalid format for tag '%s', expected two fields", line)
+			return nil, fmt.Errorf("invalid format for tag %q, expected two fields", line)
+		}
+
+		commit := fields[0]
+		if _, err := hex.DecodeString(commit); err != nil {
+			return nil, fmt.Errorf("invalid format for commit %q: %w", line, err)
 		}
 
 		ref := fields[1]
-		if !strings.HasPrefix(ref, "refs/tags/") {
-			return nil, fmt.Errorf("invalid format for tag '%s', expected 'refs/tags/' prefix", line)
+		if !strings.HasPrefix(ref, prefix) {
+			return nil, fmt.Errorf("invalid format for tag %q, expected %q prefix", line, prefix)
 		}
 
-		tag := strings.TrimPrefix(ref, "refs/tags/")
+		tag := strings.TrimPrefix(ref, prefix)
 		if tag == "" {
-			return nil, fmt.Errorf("invalid format for tag '%s', no version provided", line)
+			return nil, fmt.Errorf("invalid format for tag %q, no version provided", line)
 		}
 
-		tags = append(tags, Tag{Ref: tag, Commit: fields[0]})
+		tags = append(tags, Tag{Ref: tag, Commit: commit})
 	}
 
 	return tags, nil
