@@ -63,7 +63,7 @@ func (m Module) RSSURL() string {
 
 // VersionDownloadURL returns the location to download the module from.
 // the file should just contain a link to GitHub to download the tarball, ie:
-// git::https://github.com/terraform-aws-modules/terraform-aws-iam?ref=v5.30.0
+// git::https://github.com/terraform-aws-modules/terraform-aws-iam?ref=<commit-hash>
 func (m Module) VersionDownloadURL(version Version) string {
 	ref := version.Commit
 	if ref == "" {
