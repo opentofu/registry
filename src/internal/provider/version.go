@@ -3,6 +3,7 @@ package provider
 import (
 	"fmt"
 	"log/slog"
+	"time"
 
 	"github.com/opentofu/registry-stable/internal"
 	"github.com/opentofu/registry-stable/internal/github"
@@ -46,6 +47,7 @@ func (p Provider) VersionFromTag(release github.Tag) (*Version, error) {
 		Version:             version,
 		SHASumsURL:          p.ArtifactURL(release, version, "SHA256SUMS"),
 		SHASumsSignatureURL: p.ArtifactURL(release, version, "SHA256SUMS.sig"),
+		Discovered:          new(time.Now()),
 	}
 
 	checksums, err := p.GetSHASums(v.SHASumsURL)
