@@ -1,6 +1,152 @@
 {
   "versions": [
     {
+      "version": "3.6.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/opentofu/terraform-provider-dns/releases/download/v3.6.1/terraform-provider-dns_3.6.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/opentofu/terraform-provider-dns/releases/download/v3.6.1/terraform-provider-dns_3.6.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-dns_3.6.1_darwin_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-dns/releases/download/v3.6.1/terraform-provider-dns_3.6.1_darwin_amd64.zip",
+          "shasum": "495efaecf1b60f290f14f06022e596f8014b72e7495890e21a1bb2af26979c8e",
+          "h1": "h1:pQoj7cAQXxkTExVC9yo1DuXXOEu61ooPchAbIPzFvvk=",
+          "size": 8247728
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-dns_3.6.1_darwin_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-dns/releases/download/v3.6.1/terraform-provider-dns_3.6.1_darwin_arm64.zip",
+          "shasum": "f3b30189cfd258481712c591cb5cbd7524f8849ee343783f0bb9cc0a2bc35e00",
+          "h1": "h1:l29wuxrKIjLZVbogOUeNUvGfbt19V0a9at9dGF+Dd54=",
+          "size": 7634772
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-dns_3.6.1_freebsd_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-dns/releases/download/v3.6.1/terraform-provider-dns_3.6.1_freebsd_386.zip",
+          "shasum": "09ded55b17842dd4ad4922be7becebd70c4f115eff68bbd86898d4aad379d085",
+          "h1": "h1:neDJu94k8/URhrNqOQe2DMcGznte+eMQWrLNnDiZj+c=",
+          "size": 7609357
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-dns_3.6.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-dns/releases/download/v3.6.1/terraform-provider-dns_3.6.1_freebsd_amd64.zip",
+          "shasum": "33eab65e3f3891ca2e9270afacb05cec65eb1fcc6aa69deaf07b5bdf67160f1e",
+          "h1": "h1:j0FO4a3ZC6VZ5ozOwA5QVNHn7jSYDsOJ3sVvWc+582U=",
+          "size": 8051668
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-dns_3.6.1_freebsd_arm.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-dns/releases/download/v3.6.1/terraform-provider-dns_3.6.1_freebsd_arm.zip",
+          "shasum": "218e3153447ac7d9f250289361f5be444daff501e6bf1d6f5adb32fdef8a9392",
+          "h1": "h1:pOM+DE9d3arJv5h3r0bs6eSsuXX64JW7MuCI79URdG0=",
+          "size": 7581493
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-dns_3.6.1_linux_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-dns/releases/download/v3.6.1/terraform-provider-dns_3.6.1_linux_386.zip",
+          "shasum": "619f000b507d9aa74ff3283bf9f97dec38a35d872b74d2df45c842f4a487de95",
+          "h1": "h1:w+nnpfveWtYr6G7fbV2uk9in5g1osBh1e0Mz9CV8a00=",
+          "size": 7640003
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-dns_3.6.1_linux_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-dns/releases/download/v3.6.1/terraform-provider-dns_3.6.1_linux_amd64.zip",
+          "shasum": "484fbcb8f3c6156137027bcdf59a92d820c0f1d29f4dab16d1e99092fe61307f",
+          "h1": "h1:I0aGMdIuR8thIltf3XiwHx2RXEeY6/x7S+aAqBtAids=",
+          "size": 8075239
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-dns_3.6.1_linux_arm.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-dns/releases/download/v3.6.1/terraform-provider-dns_3.6.1_linux_arm.zip",
+          "shasum": "252dc60a143f1c983a82dcee7918353d7921b3711b8ec839befac9908e8a2c32",
+          "h1": "h1:MR9D92fiaPDmUrJy6eGibHGqaCt+9TXXwH4w1T3fwT4=",
+          "size": 7599569
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-dns_3.6.1_linux_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-dns/releases/download/v3.6.1/terraform-provider-dns_3.6.1_linux_arm64.zip",
+          "shasum": "6503308a9d41ca50d3ab0dc4817dadbc4c9787ad8c4a1da2de940b0decc8d472",
+          "h1": "h1:WgsfNjZm2+egcyVWJjRt4VHt9oqpfb4bZjQxeCiytNE=",
+          "size": 7295874
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-dns_3.6.1_windows_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-dns/releases/download/v3.6.1/terraform-provider-dns_3.6.1_windows_386.zip",
+          "shasum": "d3d1efc240767501a0aa0e1a4603cf2394efb220e0f1d27142e9709fa4d58c64",
+          "h1": "h1:TiHQP705hNIFnn5yUdGhugkBl4SdD95nja+v0ompwvU=",
+          "size": 7696359
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-dns_3.6.1_windows_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-dns/releases/download/v3.6.1/terraform-provider-dns_3.6.1_windows_amd64.zip",
+          "shasum": "57aada27cf0630afec49b8e195942ae31f145ea646bfd0bbac09d29d8d8377d1",
+          "h1": "h1:HwbEdk+uWe2g/gnpKgc+88nxP1EkzYaIIujkPx237hQ=",
+          "size": 8000512
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-dns_3.6.1_windows_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-dns/releases/download/v3.6.1/terraform-provider-dns_3.6.1_windows_arm64.zip",
+          "shasum": "8f453fc19794e4dcdc698b38fa28f0264929baea98087d7bba0073d466cc4d10",
+          "h1": "h1:Hak7IwI2IuaNaINJvR1t+3f9LKiDy4Mrt4PuirnBbt0=",
+          "size": 7120000
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-dns_3.6.1_openbsd_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-dns/releases/download/v3.6.1/terraform-provider-dns_3.6.1_openbsd_386.zip",
+          "shasum": "ffa2c3179517ac9be7c658411bcaf7156aca079e0c5a526b5d82b3db4f018cef",
+          "h1": "h1:MdPlM2K/TBEWSo0k3DixiEc8rztIgTxIFLBmpRoqlXk=",
+          "size": 7610344
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-dns_3.6.1_openbsd_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-dns/releases/download/v3.6.1/terraform-provider-dns_3.6.1_openbsd_amd64.zip",
+          "shasum": "a124c8f18441c36402495e47608f0d02a28a64eecdd7a6526b59741245ec795d",
+          "h1": "h1:TAXiO5fHcxt64QX4pu3zMyBSxTKU+LCVVTKstJNyixw=",
+          "size": 8051187
+        },
+        {
+          "os": "solaris",
+          "arch": "amd64",
+          "filename": "terraform-provider-dns_3.6.1_solaris_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-dns/releases/download/v3.6.1/terraform-provider-dns_3.6.1_solaris_amd64.zip",
+          "shasum": "906e8d72b7fb03b7d285735cce95a2e22c9be55bad15bee9a7aad023d035401d",
+          "h1": "h1:vSWyb7kANvr5Jy60+Wp0iZ34OODyOw6ZJz4wjNa/iZU=",
+          "size": 8051996
+        }
+      ],
+      "discovered": "2026-05-20T21:12:50.373319547Z"
+    },
+    {
       "version": "3.6.0",
       "protocols": [
         "5.0"
