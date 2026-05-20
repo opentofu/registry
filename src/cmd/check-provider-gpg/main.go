@@ -57,16 +57,14 @@ func main() {
 				"For more details on how to do it, follow the [official guide](https://search.opentofu.org/docs/providers/adding#adding-the-gpg-key).",
 			provider.String(), *namespace,
 		)
-	}
 
-	if *outputFile != "" {
-		if jsonErr := files.SafeWriteObjectToJSONFile(*outputFile, output); jsonErr != nil {
-			logger.Error("Failed to write output file", slog.Any("err", jsonErr))
-			os.Exit(1)
+		if *outputFile != "" {
+			if jsonErr := files.SafeWriteObjectToJSONFile(*outputFile, output); jsonErr != nil {
+				logger.Error("Failed to write output file", slog.Any("err", jsonErr))
+				os.Exit(1)
+			}
 		}
-	}
 
-	if !output.HasKeys {
 		os.Exit(1)
 	}
 }
