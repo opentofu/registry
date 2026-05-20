@@ -52,7 +52,7 @@ func main() {
 			os.Exit(1)
 		}
 		output.Message = fmt.Sprintf(
-			"No GPG key found for the \"%s\" provider and neither for the \"%s\" organisation. "+
+			"No GPG key found for the \"%s\" provider nor for the \"%s\" namespace. "+
 				"You can submit one by using this [template](https://github.com/opentofu/registry/issues/new?template=provider_key.yml). "+
 				"For more details on how to do it, follow the [official guide](https://search.opentofu.org/docs/providers/adding#adding-the-gpg-key).",
 			provider.String(), *namespace,
