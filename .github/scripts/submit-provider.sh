@@ -42,6 +42,17 @@ namespace=$(jq -r '.namespace' < ./output.json)
 name=$(jq -r '.name' < ./output.json)
 jsonfile=$(jq -r '.file' < ./output.json)
 
+# Check if a GPG key exists for this provider or its namespace
+set +e
+if ! go run ./cmd/check-provider-gpg -namespace="${namespace}" -name="${name}" -gpg-data=../keys -output=./gpg_output.json ; then
+  if [[ -f ./gpg_output.json ]]; then
+    gh issue comment "${NUMBER}" -b "$(jq -r '.message' < ./gpg_output.json)"
+  else
+    echo "Warning: GPG check exited with an error and produced no output — skipping GPG warning comment." >&2
+  fi
+fi
+rm -f ./gpg_output.json
+set -euo pipefail
 
 # Create Branch
 branch="provider-submission_${namespace}_${name}"
