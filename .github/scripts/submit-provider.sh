@@ -46,7 +46,7 @@ jsonfile=$(jq -r '.file' < ./output.json)
 set +e
 if ! go run ./cmd/check-provider-gpg -namespace="${namespace}" -name="${name}" -gpg-data=../keys -output=./gpg_output.json ; then
   if [[ -f ./gpg_output.json ]]; then
-    gh issue comment "${NUMBER}" -b "$(jq -r '.message' < ./gpg_output.json)"
+    gh issue comment "${NUMBER}" -b "$(jq -r '.message' < ./gpg_output.json || true)"
   else
     echo "Warning: GPG check exited with an error and produced no output — skipping GPG warning comment." >&2
   fi
