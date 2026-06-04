@@ -45,6 +45,8 @@ jobs:
     needs: bump-versions
     timeout-minutes: 5
     runs-on: ubuntu-latest
+    environment:
+      name: Production
     permissions:
       actions: write
     steps:
