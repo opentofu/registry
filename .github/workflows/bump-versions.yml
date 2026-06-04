@@ -1,8 +1,6 @@
 name: Bump Provider and Module Versions
 
 # Use global lock
-#
-# https://github.com/opentofu/registry/pull/272#discussion_r1511031778
 concurrency:
   group: main
 
@@ -10,13 +8,6 @@ on:
   schedule:
     - cron: '0,15,30,45 * * * *'
   workflow_dispatch:
-    inputs:
-      environment:
-        type: choice
-        description: The environment of the Registry
-        options:
-          - Development
-          - Production
 
 jobs:
   bump-versions:
@@ -24,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     environment:
-      name: ${{ inputs.environment || 'Production' }}
+      name: Production
     permissions:
       contents: write
       actions: write
@@ -46,4 +37,26 @@ jobs:
         run: ./.github/workflows/bump-versions.sh
         env:
           PREFIX: ${{ matrix.prefix }}
-          ENVIRONMENT: ${{ inputs.environment || 'Production' }}
+          ENVIRONMENT: Production
+
+  trigger-deploy:
+    needs: bump-versions
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: Trigger Generate and Sync Recent Changes
+        run: |
+          for attempt in 1 2 3 4 5; do
+            if gh workflow run generate-and-deploy-recent.yml; then
+              exit 0
+            fi
+            echo "Attempt $attempt failed; retrying in $((attempt * 10))s" >&2
+            sleep $((attempt * 10))
+          done
+          echo "Failed to dispatch generate-and-deploy-recent after 5 attempts" >&2
+          exit 1
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_REPO: ${{ github.repository }}

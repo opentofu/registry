@@ -1,24 +1,21 @@
 # Be aware: This workflow should be kept in sync with generate-and-deploy-with-delete.yml and generate-and-deploy.yml
 name: Generate and Sync Recent Changes
 
+# Use global lock
+concurrency:
+  group: main
+
 on:
   schedule:
-    - cron: '5,20,35,50 * * * *'
+    - cron: "5,20,35,50 * * * *"
   workflow_dispatch:
-    inputs:
-      environment:
-        type: choice
-        description: The environment of the Registry
-        options:
-          - Development
-          - Production
 
 jobs:
   generate-and-sync:
     timeout-minutes: 10
     runs-on: ubuntu-latest
     environment:
-      name: ${{ inputs.environment || 'Production' }}
+      name: Production
 
     steps:
       - name: Checkout Repository
@@ -30,8 +27,8 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@4b73464bb391d4059bd26b0524d20df3927bd417 # v6
         with:
-          go-version-file: './src/go.mod'
-          cache-dependency-path: './src/go.sum'
+          go-version-file: "./src/go.mod"
+          cache-dependency-path: "./src/go.sum"
 
       - name: Setup dependencies
         run: sudo apt-get update && sudo apt-get install rclone
