@@ -1,6 +1,53 @@
 {
   "versions": [
     {
+      "version": "1.8.1-rc1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/harvester/terraform-provider-harvester/releases/download/v1.8.1-rc1/terraform-provider-harvester_1.8.1-rc1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/harvester/terraform-provider-harvester/releases/download/v1.8.1-rc1/terraform-provider-harvester_1.8.1-rc1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-harvester_1.8.1-rc1_darwin_amd64.zip",
+          "download_url": "https://github.com/harvester/terraform-provider-harvester/releases/download/v1.8.1-rc1/terraform-provider-harvester_1.8.1-rc1_darwin_amd64.zip",
+          "shasum": "8f5d22a3a3dbe85ab0461d3ee70d64ac8167186ea4b67cb87d47a334aa56f91a",
+          "h1": "h1:W4SzrhoZlA+DqhUVHv3wW0d8y+XwB1JD11b6Hg7vPz8=",
+          "size": 21216719
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-harvester_1.8.1-rc1_darwin_arm64.zip",
+          "download_url": "https://github.com/harvester/terraform-provider-harvester/releases/download/v1.8.1-rc1/terraform-provider-harvester_1.8.1-rc1_darwin_arm64.zip",
+          "shasum": "741b3df3181b3ad6052ec98c2818423a559aec869e0b5cee706c64265a378b41",
+          "h1": "h1:FsOiH0oEpDIV9Wes/T6uE9wHLu4KGQFdoaPyIHcpDOQ=",
+          "size": 19600117
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-harvester_1.8.1-rc1_linux_amd64.zip",
+          "download_url": "https://github.com/harvester/terraform-provider-harvester/releases/download/v1.8.1-rc1/terraform-provider-harvester_1.8.1-rc1_linux_amd64.zip",
+          "shasum": "affebe0d543c7555164af4be66ac38c52fc690c7fe94c8e3f731ddde4225013f",
+          "h1": "h1:gJwrgfbM0vtMsKVec8MdFCjl76+Vn2iC0DCDNf3tquE=",
+          "size": 20740462
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-harvester_1.8.1-rc1_linux_arm64.zip",
+          "download_url": "https://github.com/harvester/terraform-provider-harvester/releases/download/v1.8.1-rc1/terraform-provider-harvester_1.8.1-rc1_linux_arm64.zip",
+          "shasum": "4183f29c046b803fa85bcaa849b7f25e1be1f971fdd21d56e65d8b524dbdd179",
+          "h1": "h1:XLjPdoQFmcJpArGTCwN3sZ1EaUQCcl1wSvV0tU2zvjE=",
+          "size": 18560002
+        }
+      ],
+      "discovered": "2026-06-05T10:44:43.204843428Z"
+    },
+    {
       "version": "1.8.0",
       "protocols": [
         "5.0"
@@ -1441,11 +1488,6 @@
     }
   ],
   "versions_errors": [
-    {
-      "version": "1.8.1-rc1",
-      "message": "checksums not found in release",
-      "utc_time": "2026-06-05T09:24:21.154425944Z"
-    },
     {
       "version": "0.2.6",
       "message": "checksums not found in release",
