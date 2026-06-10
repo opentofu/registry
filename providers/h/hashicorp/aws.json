@@ -1,6 +1,152 @@
 {
   "versions": [
     {
+      "version": "6.50.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v6.50.0/terraform-provider-aws_6.50.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v6.50.0/terraform-provider-aws_6.50.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-aws_6.50.0_darwin_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v6.50.0/terraform-provider-aws_6.50.0_darwin_amd64.zip",
+          "shasum": "aadfc526f9d3789ad55e040379ec827f075387435df0250adcbc781bea8b533e",
+          "h1": "h1:+O6KyHYn4EU8IbTvNzRanYsDZfdzQ2Lmyo4YDiah0Cg=",
+          "size": 198713753
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-aws_6.50.0_darwin_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v6.50.0/terraform-provider-aws_6.50.0_darwin_arm64.zip",
+          "shasum": "7d3d11ee54b9b586faf46d6228d35a702735efa66955687fdd48616e31ee467e",
+          "h1": "h1:2WSBGr1BUGgVkvpNlcCEyrHbgkm6n3prLb2Xw751aE8=",
+          "size": 181306453
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-aws_6.50.0_freebsd_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v6.50.0/terraform-provider-aws_6.50.0_freebsd_386.zip",
+          "shasum": "9971d51e1e1a2ce63a55e317ca6e323cead814fb6aa125fb72d18c2f39faa4ea",
+          "h1": "h1:/8NKMt+ESfASB2nbi2M0p8EhJjRa9zaeI5aa4Vlod0M=",
+          "size": 164177463
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-aws_6.50.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v6.50.0/terraform-provider-aws_6.50.0_freebsd_amd64.zip",
+          "shasum": "997314c70d5a05fefc745c1596ba71a242f0979b9ba58c66acc21ddc14fab8cc",
+          "h1": "h1:hoimIcCviLu63wEev8upm3qp8Dstg+dedmcEgH5K45M=",
+          "size": 194066402
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-aws_6.50.0_freebsd_arm.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v6.50.0/terraform-provider-aws_6.50.0_freebsd_arm.zip",
+          "shasum": "f5c0cbddbe385b00a7ec2f56717bf3b1d1dcdfc33055dd64085f955af6f771c3",
+          "h1": "h1:+uZ1cbFZ24lLp9FLGQEAhAwsJhvlO8Fpn9f7WfFElWc=",
+          "size": 169141639
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-aws_6.50.0_linux_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v6.50.0/terraform-provider-aws_6.50.0_linux_386.zip",
+          "shasum": "5a80191222224c45eec1bfc1aa37d8149d83c978bee666ac15a4742748cc8216",
+          "h1": "h1:5pytYV1pmzqS/HUPrXP0Au6aHpHCNQ2CQj/wXGvOXto=",
+          "size": 164400370
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-aws_6.50.0_linux_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v6.50.0/terraform-provider-aws_6.50.0_linux_amd64.zip",
+          "shasum": "4b19f2d29ac99baf7e6ec5dabacf8416652e9b33f94c11973e68073870083673",
+          "h1": "h1:QCcPMXK71reh4nMQMRwQdLJN+0IZeIUaevwxhQx776Y=",
+          "size": 194086440
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-aws_6.50.0_linux_arm.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v6.50.0/terraform-provider-aws_6.50.0_linux_arm.zip",
+          "shasum": "ec431648c837add49efb59f9e7284b759bcfcfbd186d0678e86b70ebcfa3aac6",
+          "h1": "h1:KULmy3F8XcjhYFpYj/e6Tld7pLmlH8rRHppg9Nia1QU=",
+          "size": 169197603
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-aws_6.50.0_linux_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v6.50.0/terraform-provider-aws_6.50.0_linux_arm64.zip",
+          "shasum": "2065aabc934e93af312f6ae8374cacfee4f66b686a9acc857c334f7df46bdef3",
+          "h1": "h1:sQxWDKvoJAXNtapNQcSzKMYtly8gUFO7DXXXbfFsAUo=",
+          "size": 170223372
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-aws_6.50.0_windows_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v6.50.0/terraform-provider-aws_6.50.0_windows_386.zip",
+          "shasum": "5ed5b511634acc031790801019d7c01c45f9c296ace9995f1317aa162b45ba57",
+          "h1": "h1:QeqTis4nE5dP3bfD1YUSVlfwGuYrP2jAdMeImt7bfto=",
+          "size": 179194453
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-aws_6.50.0_windows_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v6.50.0/terraform-provider-aws_6.50.0_windows_amd64.zip",
+          "shasum": "b4f927cc68b2b943061b39eb7a2bff4b8f66cefff808ff820345f8841cf28a40",
+          "h1": "h1:JJSKvclayeXNPKIvpMWWXPrwZ89DthqXaovgZf5/rao=",
+          "size": 198345627
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-aws_6.50.0_windows_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v6.50.0/terraform-provider-aws_6.50.0_windows_arm64.zip",
+          "shasum": "73e12273e0c714b4663ec566217c80c9b084aaffa37fe0b0d4f8684b2726868b",
+          "h1": "h1:Zk43c/FlmFnjrwTLRnMB/rHayRY4mT+muXj3gehfxzw=",
+          "size": 170587094
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-aws_6.50.0_openbsd_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v6.50.0/terraform-provider-aws_6.50.0_openbsd_386.zip",
+          "shasum": "fc0b7a34bc164c687967a282487bcee12a46ec8d713b37dc8f6cfa7a3ff66f2c",
+          "h1": "h1:JJkWGopM9Qhvx9ZOexNtiLPiGuhBvUm1HwQGbi2qJl8=",
+          "size": 164156110
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-aws_6.50.0_openbsd_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v6.50.0/terraform-provider-aws_6.50.0_openbsd_amd64.zip",
+          "shasum": "d7a9edc0b114208ce4202d6f4e67d00833875bea4080af877bade4568dcd8530",
+          "h1": "h1:wbIUj0WwFn2abYhruf37CM2cYVm1GUT0gUUrIB9vNaY=",
+          "size": 194059338
+        },
+        {
+          "os": "solaris",
+          "arch": "amd64",
+          "filename": "terraform-provider-aws_6.50.0_solaris_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-aws/releases/download/v6.50.0/terraform-provider-aws_6.50.0_solaris_amd64.zip",
+          "shasum": "6d079dd1db4a182302a17f2e68fa8f8b4cb890aa3f38a88b0371a05e96e1580d",
+          "h1": "h1:ZToYXUKfIow9iLK8HGDQMKFYnFyfpTlPn9N2HYuol8Y=",
+          "size": 194067398
+        }
+      ],
+      "discovered": "2026-06-10T21:52:58.968740967Z"
+    },
+    {
       "version": "6.49.0",
       "protocols": [
         "5.0"
@@ -42158,13 +42304,6 @@
         }
       ],
       "discovered": "2026-04-21T00:00:00Z"
-    }
-  ],
-  "versions_errors": [
-    {
-      "version": "6.50.0",
-      "message": "checksums not found in release",
-      "utc_time": "2026-06-10T21:10:27.115567128Z"
     }
   ]
 }
