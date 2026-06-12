@@ -1,6 +1,135 @@
 {
   "versions": [
     {
+      "version": "0.5.2",
+      "protocols": [
+        "5.0",
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/evroc-oss/terraform-provider-evroc/releases/download/v0.5.2/terraform-provider-evroc_0.5.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/evroc-oss/terraform-provider-evroc/releases/download/v0.5.2/terraform-provider-evroc_0.5.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-evroc_0.5.2_darwin_amd64.zip",
+          "download_url": "https://github.com/evroc-oss/terraform-provider-evroc/releases/download/v0.5.2/terraform-provider-evroc_0.5.2_darwin_amd64.zip",
+          "shasum": "839d96b4aeba9585f0fc6cefd038f328965df3b7587a08c75a6a801cfeeb57b7",
+          "h1": "h1:FNibnRZBmPWK4FWeM49IQJiXd1HQxDBM0MWnN3u0QN8=",
+          "size": 7718682
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-evroc_0.5.2_darwin_arm64.zip",
+          "download_url": "https://github.com/evroc-oss/terraform-provider-evroc/releases/download/v0.5.2/terraform-provider-evroc_0.5.2_darwin_arm64.zip",
+          "shasum": "d9bc8db24678e5d7e2276f04f8b2ab4a2f23d54dc045c7c4f78b022a47f0bf8d",
+          "h1": "h1:6SDvf0So9xCVD2b7FGIvInh5b9v/MTAOqu8JHXMH26U=",
+          "size": 7161868
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-evroc_0.5.2_freebsd_386.zip",
+          "download_url": "https://github.com/evroc-oss/terraform-provider-evroc/releases/download/v0.5.2/terraform-provider-evroc_0.5.2_freebsd_386.zip",
+          "shasum": "65fe687a5667819d49bd9b05e8515902bb6596d313301a035da7ebbc533f2031",
+          "h1": "h1:z/qsAMTKWukTsRGKmmWgSKSqxmVsqtLiFRZaZsE9Huk=",
+          "size": 7129553
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-evroc_0.5.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/evroc-oss/terraform-provider-evroc/releases/download/v0.5.2/terraform-provider-evroc_0.5.2_freebsd_amd64.zip",
+          "shasum": "3e840c97d7c264bd435607b1931193a7c86536bfa99a73a9ec31fd359a76deaa",
+          "h1": "h1:Q8FT26M004jluvGvkF4lDwingBriuJlyb/W/R1d6FgQ=",
+          "size": 7526942
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-evroc_0.5.2_freebsd_arm.zip",
+          "download_url": "https://github.com/evroc-oss/terraform-provider-evroc/releases/download/v0.5.2/terraform-provider-evroc_0.5.2_freebsd_arm.zip",
+          "shasum": "2941e56582614a1e39a26a2596d8f65c10c2b2c9b0e7984cc8e7d4fd1d57a09b",
+          "h1": "h1:RS2fCj1EGyqO2OB6Ai8LAqHIykFKAbzXwXePSUdjem0=",
+          "size": 7113651
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-evroc_0.5.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/evroc-oss/terraform-provider-evroc/releases/download/v0.5.2/terraform-provider-evroc_0.5.2_freebsd_arm64.zip",
+          "shasum": "18f129e30279c7357e748d99ce8ad6c5293a4d90128bc04ccf917bb47a749def",
+          "h1": "h1:Df5O94qBsynBd5QFHGZLiLMGdkKuVx2eyZ8MOSMO01E=",
+          "size": 6818075
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-evroc_0.5.2_linux_386.zip",
+          "download_url": "https://github.com/evroc-oss/terraform-provider-evroc/releases/download/v0.5.2/terraform-provider-evroc_0.5.2_linux_386.zip",
+          "shasum": "26bcd2676a65ccbc2059d21dac869bc38626635c284bf7afdabe53bdc414ab97",
+          "h1": "h1:re4/X17tPMzeJhMxI+yE9zCYHPOt78O7dIWfwry0Rzw=",
+          "size": 7158574
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-evroc_0.5.2_linux_amd64.zip",
+          "download_url": "https://github.com/evroc-oss/terraform-provider-evroc/releases/download/v0.5.2/terraform-provider-evroc_0.5.2_linux_amd64.zip",
+          "shasum": "86c97297501950739c3582f08eaac5949980451e0cddcea0615ae99243a37055",
+          "h1": "h1:rZyDLfv7W70dSrllukCb5C+lDJYZ+gQUqPuq+kBSgVk=",
+          "size": 7550386
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-evroc_0.5.2_linux_arm.zip",
+          "download_url": "https://github.com/evroc-oss/terraform-provider-evroc/releases/download/v0.5.2/terraform-provider-evroc_0.5.2_linux_arm.zip",
+          "shasum": "018486f106c0963faabe7c996627c015cd792e0762ec9f3cbae5022e5d3a9f80",
+          "h1": "h1:jg3Mbyrbrk5w0isHBGUh1BiUfor9xJDg30ojNqOVcrM=",
+          "size": 7135587
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-evroc_0.5.2_linux_arm64.zip",
+          "download_url": "https://github.com/evroc-oss/terraform-provider-evroc/releases/download/v0.5.2/terraform-provider-evroc_0.5.2_linux_arm64.zip",
+          "shasum": "fc1950e444b6823064fea3dcbb823a458f9238878bd06bc918b5b4b610c91e81",
+          "h1": "h1:vbwfYUfnwTGI6oxCO6XnbuAODHu7Pcj3V0MwV77Hz4w=",
+          "size": 6841514
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-evroc_0.5.2_windows_386.zip",
+          "download_url": "https://github.com/evroc-oss/terraform-provider-evroc/releases/download/v0.5.2/terraform-provider-evroc_0.5.2_windows_386.zip",
+          "shasum": "52f8bad47a3d9a4e3c580f3e5ec9ba6cfc8010d6967d3e5dbc263f67d40d149c",
+          "h1": "h1:dQLMB75bdPYCOX9xjBdfY5O2Ln5220HTVhANucoRaM8=",
+          "size": 7460729
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-evroc_0.5.2_windows_amd64.zip",
+          "download_url": "https://github.com/evroc-oss/terraform-provider-evroc/releases/download/v0.5.2/terraform-provider-evroc_0.5.2_windows_amd64.zip",
+          "shasum": "f3eb5c7e037752ae96c6be621aa048624a1d1b9a81cb440b1d8b051d7b312340",
+          "h1": "h1:K9n+sdfwMjArEIstIciuh5W0jJDO7uYMBpV/uKNNPHc=",
+          "size": 7732659
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-evroc_0.5.2_windows_arm64.zip",
+          "download_url": "https://github.com/evroc-oss/terraform-provider-evroc/releases/download/v0.5.2/terraform-provider-evroc_0.5.2_windows_arm64.zip",
+          "shasum": "0e5cef342bae2562252379e9a012c581ef26ff6241dbe223b2e3d4ba31eacae9",
+          "h1": "h1:Mw6bRkKoT8DbIUWKrK6m9s34HyXH5dq9E6MkmFheofg=",
+          "size": 6901886
+        }
+      ],
+      "discovered": "2026-06-12T16:06:29.071443552Z"
+    },
+    {
       "version": "0.5.1",
       "protocols": [
         "5.0",
