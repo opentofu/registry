@@ -152,7 +152,7 @@ func VerifyKey(location string, providers provider.List, cancelVerifierFn contex
 
 	expiredStep := verifyStep.RunStep("Key is not expired", func() error {
 		if key.IsExpired() {
-			return fmt.Errorf("key has expired, whilst this is accepted by the registry, please ensure a renewed key is used for signing new versions of providers.")
+			return fmt.Errorf("key has expired, whilst this is accepted by the registry, please ensure a renewed key is used for signing new versions of providers")
 		}
 		return nil
 	})
