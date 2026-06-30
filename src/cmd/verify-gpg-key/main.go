@@ -19,6 +19,7 @@ import (
 	"github.com/opentofu/registry-stable/internal/blacklist"
 	"github.com/opentofu/registry-stable/internal/files"
 	"github.com/opentofu/registry-stable/internal/github"
+	"github.com/opentofu/registry-stable/internal/gpg"
 	"github.com/opentofu/registry-stable/internal/parallel"
 	"github.com/opentofu/registry-stable/internal/provider"
 	"github.com/opentofu/registry-stable/pkg/verification"
@@ -149,12 +150,16 @@ func VerifyKey(location string, providers provider.List, cancelVerifierFn contex
 		return verifyStep
 	}
 
-	verifyStep.RunStep("Key is not expired", func() error {
+	expiredStep := verifyStep.RunStep("Key is not expired", func() error {
 		if key.IsExpired() {
-			return fmt.Errorf("key is expired")
+			return fmt.Errorf("key has expired, whilst this is accepted by the registry, please ensure a renewed key is used for signing new versions of providers.")
 		}
 		return nil
 	})
+
+	// Expired keys are still accepted. They remain valid for verifying
+	// signatures they produced while valid. This should be a warning and not an error
+	expiredStep.FailureToWarning()
 
 	verifyStep.RunStep("Key is not revoked", func() error {
 		if key.IsRevoked() {
@@ -164,7 +169,9 @@ func VerifyKey(location string, providers provider.List, cancelVerifierFn contex
 	})
 
 	verifyStep.RunStep("Key can be used for signing", func() error {
-		if !key.CanVerify() {
+		// Use gpg.CanSign rather than key.CanVerify so that an expired key,
+		// is not rejected here purely for being expired.
+		if !gpg.CanSign(key) {
 			return fmt.Errorf("key cannot be used for signing")
 		}
 		return nil
@@ -209,7 +216,6 @@ func VerifyKey(location string, providers provider.List, cancelVerifierFn contex
 	if !verifyStep.DidFail() {
 		gpgStep := verifyStep.RunStep("Key is used to sign at least one provider", func() error {
 			// Inspired by OpenTofu's getproviders
-
 			keyring, err := openpgp.ReadArmoredKeyRing(strings.NewReader(string(keyData)))
 			if err != nil {
 				return fmt.Errorf("error decoding signing key: %w", err)

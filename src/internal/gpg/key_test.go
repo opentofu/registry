@@ -7,10 +7,14 @@ import (
 	"encoding/pem"
 	"strings"
 	"testing"
+	"time"
 
+	"github.com/ProtonMail/go-crypto/openpgp"
+	"github.com/ProtonMail/go-crypto/openpgp/packet"
 	"github.com/ProtonMail/gopenpgp/v2/crypto"
 	"github.com/ProtonMail/gopenpgp/v2/helper"
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 func generatePrivateKey() (string, error) {
@@ -45,6 +49,23 @@ func generateGPGKey() (string, error) {
 	}
 
 	return publicKey, nil
+}
+
+func generateExpiredGPGKey(t *testing.T) *crypto.Key {
+	t.Helper()
+
+	config := &packet.Config{
+		Time:            func() time.Time { return time.Now().Add(-48 * time.Hour) },
+		KeyLifetimeSecs: 60,
+	}
+
+	entity, err := openpgp.NewEntity("test", "expired test key", "test@test", config)
+	require.NoError(t, err)
+
+	key, err := crypto.NewKeyFromEntity(entity)
+	require.NoError(t, err)
+
+	return key
 }
 
 func TestParseKey(t *testing.T) {
@@ -83,4 +104,27 @@ func TestParseKey(t *testing.T) {
 			}
 		})
 	}
+}
+
+func TestCanSign(t *testing.T) {
+	t.Run("valid key can sign and verify", func(t *testing.T) {
+		armored, err := generateGPGKey()
+		require.NoError(t, err)
+
+		key, err := ParseKey(armored)
+		require.NoError(t, err)
+
+		assert.False(t, key.IsExpired())
+		assert.True(t, key.CanVerify(), "sanity: non-expired key should also pass CanVerify")
+		assert.True(t, CanSign(key))
+	})
+
+	t.Run("expired key can still sign", func(t *testing.T) {
+		key := generateExpiredGPGKey(t)
+
+		require.True(t, key.IsExpired(), "test fixture should be expired")
+		require.False(t, key.CanVerify(), "CanVerify rejects expired keys, which is what CanSign works around")
+
+		assert.True(t, CanSign(key), "expired keys are still accepted by the registry")
+	})
 }

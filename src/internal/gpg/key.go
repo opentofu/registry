@@ -49,3 +49,22 @@ func ParseKey(data string) (*crypto.Key, error) {
 
 	return key, nil
 }
+
+// CanSign reports whether the key has a signing-capable primary key or subkey,
+// ignoring whether the key (or its self-signature) has since expired.
+// The registry currently accepts expired keys, and so this is needed instead of using the
+// key.CanVerify() method which checks expiry dates.
+func CanSign(key *crypto.Key) bool {
+	entity := key.GetEntity()
+	if entity == nil || entity.PrimaryKey == nil {
+		return false
+	}
+
+	identity := entity.PrimaryIdentity()
+	if identity == nil || identity.SelfSignature == nil {
+		return false
+	}
+
+	_, canSign := entity.SigningKey(identity.SelfSignature.CreationTime)
+	return canSign
+}
