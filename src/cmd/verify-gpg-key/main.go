@@ -171,7 +171,7 @@ func VerifyKey(location string, providers provider.List, cancelVerifierFn contex
 	verifyStep.RunStep("Key can be used for signing", func() error {
 		// Use gpg.CanSign rather than key.CanVerify so that an expired key,
 		// is not rejected here purely for being expired.
-		if !gpg.CanSign(key) {
+		if !gpg.CanSign(key) && !key.CanVerify() {
 			return fmt.Errorf("key cannot be used for signing")
 		}
 		return nil
