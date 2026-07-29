@@ -90,3 +90,32 @@ jobs:
         working-directory: ./src
         run: |
           ../.github/scripts/submit-provider-key.sh
+  submit-reindex-request:
+    if: contains(github.event.issue.labels.*.name, 'reindex') && contains(github.event.issue.labels.*.name, 'submission')
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+
+      - name: Set up Go
+        uses: actions/setup-go@4b73464bb391d4059bd26b0524d20df3927bd417 # v6
+        with:
+          go-version-file: './src/go.mod'
+
+      - name: Validate Re-index Request and Create PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          GH_USER: ${{ github.event.issue.user.login }}
+          NUMBER: ${{ github.event.issue.number }}
+          URL: ${{ github.event.issue.url }}
+          TITLE: ${{ github.event.issue.title }}
+          BODY: ${{ github.event.issue.body }}
+        working-directory: ./src
+        run: |
+          ../.github/scripts/submit-reindex-request.sh
