@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bytes"
 	"context"
 	"errors"
 	"flag"
@@ -13,7 +12,6 @@ import (
 	"strings"
 
 	"github.com/ProtonMail/go-crypto/openpgp"
-	openpgpErrors "github.com/ProtonMail/go-crypto/openpgp/errors"
 	"github.com/ProtonMail/gopenpgp/v2/crypto"
 
 	"github.com/opentofu/registry-stable/internal/blacklist"
@@ -80,7 +78,7 @@ func main() {
 	s := VerifyKey(*keyFile, filteredProviders, cancelVerifierFn)
 	result.Steps = append(result.Steps, s)
 
-	s = VerifyGithubUser(ghClient, *username, *orgName)
+	s = verification.VerifyGithubUser(ghClient, *username, *orgName)
 	result.Steps = append(result.Steps, s)
 
 	fmt.Println(result.RenderMarkdown())
@@ -96,27 +94,6 @@ func main() {
 	if result.DidFail() {
 		os.Exit(-1)
 	}
-}
-
-func VerifyGithubUser(client github.Client, username string, orgName string) *verification.Step {
-	verifyStep := &verification.Step{
-		Name: "Validate Github user",
-	}
-
-	s := verifyStep.RunStep(fmt.Sprintf("User is a member of the organization %s", orgName), func() error {
-		member, err := client.IsUserInOrganization(username, orgName)
-		if err != nil {
-			return fmt.Errorf("failed to get user: %w", err)
-		}
-		if member {
-			return nil
-		} else {
-			return fmt.Errorf("user is not a member of the organization")
-		}
-	})
-	s.Remarks = []string{"If this is incorrect, please ensure that your organization membership is public. For more information, see [Github Docs - Publicizing or hiding organization membership](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-your-membership-in-organizations/publicizing-or-hiding-organization-membership)"}
-
-	return verifyStep
 }
 
 var gpgNameEmailRegex = regexp.MustCompile(`.*\<(.*)\>`)
@@ -216,14 +193,13 @@ func VerifyKey(location string, providers provider.List, cancelVerifierFn contex
 	if !verifyStep.DidFail() {
 		gpgStep := verifyStep.RunStep("Key is used to sign at least one provider", func() error {
 			// Inspired by OpenTofu's getproviders
-			keyring, err := openpgp.ReadArmoredKeyRing(strings.NewReader(string(keyData)))
-			if err != nil {
+			if _, err := openpgp.ReadArmoredKeyRing(strings.NewReader(string(keyData))); err != nil {
 				return fmt.Errorf("error decoding signing key: %w", err)
 			}
 
 			foundProviderForKey := false
 
-			err = providers.Parallel(20, func(p provider.Provider) error {
+			err := providers.Parallel(20, func(p provider.Provider) error {
 				meta, err := p.ReadMetadata()
 				if err != nil {
 					return err
@@ -232,7 +208,6 @@ func VerifyKey(location string, providers provider.List, cancelVerifierFn contex
 
 				var versionChecks []parallel.Action
 				for _, version := range meta.Versions {
-					version := version
 					versionChecks = append(versionChecks, func() error {
 						logger := meta.Logger.With(slog.String("version", version.Version))
 						logger.Info("Begin version check")
@@ -248,16 +223,12 @@ func VerifyKey(location string, providers provider.List, cancelVerifierFn contex
 							return err
 						}
 
-						_, err = openpgp.CheckDetachedSignature(keyring, bytes.NewReader(shasumResp), bytes.NewReader(sigResp), nil)
-						if errors.Is(err, openpgpErrors.ErrUnknownIssuer) {
-							return nil
-						}
-
+						verified, err := gpg.VerifyDetachedSignature([]gpg.Key{{ASCIIArmor: string(keyData)}}, shasumResp, sigResp)
 						if err != nil {
-							// If in enforcing mode (or if the error isn’t related to expiry) return immediately.
-							if !errors.Is(err, openpgpErrors.ErrKeyExpired) && !errors.Is(err, openpgpErrors.ErrSignatureExpired) {
-								return fmt.Errorf("error checking signature: %w", err)
-							}
+							return fmt.Errorf("error checking signature: %w", err)
+						}
+						if !verified {
+							return nil
 						}
 
 						// Key might be expired, but that's allowed
