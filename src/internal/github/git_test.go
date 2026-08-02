@@ -1,10 +1,38 @@
 package github
 
 import (
+	"io"
+	"log/slog"
+	"os"
+	"path/filepath"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
+
+func installFakeGit(t *testing.T, body string) {
+	t.Helper()
+
+	dir := t.TempDir()
+	script := `#!/bin/sh
+if [ "$GIT_TERMINAL_PROMPT" != "0" ]; then
+	echo "unexpected GIT_TERMINAL_PROMPT=$GIT_TERMINAL_PROMPT" >&2
+	exit 1
+fi
+` + body
+	require.NoError(t, os.WriteFile(filepath.Join(dir, "git"), []byte(script), 0755))
+	t.Setenv("PATH", dir)
+}
+
+func newTestClient() Client {
+	return Client{
+		log: slog.New(slog.NewTextHandler(io.Discard, nil)),
+		cliThrottle: func() ThrottleToken {
+			return func() {}
+		},
+	}
+}
 
 func Test_parseTagsFromStdout(t *testing.T) {
 	cases := map[string]struct {
@@ -83,4 +111,42 @@ func Test_parseTagsFromStdout(t *testing.T) {
 
 		})
 	}
+}
+
+func TestClientGetTagsDisablesGitTerminalPrompt(t *testing.T) {
+	t.Setenv("GET_TAGS_ENV_SENTINEL", "inherited")
+	installFakeGit(t, `if [ "$GET_TAGS_ENV_SENTINEL" != "inherited" ]; then
+	echo "parent environment was not inherited" >&2
+	exit 1
+fi
+printf '3141592653589793 refs/tags/v0.0.1\n'
+`)
+
+	tags, err := newTestClient().GetTags("https://example.com/example/repository.git")
+
+	require.NoError(t, err)
+	assert.Equal(t, []Tag{{Commit: "3141592653589793", Ref: "v0.0.1"}}, tags)
+}
+
+func TestClientGetTagsOverridesGitTerminalPrompt(t *testing.T) {
+	t.Setenv("GIT_TERMINAL_PROMPT", "1")
+	installFakeGit(t, "printf '3141592653589793 refs/tags/v0.0.1\\n'\n")
+
+	tags, err := newTestClient().GetTags("https://example.com/example/repository.git")
+
+	require.NoError(t, err)
+	assert.Equal(t, []Tag{{Commit: "3141592653589793", Ref: "v0.0.1"}}, tags)
+}
+
+func TestClientGetTagsReturnsGitError(t *testing.T) {
+	installFakeGit(t, `echo "fake git failure" >&2
+exit 23
+`)
+
+	tags, err := newTestClient().GetTags("https://example.com/example/missing.git")
+
+	assert.Nil(t, tags)
+	require.Error(t, err)
+	assert.Contains(t, err.Error(), "could not get tags for https://example.com/example/missing.git")
+	assert.Contains(t, err.Error(), "fake git failure")
 }

@@ -5,6 +5,7 @@ import (
 	"encoding/hex"
 	"fmt"
 	"log/slog"
+	"os"
 	"os/exec"
 	"strings"
 )
@@ -59,6 +60,7 @@ func (c Client) GetTags(repositoryURL string) ([]Tag, error) {
 	var buf bytes.Buffer
 	var bufErr bytes.Buffer
 	cmd := exec.Command("git", "ls-remote", "--tags", "--refs", repositoryURL)
+	cmd.Env = append(os.Environ(), "GIT_TERMINAL_PROMPT=0")
 	cmd.Stdout = &buf
 	cmd.Stderr = &bufErr
 
