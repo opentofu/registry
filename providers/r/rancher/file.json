@@ -1,6 +1,109 @@
 {
   "versions": [
     {
+      "version": "2.4.17-rc.0",
+      "protocols": [
+        "4.0",
+        "5.0",
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/rancher/terraform-provider-file/releases/download/v2.4.17-rc.0/terraform-provider-file_2.4.17-rc.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/rancher/terraform-provider-file/releases/download/v2.4.17-rc.0/terraform-provider-file_2.4.17-rc.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-file_2.4.17-rc.0_darwin_amd64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-file/releases/download/v2.4.17-rc.0/terraform-provider-file_2.4.17-rc.0_darwin_amd64.zip",
+          "shasum": "187efa948f49d10537d50d7f9c02af23dcf31ede483ad13278d327e5eac1ed0c",
+          "h1": "h1:ZYUMHKpiuxSt5iqgsMQ54w9NGk30nupFMsOCayvy8HE=",
+          "size": 6676466
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-file_2.4.17-rc.0_darwin_arm64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-file/releases/download/v2.4.17-rc.0/terraform-provider-file_2.4.17-rc.0_darwin_arm64.zip",
+          "shasum": "a35c418a326cb970402a343b6da8763454e1cd5c5a7a27a0bbf8ef8144f9b567",
+          "h1": "h1:nRyqmFHxe0EhRj/w6qABuaa1dvlZ0zrkWXsFSDEwkcU=",
+          "size": 6203076
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-file_2.4.17-rc.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-file/releases/download/v2.4.17-rc.0/terraform-provider-file_2.4.17-rc.0_freebsd_amd64.zip",
+          "shasum": "7937a07cd396e82571dddcf289cceb3d9a3dfaf69039ee758b8b792bcac31f84",
+          "h1": "h1:J9eFlMd4jVli4AbXso0n3Zyin10AfRYGY1nLDPwH1DU=",
+          "size": 6482619
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-file_2.4.17-rc.0_freebsd_arm.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-file/releases/download/v2.4.17-rc.0/terraform-provider-file_2.4.17-rc.0_freebsd_arm.zip",
+          "shasum": "e1a60903f9d2b18d2aebe27c387c3328dce00da6b233089d711c6e98fc5f1666",
+          "h1": "h1:Cae7SHv6U6D/6K42W7JV3nEGOcFShcdZJ4WSQ4PCmiE=",
+          "size": 6115894
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-file_2.4.17-rc.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-file/releases/download/v2.4.17-rc.0/terraform-provider-file_2.4.17-rc.0_freebsd_arm64.zip",
+          "shasum": "352fd4a373cb739678d70412677ef729d1a4462efe330857ca67140179c18b2d",
+          "h1": "h1:Ij+GYvbrTjVQNp9TaR2Vg4zlAoJq4bMC9c6OS7fjMmY=",
+          "size": 5877352
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-file_2.4.17-rc.0_linux_amd64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-file/releases/download/v2.4.17-rc.0/terraform-provider-file_2.4.17-rc.0_linux_amd64.zip",
+          "shasum": "fa65c738be529d1c2608fba6d295ed5a20d225e6ff285a9b833b161975c9ef7c",
+          "h1": "h1:5m9UCk5LBm6KLAKAUBXt7cnDWpu1BWJH4sWyyhzRxrk=",
+          "size": 6510542
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-file_2.4.17-rc.0_linux_arm.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-file/releases/download/v2.4.17-rc.0/terraform-provider-file_2.4.17-rc.0_linux_arm.zip",
+          "shasum": "05b093167ce85509e32c64c01fb05a04537fdd15f18e5301d0ae4bcfd02c5ea0",
+          "h1": "h1:cUUWzPOaWTXe4+t2dJqmiRsxTMrCOMe43strWhAxTZA=",
+          "size": 6144489
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-file_2.4.17-rc.0_linux_arm64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-file/releases/download/v2.4.17-rc.0/terraform-provider-file_2.4.17-rc.0_linux_arm64.zip",
+          "shasum": "d3db9da1bb576f3c155f7492745f22ad0426455304eb8a573a0ca5106996c862",
+          "h1": "h1:HiiRl6oFS17+BymaYA/VDzfYz2RquXWUtf2p8mzmAjs=",
+          "size": 5902560
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-file_2.4.17-rc.0_windows_amd64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-file/releases/download/v2.4.17-rc.0/terraform-provider-file_2.4.17-rc.0_windows_amd64.zip",
+          "shasum": "0d905dfeba9761f251cfdd3e6f9a07eabaa5372bdef92b656fc12f427cc2fa4f",
+          "h1": "h1:LY5zIx4jxVuzmhOXjAGc5Kou7Yj8KSqdOJnmV3KvCfc=",
+          "size": 6709935
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-file_2.4.17-rc.0_windows_arm64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-file/releases/download/v2.4.17-rc.0/terraform-provider-file_2.4.17-rc.0_windows_arm64.zip",
+          "shasum": "2e959289e9d4973f99f0de45d891457fc7c4630c1fc13e154311ee93425b53ab",
+          "h1": "h1:7LCvUakdFBpeeGy9ba/nwB+u1TABSQ30Izw2HOGSlx0=",
+          "size": 5993540
+        }
+      ],
+      "discovered": "2026-08-05T19:49:10.976708925Z"
+    },
+    {
       "version": "2.4.16",
       "protocols": [
         "4.0",
