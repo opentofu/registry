@@ -1,44 +1,41 @@
 # Contributing to OpenTofu Registry
 
-This repository contains OpenTofu Registry, which includes the metadata and managing applications used to drive the OpenTofu Registry at registry.opentofu.org
+This repository contains the metadata and applications that drive the OpenTofu Registry at [registry.opentofu.org](https://registry.opentofu.org).
 
-This document provides guidance on OpenTofu contribution recommended practices. It covers how to submit issues, how to get involved in the discussion, how to work on the code, and how to contribute code changes.
+> [!IMPORTANT]
+> Before writing any code, please read the two rules below. Pull requests that skip them will be closed.
+>
+> 1. **Every code change needs an issue with the `accepted` label, assigned to you.** This is to protect your time: discussing whether the change is still needed and agreeing on the approach _before_ you write code means you won't spend hours on a pull request we can't merge. Code changes without an accepted, assigned issue will generally be rejected.
+> 2. **We do not accept AI-generated contributions from the community.** See our [AI Usage Policy](AI-USAGE-POLICY.md).
 
-The easiest way to contribute is by [opening an issue](https://github.com/opentofu/opentofu/issues/new/choose)! Bug reports, broken compatibility reports, feature requests, old issue reposts, and well-prepared RFCs are all very welcome.
+> [!NOTE]
+> Want to add a provider, module, or GPG key to the registry? That doesn't require a code change. Simply use the issue forms linked in the [README](README.md).
 
-All major changes to the OpenTofu Registry go through the public RFC process, including those proposed by the core team. Thus, if you'd like to propose such a change, please prepare an RFC, so that the community can discuss the change and everybody has a chance to voice their opinion. You're also welcome to voice your own opinion on existing RFCs! You can find them by [going to the issues view and filtering by the rfc label](https://github.com/opentofu/registry/issues?q=is%3Aopen+is%3Aissue+label%3Arfc).
+## How to contribute a code change
 
-Generally, we appreciate external contributions very much and would love to work with you on them. **However, please make sure to read the [Contributing a Code Change](#contributing-a-code-change) section prior to making a contribution.**
+1. Find an [existing issue](https://github.com/opentofu/registry/issues) or open a new one describing the change you'd like to make.
+2. Comment that you'd like to work on it, and wait for a maintainer to add the `accepted` label and assign it to you.
+3. Fork the repository and make your changes.
+4. Sign off your commits (see [DCO](#developer-certificate-of-origin-dco) below) and open a pull request.
 
----
+## AI policy
 
-<!-- MarkdownTOC autolink="true" -->
+We do not accept AI-generated code from community contributors. This applies to any code generated, completed, or rewritten by an AI tool. If you found a bug or an improvement using AI tools, open an issue describing it in your own words (no code) instead of a pull request.
 
-- [Contributing a Code Change](#contributing-a-code-change)
-- [Working on the Code](#working-on-the-code)
-- [Adding or updating dependencies](#adding-or-updating-dependencies)
-- [Acceptance Tests: Testing interactions with external services](#acceptance-tests-testing-interactions-with-external-services)
-- [Generated Code](#generated-code)
+The full policy, including the rules maintainers follow, is in [AI-USAGE-POLICY.md](AI-USAGE-POLICY.md).
 
-<!-- /MarkdownTOC -->
+## Developer Certificate of Origin (DCO)
 
-## Contributing a Code Change
+All commits must be signed off to accept the [Developer Certificate of Origin](https://developercertificate.org). Add a `Signed-off-by` line to your commit message:
 
-In order to contribute a code change, you should fork the repository, make your changes, and then submit a pull request. Crucially, all code changes should be preceded by an issue that you've been assigned to. If an issue for the change you'd like to introduce already exists, please communicate in the issue that you'd like to take ownership of it. If an issue doesn't yet exist, please create one expressing your interest in working on it and discuss it first, prior to working on the code. Code changes without a related issue will generally be rejected.
-
-Only issues with the `accepted` label have been officially accepted for implementation, so please avoid working on issues without that label.
-
-In order for a code change to be accepted, you'll also have to accept the Developer Certificate of Origin (DCO). It's very lightweight, and you can find it [here](https://developercertificate.org). Accepting is accomplished by signing off on your commits, you can do this by adding a `Signed-off-by` line to your commit message, like here:
 ```
 This is my commit message
 
 Signed-off-by: Random Developer <random@developer.example.org>
 ```
-Git has a built-in flag to append this line automatically:
+
+Git can do this for you:
+
 ```
 ~> git commit -s -m 'This is my commit message'
 ```
-
-You can find more details about the DCO checker in the [DCO app repo](https://github.com/dcoapp/app).
-
-Additionally, please update [the changelog](CHANGELOG.md) if you're making any user-facing changes.
