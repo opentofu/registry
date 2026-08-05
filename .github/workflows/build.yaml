@@ -1,6 +1,9 @@
 name: Build
 on:
   push:
+    paths:
+      - 'src/**'
+      - '.github/workflows/build.yaml'
 
 jobs:
   build:
