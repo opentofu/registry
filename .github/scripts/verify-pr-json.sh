@@ -10,6 +10,9 @@ fi
 failed=0
 error_file="/tmp/verify-errors.md"
 
+# Allowed chars in path components fed to shell.
+safe_path_re='^[A-Za-z0-9_.-]+$'
+
 write_error_header() {
 	if [[ ! -f "${error_file}" ]]; then
 		cat >"${error_file}" <<'HEADER'
@@ -44,6 +47,13 @@ for file in ${changed_providers}; do
 	# Path format: providers/{first_char}/{namespace}/{name}.json
 	namespace=$(echo "${file}" | cut -d'/' -f3)
 	name=$(basename "${file}" .json)
+
+	if ! [[ "${namespace}" =~ ${safe_path_re} ]] || ! [[ "${name}" =~ ${safe_path_re} ]]; then
+		echo "::error::Invalid provider path: ${file}"
+		failed=1
+		continue
+	fi
+
 	repo="${namespace}/terraform-provider-${name}"
 
 	tmpdir=$(mktemp -d)
@@ -109,6 +119,15 @@ for file in ${changed_modules}; do
 	namespace=$(echo "${file}" | cut -d'/' -f3)
 	name=$(echo "${file}" | cut -d'/' -f4)
 	target=$(basename "${file}" .json)
+
+	if ! [[ "${namespace}" =~ ${safe_path_re} ]] \
+		|| ! [[ "${name}" =~ ${safe_path_re} ]] \
+		|| ! [[ "${target}" =~ ${safe_path_re} ]]; then
+		echo "::error::Invalid module path: ${file}"
+		failed=1
+		continue
+	fi
+
 	repo="${namespace}/terraform-${target}-${name}"
 
 	tmpdir=$(mktemp -d)

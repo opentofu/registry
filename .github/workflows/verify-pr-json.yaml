@@ -1,10 +1,16 @@
 name: Verify PR JSON
 
 on:
-  pull_request:
+  pull_request_target:
     paths:
       - 'providers/**/*.json'
       - 'modules/**/*.json'
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'PR number to verify'
+        required: true
+        type: string
 
 permissions:
   contents: read
@@ -17,6 +23,14 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
+      - name: Pull PR JSON files
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number || inputs.pr_number }}
+        run: |
+          git fetch origin "pull/${PR_NUMBER}/head"
+          git checkout FETCH_HEAD -- providers modules
+
       - name: Set up Go
         uses: actions/setup-go@4b73464bb391d4059bd26b0524d20df3927bd417 # v6
         with:
@@ -26,7 +40,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_NUMBER: ${{ github.event.pull_request.number || inputs.pr_number }}
         working-directory: ./src
         run: ../.github/scripts/verify-pr-json.sh
 
@@ -36,7 +50,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number || inputs.pr_number }}
         run: |
           if [[ -f /tmp/verify-errors.md ]]; then
-            gh pr comment "${{ github.event.pull_request.number }}" --body-file /tmp/verify-errors.md
+            gh pr comment "${PR_NUMBER}" --body-file /tmp/verify-errors.md
           fi
