@@ -1,5 +1,8 @@
 # Version Blacklist Documentation
 
+> [!NOTE]
+> Blacklisting/removing an already-indexed version is reserved for the exceptional, case-by-case situations described in the [Version Immutability policy](POLICY.md#version-immutability). It is not a routine cleanup mechanism for CI mistakes or minor bugs. Those should be fixed by releasing a new version in the provider or module's own repository instead.
+
 ## Overview
 The OpenTofu Registry supports blacklisting specific versions of providers and modules to prevent them from being added during automated version updates.
 
