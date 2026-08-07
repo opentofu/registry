@@ -1,0 +1,48 @@
+# IMPORTANT: Submissions MUST be made through the GitHub issue form UI, not via
+# the API, gh CLI, or by manually creating issues. The automated validation and
+# processing pipeline depends on the structured data from the issue form.
+name: Request Provider Version Re-index
+description: Ask the registry to re-verify and re-index a specific provider version, e.g. after a release was rebuilt under the same tag
+title: "Re-index: "
+labels: ["reindex", "submission"]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        This re-downloads and re-verifies the version's current release assets against your
+        provider's on-file GPG key. It does **not** bypass signature verification - if the
+        current release doesn't verify against a key already on file for this provider, the
+        request will be rejected.
+  - type: input
+    id: namespace
+    attributes:
+      label: Provider Namespace
+      description: GitHub Username or Organization that owns the provider. You must be a public member of this organization.
+    validations:
+      required: true
+  - type: input
+    id: providername
+    attributes:
+      label: Provider Name
+      description: Name of the provider (without the terraform-provider- prefix).
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The exact version to re-index, e.g. 4.1.0 (no leading "v").
+    validations:
+      required: true
+  - type: checkboxes
+    id: public_membership
+    attributes:
+      label: Public Membership
+      description: >-
+        **Required:** Your membership in the provider's organization **must** be public.
+        This submission will fail automated validation if your membership is not publicly visible.
+        [How to make your membership public](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-your-membership-in-organizations/publicizing-or-hiding-organization-membership).
+        If you are unable to make your membership public, please [open a different issue](https://github.com/opentofu/registry/issues/new) to contact the OpenTofu team for assistance.
+      options:
+        - label: I have made my membership public
+          required: true
