@@ -14,6 +14,8 @@ body:
         Before filling this out, please read the [Version Immutability Policy](https://github.com/opentofu/registry/blob/main/POLICY.md#version-immutability). Removal is only considered on a case-by-case basis for extreme circumstances (e.g. malicious code, leaked secrets, a legal takedown requirement, or a release causing extreme disruption). Requests that don't meet this bar will be closed and redirected to release a new version instead.
 
         **Make your case as strongly and specifically as possible.** Vague or unsupported requests are unlikely to be actioned.
+
+        This request can be made only by a maintainer of the provider/module. The proof for that consists in having public visibility of the requester membership in the GitHub organisation that hosts the provider/module for which this request is created.
   - type: dropdown
     id: type
     attributes:
@@ -36,7 +38,7 @@ body:
     id: version
     attributes:
       label: Affected Version(s)
-      description: The exact version(s) you want removed from the registry, e.g. 1.2.3
+      description: The exact version(s) you want removed from the registry, e.g. 1.2.3, 1.2.4
       placeholder: 1.2.3
     validations:
       required: true
@@ -73,4 +75,6 @@ body:
         - label: I have read the [Version Immutability Policy](https://github.com/opentofu/registry/blob/main/POLICY.md#version-immutability) and understand this request will only be actioned in extreme, case-by-case circumstances.
           required: true
         - label: This is not a request to remove a version solely because of a CI mistake, duplicate publish, or a minor bug that could instead be fixed by releasing a new version.
+          required: true
+        - label: The GitHub organisation for which I open this request is [publicly visible in my GitHub profile](https://docs.github.com/en/account-and-profile/how-tos/organization-membership/publicizing-or-hiding-organization-membership) which will allow OpenTofu maintainers confirm the validity of this request.
           required: true
