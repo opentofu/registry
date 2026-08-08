@@ -21,6 +21,14 @@ Fill in the required fields and submit the issue. Once the issue has been submit
 > [!IMPORTANT]
 > **Submissions must be made through the GitHub issue form UI using the links above.** Do not open pull requests to add registry data directly, and do not create issues using the `gh` CLI, the GitHub API, or other tooling. The automated validation and processing pipeline depends on the structured data that only the issue form UI provides. Submissions made outside of the issue form UI will not be processed and will be closed.
 
+## Requesting a Version Removal
+
+The OpenTofu Registry treats published provider and module versions as immutable and generally does **not** remove them. See the [Version Immutability policy](POLICY.md#version-immutability) for details and the situations in which an exception may be considered.
+
+If your situation meets that bar, you can open the following issue:
+
+- [Request Version Removal](https://github.com/opentofu/registry/issues/new?template=version-removal-request.yml)
+
 ## Contributing To The Codebase
 
 Contributions are always welcome!

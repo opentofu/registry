@@ -50,6 +50,17 @@ You can debug this on behalf of the user by performing the following steps:
 3. Download the `...SHA256SUMS` and `...SHA256SUMS.sig` file of the provider.
 4. Run `gpg --verify ...SHA256SUMS.sig ...SHA256SUMS`
 
+## Version removal requests
+
+The [Version Immutability policy](POLICY.md#version-immutability) explains that we do not remove versions for routine reasons (CI double-builds, minor bugs, changed minds). Requests come in through the [Version Removal Request](https://github.com/opentofu/registry/issues/new?template=version-removal-request.yml) issue template.
+
+When triaging one of these issues:
+
+1. Check whether the stated reason matches one of the routine cases the policy explicitly rules out. If so, close the issue and point the author to the policy, recommending they release a new version in their own repository instead.
+2. If the request cites something in the exceptional category, verify the evidence provided (advisory links, CVEs, etc.) before acting.
+3. Genuinely exceptional requests should be escalated the same way other removals are: maintainers can act on a clear-cut case, otherwise refer it to the Technical Steering Committee for a vote, per [POLICY.md](POLICY.md).
+4. If a removal is approved, follow the [blacklist procedure](BLACKLIST_README.md) to both remove the version and prevent it from being re-added automatically.
+
 ## User complaint: provider version is not available
 
 In rare cases it can happen that a provider version is not available in the OpenTofu Registry. Check the following:
