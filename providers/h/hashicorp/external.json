@@ -1,6 +1,152 @@
 {
   "versions": [
     {
+      "version": "2.4.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.4.1/terraform-provider-external_2.4.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.4.1/terraform-provider-external_2.4.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-external_2.4.1_darwin_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.4.1/terraform-provider-external_2.4.1_darwin_amd64.zip",
+          "shasum": "6135b36abda7426ddabc953d15b3e3019a3112654142c7f76a45aebf9940034f",
+          "h1": "h1:PFNoE1H1tRgg793psmrUS0VsweFD2hspXlRdLJvkYxw=",
+          "size": 6543197
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-external_2.4.1_darwin_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.4.1/terraform-provider-external_2.4.1_darwin_arm64.zip",
+          "shasum": "4c3657882f7fe29bf1f2c60e57f2992a28ee2d995ff1de4847a57082fdc10954",
+          "h1": "h1:i7VuVErOFC7ifhoMqj+UYFdDfsVCyMfjwcYIE6NpzCA=",
+          "size": 6090631
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-external_2.4.1_freebsd_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.4.1/terraform-provider-external_2.4.1_freebsd_386.zip",
+          "shasum": "014222768d8942efbfbd404e7b1c1af292cf88a6ed4bf8a5351ad80dcc182182",
+          "h1": "h1:Z5pAguxFh1FxCa9GyRIUzC4zYC3T9LkgstborSXz9XU=",
+          "size": 6037377
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-external_2.4.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.4.1/terraform-provider-external_2.4.1_freebsd_amd64.zip",
+          "shasum": "c3c6cd201cb99f2fd4fca40cde10a446aeae45327956082c261ef1dc87ab3271",
+          "h1": "h1:B/g+hAclLOtUY3VLv7wBFXkQFgwKrAfpnO7cB6bgfq4=",
+          "size": 6363402
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-external_2.4.1_freebsd_arm.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.4.1/terraform-provider-external_2.4.1_freebsd_arm.zip",
+          "shasum": "aee89c92a83b73442c3d85c89bd50ecb49eb33ac8ad50dbd34a9e0a86f3c4dfa",
+          "h1": "h1:rB0Bb+S6845k2Y7LQOuI0n5rsypMbNtwSdpyZwrTqlQ=",
+          "size": 6001668
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-external_2.4.1_linux_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.4.1/terraform-provider-external_2.4.1_linux_386.zip",
+          "shasum": "430910ea05011091789d4ab29023153125517d4773d8e687896b2309ce9f80af",
+          "h1": "h1:dgb7GjtHTb5B9iu5qcmrQ55vtVGM6b2cjQvvihKgjsQ=",
+          "size": 6073649
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-external_2.4.1_linux_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.4.1/terraform-provider-external_2.4.1_linux_amd64.zip",
+          "shasum": "36d99bc8c436fd16944415f36558635b83901ad57ecf0055f024025356ff9cb5",
+          "h1": "h1:oK3R8Nbe4nGXCS82loW0IGJH+vEGu0jFzmhIkSvNmRI=",
+          "size": 6396975
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-external_2.4.1_linux_arm.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.4.1/terraform-provider-external_2.4.1_linux_arm.zip",
+          "shasum": "f20067a183266f645fcaf090fdd8518cb9f981036fab80c5c4d95deefe27133c",
+          "h1": "h1:KkdMLWVHe3EG0bDlSzP/KayfmKvO7Y8yeSyTCPx0cLs=",
+          "size": 6032948
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-external_2.4.1_linux_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.4.1/terraform-provider-external_2.4.1_linux_arm64.zip",
+          "shasum": "0fad77e98dbd3b0f804cc0c1649d76810b35fa20e7537af847d976a3523babc3",
+          "h1": "h1:T7Mws4PKqHV7f+3MIr2L0HF2eyhNnSjSprVYx7adskQ=",
+          "size": 5809859
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-external_2.4.1_windows_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.4.1/terraform-provider-external_2.4.1_windows_386.zip",
+          "shasum": "821ad11c7014546457ecac0362c194fe9e2352b30d09cf634f9eb25403c9d985",
+          "h1": "h1:EbYQtD8a/k69A5p68oM13KZ56PZCwhL+yMLOL8afa7g=",
+          "size": 6354377
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-external_2.4.1_windows_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.4.1/terraform-provider-external_2.4.1_windows_amd64.zip",
+          "shasum": "286029e90db654611da2f0a97081dfcfc534ea7252f3ea08db5d99764f774d61",
+          "h1": "h1:keAKyk8VuOLoqXk2NYZEhdjdZ8U77ZKncDj00vcK7VI=",
+          "size": 6589694
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-external_2.4.1_windows_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.4.1/terraform-provider-external_2.4.1_windows_arm64.zip",
+          "shasum": "c76dccfc276c28484fd7b184c49fb2ff646686b6d7d01fac52a0b7c2a3639d2d",
+          "h1": "h1:c/dQzK/0Qb1E6F7XPuPeeABsxMGnaNQ9mFK94iNE+6M=",
+          "size": 5891218
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-external_2.4.1_openbsd_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.4.1/terraform-provider-external_2.4.1_openbsd_386.zip",
+          "shasum": "d3d24e27d9107278de135cb84ba5fff72b588b253b5a70f387606516d699d8b8",
+          "h1": "h1:OrIPIZCRpi0BNveurwINyeCYVKIGcjSpV6utMCf5RBM=",
+          "size": 6035455
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-external_2.4.1_openbsd_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.4.1/terraform-provider-external_2.4.1_openbsd_amd64.zip",
+          "shasum": "e8f7fca41a690cebb3e882cd74635e96929daac919a413843c73f7186a306d02",
+          "h1": "h1:EJqppgsHV+o9hedNVZ2d3E80axq8IWbX2de6VHu+is0=",
+          "size": 6361605
+        },
+        {
+          "os": "solaris",
+          "arch": "amd64",
+          "filename": "terraform-provider-external_2.4.1_solaris_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-external/releases/download/v2.4.1/terraform-provider-external_2.4.1_solaris_amd64.zip",
+          "shasum": "37841fa57629cd485a10a5a12005d64cfabc9cd63235a5fbfad020e6b7daaa68",
+          "h1": "h1:7RuPt3wko3LSf4uxU65dr3A78IS9qyrMzDNtkaPBUzs=",
+          "size": 6364208
+        }
+      ],
+      "discovered": "2026-08-14T16:34:06.812732677Z"
+    },
+    {
       "version": "2.4.0",
       "protocols": [
         "5.0"
