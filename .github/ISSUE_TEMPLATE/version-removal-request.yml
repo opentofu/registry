@@ -1,0 +1,80 @@
+# IMPORTANT: Submissions MUST be made through the GitHub issue form UI, not via
+# the API, gh CLI, or by manually creating issues. The automated validation and
+# processing pipeline depends on the structured data from the issue form.
+name: Request Version Removal
+description: Ask the OpenTofu team to remove a specific provider or module version from the registry
+title: "Version Removal Request: "
+labels: ["version-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The OpenTofu Registry treats published versions as immutable. We do **not** remove a version because of a CI mistake, a double-publish, or a minor bug. The correct fix for those is to release a new version in your own repository; the registry will pick it up automatically.
+
+        Before filling this out, please read the [Version Immutability Policy](https://github.com/opentofu/registry/blob/main/POLICY.md#version-immutability). Removal is only considered on a case-by-case basis for extreme circumstances (e.g. malicious code, leaked secrets, a legal takedown requirement, or a release causing extreme disruption). Requests that don't meet this bar will be closed and redirected to release a new version instead.
+
+        **Make your case as strongly and specifically as possible.** Vague or unsupported requests are unlikely to be actioned.
+
+        This request can be made only by a maintainer of the provider/module. The proof for that consists in having public visibility of the requester membership in the GitHub organisation that hosts the provider/module for which this request is created.
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      description: Is this a provider or a module?
+      options:
+        - Provider
+        - Module
+    validations:
+      required: true
+  - type: input
+    id: repository
+    attributes:
+      label: Repository
+      description: The full repository path, e.g. opentofu/terraform-provider-aws or GoogleCloudPlatform/terraform-google-secured-data-warehouse
+      placeholder: namespace/repository-name
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Affected Version(s)
+      description: The exact version(s) you want removed from the registry, e.g. 1.2.3, 1.2.4
+      placeholder: 1.2.3
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why does this version need to be removed?
+      description: >-
+        State your case. Explain exactly what is wrong with this version, why it is dangerous or unacceptable
+        to leave available, and why releasing a corrected new version instead is not sufficient. Be specific
+        and thorough. This is not a fast-track process, and requests that read like a routine bug or CI mishap
+        will be declined without further discussion.
+      placeholder: |
+        e.g. This version was compiled with a compromised dependency and executes arbitrary code on `tofu init`. See advisory: ...
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting Evidence
+      description: >-
+        Links to security advisories, CVEs, GitHub security advisories, incident reports, legal notices, or other
+        evidence that supports the severity of this request.
+      placeholder: |
+        - https://github.com/OWNER/REPO/security/advisories/GHSA-xxxx
+        - https://nvd.nist.gov/vuln/detail/CVE-xxxx-xxxxx
+    validations:
+      required: false
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Acknowledgement
+      options:
+        - label: I have read the [Version Immutability Policy](https://github.com/opentofu/registry/blob/main/POLICY.md#version-immutability) and understand this request will only be actioned in extreme, case-by-case circumstances.
+          required: true
+        - label: This is not a request to remove a version solely because of a CI mistake, duplicate publish, or a minor bug that could instead be fixed by releasing a new version.
+          required: true
+        - label: The GitHub organisation for which I open this request is [publicly visible in my GitHub profile](https://docs.github.com/en/account-and-profile/how-tos/organization-membership/publicizing-or-hiding-organization-membership) which will allow OpenTofu maintainers confirm the validity of this request.
+          required: true
