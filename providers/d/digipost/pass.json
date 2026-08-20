@@ -1,6 +1,190 @@
 {
   "versions": [
     {
+      "version": "2.1.1",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/digipost/terraform-provider-pass/releases/download/v2.1.1/terraform-provider-pass_2.1.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/digipost/terraform-provider-pass/releases/download/v2.1.1/terraform-provider-pass_2.1.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-pass_2.1.1_darwin_amd64.zip",
+          "download_url": "https://github.com/digipost/terraform-provider-pass/releases/download/v2.1.1/terraform-provider-pass_2.1.1_darwin_amd64.zip",
+          "shasum": "3d37dc9a0f511149a9247f0b03444d8de2d3e7be81f8a0287394c45b552168b2",
+          "h1": "h1:0+d64koIG6gBOOavrH1NSwmGWLB59vf8EJ3uFcpa8bk=",
+          "size": 8911114
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-pass_2.1.1_darwin_arm64.zip",
+          "download_url": "https://github.com/digipost/terraform-provider-pass/releases/download/v2.1.1/terraform-provider-pass_2.1.1_darwin_arm64.zip",
+          "shasum": "9d34977ff3986d786579c33cdc65bfe44de36e5c4cca0fb5e62d6f293d86d758",
+          "h1": "h1:8VAe2YZYRdkSLqzOQNOdhkKyueq4jVrYRMxWBjdCPrk=",
+          "size": 8214000
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-pass_2.1.1_linux_386.zip",
+          "download_url": "https://github.com/digipost/terraform-provider-pass/releases/download/v2.1.1/terraform-provider-pass_2.1.1_linux_386.zip",
+          "shasum": "cedb0d3cf6d462f316c31310dcb276e78d6b78752bf35e8a6b73c6121889a677",
+          "h1": "h1:nDqN7SDmXVwyYb467vmJ7Q/PVAxhLcgGjc25wn1MSts=",
+          "size": 8424862
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-pass_2.1.1_linux_amd64.zip",
+          "download_url": "https://github.com/digipost/terraform-provider-pass/releases/download/v2.1.1/terraform-provider-pass_2.1.1_linux_amd64.zip",
+          "shasum": "55093deb5686745c081a6d237e2801254f0b0fd670d944379ff8ec04cfe7282a",
+          "h1": "h1:Cgb+oASKouIiAFZhPkH8LThFgDCcigsj4TcqHU1HFUE=",
+          "size": 8865020
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-pass_2.1.1_linux_arm.zip",
+          "download_url": "https://github.com/digipost/terraform-provider-pass/releases/download/v2.1.1/terraform-provider-pass_2.1.1_linux_arm.zip",
+          "shasum": "95a2c258ba98489e3940ed1181ff29383c6cb992e2ae1cd32a0d15bbaf1d8e13",
+          "h1": "h1:BpjZzUJJLJ9LDMlBXcA29dC0Yt8ZFTVUvHGhrnOQ3NI=",
+          "size": 8374295
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-pass_2.1.1_linux_arm64.zip",
+          "download_url": "https://github.com/digipost/terraform-provider-pass/releases/download/v2.1.1/terraform-provider-pass_2.1.1_linux_arm64.zip",
+          "shasum": "bd88f458f4f3275ea348c3361842343ab3749be4f8a892dc3ee5b39d1636b434",
+          "h1": "h1:Xke258h0Cnyz6QTgOd+YvEh4bwoDrMexauGkAVtZ7ZA=",
+          "size": 7986410
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-pass_2.1.1_windows_386.zip",
+          "download_url": "https://github.com/digipost/terraform-provider-pass/releases/download/v2.1.1/terraform-provider-pass_2.1.1_windows_386.zip",
+          "shasum": "2ada31ec512ad7baa653bb230403f0c26add1a845e6ef504bf20c8fd5896aac5",
+          "h1": "h1:XobZc/ShsXRzPjLnJBdlVWtEavtzKFfqmaORZnvFiCU=",
+          "size": 8676784
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-pass_2.1.1_windows_amd64.zip",
+          "download_url": "https://github.com/digipost/terraform-provider-pass/releases/download/v2.1.1/terraform-provider-pass_2.1.1_windows_amd64.zip",
+          "shasum": "cf4efd89194384bafdb8dbe472cac19b5fe5e1f39cb2168e19853838b2c416ad",
+          "h1": "h1:SoKOuUaw723bi7y8TMUzqXHymVKqH9cDuYPYF144mA4=",
+          "size": 8978469
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-pass_2.1.1_windows_arm64.zip",
+          "download_url": "https://github.com/digipost/terraform-provider-pass/releases/download/v2.1.1/terraform-provider-pass_2.1.1_windows_arm64.zip",
+          "shasum": "8fc04c6e9917b7274eab8936d37f6cbe4b7232b48c3573c8e0c8d1559bea718e",
+          "h1": "h1:FIbWhCIrdvs+b12tyj7l7Oc7sjvMjpVyKLL7FhJHk2M=",
+          "size": 7965503
+        }
+      ],
+      "discovered": "2026-08-20T12:28:24.69073804Z"
+    },
+    {
+      "version": "2.1.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/digipost/terraform-provider-pass/releases/download/v2.1.0/terraform-provider-pass_2.1.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/digipost/terraform-provider-pass/releases/download/v2.1.0/terraform-provider-pass_2.1.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-pass_2.1.0_darwin_amd64.zip",
+          "download_url": "https://github.com/digipost/terraform-provider-pass/releases/download/v2.1.0/terraform-provider-pass_2.1.0_darwin_amd64.zip",
+          "shasum": "97d89ffad39c6647d407be1210697d64f1ddf0d9f42cf46d5880d3932c5311e9",
+          "h1": "h1:DtWGqDvPA/M6O7cD0oAG2Xq2jzyG+/6f7417tOt72nc=",
+          "size": 8910909
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-pass_2.1.0_darwin_arm64.zip",
+          "download_url": "https://github.com/digipost/terraform-provider-pass/releases/download/v2.1.0/terraform-provider-pass_2.1.0_darwin_arm64.zip",
+          "shasum": "b02d5d5b4a2a3f1c1fb7ff50ab977d85ed6f356ee4393eac72b7794347d6d1a8",
+          "h1": "h1:1V7DXMRulrmi3qejQdhJCb8404cy8VH7kk42SU5UNbk=",
+          "size": 8213875
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-pass_2.1.0_linux_386.zip",
+          "download_url": "https://github.com/digipost/terraform-provider-pass/releases/download/v2.1.0/terraform-provider-pass_2.1.0_linux_386.zip",
+          "shasum": "91c1a6613b450a0a8ef09c7122d03f28fbe8f3656a1af3bb340fac9db8ba3ade",
+          "h1": "h1:tdtAwh2D6GVr5H6H0WDJRi46DJ7RBS6f2dLarwJQxT4=",
+          "size": 8424638
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-pass_2.1.0_linux_amd64.zip",
+          "download_url": "https://github.com/digipost/terraform-provider-pass/releases/download/v2.1.0/terraform-provider-pass_2.1.0_linux_amd64.zip",
+          "shasum": "711b3fe65eefdfdedb4bade96614ded42f6726ecc211a1f9abfbc4ebdfe85395",
+          "h1": "h1:7Hawy5UkTK7J/z+78C4LI0QjXV/lcAfykcCAbPs2VYM=",
+          "size": 8864564
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-pass_2.1.0_linux_arm.zip",
+          "download_url": "https://github.com/digipost/terraform-provider-pass/releases/download/v2.1.0/terraform-provider-pass_2.1.0_linux_arm.zip",
+          "shasum": "245efc34df8416ce3bcc66a2de14e5bb6452239e0219c1c92e39b0c4b3a5b6d9",
+          "h1": "h1:PN/f0KJvcRComn8L5zIFyHcOR1XUkcVcYxwmFqB5IxI=",
+          "size": 8373964
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-pass_2.1.0_linux_arm64.zip",
+          "download_url": "https://github.com/digipost/terraform-provider-pass/releases/download/v2.1.0/terraform-provider-pass_2.1.0_linux_arm64.zip",
+          "shasum": "bffd30a634417bf1be94a602e36fa797f18b4f1e4215cd08c37fb610f1fc7fff",
+          "h1": "h1:/8xymyuMTLTNYynjx35xx77d61/k8RyUcquhnfm4nec=",
+          "size": 7985962
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-pass_2.1.0_windows_386.zip",
+          "download_url": "https://github.com/digipost/terraform-provider-pass/releases/download/v2.1.0/terraform-provider-pass_2.1.0_windows_386.zip",
+          "shasum": "c38bb4cfd582e0c8a81d1a3281b3ab78233b3193044b0e640739f9138eb07f00",
+          "h1": "h1:QYabaSCcC75v11cX9QX4lyZEQG5ZfPJeENq0AabJFbA=",
+          "size": 8676434
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-pass_2.1.0_windows_amd64.zip",
+          "download_url": "https://github.com/digipost/terraform-provider-pass/releases/download/v2.1.0/terraform-provider-pass_2.1.0_windows_amd64.zip",
+          "shasum": "da6fe45fa219d1b3d5d3a3c6d332c8df0238ac69ef9e88ec89338a2470199bf0",
+          "h1": "h1:jDXXcN4WCI7VnZmDOW9RMHvGvyb04DCpypWG2lkBUBs=",
+          "size": 8977996
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-pass_2.1.0_windows_arm64.zip",
+          "download_url": "https://github.com/digipost/terraform-provider-pass/releases/download/v2.1.0/terraform-provider-pass_2.1.0_windows_arm64.zip",
+          "shasum": "2aa4cab7a5067c8029a3b791df2ae07e6b5225a7a769c0a832454953151b3ff4",
+          "h1": "h1:sG1wwbsrKbgCIVT/A/0C2M7Rw7WrhNgZfW5Vu4G3qnk=",
+          "size": 7965337
+        }
+      ],
+      "discovered": "2026-08-20T12:28:24.690765646Z"
+    },
+    {
       "version": "2.0.1",
       "protocols": [
         "5.0"
