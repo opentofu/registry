@@ -1,6 +1,152 @@
 {
   "versions": [
     {
+      "version": "7.46.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/opentofu/terraform-provider-google/releases/download/v7.46.0/terraform-provider-google_7.46.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/opentofu/terraform-provider-google/releases/download/v7.46.0/terraform-provider-google_7.46.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-google_7.46.0_darwin_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-google/releases/download/v7.46.0/terraform-provider-google_7.46.0_darwin_amd64.zip",
+          "shasum": "1fb255c02dc0c4f34b2d76ab61985770ef1730b958c05fb3a8e4a992dd76bc81",
+          "h1": "h1:J5UNgNjyH9DukYKK12C/khrIw0CMYxCtlbt3g4tOAlg=",
+          "size": 40333323
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-google_7.46.0_darwin_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-google/releases/download/v7.46.0/terraform-provider-google_7.46.0_darwin_arm64.zip",
+          "shasum": "cf8a8d6c0dfbd2d084acaa028a45e5b56fb3655de1b0d0d34529cfde57d2a421",
+          "h1": "h1:ic5wKsr+d/eFI0Sj2TrjEtFItCsC9zjT5hnImZqDqxE=",
+          "size": 35678113
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-google_7.46.0_freebsd_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-google/releases/download/v7.46.0/terraform-provider-google_7.46.0_freebsd_386.zip",
+          "shasum": "ed2e11130381c6b610d4df83241695997ecdd11b58c7dc74ed584b4e2fff46d5",
+          "h1": "h1:eNpfoHU3McZe7A2W7PWcGlwd/Mp54F0NLk3+wrrb3Ls=",
+          "size": 35023909
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-google_7.46.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-google/releases/download/v7.46.0/terraform-provider-google_7.46.0_freebsd_amd64.zip",
+          "shasum": "e5340f6193db568a59da41991c4d7359cf0c2b95c413a41920548841bc91ccc5",
+          "h1": "h1:PULf6Y5YVUp41iFbFttDI8GH4skTE7bT6LZxphfyWuM=",
+          "size": 39713816
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-google_7.46.0_freebsd_arm.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-google/releases/download/v7.46.0/terraform-provider-google_7.46.0_freebsd_arm.zip",
+          "shasum": "0947dcaccf0c6b612a754c5079bedc3ea48af0554aa8b0cd7aa435c98903eb44",
+          "h1": "h1:dMB/jc1uskZ5xfFGEIDcwfg2tDfIHZVWP5BQOKsRFIc=",
+          "size": 37360368
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-google_7.46.0_linux_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-google/releases/download/v7.46.0/terraform-provider-google_7.46.0_linux_386.zip",
+          "shasum": "23d46111f3e8379c01f920377481b764004a60dd26e9aa608d30c99a30612080",
+          "h1": "h1:gy2GWP7h1Lhs+jfMfr2ogkuwHfM0E3hu1zUoWpzi9Dc=",
+          "size": 35096639
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-google_7.46.0_linux_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-google/releases/download/v7.46.0/terraform-provider-google_7.46.0_linux_amd64.zip",
+          "shasum": "eb1fac186a9cd5b8b29e58595fa395eead041c38fbc28a4453325fb11e69e041",
+          "h1": "h1:6TAxBmA0ah3ipwW79a9ouirDo4XEe973DLR7TTzg/7c=",
+          "size": 39753401
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-google_7.46.0_linux_arm.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-google/releases/download/v7.46.0/terraform-provider-google_7.46.0_linux_arm.zip",
+          "shasum": "29dcc3341c609a835b80cc426a07606d4f5d7efe52bd53ba2b1e5bfcb683b61a",
+          "h1": "h1:A2teeWi9hKmsaI6QPwAJps00uI8itZpFpioDCXikKFA=",
+          "size": 37384271
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-google_7.46.0_linux_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-google/releases/download/v7.46.0/terraform-provider-google_7.46.0_linux_arm64.zip",
+          "shasum": "eaafbceb63e60334cecab669fb24292c677afd1decadbbba256314c5107d4794",
+          "h1": "h1:0QRbcnJqTVN4XRanNz/8aaBgAFyABdFw9wuWLtgTGAE=",
+          "size": 34159505
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-google_7.46.0_windows_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-google/releases/download/v7.46.0/terraform-provider-google_7.46.0_windows_386.zip",
+          "shasum": "4583121fe428190a246e44921273cda9de8702f00112a07a8f11ce30a3148f3d",
+          "h1": "h1:FpyCl40ElwVUk0VmX3kjLkzd0bo7S7L18a2J79ZwdPI=",
+          "size": 37765731
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-google_7.46.0_windows_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-google/releases/download/v7.46.0/terraform-provider-google_7.46.0_windows_amd64.zip",
+          "shasum": "d5b65e1cbbe07eb9385f59f4091e84da1513b325d12108a77ac66a4b80178880",
+          "h1": "h1:S/suErMf0rpAlva7cytJpVOjgVEzlzf1oTCxbeH0OEE=",
+          "size": 40506523
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-google_7.46.0_windows_arm64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-google/releases/download/v7.46.0/terraform-provider-google_7.46.0_windows_arm64.zip",
+          "shasum": "ca9db60cbe57c23e044fda2b6d69daf8d76791d1fe604284852c1bfb69bfe86e",
+          "h1": "h1:KZr1V5895MdGoFyXreyoCVKzExEQiHi2fiRvoy3EUFw=",
+          "size": 34290520
+        },
+        {
+          "os": "openbsd",
+          "arch": "386",
+          "filename": "terraform-provider-google_7.46.0_openbsd_386.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-google/releases/download/v7.46.0/terraform-provider-google_7.46.0_openbsd_386.zip",
+          "shasum": "b97ced62813f202b028b63e2e55a466ba633232f0f1e1ff2cdd0e7658d7ae5c4",
+          "h1": "h1:DzhFWdnU0JqrPz7RiT+5NPrKXogmTE0WpDGRNyFCFpE=",
+          "size": 35026879
+        },
+        {
+          "os": "openbsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-google_7.46.0_openbsd_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-google/releases/download/v7.46.0/terraform-provider-google_7.46.0_openbsd_amd64.zip",
+          "shasum": "b7ce6b7dc759758a8cecb491174c5bd52e581b3661aae4cc88788a61928283ec",
+          "h1": "h1:s7+KF7/47pIu1ZGfruVEEKgev7BJHZcSZwA3n5ECu/I=",
+          "size": 39716506
+        },
+        {
+          "os": "solaris",
+          "arch": "amd64",
+          "filename": "terraform-provider-google_7.46.0_solaris_amd64.zip",
+          "download_url": "https://github.com/opentofu/terraform-provider-google/releases/download/v7.46.0/terraform-provider-google_7.46.0_solaris_amd64.zip",
+          "shasum": "13b83e4d9c789fddf92bf8855224922a9b4ca6d92c16b4f53d1b05420761d1cc",
+          "h1": "h1:YoRZGgJ9GEeAAjSNd3VHaIM46sVb8bz0hJT7YGJ/FpE=",
+          "size": 39716492
+        }
+      ],
+      "discovered": "2026-08-25T16:49:40.539892536Z"
+    },
+    {
       "version": "7.45.0",
       "protocols": [
         "5.0"
