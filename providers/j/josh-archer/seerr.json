@@ -1,6 +1,390 @@
 {
   "versions": [
     {
+      "version": "0.41.0-rc.1",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.41.0-rc.1/terraform-provider-seerr_0.41.0-rc.1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.41.0-rc.1/terraform-provider-seerr_0.41.0-rc.1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-seerr_0.41.0-rc.1_darwin_amd64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.41.0-rc.1/terraform-provider-seerr_0.41.0-rc.1_darwin_amd64.zip",
+          "shasum": "b58b4929c7665655c9338d7d05242e2416efa1777d004cf98026261e13a58b92",
+          "h1": "h1:aYZuibOfpfIFAuqnnZEl9YlYDewa4oxPDx855Py62v4=",
+          "size": 7239461
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-seerr_0.41.0-rc.1_darwin_arm64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.41.0-rc.1/terraform-provider-seerr_0.41.0-rc.1_darwin_arm64.zip",
+          "shasum": "0fd4d9a857fc3f01fc3adecd8af6c097f7392798a13c63412562880e903a0227",
+          "h1": "h1:78/NnS9Uv3JK3z+22qFi9BlE2cWH54jOmbDuRYr//CQ=",
+          "size": 6713816
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-seerr_0.41.0-rc.1_freebsd_386.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.41.0-rc.1/terraform-provider-seerr_0.41.0-rc.1_freebsd_386.zip",
+          "shasum": "fa82cddd26f8c86dcd1355f23c631e6abd6eea425f4cb7ae13b0740cf7790d92",
+          "h1": "h1:SKdGDfMaO4xV9OgsqHA0eogBo2EopcIVKEdcLv8uiEo=",
+          "size": 6627011
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-seerr_0.41.0-rc.1_freebsd_amd64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.41.0-rc.1/terraform-provider-seerr_0.41.0-rc.1_freebsd_amd64.zip",
+          "shasum": "9e36e572ecf5af2b3277077a74e096f6712ea7af2c7fc73d6434488b8719c064",
+          "h1": "h1:97rt5QtUvmlNY8OqkXuCNbbgzRWP5N93Ie1D9Dt36rw=",
+          "size": 7038749
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-seerr_0.41.0-rc.1_freebsd_arm.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.41.0-rc.1/terraform-provider-seerr_0.41.0-rc.1_freebsd_arm.zip",
+          "shasum": "b03297cbcc0cd594e921f0a911550d663ca9691180f95fa5ac5387017b94b4a3",
+          "h1": "h1:bMKoy6By12E1yCYzDWMOI83X+f025fHpDejR5RrFq58=",
+          "size": 6606997
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-seerr_0.41.0-rc.1_freebsd_arm64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.41.0-rc.1/terraform-provider-seerr_0.41.0-rc.1_freebsd_arm64.zip",
+          "shasum": "2abde2b1c8d2042ab0488a9d1f4ddad167a4dc62fc42fd24699674dbc42fbbe3",
+          "h1": "h1:LwxoJVTxfaz22ixFw16q8AhcgvnwffqxIJOa7wP6GwY=",
+          "size": 6363862
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-seerr_0.41.0-rc.1_linux_386.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.41.0-rc.1/terraform-provider-seerr_0.41.0-rc.1_linux_386.zip",
+          "shasum": "d22e885cc36314e8b40626d84a5b84aa67e75ebda781d26bf49b35f1f6f28c8a",
+          "h1": "h1:qM1gyiZYiTFysKNoWB7WnFQksF6uCSvv4HhaJuwX6OA=",
+          "size": 6658207
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-seerr_0.41.0-rc.1_linux_amd64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.41.0-rc.1/terraform-provider-seerr_0.41.0-rc.1_linux_amd64.zip",
+          "shasum": "d66fe3e92d27a32e62c709ac1db31c30b69d054a6065dfac49adfe5869c6a8d5",
+          "h1": "h1:Am896XamMwn+3LBc9LqJm4O3deafGW8xh/2MF+eTc4E=",
+          "size": 7061723
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-seerr_0.41.0-rc.1_linux_arm.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.41.0-rc.1/terraform-provider-seerr_0.41.0-rc.1_linux_arm.zip",
+          "shasum": "ab6503523b6279543793bc666db5ee23ac29a7fdbbbb262169f87973554f40f5",
+          "h1": "h1:LL2hs1Rr8H6xIGCbJoQU3XK/z7HuS6ALwVuDQ/UPN+8=",
+          "size": 6628031
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-seerr_0.41.0-rc.1_linux_arm64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.41.0-rc.1/terraform-provider-seerr_0.41.0-rc.1_linux_arm64.zip",
+          "shasum": "b9945a35e404c4b4c1cb0474685c65c4a80f016e42134d685ea36813325602ef",
+          "h1": "h1:iuYc8KbqL0ljNhhSu0mlYfvbcgDJ7IcaYg4SrzQl9ZA=",
+          "size": 6387910
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-seerr_0.41.0-rc.1_windows_386.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.41.0-rc.1/terraform-provider-seerr_0.41.0-rc.1_windows_386.zip",
+          "shasum": "41afdb888609f09a5e2c39d788cb72b4ebaf99195d478327bf0ae364a43c8a47",
+          "h1": "h1:Y6il2xz4PZu2UH5aAprhTKhOgokkGOwmAljXeElC/s8=",
+          "size": 6971380
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-seerr_0.41.0-rc.1_windows_amd64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.41.0-rc.1/terraform-provider-seerr_0.41.0-rc.1_windows_amd64.zip",
+          "shasum": "c8f3703e2280eed9d5011f89ce13a3ec2fc20d5d48ac0f598fd3b5fe7b139561",
+          "h1": "h1:u0i/4G5MApF6F3Ya2T9DFWhJxt89y66thNNHaylSdpM=",
+          "size": 7270134
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-seerr_0.41.0-rc.1_windows_arm64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.41.0-rc.1/terraform-provider-seerr_0.41.0-rc.1_windows_arm64.zip",
+          "shasum": "22e76ec67ba8cad6123953fa831f44b41eb9e0255d8d64c362522d80f4d4b5fb",
+          "h1": "h1:BaqcR8jReMy8woXXU88m1v+q3ux8U0ASKnrqWjDx9Tk=",
+          "size": 6472658
+        }
+      ],
+      "discovered": "2026-08-28T21:14:58.792978779Z"
+    },
+    {
+      "version": "0.40.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0/terraform-provider-seerr_0.40.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0/terraform-provider-seerr_0.40.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-seerr_0.40.0_darwin_amd64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0/terraform-provider-seerr_0.40.0_darwin_amd64.zip",
+          "shasum": "3ce6dd795521d42e3ab94c4b8fb3aad366fab3ebcc404c2ad46c410bdf72b8e4",
+          "h1": "h1:usnnHiJ3gHUniWgGY9tWo9Gh8fCHvLtxr0ObEdk46TQ=",
+          "size": 7239396
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-seerr_0.40.0_darwin_arm64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0/terraform-provider-seerr_0.40.0_darwin_arm64.zip",
+          "shasum": "c899bb1918d47d22d1687b2853d4d0c781073814de517d98ef3140284ef34956",
+          "h1": "h1:2WxvoY51MiHh2aLCuofI78sWnQ5Zq3+A9lV6KAalN5Y=",
+          "size": 6713767
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-seerr_0.40.0_freebsd_386.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0/terraform-provider-seerr_0.40.0_freebsd_386.zip",
+          "shasum": "7d189aa372e0929145780cb2ed3b0df1215b2ff7f45521cfed72337123810850",
+          "h1": "h1:Ej8sv7Ac/MOpu7JIelI0qF/aXUzjhdII6GbNBDvVskI=",
+          "size": 6626672
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-seerr_0.40.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0/terraform-provider-seerr_0.40.0_freebsd_amd64.zip",
+          "shasum": "77dc9f02a15e452de931adb88b9707ce5126d61c7bc8f8d013476d00551b83d8",
+          "h1": "h1:sPBacRZrOTq2h5HROXE8c0qkhsRQw4XABWdwTmARm0w=",
+          "size": 7038692
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-seerr_0.40.0_freebsd_arm.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0/terraform-provider-seerr_0.40.0_freebsd_arm.zip",
+          "shasum": "f7b0ee0066068c4c2d828b47cdcf03a6ae16b0fc94e3134383c643ae0a187cdc",
+          "h1": "h1:yslSAb4jQArLO6DJIImLyy3nNih6NKPDUvz9tSpEQ2g=",
+          "size": 6606782
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-seerr_0.40.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0/terraform-provider-seerr_0.40.0_freebsd_arm64.zip",
+          "shasum": "36eddac09678f69da3fc08f1a44a35ca59075885932eb238fbe714d7280e0c3b",
+          "h1": "h1:4xh1hXUbV2lFXUGx+qOUrEAKiR1zOvxdpcOXAkp0Byk=",
+          "size": 6363861
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-seerr_0.40.0_linux_386.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0/terraform-provider-seerr_0.40.0_linux_386.zip",
+          "shasum": "7887aeafae7dc24c22422c3ced9fcf2a166b8c7d42188d34d60e1b9f3ecc8487",
+          "h1": "h1:vhQcHJJCZafrzpOWmXeLsAD/wpOnhY5MA4EPzUUICUQ=",
+          "size": 6658173
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-seerr_0.40.0_linux_amd64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0/terraform-provider-seerr_0.40.0_linux_amd64.zip",
+          "shasum": "38892f212678ed33d4b437d46b781a37aefcfb351bf0d79ad02ade1efa5d36a7",
+          "h1": "h1:bUQ0VBdFLQWtardeliJBweYWsbbesZ5bxV3/S09DfiA=",
+          "size": 7061753
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-seerr_0.40.0_linux_arm.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0/terraform-provider-seerr_0.40.0_linux_arm.zip",
+          "shasum": "53f5e0622ee909db37ef0771d0c2024f42f2c5463567581accbd78664885f00f",
+          "h1": "h1:W+A2MN0DgyGg35EPRAsw3ZVaYCBInWdXMQEmAvZHbKg=",
+          "size": 6627806
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-seerr_0.40.0_linux_arm64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0/terraform-provider-seerr_0.40.0_linux_arm64.zip",
+          "shasum": "79d2a554c24434a8e3988bb61fdf134f8cd2d908003a488c86646550a72ee47d",
+          "h1": "h1:kA10Go+tmoMWIePT9ACdgTbOhWE4PKN3HSOykRcpSD0=",
+          "size": 6387747
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-seerr_0.40.0_windows_386.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0/terraform-provider-seerr_0.40.0_windows_386.zip",
+          "shasum": "60e3fd410f50d8d322a65cd504be749776b4157de3543c752a8d765d7e7ec090",
+          "h1": "h1:vMSRW5t6EHyY+TL0KwSd6M2PbxCjVCCcwyhxPtFFbNM=",
+          "size": 6971409
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-seerr_0.40.0_windows_amd64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0/terraform-provider-seerr_0.40.0_windows_amd64.zip",
+          "shasum": "cb794a887297cc604232b1754bbd20261c05c8ca3d636382ded280a1f4b502e2",
+          "h1": "h1:dxA2MG1ibvh2LC2CmmSaVLMKqUyYojR/AMwIO0BkP0E=",
+          "size": 7270195
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-seerr_0.40.0_windows_arm64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0/terraform-provider-seerr_0.40.0_windows_arm64.zip",
+          "shasum": "1bf6dfc05fc80630bfc2d0a7f728116c32c92e02fe9a118093e43669721456b2",
+          "h1": "h1:tnDf9D2N7+iJCUktROOEX0JElcdms5nLkga71ikHV0Y=",
+          "size": 6472603
+        }
+      ],
+      "discovered": "2026-08-28T21:14:58.793090497Z"
+    },
+    {
+      "version": "0.40.0-rc.5",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0-rc.5/terraform-provider-seerr_0.40.0-rc.5_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0-rc.5/terraform-provider-seerr_0.40.0-rc.5_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-seerr_0.40.0-rc.5_darwin_amd64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0-rc.5/terraform-provider-seerr_0.40.0-rc.5_darwin_amd64.zip",
+          "shasum": "360a9e52b817b50309cfa8768e94c628c1a1dfe7752852b6308ad6905a44ebcb",
+          "h1": "h1:6hNgtHUWY8I0a3jTK8VfmbDHEGaY6QAIKcLyzMOA5y4=",
+          "size": 7238757
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-seerr_0.40.0-rc.5_darwin_arm64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0-rc.5/terraform-provider-seerr_0.40.0-rc.5_darwin_arm64.zip",
+          "shasum": "28d1fa18affc99a64a99d8d6e45517a11af54674cdbd628eba7a97580033549b",
+          "h1": "h1:oAgoejyZ+HLZMLHkCNrtUm8FB+myVQQ1zKXnY6fooI8=",
+          "size": 6713111
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-seerr_0.40.0-rc.5_freebsd_386.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0-rc.5/terraform-provider-seerr_0.40.0-rc.5_freebsd_386.zip",
+          "shasum": "3fc584b0dc6c118681192362a1098c3dc60dea56c6a1f3b56c0c4622843dde3d",
+          "h1": "h1:evLKev6bIn6PRdyT8yVRrB58U0feJC42YPRgAIbwpfs=",
+          "size": 6626308
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-seerr_0.40.0-rc.5_freebsd_amd64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0-rc.5/terraform-provider-seerr_0.40.0-rc.5_freebsd_amd64.zip",
+          "shasum": "93a309ef4319797ad0741a0ea857f847d32a66f396c4da886d706001ab846500",
+          "h1": "h1:LUPu9Dshgssj4Hgf2ROe1dUMxxinzmEsGg/tjPn5UpM=",
+          "size": 7038056
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-seerr_0.40.0-rc.5_freebsd_arm.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0-rc.5/terraform-provider-seerr_0.40.0-rc.5_freebsd_arm.zip",
+          "shasum": "dbc464fe99b464eac22b0cc272d38a2d4d64d8b5b2052e0878962d736fc69897",
+          "h1": "h1:cJgb81jkS/PQx+9Fss9vIy5RSHJmr73q57EocBnlO7g=",
+          "size": 6606301
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-seerr_0.40.0-rc.5_freebsd_arm64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0-rc.5/terraform-provider-seerr_0.40.0-rc.5_freebsd_arm64.zip",
+          "shasum": "ea173086524abae9db8ddfa79ec21b36a933ab712ca4e93b77ba6fa63f3cd12a",
+          "h1": "h1:QW3sSS4KZyObzfJQdapYKPAl8He9aCODrXRlXBj+ktY=",
+          "size": 6363157
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-seerr_0.40.0-rc.5_linux_386.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0-rc.5/terraform-provider-seerr_0.40.0-rc.5_linux_386.zip",
+          "shasum": "3ff1b3549d82d4a60862572187de6e082f84cf972d6b7989023fa257d388137c",
+          "h1": "h1:SIoTTkW4opGjuVX3WoipVLAk+NdygH/lSMFTPVOgDrg=",
+          "size": 6657504
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-seerr_0.40.0-rc.5_linux_amd64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0-rc.5/terraform-provider-seerr_0.40.0-rc.5_linux_amd64.zip",
+          "shasum": "766992da82496539ca214efe38af523ae30fe85f365c53ea94ac07f0e16976a6",
+          "h1": "h1:Gq1Bv/OwYkEGM2viJ8DJnqspz9jsCzrJbnsmpif759w=",
+          "size": 7061020
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-seerr_0.40.0-rc.5_linux_arm.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0-rc.5/terraform-provider-seerr_0.40.0-rc.5_linux_arm.zip",
+          "shasum": "baf145ee39db52d868ef98b5050691178b0d63dfbee5c4bacef88f1f634ad9ef",
+          "h1": "h1:ukSBcX457iXPQ0o+rDtZRrdUdLs72E33HItbV02LwoE=",
+          "size": 6627331
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-seerr_0.40.0-rc.5_linux_arm64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0-rc.5/terraform-provider-seerr_0.40.0-rc.5_linux_arm64.zip",
+          "shasum": "46756d4793e848c92eb4819e3f6a8ea1c62567fbe6fbba0a3604e56a7008bab6",
+          "h1": "h1:lrbofXtmFrsMYR3rke/GwQccJ/YYYGDjf8DpUuj/l38=",
+          "size": 6387212
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-seerr_0.40.0-rc.5_windows_386.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0-rc.5/terraform-provider-seerr_0.40.0-rc.5_windows_386.zip",
+          "shasum": "a55f29acdb898e087fe13cfbeddb9a4464d8a4465bbedecb3096a2c42c0709d0",
+          "h1": "h1:+FnGbZ/bQr18FtkbQB8qIYnPaS91/N8Voc6nk+ePeLw=",
+          "size": 6970669
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-seerr_0.40.0-rc.5_windows_amd64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0-rc.5/terraform-provider-seerr_0.40.0-rc.5_windows_amd64.zip",
+          "shasum": "483835f7066df3a503966485b29c1b0f7137a0efd85528a82356f76eee577729",
+          "h1": "h1:29BzQZ+U3Z8IgZLbhz2MOusxYvfo/0TsNejEWdTmvn4=",
+          "size": 7269429
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-seerr_0.40.0-rc.5_windows_arm64.zip",
+          "download_url": "https://github.com/josh-archer/terraform-provider-seerr/releases/download/v0.40.0-rc.5/terraform-provider-seerr_0.40.0-rc.5_windows_arm64.zip",
+          "shasum": "dbcb029d4b74216c27eed4b149f410065c44e8e54cba5d34175b9b0eb437597d",
+          "h1": "h1:d3LbMI4SmK9K6abaWZfZ/bTJ9Rcw6674PCHVawoVexI=",
+          "size": 6471959
+        }
+      ],
+      "discovered": "2026-08-28T21:14:58.793100105Z"
+    },
+    {
       "version": "0.40.0-rc.4",
       "protocols": [
         "6.0"
