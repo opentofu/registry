@@ -17,7 +17,7 @@ OpenTofu welcomes human-written contributions from the open source community. We
 
 **We do not accept AI-generated code from community contributors.** This applies to any code generated, completed or rewritten by an AI tool. If an AI wrote part of your contribution, we cannot accept it. 
 
-**If you discover a bug or possible improvement using AI tools**, feel free to open an issue instead of a pull request. Describe the problem in your own words and a maintainer or other community member may discuss this, pick it up, and implement a fix under the same rules of this policy and contributing guidelines. We emphasize that no code should be included in the description of these issues.
+**If you discover a bug or possible improvement using AI tools**, feel free to open an issue instead of a pull request. Describe the problem in your own words and a maintainer or other community member may discuss this, pick it up, and implement a fix under the same rules of this policy and contributing guidelines. We emphasize that no code generated or suggested by an AI tool used for analysis should be included in the description of these issues.
 
 Pull requests identified as AI-generated will be closed without further review.
 
