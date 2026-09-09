@@ -1,6 +1,53 @@
 {
   "versions": [
     {
+      "version": "0.12.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/dlarochette/terraform-provider-systemd/releases/download/0.12.0/terraform-provider-systemd_0.12.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/dlarochette/terraform-provider-systemd/releases/download/0.12.0/terraform-provider-systemd_0.12.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-systemd_0.12.0_darwin_amd64.zip",
+          "download_url": "https://github.com/dlarochette/terraform-provider-systemd/releases/download/0.12.0/terraform-provider-systemd_0.12.0_darwin_amd64.zip",
+          "shasum": "a29b30100b424cb889e3f08597b64516cf888814920244ea7c9de678b8913b48",
+          "h1": "h1:vCUo1sHK/q6FxAHeEYXN8QQdm0qbnJ2qXSH4Kyqpy1g=",
+          "size": 7170639
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-systemd_0.12.0_darwin_arm64.zip",
+          "download_url": "https://github.com/dlarochette/terraform-provider-systemd/releases/download/0.12.0/terraform-provider-systemd_0.12.0_darwin_arm64.zip",
+          "shasum": "3c52be22cd408bf15004f00a3aea5285296f8c6d8cc4ed9d5a8986d7d11f4ffd",
+          "h1": "h1:xCEp6CA5jla4LYAEWMM67SMgU6w8srpIVQg44m25Ki8=",
+          "size": 6670336
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-systemd_0.12.0_linux_amd64.zip",
+          "download_url": "https://github.com/dlarochette/terraform-provider-systemd/releases/download/0.12.0/terraform-provider-systemd_0.12.0_linux_amd64.zip",
+          "shasum": "fbf78ff26cda13eb0d1b1eebb6ab5a16fe027c40e1310a3f909d8dd01a93d06e",
+          "h1": "h1:pABEqX13+Yu+iYhE5uXzaq/Q9RtayA6SZOWl8t6VrLc=",
+          "size": 6917133
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-systemd_0.12.0_linux_arm64.zip",
+          "download_url": "https://github.com/dlarochette/terraform-provider-systemd/releases/download/0.12.0/terraform-provider-systemd_0.12.0_linux_arm64.zip",
+          "shasum": "a1af2e1c81f0a73cc76abab79fc9ea39d65ac9cf26abf61510ba5e6cba4e3d7f",
+          "h1": "h1:lmvxIAOpWk1YsmKwsUeE9ZsiQoiRHQQtCx9GFZYh+xw=",
+          "size": 6260418
+        }
+      ],
+      "discovered": "2026-09-09T11:22:39.261128943Z"
+    },
+    {
       "version": "0.10.3",
       "protocols": [
         "6.0"
@@ -848,11 +895,6 @@
     }
   ],
   "versions_errors": [
-    {
-      "version": "0.12.0",
-      "message": "checksums not found in release",
-      "utc_time": "2026-09-09T10:33:34.411471349Z"
-    },
     {
       "version": "0.11.0",
       "message": "checksums not found in release",
