@@ -1,6 +1,71 @@
 {
   "versions": [
     {
+      "version": "1.7.9",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/terraform-redhat/terraform-provider-rhcs/releases/download/v1.7.9/terraform-provider-rhcs_1.7.9_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/terraform-redhat/terraform-provider-rhcs/releases/download/v1.7.9/terraform-provider-rhcs_1.7.9_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhcs_1.7.9_darwin_amd64.zip",
+          "download_url": "https://github.com/terraform-redhat/terraform-provider-rhcs/releases/download/v1.7.9/terraform-provider-rhcs_1.7.9_darwin_amd64.zip",
+          "shasum": "16147670b4c353291a3514206f0ee6a0ffdee8bd99ac82e0c0ccfeb12cb5f730",
+          "h1": "h1:CasvFVOPAhg6yEAf7sFWcndVGiyeBHqnm1sqnCC17Xo=",
+          "size": 27690956
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhcs_1.7.9_darwin_arm64.zip",
+          "download_url": "https://github.com/terraform-redhat/terraform-provider-rhcs/releases/download/v1.7.9/terraform-provider-rhcs_1.7.9_darwin_arm64.zip",
+          "shasum": "ee42b6e9d9e13ac7c7d3668b25fdd547d22516da04a36007c7fea5afa56c35f0",
+          "h1": "h1:4DYKS6Wy+OeAQrGPt68B6loWEU31Snb2pZCyNdaYKKs=",
+          "size": 26069048
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhcs_1.7.9_linux_amd64.zip",
+          "download_url": "https://github.com/terraform-redhat/terraform-provider-rhcs/releases/download/v1.7.9/terraform-provider-rhcs_1.7.9_linux_amd64.zip",
+          "shasum": "1f6ae8d90f61d1cb8d9773195d62cf1ad75d9fd8c8b52c29c85bb48d42423cd4",
+          "h1": "h1:zjW2D5wZqJPhxZxn8PsIQUZ3A07M3TTTVhK5+fxKwJw=",
+          "size": 27201184
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhcs_1.7.9_linux_arm64.zip",
+          "download_url": "https://github.com/terraform-redhat/terraform-provider-rhcs/releases/download/v1.7.9/terraform-provider-rhcs_1.7.9_linux_arm64.zip",
+          "shasum": "b9811ff207f78c85aeeaab46559d4342a8e7edb0daa3518a63ef7c8bbf873bbb",
+          "h1": "h1:ba4S/xX4GYKEDCeKlqOIwmaiKz+EnzkyKP4Yjnlx8Eo=",
+          "size": 25180007
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rhcs_1.7.9_windows_amd64.zip",
+          "download_url": "https://github.com/terraform-redhat/terraform-provider-rhcs/releases/download/v1.7.9/terraform-provider-rhcs_1.7.9_windows_amd64.zip",
+          "shasum": "af7e17f86e54c3e8fad99687717585763f628bca5cee47c66d7c17b63cee8681",
+          "h1": "h1:z9W6ER2KrHParcx8+feWHv+ZJ/pQVGDfFr38VaOSPqM=",
+          "size": 27448634
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-rhcs_1.7.9_windows_arm64.zip",
+          "download_url": "https://github.com/terraform-redhat/terraform-provider-rhcs/releases/download/v1.7.9/terraform-provider-rhcs_1.7.9_windows_arm64.zip",
+          "shasum": "bd416a413f9cf4c9a426b27d736ef07a3ed22dc7691c86f2cb1492737a82b68b",
+          "h1": "h1:ns/O2ZxRFmPDsSUYgMrrDCCyVoiryrAYFOEhKsV/cYo=",
+          "size": 25253152
+        }
+      ],
+      "discovered": "2026-09-22T15:33:12.988078672Z"
+    },
+    {
       "version": "1.7.9-prerelease.2",
       "protocols": [
         "6.0"
@@ -5072,11 +5137,6 @@
     }
   ],
   "versions_errors": [
-    {
-      "version": "1.7.9",
-      "message": "checksums not found in release",
-      "utc_time": "2026-09-22T15:02:10.295851881Z"
-    },
     {
       "version": "1.7.9-prerelease.1",
       "message": "checksums not found in release",
