@@ -1,6 +1,194 @@
 {
   "versions": [
     {
+      "version": "15.2.0-rc.3",
+      "protocols": [
+        "4.0",
+        "5.0",
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v15.2.0-rc.3/terraform-provider-rancher2_15.2.0-rc.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v15.2.0-rc.3/terraform-provider-rancher2_15.2.0-rc.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rancher2_15.2.0-rc.3_darwin_amd64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v15.2.0-rc.3/terraform-provider-rancher2_15.2.0-rc.3_darwin_amd64.zip",
+          "shasum": "a2298461b154edeb52f997e89ea31edfc3949f2cab37ca0c0c6d1b05d744d6ac",
+          "h1": "h1:qYZGQz4/j9F2RtZW0CqFXMqrsddehoWBKt5t4vGu6Zc=",
+          "size": 23898727
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rancher2_15.2.0-rc.3_darwin_arm64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v15.2.0-rc.3/terraform-provider-rancher2_15.2.0-rc.3_darwin_arm64.zip",
+          "shasum": "919ba5c2d45692bcba6221dcd277aa5171744e9fdaaa68c2a1c5862b0d8e6445",
+          "h1": "h1:MdHLvZaBkjxL1AtgHPc0KbQmpdQZzlinbOv5Aduqqz4=",
+          "size": 21955436
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-rancher2_15.2.0-rc.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v15.2.0-rc.3/terraform-provider-rancher2_15.2.0-rc.3_freebsd_amd64.zip",
+          "shasum": "9273a93c12f64103a9bf9ddd640f8cfb2c2e26cb0ad0caf1d211320f2a5db2f5",
+          "h1": "h1:KCyk+jom+jNL63JjF8A2FC14+jEm2HDHcEv2Y/22+SQ=",
+          "size": 23366168
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-rancher2_15.2.0-rc.3_freebsd_arm.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v15.2.0-rc.3/terraform-provider-rancher2_15.2.0-rc.3_freebsd_arm.zip",
+          "shasum": "0a40ce654f3364239cbea84d45f1efd99b6a39048d91811d49dcb0cd0aade3a9",
+          "h1": "h1:dvr8ewXSrcPVSJD4sXZlG/I7Yrt+gtM5vaC5Ve/FFi4=",
+          "size": 22128650
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-rancher2_15.2.0-rc.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v15.2.0-rc.3/terraform-provider-rancher2_15.2.0-rc.3_freebsd_arm64.zip",
+          "shasum": "a71f3ccf301a107648b7d7395add08937d9b20dd982b341dc063340bbc90376f",
+          "h1": "h1:Z8U6XGwbSQ2sNYltZr5Q1O37gXdKQHTPDQy5IJUbeBA=",
+          "size": 20832396
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rancher2_15.2.0-rc.3_linux_amd64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v15.2.0-rc.3/terraform-provider-rancher2_15.2.0-rc.3_linux_amd64.zip",
+          "shasum": "80b42d6a48792538e656e52f9b7efa7de63ae891c22acd9071835e398a4371a2",
+          "h1": "h1:lO7NPxv5KsiyJIIcnl2sIWRqu7NBPRFQYV3YUnWwcvk=",
+          "size": 23399342
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rancher2_15.2.0-rc.3_linux_arm.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v15.2.0-rc.3/terraform-provider-rancher2_15.2.0-rc.3_linux_arm.zip",
+          "shasum": "5575a3d7a1b38e859831fa8efe7df9257c5e394025dfad831af32ba57273618e",
+          "h1": "h1:uznE8IWkhzPU8MrsVRuuZrmdPuHj69/38vV2TJvPEnI=",
+          "size": 22162413
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rancher2_15.2.0-rc.3_linux_arm64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v15.2.0-rc.3/terraform-provider-rancher2_15.2.0-rc.3_linux_arm64.zip",
+          "shasum": "d2e25702d5e29125a77d02011e2fe5f44a8b3cdebe1f22a18ac3ec6b7ebaf157",
+          "h1": "h1:kHanum5wE7G/Yv1QGQwolLZXAxNu3H4uSJ8cLcqq6AA=",
+          "size": 20866388
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rancher2_15.2.0-rc.3_windows_amd64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v15.2.0-rc.3/terraform-provider-rancher2_15.2.0-rc.3_windows_amd64.zip",
+          "shasum": "72c379d2752669c4dae062667e2806e52e4a56a2d0c36a43fee75ac474b230c5",
+          "h1": "h1:M21u385o+X1EEYYrUjQ8n/R0YxSuxY3JJmhHZuDk/Yc=",
+          "size": 23992295
+        }
+      ],
+      "discovered": "2026-10-01T06:54:14.315186479Z"
+    },
+    {
+      "version": "15.2.0-rc.2",
+      "protocols": [
+        "4.0",
+        "5.0",
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v15.2.0-rc.2/terraform-provider-rancher2_15.2.0-rc.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v15.2.0-rc.2/terraform-provider-rancher2_15.2.0-rc.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rancher2_15.2.0-rc.2_darwin_amd64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v15.2.0-rc.2/terraform-provider-rancher2_15.2.0-rc.2_darwin_amd64.zip",
+          "shasum": "97e2c9e693445ba79cc23ef77c2345ceb3a62221054a1fb0918111123da824da",
+          "h1": "h1:WTxU6vfG7FTCAzirlRGk1NgMFSSNw0RiXKfhozD6WwY=",
+          "size": 23888503
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rancher2_15.2.0-rc.2_darwin_arm64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v15.2.0-rc.2/terraform-provider-rancher2_15.2.0-rc.2_darwin_arm64.zip",
+          "shasum": "a5facd2146110dcd1168f41ed722be286d7ba6f2a76c2e7b64cff470d06e373c",
+          "h1": "h1:JpVTFU80PwxA4Zy1/8M/PeOVNx+W/0D1JGahiFShWsw=",
+          "size": 21940422
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-rancher2_15.2.0-rc.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v15.2.0-rc.2/terraform-provider-rancher2_15.2.0-rc.2_freebsd_amd64.zip",
+          "shasum": "018dd0b0a1dcf28e2a9db2a4875c59443e6537ffbac2b7d0115ff44671a1ae9c",
+          "h1": "h1:CCHXLyEJxMlTxRwmdFaS3+z+gRhxg9TILVIVPrfNQpI=",
+          "size": 23360423
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-rancher2_15.2.0-rc.2_freebsd_arm.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v15.2.0-rc.2/terraform-provider-rancher2_15.2.0-rc.2_freebsd_arm.zip",
+          "shasum": "767abde6223946f9074e4d4e81524863e6ab1b60679c3da98b394c59c560c5fa",
+          "h1": "h1:CAHzSFuXqvu/o1iTDhhIeJZTbmwfjTIC/25n/4oLhWI=",
+          "size": 22121766
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-rancher2_15.2.0-rc.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v15.2.0-rc.2/terraform-provider-rancher2_15.2.0-rc.2_freebsd_arm64.zip",
+          "shasum": "d9d19ec9248ecfcc075c836957793f629cd9bc85a24d33d1e8871f463041f339",
+          "h1": "h1:psExobC2dZoi70deu1lH2Fh67vZkojYhdZQgJ7UnptQ=",
+          "size": 20823731
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rancher2_15.2.0-rc.2_linux_amd64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v15.2.0-rc.2/terraform-provider-rancher2_15.2.0-rc.2_linux_amd64.zip",
+          "shasum": "dd698e91240e0bf5f14491b9a2937f4591fa59c034269611ca95ec37278d1805",
+          "h1": "h1:qgda8be9qIkDiHopiBm77ucQe9OmIiTBUSPUVxHfUFc=",
+          "size": 23393903
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rancher2_15.2.0-rc.2_linux_arm.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v15.2.0-rc.2/terraform-provider-rancher2_15.2.0-rc.2_linux_arm.zip",
+          "shasum": "a2b9f22a9e77189e59266e084f024d1762b6b83d653b266c3399496e5213af4a",
+          "h1": "h1:Ii+IkSRwyqWAX6/aqMF8VKPgJHFdTMsfowGRdr4ChBo=",
+          "size": 22154568
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rancher2_15.2.0-rc.2_linux_arm64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v15.2.0-rc.2/terraform-provider-rancher2_15.2.0-rc.2_linux_arm64.zip",
+          "shasum": "50fe526b3e8b938e295a03a9b0506e8ef63db67185ab4c0827740c4710e3ffb0",
+          "h1": "h1:O7Fz3gG8ysIqYE+PKSYewtIgxdWnWnZmkGHI4krB9qY=",
+          "size": 20860826
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rancher2_15.2.0-rc.2_windows_amd64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v15.2.0-rc.2/terraform-provider-rancher2_15.2.0-rc.2_windows_amd64.zip",
+          "shasum": "23556a698619c798878032b13a303ce76439c5d8eeb423448a6fc0a9742bc3ba",
+          "h1": "h1:AKnLp5TnfvjNpBuJTpH6NtgIOFNHSMdZJNyrQLf0zHs=",
+          "size": 23985141
+        }
+      ],
+      "discovered": "2026-10-01T06:54:14.315403986Z"
+    },
+    {
       "version": "15.2.0-rc.1",
       "protocols": [
         "4.0",
@@ -1409,6 +1597,100 @@
         }
       ],
       "discovered": "2026-05-06T02:59:10.124884483Z"
+    },
+    {
+      "version": "14.6.0-rc.2",
+      "protocols": [
+        "4.0",
+        "5.0",
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v14.6.0-rc.2/terraform-provider-rancher2_14.6.0-rc.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v14.6.0-rc.2/terraform-provider-rancher2_14.6.0-rc.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rancher2_14.6.0-rc.2_darwin_amd64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v14.6.0-rc.2/terraform-provider-rancher2_14.6.0-rc.2_darwin_amd64.zip",
+          "shasum": "7385415ca9801dd6b9f7ac731218723167913abc2a6b73634b376ce7a5d984d9",
+          "h1": "h1:23K4cMVXVigN+x00Stho9aZLNOt6LNayAgW+1rL7KHQ=",
+          "size": 24217232
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rancher2_14.6.0-rc.2_darwin_arm64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v14.6.0-rc.2/terraform-provider-rancher2_14.6.0-rc.2_darwin_arm64.zip",
+          "shasum": "106c7ad770f8c30fc19adb26564d74bef9404dc320e550071b6e9cc6841fa304",
+          "h1": "h1:IXr9HPWdsoudw+ZoswrMILmt7r7TbWv5C4LmZKPPC4Y=",
+          "size": 22238254
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-rancher2_14.6.0-rc.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v14.6.0-rc.2/terraform-provider-rancher2_14.6.0-rc.2_freebsd_amd64.zip",
+          "shasum": "16b9cecab949614e2f232fad1932bd063ab7f4a271e23f97fbeb33874b58a8d7",
+          "h1": "h1:ZgMNweFqN5gW459mQB+z8drn5DVNNxa5jUUgWnfN2r0=",
+          "size": 23672998
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-rancher2_14.6.0-rc.2_freebsd_arm.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v14.6.0-rc.2/terraform-provider-rancher2_14.6.0-rc.2_freebsd_arm.zip",
+          "shasum": "4d03013d8f98fca3fd3ff3c80b4b1de0000d9b2e1bc37620b1019122c4ec7067",
+          "h1": "h1:kxEAh/RA+S8wrqbeuXxymwyaFsb8o3D3L/c9zFj2FpM=",
+          "size": 22424279
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-rancher2_14.6.0-rc.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v14.6.0-rc.2/terraform-provider-rancher2_14.6.0-rc.2_freebsd_arm64.zip",
+          "shasum": "3954563b38f7abf7aa48ec0d1f4b276f4a7e84561fba0d221bb7c323b8cda3ef",
+          "h1": "h1:/52jkc42yjbNZX5qtpF1SHg7Bje+roeQzmyd0YTlNuc=",
+          "size": 21096164
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rancher2_14.6.0-rc.2_linux_amd64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v14.6.0-rc.2/terraform-provider-rancher2_14.6.0-rc.2_linux_amd64.zip",
+          "shasum": "8e0b2aa799b60d28e067a556191ba33508c681a4eb15a3c528cccac80e06c664",
+          "h1": "h1:RdvAgTEl5Z+BcOd70z7liKzYeAvvNvgVKamPn/gOOMM=",
+          "size": 23717197
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rancher2_14.6.0-rc.2_linux_arm.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v14.6.0-rc.2/terraform-provider-rancher2_14.6.0-rc.2_linux_arm.zip",
+          "shasum": "88491785fef18ea522fd80121f06293762513bf6ec30e9a286ab31b336b032ab",
+          "h1": "h1:+Dk6pxgziq3uQ8jmbpEEFwXdD4jH5Vucsb36cydAgvc=",
+          "size": 22456697
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rancher2_14.6.0-rc.2_linux_arm64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v14.6.0-rc.2/terraform-provider-rancher2_14.6.0-rc.2_linux_arm64.zip",
+          "shasum": "d63d0309b607c7f53590d64956bf7c85fdf77b543d24a6a9d9deb4073910d327",
+          "h1": "h1:flBTLom0iddAwLYElI1DbRtCN3dis2TJGr1MIfVDdFs=",
+          "size": 21120198
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rancher2_14.6.0-rc.2_windows_amd64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v14.6.0-rc.2/terraform-provider-rancher2_14.6.0-rc.2_windows_amd64.zip",
+          "shasum": "687bbb13628b2c536e63f54a51d4e4b75b46929582882d0e164536de36b99e6f",
+          "h1": "h1:6gCVHQia73feNnEsg3qBNH0TFc8ZjBm1RChCSIRP/oE=",
+          "size": 24312162
+        }
+      ],
+      "discovered": "2026-10-01T06:54:14.315410167Z"
     },
     {
       "version": "14.2.2",
@@ -4229,6 +4511,100 @@
         }
       ],
       "discovered": "2026-04-21T00:00:00Z"
+    },
+    {
+      "version": "13.10.0-rc.2",
+      "protocols": [
+        "4.0",
+        "5.0",
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v13.10.0-rc.2/terraform-provider-rancher2_13.10.0-rc.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v13.10.0-rc.2/terraform-provider-rancher2_13.10.0-rc.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-rancher2_13.10.0-rc.2_darwin_amd64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v13.10.0-rc.2/terraform-provider-rancher2_13.10.0-rc.2_darwin_amd64.zip",
+          "shasum": "602aa1b5988f8ef0d7897b864f7a5471129bb0a5d01066d24031f042f34c3b23",
+          "h1": "h1:W2OAmfDKwWqZRQuy5tRkNX5AWjK/gDsof3PYqAmcUQ8=",
+          "size": 24043771
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-rancher2_13.10.0-rc.2_darwin_arm64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v13.10.0-rc.2/terraform-provider-rancher2_13.10.0-rc.2_darwin_arm64.zip",
+          "shasum": "99e851db78ba0b81d3345986bbc12e5350075944dfc10fdff31c5b1b3ae6ac5c",
+          "h1": "h1:F8zNWZpPB0rWJj0W+ecwpV4P0S24NoT6THX4RDkSu3E=",
+          "size": 22051802
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-rancher2_13.10.0-rc.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v13.10.0-rc.2/terraform-provider-rancher2_13.10.0-rc.2_freebsd_amd64.zip",
+          "shasum": "032176f55965e16b49258db00bce8073399bf9b57bf6dc26fd11b089febc2abd",
+          "h1": "h1:53k3X1JyvnLDbcMxmCwLNHbRjRKEMJMOGyksylP29LA=",
+          "size": 23497437
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-rancher2_13.10.0-rc.2_freebsd_arm.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v13.10.0-rc.2/terraform-provider-rancher2_13.10.0-rc.2_freebsd_arm.zip",
+          "shasum": "d317d77cb0bc36cf1563993c10dc4d89001bebb5ddc2230a2ff468c9e5aa3d96",
+          "h1": "h1:dFJjHDYY2DIBOTmZPr2bZXai9agBt1Ft8g7vJ0x4dYo=",
+          "size": 22245055
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-rancher2_13.10.0-rc.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v13.10.0-rc.2/terraform-provider-rancher2_13.10.0-rc.2_freebsd_arm64.zip",
+          "shasum": "0818b3f53b174b38abde1231446533e9b99a4c2ca4c64a89f36fc1054f2b2798",
+          "h1": "h1:GSLsjYb2wSivhaW10u8Gt1WzEMGgNcCG7SL/oFAe5sQ=",
+          "size": 20913506
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-rancher2_13.10.0-rc.2_linux_amd64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v13.10.0-rc.2/terraform-provider-rancher2_13.10.0-rc.2_linux_amd64.zip",
+          "shasum": "2219d7c0e07f721351e88a8f7bf179253b54d95b1e343ebaf45af8da0607b4d1",
+          "h1": "h1:YlgL2yCu76WtUDaU4HS+M059+b1y926ezvEKcU/SOR4=",
+          "size": 23529956
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-rancher2_13.10.0-rc.2_linux_arm.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v13.10.0-rc.2/terraform-provider-rancher2_13.10.0-rc.2_linux_arm.zip",
+          "shasum": "1a963be539748d93d10ba5a7cd94651956326c1a3b4caa9226110eaefd5325fb",
+          "h1": "h1:aANUrVmnhCWV4kSNcEWD3eHhC2mRuyfSdFaa4jrnajQ=",
+          "size": 22274402
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-rancher2_13.10.0-rc.2_linux_arm64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v13.10.0-rc.2/terraform-provider-rancher2_13.10.0-rc.2_linux_arm64.zip",
+          "shasum": "fc1948aa8560148467cafaa5df30e593894ac7478fc6cc2c21ed802f442cb2ad",
+          "h1": "h1:Hz9viBNHeVGS0C0azpRwV7DAGtYqSRoaXFjDw1xLkOA=",
+          "size": 20947554
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-rancher2_13.10.0-rc.2_windows_amd64.zip",
+          "download_url": "https://github.com/rancher/terraform-provider-rancher2/releases/download/v13.10.0-rc.2/terraform-provider-rancher2_13.10.0-rc.2_windows_amd64.zip",
+          "shasum": "ba681b68a2cdb0effe1a7b5c2a5c02eb17d7f42b7599bf0cb589797136f16030",
+          "h1": "h1:/HYQZxcR7HayhdH8uZpSeR+ot5KtxqaIvM5wIMrd3mo=",
+          "size": 24152710
+        }
+      ],
+      "discovered": "2026-10-01T06:54:14.315396231Z"
     },
     {
       "version": "13.5.0",
@@ -26223,11 +26599,6 @@
   ],
   "versions_errors": [
     {
-      "version": "15.2.0-rc.2",
-      "message": "checksums not found in release",
-      "utc_time": "2026-09-30T19:02:18.581026596Z"
-    },
-    {
       "version": "15.1.1",
       "message": "checksums not found in release",
       "utc_time": "2026-09-10T00:56:06.082056053Z"
@@ -26523,6 +26894,11 @@
       "utc_time": "2026-09-30T19:02:18.614267593Z"
     },
     {
+      "version": "14.6.0-rc.1",
+      "message": "checksums not found in release",
+      "utc_time": "2026-10-01T06:54:15.010221168Z"
+    },
+    {
       "version": "14.2.0",
       "message": "checksums not found in release",
       "utc_time": "2026-09-10T03:01:24.868354774Z"
@@ -26666,6 +27042,11 @@
       "version": "14.1.0-rc.18",
       "message": "checksums not found in release",
       "utc_time": "2026-07-30T11:25:15.606071985Z"
+    },
+    {
+      "version": "13.10.0-rc.1",
+      "message": "checksums not found in release",
+      "utc_time": "2026-10-01T06:54:14.986042898Z"
     },
     {
       "version": "13.2.0-rc.7",
