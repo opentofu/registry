@@ -1,6 +1,89 @@
 {
   "versions": [
     {
+      "version": "1.3.9",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/scalingo/terraform-provider-encrypted/releases/download/v1.3.9/terraform-provider-encrypted_1.3.9_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/scalingo/terraform-provider-encrypted/releases/download/v1.3.9/terraform-provider-encrypted_1.3.9_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-encrypted_1.3.9_darwin_amd64.zip",
+          "download_url": "https://github.com/scalingo/terraform-provider-encrypted/releases/download/v1.3.9/terraform-provider-encrypted_1.3.9_darwin_amd64.zip",
+          "shasum": "5489363b22a2a0208734eb134f445d1cc6cdb7c5de470d1adff75ec9e428c6a9",
+          "h1": "h1:swoOlpIAtaOTtasuFNpQGQsO159113zqbKRuNZsslsw=",
+          "size": 15429419
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-encrypted_1.3.9_darwin_arm64.zip",
+          "download_url": "https://github.com/scalingo/terraform-provider-encrypted/releases/download/v1.3.9/terraform-provider-encrypted_1.3.9_darwin_arm64.zip",
+          "shasum": "d942fd9add4e30306d4456b637263a87532040518d58b2d86b1b4a6f241495e7",
+          "h1": "h1:GFb+UDeXqzNW96h7WgrFy2YzhzHrfsDRKhbKq+YzwPk=",
+          "size": 14300359
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-encrypted_1.3.9_freebsd_amd64.zip",
+          "download_url": "https://github.com/scalingo/terraform-provider-encrypted/releases/download/v1.3.9/terraform-provider-encrypted_1.3.9_freebsd_amd64.zip",
+          "shasum": "403d74925093aea51ce9394961ff4fa02cb080a3d50a3f816e3758f3a04d1ea0",
+          "h1": "h1:bQ7QtHhG2i1Q+6tdTocmVWASXZlvzVqW24VV5uID1oo=",
+          "size": 14984219
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-encrypted_1.3.9_freebsd_arm64.zip",
+          "download_url": "https://github.com/scalingo/terraform-provider-encrypted/releases/download/v1.3.9/terraform-provider-encrypted_1.3.9_freebsd_arm64.zip",
+          "shasum": "d9df9e44e2e9670bd34f82b65338c72d83616aa587d6a03d2e3b7de4a7a5125c",
+          "h1": "h1:pCEP+8ugTO2WEbkEZNGdPv+M2WM6Ns5pTGrctsaHgng=",
+          "size": 13491624
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-encrypted_1.3.9_linux_amd64.zip",
+          "download_url": "https://github.com/scalingo/terraform-provider-encrypted/releases/download/v1.3.9/terraform-provider-encrypted_1.3.9_linux_amd64.zip",
+          "shasum": "44f0ede6a987ccec811c54e70737ea21b5b26376ef6169c2045767b360f50015",
+          "h1": "h1:VR1xLj8zLlgjx04KVhto8iMiZXAe9pwi5Z39x9/hM7Q=",
+          "size": 15016703
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-encrypted_1.3.9_linux_arm64.zip",
+          "download_url": "https://github.com/scalingo/terraform-provider-encrypted/releases/download/v1.3.9/terraform-provider-encrypted_1.3.9_linux_arm64.zip",
+          "shasum": "80f51246c611467b53b18f8eb8e6b1c39904444e9a5c448e1b635518ffbf1674",
+          "h1": "h1:pqpk3Pai/+dRT9a/np+72nCtiPZMq70xiHsvbPFW8Bo=",
+          "size": 13532829
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-encrypted_1.3.9_windows_amd64.zip",
+          "download_url": "https://github.com/scalingo/terraform-provider-encrypted/releases/download/v1.3.9/terraform-provider-encrypted_1.3.9_windows_amd64.zip",
+          "shasum": "8f705dadb628e3177695e815ab82b14e2ce3d3e27c8bdfc58a5ca1b1cbaec6bc",
+          "h1": "h1:2S4O94dvx/Fm0k4uArxWjKDaE+6qV5T8AlFYHIyts+I=",
+          "size": 15447092
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-encrypted_1.3.9_windows_arm64.zip",
+          "download_url": "https://github.com/scalingo/terraform-provider-encrypted/releases/download/v1.3.9/terraform-provider-encrypted_1.3.9_windows_arm64.zip",
+          "shasum": "b0d26d604a40063636182339cbd4d88afedbc35d2d0136a9b117a9009c8fa7c0",
+          "h1": "h1:4c5+Mb8Wx5smG8G+LwQxgz+yw6/X3UT/w4n/7Erp9Ko=",
+          "size": 13663444
+        }
+      ],
+      "discovered": "2026-10-01T15:27:13.153280726Z"
+    },
+    {
       "version": "1.3.8",
       "protocols": [
         "5.0"
@@ -460,11 +543,6 @@
     }
   ],
   "versions_errors": [
-    {
-      "version": "1.3.9",
-      "message": "checksums not found in release",
-      "utc_time": "2026-10-01T14:43:13.968735294Z"
-    },
     {
       "version": "1.3.7",
       "message": "checksums not found in release",
