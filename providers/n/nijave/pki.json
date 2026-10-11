@@ -1,6 +1,89 @@
 {
   "versions": [
     {
+      "version": "1.1.2",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/nijave/terraform-provider-pki/releases/download/v1.1.2/terraform-provider-pki_1.1.2_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/nijave/terraform-provider-pki/releases/download/v1.1.2/terraform-provider-pki_1.1.2_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-pki_1.1.2_darwin_amd64.zip",
+          "download_url": "https://github.com/nijave/terraform-provider-pki/releases/download/v1.1.2/terraform-provider-pki_1.1.2_darwin_amd64.zip",
+          "shasum": "59e8e180e7b933459ec944163a269749075b8b290fc039573e48109bc4e4a0c2",
+          "h1": "h1:RYLGgTGvs2o/kKgwkaPnw05cwBmH8u+tBLOjAmHfdrQ=",
+          "size": 7001852
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-pki_1.1.2_darwin_arm64.zip",
+          "download_url": "https://github.com/nijave/terraform-provider-pki/releases/download/v1.1.2/terraform-provider-pki_1.1.2_darwin_arm64.zip",
+          "shasum": "ed4267f1a0f4acc1e8b09b74999f623b8f7f6ec0fcfa8a7e85010d525147f1ef",
+          "h1": "h1:yrm1Su6yzov3F4BZ7Xw4QZXzHnkmhnc2FaLMPv1kjU0=",
+          "size": 6481811
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-pki_1.1.2_freebsd_amd64.zip",
+          "download_url": "https://github.com/nijave/terraform-provider-pki/releases/download/v1.1.2/terraform-provider-pki_1.1.2_freebsd_amd64.zip",
+          "shasum": "ccfaf51cade4a68a9182349d00e843f194ba115bafb16782a77831b8fa09bae0",
+          "h1": "h1:Ivt4AkFm+Cevt6+usYOZ6LXnWwdtqofbO61BaeYLpnI=",
+          "size": 6794449
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-pki_1.1.2_freebsd_arm64.zip",
+          "download_url": "https://github.com/nijave/terraform-provider-pki/releases/download/v1.1.2/terraform-provider-pki_1.1.2_freebsd_arm64.zip",
+          "shasum": "26df78674a164604433f5cd4a5d15760fca6a62fe3999d644c091c05826e0d68",
+          "h1": "h1:ERfXIlLEVH0CPRPbMYigHQST/ThiSwcIWo/CBivuwUc=",
+          "size": 6137158
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-pki_1.1.2_linux_amd64.zip",
+          "download_url": "https://github.com/nijave/terraform-provider-pki/releases/download/v1.1.2/terraform-provider-pki_1.1.2_linux_amd64.zip",
+          "shasum": "4de821fcbe2609d5dca50243b0a05f68ac091ff8ef42ef0177fb4c6cc72493d7",
+          "h1": "h1:w/CYAozlBIbbREHRMKjEgE16Ur46iHrE82YS9+1Schw=",
+          "size": 6817607
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-pki_1.1.2_linux_arm64.zip",
+          "download_url": "https://github.com/nijave/terraform-provider-pki/releases/download/v1.1.2/terraform-provider-pki_1.1.2_linux_arm64.zip",
+          "shasum": "cef905b0ac3c6e280daa651e69e8adb96984efe1246eded2ca0d2fe3ae5068d7",
+          "h1": "h1:h5LfiqbVs114aZD87fPZMWNi8IUyvHhe7RPVlaviL+Q=",
+          "size": 6163165
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-pki_1.1.2_windows_amd64.zip",
+          "download_url": "https://github.com/nijave/terraform-provider-pki/releases/download/v1.1.2/terraform-provider-pki_1.1.2_windows_amd64.zip",
+          "shasum": "39a61a3aef9e76a2de8634ba811c4c6037a26a59f498b772308f563d84e7f631",
+          "h1": "h1:zNk+vQknKdsujto6SqmW5Tdy463bISi5LgqAM+x9UgY=",
+          "size": 7021834
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-pki_1.1.2_windows_arm64.zip",
+          "download_url": "https://github.com/nijave/terraform-provider-pki/releases/download/v1.1.2/terraform-provider-pki_1.1.2_windows_arm64.zip",
+          "shasum": "4d5e8c9e6b8d713220bbfaaeee96b79a6312a6ac0be9909e1edd2f6030526beb",
+          "h1": "h1:K1HtjM69orqb8AjhaBbU57wRVtkm8bQ02iYrl3zul7A=",
+          "size": 6246253
+        }
+      ],
+      "discovered": "2026-10-11T13:29:42.659436035Z"
+    },
+    {
       "version": "1.1.1",
       "protocols": [
         "6.0"
@@ -248,13 +331,6 @@
         }
       ],
       "discovered": "2026-08-03T06:26:49.433772193Z"
-    }
-  ],
-  "versions_errors": [
-    {
-      "version": "1.1.2",
-      "message": "checksums not found in release",
-      "utc_time": "2026-10-10T23:01:47.795944279Z"
     }
   ]
 }
