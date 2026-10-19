@@ -1,6 +1,62 @@
 {
   "versions": [
     {
+      "version": "1.1.5-rc1",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/cmrh/terraform-provider-scality/releases/download/v1.1.5-rc1/terraform-provider-scality_1.1.5-rc1_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/cmrh/terraform-provider-scality/releases/download/v1.1.5-rc1/terraform-provider-scality_1.1.5-rc1_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-scality_1.1.5-rc1_darwin_amd64.zip",
+          "download_url": "https://github.com/cmrh/terraform-provider-scality/releases/download/v1.1.5-rc1/terraform-provider-scality_1.1.5-rc1_darwin_amd64.zip",
+          "shasum": "22d195c865216c22f5286bfdeb3720bc7827a236e10dd81653f9f985d52790ee",
+          "h1": "h1:zNTo8zTgzw1vGWbeeKkmFwRRGj0SBvEcqREdEVyEP7o=",
+          "size": 7080359
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-scality_1.1.5-rc1_darwin_arm64.zip",
+          "download_url": "https://github.com/cmrh/terraform-provider-scality/releases/download/v1.1.5-rc1/terraform-provider-scality_1.1.5-rc1_darwin_arm64.zip",
+          "shasum": "52385d1c8ab10903ee3bd391729060a8ad05690dad27bd921d11279a39520077",
+          "h1": "h1:yrK3/l5hM24AVnWBL1iFETNsl6P2htcI8Y9FhCHvim0=",
+          "size": 6525739
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-scality_1.1.5-rc1_linux_amd64.zip",
+          "download_url": "https://github.com/cmrh/terraform-provider-scality/releases/download/v1.1.5-rc1/terraform-provider-scality_1.1.5-rc1_linux_amd64.zip",
+          "shasum": "93ff1b53b8ce6cc8d4a63ba5c330d53262d068ed1ed162a60cfdf09e89c3f4fe",
+          "h1": "h1:DqPmoV+lGc+zytsByTZyFCUbm0JNbj54FKO1zIvFq+I=",
+          "size": 6909193
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-scality_1.1.5-rc1_linux_arm64.zip",
+          "download_url": "https://github.com/cmrh/terraform-provider-scality/releases/download/v1.1.5-rc1/terraform-provider-scality_1.1.5-rc1_linux_arm64.zip",
+          "shasum": "76fa8fddfa78cb623bbd284d6def7cd2f1f2e4160da7b03563c66eaba49e4800",
+          "h1": "h1:QCet9548GqPZfI2tu9W5WGlh2A7n29I5wHAdsdK0iPg=",
+          "size": 6209498
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-scality_1.1.5-rc1_windows_amd64.zip",
+          "download_url": "https://github.com/cmrh/terraform-provider-scality/releases/download/v1.1.5-rc1/terraform-provider-scality_1.1.5-rc1_windows_amd64.zip",
+          "shasum": "cfb5f8c68ce0f1b7ae938f9100a3eaea53d1e5ae2384d01472515ebd4a753213",
+          "h1": "h1:zo5KPNBLAcMSVyTgGfu+WU+sAiQZNyBxv6Jb+r7jjl8=",
+          "size": 7085478
+        }
+      ],
+      "discovered": "2026-10-19T07:52:31.919634302Z"
+    },
+    {
       "version": "1.1.4",
       "protocols": [
         "6.0"
@@ -674,6 +730,11 @@
     }
   ],
   "versions_errors": [
+    {
+      "version": "1.1.5",
+      "message": "checksums not found in release",
+      "utc_time": "2026-10-19T07:52:32.316980869Z"
+    },
     {
       "version": "1.1.1-rc1",
       "message": "checksums not found in release",
