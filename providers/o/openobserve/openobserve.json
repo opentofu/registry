@@ -1,6 +1,363 @@
 {
   "versions": [
     {
+      "version": "1.6.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.6.0/terraform-provider-openobserve_1.6.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.6.0/terraform-provider-openobserve_1.6.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-openobserve_1.6.0_darwin_amd64.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.6.0/terraform-provider-openobserve_1.6.0_darwin_amd64.zip",
+          "shasum": "0ccdfd570a573cdafe70ab00de85cfc95262027ef9838d973605df6bfcdc87cb",
+          "h1": "h1:CU/7C/nDsIz7ybXKuxi5R3Nfu2b/RGuADSJq7dhLMNQ=",
+          "size": 6870059
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-openobserve_1.6.0_darwin_arm64.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.6.0/terraform-provider-openobserve_1.6.0_darwin_arm64.zip",
+          "shasum": "f28f9088a88fa3e93c56c40675bb4ce4fecc7ecf5fe2392a91fa1527905f5627",
+          "h1": "h1:7Ev3LS8bxxUxw0X/4uCbTpnO9pFY3+CD0vFeCjl3rMs=",
+          "size": 6385867
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-openobserve_1.6.0_freebsd_386.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.6.0/terraform-provider-openobserve_1.6.0_freebsd_386.zip",
+          "shasum": "79eb963c76919099f4eb3eade040cdda13c920d0d95384f3a0558b493d070e31",
+          "h1": "h1:Z2uXOAzjwZISbdYPeht6jqoropwzoOZ1NbSEli3QDIo=",
+          "size": 6319514
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-openobserve_1.6.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.6.0/terraform-provider-openobserve_1.6.0_freebsd_amd64.zip",
+          "shasum": "88c32ce3bff22eb0fac6b1bf24151f8a497966bfa0e6e6c7ef09c0819921d7e7",
+          "h1": "h1:1EFA3YCD3ky1zNkYmaFyuM2EiTshKj0yC/8iktCrDmc=",
+          "size": 6683124
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-openobserve_1.6.0_freebsd_arm.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.6.0/terraform-provider-openobserve_1.6.0_freebsd_arm.zip",
+          "shasum": "eabe711e4d3ce8d9496e7ccc926573c2872ae59677c1ba5e9572b33e2615ffe7",
+          "h1": "h1:zmPECYdJcIPhhvGB1e8pWu9Uuf49BOCQzZPa3h6nlCw=",
+          "size": 6286920
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-openobserve_1.6.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.6.0/terraform-provider-openobserve_1.6.0_freebsd_arm64.zip",
+          "shasum": "65446fc7e4be3f1c868fbc9778df73c465383095c3c64b446820a7880642ec2f",
+          "h1": "h1:7qk4pDCFeNlwcNE3HSGVfudQesbS0jkftS6SUgZRPbk=",
+          "size": 6056329
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-openobserve_1.6.0_linux_386.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.6.0/terraform-provider-openobserve_1.6.0_linux_386.zip",
+          "shasum": "31fef1bc8b1c9bb65a39b72de259df471e3511c3360489456bbafe2f6ec2a2fe",
+          "h1": "h1:EmA0h8z7N3Cp787wgTkWVeO8pvJEuE2A5/QL8t87aME=",
+          "size": 6349481
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-openobserve_1.6.0_linux_amd64.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.6.0/terraform-provider-openobserve_1.6.0_linux_amd64.zip",
+          "shasum": "7663451f4fa5929317fd48df3798eff2065c1e712422a1c9d9b4edf8e4802520",
+          "h1": "h1:eeMBKC72i3FQ/eIkNvwd4Pl+SC05DNZHcwIClcFpJKM=",
+          "size": 6707553
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-openobserve_1.6.0_linux_arm.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.6.0/terraform-provider-openobserve_1.6.0_linux_arm.zip",
+          "shasum": "76a90b4f651fe0db0cf9566de4a8ca84209f74ef2e0261ff4ba8f0ec1e49a9ab",
+          "h1": "h1:O/8h4gyrbGx/QhGbF6QWZ0S5t/4LfyHqFZ4kKCjuAoU=",
+          "size": 6312366
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-openobserve_1.6.0_linux_arm64.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.6.0/terraform-provider-openobserve_1.6.0_linux_arm64.zip",
+          "shasum": "87d0320243ab133909c4846d118496a7edd98292e9c2d04f7253ad5af852be2b",
+          "h1": "h1:PAMQY1aM9DnhqOqaa6C7RD/CTQJRbdf1eK3KWMHURW8=",
+          "size": 6084827
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-openobserve_1.6.0_windows_386.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.6.0/terraform-provider-openobserve_1.6.0_windows_386.zip",
+          "shasum": "7b4a627efe1ece5254940993af5e1126a480a610a7d265e920509e1205d34005",
+          "h1": "h1:2ZQ9zxhD5OZLbUZcF5o2E9MYn1qyhi/c7BwDVXp2npg=",
+          "size": 6643709
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-openobserve_1.6.0_windows_amd64.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.6.0/terraform-provider-openobserve_1.6.0_windows_amd64.zip",
+          "shasum": "624c060fd946616ec8ba7ff0591fd4657c63c6c9bcefba57a0f7d57f1efbd3af",
+          "h1": "h1:tWNjDyE51umJDrAu8aDs1is3gw61mY2nxQ8K4WFe7xE=",
+          "size": 6906817
+        }
+      ],
+      "discovered": "2026-11-06T13:46:37.635836749Z"
+    },
+    {
+      "version": "1.5.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.5.0/terraform-provider-openobserve_1.5.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.5.0/terraform-provider-openobserve_1.5.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-openobserve_1.5.0_darwin_amd64.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.5.0/terraform-provider-openobserve_1.5.0_darwin_amd64.zip",
+          "shasum": "077af67f924f5d6dbc83e5fb818d9c7d494d4c28754de181b5c8e0f3e7156ed3",
+          "h1": "h1:vVQ3w9CaGr0WSIb8NeduadQiI5I8LRSnjEaBZYTq6CQ=",
+          "size": 6792586
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-openobserve_1.5.0_darwin_arm64.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.5.0/terraform-provider-openobserve_1.5.0_darwin_arm64.zip",
+          "shasum": "124d6f99b61425c8f377b2dded88b5d7b37e56b6b44b9473c96935cf558b83ec",
+          "h1": "h1:x/5qovVhEhlA7t7CK3BtDPns00sLNUtVm0+s7T77s9A=",
+          "size": 6314685
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-openobserve_1.5.0_freebsd_386.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.5.0/terraform-provider-openobserve_1.5.0_freebsd_386.zip",
+          "shasum": "870c9e3703d8130b5803e67a12dc270baa46dde6acb88411402aa73ce1fb599f",
+          "h1": "h1:IsvnbcUhvwkxn7ctpoSHEGftQHXgZCimrWY8lB++GZg=",
+          "size": 6249926
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-openobserve_1.5.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.5.0/terraform-provider-openobserve_1.5.0_freebsd_amd64.zip",
+          "shasum": "399eaf93d10d098e3cec06ff438768e970ad807b09e7b0f22f3b1b4832ff8fc2",
+          "h1": "h1:QCx8G4hL/YndsgwdgHBRmznVt/EO9UHldMvfGucqDiA=",
+          "size": 6606721
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-openobserve_1.5.0_freebsd_arm.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.5.0/terraform-provider-openobserve_1.5.0_freebsd_arm.zip",
+          "shasum": "6e39e52c217ce2d05ccd60d2df7d28dae63686bd8e58e7698b7c9a105eaaacf6",
+          "h1": "h1:eeb75ajCwTkeD58gijp9e2nM/kBnpamTrQP4p9wcvIM=",
+          "size": 6218796
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-openobserve_1.5.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.5.0/terraform-provider-openobserve_1.5.0_freebsd_arm64.zip",
+          "shasum": "c3e6eaf4f66af8032fe9318b6d8c186424d0773cd605137b2c3aa5f1a1b7661b",
+          "h1": "h1:mcWjGVin3uD5KaMxf11oiYJ/m8Z7YZUXrAuuWayq440=",
+          "size": 5990917
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-openobserve_1.5.0_linux_386.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.5.0/terraform-provider-openobserve_1.5.0_linux_386.zip",
+          "shasum": "3e0619c6c5e4d9ea81d910a8023aa649926dd41be61785ce1e2a29d00cb81200",
+          "h1": "h1:8vhREIuKBqK+Vi/5F1SqDHoeI0POQVs2zh+YUSXDgqU=",
+          "size": 6277839
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-openobserve_1.5.0_linux_amd64.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.5.0/terraform-provider-openobserve_1.5.0_linux_amd64.zip",
+          "shasum": "43274e58c605ec0fd0de27b94d14ada04c2c88c45e858ba15c9677c55800e8f6",
+          "h1": "h1:PYWWeoSErTl9WwHJGt9AweXU/nBrC58s6xKRpF5HFwk=",
+          "size": 6629181
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-openobserve_1.5.0_linux_arm.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.5.0/terraform-provider-openobserve_1.5.0_linux_arm.zip",
+          "shasum": "785291d1fc5a31e31fcfb281eca49c7e46b43704e01fd0a211fb07189c79e111",
+          "h1": "h1:Wy0bkA1tXtVACY9PC9AXxup3MgGubTuVxDpUZcbhcqw=",
+          "size": 6236937
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-openobserve_1.5.0_linux_arm64.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.5.0/terraform-provider-openobserve_1.5.0_linux_arm64.zip",
+          "shasum": "a8c44d1d4ced609e8ad69303d50b8cab8d4e0087271fd86429307fecd9a04aff",
+          "h1": "h1:U97Y0TovnOKsJPFUnGC2XqrjtlEXc3RprgSosIBd/dY=",
+          "size": 6014412
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-openobserve_1.5.0_windows_386.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.5.0/terraform-provider-openobserve_1.5.0_windows_386.zip",
+          "shasum": "4e845829cc3eaa9ba14d9063d9e62f149ced57cff88ea6f718097beca7ac534f",
+          "h1": "h1:YiH3vrYVNVMCIE1V6p16PRsJH/muGUdunU72kb7F0Uw=",
+          "size": 6574370
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-openobserve_1.5.0_windows_amd64.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.5.0/terraform-provider-openobserve_1.5.0_windows_amd64.zip",
+          "shasum": "680069ad82f771d3ab97a9eceff0f3391f122f6e6ea0ec5abad17c7704e0e4e2",
+          "h1": "h1:3HpNtuiJl2i9JHi3clX93JsCESGoOUtutpaeNPD5daQ=",
+          "size": 6831286
+        }
+      ],
+      "discovered": "2026-11-06T13:46:37.635845667Z"
+    },
+    {
+      "version": "1.4.3",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.4.3/terraform-provider-openobserve_1.4.3_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.4.3/terraform-provider-openobserve_1.4.3_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-openobserve_1.4.3_darwin_amd64.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.4.3/terraform-provider-openobserve_1.4.3_darwin_amd64.zip",
+          "shasum": "34b9fe3951b01c3ad86d9d50a2b4ef7d9bc136ea2ed5f5a518a0499f24d2a655",
+          "h1": "h1:eKQibD5LvUhiZevNS/gKdDytUSkesB2RbBcFIbjo2zQ=",
+          "size": 6706454
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-openobserve_1.4.3_darwin_arm64.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.4.3/terraform-provider-openobserve_1.4.3_darwin_arm64.zip",
+          "shasum": "1ce6dd429a038af5ad81d30d4aa6ef028596fd1675e0fe9a175566fb89eed96b",
+          "h1": "h1:Sf9ZtPwo8sRA+Kj1PHOJKcxFZanfIzAhkfVmRaJcBVo=",
+          "size": 6227231
+        },
+        {
+          "os": "freebsd",
+          "arch": "386",
+          "filename": "terraform-provider-openobserve_1.4.3_freebsd_386.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.4.3/terraform-provider-openobserve_1.4.3_freebsd_386.zip",
+          "shasum": "eea742d8699c52b70719ad3138938215740eb7811d4e27746b0b39c624fa48ac",
+          "h1": "h1:F0xeC8a8R2We9AaVwtdsYmo8fgAAXbETkRsnGStGyko=",
+          "size": 6168570
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-openobserve_1.4.3_freebsd_amd64.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.4.3/terraform-provider-openobserve_1.4.3_freebsd_amd64.zip",
+          "shasum": "9b753559f9c66882adef477427738e049fbd052b93137329156d20f950f5e669",
+          "h1": "h1:TyiCdebY3sXjM299iDl0fIXnKSJ+AhZn7pZIiRmLgrY=",
+          "size": 6519881
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm",
+          "filename": "terraform-provider-openobserve_1.4.3_freebsd_arm.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.4.3/terraform-provider-openobserve_1.4.3_freebsd_arm.zip",
+          "shasum": "74a34f926d95e5ac0ca8803b1d2dd8a9f08259cd2288e963b16e83cdf96b800b",
+          "h1": "h1:VRjhz5xHZECsqJthUr2b6oqF62a/iSqWuuS182GsmuE=",
+          "size": 6136354
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-openobserve_1.4.3_freebsd_arm64.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.4.3/terraform-provider-openobserve_1.4.3_freebsd_arm64.zip",
+          "shasum": "cc4e64dfc6de7f9ff97d7fc7cb8e98d08c4f804b1fe679ab171355b3f784487d",
+          "h1": "h1:2DL/hf/FyLg9Khm3jTDAS3y0qCSS7MEJ0ssPI7W1920=",
+          "size": 5912580
+        },
+        {
+          "os": "linux",
+          "arch": "386",
+          "filename": "terraform-provider-openobserve_1.4.3_linux_386.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.4.3/terraform-provider-openobserve_1.4.3_linux_386.zip",
+          "shasum": "00c70945c6979bef7f3f8c7905b67625c9742bdc9f6a36d156acbdc66f7a0c34",
+          "h1": "h1:XHQ6Z7oShIjpwIHcgYhm6rEJ6dfsn5B01HWj81VDx8s=",
+          "size": 6195397
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-openobserve_1.4.3_linux_amd64.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.4.3/terraform-provider-openobserve_1.4.3_linux_amd64.zip",
+          "shasum": "39d181f5f5fc7c7a10ab39065b0a16670563e553c53d211afb2a77c84e07f17c",
+          "h1": "h1:OGzID4/Sp++cehfBkJj+fn08kXyjbIC7F2WgXFvXMGg=",
+          "size": 6541647
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-openobserve_1.4.3_linux_arm.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.4.3/terraform-provider-openobserve_1.4.3_linux_arm.zip",
+          "shasum": "171220312390533e2ee4db2239a7f95516e99695dec855dfd2643d9579aff704",
+          "h1": "h1:UfCnk9rpaV77OlmdZElR7S3BcceBYEUEyq/BvcOdGLE=",
+          "size": 6157037
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-openobserve_1.4.3_linux_arm64.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.4.3/terraform-provider-openobserve_1.4.3_linux_arm64.zip",
+          "shasum": "39087c3b56930e7dd24e458cf47a710696bb3e0c2dc0fe71c539987a57ec05eb",
+          "h1": "h1:7hYKgBBOsOFj6+io0K4TRavFNZXkpx7g4nqS7nJVVM4=",
+          "size": 5936058
+        },
+        {
+          "os": "windows",
+          "arch": "386",
+          "filename": "terraform-provider-openobserve_1.4.3_windows_386.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.4.3/terraform-provider-openobserve_1.4.3_windows_386.zip",
+          "shasum": "1b8cfd58ad39f48bfb4030890261d7c0ce0e4214f99b8a7dd1c0bd6df2fa7aa3",
+          "h1": "h1:KbUukjDExOnb9RyDYgAsZnO/X6LO3G4YvwcNVX79xBs=",
+          "size": 6487792
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-openobserve_1.4.3_windows_amd64.zip",
+          "download_url": "https://github.com/openobserve/terraform-provider-openobserve/releases/download/v1.4.3/terraform-provider-openobserve_1.4.3_windows_amd64.zip",
+          "shasum": "da0bf881fbda4fceed3d1da5318ea2adff42a445aca590bd61c219907d9547af",
+          "h1": "h1:I8rJEDf73869HC3R5mGj/3KKTEiubcApL9UoJjyS3uk=",
+          "size": 6741758
+        }
+      ],
+      "discovered": "2026-11-06T13:46:37.635837746Z"
+    },
+    {
       "version": "1.4.2",
       "protocols": [
         "6.0"
