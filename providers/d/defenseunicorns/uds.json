@@ -1,6 +1,71 @@
 {
   "versions": [
     {
+      "version": "0.9.0",
+      "protocols": [
+        "6.0"
+      ],
+      "shasums_url": "https://github.com/defenseunicorns/terraform-provider-uds/releases/download/v0.9.0/terraform-provider-uds_0.9.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/defenseunicorns/terraform-provider-uds/releases/download/v0.9.0/terraform-provider-uds_0.9.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-uds_0.9.0_darwin_amd64.zip",
+          "download_url": "https://github.com/defenseunicorns/terraform-provider-uds/releases/download/v0.9.0/terraform-provider-uds_0.9.0_darwin_amd64.zip",
+          "shasum": "3d457bc178eb0d7aa7d36058343b255f274cc5e616d670dee1eb36464d3fac9e",
+          "h1": "h1:i9bLHMLpjdCyM56HFinluWv3pTZmJdWlrj9X80bH3Nk=",
+          "size": 66443036
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-uds_0.9.0_darwin_arm64.zip",
+          "download_url": "https://github.com/defenseunicorns/terraform-provider-uds/releases/download/v0.9.0/terraform-provider-uds_0.9.0_darwin_arm64.zip",
+          "shasum": "fe224ba5092a623654ff5227efd0057ae4b7c2b6df88abe1c4a5e483ae66d24d",
+          "h1": "h1:wLEE6Rh2WhCMicbJ8fxqnCG2EDHvJoLObnuNum5BXzU=",
+          "size": 61528275
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-uds_0.9.0_linux_amd64.zip",
+          "download_url": "https://github.com/defenseunicorns/terraform-provider-uds/releases/download/v0.9.0/terraform-provider-uds_0.9.0_linux_amd64.zip",
+          "shasum": "475a3587000644943da13ad71e72965900545e7ec53265ea72d9bc8a93d59a45",
+          "h1": "h1:ZB1/SRXQ77VIRy1oqOfVs2WT92bbFNJlbPZgJSJGO98=",
+          "size": 65086385
+        },
+        {
+          "os": "linux",
+          "arch": "arm",
+          "filename": "terraform-provider-uds_0.9.0_linux_arm.zip",
+          "download_url": "https://github.com/defenseunicorns/terraform-provider-uds/releases/download/v0.9.0/terraform-provider-uds_0.9.0_linux_arm.zip",
+          "shasum": "307ba01c45597807564b135904f8ddc0b04be1ea07f6c1edc9bd8705e562a396",
+          "h1": "h1:x0281aIH4Ag9oRdCsE+Uc6wPj3yYpS71yuOEyDF5CoE=",
+          "size": 60657595
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-uds_0.9.0_linux_arm64.zip",
+          "download_url": "https://github.com/defenseunicorns/terraform-provider-uds/releases/download/v0.9.0/terraform-provider-uds_0.9.0_linux_arm64.zip",
+          "shasum": "2e51dcb0f508f7e7f0045f63d5eeceabd9f2c41c53d719099f91b750af64c198",
+          "h1": "h1:R+mMHb0HVdKKRVMButVq+Y7EkewfmlovTzOHqHmCzXw=",
+          "size": 58637942
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-uds_0.9.0_windows_amd64.zip",
+          "download_url": "https://github.com/defenseunicorns/terraform-provider-uds/releases/download/v0.9.0/terraform-provider-uds_0.9.0_windows_amd64.zip",
+          "shasum": "69e87a01f6e6f29157823dc8a685473bd289a6c5781409cb8e8c997e2fdd5d36",
+          "h1": "h1:2Rhb5uNNpTRgz/cgBeGgY20P6aYLIdcJ41nDRp6Ba8A=",
+          "size": 66547926
+        }
+      ],
+      "discovered": "2026-11-18T22:27:36.939351063Z"
+    },
+    {
       "version": "0.8.1",
       "protocols": [
         "6.0"
@@ -1686,11 +1751,6 @@
     }
   ],
   "versions_errors": [
-    {
-      "version": "0.9.0",
-      "message": "checksums not found in release",
-      "utc_time": "2026-11-18T21:57:36.049691767Z"
-    },
     {
       "version": "0.9.0-nightly.20261118.665.1",
       "message": "checksums not found in release",
