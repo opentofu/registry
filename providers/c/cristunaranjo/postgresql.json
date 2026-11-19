@@ -1,6 +1,89 @@
 {
   "versions": [
     {
+      "version": "1.32.0",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/cristunaranjo/terraform-provider-postgresql/releases/download/v1.32.0/terraform-provider-postgresql_1.32.0_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/cristunaranjo/terraform-provider-postgresql/releases/download/v1.32.0/terraform-provider-postgresql_1.32.0_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-postgresql_1.32.0_darwin_amd64.zip",
+          "download_url": "https://github.com/cristunaranjo/terraform-provider-postgresql/releases/download/v1.32.0/terraform-provider-postgresql_1.32.0_darwin_amd64.zip",
+          "shasum": "d909ebf7b8247ac6ab18761c495d6e23f302f9d2c9cfdbd52cc879905e5470f6",
+          "h1": "h1:K/fqrtUZDoXjoKhFnKYd4z9kkjwYizWji73Tiog8KhA=",
+          "size": 10439466
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-postgresql_1.32.0_darwin_arm64.zip",
+          "download_url": "https://github.com/cristunaranjo/terraform-provider-postgresql/releases/download/v1.32.0/terraform-provider-postgresql_1.32.0_darwin_arm64.zip",
+          "shasum": "c0f56b37420baf36b4c34335127815af30986740ce0cdd66c20e2837a7709efc",
+          "h1": "h1:jkjH9SWFm15hu3AnEtv1VuaM00T69iyybMe3c2qQIYk=",
+          "size": 9666234
+        },
+        {
+          "os": "freebsd",
+          "arch": "amd64",
+          "filename": "terraform-provider-postgresql_1.32.0_freebsd_amd64.zip",
+          "download_url": "https://github.com/cristunaranjo/terraform-provider-postgresql/releases/download/v1.32.0/terraform-provider-postgresql_1.32.0_freebsd_amd64.zip",
+          "shasum": "c4b0ee17dc534b243f72100d21b4a868e3a30859e7e780013c2ed195dec37995",
+          "h1": "h1:omcwtrydmSx1yP1rgH3akOw8B+qGg9svPqRR6zjE3M8=",
+          "size": 10154636
+        },
+        {
+          "os": "freebsd",
+          "arch": "arm64",
+          "filename": "terraform-provider-postgresql_1.32.0_freebsd_arm64.zip",
+          "download_url": "https://github.com/cristunaranjo/terraform-provider-postgresql/releases/download/v1.32.0/terraform-provider-postgresql_1.32.0_freebsd_arm64.zip",
+          "shasum": "474e352124ad7e3807677f4bde2a6b590a3fa7ddd621c04333cd61388e76d53e",
+          "h1": "h1:w6/zwWAz1ohBT3zYYTubwK3TN3tgqELfilr/68ocmGE=",
+          "size": 9174700
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-postgresql_1.32.0_linux_amd64.zip",
+          "download_url": "https://github.com/cristunaranjo/terraform-provider-postgresql/releases/download/v1.32.0/terraform-provider-postgresql_1.32.0_linux_amd64.zip",
+          "shasum": "711b6c85d63ffeb62adfab9a9d0e46913a7b1e80153bd258f075c680d6762f6b",
+          "h1": "h1:ponYCOLE/KM+TibQhCP1EYE43GQBUu1MPvb+6WsPVe0=",
+          "size": 10184434
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-postgresql_1.32.0_linux_arm64.zip",
+          "download_url": "https://github.com/cristunaranjo/terraform-provider-postgresql/releases/download/v1.32.0/terraform-provider-postgresql_1.32.0_linux_arm64.zip",
+          "shasum": "f610ff37e6eb9959b7030254c053f6a87f1b67b3a3a536985240d65f10e048d0",
+          "h1": "h1:N7ALcTITxpVZY8e9EmIApcywcbPRiPSai2vVEU2tUu0=",
+          "size": 9204815
+        },
+        {
+          "os": "windows",
+          "arch": "amd64",
+          "filename": "terraform-provider-postgresql_1.32.0_windows_amd64.zip",
+          "download_url": "https://github.com/cristunaranjo/terraform-provider-postgresql/releases/download/v1.32.0/terraform-provider-postgresql_1.32.0_windows_amd64.zip",
+          "shasum": "8086e78b9b250b7221355f080311e13e1115d84f125b430cde21840127379a72",
+          "h1": "h1:lWQE9K0UOb+Pb9+5QnJKWN2icmamUyCGtUYkDwDShlI=",
+          "size": 10472103
+        },
+        {
+          "os": "windows",
+          "arch": "arm64",
+          "filename": "terraform-provider-postgresql_1.32.0_windows_arm64.zip",
+          "download_url": "https://github.com/cristunaranjo/terraform-provider-postgresql/releases/download/v1.32.0/terraform-provider-postgresql_1.32.0_windows_arm64.zip",
+          "shasum": "89c0a44a70ae7c8b9cad1974223bdf6d631a1ad3de80a24a195291e34b231491",
+          "h1": "h1:pvjZnOAwGtcjE3wjjHbGGFE6oGgiwtaxRDUCTLm5wqw=",
+          "size": 9314439
+        }
+      ],
+      "discovered": "2026-11-19T11:07:49.335028468Z"
+    },
+    {
       "version": "1.30.0",
       "protocols": [
         "5.0"
@@ -341,11 +424,6 @@
     }
   ],
   "versions_errors": [
-    {
-      "version": "1.32.0",
-      "message": "checksums not found in release",
-      "utc_time": "2026-11-19T10:32:58.727892001Z"
-    },
     {
       "version": "1.31.0",
       "message": "checksums not found in release",
