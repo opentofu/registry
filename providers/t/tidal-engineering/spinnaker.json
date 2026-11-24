@@ -1,6 +1,53 @@
 {
   "versions": [
     {
+      "version": "1.0.8",
+      "protocols": [
+        "5.0"
+      ],
+      "shasums_url": "https://github.com/tidal-engineering/terraform-provider-spinnaker/releases/download/v1.0.8/terraform-provider-spinnaker_1.0.8_SHA256SUMS",
+      "shasums_signature_url": "https://github.com/tidal-engineering/terraform-provider-spinnaker/releases/download/v1.0.8/terraform-provider-spinnaker_1.0.8_SHA256SUMS.sig",
+      "targets": [
+        {
+          "os": "darwin",
+          "arch": "amd64",
+          "filename": "terraform-provider-spinnaker_1.0.8_darwin_amd64.zip",
+          "download_url": "https://github.com/tidal-engineering/terraform-provider-spinnaker/releases/download/v1.0.8/terraform-provider-spinnaker_1.0.8_darwin_amd64.zip",
+          "shasum": "0af9a34d9fa9224ec1f2d5c1ec8b4be9964a6c7bddffd5b7e3da61b9c5cdb93e",
+          "h1": "h1:t5yw4/D/NFMLv29RGN7UJdlXLGNsDPj8z5OKbMl5jy8=",
+          "size": 7929899
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "filename": "terraform-provider-spinnaker_1.0.8_darwin_arm64.zip",
+          "download_url": "https://github.com/tidal-engineering/terraform-provider-spinnaker/releases/download/v1.0.8/terraform-provider-spinnaker_1.0.8_darwin_arm64.zip",
+          "shasum": "872c5e9dbda5dc454cc4ed2c9225ff927ebbcca5ea6e798352947d4c79d4568f",
+          "h1": "h1:EwdZ1bkWmxF0RNsxm/D2LEXeYEtyFfRs5BllArMgM+E=",
+          "size": 7267500
+        },
+        {
+          "os": "linux",
+          "arch": "amd64",
+          "filename": "terraform-provider-spinnaker_1.0.8_linux_amd64.zip",
+          "download_url": "https://github.com/tidal-engineering/terraform-provider-spinnaker/releases/download/v1.0.8/terraform-provider-spinnaker_1.0.8_linux_amd64.zip",
+          "shasum": "ff57bb329eb33ad62ad5081f2f2c5dc648510116d4565be08a25e7101c547dee",
+          "h1": "h1:a+lytquqGpYpwQJ9Yi7VVbB4pm2x4TVYoYU2SEO8bj4=",
+          "size": 7769649
+        },
+        {
+          "os": "linux",
+          "arch": "arm64",
+          "filename": "terraform-provider-spinnaker_1.0.8_linux_arm64.zip",
+          "download_url": "https://github.com/tidal-engineering/terraform-provider-spinnaker/releases/download/v1.0.8/terraform-provider-spinnaker_1.0.8_linux_arm64.zip",
+          "shasum": "40627dd2b16130876c74a43a045f43bfec5a1e2ccc16822eb8beedf02d7e12ca",
+          "h1": "h1:amOGeZfoqGeVsQQ5uR799VOLVys1ujfNpfBSMXsrWUY=",
+          "size": 6950067
+        }
+      ],
+      "discovered": "2026-11-24T12:03:08.716866953Z"
+    },
+    {
       "version": "1.0.7",
       "protocols": [
         "5.0"
@@ -165,11 +212,6 @@
     }
   ],
   "versions_errors": [
-    {
-      "version": "1.0.8",
-      "message": "checksums not found in release",
-      "utc_time": "2026-11-24T11:27:51.984153675Z"
-    },
     {
       "version": "1.0.2",
       "message": "checksums not found in release",
